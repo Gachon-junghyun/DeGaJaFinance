@@ -21,8 +21,7 @@ import sys
 from datetime import datetime, timedelta
 
 from ._config import (
-    FOREIGN_SOURCES, FTS_DB, FTS_DB_KR, NEWS_API_BASE, NEWS_DB, SYN_FILE, SYN_FILE_KR,
-    utf8_stdout,
+    FOREIGN_SOURCES, FTS_DB, FTS_DB_KR, NEWS_DB, SYN_FILE, SYN_FILE_KR, utf8_stdout,
 )
 
 
@@ -144,14 +143,13 @@ def query_fts(terms, days, scope, mode, use_syn, show_snip, limit,
 
 
 def _print_fts(data: dict, show_snip: bool, show_full: bool) -> None:
-    """query_fts / API 결과 dict 를 사람이 읽는 형식으로 출력 (로컬·원격 동일 렌더)."""
+    """query_fts 결과 dict 를 사람이 읽는 형식으로 출력."""
     if data.get("error"):
         print(data["error"], file=sys.stderr); return
     scope, days, mode = data["scope"], data.get("days"), data["mode"]
     sc = {"all": "국내+해외", "foreign": "해외만", "domestic": "국내만"}[scope]
     rng = f"최근 {days}일" if days else "전체기간"
-    src = " ·via API" if NEWS_API_BASE else ""
-    print(f"🔎 FTS [{rng}/{sc}/{mode.upper()}{'/syn' if data.get('use_syn') else ''}{src}] MATCH: {data['match']}")
+    print(f"🔎 FTS [{rng}/{sc}/{mode.upper()}{'/syn' if data.get('use_syn') else ''}] MATCH: {data['match']}")
     print(f"   매칭 {data['count']}건 (BM25 관련도순 상위 {min(data['limit'], data['count'])})")
     print("=" * 100)
     for r in data["rows"]:
@@ -169,20 +167,16 @@ def _print_fts(data: dict, show_snip: bool, show_full: bool) -> None:
 
 def search(terms, days, scope, mode, use_syn, show_snip, limit,
            show_full=False, kr=False, count_only=False) -> None:
-    """CLI 진입 — DEGAJA_NEWS_API 있으면 서버에서, 없으면 로컬 DB 에서 검색해 동일 형식 출력."""
+    """CLI 진입 — 로컬 DB 조회 후 출력. (원격 라우팅은 __main__ 이 /exec 로 전담하므로
+    이 함수는 항상 로컬. 서버 /exec 도 여기로 들어와 서버 자신의 로컬 DB 를 읽는다.)"""
     utf8_stdout()
-    if NEWS_API_BASE:
-        from ._api_client import fts_search as _remote
-        data = _remote(NEWS_API_BASE, terms=terms, days=days, scope=scope, mode=mode,
-                       use_syn=use_syn, show_snip=show_snip, limit=limit,
-                       show_full=show_full, kr=kr, count_only=count_only)
-    else:
-        data = query_fts(terms, days, scope, mode, use_syn, show_snip, limit,
-                         show_full=show_full, kr=kr, count_only=count_only)
+    data = query_fts(terms, days, scope, mode, use_syn, show_snip, limit,
+                     show_full=show_full, kr=kr, count_only=count_only)
     if count_only:
-        print(data.get("count", data.get("error", 0)) if not data.get("error") else 0)
         if data.get("error"):
             print(data["error"], file=sys.stderr)
+        else:
+            print(data.get("count", 0))
         return
     _print_fts(data, show_snip, show_full)
 

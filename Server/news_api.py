@@ -1,22 +1,26 @@
 # -*- coding: utf-8 -*-
-"""뉴스 검색 API 서버 — 서버 PC 에서 뉴스 DB(news_fts) 를 HTTP 로 노출한다.
+"""뉴스 검색 API 서버 — 서버 PC 에서 뉴스 DB(news_fts)를 HTTP 로 노출한다.
 
-취지: 서버 PC 한 대가 뉴스를 수집(run_fetch_loop)하고 이 API 로 검색을 서빙한다.
+취지: 서버 PC 한 대가 뉴스를 수집(run_fetch_loop)하고 이 API 로 조회를 서빙한다.
 다른 PC(또는 Claude Code)는 DB 파일을 직접 열지 않고 `DEGAJA_NEWS_API` 만 켜서
-같은 `module_news_data fts search …` CLI 로 원격 검색을 끌어온다.
+같은 `module_news_data …` CLI 로 원격 실행한다. 클라이언트 로컬 뉴스 DB 를 지워도 동작.
 
-의존성 = 표준 라이브러리만(http.server) — CLAUDE.md 규약(서드파티 추가 전 사람 확인) 준수.
-쿼리 로직은 재구현하지 않고 module_news_data._fts.query_fts 를 그대로 재사용(P1).
+의존성 = 표준 라이브러리만(http.server) — CLAUDE.md 규약 준수.
+쿼리·분석 로직은 재구현하지 않고 **module_news_data 의 파서/함수를 그대로 재사용**(P1):
+클라이언트가 보낸 argv 를 같은 CLI 파서로 파싱해 실행하고 stdout 을 캡처해 돌려준다.
 
 엔드포인트:
-  GET /health                          → {"ok":true, "db":…, "counts":…}
-  GET /fts/search?terms=A&terms=B&days=14&scope=foreign&mode=and&snippet=1&limit=40[&kr=1][&syn=1][&full=1]
-  GET /fts/count?terms=…&days=…&scope=…  → {"count":N}
+  GET /health                → {"ok":true, "db":…, "present":…}
+  GET /exec?argv=fts&argv=search&argv=Micron&argv=--days&argv=3&argv=--scope&argv=foreign
+                             → {"stdout": "<렌더된 텍스트>"}  (조회 서브커맨드만 허용)
 
-실행: python Server/news_api.py            (기본 0.0.0.0:8787, DEGAJA_NEWS_API_PORT 로 변경)
+실행: python Server/news_api.py            (기본 0.0.0.0:8787, 인자로 포트 변경)
+보안: 조회(READ)만 화이트리스트 — fetch·fts build/update(쓰기)는 거부.
 """
 from __future__ import annotations
 
+import contextlib
+import io
 import json
 import sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -27,31 +31,36 @@ from urllib.parse import parse_qs, urlparse
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from module_news_data._config import (  # noqa: E402
-    FTS_DB, FTS_DB_KR, NEWS_API_PORT, NEWS_DB,
-)
-from module_news_data._fts import query_fts  # noqa: E402
+from module_news_data._config import FTS_DB, FTS_DB_KR, NEWS_API_PORT, NEWS_DB  # noqa: E402
+from module_news_data.__main__ import build_parser  # noqa: E402
+
+# 원격 실행 허용 = DB 를 읽는 조회 서브커맨드만. 쓰기(fetch·fts build/update)는 서버 콘솔에서만.
+READ_CMDS = {"search", "fts", "coverage", "blindspot", "theme-age", "chain-hop"}
 
 
-def _one(qs: dict, key: str, default=None):
-    v = qs.get(key)
-    return v[0] if v else default
-
-
-def _int(qs: dict, key: str, default=None):
-    v = _one(qs, key)
+def _run_argv(argv: list[str]) -> dict:
+    """argv 를 CLI 파서로 실행하고 stdout+stderr 를 캡처해 반환. 조회만 허용."""
+    if not argv:
+        return {"error": "argv 비어있음"}
+    if argv[0] not in READ_CMDS:
+        return {"error": f"'{argv[0]}' 는 원격 실행 불가(조회 전용). 허용: {sorted(READ_CMDS)}"}
+    if argv[0] == "fts" and (len(argv) < 2 or argv[1] != "search"):
+        return {"error": "fts 는 search 만 원격 허용(build/update 는 서버 콘솔에서)."}
+    buf = io.StringIO()
     try:
-        return int(v) if v is not None else default
-    except (TypeError, ValueError):
-        return default
-
-
-def _bool(qs: dict, key: str) -> bool:
-    return _one(qs, key, "0") in ("1", "true", "True", "yes")
+        ns = build_parser().parse_args(argv)
+    except SystemExit:                       # argparse 인자 오류
+        return {"error": f"인자 파싱 실패: {' '.join(argv)}"}
+    try:
+        with contextlib.redirect_stdout(buf), contextlib.redirect_stderr(buf):
+            ns.func(ns)
+    except Exception as exc:                  # noqa: BLE001
+        return {"error": f"실행 오류: {exc!r}", "stdout": buf.getvalue()}
+    return {"stdout": buf.getvalue()}
 
 
 class Handler(BaseHTTPRequestHandler):
-    server_version = "DeGaJaNewsAPI/1.0"
+    server_version = "DeGaJaNewsAPI/1.1"
 
     def _send(self, obj, code=200):
         body = json.dumps(obj, ensure_ascii=False).encode("utf-8")
@@ -62,7 +71,7 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
-    def log_message(self, fmt, *args):  # quieter, one-line
+    def log_message(self, fmt, *args):
         sys.stderr.write("  api %s - %s\n" % (self.address_string(), fmt % args))
 
     def do_GET(self):  # noqa: N802
@@ -73,25 +82,13 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send({
                     "ok": True,
                     "db": {"news": str(NEWS_DB), "fts": str(FTS_DB), "fts_kr": str(FTS_DB_KR)},
-                    "present": {"news": NEWS_DB.exists(), "fts": FTS_DB.exists(), "fts_kr": FTS_DB_KR.exists()},
+                    "present": {"news": NEWS_DB.exists(), "fts": FTS_DB.exists(),
+                                "fts_kr": FTS_DB_KR.exists()},
+                    "read_cmds": sorted(READ_CMDS),
                 })
-            if u.path in ("/fts/search", "/fts/count"):
-                terms = qs.get("terms") or []
-                if not terms:
-                    return self._send({"error": "terms 파라미터 필요"}, 400)
-                data = query_fts(
-                    terms=terms,
-                    days=_int(qs, "days"),
-                    scope=_one(qs, "scope", "all"),
-                    mode=_one(qs, "mode", "and"),
-                    use_syn=_bool(qs, "syn"),
-                    show_snip=_bool(qs, "snippet"),
-                    limit=_int(qs, "limit", 40),
-                    show_full=_bool(qs, "full"),
-                    kr=_bool(qs, "kr"),
-                    count_only=(u.path == "/fts/count"),
-                )
-                return self._send(data)
+            if u.path == "/exec":
+                argv = qs.get("argv") or []
+                return self._send(_run_argv(argv))
             return self._send({"error": f"unknown path {u.path}"}, 404)
         except Exception as exc:  # noqa: BLE001
             return self._send({"error": f"server error: {exc!r}"}, 500)
@@ -102,12 +99,11 @@ def main() -> None:
         sys.stdout.reconfigure(encoding="utf-8")
     except Exception:
         pass
-    port = NEWS_API_PORT
-    if len(sys.argv) > 1:
-        port = int(sys.argv[1])
+    port = int(sys.argv[1]) if len(sys.argv) > 1 else NEWS_API_PORT
     srv = ThreadingHTTPServer(("0.0.0.0", port), Handler)
     print(f"[news_api] serving on 0.0.0.0:{port}  (DB: {FTS_DB})")
     print(f"[news_api] health: http://127.0.0.1:{port}/health")
+    print(f"[news_api] 원격 허용 조회: {sorted(READ_CMDS)}  (fetch·build/update 거부)")
     print("[news_api] Ctrl+C 로 종료")
     try:
         srv.serve_forever()

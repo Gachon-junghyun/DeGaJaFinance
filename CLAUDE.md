@@ -44,5 +44,7 @@
 - 뉴스 수집은 이 리포가 소유·구동한다. **서버 PC 역할 = [`Server/`](Server/README.md)**: `Server/run_fetch_loop.bat`(수집 루프)
   + `Server/run_news_api.bat`(검색 API, stdlib http.server, 기본 :8787). 루트 `run_fetch_loop.bat` 는 Server 로 위임하는 shim.
 - **뉴스 접근 = API 우선.** 클라이언트/Claude Code 는 DB 파일을 직접 열지 않고 `DEGAJA_NEWS_API=http://<서버IP>:8787` 만
-  켜면 **같은 CLI**(`module_news_data fts search …`)가 원격 검색을 끌어온다(비면 로컬 DB 폴백). 쿼리 단일 원본은
-  `module_news_data._fts.query_fts` — 서버가 재구현하지 않고 그걸 재사용한다(P1). 현재 API 라우팅은 `fts search/count`.
+  켜면 **DB 를 읽는 모든 조회 서브커맨드**(`search·fts search·coverage·blindspot·theme-age·chain-hop`)를 서버 `/exec` 로
+  넘겨 실행한다 — **클라이언트 로컬 뉴스 DB 를 지워도 동작**(서버가 자기 DB 로 실행). 비면 로컬 폴백. 서버는 클라이언트
+  argv 를 같은 CLI 파서(`__main__.build_parser`)로 실행하고 stdout 을 반환(재구현 0, P1). 쓰기(`fetch·fts build/update`)는
+  서버 콘솔에서만 — 클라이언트에선 거부. stdlib(http.server/urllib)만.

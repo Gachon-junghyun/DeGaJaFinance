@@ -36,18 +36,19 @@ python -X utf8 -m module_news_data fts search "Micron" HBM --scope foreign --day
 헤더에 ` ·via API` 가 붙으면 원격에서 끌어온 것. `DEGAJA_NEWS_API` 를 지우면 즉시 로컬 DB 폴백.
 접속 실패 시 결과 dict 에 `error` 가 담겨 사유를 알려준다(서버 다운/방화벽/오타).
 
+## 라우팅되는 조회 = 전부 (로컬 DB 없어도 됨)
+`DEGAJA_NEWS_API` 가 켜지면 **DB 를 읽는 모든 조회 서브커맨드**가 서버에서 실행된다:
+`search · fts search · coverage · blindspot · theme-age · chain-hop`. 클라이언트는 **뉴스 DB 를 지워도**
+이 명령들이 다 동작한다(서버가 자기 로컬 DB 로 실행 → 결과 텍스트 반환). stderr 에 `(via NEWS API @ …)` 표시.
+쓰기(`fetch · fts build/update`)는 **서버 PC 콘솔에서만** — 클라이언트에서 부르면 거부된다.
+
 ## API 엔드포인트 (직접 호출도 가능)
 | GET | 반환 |
 |---|---|
-| `/health` | DB 경로·존재여부 |
-| `/fts/search?terms=A&terms=B&days=14&scope=foreign&mode=and&snippet=1&limit=40[&kr=1][&syn=1][&full=1]` | `{match,count,rows:[…]}` |
-| `/fts/count?terms=…&days=…&scope=…` | `{count:N}` |
+| `/health` | DB 경로·존재여부·허용 조회목록 |
+| `/exec?argv=fts&argv=search&argv=Micron&argv=--days&argv=3&argv=--scope&argv=foreign` | `{stdout: "<렌더 텍스트>"}` |
 
-- `terms` 는 반복 파라미터(`terms=A&terms=B`), `scope`=all/foreign/domestic, `mode`=and/or.
-- 쿼리 로직은 `module_news_data._fts.query_fts` **단일 원본을 재사용**(서버가 재구현 안 함, P1).
+- `argv` = 반복 파라미터로 CLI 인자를 순서대로(`argv=coverage&argv=nuclear&argv=--days&argv=30`).
+- 서버는 클라이언트가 보낸 argv 를 **module_news_data 의 같은 CLI 파서**(`build_parser`)로 파싱·실행하고
+  stdout 을 캡처해 돌려준다 — 쿼리/분석 로직 재구현 0(P1). 조회 서브커맨드만 화이트리스트(쓰기 거부).
 - 의존성 **표준 라이브러리만**(http.server/urllib) — 서드파티 없음.
-
-## 커버리지/블라인드스팟 등 무거운 분석은?
-`coverage·blindspot·theme-age·chain-hop` 은 아직 DB 직접 읽기다. 그 명령들은 **서버 PC 에서**
-돌리거나(로컬 DB 있음), 클라이언트에 DB 사본이 있을 때만 동작한다. 현재 API 라우팅은 데스크가
-제일 많이 쓰는 **fts search / count** 만 커버한다(필요하면 같은 패턴으로 엔드포인트 추가).
