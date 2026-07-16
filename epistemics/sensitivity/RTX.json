@@ -1,0 +1,11 @@
+{
+  "ticker": "RTX",
+  "factors": {
+    "missile-defense/Golden Dome": {
+      "dir": "+중",
+      "event": "un-gated defense diversifier — CONFIRMED-TURN, uncorrelated ",
+      "conf": 0.65,
+      "updated": "2026-07-15"
+    }
+  }
+}

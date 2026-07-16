@@ -1,0 +1,11 @@
+{
+  "ticker": "AVGO",
+  "factors": {
+    "AI-capex/CoWoS": {
+      "dir": "+강",
+      "event": "custom-ASIC core — ASML guide-raise 07-15",
+      "conf": 0.8,
+      "updated": "2026-07-15"
+    }
+  }
+}

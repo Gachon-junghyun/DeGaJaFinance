@@ -1,0 +1,11 @@
+{
+  "ticker": "CEG",
+  "factors": {
+    "datacenter-load-growth": {
+      "dir": "무/-",
+      "event": "TRIM exhausting IPP (downgrade+moratorium) — rotate conseque",
+      "conf": 0.6,
+      "updated": "2026-07-15"
+    }
+  }
+}

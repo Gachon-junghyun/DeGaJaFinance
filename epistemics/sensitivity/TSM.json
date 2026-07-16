@@ -1,0 +1,11 @@
+{
+  "ticker": "TSM",
+  "factors": {
+    "AI-compute foundry demand": {
+      "dir": "+강",
+      "event": "monopoly foundry core — closes 0% engine GAP",
+      "conf": 0.8,
+      "updated": "2026-07-15"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "_note": "Regime-flip branch map for the both-sides ACTION BRACKET (from BLINDSPOT_PREMORTEM 2026-07-14). Per axis, which names RIP on the cool/dovish/de-escalation branch (A) vs the hot/escalation branch (B). action_bracket.py pairs the nearest binary's axis to these. asymmetric = the under-priced tail to hold as a small convex hedge.",
+  "updated": "2026-07-14",
+  "axes": {
+    "inflation": {
+      "A_cool": ["NVDA", "SMH", "META", "ITB", "IWM"],
+      "B_hot":  ["MPC", "VLO", "XLE", "RTX"],
+      "asymmetric": "B_hot"
+    },
+    "rates": {
+      "A_cool": ["NVDA", "SMH", "ITB", "IWM", "XHB"],
+      "B_hot":  ["XLE", "MPC", "banks_capmkt:MS,SCHW"],
+      "asymmetric": "A_cool"
+    },
+    "oil": {
+      "A_deescalate": ["NVDA", "SMH", "JETS", "DAL", "IWM"],
+      "B_escalate":   ["STNG", "FRO", "MPC", "VLO", "XLE", "RTX"],
+      "asymmetric": "B_escalate"
+    },
+    "earnings": {
+      "A_beat": ["<the reporting ticker> continuation add"],
+      "B_miss": ["<avoid / opposite-leg>"],
+      "asymmetric": "confirm-then-enter (no front-run of a single-name binary)"
+    },
+    "labor": {
+      "A_soft": ["NVDA", "SMH", "ITB", "IWM"],
+      "B_strong": ["XLE", "MPC", "banks"],
+      "asymmetric": "A_soft"
+    }
+  }
+}

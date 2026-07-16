@@ -1,0 +1,28 @@
+{
+  "verifiers": {
+    "registry_audit": {
+      "trigger": "매 리팩토링 Phase 끝 / 수동",
+      "updates_ledger": "REGISTRY_AUDIT.md · REGISTRY_AUDIT_LOG.jsonl",
+      "module": "module_epistemics audit",
+      "desc": "코드↔맵 정합성 스캔 + 커버리지 추세(진척 계량기)"
+    },
+    "conflict_adjudicate": {
+      "trigger": "신호 충돌 시",
+      "updates_ledger": "(산출: 베이지안 충돌표)",
+      "module": "module_epistemics adjudicate",
+      "desc": "모순 신호 → prior×LR×신뢰도 → posterior + 지배축"
+    },
+    "sensitivity_update": {
+      "trigger": "catalyst 발화 → 실제 가격반응 관측",
+      "updates_ledger": "sensitivity/{id}.md",
+      "module": "module_epistemics sensitivity --add",
+      "desc": "종목×factor 탄력·신뢰도 사후검증 갱신(alert-postmortem 패턴 재사용)"
+    },
+    "grounding_audit": {
+      "trigger": "결론 산출 후",
+      "updates_ledger": "(사후검사)",
+      "module": "(미구현 — 인지 게이트 통과 여부 검사)",
+      "desc": "결론이 관측값+출처+신선도 인지체크를 통과했나"
+    }
+  }
+}

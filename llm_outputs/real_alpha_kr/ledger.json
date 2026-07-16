@@ -1,0 +1,15 @@
+{
+  "009150": {
+    "name": "삼성전기",
+    "last_researched": "2026-07-16",
+    "last_verdict": "REAL_BUT_PRICED",
+    "report": "llm_outputs/2026-07-16/real_alpha_kr/009150/REPORT.md",
+    "observation_points": [
+      {"by_date": "2026-08-14", "claim": "Q2 기판믹스로 영업마진 개선", "falsifies_if": "마진 ≤6~7% 정체 → INFLATED"},
+      {"by_date": "2026-08-31", "claim": "외국인 순매수 유지", "falsifies_if": "순매도 전환 → 바닥지지 소멸"},
+      {"by_date": "2026-09-30", "claim": "재고 2.41조 소진", "falsifies_if": "매출 정체 속 재고 추가증가 → demand-pull"}
+    ],
+    "op_hits": 0,
+    "op_misses": 0
+  }
+}

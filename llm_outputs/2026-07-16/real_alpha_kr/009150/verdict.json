@@ -1,0 +1,24 @@
+{
+  "code": "009150",
+  "name": "삼성전기",
+  "date": "2026-07-16",
+  "verdict": "REAL_BUT_PRICED",
+  "verdict_delta": "신규→REAL-but-PRICED",
+  "confidence": "[검증함]",
+  "one_line": "이익은 진짜(OCF 2.11×NI)·수요도 실물 수주 2.01조로 잡히나 PER 120~134배·컨센 +94%가 AI기판 회복을 다 선반영 — 개별붕괴 아닌 froth 밸류 되돌림.",
+  "observation_points": [
+    {"by_date": "2026-08-14", "claim": "Q2 실적에서 기판 믹스로 영업마진 전분기比 개선", "falsifies_if": "마진 ≤6~7% 정체면 컨센 +94% 무근거 → INFLATED 하향"},
+    {"by_date": "2026-08-31", "claim": "외국인 20일 순매수 유지(강한손 저점매집)", "falsifies_if": "외국인 순매도 전환 시 바닥지지 알파 소멸"},
+    {"by_date": "2026-09-30", "claim": "재고 2.41조가 매출 회복과 함께 소진", "falsifies_if": "매출 정체 속 재고 QoQ 추가 증가 시 demand-pull 리스크 확정"}
+  ],
+  "prev_op_review": [],
+  "alpha_delta": [
+    "회복 서사에 실물 백로그 2.01조 + 현금질 OCF 2.11×NI가 실제로 받침(froth주 이례적)",
+    "외국인 강한손이 -46% 저점을 매집 중"
+  ],
+  "risk_delta": [
+    "PER 120~134배/마진 6.25% = FC-BGA 램프 실적전환 지연 시 하방 거대",
+    "재고 2.41조(매출 21%) demand-pull 역풍 · 자사주 0(밸류업 신호 약함)"
+  ],
+  "binding": false
+}

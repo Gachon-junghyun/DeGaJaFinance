@@ -1,0 +1,18 @@
+{
+  "rate cut": ["rate cut", "rate cuts", "cutting rates", "lower rates", "easing", "dovish pivot", "25bp cut", "50bp cut", "policy easing"],
+  "rate hike": ["rate hike", "rate hikes", "raising rates", "tightening", "hawkish", "higher for longer"],
+  "Fed": ["Fed", "Federal Reserve", "FOMC", "Powell", "central bank"],
+  "inflation": ["inflation", "CPI", "PCE", "core inflation", "price pressures", "disinflation"],
+  "recession": ["recession", "downturn", "hard landing", "soft landing", "contraction"],
+  "tariff": ["tariff", "tariffs", "trade war", "import duties", "levies"],
+  "export control": ["export control", "export curbs", "chip curbs", "export restrictions", "entity list", "sanctions"],
+  "rare earth": ["rare earth", "rare earths", "critical minerals", "rare-earth"],
+  "nuclear": ["nuclear", "uranium", "SMR", "small modular reactor", "reactor", "enrichment"],
+  "AI capex": ["AI capex", "datacenter", "data center", "hyperscaler", "capex", "GPU buildout"],
+  "oil": ["oil", "crude", "WTI", "Brent", "OPEC"],
+  "dollar": ["dollar", "DXY", "greenback", "USD"],
+  "yen": ["yen", "BoJ", "Bank of Japan", "JPY", "intervention", "carry trade"],
+  "credit spread": ["credit spread", "high yield", "HY spread", "IG spread", "OAS", "credit risk"],
+  "China": ["China", "Beijing", "PBOC", "Xi"],
+  "Iran": ["Iran", "Tehran", "Hormuz", "Strait of Hormuz"]
+}

@@ -1,0 +1,30 @@
+# 시크릿·토큰 — 절대 커밋 금지
+.env
+.env.*
+!.env.example
+.kis_token_cache.json
+*.token
+*token_cache*.json
+
+# 대용량 데이터·로그 (로컬 소유, 재수집/복사로 재현 — 서버엔 별도 전송)
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/*.log
+data/news_blindspot/
+out/
+module_chart/output/
+
+# 생성물 (재생성 가능)
+REPORT/_tags.json
+REPORT/HANDOFF.md
+pipeline/protocols/_compiled/
+epistemics/registry.json
+epistemics/REGISTRY_AUDIT.md
+epistemics/REGISTRY_AUDIT_LOG.jsonl
+
+# 캐시 (재생성 가능)
+__pycache__/
+*.pyc
+scripts/.cache/
+*.pkl

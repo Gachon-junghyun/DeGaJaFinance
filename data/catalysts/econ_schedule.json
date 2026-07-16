@@ -1,0 +1,33 @@
+{
+  "_note": "US macro release schedule. Each event carries source + confidence so VERIFIED vs ESTIMATE is always visible (2026-07-14 오답노트: never present an estimate as fact). confidence: 'confirmed'=pulled from the official source this session · 'pattern'=derived rule (NFP=first Friday, validated by Aug-7) · 'estimate'=needs verification. REFRESH: annually from bls.gov/schedule/news_release/, federalreserve.gov/monetarypolicy/fomccalendars.htm, bea.gov/news/schedule.",
+  "updated": "2026-07-14",
+  "sources": {
+    "bls": "https://www.bls.gov/schedule/news_release/ (CPI, PPI, Employment/NFP)",
+    "fed": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm (FOMC)",
+    "bea": "https://www.bea.gov/news/schedule (PCE / Personal Income & Outlays)"
+  },
+  "events": [
+    {"date": "2026-07-15", "time_et": "08:30", "event": "June PPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "confirmed"},
+    {"date": "2026-07-29", "time_et": "14:00", "event": "FOMC decision (Warsh, no SEP)", "axis": "rates", "binary": true, "source": "fed", "confidence": "confirmed"},
+    {"date": "2026-07-30", "time_et": "08:30", "event": "June PCE (Personal Income & Outlays)", "axis": "inflation", "binary": true, "source": "bea", "confidence": "confirmed"},
+    {"date": "2026-08-07", "time_et": "08:30", "event": "July Employment / NFP", "axis": "labor", "binary": true, "source": "bls", "confidence": "confirmed"},
+    {"date": "2026-08-12", "time_et": "08:30", "event": "July CPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "confirmed"},
+    {"date": "2026-08-13", "time_et": "08:30", "event": "July PPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "confirmed"},
+    {"date": "2026-08-28", "time_et": "08:30", "event": "July PCE (Personal Income & Outlays)", "axis": "inflation", "binary": true, "source": "bea", "confidence": "estimate"},
+    {"date": "2026-09-04", "time_et": "08:30", "event": "Aug Employment / NFP", "axis": "labor", "binary": true, "source": "bls", "confidence": "pattern"},
+    {"date": "2026-09-10", "time_et": "08:30", "event": "Aug PPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "confirmed"},
+    {"date": "2026-09-11", "time_et": "08:30", "event": "Aug CPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "estimate"},
+    {"date": "2026-09-16", "time_et": "14:00", "event": "FOMC decision (SEP/dot plot)", "axis": "rates", "binary": true, "source": "fed", "confidence": "confirmed"},
+    {"date": "2026-10-02", "time_et": "08:30", "event": "Sep Employment / NFP", "axis": "labor", "binary": true, "source": "bls", "confidence": "pattern"},
+    {"date": "2026-10-15", "time_et": "08:30", "event": "Sep PPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "confirmed"},
+    {"date": "2026-10-28", "time_et": "14:00", "event": "FOMC decision (no SEP)", "axis": "rates", "binary": true, "source": "fed", "confidence": "confirmed"},
+    {"date": "2026-11-06", "time_et": "08:30", "event": "Oct Employment / NFP", "axis": "labor", "binary": true, "source": "bls", "confidence": "pattern"},
+    {"date": "2026-11-13", "time_et": "08:30", "event": "Oct PPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "confirmed"},
+    {"date": "2026-12-04", "time_et": "08:30", "event": "Nov Employment / NFP", "axis": "labor", "binary": true, "source": "bls", "confidence": "pattern"},
+    {"date": "2026-12-09", "time_et": "14:00", "event": "FOMC decision (SEP/dot plot)", "axis": "rates", "binary": true, "source": "fed", "confidence": "confirmed"},
+    {"date": "2026-12-15", "time_et": "08:30", "event": "Nov PPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "confirmed"}
+  ],
+  "geopolitical_watch": [
+    {"event": "Iran 'Strait of Hormuz open' statement (TACO trigger)", "axis": "oil", "binary": true, "undated": true, "source": "news", "confidence": "watch", "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling."}
+  ]
+}

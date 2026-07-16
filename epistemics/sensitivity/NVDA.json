@@ -1,0 +1,11 @@
+{
+  "ticker": "NVDA",
+  "factors": {
+    "GPU/CoWoS bottleneck": {
+      "dir": "+강",
+      "event": "GPU gated add (crowded-short 4%ile → hard-stop)",
+      "conf": 0.75,
+      "updated": "2026-07-15"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "_note": "Dominant secular cycles ↔ ticker layers. Epicenter = the engine (own a core regardless of tape). Adjacent = beneficiary layer. Fuel = adjacent-of-adjacent. Human/find-cycle-curated; cycle_exposure.py reads this vs the KIS book. Update rank/tickers as find-cycle output evolves (md-ledger discipline: this JSON = deterministic registry, not LLM synthesis).",
+  "updated": "2026-07-14",
+  "cycles": [
+    {
+      "name": "AI-compute / semiconductors",
+      "rank": 1,
+      "min_epicenter_pct": 12.0,
+      "core_pick": "NVDA",
+      "core_pick_why": "real-alpha REAL/not-priced, flow 🟡중립=non-chase entry, epicenter bottleneck, fwd PE 16.5 < AVGO 20.1",
+      "epicenter": ["NVDA", "AVGO", "AMD", "MU", "TSM", "ASML", "AMAT", "LRCX", "KLAC", "MRVL", "ANET", "SKHY", "SMCI", "SMH"],
+      "adjacent": ["CEG", "VST", "NRG", "TLN", "GEV", "ETR", "NEE", "BWXT", "ETN", "VRT", "PWR"],
+      "fuel": ["LNG", "KMI", "WMB", "OKE"]
+    },
+    {
+      "name": "Energy / oil-refining (Hormuz + Russia crack)",
+      "rank": 2,
+      "min_epicenter_pct": 0.0,
+      "epicenter": ["MPC", "PSX", "VLO", "XOM", "CVX", "EOG", "FRO", "STNG", "INSW", "DHT"],
+      "adjacent": ["LNG", "KMI", "WMB", "OKE"],
+      "fuel": []
+    },
+    {
+      "name": "Missile-defense / rearmament",
+      "rank": 3,
+      "min_epicenter_pct": 0.0,
+      "epicenter": ["RTX", "LMT", "NOC", "GD", "LHX"],
+      "adjacent": ["MP", "USAR"],
+      "fuel": []
+    }
+  ]
+}
