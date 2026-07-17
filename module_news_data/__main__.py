@@ -22,6 +22,12 @@ import argparse
 import sys
 
 from ._blindspot import cli_register as _reg_blindspot
+from ._brief import cli_register as _reg_brief
+from ._burst import cli_register as _reg_burst
+from ._classify import cli_register as _reg_classify
+from ._cluster import cli_register as _reg_cluster
+from ._embed import cli_register as _reg_embed
+from ._export import cli_register as _reg_export
 from ._chain_hop import cli_register as _reg_chain_hop
 from ._config import NEWS_API_BASE, utf8_stdout
 from ._coverage import cli_register as _reg_coverage
@@ -31,10 +37,20 @@ from ._search import cli_register as _reg_search
 from ._theme_age import cli_register as _reg_theme_age
 
 REGISTRARS = [_reg_fetch, _reg_search, _reg_fts, _reg_coverage, _reg_blindspot,
-              _reg_theme_age, _reg_chain_hop]
+              _reg_theme_age, _reg_chain_hop, _reg_burst, _reg_export, _reg_embed,
+              _reg_cluster, _reg_classify, _reg_brief]
 
 # DB 를 직접 읽는 조회 서브커맨드 — 원격 모드에서 서버 /exec 로 라우팅된다.
-DB_READ_CMDS = {"search", "fts", "coverage", "blindspot", "theme-age", "chain-hop"}
+# ⚠ 여기가 단일 원본 — `Server/news_api.py` 가 이걸 import 해서 화이트리스트로 쓴다(P1).
+#    새 조회 서브커맨드는 여기 한 줄만 추가하면 서버가 자동으로 따라온다(서버 코드 수정 0).
+# ⚠ `embed`·`cluster` 는 **일부러 뺀다** — GPU/sklearn 이 필요한 클라이언트 전용이고,
+#    서버(저사양·GPU 없음)에서 원격 실행되면 안 된다. 둘 다 서버 뉴스DB 가 아니라 클라이언트
+#    소유 `news_vectors.db` 를 읽는다(`embed` 가 `_export.pull` 로 제목만 받아와 채워둔 것).
+DB_READ_CMDS = {"search", "fts", "coverage", "blindspot", "theme-age", "chain-hop",
+                "burst", "export"}
+
+# 대량 반출은 60초로 모자란다(12만행 ~13MB). 명령별 타임아웃 — 기본은 _api_client 값.
+REMOTE_TIMEOUT = {"export": 600}
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -67,7 +83,7 @@ def main() -> None:
     # ── 원격 모드: DB 읽는 조회는 서버에서 실행 ─────────────────────────
     if NEWS_API_BASE and cmd in DB_READ_CMDS and not _is_write(raw):
         from ._api_client import exec_remote
-        res = exec_remote(NEWS_API_BASE, raw)
+        res = exec_remote(NEWS_API_BASE, raw, timeout=REMOTE_TIMEOUT.get(cmd))
         if res.get("error"):
             print(res["error"], file=sys.stderr)
             sys.exit(2)

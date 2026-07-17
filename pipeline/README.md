@@ -33,7 +33,7 @@ L3_functions/  single-role functions (atomic steps: random news sample·body dri
 | protocol | `protocols/` | L1 composition = a desk flow | `industry_us.md` = [MACRO,SWEEP,ROTATION,PREMORTEM,DEEP,BET,ALPHA,DRIFT] |
 | L1 | `L1_stages/` | big stages | `macro.md`·`sweep.md`·`deep.md`·`bet.md`… |
 | L2 | `L2_modules/` | module orchestration | `indicators.md`·`schedule.md`·`discovery.md`·`deepdive.md`·`news.md` |
-| L3 | `L3_functions/` | single-role functions | `random_news.md`·`drill_detail.md`·`related_companies.md`·`competitors.md` |
+| L3 | `L3_functions/` | single-role functions | `daily_events.md`·`random_news.md`·`drill_detail.md`·`related_companies.md`·`competitors.md` |
 | — | `handoff.md` | REPORT handoff ledger (prevents re-searching; crosses layers) | `module_report_tags` |
 
 ## Compiling a composition
@@ -74,6 +74,12 @@ Checkpoint at `out/pipeline_runs/{name}.json` (stage · passed · target). Do a 
   falsify · verdict** (real_alpha_kr).
 - **L2/L3**: orchestration + atomic functions, reused across L1s. real_alpha added L2 `money_trail` +
   L3 `accruals_check · filing_diff · set_difference · contract_alpha`.
+- **News has two axes** (L2 `news`): the **term** axis (`blindspot`·`fts`·`chain-hop` — "is my theme
+  hot?") and the **event** axis (L3 `daily_events` → `brief` — "what happened today, all of it").
+  They are not substitutes: on the measured KOSPI −8% circuit-breaker day the term `코스피` ran at
+  1.3× normal and ranked nowhere, while the event view had it at [39 articles/8 outlets]. A term
+  spikes when it is *new*; an event ranks when it is *big*. ⚠ The event axis is **client-only**
+  (GPU embeddings, CLAUDE.md P6) — the collection server cannot run it.
 - **Language rule**: every unit here is written in **English** — the US desk runs English-pure
   (Korean in context skews the frame), and the KR desk reads English instructions while emitting
   KR-market outputs. Field-tested run notes are embedded per unit as ⚠ notes.

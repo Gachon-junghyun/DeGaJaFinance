@@ -77,8 +77,37 @@ KIS 주문 데스크 — Tkinter 스택형 주문 GUI. 주문을 '스택'에 카
 
 - **소유**: `_config` 가 **FOREIGN_SOURCES 집합·DB 경로·utf8 헬퍼의 단일 원본**(옛 리포에선 4파일 복붙 → 여기 1곳).
   수집(`_rss_feeds`·`_scraper`·`_repository`·`_fetch`)·색인(`_fts`)·검색·발굴 전부.
+  `_timeaxis` 가 **시간축(published_at→UTC)의 단일 원본** — 시계열을 재는 모든 기능은 여기서 import.
+  `_tokenize` 가 **토큰화의 단일 원본**(한글 조사절단+영문, 형태소분석기 0) — 단어를 세는 기능은 여기서 import.
+  `_universe` 가 **상장사 언급 판정**(KR=kr_all.csv 3글자+, US=`_chain_hop.load_universe` 재사용).
 - **재사용됨**: `module_flow` 가 `_config` 에서 FOREIGN_SOURCES·FTS 경로·utf8 을 import.
 - **데이터(로컬 소유)**: `data/news_alert.db`·`news_fts.db`/`news_fts_kr.db`·`us_universe/*`·`news_synonyms*.json`.
+  `data/news_vectors.db` 는 **클라이언트 소유 파생물**(articles+vectors+커서) — 서버 DB 스키마는 안 건드린다.
+- ⚠️ **역할 분리**: 서버 PC = 수집·검색 서빙(저사양, **torch 없음**). 클라이언트 = GPU 임베딩·클러스터·브리핑.
+  그래서 `_embed`/`_cluster` 는 **torch·sklearn 을 모듈 최상단에서 import 하면 안 된다** — 서버가
+  `__main__.build_parser` 로 이 파일들을 import 하므로 기동이 깨진다. 무거운 import 는 함수 안에서만.
+  같은 이유로 `embed`·`cluster` 는 `DB_READ_CMDS` 에서 제외(원격 실행 금지, `_export.pull` 로 제목만 받아옴).
+  실측(RTX 3080): 2,082건/초 — 전량 206,224건 백필 **2분 27초**, 하루치 2초. float16 저장 463MB(1년 ~2.4GB).
+- ⚠️ **단위는 기사가 아니라 사건**(`cluster`). 같은 일을 27번 내는 게 기본이고(재배포 포함),
+  단어 단위로 보면 한 사건이 `한화오션`·`잠수함`·`캐나다`·`TKMS` 로 쪼개진다. 실측 하루 3,782건
+  → 사건 512개(2매체+). **중요도 = 몇 개 매체가 다뤘나**(편집자들이 독립적으로 내린 판정을 빌림).
+  ⚠ `burst`(단어 z급등)는 "새로운 것"만 잰다 — 7/07 코스피 8%급락·서킷브레이커 날 `코스피`는
+  평소 1.3배라 후보에도 못 들었다(`영업이익` 23.6배가 1위). `cluster` 는 같은 날 [39건/8매체]로 잡는다.
+  둘은 대체재가 아니라 **다른 축**(새로움 vs 큼)이다.
+- ⚠️ **뉴스풀의 62%가 종합지**라 `classify` 없이는 폭우·송파구·호날두가 반도체를 이긴다.
+  라벨은 URL 섹션(`mt.co.kr/politics/`)에서 **공짜**(23,508건, 사람 손 0) → 섹션이 URL 에 없는
+  신문(yonhap·asiae·hankyung = 국내 62%)에 일반화. 실측 홀드아웃 95.1% · **LOSO 85~88%**(실사용 기준).
+  **폐기된 방법**: '제목에 상장사명이 있나'(`_universe`) — 정밀하나 경제기사 재현율 **10.6%**.
+  7/07 최대 사건 "코스피 급락에 매도 사이드카"의 상장사 관련도가 7% 였다(제목에 회사명이 없다).
+  트랜스포머를 안 쓴 이유: 라벨이 같으니 상한도 같고, NB 는 `explain()` 으로 판정 근거어를 보여준다(P4).
+- ⚠️ **파이프라인**: `embed sync`(하루2초) → `cluster`(7초) → `classify` → `brief`.
+  실측 하루 3,782건 → 사건 512 → 시장 394 → 머리61/몸통143/꼬리190 → **44k 토큰**(제목전부 146k 대비 3배 압축).
+  꼬리는 **자르지 않고** 분모+무작위표본으로 준다 — 매체수는 중요도의 대리지표지 진실이 아니다.
+- ⚠️ **`brief --lede` 는 기본 OFF (본문이 못 쓸 상태)**: asiae·sedaily 는 본문 **앞** 400자가 100%
+  페이지 가구('함께 보면 좋은 기사' 목록 등)라, 리드의 22%가 그 사건과 무관한 기사였다(실측).
+  서킷브레이커 사건 근거로 "푸드나무 유상증자"가 붙는 식 — LLM 이 사건을 오독한다. 가구 제거
+  규칙을 넣었더니 멀쩡한 리드를 떨어뜨려 27%로 악화. **스크래퍼 수정 전까지 방향(호재/악재)은
+  브리핑이 말하지 않는다**(빈칸이 거짓보다 낫다).
 
 | 서브커맨드 | 트리거 | CLI |
 |---|---|---|
@@ -87,13 +116,31 @@ KIS 주문 데스크 — Tkinter 스택형 주문 GUI. 주문을 '스택'에 카
 | `fts` | 정밀·관련도순(BM25)·동의어·구문 검색 + 색인 | `... fts search "rate cut" --days 14 --scope foreign --syn` / `... fts update` |
 | `coverage` | "내 검색어가 풀의 몇 %를 보나"(분모 포함) | `... coverage nuclear --days 30 --scope foreign` |
 | `blindspot` | 못 본 풀 랜덤샘플 + 토큰0 신흥어 발굴 | `... blindspot --days 7 --scope foreign` |
+| `burst` | **고정 검색어 0** — 그날 평소보다 튄 단어 + 근거(①z급등 ②신생어) | `... burst --date 2026-07-07 --scope domestic --json` |
+| `export` | 제목 벌크 반출(증분) — 서버(수집)→클라(GPU) 동기화. 기계 소비 전용 | `... export --count --since <커서>` / `... export --since <커서>` |
+| `embed` | 제목 → 문장벡터(ko-sroberta·GPU). **클라 전용**·증분 따라잡기 | `... embed sync` · `... embed status` |
+| `cluster` | 하루 기사 → **사건**(같은 일 27건→1줄, 매체수=중요도). **클라 전용** | `... cluster --date 2026-07-07 --scope domestic --json` |
+| `classify` | 제목 → 시장/비시장(NB·의존성0·URL 라벨 자가학습). 근거어 감사 | `... classify --eval` · `... classify --words` |
+| `brief` | 하루 → **계층 브리핑**(머리5매체+/몸통3+/꼬리표본+분모). **클라 전용** | `... brief --date 2026-07-07 --scope domestic --json` |
+
 | `theme-age` | 테마 나이·가속(FRESH vs ECHO) | `... theme-age humanoid "Strait of Hormuz" --scope foreign` |
 | `chain-hop` | 제목 미명명 + 본문 근접 공동언급 수혜후보(US) | `... chain-hop "data center" power --days 14` |
 
 - **수집 루프**: 서버 PC 는 [`Server/`](Server/README.md) — `Server/run_fetch_loop.bat`(수집: fetch full + fts update 영/한, 매 INTERVAL 기본 3600s) + `Server/run_news_api.bat`(검색 API). 루트 `run_fetch_loop.bat` 는 Server 위임 shim. 로그 `data/fetch_loop.log`.
 - **API 검색 transport**: 클라이언트가 `DEGAJA_NEWS_API=http://<서버IP>:8787` 를 켜면 `fts search/count` 가 로컬 DB 대신 서버에서 끌어온다(헤더에 ` ·via API`). 쿼리 단일 원본 = `_fts.query_fts`(서버 `Server/news_api.py` 가 재구현 않고 재사용, P1). `_api_client`(urllib) ↔ `news_api`(http.server), **stdlib만**. 비면 로컬 폴백.
+- ⚠️ **원격 허용목록의 단일 원본 = `__main__.DB_READ_CMDS`** — `Server/news_api.py` 가 그걸 import 한다.
+  예전엔 서버에 복붙본이 있어, 클라에 서브커맨드를 추가해도 서버만 모른 채 "원격 실행 불가"로 거부됐다.
+  새 조회 서브커맨드는 `DB_READ_CMDS` 한 줄만 추가(서버 코드 수정 0). 단, **서버는 이 리포 코드를 돌리므로
+  git pull + API 재시작이 필요**하다. 명령별 타임아웃은 `__main__.REMOTE_TIMEOUT`(export=600s).
 - ⚠️ KR FTS는 trigram — 2글자 한글(실적·수주)은 0 반환(부재 아님). 3글자+ 대체어로.
 - 수집/색인은 append-only(`INSERT OR IGNORE`) — 중복 재수집 무해.
+- ⚠️ **시계열은 `fetched_at` 로 비닝하지 않는다** — 수집이 밀렸다 몰리면(밤 공백→아침 catch-up)
+  사흘치가 한 시각에 뭉쳐 **수집 공백이 가짜 뉴스 스파이크로 둔갑**한다(실측: 761건 틱이 발행일로는
+  7/16 509 + 7/17 246 로 갈림). 축은 `_timeaxis`(published_at→UTC). 전수 파싱률 100%(205,866/205,866).
+- ⚠️ **일별 비닝은 `_timeaxis.market_day(raw, source)`** — `utc_day` 아님. UTC 일자로 세면 한국 아침
+  뉴스가 전날 칸에 쌓인다(실측 국내 22.0% → market_day 로 0.0%). 소스 국적 판정은 `origin_tag` 재사용:
+  KR→KST(+9), EN→UTC(BBC·SCMP·bloomberg 섞여 단일 현지시각 없음). `utc_day/utc_hour` 는 절대축 원시 함수.
+- ⚠️ published_at 은 **2026-05-01 이후만 존재**(그 이전 35,021건 빈값) — `PUBLISHED_AT_SINCE`.
 
 ## module_chart
 가격을 LLM이 읽는 ASCII 캔들 차트로 렌더 + 사람이 눈대중하던 구조신호를 결정론 판정(CHART_READ).

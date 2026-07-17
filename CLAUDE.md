@@ -6,7 +6,7 @@
 
 ---
 
-## 원칙 (P1~P5)
+## 원칙 (P1~P6)
 
 - **P1 단일 원본.** 기능·상수·시크릿은 한 곳에만 정의하고, 다른 곳은 import 해서 **재사용**한다.
   같은 외부 API를 두 번 구현하지 않는다. 무엇이 어디의 단일 원본인지는 MODULE_MAP.md의 "소유/재사용" 열이 기록한다.
@@ -23,6 +23,18 @@
     루틴 원본은 [`pipeline/L1_stages/pulse.md`](pipeline/L1_stages/pulse.md)(PULSE 스테이지).
 - **P5 라이브 보호.** 옛 mvp 리포의 cron·수집·페이퍼북은 이 리포가 건드리지 않는다. 그 산출(DB·유니버스)은
   읽기 전용으로만 참조한다. 기능을 옮겨 컷오버하는 결정은 사람이 내린다.
+- **P6 서버·클라이언트 분리.** 서버 PC 는 **수집·검색 서빙 전용**(저사양, GPU·torch 없음, 24시간 가동),
+  무거운 계산(임베딩·클러스터링)은 **클라이언트**(고사양 PC, 필요할 때만 켬)가 한다. 둘은 **같은 리포
+  코드**를 돌리므로 — 서버에 없는 것을 최상단에서 import 하면 서버가 통째로 죽는다.
+  - 무거운 서드파티(`torch`·`sentence_transformers`·`sklearn`)는 **모듈 최상단 import 금지**.
+    서버가 `__main__.build_parser` 로 모든 기능 파일을 import 하므로 최상단 import 하나가
+    **서버를 기동 불능으로 만든다.** 반드시 실제 계산 함수 안에서 import 한다.
+  - 그 기능은 `__main__.DB_READ_CMDS` 에 **넣지 않는다**(원격 실행 금지). 서버 뉴스DB 대신 클라이언트
+    소유 파생물(`data/news_vectors.db`)을 읽고, 원본이 필요하면 `_export.pull` 로 받아온다
+    (전송 분기는 거기 한 곳에만 — 소비자마다 다시 짜면 P1 위반).
+  - 조회 서브커맨드 허용목록의 단일 원본은 `__main__.DB_READ_CMDS` — `Server/news_api.py` 가 import 한다.
+    거기 한 줄 추가하면 서버가 자동으로 따라오지만, **서버에도 git pull + API 재시작이 필요**하다.
+  - 클라이언트는 켤 때마다 밀린 만큼 **따라잡는다**(증분, `url_hash` 로 멱등). 꺼져 있어도 수집은 계속된다.
 
 ## 규약 (모듈 작성·사용 시)
 
@@ -31,6 +43,12 @@
 - 다른 모듈의 기능이 필요하면 **그 모듈에서 import** 한다(복제 금지). 새로 지어야 할 것 같으면 먼저 MODULE_MAP.md에
   같은 기능이 있는지 확인한다.
 - 의존성은 표준라이브러리 + `requests` + (데이터 모듈은) `pandas`/`numpy`/`yfinance`. 그 밖의 서드파티는 추가 전에 사람 확인.
+  - **승인된 예외 (2026-07-17, 사람 승인): `sentence-transformers`·`torch`·`scikit-learn`.**
+    뉴스 사건 클러스터링 전용 — 어휘 기반(자카드·코사인·LSA)으로는 같은 사건을 못 묶는다는 걸
+    실측으로 소진한 뒤 도입했다(근거는 `module_news_data/_embed.py`·`_cluster.py` 상단).
+    **이 셋은 무거운(≈GB) GPU 계열이라 아래 P6 의 제약을 받는다.** 다른 용도로 확장하기 전에 다시 확인.
+- **GPU 계열을 쓰는 새 기능은 P6 를 반드시 지킨다** — lazy import + `DB_READ_CMDS` 제외.
+  어긴 채 커밋하면 서버 PC 의 수집·검색이 **전부** 멈춘다(기동 실패).
 - CLI 진입점마다 `utf8_stdout()` (또는 `sys.stdout.reconfigure`) — Windows cp949 콘솔 크래시 방지.
 - 주문·집행 계열은 **기본 드라이런, `--execute`는 사람이 명시.** 스케줄러가 자동 발사하는 코드는 만들지 않는다.
 - 모듈 산출 파일은 `out/` 아래에 쓴다(커밋 대상 아님). 시크릿(`.env`)·토큰 캐시는 커밋하지 않는다.
@@ -39,7 +57,10 @@
 
 - 이 리포는 **자립**한다 — 옛 mvp 리포에 런타임 링크가 없다. 데이터·DB·시크릿 전부 로컬 소유.
 - 데이터는 `data/`(환경변수 `DEGAJA_DATA_DIR`로 이동 가능): `news_alert.db`(수집)·`news_fts*.db`(색인)·
-  `us_universe/`·`news_synonyms*.json`. 어느 모듈이 무엇을 쓰는지는 MODULE_MAP.md.
+  `us_universe/`·`kr_universe/`·`news_synonyms*.json`. 어느 모듈이 무엇을 쓰는지는 MODULE_MAP.md.
+- **소유가 갈린다(P6)**: `news_alert.db`·`news_fts*.db` = **서버**가 쓰고 클라는 읽기만(원격이면 API 경유).
+  `news_vectors.db` = **클라이언트 소유 파생물**(임베딩·동기화 커서) — 서버는 존재도 모른다. 서버 DB 의
+  스키마를 클라 편의로 바꾸지 않는다. 파생물은 언제든 지우고 다시 만들 수 있어야 한다(실측 재생성 2분 27초).
 - 시크릿(`KIS_*`·`KRX_*`·`DART_API_KEY` 등)의 단일 원본은 이 리포 `.env`. 평문 시크릿을 코드에 넣지 않는다.
 - 뉴스 수집은 이 리포가 소유·구동한다. **서버 PC 역할 = [`Server/`](Server/README.md)**: `Server/run_fetch_loop.bat`(수집 루프)
   + `Server/run_news_api.bat`(검색 API, stdlib http.server, 기본 :8787). 루트 `run_fetch_loop.bat` 는 Server 로 위임하는 shim.

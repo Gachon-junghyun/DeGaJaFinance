@@ -32,10 +32,13 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from module_news_data._config import FTS_DB, FTS_DB_KR, NEWS_API_PORT, NEWS_DB  # noqa: E402
-from module_news_data.__main__ import build_parser  # noqa: E402
+from module_news_data.__main__ import DB_READ_CMDS, build_parser  # noqa: E402
 
 # 원격 실행 허용 = DB 를 읽는 조회 서브커맨드만. 쓰기(fetch·fts build/update)는 서버 콘솔에서만.
-READ_CMDS = {"search", "fts", "coverage", "blindspot", "theme-age", "chain-hop"}
+# ⚠ 목록을 여기 다시 적지 않는다(P1) — 예전에 복붙본이 있었고, 클라이언트에 서브커맨드를
+# 추가했을 때 이쪽만 안 고쳐져 원격에서 "실행 불가"로 거부되는 사고가 났다. 단일 원본은
+# `__main__.DB_READ_CMDS`(CLI 파서와 같은 파일) — 거기 등록하면 서버가 자동으로 따라온다.
+READ_CMDS = DB_READ_CMDS
 
 
 def _run_argv(argv: list[str]) -> dict:

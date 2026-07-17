@@ -14,6 +14,11 @@ answers one question fast: **is this a broad crash, a sector event, an idiosyncr
 - [news](../L2_modules/news.md) — **same-day only**: `python -X utf8 -m module_news_data fts search <name/theme>
   --scope foreign --days 1 --snippet` (and `--days 1 --count` for a selloff-term velocity spike). ⚠ `--days 1`
   is the whole point — do not widen the window; a crash diagnosis uses fresh data, not last week's.
+  - **Then ask what the tape says you missed**: `brief --date <today>` (run `embed sync` first, ~2s).
+    You searched the names you already suspect; the event view surfaces the one you didn't. On the
+    measured crash day the term search would have chased `영업이익` while 8 outlets ran the
+    circuit-breaker. ⚠ Partial by construction — today's articles are still arriving, and the day is
+    binned by **publish** time, so a mid-session `brief` is a floor, not a full count. Say so.
 
 ## What this stage does
 - **Price sweep (모든 관련 종목 현재가):** run `pulse` → rank the book by 1d move; flag any name ≤ −3% and any
