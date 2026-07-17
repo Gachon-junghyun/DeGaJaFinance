@@ -10,8 +10,10 @@ day's crash at **[39 articles/8 outlets]**. A term spikes when it is *new*; an e
 Use the event axis for coverage, the term axis for discovery — and run both when the stage needs both.
 
 ## Calls — A. event axis (what happened, all of it)
-0. L3 [daily_events](../L3_functions/daily_events.md) — `brief` (articles → **events**, tiered + denominator).
-   Same story told 27–54× collapses to one line; ranking = how many outlets ran it.
+0. L3 [daily_events](../L3_functions/daily_events.md) — `brief --body 2` (articles → **events**,
+   tiered + denominator). Same story told 27–54× collapses to one line; ranking = how many outlets ran it.
+   ⚠ **Pass `--body 2`** — the default samples a random 10 of the tail and drops the rest (measured
+   2026-07-17: TSMC ₩148tn / 환율 1480원 / CXMT HBM bypass were ALL at 2 outlets = invisible).
    ⚠ Client-only (GPU). ⚠ Says *what*, not *why* — see that unit's ⚠ before acting on any event.
 
 ## Calls — B. term axis (L3 pipeline = news → companies → competitors)
@@ -21,10 +23,20 @@ Use the event axis for coverage, the term axis for discovery — and run both wh
 4. L3 [competitors](../L3_functions/competitors.md) — `industry_map` (value-chain neighbors).
 
 ## Direct search (when an L1 needs it)
-- `python -X utf8 -m module_news_data fts search "<theme>" --scope foreign|domestic --syn --snippet`
+- `python -X utf8 -m module_news_data fts search 반도체 메모리 HBM --scope domestic --mode or --syn --snippet`
+  ⚠ **Never quote a multi-word bucket — it fails silently to ~0.** `terms` is `nargs='+'`: one argv =
+  one term. Measured: `fts search "반도체 메모리 HBM"` (quoted = one 13-char *phrase*) → **1 hit**;
+  the same three words as three args → **31,698**. `coverage "반도체,금리,환율"` (comma-joined) → **0**.
+  Nothing warns you — a mis-passed bucket just looks quiet, which is exactly the P4 trap the calling
+  L1's EXIT CHECK is meant to catch. Write terms as separate argv, always.
   ⚠ Use **OR-mode + `--syn`** for bucket-wide sweeps; **AND-mode** for multi-token body drills
   (a bare common word in body-LIKE floods with noise). `--count` = token-0 velocity.
-- `python -X utf8 -m module_news_data coverage "<terms>"` — what % of the pool my terms see (with denominator).
+  `--kr` searches the trigram index: ~15% more hits (반도체 25,243 → 29,247). Not required for Korean
+  terms — they work without it — but prefer it for KR bucket sweeps.
+- `python -X utf8 -m module_news_data coverage 반도체 금리 환율 --days 7` — what % of the pool my terms see.
+  ⚠ **A zero denominator prints 🟢 양호.** Measured: `coverage "반도체,금리,환율"` → 0건 / recall 0.0% /
+  **"🟢 양호 — 관련기사의 0.0%가 안 보임"**; the same terms as three argv → 1,936건 / recall 38.9% /
+  **"🔴 심각"**. A 🟢 verdict sitting on 0건 means you passed the terms wrong — it is not good news.
 - ⚠ KR FTS is trigram: 2-char Korean terms return 0 (absence of INDEX, not absence of news) — use 3+ char synonyms.
 
 ## Output
