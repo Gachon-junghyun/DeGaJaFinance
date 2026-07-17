@@ -26,6 +26,7 @@ SYN_FILE = DATA_DIR / "news_synonyms.json"
 SYN_FILE_KR = DATA_DIR / "news_synonyms_kr.json"
 UNIVERSE_CSV = DATA_DIR / "us_universe" / "us_top300.csv"
 ALIASES_JSON = DATA_DIR / "us_universe" / "us_aliases.json"
+KR_UNIVERSE_CSV = DATA_DIR / "kr_universe" / "kr_all.csv"   # rank,ticker,name,…,sector,market
 
 # ── 이 리포 산출물 ────────────────────────────────────────────────────────
 OUT_DIR = REPO_ROOT / "out"

@@ -15,20 +15,23 @@ from urllib.request import urlopen
 _TIMEOUT = 60  # coverage/blindspot 등은 무거울 수 있어 넉넉히
 
 
-def _get(base: str, path: str, params: dict) -> dict:
+def _get(base: str, path: str, params: dict, timeout: int | None = None) -> dict:
     q = urlencode(params, doseq=True)
     url = f"{base}{path}?{q}" if q else f"{base}{path}"
     try:
-        with urlopen(url, timeout=_TIMEOUT) as r:
+        with urlopen(url, timeout=timeout or _TIMEOUT) as r:
             return json.loads(r.read().decode("utf-8"))
     except Exception as exc:  # noqa: BLE001
         return {"error": f"뉴스 API 접속 실패({base}{path}): {exc!r} — 서버 PC 수집기/방화벽/"
                          f"DEGAJA_NEWS_API 확인. (비우면 로컬 DB 폴백)"}
 
 
-def exec_remote(base: str, argv: list[str]) -> dict:
-    """조회 서브커맨드 argv 를 서버 /exec 에 넘겨 실행 → {"stdout": 텍스트} 또는 {"error":…}."""
-    return _get(base, "/exec", {"argv": list(argv)})
+def exec_remote(base: str, argv: list[str], timeout: int | None = None) -> dict:
+    """조회 서브커맨드 argv 를 서버 /exec 에 넘겨 실행 → {"stdout": 텍스트} 또는 {"error":…}.
+
+    `timeout` — 대량 반출(export)은 기본 60초로 모자라다. 호출부가 명령별로 넘긴다.
+    """
+    return _get(base, "/exec", {"argv": list(argv)}, timeout=timeout)
 
 
 def health(base: str) -> dict:
