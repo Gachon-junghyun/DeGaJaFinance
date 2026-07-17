@@ -13,10 +13,18 @@
   (CPI/M2) lag ~1 month — say so instead of pretending freshness) + `us_flow --cot` positioning
   percentiles (≥80 crowded-long / ≤20 crowded-short; Tue-close data, 3–4d lag = context, not trigger).
   KR: cross-read same-day US MACRO_REPORT §A.
-- [news](../L2_modules/news.md) — 7-bucket narrative sweep (FTS `--syn`, OR-mode per bucket,
-  body-inclusive) + **blind-spot pass** (read `sample[]` rows RAW; a rank-jump of a single name is
-  itself a signal → body-read before classifying; append confirmed new macro terms to the protocol's
-  term table — the term set is living, never frozen).
+- [news](../L2_modules/news.md) — **event pass first, then the term sweep** (that L2 explains why they
+  are different axes):
+  1. **Events** (`brief`, run `embed sync` first) — the day's events with their denominator. Do this
+     BEFORE the bucket sweep: the buckets can only find what you already thought to name, and a
+     regime-moving event can sit at 1.3× term-share while 8 outlets scream it (measured: the
+     KOSPI −8% circuit-breaker day ranked **nowhere** by term velocity). Read the head, and read the
+     tail *count* — if a proposition claims "quiet", that number must support it.
+  2. 7-bucket narrative sweep (FTS `--syn`, OR-mode per bucket, body-inclusive) — now targeted at the
+     buckets, knowing what the day actually held.
+  3. **blind-spot pass** (read `sample[]` rows RAW; a rank-jump of a single name is itself a signal →
+     body-read before classifying; append confirmed new macro terms to the protocol's term table —
+     the term set is living, never frozen).
 
 - **Continuity anchor (DeGaJa-native — replaces the old mvp `insight_corpus` daily anchor):**
   read the PREVIOUS run's `llm_outputs/{prev date}/industry_{US|KR}/MACRO_REPORT.md` (propositions +
@@ -34,6 +42,7 @@
   variable (oil war-premium, headline-CPI wedge) — such propositions must carry BOTH branches.
 
 ## ✅ EXIT CHECK
-- [ ] Catalysts injected; narrative (news + blindspot) and indicators (primaries + positioning) read; daily anchor read.
+- [ ] Catalysts injected; narrative (**events + 7-bucket + blindspot**) and indicators (primaries + positioning) read; daily anchor read.
+- [ ] Every "nothing happened in bucket X" claim carries the event denominator that backs it (P4).
 - [ ] Transmission matrix produced (all 11 sectors, one line each) — the downstream input.
 - [ ] MACRO_REPORT.md written with primary numbers explicit; self-backtest hit-rate appended; new blind-spot terms folded back into the term table.

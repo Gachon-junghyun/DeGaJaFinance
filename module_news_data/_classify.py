@@ -42,7 +42,7 @@ import re
 import sqlite3
 from collections import Counter
 
-from ._config import FOREIGN_SOURCES, utf8_stdout
+from ._config import FOREIGN_SOURCES, origin_tag, utf8_stdout
 from ._embed import VEC_DB
 from ._tokenize import tokens
 
@@ -55,6 +55,29 @@ NEG_SECTIONS = {"sports", "entertainment", "society"}          # 비시장
 # 나머지(world·politics·real_estate·jp·topics…)는 의도적으로 학습 제외(위 ⚠)
 
 MIN_TRAIN = 2000    # 이보다 적으면 학습셋이 부족 — 조용히 엉터리 모델을 쓰느니 알린다
+
+# ⚠ **이 분류기는 국내(한글) 전용이다.** 해외에 쓰면 안 된다:
+#   · 학습이 한글 제목이라 영어는 거의 전부 미등록어 → 점수가 0 근처에 뭉친다. 실측으로
+#     "Oil Surges as US Strikes Targets in Iran"(-0.5)·"Stocks ease despite upbeat Samsung
+#     forecast"(-0.1)·"Deutsche Bank flags disconnect between inflation, Fed"(-0.1)가 전부
+#     **비시장으로 잘렸다**. 신호가 없는 게 아니라 모델이 그 언어를 모르는 것이다.
+#   · 애초에 필요도 없다 — 해외 피드는 **82%가 금융**(yahoo_finance·seekingalpha·bloomberg·
+#     sec_edgar…)이라 소스 선택 단계에서 이미 걸러져 있다. 국내가 종합지 62%인 것과 정반대.
+# 그래서 `applies_to()` 로 게이트한다. 영어 분류가 필요해지면 영어 라벨(섹션이 URL 에 있는
+# 영문 매체)로 **별도 모델**을 학습해야 한다 — 이 모델을 쓰면 안 된다.
+KR_ONLY = True
+
+
+def applies_to(sources) -> bool:
+    """이 사건에 분류기를 써도 되나 = **국내 기사인가**.
+
+    ⚠ scope 가 아니라 **소스**로 판정한다. `scope='all'` 은 국내+해외가 섞이므로 scope 로
+    게이트하면 그 안의 영어 기사가 통째로 잘린다. 국적 판정은 `origin_tag` 재사용(P1).
+    """
+    srcs = [sources] if isinstance(sources, str) else list(sources or [])
+    if not srcs:
+        return False
+    return all(origin_tag(s) == "KR" for s in srcs)
 
 
 def section_of(url: str | None) -> str | None:

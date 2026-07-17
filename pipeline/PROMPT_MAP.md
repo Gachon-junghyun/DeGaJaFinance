@@ -32,7 +32,7 @@ value chain. Zero buy/sell calls. Output root `REPORT/industry_{KR|US}/`; previo
 
 | L1 | Phase | Calls | Input → output |
 |---|---|---|---|
-| **0** | MACRO | KR: `news_fts --kr --syn` · `news blindspot --domestic` / US: `module_macro_us`(FRED) · `us_flow --cot` · `catalyst_calendar` | 7-bucket news + daily anchor → `MACRO_REPORT.md` (proposition table + ★transmission matrix + hit-rate) |
+| **0** | MACRO | **both: `embed sync` → `brief`(events)** · KR: `news_fts --kr --syn` · `news blindspot --domestic` / US: `module_macro_us`(FRED) · `us_flow --cot` · `catalyst_calendar` | events + 7-bucket news + daily anchor → `MACRO_REPORT.md` (proposition table + ★transmission matrix + hit-rate) |
 | **0.5** | SWEEP | `sector_flow --market {kr\|us}` · `{kr\|us}_live_shortlist` · (US) `cycle_exposure` | universe CSV → `SECTOR_FLOW.json` · `LIVE_SHORTLIST.json` · (US) `CYCLE_EXPOSURE.md` |
 | **1** | ROTATION | `news_fts --count` (velocity) · `module_industry_map` | matrix + flow → `SECTOR_ROTATION.md` (11-sector OW/UW + 4 DEEP + DEEP_LOG) |
 | **1.5** | PRE-MORTEM *(US only)* | 4 adversarial subagents (fan-out) | rotation draft → `BLINDSPOT_PREMORTEM.md` |
@@ -40,6 +40,13 @@ value chain. Zero buy/sell calls. Output root `REPORT/industry_{KR|US}/`; previo
 | **3** | BET | `module_valuation` · `module_math_check` · `module_flow` · (US) `us_setup_screener` · `module_fundamentals_us` | 4 DEEP → `BET_SHEET.md` (per-sector §A–§E) |
 | **4** | ALPHA | `module_flow --positioning` · (US) `theme_age` · `action_bracket` · WebSearch | BET_SHEET → §B tags (🟢LIVE/🟡PARTIAL/🔴RESOLVED) · (US) `ACTION_TICKETS.md` |
 | **post** | DRIFT *(US)* | `drift_watch` | +3–6h kill-switch burst → MACRO_REPORT §5 ADDENDUM |
+
+**News has two axes** (L2 `news`): **term** (`news_fts`·`blindspot`·`chain-hop` — "is my theme hot?")
+and **event** (L3 `daily_events` → `brief` — "what happened today, all of it"). Not substitutes —
+measured on the KOSPI −8% circuit-breaker day the term `코스피` ran at 1.3× normal and ranked
+**nowhere**, while the event view had it at [39 articles/8 outlets]. Terms spike when *new*; events
+rank when *big*. ⚠ Event axis is **client-only** (GPU, CLAUDE.md P6); market/non-market filtering is
+**KR-only** (Korean-trained classifier — foreign feeds are 82% finance already, so nothing is filtered).
 
 **KR/US asymmetry (core)**: KR = 6 stages (no PRE-MORTEM/DRIFT), no macro primary module (cross-reads
 US MACRO §A), but has **KIS per-investor net-buy actuals** (real-hands/weak-hands) that the US lacks.

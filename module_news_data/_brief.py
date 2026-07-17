@@ -38,7 +38,7 @@ import json
 import random
 from datetime import date as _date
 
-from ._classify import train
+from ._classify import applies_to, train
 from ._cluster import cluster_day
 from ._config import OUT_DIR, utf8_stdout
 from ._export import ledes
@@ -67,11 +67,19 @@ def build(day: str, scope: str = "domestic", head_min: int = HEAD_SOURCES,
     events = cl.get("events", [])
     model = train()
 
+    # ⚠ 분류기는 **국내 기사에만** 쓴다(사건별 판정 — scope 로 게이트하면 `all` 안의 영어가
+    # 통째로 잘린다). 해외 사건은 그냥 통과시킨다: 한글로 학습한 모델이라 영어는 점수가 0
+    # 근처에 뭉쳐 무의미하고("Oil Surges as US Strikes Iran" 이 -0.5 로 잘렸다), 애초에
+    # 해외 피드는 82% 가 금융이라(yahoo_finance·seekingalpha·bloomberg…) 걸러줄 게 없다.
     market, nonmarket = [], []
     for e in events:
         e = dict(e)
-        e["nb"] = round(model.score(e["title"]), 1)
-        (market if e["nb"] > 0 else nonmarket).append(e)
+        if applies_to(e.get("sources") or []):
+            e["nb"] = round(model.score(e["title"]), 1)
+            (market if e["nb"] > 0 else nonmarket).append(e)
+        else:
+            e["nb"] = None          # 판정 안 함 — 0 이나 점수로 채우면 거짓말이 된다(P4)
+            market.append(e)
 
     head = [e for e in market if e["n_sources"] >= head_min]
     body = [e for e in market if body_min <= e["n_sources"] < head_min]
