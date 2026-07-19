@@ -59,7 +59,7 @@ FOREIGN_SOURCES = sorted({
     "federalreserve", "ecb", "boe",
     # 원자재/크립토/물류
     "oilprice", "mining", "coindesk", "cointelegraph", "cryptoslate",
-    "hellenicshipping", "freightwaves",
+    "hellenicshipping",
     # 테크
     "techcrunch", "theverge", "arstechnica", "venturebeat", "tomshardware",
     "eetimes", "theregister", "wired", "mittr",

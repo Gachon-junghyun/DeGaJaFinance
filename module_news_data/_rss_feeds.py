@@ -178,7 +178,6 @@ RSS_FEEDS: List[Dict] = [
     {"name": "Cointelegraph",      "url": "https://cointelegraph.com/rss",                       "source": "cointelegraph"},
     {"name": "CryptoSlate",        "url": "https://cryptoslate.com/feed/",                       "source": "cryptoslate"},
     {"name": "Hellenic Shipping",  "url": "https://www.hellenicshippingnews.com/feed/",          "source": "hellenicshipping"},
-    {"name": "FreightWaves",       "url": "https://www.freightwaves.com/news/feed",              "source": "freightwaves"},
     # 테크 (시장영향)
     {"name": "TechCrunch",         "url": "https://techcrunch.com/feed/",                        "source": "techcrunch"},
     {"name": "The Verge",          "url": "https://www.theverge.com/rss/index.xml",              "source": "theverge"},

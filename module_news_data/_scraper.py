@@ -102,7 +102,6 @@ SOURCE_SELECTORS: dict[str, list[str]] = {
     "cointelegraph": ["div.post-content", "div[class*='post__content']", "article"],
     "cryptoslate":   ["div.article-content", "article"],
     "hellenicshipping": ["div.td-post-content", "article"],
-    "freightwaves":  ["div.entry-content", "article"],
     "techcrunch":    ["div.entry-content", "article"],
     "theverge":      ["div[class*='article-body']", "article"],
     "arstechnica":   ["div.article-content", "article"],
