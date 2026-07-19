@@ -20,6 +20,9 @@ log = logging.getLogger("news_data.fetch")
 # 본문 스크랩 불가 source (페이월·봇차단·구글 리다이렉트) — fetch 직후 본문 풀이에서 제외.
 NON_SCRAPABLE_SOURCES = {
     "google_kr", "google_en", "google_news_kr", "google_news_en", "bloomberg", "nyt",
+    # 2026-07-19 해외 확장분: 페이월(wsj·ft·economist·nikkei·straitstimes) /
+    # Cloudflare 봇차단(investing_en·zerohedge) — RSS 헤드라인+요약만 수집.
+    "wsj", "ft", "economist", "nikkei", "straitstimes", "investing_en", "zerohedge",
 }
 
 _MODE_PARAMS = {
