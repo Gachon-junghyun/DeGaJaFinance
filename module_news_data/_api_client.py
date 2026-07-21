@@ -8,18 +8,36 @@ stdlib(urllib)만 사용 — 새 서드파티 없음(CLAUDE.md 규약). `DEGAJA_
 """
 from __future__ import annotations
 
+import base64
 import json
+import os
 from urllib.parse import urlencode
-from urllib.request import urlopen
+from urllib.request import Request, urlopen
 
 _TIMEOUT = 60  # coverage/blindspot 등은 무거울 수 있어 넉넉히
+
+
+def _headers() -> dict:
+    """요청 헤더. 터널(ngrok) 노출 시 인증·경고우회 헤더를 자동 부착 — 없으면 기존과 동일.
+
+    DEGAJA_NEWS_API_AUTH="user:pass" 가 있으면 HTTP Basic 헤더를 붙인다(서버 앞단
+    ngrok --basic-auth 와 짝). ngrok-skip-browser-warning 은 무료 ngrok 의 브라우저
+    인터스티셜을 건너뛴다 — 터널이 아닐 땐 서버가 무시하므로 붙어 있어도 무해.
+    """
+    h = {"ngrok-skip-browser-warning": "true"}
+    auth = (os.environ.get("DEGAJA_NEWS_API_AUTH", "") or "").strip()
+    if auth:
+        token = base64.b64encode(auth.encode("utf-8")).decode("ascii")
+        h["Authorization"] = f"Basic {token}"
+    return h
 
 
 def _get(base: str, path: str, params: dict, timeout: int | None = None) -> dict:
     q = urlencode(params, doseq=True)
     url = f"{base}{path}?{q}" if q else f"{base}{path}"
     try:
-        with urlopen(url, timeout=timeout or _TIMEOUT) as r:
+        req = Request(url, headers=_headers())
+        with urlopen(req, timeout=timeout or _TIMEOUT) as r:
             return json.loads(r.read().decode("utf-8"))
     except Exception as exc:  # noqa: BLE001
         return {"error": f"뉴스 API 접속 실패({base}{path}): {exc!r} — 서버 PC 수집기/방화벽/"
