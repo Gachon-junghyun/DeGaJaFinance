@@ -1,0 +1,2148 @@
+{
+  "reports": {
+    "2026-07-21/ACTION_TICKETS.md": {
+      "mtime": 1784645952.104676,
+      "desk": "2026-07-21",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "hits": 9
+        },
+        {
+          "ticker": "RTX",
+          "name": "RTX Corporation",
+          "hits": 5
+        },
+        {
+          "ticker": "TSLA",
+          "name": "Tesla, Inc.",
+          "hits": 4
+        },
+        {
+          "ticker": "NOC",
+          "name": "Northrop Grumman",
+          "hits": 3
+        },
+        {
+          "ticker": "MPC",
+          "name": "Marathon Petroleum",
+          "hits": 3
+        },
+        {
+          "ticker": "STT",
+          "name": "State Street Corporation",
+          "hits": 3
+        },
+        {
+          "ticker": "AMD",
+          "name": "Advanced Micro Devices",
+          "hits": 3
+        },
+        {
+          "ticker": "LMT",
+          "name": "Lockheed Martin",
+          "hits": 2
+        },
+        {
+          "ticker": "GOOGL",
+          "name": "Alphabet Inc. (Class A)",
+          "hits": 1
+        },
+        {
+          "ticker": "JPM",
+          "name": "JPMorgan Chase",
+          "hits": 1
+        }
+      ],
+      "sectors": [],
+      "verdicts": [
+        "GO",
+        "LIVE",
+        "PARTIAL",
+        "🔴",
+        "🟡",
+        "🟢"
+      ],
+      "themes": [
+        "ACTION_TICKETS — industry_US — 2026-07-21",
+        "T1 · TSLA 7/22 (Info Tech core-hold exposure)",
+        "T2 · RTX + LMT 7/23 (Defense promoted 5th — the swing)",
+        "T3 · Hormuz \"Strait open\" statement (Energy OW+ — most-exposed leg)",
+        "T4 · FOMC 7/28–29 (whole-book duration assumption)",
+        "Ticket class 2 — POSITIONING / MOMENTUM hard-stops (stamped, not tickets)",
+        "Freshness gate summary (→ BET_SHEET §B)"
+      ],
+      "dates": [
+        "2026-07-14",
+        "2026-07-21"
+      ]
+    },
+    "2026-07-21/CYCLE_EXPOSURE.md": {
+      "mtime": 1784644683.3126638,
+      "desk": "2026-07-21",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "hits": 5
+        },
+        {
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "hits": 2
+        },
+        {
+          "ticker": "RTX",
+          "name": "RTX Corporation",
+          "hits": 2
+        },
+        {
+          "ticker": "LMT",
+          "name": "Lockheed Martin",
+          "hits": 2
+        },
+        {
+          "ticker": "AMD",
+          "name": "Advanced Micro Devices",
+          "hits": 1
+        },
+        {
+          "ticker": "MU",
+          "name": "Micron Technology",
+          "hits": 1
+        },
+        {
+          "ticker": "ASML",
+          "name": "ASML Holding",
+          "hits": 1
+        },
+        {
+          "ticker": "AMAT",
+          "name": "Applied Materials",
+          "hits": 1
+        },
+        {
+          "ticker": "LRCX",
+          "name": "Lam Research",
+          "hits": 1
+        },
+        {
+          "ticker": "KLAC",
+          "name": "KLA Corporation",
+          "hits": 1
+        },
+        {
+          "ticker": "MRVL",
+          "name": "Marvell Technology",
+          "hits": 1
+        },
+        {
+          "ticker": "ANET",
+          "name": "Arista Networks",
+          "hits": 1
+        },
+        {
+          "ticker": "MPC",
+          "name": "Marathon Petroleum",
+          "hits": 1
+        },
+        {
+          "ticker": "PSX",
+          "name": "Phillips 66",
+          "hits": 1
+        },
+        {
+          "ticker": "VLO",
+          "name": "Valero Energy",
+          "hits": 1
+        }
+      ],
+      "sectors": [],
+      "verdicts": [
+        "GO",
+        "REAL",
+        "🔴"
+      ],
+      "themes": [
+        "CYCLE_EXPOSURE — 2026-07-21 (industry_US, SWEEP stage byproduct)",
+        "Dominant secular cycles (registry)",
+        "Reconciliation with the SWEEP flow tape (the important output)",
+        "Handoff"
+      ],
+      "dates": [
+        "2026-07-14",
+        "2026-07-21"
+      ]
+    },
+    "2026-07-21/industry_US/SECTOR_DEEP_10.md": {
+      "mtime": 1784645359.3566704,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "MPC",
+          "name": "Marathon Petroleum",
+          "hits": 34
+        },
+        {
+          "ticker": "XOM",
+          "name": "ExxonMobil",
+          "hits": 26
+        },
+        {
+          "ticker": "VLO",
+          "name": "Valero Energy",
+          "hits": 24
+        },
+        {
+          "ticker": "CVX",
+          "name": "Chevron Corporation",
+          "hits": 15
+        },
+        {
+          "ticker": "PSX",
+          "name": "Phillips 66",
+          "hits": 9
+        },
+        {
+          "ticker": "EOG",
+          "name": "EOG Resources",
+          "hits": 3
+        },
+        {
+          "ticker": "SLB",
+          "name": "Schlumberger",
+          "hits": 2
+        }
+      ],
+      "sectors": [],
+      "verdicts": [
+        "CONFIRMED",
+        "LIVE"
+      ],
+      "themes": [
+        "SECTOR_DEEP_10 — Energy — 2026-07-21",
+        "1. Flow read",
+        "2. Players",
+        "Integrateds (dilute the crack into beta)",
+        "Refiners (express the crack directly — cleanest epicenter)",
+        "Tankers (express the Hormuz rerouting / rate spike)",
+        "3. IR anchor — what each key player does + latest catalyst",
+        "4. Value-chain map (LEFT → RIGHT)",
+        "5. Chain-hop candidates (under-named beneficiaries)",
+        "6. Deterministic data",
+        "Valuation table (module_fundamentals_us, asof 2026-07-21)",
+        "CHART_READ blocks (VERBATIM, module_chart --read, 2026-07-21)"
+      ],
+      "dates": [
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-05"
+      ]
+    },
+    "2026-07-21/industry_US/SECTOR_DEEP_45.md": {
+      "mtime": 1784645407.0806708,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "hits": 45
+        },
+        {
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "hits": 29
+        },
+        {
+          "ticker": "AMD",
+          "name": "Advanced Micro Devices",
+          "hits": 21
+        },
+        {
+          "ticker": "MU",
+          "name": "Micron Technology",
+          "hits": 18
+        },
+        {
+          "ticker": "VRT",
+          "name": "Vertiv",
+          "hits": 10
+        },
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft",
+          "hits": 9
+        },
+        {
+          "ticker": "ETN",
+          "name": "Eaton Corporation",
+          "hits": 9
+        },
+        {
+          "ticker": "GEV",
+          "name": "GE Vernova",
+          "hits": 8
+        },
+        {
+          "ticker": "GOOGL",
+          "name": "Alphabet Inc. (Class A)",
+          "hits": 8
+        },
+        {
+          "ticker": "MRVL",
+          "name": "Marvell Technology",
+          "hits": 7
+        },
+        {
+          "ticker": "ANET",
+          "name": "Arista Networks",
+          "hits": 7
+        },
+        {
+          "ticker": "CEG",
+          "name": "Constellation Energy",
+          "hits": 7
+        },
+        {
+          "ticker": "TSLA",
+          "name": "Tesla, Inc.",
+          "hits": 7
+        },
+        {
+          "ticker": "ASML",
+          "name": "ASML Holding",
+          "hits": 4
+        },
+        {
+          "ticker": "AMAT",
+          "name": "Applied Materials",
+          "hits": 4
+        }
+      ],
+      "sectors": [],
+      "verdicts": [
+        "GO",
+        "LIVE"
+      ],
+      "themes": [
+        "SECTOR_DEEP_45 — Information Technology — 2026-07-21",
+        "1. Flow read — the divergence, stated up front",
+        "2. Players (bounded)",
+        "4. Value-chain map (7 nodes) — bottleneck = binding constraint",
+        "6. Deterministic data",
+        "Valuation table (module_fundamentals_us, asof 2026-07-21; NVDA per desk pull)",
+        "VERBATIM CHART_READ — epicenter names (module_chart --read)",
+        "7. Track-KPIs + anti-signals",
+        "8. ★ DIVERGENCE VERDICT (mandatory)",
+        "Sources"
+      ],
+      "dates": [
+        "2026-07-12",
+        "2026-07-14",
+        "2026-07-21"
+      ]
+    },
+    "2026-07-21/industry_US/SECTOR_DEEP_40.md": {
+      "mtime": 1784645394.3646708,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "STT",
+          "name": "State Street Corporation",
+          "hits": 21
+        },
+        {
+          "ticker": "JPM",
+          "name": "JPMorgan Chase",
+          "hits": 16
+        },
+        {
+          "ticker": "BAC",
+          "name": "Bank of America",
+          "hits": 13
+        },
+        {
+          "ticker": "BNY",
+          "name": "BNY Mellon",
+          "hits": 10
+        },
+        {
+          "ticker": "TRV",
+          "name": "Travelers Companies (The)",
+          "hits": 10
+        },
+        {
+          "ticker": "WFC",
+          "name": "Wells Fargo",
+          "hits": 8
+        },
+        {
+          "ticker": "PGR",
+          "name": "Progressive Corporation",
+          "hits": 8
+        },
+        {
+          "ticker": "BLK",
+          "name": "BlackRock",
+          "hits": 7
+        },
+        {
+          "ticker": "PYPL",
+          "name": "PayPal",
+          "hits": 5
+        },
+        {
+          "ticker": "CME",
+          "name": "CME Group",
+          "hits": 5
+        },
+        {
+          "ticker": "PNC",
+          "name": "PNC Financial Services",
+          "hits": 1
+        },
+        {
+          "ticker": "USB",
+          "name": "U.S. Bancorp",
+          "hits": 1
+        },
+        {
+          "ticker": "TFC",
+          "name": "Truist Financial",
+          "hits": 1
+        }
+      ],
+      "sectors": [],
+      "verdicts": [
+        "CONFIRMED"
+      ],
+      "themes": [
+        "SECTOR_DEEP_40 — Financials — 2026-07-21",
+        "1. Flow read — the breadth is the signal",
+        "2. Players — by sub-sector (real tickers, mcap ≥ ~$2B)",
+        "3. IR anchor — Q2 2026 earnings read per sub-sector",
+        "4. Value-chain map — 6 nodes, and the binding constraint",
+        "6. Deterministic data — valuation table + verbatim CHART_READ",
+        "7. Track-KPIs + anti-signals",
+        "8. Divergence verdict — double-confirm, and does it hold?"
+      ],
+      "dates": [
+        "2026-07-21"
+      ]
+    },
+    "2026-07-21/industry_US/SECTOR_DEEP_20DEF.md": {
+      "mtime": 1784645428.216671,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "NOC",
+          "name": "Northrop Grumman",
+          "hits": 45
+        },
+        {
+          "ticker": "LMT",
+          "name": "Lockheed Martin",
+          "hits": 39
+        },
+        {
+          "ticker": "RTX",
+          "name": "RTX Corporation",
+          "hits": 33
+        },
+        {
+          "ticker": "LHX",
+          "name": "L3Harris",
+          "hits": 12
+        },
+        {
+          "ticker": "GD",
+          "name": "General Dynamics",
+          "hits": 9
+        },
+        {
+          "ticker": "TDG",
+          "name": "TransDigm Group",
+          "hits": 6
+        },
+        {
+          "ticker": "HWM",
+          "name": "Howmet Aerospace",
+          "hits": 5
+        },
+        {
+          "ticker": "AXON",
+          "name": "Axon Enterprise",
+          "hits": 1
+        }
+      ],
+      "sectors": [
+        "IT"
+      ],
+      "verdicts": [
+        "LIVE"
+      ],
+      "themes": [
+        "SECTOR_DEEP_20DEF — Defense / Aerospace — 2026-07-21",
+        "1. Flow read — is defense diverging UP within a weak Industrials tape?",
+        "2. Players (bounded — real ticker, mcap ≥ ~$2B)",
+        "3. IR anchor — NOC's actual 7/21 print + RTX/LMT 7/23 setup",
+        "NOC Q2 2026 — reported 2026-07-21 pre-open (ACTUAL, cited)",
+        "RTX — reports 7/23 pre-open (SETUP)",
+        "LMT — reports 7/23 pre-open (SETUP)",
+        "4. Value-chain map (DoD dollar → export) + binding constraint",
+        "5. Chain-hop candidates (under-named suppliers — all \"needs flow cross-check\")",
+        "6. Deterministic data",
+        "Valuation table (module_fundamentals_us, asof 2026-07-21)",
+        "VERBATIM CHART_READ — module_chart --read"
+      ],
+      "dates": [
+        "2026-07-20",
+        "2026-07-21"
+      ]
+    },
+    "2026-07-21/industry_US/MACRO_REPORT.md": {
+      "mtime": 1784646051.676677,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "TSLA",
+          "name": "Tesla, Inc.",
+          "hits": 10
+        },
+        {
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "hits": 4
+        },
+        {
+          "ticker": "XOM",
+          "name": "ExxonMobil",
+          "hits": 3
+        },
+        {
+          "ticker": "CVX",
+          "name": "Chevron Corporation",
+          "hits": 3
+        },
+        {
+          "ticker": "AMD",
+          "name": "Advanced Micro Devices",
+          "hits": 2
+        },
+        {
+          "ticker": "RTX",
+          "name": "RTX Corporation",
+          "hits": 2
+        },
+        {
+          "ticker": "LMT",
+          "name": "Lockheed Martin",
+          "hits": 2
+        },
+        {
+          "ticker": "SCHW",
+          "name": "Charles Schwab Corporation",
+          "hits": 1
+        },
+        {
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "hits": 1
+        }
+      ],
+      "sectors": [],
+      "verdicts": [
+        "GO",
+        "LIVE",
+        "PARTIAL",
+        "REAL",
+        "🔴",
+        "🟡",
+        "🟢"
+      ],
+      "themes": [
+        "MACRO_REPORT — industry_US — 2026-07-21",
+        "Minor drifts (no kill-switch flip)"
+      ],
+      "dates": [
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21"
+      ]
+    },
+    "2026-07-21/industry_US/SECTOR_DEEP_35.md": {
+      "mtime": 1784645367.3526704,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "UNH",
+          "name": "UnitedHealth Group",
+          "hits": 31
+        },
+        {
+          "ticker": "ABT",
+          "name": "Abbott Laboratories",
+          "hits": 25
+        },
+        {
+          "ticker": "LLY",
+          "name": "Lilly (Eli)",
+          "hits": 16
+        },
+        {
+          "ticker": "ELV",
+          "name": "Elevance Health",
+          "hits": 8
+        },
+        {
+          "ticker": "MCK",
+          "name": "McKesson Corporation",
+          "hits": 7
+        },
+        {
+          "ticker": "CAH",
+          "name": "Cardinal Health",
+          "hits": 7
+        },
+        {
+          "ticker": "HCA",
+          "name": "HCA Healthcare",
+          "hits": 7
+        },
+        {
+          "ticker": "COR",
+          "name": "Cencora",
+          "hits": 6
+        },
+        {
+          "ticker": "JNJ",
+          "name": "Johnson & Johnson",
+          "hits": 5
+        },
+        {
+          "ticker": "TMO",
+          "name": "Thermo Fisher Scientific",
+          "hits": 4
+        },
+        {
+          "ticker": "DHR",
+          "name": "Danaher Corporation",
+          "hits": 4
+        },
+        {
+          "ticker": "MRK",
+          "name": "Merck & Co.",
+          "hits": 3
+        },
+        {
+          "ticker": "ABBV",
+          "name": "AbbVie",
+          "hits": 3
+        },
+        {
+          "ticker": "CI",
+          "name": "Cigna",
+          "hits": 3
+        },
+        {
+          "ticker": "PFE",
+          "name": "Pfizer",
+          "hits": 2
+        }
+      ],
+      "sectors": [],
+      "verdicts": [
+        "CONFIRMED",
+        "LIVE"
+      ],
+      "themes": [
+        "SECTOR_DEEP_35 — Health Care — 2026-07-21",
+        "0. The divergence, stated up front",
+        "1. Flow read — WHERE is the +0.381 going? (the key diagnostic)",
+        "2. Players — by sub-sector (real ticker, mcap ≥ ~$2B)",
+        "3. IR anchor — what drives the −9% Q2 EPS, and what's actually growing",
+        "4. Value-chain map — nodes, flows, bottleneck",
+        "5. Chain-hop candidates — under-named beneficiaries (needs flow cross-check)",
+        "6. Deterministic data",
+        "Valuation table (module_fundamentals_us — yfinance + SEC XBRL, asof 2026-07-21)",
+        "CHART_READ — VERBATIM (module_chart --read, asof 2026-07-21)",
+        "7. Track-KPIs + anti-signals",
+        "8. ★ DIVERGENCE VERDICT (mandatory)"
+      ],
+      "dates": [
+        "2026-07-21"
+      ]
+    },
+    "2026-07-21/industry_US/BLINDSPOT_PREMORTEM.md": {
+      "mtime": 1784644962.2966666,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "hits": 15
+        },
+        {
+          "ticker": "RTX",
+          "name": "RTX Corporation",
+          "hits": 12
+        },
+        {
+          "ticker": "LMT",
+          "name": "Lockheed Martin",
+          "hits": 10
+        },
+        {
+          "ticker": "NOC",
+          "name": "Northrop Grumman",
+          "hits": 6
+        },
+        {
+          "ticker": "TSLA",
+          "name": "Tesla, Inc.",
+          "hits": 6
+        },
+        {
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "hits": 5
+        },
+        {
+          "ticker": "MPC",
+          "name": "Marathon Petroleum",
+          "hits": 5
+        },
+        {
+          "ticker": "GOOGL",
+          "name": "Alphabet Inc. (Class A)",
+          "hits": 4
+        },
+        {
+          "ticker": "CEG",
+          "name": "Constellation Energy",
+          "hits": 3
+        },
+        {
+          "ticker": "VST",
+          "name": "Vistra Corp.",
+          "hits": 3
+        },
+        {
+          "ticker": "BAC",
+          "name": "Bank of America",
+          "hits": 3
+        },
+        {
+          "ticker": "AMD",
+          "name": "Advanced Micro Devices",
+          "hits": 3
+        },
+        {
+          "ticker": "XOM",
+          "name": "ExxonMobil",
+          "hits": 3
+        },
+        {
+          "ticker": "CVX",
+          "name": "Chevron Corporation",
+          "hits": 3
+        },
+        {
+          "ticker": "VLO",
+          "name": "Valero Energy",
+          "hits": 2
+        }
+      ],
+      "sectors": [],
+      "verdicts": [
+        "GO",
+        "LIVE"
+      ],
+      "themes": [
+        "BLINDSPOT_PREMORTEM — industry_US — 2026-07-21  ★US-only",
+        "★ Headline: the desk is one week from re-running the 2026-07-14 failure"
+      ],
+      "dates": [
+        "2026-07-14",
+        "2026-07-21"
+      ]
+    },
+    "2026-07-21/industry_US/SECTOR_ROTATION.md": {
+      "mtime": 1784644758.2766647,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "RTX",
+          "name": "RTX Corporation",
+          "hits": 4
+        },
+        {
+          "ticker": "LMT",
+          "name": "Lockheed Martin",
+          "hits": 4
+        },
+        {
+          "ticker": "TSLA",
+          "name": "Tesla, Inc.",
+          "hits": 3
+        },
+        {
+          "ticker": "GOOGL",
+          "name": "Alphabet Inc. (Class A)",
+          "hits": 2
+        },
+        {
+          "ticker": "META",
+          "name": "Meta Platforms",
+          "hits": 2
+        },
+        {
+          "ticker": "CEG",
+          "name": "Constellation Energy",
+          "hits": 1
+        },
+        {
+          "ticker": "VST",
+          "name": "Vistra Corp.",
+          "hits": 1
+        }
+      ],
+      "sectors": [],
+      "verdicts": [
+        "GO",
+        "LIVE"
+      ],
+      "themes": [
+        "SECTOR_ROTATION — industry_US — 2026-07-21",
+        "11-sector OW/UW — matrix × flow reconciled (every divergence named + owner)",
+        "4 DEEP targets (by the rule — no gut, no padding)"
+      ],
+      "dates": [
+        "2026-07-21"
+      ]
+    },
+    "2026-07-21/industry_US/BET_SHEET.md": {
+      "mtime": 1784645909.4006755,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "hits": 19
+        },
+        {
+          "ticker": "RTX",
+          "name": "RTX Corporation",
+          "hits": 13
+        },
+        {
+          "ticker": "STT",
+          "name": "State Street Corporation",
+          "hits": 11
+        },
+        {
+          "ticker": "LMT",
+          "name": "Lockheed Martin",
+          "hits": 10
+        },
+        {
+          "ticker": "UNH",
+          "name": "UnitedHealth Group",
+          "hits": 9
+        },
+        {
+          "ticker": "ABT",
+          "name": "Abbott Laboratories",
+          "hits": 8
+        },
+        {
+          "ticker": "NOC",
+          "name": "Northrop Grumman",
+          "hits": 8
+        },
+        {
+          "ticker": "AMD",
+          "name": "Advanced Micro Devices",
+          "hits": 7
+        },
+        {
+          "ticker": "MPC",
+          "name": "Marathon Petroleum",
+          "hits": 6
+        },
+        {
+          "ticker": "JPM",
+          "name": "JPMorgan Chase",
+          "hits": 6
+        },
+        {
+          "ticker": "GOOGL",
+          "name": "Alphabet Inc. (Class A)",
+          "hits": 6
+        },
+        {
+          "ticker": "XOM",
+          "name": "ExxonMobil",
+          "hits": 4
+        },
+        {
+          "ticker": "CVX",
+          "name": "Chevron Corporation",
+          "hits": 4
+        },
+        {
+          "ticker": "TRV",
+          "name": "Travelers Companies (The)",
+          "hits": 4
+        },
+        {
+          "ticker": "BLK",
+          "name": "BlackRock",
+          "hits": 4
+        }
+      ],
+      "sectors": [],
+      "verdicts": [
+        "CONFIRMED",
+        "FRESH",
+        "GO",
+        "LIVE",
+        "PARTIAL",
+        "RESOLVED",
+        "🔴",
+        "🟡",
+        "🟢"
+      ],
+      "themes": [
+        "BET_SHEET — industry_US — 2026-07-21"
+      ],
+      "dates": [
+        "2026-07-14",
+        "2026-07-21"
+      ]
+    },
+    "2026-07-15/ACTION_TICKETS.md": {
+      "mtime": 1784643341.7268033,
+      "desk": "2026-07-15",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "hits": 11
+        },
+        {
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "hits": 7
+        },
+        {
+          "ticker": "RTX",
+          "name": "RTX Corporation",
+          "hits": 7
+        },
+        {
+          "ticker": "MPC",
+          "name": "Marathon Petroleum",
+          "hits": 6
+        },
+        {
+          "ticker": "LMT",
+          "name": "Lockheed Martin",
+          "hits": 5
+        },
+        {
+          "ticker": "MU",
+          "name": "Micron Technology",
+          "hits": 3
+        },
+        {
+          "ticker": "NOC",
+          "name": "Northrop Grumman",
+          "hits": 3
+        },
+        {
+          "ticker": "PNC",
+          "name": "PNC Financial Services",
+          "hits": 3
+        },
+        {
+          "ticker": "HBAN",
+          "name": "Huntington Bancshares",
+          "hits": 3
+        },
+        {
+          "ticker": "SCHW",
+          "name": "Charles Schwab Corporation",
+          "hits": 3
+        },
+        {
+          "ticker": "VST",
+          "name": "Vistra Corp.",
+          "hits": 3
+        },
+        {
+          "ticker": "META",
+          "name": "Meta Platforms",
+          "hits": 3
+        },
+        {
+          "ticker": "JPM",
+          "name": "JPMorgan Chase",
+          "hits": 3
+        },
+        {
+          "ticker": "ASML",
+          "name": "ASML Holding",
+          "hits": 1
+        },
+        {
+          "ticker": "VLO",
+          "name": "Valero Energy",
+          "hits": 1
+        }
+      ],
+      "sectors": [
+        "FIN",
+        "IT",
+        "SEMI",
+        "UTIL"
+      ],
+      "verdicts": [
+        "CONFIRMED",
+        "FADING",
+        "GO",
+        "LIVE",
+        "PARTIAL",
+        "REAL",
+        "RESOLVED",
+        "🔴",
+        "🟡",
+        "🟢"
+      ],
+      "themes": [
+        "CORE-STARTER (tape-independent) — NVDA  (BUY)",
+        "BRACKET::A_cool — NVDA  (BUY)",
+        "BRACKET::B_hot  ★asym-hedge — MPC  (BUY)",
+        "ALPHA ENRICHMENT (07-15, analyst layer over the deterministic base above)",
+        "⚡ PPI binary RESOLVED — the A_cool branch is the realized one",
+        "Epicenter core refinement (premortem Lens 4)",
+        "Defense un-gated starter (premortem Lens 4 — NOT crowded, no squeeze excuse)",
+        "Bettable-now set (post-freshness-gate) — for the watchlist, DRY-RUN only",
+        "Risk-unit reminder (premortem Lens 2)"
+      ],
+      "dates": [
+        "2026-07-15"
+      ]
+    },
+    "2026-07-15/CYCLE_EXPOSURE.md": {
+      "mtime": 1784643341.7274063,
+      "desk": "2026-07-15",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "CEG",
+          "name": "Constellation Energy",
+          "hits": 1
+        },
+        {
+          "ticker": "VST",
+          "name": "Vistra Corp.",
+          "hits": 1
+        },
+        {
+          "ticker": "KMI",
+          "name": "Kinder Morgan",
+          "hits": 1
+        }
+      ],
+      "sectors": [],
+      "verdicts": [
+        "REAL",
+        "🔴"
+      ],
+      "themes": [
+        "CYCLE_EXPOSURE — 2026-07-15  (dominant cycles ↔ REAL KIS book)",
+        "Verdict"
+      ],
+      "dates": [
+        "2026-07-14",
+        "2026-07-15"
+      ]
+    },
+    "2026-07-15/industry_US/SECTOR_DEEP_INDU.md": {
+      "mtime": 1784643341.7291317,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "GEV",
+          "name": "GE Vernova",
+          "hits": 21
+        },
+        {
+          "ticker": "RTX",
+          "name": "RTX Corporation",
+          "hits": 21
+        },
+        {
+          "ticker": "ETN",
+          "name": "Eaton Corporation",
+          "hits": 14
+        },
+        {
+          "ticker": "PWR",
+          "name": "Quanta Services",
+          "hits": 9
+        },
+        {
+          "ticker": "LMT",
+          "name": "Lockheed Martin",
+          "hits": 9
+        },
+        {
+          "ticker": "NOC",
+          "name": "Northrop Grumman",
+          "hits": 9
+        },
+        {
+          "ticker": "GD",
+          "name": "General Dynamics",
+          "hits": 8
+        },
+        {
+          "ticker": "VRT",
+          "name": "Vertiv",
+          "hits": 1
+        }
+      ],
+      "sectors": [
+        "INDU"
+      ],
+      "verdicts": [
+        "CONFIRMED",
+        "LIVE",
+        "🔴"
+      ],
+      "themes": [
+        "SECTOR_DEEP_INDU — Industrials · 2026-07-15 (Wed) · CONTINUOUS-TRACK (delta-led)"
+      ],
+      "dates": [
+        "2026-06-22",
+        "2026-07-15"
+      ]
+    },
+    "2026-07-15/industry_US/SECTOR_DEEP_UTIL.md": {
+      "mtime": 1784643341.7291317,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "VST",
+          "name": "Vistra Corp.",
+          "hits": 29
+        },
+        {
+          "ticker": "CEG",
+          "name": "Constellation Energy",
+          "hits": 23
+        },
+        {
+          "ticker": "NEE",
+          "name": "NextEra Energy",
+          "hits": 21
+        },
+        {
+          "ticker": "AEP",
+          "name": "American Electric Power",
+          "hits": 5
+        },
+        {
+          "ticker": "PCG",
+          "name": "PG&E Corporation",
+          "hits": 4
+        },
+        {
+          "ticker": "ETR",
+          "name": "Entergy",
+          "hits": 3
+        },
+        {
+          "ticker": "SRE",
+          "name": "Sempra",
+          "hits": 1
+        },
+        {
+          "ticker": "EXC",
+          "name": "Exelon",
+          "hits": 1
+        },
+        {
+          "ticker": "DUK",
+          "name": "Duke Energy",
+          "hits": 1
+        },
+        {
+          "ticker": "WEC",
+          "name": "WEC Energy Group",
+          "hits": 1
+        },
+        {
+          "ticker": "ED",
+          "name": "Consolidated Edison",
+          "hits": 1
+        },
+        {
+          "ticker": "XEL",
+          "name": "Xcel Energy",
+          "hits": 1
+        }
+      ],
+      "sectors": [
+        "INDU",
+        "UTIL"
+      ],
+      "verdicts": [
+        "🔴",
+        "🟡",
+        "🟢"
+      ],
+      "themes": [
+        "SECTOR DEEP-DIVE — Utilities (UTIL) — 2026-07-15 (Wed)",
+        "VERDICT (up front)",
+        "1. Flow cross-check — regulated (bond-proxy) or IPP (AI-power)?",
+        "2. Sub-leg split — three legs, three drivers",
+        "3. Moratorium impact — who loses the load-growth, who is pure-rate",
+        "4. IR / filings — NEE 10-K (FY2025, filed 2026-02-13) [filing]",
+        "5. Value chain & bottleneck",
+        "6. Chart read — regulated (NEE) vs IPP (VST) structure contrast",
+        "7. Track-KPIs & anti-signals",
+        "Sources"
+      ],
+      "dates": [
+        "2026-02-13",
+        "2026-07-15"
+      ]
+    },
+    "2026-07-15/industry_US/MACRO_REPORT.md": {
+      "mtime": 1784643341.7291317,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "IBM",
+          "name": "IBM",
+          "hits": 3
+        },
+        {
+          "ticker": "JPM",
+          "name": "JPMorgan Chase",
+          "hits": 3
+        },
+        {
+          "ticker": "GEV",
+          "name": "GE Vernova",
+          "hits": 3
+        },
+        {
+          "ticker": "VRT",
+          "name": "Vertiv",
+          "hits": 3
+        },
+        {
+          "ticker": "BLK",
+          "name": "BlackRock",
+          "hits": 2
+        },
+        {
+          "ticker": "LMT",
+          "name": "Lockheed Martin",
+          "hits": 2
+        },
+        {
+          "ticker": "NOC",
+          "name": "Northrop Grumman",
+          "hits": 2
+        },
+        {
+          "ticker": "GD",
+          "name": "General Dynamics",
+          "hits": 2
+        },
+        {
+          "ticker": "ASML",
+          "name": "ASML Holding",
+          "hits": 1
+        },
+        {
+          "ticker": "KMI",
+          "name": "Kinder Morgan",
+          "hits": 1
+        },
+        {
+          "ticker": "NFLX",
+          "name": "Netflix",
+          "hits": 1
+        }
+      ],
+      "sectors": [
+        "COMM",
+        "DISC",
+        "ENRG",
+        "FIN",
+        "HLTH",
+        "INDU",
+        "IT",
+        "MATR",
+        "STPL",
+        "UTIL"
+      ],
+      "verdicts": [
+        "FADING",
+        "🔴",
+        "🟡",
+        "🟢"
+      ],
+      "themes": [
+        "MACRO_REPORT — industry_US · 2026-07-15 (Wed)",
+        "The other primaries [FRED, asof dates noted]",
+        "Blindspot pass [400-row blind-pool sample, token-0 emergent terms]"
+      ],
+      "dates": [
+        "2026-07-14",
+        "2026-07-15"
+      ]
+    },
+    "2026-07-15/industry_US/BLINDSPOT_PREMORTEM.md": {
+      "mtime": 1784643341.7291317,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "ASML",
+          "name": "ASML Holding",
+          "hits": 11
+        },
+        {
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "hits": 9
+        },
+        {
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "hits": 7
+        },
+        {
+          "ticker": "MU",
+          "name": "Micron Technology",
+          "hits": 7
+        },
+        {
+          "ticker": "NFLX",
+          "name": "Netflix",
+          "hits": 6
+        },
+        {
+          "ticker": "UNH",
+          "name": "UnitedHealth Group",
+          "hits": 6
+        },
+        {
+          "ticker": "ELV",
+          "name": "Elevance Health",
+          "hits": 6
+        },
+        {
+          "ticker": "VLO",
+          "name": "Valero Energy",
+          "hits": 5
+        },
+        {
+          "ticker": "MPC",
+          "name": "Marathon Petroleum",
+          "hits": 5
+        },
+        {
+          "ticker": "LMT",
+          "name": "Lockheed Martin",
+          "hits": 5
+        },
+        {
+          "ticker": "GEV",
+          "name": "GE Vernova",
+          "hits": 4
+        },
+        {
+          "ticker": "CEG",
+          "name": "Constellation Energy",
+          "hits": 4
+        },
+        {
+          "ticker": "RTX",
+          "name": "RTX Corporation",
+          "hits": 4
+        },
+        {
+          "ticker": "META",
+          "name": "Meta Platforms",
+          "hits": 3
+        },
+        {
+          "ticker": "VST",
+          "name": "Vistra Corp.",
+          "hits": 3
+        }
+      ],
+      "sectors": [
+        "FIN",
+        "HLTH",
+        "INDU",
+        "IT",
+        "SEMI",
+        "UTIL"
+      ],
+      "verdicts": [
+        "GO",
+        "LIVE",
+        "RESOLVED",
+        "🟢"
+      ],
+      "themes": [
+        "BLINDSPOT_PREMORTEM — industry_US · 2026-07-15 (Wed) ★US-only",
+        "⚡ Binary resolution (recorded before synthesis)",
+        "LENS 1 — UNDER-COMPUTED LEGS  →  1 PROMOTE-TO-DEEP",
+        "LENS 2 — REGIME-FLIP / BOTH-SIDES  →  re-shaped the risk framing",
+        "LENS 3 — MOMENTUM-CONTINUATION  →  \"already ran\" was the wrong instinct again",
+        "LENS 4 — CYCLE-EXPOSURE  →  🚨 one mandate, one starter, one cheap close",
+        "Synthesis → decisions handed downstream"
+      ],
+      "dates": [
+        "2026-07-14",
+        "2026-07-15"
+      ]
+    },
+    "2026-07-15/industry_US/SECTOR_ROTATION.md": {
+      "mtime": 1784643341.7291317,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "IBM",
+          "name": "IBM",
+          "hits": 9
+        },
+        {
+          "ticker": "META",
+          "name": "Meta Platforms",
+          "hits": 9
+        },
+        {
+          "ticker": "HCA",
+          "name": "HCA Healthcare",
+          "hits": 6
+        },
+        {
+          "ticker": "JPM",
+          "name": "JPMorgan Chase",
+          "hits": 3
+        },
+        {
+          "ticker": "PSX",
+          "name": "Phillips 66",
+          "hits": 3
+        },
+        {
+          "ticker": "SCHW",
+          "name": "Charles Schwab Corporation",
+          "hits": 3
+        },
+        {
+          "ticker": "FITB",
+          "name": "Fifth Third Bancorp",
+          "hits": 3
+        },
+        {
+          "ticker": "HBAN",
+          "name": "Huntington Bancshares",
+          "hits": 3
+        },
+        {
+          "ticker": "PANW",
+          "name": "Palo Alto Networks",
+          "hits": 3
+        },
+        {
+          "ticker": "FTNT",
+          "name": "Fortinet",
+          "hits": 3
+        },
+        {
+          "ticker": "AXON",
+          "name": "Axon Enterprise",
+          "hits": 3
+        },
+        {
+          "ticker": "VRTX",
+          "name": "Vertex Pharmaceuticals",
+          "hits": 3
+        },
+        {
+          "ticker": "DHR",
+          "name": "Danaher Corporation",
+          "hits": 3
+        },
+        {
+          "ticker": "TMO",
+          "name": "Thermo Fisher Scientific",
+          "hits": 3
+        },
+        {
+          "ticker": "ABBV",
+          "name": "AbbVie",
+          "hits": 3
+        }
+      ],
+      "sectors": [
+        "FIN",
+        "INDU",
+        "IT",
+        "SEMI",
+        "UTIL"
+      ],
+      "verdicts": [
+        "LIVE",
+        "🔴",
+        "🟢"
+      ],
+      "themes": [
+        "SECTOR_ROTATION — industry_US · 2026-07-15 (Wed)",
+        "Flow-tape context",
+        "DEEP_LOG 2026-07-15: continuous=[INDU] rotating=[FIN,IT,UTIL]"
+      ],
+      "dates": [
+        "2026-07-14",
+        "2026-07-15"
+      ]
+    },
+    "2026-07-15/industry_US/SECTOR_DEEP_FIN.md": {
+      "mtime": 1784643341.7291317,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "JPM",
+          "name": "JPMorgan Chase",
+          "hits": 40
+        },
+        {
+          "ticker": "PNC",
+          "name": "PNC Financial Services",
+          "hits": 27
+        },
+        {
+          "ticker": "HBAN",
+          "name": "Huntington Bancshares",
+          "hits": 17
+        },
+        {
+          "ticker": "FITB",
+          "name": "Fifth Third Bancorp",
+          "hits": 13
+        },
+        {
+          "ticker": "SCHW",
+          "name": "Charles Schwab Corporation",
+          "hits": 9
+        },
+        {
+          "ticker": "BLK",
+          "name": "BlackRock",
+          "hits": 7
+        },
+        {
+          "ticker": "BAC",
+          "name": "Bank of America",
+          "hits": 1
+        },
+        {
+          "ticker": "WFC",
+          "name": "Wells Fargo",
+          "hits": 1
+        },
+        {
+          "ticker": "TRV",
+          "name": "Travelers Companies (The)",
+          "hits": 1
+        },
+        {
+          "ticker": "PGR",
+          "name": "Progressive Corporation",
+          "hits": 1
+        },
+        {
+          "ticker": "WM",
+          "name": "Waste Management",
+          "hits": 1
+        }
+      ],
+      "sectors": [
+        "FIN"
+      ],
+      "verdicts": [
+        "🟡",
+        "🟢"
+      ],
+      "themes": [
+        "SECTOR_DEEP_FIN — Financials (FIN) deep-dive · 2026-07-15 (Wed)"
+      ],
+      "dates": [
+        "2026-02-13",
+        "2026-07-14",
+        "2026-07-15"
+      ]
+    },
+    "2026-07-15/industry_US/SECTOR_DEEP_IT.md": {
+      "mtime": 1784643341.7291317,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "PANW",
+          "name": "Palo Alto Networks",
+          "hits": 30
+        },
+        {
+          "ticker": "CRWD",
+          "name": "CrowdStrike",
+          "hits": 25
+        },
+        {
+          "ticker": "FTNT",
+          "name": "Fortinet",
+          "hits": 17
+        },
+        {
+          "ticker": "CRM",
+          "name": "Salesforce",
+          "hits": 14
+        },
+        {
+          "ticker": "IBM",
+          "name": "IBM",
+          "hits": 13
+        },
+        {
+          "ticker": "ORCL",
+          "name": "Oracle Corporation",
+          "hits": 9
+        },
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft",
+          "hits": 6
+        },
+        {
+          "ticker": "AAPL",
+          "name": "Apple Inc.",
+          "hits": 4
+        },
+        {
+          "ticker": "INTU",
+          "name": "Intuit",
+          "hits": 4
+        },
+        {
+          "ticker": "ANET",
+          "name": "Arista Networks",
+          "hits": 2
+        },
+        {
+          "ticker": "ACN",
+          "name": "Accenture",
+          "hits": 2
+        },
+        {
+          "ticker": "ASML",
+          "name": "ASML Holding",
+          "hits": 1
+        },
+        {
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "hits": 1
+        },
+        {
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "hits": 1
+        },
+        {
+          "ticker": "MU",
+          "name": "Micron Technology",
+          "hits": 1
+        }
+      ],
+      "sectors": [
+        "IT",
+        "SEMI"
+      ],
+      "verdicts": [
+        "CONFIRMED",
+        "GO",
+        "🔴",
+        "🟡",
+        "🟢"
+      ],
+      "themes": [
+        "SECTOR_DEEP_IT — Information Technology (software / cyber leg)",
+        "0. Bottom line (4 lines)",
+        "1. Flow cross-check — cyber cluster accumulation + mega-cap-narrow breadth",
+        "1a. Sector-level breadth (the wflow≫eqflow reconciliation) [flow]",
+        "1b. Non-stale IT flow leaders (from names table) [flow]",
+        "1c. Flow snapshot (module_flow … --bench SPY) [flow]",
+        "1d. Short-vol pressure (scripts/us_flow.py, FINRA Reg SHO 2026-07-14) [flow]",
+        "2. Sub-leg map — driver, recurring-rev quality, rate sensitivity",
+        "2a. Cybersecurity — PANW / FTNT / CRWD (+ ZS) — the flow-leading sub-leg",
+        "2b. Application software / AI-monetization — MSFT / ORCL / CRM / NOW / INTU",
+        "2c. Mega-cap hardware — AAPL",
+        "2d. ANET (networking, SEMI-borderline)"
+      ],
+      "dates": [
+        "2025-08-29",
+        "2026-07-14",
+        "2026-07-15"
+      ]
+    },
+    "2026-07-15/industry_US/SECTOR_DEEP_SEMI.md": {
+      "mtime": 1784643341.7291317,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "hits": 16
+        },
+        {
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "hits": 13
+        },
+        {
+          "ticker": "ASML",
+          "name": "ASML Holding",
+          "hits": 12
+        },
+        {
+          "ticker": "MU",
+          "name": "Micron Technology",
+          "hits": 8
+        },
+        {
+          "ticker": "AMD",
+          "name": "Advanced Micro Devices",
+          "hits": 3
+        },
+        {
+          "ticker": "MRVL",
+          "name": "Marvell Technology",
+          "hits": 2
+        },
+        {
+          "ticker": "ARM",
+          "name": "Arm Holdings",
+          "hits": 1
+        },
+        {
+          "ticker": "AMAT",
+          "name": "Applied Materials",
+          "hits": 1
+        },
+        {
+          "ticker": "LRCX",
+          "name": "Lam Research",
+          "hits": 1
+        },
+        {
+          "ticker": "KLAC",
+          "name": "KLA Corporation",
+          "hits": 1
+        },
+        {
+          "ticker": "ANET",
+          "name": "Arista Networks",
+          "hits": 1
+        },
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft",
+          "hits": 1
+        },
+        {
+          "ticker": "META",
+          "name": "Meta Platforms",
+          "hits": 1
+        },
+        {
+          "ticker": "GOOGL",
+          "name": "Alphabet Inc. (Class A)",
+          "hits": 1
+        },
+        {
+          "ticker": "AMZN",
+          "name": "Amazon",
+          "hits": 1
+        }
+      ],
+      "sectors": [
+        "IT"
+      ],
+      "verdicts": [
+        "GO",
+        "LIVE",
+        "🟡"
+      ],
+      "themes": [
+        "SECTOR_DEEP_SEMI — AI-compute / semiconductors epicenter · 2026-07-15 (Wed)"
+      ],
+      "dates": [
+        "2026-07-15"
+      ]
+    },
+    "2026-07-15/industry_US/BET_SHEET.md": {
+      "mtime": 1784643341.7274063,
+      "desk": "industry_US",
+      "kr_tickers": [],
+      "us_tickers": [
+        {
+          "ticker": "GEV",
+          "name": "GE Vernova",
+          "hits": 12
+        },
+        {
+          "ticker": "JPM",
+          "name": "JPMorgan Chase",
+          "hits": 11
+        },
+        {
+          "ticker": "NEE",
+          "name": "NextEra Energy",
+          "hits": 11
+        },
+        {
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "hits": 9
+        },
+        {
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "hits": 9
+        },
+        {
+          "ticker": "MU",
+          "name": "Micron Technology",
+          "hits": 9
+        },
+        {
+          "ticker": "ASML",
+          "name": "ASML Holding",
+          "hits": 8
+        },
+        {
+          "ticker": "PNC",
+          "name": "PNC Financial Services",
+          "hits": 8
+        },
+        {
+          "ticker": "SCHW",
+          "name": "Charles Schwab Corporation",
+          "hits": 8
+        },
+        {
+          "ticker": "RTX",
+          "name": "RTX Corporation",
+          "hits": 8
+        },
+        {
+          "ticker": "PANW",
+          "name": "Palo Alto Networks",
+          "hits": 7
+        },
+        {
+          "ticker": "ETN",
+          "name": "Eaton Corporation",
+          "hits": 7
+        },
+        {
+          "ticker": "HBAN",
+          "name": "Huntington Bancshares",
+          "hits": 6
+        },
+        {
+          "ticker": "CRWD",
+          "name": "CrowdStrike",
+          "hits": 6
+        },
+        {
+          "ticker": "VST",
+          "name": "Vistra Corp.",
+          "hits": 6
+        }
+      ],
+      "sectors": [
+        "FIN",
+        "INDU",
+        "IT",
+        "SEMI",
+        "UTIL"
+      ],
+      "verdicts": [
+        "CONFIRMED",
+        "ECHO",
+        "GO",
+        "LIVE",
+        "PARTIAL",
+        "RESOLVED",
+        "🔴",
+        "🟡",
+        "🟢"
+      ],
+      "themes": [
+        "BET_SHEET — industry_US · 2026-07-15 (Wed)"
+      ],
+      "dates": [
+        "2026-07-15"
+      ]
+    },
+    "2026-07-15/미러링/STAGED_ORDERS.md": {
+      "mtime": 1784643341.7291317,
+      "desk": "미러링",
+      "kr_tickers": [
+        {
+          "code": "009150",
+          "name": "삼성전기",
+          "hits": 1
+        }
+      ],
+      "us_tickers": [
+        {
+          "ticker": "CEG",
+          "name": "Constellation Energy",
+          "hits": 9
+        },
+        {
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "hits": 6
+        },
+        {
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "hits": 5
+        },
+        {
+          "ticker": "RTX",
+          "name": "RTX Corporation",
+          "hits": 5
+        },
+        {
+          "ticker": "KMI",
+          "name": "Kinder Morgan",
+          "hits": 4
+        },
+        {
+          "ticker": "VST",
+          "name": "Vistra Corp.",
+          "hits": 4
+        },
+        {
+          "ticker": "ASML",
+          "name": "ASML Holding",
+          "hits": 1
+        },
+        {
+          "ticker": "GEV",
+          "name": "GE Vernova",
+          "hits": 1
+        }
+      ],
+      "sectors": [
+        "FIN"
+      ],
+      "verdicts": [
+        "CONFIRMED",
+        "GO"
+      ],
+      "themes": [
+        "미러링 RUN — 2026-07-15 (Wed) · KIS 실계좌 미러 + 오늘 판단 적용",
+        "1) MIRROR_INGEST — 실계좌를 paper book 에 반영 (US 한정)",
+        "2) DECIDE — 오늘 판단 (industry_US 07-15 근거 + epistemics 시드)",
+        "3) SIZE & 적용 결과 (paper book 반영 완료)",
+        "4) STAGE_ORDERS — KIS 주문 데스크 스택에 적재 (out/order_desk/kis_stack.json)",
+        "5) EPISTEMICS 축적 (판단 근거 되먹임 → epistemics/sensitivity/)"
+      ],
+      "dates": [
+        "2026-07-15"
+      ]
+    },
+    "2026-07-16/미러링/PULSE.md": {
+      "mtime": 1784643341.7349772,
+      "desk": "미러링",
+      "kr_tickers": [
+        {
+          "code": "005930",
+          "name": "삼성전자",
+          "hits": 2
+        },
+        {
+          "code": "000660",
+          "name": "SK하이닉스",
+          "hits": 2
+        }
+      ],
+      "us_tickers": [
+        {
+          "ticker": "MU",
+          "name": "Micron Technology",
+          "hits": 9
+        },
+        {
+          "ticker": "MRVL",
+          "name": "Marvell Technology",
+          "hits": 5
+        },
+        {
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "hits": 5
+        },
+        {
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "hits": 5
+        }
+      ],
+      "sectors": [],
+      "verdicts": [
+        "GO",
+        "🔴",
+        "🟢"
+      ],
+      "themes": [
+        "PULSE — 지금 뭔일? (라이브 진단, 세미/메모리 필두)",
+        "판정: 섹터 이벤트 (메모리/HBM 서브섹터 거품 되돌림). 광의 폭락 ✕.",
+        "현재가 스윕 (관련 종목 싹)",
+        "🔴 진앙 = 메모리/HBM (froth 되돌림)",
+        "🟢 광의 폭락 아니라는 증거 (같은 섹터 코어는 멀쩡)",
+        "⚪ 한국 상장 (다른 시계 — 오늘 오히려 반등)",
+        "당일 촉매 (뉴스 DB, --days 1)",
+        "내 책 영향: 거의 안 닿음",
+        "액션 (판단은 사람 몫 — 분석/예시)",
+        "✅ EXIT CHECK"
+      ],
+      "dates": [
+        "2026-07-16"
+      ]
+    },
+    "2026-07-16/미러링/SCENARIO_memory_unwind.md": {
+      "mtime": 1784643341.7355142,
+      "desk": "미러링",
+      "kr_tickers": [
+        {
+          "code": "000660",
+          "name": "SK하이닉스",
+          "hits": 7
+        },
+        {
+          "code": "005930",
+          "name": "삼성전자",
+          "hits": 4
+        }
+      ],
+      "us_tickers": [
+        {
+          "ticker": "MU",
+          "name": "Micron Technology",
+          "hits": 9
+        },
+        {
+          "ticker": "MRVL",
+          "name": "Marvell Technology",
+          "hits": 2
+        },
+        {
+          "ticker": "NVDA",
+          "name": "Nvidia",
+          "hits": 1
+        },
+        {
+          "ticker": "AVGO",
+          "name": "Broadcom",
+          "hits": 1
+        }
+      ],
+      "sectors": [],
+      "verdicts": [
+        "GO"
+      ],
+      "themes": [
+        "SCENARIO — 메모리 froth 언와인드, 며칠 갈까 + 내일 하이닉스 주간",
+        "되돌릴 양 = froth 규모 (실측)",
+        "시뮬: 안정(RSI≥48 & 신저가 안깨짐 2일연속)까지 며칠 / 추가 저점",
+        "3-시나리오 종합",
+        "❓ 내일 SK하이닉스(000660) 주간, 빠질까?"
+      ],
+      "dates": []
+    },
+    "2026-07-16/real_alpha_kr/009150/REPORT.md": {
+      "mtime": 1784643341.7342703,
+      "desk": "009150",
+      "kr_tickers": [
+        {
+          "code": "009150",
+          "name": "삼성전기",
+          "hits": 1
+        }
+      ],
+      "us_tickers": [],
+      "sectors": [],
+      "verdicts": [
+        "INFLATED",
+        "REAL",
+        "REAL-but-PRICED",
+        "🔴",
+        "🟡"
+      ],
+      "themes": [
+        "평결: 신규→REAL-but-PRICED — 삼성전기(009150)",
+        "STEP 0.5 재방문 자기채점",
+        "블록 A — 제품 실체 (DEEP 재사용)",
+        "블록 B — 돈의 진위 (MONEY_FORENSIC)",
+        "블록 C — 선반영 차집합 (SET_DIFF)",
+        "반증 파스 (FALSIFY)",
+        "평결 (4층 해석)",
+        "날짜 박힌 관측점 (반증가능)"
+      ],
+      "dates": [
+        "2026-08-14",
+        "2026-08-31",
+        "2026-09-30"
+      ]
+    }
+  },
+  "updated_at": "2026-07-21T15:01:18"
+}

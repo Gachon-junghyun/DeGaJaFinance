@@ -160,7 +160,40 @@ reason; P1/P3 carry the real-yield anti-signal as the kill line.
 ---
 
 ## §5 · DRIFT ADDENDUM
-_(reserved — Stage 8 appends the post-run regime-flip watch here)_
+
+> **APPEND-ONLY** (Stage 8/8). The original §A–§F call above is NOT edited — the correction sits next
+> to it so the self-backtest can score the asymmetry. ⚠ Deterministic burst detector (`drift_watch.py`)
+> could NOT run (local `news_fts.db` absent; news API 401). Substitute = live WebSearch cross-check of
+> the report's oscillating kill-switch variables, 2026-07-21.
+
+### 🚨 ADDENDUM 2026-07-21 — Hormuz is ACTIVE and oscillating, not a "pending undated statement"
+
+The report's §C/§D treated the Iran/Hormuz oil binary as an **undated pending statement**. The live tape
+says it is an **active, escalating crisis that is whipsawing intraday** — exactly the oscillating-variable
+regime P2 was bracketed for, but hotter than the baseline captured:
+- **State (was mis-stated as "pending"):** the interim US-Iran truce broke down **7/8**; Iran struck
+  commercial ships in the Strait; the US has bombed Iran **9 consecutive nights**; the Houthis declared a
+  maritime embargo on Saudi; Trump (7/20) said Iran "would pay" for 3 US service members' deaths. `[Al Jazeera, CNBC 2026-07-20]`
+- **Oil is oscillating HARD:** Brent closed **$89.22 Mon** (escalation) → crude fell toward **~$82 Tue 7/21**
+  on renewed peace-talk hopes. Analysts flag a Hormuz-slowdown + depleted inventories could push **>$100**. `[TradingEconomics/Al Jazeera 2026-07-21]`
+- **This is the T3 AGAINST-US branch PARTIALLY FIRING right now:** the war premium is *currently deflating*
+  on peace hopes ($89→$82). Per the ticket, **do NOT press an energy short** — WTI COT 10%ile crowded-short
+  means this is precisely where a peace-hope dip and an escalation-spike both live. The bracket holds; the
+  *state pointer* moves to "de-escalation attempt in progress, unresolved."
+
+### Minor drifts (no kill-switch flip)
+- **VIX eased to 17.58** on 7/21 (−5.7%), *below* the report's 18.65 (asof 7/20) — intraday risk-on on
+  peace hopes, NOT the VIX>24 anti-signal. `[market data 2026-07-21]`
+- **10y eased to ~4.52%** (report had 4.55% asof 7/17) on cooler inflation — a small move toward, not
+  through, any tripwire; real-yield duration anti-signal (>2.55%) remains un-tripped.
+- Chips up early 7/21 on peace-talk hopes (corroborates the Info Tech 🟢LIVE re-entry read); indices modestly
+  lower (S&P −0.19%). `[Schwab 2026-07-21]`
+
+**Net:** the base-case tilt is intact; the single change is that **Energy's key oscillating catalyst is LIVE
+and mid-swing (de-escalation attempt)**, which raises the weight on the T3 bracket and the stacked
+Energy/FOMC tail — watch Brent's war-premium floor and WTI COT into the 7/28-29 FOMC.
+
+*Sources: [Al Jazeera Hormuz](https://www.aljazeera.com/news/2026/7/8/oil-prices-surge-as-us-strikes-iran-reversing-fall-to-pre-war-levels) · [CNBC oil 2026-07-20](https://www.cnbc.com/2026/07/20/oil-prices-today-brent-wti-crude-us-iran-centcom-hormuz.html) · [TradingEconomics crude](https://tradingeconomics.com/commodity/crude-oil) · [Schwab market update](https://www.schwab.com/learn/story/stock-market-update-open).*
 
 ---
 *Sources for narrative §C: [CNBC 2026-07-13](https://www.cnbc.com/2026/07/13/stock-market-today-live-updates.html) · [FactSet Earnings 2026-07-17](https://insight.factset.com/sp-500-earnings-season-update-july-17-2026) · [Motley Fool 2026-07-20](https://www.fool.com/investing/2026/07/20/federal-reserve-july-inflation-forecast-red-flag/) · [Investing.com sector rotation](https://www.investing.com/analysis/sector-rotation-a-guide-to-the-sp-500-momentum-status-200675903). Primaries: FRED. Positioning: CFTC COT via `scripts/us_flow.py`.*
