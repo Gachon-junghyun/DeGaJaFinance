@@ -125,7 +125,7 @@ def run(kws: list[str], days: int | None, scope: str, mode: str, as_json: bool) 
 
 
 def cli_register(sub) -> None:
-    p = sub.add_parser("coverage", help="검색어 커버리지 %  (분모 포함 3층 분해)")
+    p = sub.add_parser("coverage", help="검색어 커버리지 %%  (분모 포함 3층 분해)")
     p.add_argument("keywords", nargs="+")
     p.add_argument("--days", type=int, default=None)
     p.add_argument("--scope", choices=["all", "foreign", "domestic"], default="all")

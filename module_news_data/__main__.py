@@ -31,26 +31,29 @@ from ._export import cli_register as _reg_export
 from ._chain_hop import cli_register as _reg_chain_hop
 from ._config import NEWS_API_BASE, utf8_stdout
 from ._coverage import cli_register as _reg_coverage
+from ._drift import cli_register as _reg_drift
 from ._fetch import cli_register as _reg_fetch
 from ._fts import cli_register as _reg_fts
 from ._search import cli_register as _reg_search
 from ._theme_age import cli_register as _reg_theme_age
+from ._thread import cli_register as _reg_thread
 
 REGISTRARS = [_reg_fetch, _reg_search, _reg_fts, _reg_coverage, _reg_blindspot,
               _reg_theme_age, _reg_chain_hop, _reg_burst, _reg_export, _reg_embed,
-              _reg_cluster, _reg_classify, _reg_brief]
+              _reg_cluster, _reg_classify, _reg_brief, _reg_thread, _reg_drift]
 
 # DB 를 직접 읽는 조회 서브커맨드 — 원격 모드에서 서버 /exec 로 라우팅된다.
 # ⚠ 여기가 단일 원본 — `Server/news_api.py` 가 이걸 import 해서 화이트리스트로 쓴다(P1).
 #    새 조회 서브커맨드는 여기 한 줄만 추가하면 서버가 자동으로 따라온다(서버 코드 수정 0).
-# ⚠ `embed`·`cluster` 는 **일부러 뺀다** — GPU/sklearn 이 필요한 클라이언트 전용이고,
+# ⚠ `embed`·`cluster`·`brief`·`thread` 는 **일부러 뺀다** — GPU/sklearn 이 필요한 클라이언트 전용이고,
 #    서버(저사양·GPU 없음)에서 원격 실행되면 안 된다. 둘 다 서버 뉴스DB 가 아니라 클라이언트
 #    소유 `news_vectors.db` 를 읽는다(`embed` 가 `_export.pull` 로 제목만 받아와 채워둔 것).
 DB_READ_CMDS = {"search", "fts", "coverage", "blindspot", "theme-age", "chain-hop",
-                "burst", "export"}
+                "burst", "export", "drift"}
 
 # 대량 반출은 60초로 모자란다(12만행 ~13MB). 명령별 타임아웃 — 기본은 _api_client 값.
-REMOTE_TIMEOUT = {"export": 600}
+# chain-hop 은 본문 스캔이라 저사양 서버에서 60초를 넘긴다(실측 2026-07-19 타임아웃).
+REMOTE_TIMEOUT = {"export": 600, "chain-hop": 300}
 
 
 def build_parser() -> argparse.ArgumentParser:

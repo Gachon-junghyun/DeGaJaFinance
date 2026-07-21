@@ -63,8 +63,13 @@ def _norm_entropy(counts: list[int]) -> float:
 
 
 def cluster_day(day: str, scope: str = "domestic", distance: float = DISTANCE,
-                min_sources: int = MIN_SOURCES) -> dict:
-    """하루치 기사 → 사건 목록. 판정 없음 — 묶고 세고 근거만 붙인다."""
+                min_sources: int = MIN_SOURCES, with_members: bool = False) -> dict:
+    """하루치 기사 → 사건 목록. 판정 없음 — 묶고 세고 근거만 붙인다.
+
+    with_members=True 면 사건마다 전체 구성기사 url_hash 목록(`members`)을 붙인다 —
+    `_thread`(주간 궤적)가 사건 centroid 를 원공간에서 다시 계산할 때 쓴다.
+    기본 OFF: brief 산출물이 머리사건 하나에 50+ 해시로 부풀지 않게.
+    """
     import numpy as np                                   # 무거운 import 는 함수 안에서만
     from sklearn.cluster import AgglomerativeClustering
     from sklearn.preprocessing import normalize
@@ -105,7 +110,7 @@ def cluster_day(day: str, scope: str = "domestic", distance: float = DISTANCE,
         # 같은 덩어리에 섞인 공시목록 기사로 나왔다 — LLM 이 엉뚱한 기사를 그 사건의 증거로 읽는다.
         order = [members[j] for j in np.argsort(-(sub @ centroid))]
         rep = order[0]
-        events.append({
+        ev = {
             "n_articles": len(members),
             "n_sources": len(srcs),
             "src_entropy": round(_norm_entropy(list(srcs.values())), 2),
@@ -114,7 +119,10 @@ def cluster_day(day: str, scope: str = "domestic", distance: float = DISTANCE,
             "evidence": [{"source": meta[i]["source"], "title": meta[i]["title"],
                           "url_hash": hashes[i], "url": meta[i].get("url")}
                          for i in order[:3]],
-        })
+        }
+        if with_members:
+            ev["members"] = [hashes[i] for i in order]
+        events.append(ev)
     events.sort(key=lambda e: (e["n_sources"], e["n_articles"]), reverse=True)
 
     return {
