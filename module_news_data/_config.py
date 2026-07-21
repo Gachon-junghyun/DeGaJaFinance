@@ -46,6 +46,9 @@ FOREIGN_SOURCES = sorted({
     "bloomberg", "google_en", "bbc", "scmp", "marketwatch", "upi", "nyt",
     "seekingalpha", "yahoo_finance", "prnewswire", "cnbc", "thediplomat",
     "sec_edgar", "foreignpolicy", "investing_en", "google_news_en", "fxstreet",
+    # 2026-07-18 추가 — _rss_feeds.RSS_FEEDS 와 짝을 맞춘다(여기 빠지면 KR 로 태깅돼
+    # 국내 스코프로 새고, 한국어 학습 분류기가 영문을 시장/비시장 판정하게 된다).
+    "digitimes", "nikkei", "ft", "federalreserve", "eia",
 })
 
 BODY_MIN = 200   # 본문 '있음' 판정 최소 글자수 (coverage/fts has_body 공통)
