@@ -31,12 +31,31 @@ CLI:
     python -m module_paper_book mark                         # 마크+스탑히트+집중도
     python -m module_paper_book snapshot [--fx 1380 --note "..."]
     python -m module_paper_book journal [--limit 20] | track
+
+랩어카운트(wrap) 계열 — 섹터 만다트로 굴리는 일임 규율 (_allocate):
+    python -m module_paper_book mandate --set '{"Information Technology":30}' --market us --band 5
+    python -m module_paper_book mandate --map TSM="Information Technology" --target-beta 1.0
+    python -m module_paper_book drift                       # 섹터 괴리(pp) + 책 베타
+    python -m module_paper_book rebalance                   # 밴드 복원 계획(드라이런)
+    python -m module_paper_book rebalance --commit          # 계획을 모의장부에 반영(사람만)
 """
+from ._allocate import (
+    BENCH,
+    book_beta,
+    compute_betas,
+    get_mandate,
+    position_weights,
+    rebalance_plan,
+    resolve_sector,
+    sector_drift,
+    set_mandate,
+)
 from ._book import (
     Fill,
     Position,
     book_summary,
     connect,
+    equity_krw,
     get_cash,
     get_position,
     get_positions,
@@ -59,8 +78,10 @@ from ._mirror import (
 from ._risk import RiskParams, concentration_check, size_position, theme_exposure
 
 __all__ = [
-    "Fill", "Position", "book_summary", "connect", "get_cash", "get_position",
+    "Fill", "Position", "book_summary", "connect", "equity_krw", "get_cash", "get_position",
     "get_positions", "init_db", "record_fill", "snapshot_equity",
+    "BENCH", "book_beta", "compute_betas", "get_mandate", "position_weights",
+    "rebalance_plan", "resolve_sector", "sector_drift", "set_mandate",
     "DB_FILENAME", "default_db_path", "market_of", "utf8_stdout",
     "Candidate", "read_actionable", "summarize",
     "log_decision", "recent", "track_record",

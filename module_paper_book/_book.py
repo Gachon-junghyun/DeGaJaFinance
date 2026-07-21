@@ -233,6 +233,22 @@ def record_fill(conn: sqlite3.Connection, fill: Fill) -> dict:
             "cash_after": get_cash(conn, ccy)}
 
 
+def equity_krw(conn: sqlite3.Connection, marks: dict, fx: float) -> float:
+    """총자산(원화환산) = 현금슬리브 + 투자원가 + 미실현. 마크 실패는 평단으로 대체.
+
+    자기자본 계산의 단일 원본(P1) — CLI(`__main__._equity_krw`)와 배분 규율(`_allocate`)이
+    각자 다시 계산하지 않고 이걸 부른다. 기입 없음(순수 계산).
+    """
+    cash = get_cash(conn, "KRW") + get_cash(conn, "USD") * fx
+    inv = unreal = 0.0
+    for p in get_positions(conn, open_only=True):
+        px = marks.get(p.ticker) or p.avg_cost
+        rate = 1.0 if p.currency == "KRW" else fx
+        inv += p.cost_basis * rate
+        unreal += (px - p.avg_cost) * p.qty * rate
+    return cash + inv + unreal
+
+
 def snapshot_equity(conn: sqlite3.Connection, marks: dict, fx: float, note: str = "") -> dict:
     """현재 장부를 마크 결과(marks: ticker->price)로 평가해 자기자본 스냅샷 기록.
 

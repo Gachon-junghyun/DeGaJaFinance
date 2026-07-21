@@ -8,7 +8,16 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from ._book import Fill, book_summary, connect, get_positions, init_db, record_fill, snapshot_equity
+from ._book import (
+    Fill,
+    book_summary,
+    connect,
+    equity_krw,
+    get_positions,
+    init_db,
+    record_fill,
+    snapshot_equity,
+)
 from ._config import DEFAULT_CAPITAL_KRW, DEFAULT_CAPITAL_USD, DEFAULT_FX_USDKRW, utf8_stdout
 from ._intake import read_actionable, summarize
 from ._journal import log_decision, recent, track_record
@@ -16,16 +25,9 @@ from ._mark import mark_book, position_pnl
 from ._risk import RiskParams, concentration_check, size_position, theme_exposure
 
 
-def _equity_krw(conn, fx: float) -> float:
-    s = book_summary(conn)
-    marks = mark_book(conn)
-    inv = unreal = 0.0
-    for p in get_positions(conn, open_only=True):
-        px = marks.get(p.ticker) or p.avg_cost
-        rate = 1.0 if p.currency == "KRW" else fx
-        inv += p.cost_basis * rate
-        unreal += (px - p.avg_cost) * p.qty * rate
-    return s["cash_krw"] + s["cash_usd"] * fx + inv + unreal
+def _equity_krw(conn, fx: float, marks: dict | None = None) -> float:
+    """총자산(원화환산) — 계산 본체는 `_book.equity_krw`(단일 원본). 여기선 마크만 준비."""
+    return equity_krw(conn, mark_book(conn) if marks is None else marks, fx)
 
 
 def cmd_init(a):
@@ -194,6 +196,149 @@ def cmd_stage(a):
     print("   ⚠ 계획(intent)만 저장 — 데스크에서 사람이 [체결]로 하나씩 발사(자동 아님).")
 
 
+def _dump(obj):
+    import json
+    print(json.dumps(obj, ensure_ascii=False, indent=2, default=str))
+
+
+def cmd_mandate(a):
+    """랩 만다트 조회/설정 — 섹터 목표비중·밴드·목표베타·섹터 오버라이드."""
+    from ._allocate import (
+        DEFAULT_BAND_PP, get_mandate, get_overrides, mandate_beta_target,
+        set_mandate, set_meta, set_override,
+    )
+    import json as _json
+    with connect(a.db) as conn:
+        changed = []
+        if a.set:
+            weights = _json.loads(a.set)
+            r = set_mandate(conn, a.market, weights, band_pp=a.band,
+                            replace_market=not a.add)
+            changed.append(f"만다트 {r['market']} {r['n']}섹터 합 {r['sum_pct']}% (밴드 ±{r['band_pp']}pp)")
+        for m in (a.map or []):
+            tk, _, sec = m.partition("=")
+            if not sec:
+                print(f"❌ --map 형식은 TICKER=SECTOR (받은 값: {m})"); return
+            set_override(conn, tk, sec)
+            changed.append(f"섹터 오버라이드 {tk.upper()} → {sec}")
+        if a.target_beta is not None:
+            set_meta(conn, "target_beta", a.target_beta); changed.append(f"목표베타 {a.target_beta}")
+        if a.beta_band is not None:
+            set_meta(conn, "beta_band", a.beta_band); changed.append(f"베타밴드 ±{a.beta_band}")
+
+        rows = get_mandate(conn, a.market if a.market_filter else None)
+        ov = get_overrides(conn)
+        tgt, band = mandate_beta_target(conn)
+        if a.json:
+            _dump({"mandate": rows, "overrides": ov, "target_beta": tgt, "beta_band": band,
+                   "changed": changed})
+            return
+        for c in changed:
+            print(f"✅ {c}")
+        total = sum(r["target_pct"] for r in rows)
+        print(f"\n# WRAP MANDATE — 목표비중 합 {total:.1f}% · 현금목표 {100-total:.1f}%"
+              f" · 목표베타 {tgt:.2f} ±{band:.2f}")
+        print(f"{'MKT':4s} {'SECTOR':28s} {'TARGET%':>8s} {'BAND±pp':>8s}")
+        print("  " + "─" * 52)
+        for r in rows:
+            print(f"{r['market']:4s} {r['sector'][:28]:28s} {r['target_pct']:>8.1f} {r['band_pp']:>8.1f}")
+        if not rows:
+            print("  (만다트 없음 — `mandate --set '{\"섹터\":25}' --market kr` 로 건다)")
+        if ov:
+            print("  섹터 오버라이드: " + " · ".join(f"{k}={v}" for k, v in ov.items()))
+        print(f"  ※ 목표비중 단위 = 총자산(원화환산) 대비 %. 기본밴드 ±{DEFAULT_BAND_PP}pp.")
+
+
+def cmd_drift(a):
+    """섹터 드리프트 + 책 베타 — '만다트 대비 지금 어디에 서 있나'(계획 없음, 관측만)."""
+    from ._allocate import book_beta, marks_for_book, sector_drift
+    with connect(a.db) as conn:
+        marks = marks_for_book(conn)
+        d = sector_drift(conn, a.fx, marks)
+        b = None if a.no_beta else book_beta(conn, a.fx, marks, period=a.period)
+        if a.json:
+            _dump({"drift": d, "beta": b}); return
+        print(f"# WRAP DRIFT  (fx {a.fx:.0f} · 총자산 {d['equity_krw']:,.0f} KRW)")
+        print(f"  현금 {d['cash_pct']:.1f}% (목표 {d['cash_target_pct']:.1f}%) · 만다트 합 {d['mandate_sum_pct']:.1f}%")
+        print(f"\n{'MKT':4s} {'SECTOR':26s} {'TGT%':>7s} {'CUR%':>7s} {'DRIFT':>8s} {'BAND':>6s}  FLAG")
+        print("  " + "─" * 68)
+        for s in d["sectors"]:
+            flag = ("🔺OVER " if s["breach"] == "OVER" else "🔻UNDER" if s["breach"] == "UNDER" else "  ok  ")
+            if s.get("off_mandate"):
+                flag += " (만다트 밖)"
+            print(f"{s['market']:4s} {s['sector'][:26]:26s} {s['target_pct']:>7.1f} "
+                  f"{s['current_pct']:>7.1f} {s['drift_pp']:>+8.1f} {s['band_pp']:>6.1f}  {flag}")
+        print(f"\n  밴드 이탈 {d['n_breach']}건")
+        unmapped = [p["ticker"] for p in d["positions"] if p["sector"] == "(unmapped)"]
+        if unmapped:
+            print(f"  ⚠ 섹터 미매핑: {', '.join(unmapped)} — `mandate --map TICKER=SECTOR` 로 박아라(추측 안 함)")
+        if b:
+            bf = {"HIGH": "🔺목표초과", "LOW": "🔻목표미달", "": "✅밴드 내"}[b["beta_breach"]]
+            print(f"\n# BOOK BETA ({b['period']} 일별수익률 · KR=^KS11 / US=SPY)")
+            print(f"  책 베타 {b['book_beta']:.2f} vs 목표 {b['target_beta']:.2f} ±{b['beta_band']:.2f} → {bf}"
+                  f"   (투자자산만 {b['invested_beta']} · 현금 {b['cash_pct']:.1f}%)")
+            print(f"\n{'TKR':8s} {'W%':>6s} {'BETA':>7s} {'기여':>7s} {'n':>5s}  SECTOR")
+            print("  " + "─" * 62)
+            for p in b["positions"]:
+                bt = f"{p['beta']:.2f}" if p["beta"] is not None else "—"
+                ct = f"{p['beta_contrib']:+.3f}" if p["beta_contrib"] is not None else "—"
+                print(f"{p['ticker']:8s} {p['weight_pct']:>6.1f} {bt:>7s} {ct:>7s} "
+                      f"{str(p['n_obs'] or ''):>5s}  {p['sector'][:24]}")
+            if b["missing_beta"]:
+                print(f"  ⚠ 베타 없음(빈칸 유지): {', '.join(b['missing_beta'])}")
+
+
+def cmd_rebalance(a):
+    """밴드 복원 트림/애드 계획. 기본 드라이런 — 장부 반영은 `--commit` 사람 명시 전용."""
+    from ._allocate import marks_for_book, rebalance_plan, save_plan
+    with connect(a.db) as conn:
+        marks = marks_for_book(conn)
+        plan = rebalance_plan(conn, a.fx, marks, to=a.to, with_beta=not a.no_beta)
+        if a.json:
+            _dump(plan)
+        else:
+            print(f"# WRAP REBALANCE PLAN ({a.to} 복원 · fx {a.fx:.0f} · 총자산 {plan['equity_krw']:,.0f} KRW)")
+            print(f"  밴드 이탈 {plan['n_breach']}건 → 레그 {len(plan['legs'])}건 · 미충족 {len(plan['unfilled'])}건")
+            if plan["legs"]:
+                print(f"\n{'SIDE':5s} {'TKR':8s} {'QTY':>6s} {'PRICE':>11s} {'AMT(KRW)':>12s} "
+                      f"{'W%→':>7s} {'stop%':>7s}  SECTOR / 규칙")
+                print("  " + "─" * 88)
+                for l in plan["legs"]:
+                    sd = f"{l['stop_dist_pct']:+.1f}" if l["stop_dist_pct"] is not None else "—"
+                    print(f"{l['side'].upper():5s} {l['ticker']:8s} {l['qty']:>6.0f} {l['price']:>11,.2f} "
+                          f"{l['amount_krw']:>12,.0f} {l['weight_before_pct']:>3.1f}→{l['weight_after_pct']:<3.1f} "
+                          f"{sd:>7s}  {l['sector'][:20]} / {l['rule']}")
+            for u in plan["unfilled"]:
+                print(f"  ⚠ 미충족 [{u['market']}·{u['sector']}] {u['side']} {u['amount_krw']:,.0f} KRW "
+                      f"({u['gap_pp']:+.1f}pp) — {u['note']}")
+            for f in plan["projected_concentration_flags"]:
+                print(f"  ⚠ 계획반영 후 집중도 [{f['kind']}] {f['key']} {f['pct']}% > {f['limit']}%")
+            if not plan["projected_concentration_flags"]:
+                print("  ✅ 계획반영 후 집중도 한도 내(_risk MAX_POS/MAX_THEME)")
+            if plan.get("beta"):
+                b = plan["beta"]
+                print(f"  베타(현재) {b['book_beta']:.2f} vs 목표 {b['target_beta']:.2f} ±{b['beta_band']:.2f}"
+                      f" {b['beta_breach'] or '내'}")
+        path = save_plan(plan)
+        print(f"\n💾 계획 저장 → {path}")
+        if not a.commit:
+            print("[DRY-RUN] 장부 미반영 — 반영하려면 --commit (사람 명시 전용, 스케줄러 자동발사 없음)")
+            return
+        n = 0
+        for l in plan["legs"]:
+            f = Fill(ticker=l["ticker"], side=l["side"], qty=float(l["qty"]), price=l["price"],
+                     rationale=f"wrap rebalance {l['sector']} {l['rule']}",
+                     source_report="wrap_account")
+            record_fill(conn, f)
+            log_decision(conn, l["ticker"], l["side"].upper(),
+                         f"wrap rebalance → {l['sector']} 밴드 복원", source_report="wrap_account",
+                         committed=True)
+            n += 1
+        snap = snapshot_equity(conn, marks_for_book(conn), a.fx, note="wrap rebalance")
+        print(f"✅ COMMIT {n}건 반영 — 총자산 {snap['equity_krw']:,.0f} KRW "
+              f"(현금 KRW {snap['cash_krw']:,.0f} / USD {snap['cash_usd']:,.2f})")
+
+
 def cmd_journal(a):
     with connect(a.db) as conn:
         for r in recent(conn, a.limit):
@@ -250,6 +395,35 @@ def main():
 
     p = sub.add_parser("stage"); p.add_argument("--from-json", required=True, dest="from_json")
     p.add_argument("--clear", action="store_true"); p.set_defaults(fn=cmd_stage)
+
+    # ── 랩어카운트(만다트) 계열 ──────────────────────────────────────────────
+    p = sub.add_parser("mandate", help="섹터 목표비중·밴드·목표베타 조회/설정")
+    p.add_argument("--set", default=None, help='JSON 목표비중, 예: \'{"전기·전자":25,"화학":15}\'')
+    p.add_argument("--market", default="KR", help="KR|US (기본 KR)")
+    p.add_argument("--band", type=float, default=5.0, help="드리프트 밴드 ±pp (기본 5)")
+    p.add_argument("--add", action="store_true", help="--set 시 기존 시장 만다트를 지우지 않고 병합")
+    p.add_argument("--map", action="append", default=None, metavar="TICKER=SECTOR",
+                   help="유니버스에 없는 종목의 섹터를 사람이 박음(반복 가능)")
+    p.add_argument("--target-beta", type=float, default=None, dest="target_beta")
+    p.add_argument("--beta-band", type=float, default=None, dest="beta_band")
+    p.add_argument("--market-filter", action="store_true", dest="market_filter",
+                   help="표시할 때 --market 시장만")
+    p.add_argument("--show", action="store_true", help="(기본 동작 — 조회)")
+    p.add_argument("--json", action="store_true"); p.set_defaults(fn=cmd_mandate)
+
+    p = sub.add_parser("drift", help="섹터 드리프트(목표 대비 pp) + 책 베타")
+    p.add_argument("--fx", type=float, default=DEFAULT_FX_USDKRW)
+    p.add_argument("--period", default="1y", help="베타 회귀 구간(기본 1y)")
+    p.add_argument("--no-beta", action="store_true", dest="no_beta", help="베타 계산 건너뜀(네트워크 절약)")
+    p.add_argument("--json", action="store_true"); p.set_defaults(fn=cmd_drift)
+
+    p = sub.add_parser("rebalance", help="밴드 복원 트림/애드 계획(기본 드라이런)")
+    p.add_argument("--fx", type=float, default=DEFAULT_FX_USDKRW)
+    p.add_argument("--to", default="target", choices=["target", "band"],
+                   help="target=목표까지 완전복원(기본) · band=밴드 가장자리까지만")
+    p.add_argument("--no-beta", action="store_true", dest="no_beta")
+    p.add_argument("--commit", action="store_true", help="계획을 모의장부에 반영(사람 명시 전용)")
+    p.add_argument("--json", action="store_true"); p.set_defaults(fn=cmd_rebalance)
 
     p = sub.add_parser("journal"); p.add_argument("--limit", type=int, default=30); p.set_defaults(fn=cmd_journal)
     p = sub.add_parser("track"); p.set_defaults(fn=cmd_track)
