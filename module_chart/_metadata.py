@@ -3,6 +3,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
+from ._indicators import rsi_series
 from ._utils import _fmt_price, _norm
 
 
@@ -69,11 +70,7 @@ def generate_metadata(df: pd.DataFrame) -> str:
 
     # ── RSI ──────────────────────────────────────────────────────────────────
     if len(close) >= 15:
-        delta = close.diff()
-        gain  = delta.clip(lower=0).rolling(14).mean()
-        loss  = (-delta.clip(upper=0)).rolling(14).mean()
-        rs    = gain / loss.replace(0, np.nan)
-        rsi   = float((100 - 100 / (1 + rs)).iloc[-1])
+        rsi = float(rsi_series(_df, 14).iloc[-1])   # 산식 단일 원본 = _indicators.rsi_series (P1)
         if not np.isnan(rsi):
             rsi_label = "과매수 ⚠" if rsi >= 70 else ("과매도 ⚠" if rsi <= 30 else "중립")
             lines.append(f"RSI(14): {rsi:.1f} ({rsi_label})")

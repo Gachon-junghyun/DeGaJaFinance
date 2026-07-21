@@ -37,6 +37,20 @@ def add_bollinger(
     }
 
 
+def rsi_series(df: pd.DataFrame, window: int = 14) -> pd.Series:
+    """RSI 시계열 — 이 리포의 RSI 산식 **단일 원본** (CLAUDE.md P1).
+
+    같은 산식이 add_rsi_line() 과 _metadata.generate_metadata() 에 각각 복제돼
+    있었고, scripts/yf_snapshot.compute() 가 세 번째 사본이 될 뻔했다. 셋 다 이걸 부른다.
+    """
+    _df   = _norm(df)
+    delta = _df["close"].diff()
+    gain  = delta.clip(lower=0).rolling(window).mean()
+    loss  = (-delta.clip(upper=0)).rolling(window).mean()
+    rs    = gain / loss.replace(0, np.nan)
+    return 100 - 100 / (1 + rs)
+
+
 def add_rsi_line(
     df: pd.DataFrame, window: int = 14, levels: list[float] = [30.0, 70.0]
 ) -> Dict[str, pd.Series]:
@@ -48,11 +62,7 @@ def add_rsi_line(
     실제 RSI 수치는 generate_metadata()가 텍스트로 별도 제공.
     """
     _df   = _norm(df)
-    delta = _df["close"].diff()
-    gain  = delta.clip(lower=0).rolling(window).mean()
-    loss  = (-delta.clip(upper=0)).rolling(window).mean()
-    rs    = gain / loss.replace(0, np.nan)
-    rsi   = 100 - 100 / (1 + rs)
+    rsi   = rsi_series(_df, window)
 
     close     = _df["close"]
     price_min = close.rolling(window * 3, min_periods=1).min()
