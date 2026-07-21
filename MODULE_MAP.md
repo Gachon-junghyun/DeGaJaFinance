@@ -20,6 +20,7 @@
 | [module_report_tags](#module_report_tags) | REPORT/ 태그추출 + 인수인계 원장(증분) | 데스크 재검색 방지 — 리포트 태그를 인수받기 |
 | [module_paper_book](#module_paper_book) | 데스크 리포트 → 모의투자(paper) 장부 | 리포트를 읽어 사이징·체결시뮬·시가평가·저널 (paper_desk 프로토콜 엔진) |
 | [module_epistemics](#module_epistemics) | 베이지안 충돌평가·민감도 학습·verify·registry_audit | 신호 모순 해소, 종목 민감도 축적, 코드↔맵 감사 |
+| [module_inflection](#module_inflection) | 가격 변곡점 ↔ 뉴스 정렬 + 과거 전례 검색 | "이런 말 나올 때 이렇게 흘렀다", 변곡 주변 기사, 유사국면 |
 | [module_order_desk](#module_order_desk) | KIS 주문 데스크(Tkinter GUI) — 스택형 휴먼 주문 | 시세 보며 주문을 스택에 쌓아 카드마다 [체결], 포폴·인기·흐름·만약에 |
 | [scripts/](#스크립트-데스크-호출) | 데스크가 `python scripts/X.py`로 호출하는 단일파일 도구 9 | 수급·섹터로테이션·촉매·숏리스트·스크리너 |
 
@@ -77,6 +78,12 @@ KIS 주문 데스크 — Tkinter 스택형 주문 GUI. 주문을 '스택'에 카
 
 - **소유**: `_config` 가 **FOREIGN_SOURCES 집합·DB 경로·utf8 헬퍼의 단일 원본**(옛 리포에선 4파일 복붙 → 여기 1곳).
   수집(`_rss_feeds`·`_scraper`·`_repository`·`_fetch`)·색인(`_fts`)·검색·발굴 전부.
+  ⚠ **피드 추가는 두 곳이 짝**: `_rss_feeds.RSS_FEEDS` + (해외면) `_config.FOREIGN_SOURCES`.
+  후자를 빠뜨리면 영문 소스가 KR 로 태깅돼 국내 스코프로 새고, 한국어 학습 분류기가 영문을 판정한다.
+  ⚠ **피드는 조용히 죽는다**: 2026-07-18 실측 — 한경 4피드 403(일평균 158.8건→0, 무경고),
+  이데일리·헤럴드·중앙 7피드는 **HTTP 200 + entries=0** 이라 예외가 안 나 `log.warning` 조차 안 찍혔다
+  (DB 기사 0건). 현재 76피드/33소스 전부 entries>0 확인. 소스별 물량이 갑자기 0이면 뉴스가 없는 게
+  아니라 **피드가 죽은 것**부터 의심할 것.
   `_timeaxis` 가 **시간축(published_at→UTC)의 단일 원본** — 시계열을 재는 모든 기능은 여기서 import.
   `_tokenize` 가 **토큰화의 단일 원본**(한글 조사절단+영문, 형태소분석기 0) — 단어를 세는 기능은 여기서 import.
   `_universe` 가 **상장사 언급 판정**(KR=kr_all.csv 3글자+, US=`_chain_hop.load_universe` 재사용).
@@ -100,9 +107,15 @@ KIS 주문 데스크 — Tkinter 스택형 주문 GUI. 주문을 '스택'에 카
   **폐기된 방법**: '제목에 상장사명이 있나'(`_universe`) — 정밀하나 경제기사 재현율 **10.6%**.
   7/07 최대 사건 "코스피 급락에 매도 사이드카"의 상장사 관련도가 7% 였다(제목에 회사명이 없다).
   트랜스포머를 안 쓴 이유: 라벨이 같으니 상한도 같고, NB 는 `explain()` 으로 판정 근거어를 보여준다(P4).
-- ⚠️ **파이프라인**: `embed sync`(하루2초) → `cluster`(7초) → `classify` → `brief`.
+- ⚠️ **파이프라인**: `embed sync`(하루2초) → `cluster`(7초) → `classify` → `brief` → `thread`(7일 17초).
   실측 하루 3,782건 → 사건 512 → 시장 394 → 머리61/몸통143/꼬리190 → **44k 토큰**(제목전부 146k 대비 3배 압축).
   꼬리는 **자르지 않고** 분모+무작위표본으로 준다 — 매체수는 중요도의 대리지표지 진실이 아니다.
+- ⚠️ **`brief`(사진) 와 `thread`(필름)도 대체재가 아니다.** `thread` 는 일별 사건을 주간 윈도우로
+  재연결해 매체수 곡선(BUILDING/FADING/REIGNITED/ENDED)을 준다. 실측(7/11~17): 한은 금리인상
+  사가가 **7/11 [14건/2매체] 꼬리 → 7/16 [101건/8매체] 발표**로 5일 활주로가 곡선에 미리 보였다
+  — 하루 뷰에선 첫날이 꼬리라 안 보인다. 이런 전조형(2매체 시작→5매체+ 정점)이 한 윈도우에 12개.
+  연결임계 0.40 은 실측 타협점(0.30=사가 토막, 0.50='오늘의 운세'까지 스레드). 윈도우 끝이
+  휴일이면 FADING 과대(물량 편향) — per-day 분모 먼저 읽는다. 태그는 곡선 모양이지 판정이 아니다(P4).
 - ⚠️ **`brief --lede` 는 기본 OFF (본문이 못 쓸 상태)**: asiae·sedaily 는 본문 **앞** 400자가 100%
   페이지 가구('함께 보면 좋은 기사' 목록 등)라, 리드의 22%가 그 사건과 무관한 기사였다(실측).
   서킷브레이커 사건 근거로 "푸드나무 유상증자"가 붙는 식 — LLM 이 사건을 오독한다. 가구 제거
@@ -122,8 +135,10 @@ KIS 주문 데스크 — Tkinter 스택형 주문 GUI. 주문을 '스택'에 카
 | `cluster` | 하루 기사 → **사건**(같은 일 27건→1줄, 매체수=중요도). **클라 전용** | `... cluster --date 2026-07-07 --scope domestic --json` |
 | `classify` | 제목 → 시장/비시장(NB·의존성0·URL 라벨 자가학습). 근거어 감사 | `... classify --eval` · `... classify --words` |
 | `brief` | 하루 → **계층 브리핑**(머리5매체+/몸통3+/꼬리표본+분모). **클라 전용** | `... brief --date 2026-07-07 --scope domestic --json` |
+| `thread` | 여러 날 사건 **궤적**(스레드) — BUILDING/FADING/REIGNITED/ENDED + 일별 매체수 곡선. **클라 전용** | `... thread --days 7 --scope domestic` |
 
 | `theme-age` | 테마 나이·가속(FRESH vs ECHO) | `... theme-age humanoid "Strait of Hormuz" --scope foreign` |
+| `drift` | 기준시각(리포트 완주) 이후 킬스위치 텀 버스트 — 리포트 스테일 감지 | `... drift --since 2026-07-17T18:00:00 --scope foreign` |
 | `chain-hop` | 제목 미명명 + 본문 근접 공동언급 수혜후보(US) | `... chain-hop "data center" power --days 14` |
 
 - **수집 루프**: 서버 PC 는 [`Server/`](Server/README.md) — `Server/run_fetch_loop.bat`(수집: fetch full + fts update 영/한, 매 INTERVAL 기본 3600s) + `Server/run_news_api.bat`(검색 API). 루트 `run_fetch_loop.bat` 는 Server 위임 shim. 로그 `data/fetch_loop.log`.
@@ -181,11 +196,19 @@ DART(OpenDART) 공시 조회·카테고리 분류 + 사업보고서 본문. 100%
   python -m module_disclosure 034020 --days 60 --guidance 13.3 # 수주 진척률 자동계산
   python -m module_disclosure 034020 --category contract --json
   python -m module_disclosure 005930 --business-report        # 최근 사업보고서 본문(옛 module_business 흡수)
+  python -m module_disclosure 000720 --guarantees --days 365  # 채무보증(PF 우발채무) 금액·총잔액
   ```
-- **공개 API**: `fetch_disclosures · fetch_disclosure_detail · resolve_corp_code · categorize · parse_contract/treasury/capital · summarize_contracts · fetch_business_report`
+- **공개 API**: `fetch_disclosures · fetch_disclosure_detail · resolve_corp_code · categorize · parse_contract/treasury/capital/guarantee · summarize_contracts · fetch_business_report · fetch_toc/fetch_toc_section`
 - **소유**: DART list.json·document 조회, corp_code 매핑, 공시 카테고리 분류·계약 상세파싱.
 - **환경변수**: `DART_API_KEY`(.env). `corp_codes.csv`는 7일 TTL 자동 갱신(`refresh_corp_codes`).
-- 사업보고서 본문 fetch(`--business-report`)는 DART 뷰어가 프레임셋이라 best-effort(옛 코드 그대로).
+- 사업보고서 본문 fetch(`--business-report`)는 **뷰어 프레임셋을 우회해 실본문을 읽는다**(2026-07-20 수정).
+  `dsaf001/main.do` 는 목차·네비 껍데기라 예전엔 "잠시만 기다려주세요·전체문서·다운로드" 같은 UI 문자열을
+  본문이라고 반환했다. 지금은 main.do 의 JS 목차트리에서 절별 좌표(dcmNo/eleId/offset/length)를 파싱해
+  `report/viewer.do` 로 실본문을 받는다. 목차가 없는 단일문서 공시는 `viewDoc(...)` 리터럴로 폴백.
+  `--section` 상당은 `fetch_business_section(rcept_no, section="재무제표")` 로 다른 절도 가능.
+- `--guarantees` = **PF 우발채무**. 시행사(PFV·조합) 차입에 시공사가 선 보증은 재무제표 부채에 안 잡히고
+  "타인에대한채무보증결정" 공시로만 드러난다 — 건설사 리스크의 본체. 총잔액은 공시 시점 누적치라 **합산하지 않는다**
+  (실측: 현대건설 17.4조=자기자본 172%, 대우건설 13.5조=388%).
 
 ---
 
@@ -201,17 +224,30 @@ industry_us/kr 프로토콜이 호출하는 분석 모듈. 전부 기능별 `_�
 | `module_business_us` | US 사업모델(EDGAR/yf) | `python -m module_business_us AAPL` | 자립(yf/EDGAR) |
 | `module_disclosure_us` | US 공시(SEC EDGAR) | `python -m module_disclosure_us AAPL` | ticker_cik 캐시(자체) |
 | `module_fundamentals_us` | US 펀더멘털(매출·이익엔진) | `python -m module_fundamentals_us AAPL` | ▶module_disclosure_us |
+| `module_fundamentals_kr` | **KR 재무제표 + 수익의 질**(발생액·미청구공사) | `python -m module_fundamentals_kr 000720` | DART 전체재무제표 ▶module_disclosure |
 | `module_math_check` | 리포트 수치 산술 검증 | `python -m module_math_check ...` | 자립(stdlib) |
 | `module_watchlist` | thesis 단위 워치리스트 DB | `python -m module_watchlist init` | data/watchlist.db |
 | `module_publish` | 산출물 렌더·발행 헬퍼 | `python -m module_publish ...` | 자립 |
 
-- **재사용(중복0)**: `module_fundamentals_us`→`module_disclosure_us`. corp_embeddings.db 는 industry_map·business 가 직접 sqlite 로 읽음(로컬 data/).
+- **재사용(중복0)**: `module_fundamentals_us`→`module_disclosure_us`, `module_fundamentals_kr`→`module_disclosure`(corp_code 해석).
+  corp_embeddings.db 는 industry_map·business 가 직접 sqlite 로 읽음(로컬 data/).
+- `module_business` 의 IR 발췌는 **news_alert.db 가 없으면 그 부분만 비운다**(2026-07-20 수정). 그 DB 는 서버 소유(P6)라
+  클라이언트에 없는 게 정상인데, 예전엔 `FileNotFoundError` 로 **전 종목이 죽었다**. 사업모델 본체(corp_embeddings.db)는
+  로컬이라 그대로 나온다.
+
+### 수익의 질(Block B2) — KR
+`module_fundamentals_kr` 이 DART `fnlttSinglAcntAll`(전체재무제표)로 **발생액·미청구공사·운전자본**을 낸다.
+계정 식별은 **account_id(IFRS 표준태그) 우선, 한글명 폴백** — 한글명은 회사마다 제각각이라("매출액" vs "수익(매출액)",
+IS 가 비고 CIS 만 있는 회사) 이름 매칭은 조용히 빗나간다.
+수주산업(건설·조선)에선 **미청구공사(계약자산)/매출과 그 YoY 방향**이 1번 지표 — 진행률로 인식했지만 청구 못 한 매출이고,
+매출보다 빨리 늘면 공기지연·정산분쟁·원가초과 이연이 고인 것이다.
+US 대응(`module_fundamentals_us`)과 **미러 복제가 아니다** — 데이터 소스 자체가 달라(yfinance/SEC XBRL vs DART) P3 의 시장인자로 흡수 불가.
 
 ## module_paper_book
 데스크 리포트(BET_SHEET·ACTION_TICKETS·평결)를 읽어 **모의투자(paper) 장부**를 굴린다. `paper_desk` 프로토콜의 결정론 엔진 — 판단(무엇을 살지)은 프로토콜(에이전트)이, 이 모듈은 '얼마나·어떻게'의 기계만 제공한다(P4).
 
 - **트리거**: 산업/기업 데스크 산출물을 읽어 리스크 사이징·체결 시뮬레이션·시가평가·결정 저널을 남길 때. 실제 주문 아님(모의).
-- **기능 지도**: `_book`(SQLite 장부 단일원본: 현금슬리브·포지션·체결원장·자기자본 스냅샷) · `_intake`(리포트→실행가능 후보; ▶module_report_tags 유니버스·태그 재사용) · `_risk`(리스크기반 사이징+집중도가드) · `_mark`(시가평가; ▶module_KIS(KR)/yfinance(US)) · `_journal`(결정저널+트랙레코드).
+- **기능 지도**: `_book`(SQLite 장부 단일원본: 현금슬리브·포지션·체결원장·자기자본 스냅샷 + `equity_krw` 총자산 계산 단일원본) · `_intake`(리포트→실행가능 후보; ▶module_report_tags 유니버스·태그 재사용) · `_risk`(리스크기반 사이징+집중도가드) · `_mark`(시가평가; ▶module_KIS(KR)/yfinance(US)) · `_journal`(결정저널+트랙레코드) · **`_allocate`(랩어카운트 배분규율: 섹터 만다트·드리프트·포트폴리오 베타·리밸런스 계획)**.
 - **CLI**:
   ```bash
   python -m module_paper_book init --capital-krw 10000000 --capital-usd 5000
@@ -222,8 +258,22 @@ industry_us/kr 프로토콜이 호출하는 분석 모듈. 전부 기능별 `_�
   python -m module_paper_book pulse                              # 라이브 진단: "지금 나락?"(현재가·당일등락+시장맥락)
   python -m module_paper_book mirror --from-json holdings.json   # 실 KIS 보유 → paper book(이미보유)
   python -m module_paper_book stage  --from-json intents.json    # 추천 → KIS 주문 데스크 스택(계획만)
+  # ── 랩어카운트(만다트) 계열 — wrap_account 프로토콜 엔진 ──
+  python -m module_paper_book mandate --market us --band 5 --set '{"Information Technology":25,"Energy":12}'
+  python -m module_paper_book mandate --map TSM="Information Technology" --target-beta 1.0 --beta-band 0.15
+  python -m module_paper_book drift [--period 1y --no-beta --json]   # 섹터 괴리(pp)+밴드+책 베타
+  python -m module_paper_book rebalance [--to target|band]           # 트림/애드 계획(기본 드라이런)
+  python -m module_paper_book rebalance --commit                     # 계획을 모의장부에 반영(사람만)
   ```
-- **소유**: 모의 장부 상태·체결 회계·리스크 사이징·트랙레코드 + **미러(_mirror: 실계좌↔paper↔주문스택 동기화)**. **재사용(중복0)**: 리포트 태그/유니버스는 `module_report_tags`, 시세는 `module_KIS`/yfinance, **주문 스택은 `module_order_desk.stack`, 학습된 민감도는 `module_epistemics`** — 다시 구현하지 않는다.
+- **랩어카운트(`_allocate`)**: 섹터 **목표비중(만다트)** 을 걸고 장부를 그 만다트로 굴린다 — 목표 대비 괴리(pp)·밴드 이탈,
+  포트폴리오 베타(일별수익률 회귀, KR `^KS11` / US `SPY`), 밴드 복원 트림/애드 계획. 만다트 테이블(`mandate`·`mandate_meta`·
+  `sector_override`)은 **`paper_book.db` 안에** 산다(두 번째 DB 금지). 섹터 출처 = `data/kr_universe/kr_all.csv:sector` ·
+  `data/us_universe/us_top300.csv:gics_sector`, 유니버스 밖(ADR·비top300)은 `(unmapped)` 로 두고 `--map` 으로 사람이 박는다(추측 0).
+  **판단 경계(P4)**: 트림 대상은 규칙(스탑거리 최소=약한 것 우선)으로 결정론이지만, **언더웨이트 섹터에 넣을 새 종목은 고르지 않는다** —
+  `NEEDS_CANDIDATE` + 금액만 내놓고 선정은 프로토콜([`wrap_account`](pipeline/protocols/wrap_account.md))에 넘긴다.
+  산출 `out/paper_book/WRAP_REBALANCE_{date}.json`. ⚠ 현금은 통화별 슬리브라 **원화 현금으로 US 종목을 못 산다**(FX 전환 프리미티브 없음) —
+  막힌 레그는 슬리브 잔액과 함께 드러낸다. ⚠ KIS 키가 없는 PC 는 KR 마크가 통째로 실패하므로 `_mark.price_move`(yfinance) 로 메운다.
+- **소유**: 모의 장부 상태·체결 회계·리스크 사이징·트랙레코드 + **미러(_mirror: 실계좌↔paper↔주문스택 동기화)** + **랩 만다트·섹터 드리프트·회귀 베타(_allocate — 리포 유일의 베타 구현체. `module_flow` 의 RS 는 수익률 차, `module_fundamentals_us` 의 beta 는 yfinance `.info` 값이라 둘 다 대체 불가)**. **재사용(중복0)**: 리포트 태그/유니버스는 `module_report_tags`, 시세는 `module_KIS`/yfinance(`_mark`), 집중도 상한(MAX_POS_PCT·MAX_THEME_PCT)은 `_risk`, 총자산은 `_book.equity_krw`, **주문 스택은 `module_order_desk.stack`, 학습된 민감도는 `module_epistemics`** — 다시 구현하지 않는다.
 - **미러링(`_mirror`)**: `mirror`=실 KIS 보유를 '이미 보유'로 시드(현금 슬리브 셋). `stage`=추천을 `out/order_desk/kis_stack.json`(주문 데스크 스택)에 intent 카드로 적재 — **사람이 [체결]로 발사, 자동 아님**. `learned_sensitivity/record_sensitivity`=epistemics 원장 조회/되먹임. 프로토콜 [`미러링`](pipeline/protocols/미러링.md).
 - **데이터**: `data/paper_book.db`(`PAPER_BOOK_DB_PATH` 로 이동가능). **안전**: 체결은 기본 드라이런, `--commit` 사람 명시 전용. 스케줄러 자동발사 없음.
 - **환경변수**: (KR 마크에) `KIS_APP_KEY/SECRET`. US 마크는 yfinance(무인증).
@@ -257,6 +307,27 @@ REPORT/ 폴더의 데스크 산출물(.md)에서 태그(종목·섹터·평결·
 - **registry_audit**: `module_*`·`scripts/` 실행표면 스캔 → MODULE_MAP 대조 → OK/UNDOCUMENTED/STALE 분류 + `REGISTRY_AUDIT_LOG.jsonl` 커버리지 추세(진척 계량기). 실측 커버리지 100% (29 capability).
 - **재사용**: 티커 정규화 자체(`_config.canon`), 사후검증 패턴은 alert-postmortem 계열과 동형.
 
+## module_inflection
+가격 **변곡점**을 표준편차로 뽑고 그 주변 뉴스를 붙여 "이런 말이 나올 때 이렇게 흘렀다"를 관측으로 만든다 + 과거 유사국면 검색. 판단은 안 한다(P4) — 관측·분포·전례만 낸다. 실측 노트 [`lab/INFLECTION_NEWS_KR.md`](lab/INFLECTION_NEWS_KR.md).
+
+- **트리거**: "이 급등락에 어떤 재료가 있었나", "이런 헤드라인 뒤엔 보통 어떻게 됐나", "지금과 닮은 과거 국면".
+- **CLI**:
+  ```bash
+  python -m module_inflection build --top 200        # 파생DB 재생성(가격·언급·변곡·지문)
+  python -m module_inflection stats                  # 리드래그·리프트·순열2종·날짜클러스터
+  python -m module_inflection phrases                # 말의 종류별 이후 초과수익
+  python -m module_inflection events --kind shock_down --min-arts 3
+  python -m module_inflection analog --text "원전 수주"   # 과거 전례 + 그 후 실제 수익
+  ```
+- **소유**: 변곡 판정(shock=|r|≥Zσ · pivot=추세 부호전환) · 리드래그/리프트/순열 검정 · 제목유형 사전 · 이벤트 지문(제목벡터 평균) 검색.
+- **재사용(중복0)**: 벡터·제목·market_day 는 `news_vectors.db`(module_news_data 소유) **읽기만**, 임베딩 모델명은 `_embed.MODEL_NAME`, 2글자 사명 제외 규칙은 `_universe.KR_MIN_NAME_LEN`, 경로·utf8 은 `module_news_data._config`, 유니버스는 `data/kr_universe/kr_all.csv`. 지표 산식은 만들지 않는다(`module_chart._indicators`).
+- **데이터**: `data/inflection.db` = **클라이언트 소유 파생물**(px·universe·mentions·events). 언제든 지우고 `build` 로 재생성. 산출 `out/inflection/*.json`, 노트 `lab/`.
+- ⚠ **P6**: `analog --text` 만 GPU(문장 인코딩) — lazy import. 나머지는 CPU. 이 모듈은 클라 전용이라 `DB_READ_CMDS` 에 넣지 않는다.
+- ⚠️ **pivot 은 미래 10일을 쓰는 사후 라벨러**다(순환논리). 진입신호로 쓰면 백테스트가 완벽하고 실전이 0 이 된다. 출력에 경고가 박혀 있다.
+- ⚠️ **날짜로 묶기 전 t값을 믿지 않는다** — 실측: 급락충격 233건 중 65건이 2026-06-08 하루. pooled 로 세면 "급락 뒤 5일 +4.78pp, t=+6.55"인데, 하루=한 표본으로 접으면 **−1.03%±1.39(t=−0.74)로 효과가 사라진다**. `_stats.day_clustered()` 가 기본 보고 단위인 이유.
+- ⚠️ **조건부 수익은 기준선을 뺀 초과로만 읽는다** — 실측 창(2026-05~07)의 무조건부 5일이 −1.72%라, 안 빼면 모든 결론이 "시장이 빠졌다"가 된다.
+- ⚠️ **변곡의 50.3%만 제목 근거가 있다** — 나머지는 뉴스가 없는 게 아니라 시장 전체 사건이라 제목에 회사명이 없다(`_universe` 의 경제기사 재현율 10.6% 가 변곡 축에서 재현됨).
+
 ## 브라우저·집행 모듈
 | 모듈 | 트리거 | 안전장치 |
 |---|---|---|
@@ -271,13 +342,15 @@ REPORT/ 폴더의 데스크 산출물(.md)에서 태그(종목·섹터·평결·
 | `us_flow.py` | US 수급(CFTC COT + FINRA 공매도) | 자립(공개피드) |
 | `sector_flow.py` | 유니버스 섹터 로테이션 정량 스윕 | `flow_read`(shim→module_flow), data/us_universe·kr_universe |
 | `flow_read.py` | **shim** — `import flow_read` 호환(엔진=module_flow) | module_flow 재export |
-| `drift_watch.py` | 완주 후 킬스위치 버스트 감시 | data/news_fts.db |
+| `drift_watch.py` | 완주 후 킬스위치 버스트 감시(리포트 mtime·anti-signal 추출·렌더) | `module_news_data drift`(DB 질의 위임 → API 라우팅). **DB 직접 열지 않음(P6)** |
 | `theme_age`·`chain_hop`·`news_blindspot` | (이미 module_news_data 서브커맨드) | — |
 | `cycle_exposure.py` | 사이클 노출 GAP | data/cycles, module_KIS |
 | `catalyst_calendar.py` | 촉매 날짜 캘린더 | data/catalysts |
 | `action_bracket.py` | 진입 브래킷(스탑/타겟) | data/cycles·catalysts, module_KIS |
 | `us_live_shortlist.py`·`kr_live_shortlist.py` | 장중 라이브 숏리스트 | data/us_universe·kr_universe |
-| `us_setup_screener.py` | US 셋업 스크리너(top300 3바구니) | data/us_universe (⚠️indicator_alerts.db=옛 alert_bot, 미포팅→graceful) |
+| `us_setup_screener.py` | US 셋업 스크리너(top300 3바구니) | `yf_snapshot`, data/us_universe (⚠️indicator_alerts.db=옛 alert_bot, 미포팅→graceful) |
+| `yf_snapshot.py` | 일봉 OHLCV → 스칼라 지표(last·rsi14·sma50/200·px_vs_sma200). 스크리너 전용 어댑터 | `module_chart._indicators`(RSI·MA 단일 원본 — 산식 재구현 안 함) |
+| `_repo_path.py` | **부트스트랩** — `python scripts/foo.py` 가 module_* 를 import 하게 sys.path 에 리포 루트 삽입 | 없음(스크립트 dir 이 sys.path[0]) |
 
 ---
 
