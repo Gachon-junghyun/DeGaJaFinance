@@ -9,12 +9,19 @@ every term-frequency tool ranked it **nowhere** (`영업이익` won at 23.6×). 
 day's crash at **[39 articles/8 outlets]**. A term spikes when it is *new*; an event ranks when it is *big*.
 Use the event axis for coverage, the term axis for discovery — and run both when the stage needs both.
 
-## Calls — A. event axis (what happened, all of it)
+## Calls — A. event axis (what happened, all of it — and how it is MOVING)
 0. L3 [daily_events](../L3_functions/daily_events.md) — `brief --body 2` (articles → **events**,
    tiered + denominator). Same story told 27–54× collapses to one line; ranking = how many outlets ran it.
    ⚠ **Pass `--body 2`** — the default samples a random 10 of the tail and drops the rest (measured
    2026-07-17: TSMC ₩148tn / 환율 1480원 / CXMT HBM bypass were ALL at 2 outlets = invisible).
    ⚠ Client-only (GPU). ⚠ Says *what*, not *why* — see that unit's ⚠ before acting on any event.
+0b. L3 [event_threads](../L3_functions/event_threads.md) — `thread --days 7` (the same events
+   re-linked ACROSS days → per-day outlet curves + BUILDING/FADING/REIGNITED/ENDED). The daily
+   brief is a photograph; this is the film. Measured: the BOK rate-hike saga was visible **5 days
+   early** as a 2-outlet tail item climbing (`2→7→6→7→5→8`) — a single day's brief can never show
+   that. Run it right after the brief: today's events inherit their history, and "new today" vs
+   "day 5 of a crowded saga" becomes a fact, not a guess. ⚠ Client-only (GPU). ⚠ Tags are curve
+   shapes, not importance — and a holiday window-end inflates FADING (see the unit's ⚠).
 
 ## Calls — B. term axis (L3 pipeline = news → companies → competitors)
 1. L3 [random_news](../L3_functions/random_news.md) — `blindspot` (blind-pool sample + emergent terms).

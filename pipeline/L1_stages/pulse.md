@@ -19,6 +19,10 @@ answers one question fast: **is this a broad crash, a sector event, an idiosyncr
     measured crash day the term search would have chased `영업이익` while 8 outlets ran the
     circuit-breaker. ⚠ Partial by construction — today's articles are still arriving, and the day is
     binned by **publish** time, so a mid-session `brief` is a floor, not a full count. Say so.
+  - **If a trigger event IS found, date it**: `thread --days 7` (~17s) tells you whether this is
+    day 1 of a fresh shock or day 5 of a saga the market has already priced — the classification
+    below (broad/sector/idio/noise) reads differently at day 1 vs day 5. Optional when seconds
+    matter; mandatory before acting on the diagnosis.
 
 ## What this stage does
 - **Price sweep (모든 관련 종목 현재가):** run `pulse` → rank the book by 1d move; flag any name ≤ −3% and any

@@ -137,10 +137,16 @@ def main() -> None:
     ck = _load_ckpt(name)
     if ck is None:
         print(f"체크포인트 없음 — 먼저 `run_protocol.py {name} --start` 하라."); return
-    # keep checkpoint stage-list fresh if the protocol was recompiled/edited
-    ck["stages"] = stages
-    if len(ck["passed"]) != len(stages):
-        ck["passed"] = (ck["passed"] + [False] * len(stages))[:len(stages)]
+    # keep checkpoint stage-list fresh if the protocol was recompiled/edited.
+    # ⚠ 이름 기준으로 재정렬한다 — 길이만 맞추면 스테이지가 '중간에 삽입'됐을 때 passed 가
+    # 인덱스로 밀려 **안 돌린 새 스테이지가 ✅ 로 보인다**(실측: event_alpha 삽입 때 발생).
+    if ck.get("stages") != stages:
+        passed_by_name = dict(zip(ck.get("stages", []), ck.get("passed", [])))
+        ck["stages"] = stages
+        ck["passed"] = [bool(passed_by_name.get(s, False)) for s in stages]
+        # 현재 스테이지 = 첫 미통과 스테이지(삽입이 이미 지난 구간이면 되돌아간다 — 새 일이 생긴 것)
+        ck["stage"] = next((i + 1 for i, p in enumerate(ck["passed"]) if not p), len(stages))
+        _save_ckpt(name, ck)
 
     if a.status:
         print(_status(name, ck)); return

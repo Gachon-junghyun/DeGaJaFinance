@@ -15,8 +15,8 @@
   `CATALYST_WATCH.json` · `CYCLE_EXPOSURE.md/.json` · `ACTION_TICKETS.md`. Sweep caches/history live in
   `llm_outputs/sector_flow/` · `llm_outputs/us_screen/`.
 - **Filenames are LOAD-BEARING** (downstream desks glob them — never rename/split): `MACRO_REPORT.md` ·
-  `SECTOR_FLOW_US.json` · `US_LIVE_SHORTLIST.json` · `SECTOR_ROTATION.md` (+DEEP_LOG line) ·
-  `SECTOR_DEEP_{code}.md` · `BET_SHEET.md` (ONE file, per-sector sections).
+  `SECTOR_FLOW_US.json` · `US_LIVE_SHORTLIST.json` · `EVENT_ALPHA.md` · `SECTOR_ROTATION.md`
+  (+DEEP_LOG line) · `SECTOR_DEEP_{code}.md` · `BET_SHEET.md` (ONE file, per-sector sections).
 - Module scratch output → `out/` (repo rule; not committed). No secrets in any output.
 - Handoff ledger: `module_report_tags` scans `DEGAJA_REPORT_DIR` (default `REPORT/`) — run it as
   `DEGAJA_REPORT_DIR=llm_outputs` OR copy finalized reports into `REPORT/`. ⚠ Open decision
@@ -28,18 +28,22 @@
 |---|---|---|
 | 1 | [MACRO](../L1_stages/macro.md) | `MACRO_REPORT.md` (propositions + ★transmission matrix + self-backtest hit-rate) |
 | 2 | [SWEEP](../L1_stages/sweep.md) | `SECTOR_FLOW.json` · `US_LIVE_SHORTLIST.json` · `CYCLE_EXPOSURE.md` |
-| 3 | [ROTATION](../L1_stages/rotation.md) | `SECTOR_ROTATION.md` (11-sector OW/UW + 4 DEEP picks + DEEP_LOG) |
-| 4 | [PREMORTEM](../L1_stages/premortem.md) ★US-only | `BLINDSPOT_PREMORTEM.md` |
-| 5 | [DEEP](../L1_stages/deep.md) | `SECTOR_DEEP_{code}.md` ×4 (+ any pre-mortem-promoted 5th) |
-| 6 | [BET](../L1_stages/bet.md) | `BET_SHEET.md` (one file, per-sector sections — downstream readers depend on the single filename) |
-| 7 | [ALPHA](../L1_stages/alpha.md) | `BET_SHEET §B` freshness tags + `ACTION_TICKETS.md` |
-| 8 | [DRIFT](../L1_stages/drift.md) ★US-only | post-run ADDENDUM appended to MACRO_REPORT §5 |
+| 3 | [EVENT_ALPHA](../L1_stages/event_alpha.md) | `EVENT_ALPHA.md` (forward cards: building threads × money flow — bottom-up rotation cross-check) |
+| 4 | [ROTATION](../L1_stages/rotation.md) | `SECTOR_ROTATION.md` (11-sector OW/UW + 4 DEEP picks + DEEP_LOG) |
+| 5 | [PREMORTEM](../L1_stages/premortem.md) ★US-only | `BLINDSPOT_PREMORTEM.md` |
+| 6 | [DEEP](../L1_stages/deep.md) | `SECTOR_DEEP_{code}.md` ×4 (+ any pre-mortem-promoted 5th) |
+| 7 | [BET](../L1_stages/bet.md) | `BET_SHEET.md` (one file, per-sector sections — downstream readers depend on the single filename) |
+| 8 | [ALPHA](../L1_stages/alpha.md) | `BET_SHEET §B` freshness tags + `ACTION_TICKETS.md` |
+| 9 | [DRIFT](../L1_stages/drift.md) ★US-only | post-run ADDENDUM appended to MACRO_REPORT §5 |
 
 ## US runtime deltas (vs industry_kr)
 - **PREMORTEM·DRIFT blocks added** (anti-tunnel; born from the 2026-07-14 postmortem: one-way
   tilt into a known binary + zero exposure to the #1 cycle's epicenter).
 - MACRO primary data = `module_macro_us` (FRED) directly (`--json`; cite `[FRED]`).
-- News `--scope foreign`; universe `us_top300` (GICS); flow = FINRA short-vol / CFTC COT
+- News `--scope foreign` — **hard rule, every news call including `brief`/`thread`**: never let the
+  KR domestic feed rank the US frame (measured 787 rate hits : 0 US-bank hits in a bank-earnings
+  week; the KR pool's obsession is not the US market's attention). Universe `us_top300` (GICS);
+  flow = FINRA short-vol / CFTC COT
   (⚠ US has NO investor-type feed — KR's KIS foreign/institution actuals have no US equivalent;
   the substitute is short-pressure + COT-percentile *positioning*, which is context, not a trigger).
 - Catalyst injection at run-start: any binary ≤48h ⇒ PREMORTEM must produce a both-sides bracket

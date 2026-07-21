@@ -14,7 +14,9 @@
   percentiles (≥80 crowded-long / ≤20 crowded-short; Tue-close data, 3–4d lag = context, not trigger).
   KR: cross-read same-day US MACRO_REPORT §A.
 - [news](../L2_modules/news.md) — **event pass first, then the term sweep** (that L2 explains why they
-  are different axes):
+  are different axes). ⚠ **Scope is market-locked**: KR desk = `--scope domestic`, US desk =
+  `--scope foreign`, on EVERY news call here (`brief`·`thread`·fts·blindspot). Never let the KR
+  feed rank the US frame — measured 787 rate hits : 0 US-bank hits in a US bank-earnings week.
   1. **Events** (`brief --body 2`, run `embed sync` first) — the day's events with their denominator.
      ⚠ **`--body 2` is mandatory here**: at the default the tail emits a random 10 and drops the rest.
      Measured 2026-07-17 — TSMC's ₩148tn fab expansion, 환율 1480원 + the 24h FX-market opening, and
@@ -28,8 +30,19 @@
      thought to name, and a regime-moving event can sit at 1.3× term-share while 8 outlets scream it
      (measured: the KOSPI −8% circuit-breaker day ranked **nowhere** by term velocity). Read **every**
      event line, not the head — if a proposition claims "quiet", the denominator must support it.
+  1b. **Trajectories** (`thread --days 7`, same scope) — the day's events re-linked across the past
+     week: BUILDING / FADING / REIGNITED / ENDED with per-day outlet curves. This is what makes
+     propositions *dated*: a proposition built on a thread at day 5 of its peak is chasing a crowded
+     story; one built on a 2-outlet climbing thread is early (measured: the BOK rate-hike saga ran
+     `2→7→6→7→5→8` — five days of runway before the hike printed, invisible in any single brief).
+     Use it three ways: (a) every macro proposition names its thread's tag + curve — "quiet" or
+     "accelerating" claims must cite a trajectory, not a feeling; (b) an ENDED thread under a
+     still-open proposition is a staleness flag — attention rotated, re-justify or drop it;
+     (c) BUILDING threads with no matching bucket are candidate new terms for the living table.
+     ⚠ Curve shapes are not importance (P4) — direction still needs body reads. ⚠ A holiday
+     window-end inflates FADING; read the per-day denominator line first.
   2. 7-bucket narrative sweep (FTS `--syn`, OR-mode per bucket, body-inclusive) — now targeted at the
-     buckets, knowing what the day actually held.
+     buckets, knowing what the day actually held **and which way it is moving**.
   3. **blind-spot pass** (read `sample[]` rows RAW; a rank-jump of a single name is itself a signal →
      body-read before classifying; append confirmed new macro terms to the protocol's term table —
      the term set is living, never frozen).
@@ -50,9 +63,11 @@
   variable (oil war-premium, headline-CPI wedge) — such propositions must carry BOTH branches.
 
 ## ✅ EXIT CHECK
-- [ ] Catalysts injected; narrative (**events + 7-bucket + blindspot**) and indicators (primaries + positioning) read; daily anchor read.
+- [ ] Catalysts injected; narrative (**events + trajectories + 7-bucket + blindspot**) and indicators (primaries + positioning) read; daily anchor read.
 - [ ] Events read via `--body 2` (tail count = 0). A head-only read is a failed stage — the day's
       macro prints hide at 2 outlets.
+- [ ] Trajectories read (`thread --days 7`): every proposition carries its thread's tag+curve (or
+      states "no thread" explicitly); any ENDED thread under an inherited proposition is flagged.
 - [ ] Every "nothing happened in bucket X" claim carries the event denominator that backs it (P4).
 - [ ] **No bucket's 0/near-0 hit count is trusted until its terms were passed as separate argv.**
       A quoted multi-word bucket returns ~0 silently, and `coverage` calls that 🟢 양호 — "quiet" that

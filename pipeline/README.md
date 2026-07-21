@@ -60,8 +60,9 @@ Checkpoint at `out/pipeline_runs/{name}.json` (stage · passed · target). Do a 
 `--next`. Prior stages' outputs live on disk — reread the run dir, not memory.
 
 ## Current contents
-- **protocols/**: `industry_us.md` (8 blocks) · `industry_kr.md` (6 blocks) · `paper_desk.md` (6 blocks) ·
-  `미러링.md` (7 blocks) · `real_alpha_kr.md` (8 blocks) — complete, compile-verified. Only US adds premortem·drift.
+- **protocols/**: `industry_us.md` (9 blocks) · `industry_kr.md` (7 blocks) · `paper_desk.md` (6 blocks) ·
+  `wrap_account.md` (8 blocks) · `미러링.md` (7 blocks) · `real_alpha_kr.md` (8 blocks) — complete,
+  compile-verified. Only US adds premortem·drift.
   `paper_desk` is the *downstream* desk — it consumes the research desks' `REPORT/` output and runs a simulated book
   (engine = `module_paper_book`; paper only, no real order). `미러링` mirrors the **real KIS account** into that book,
   applies judgment, and stages recommendations onto the real KIS order desk stack as **human-fireable intent cards**
@@ -69,16 +70,30 @@ Checkpoint at `out/pipeline_runs/{name}.json` (stage · passed · target). Do a 
   (REAL / REAL-but-PRICED / INFLATED / BROKEN) + dated observation points + ledger; **참고-only, READ-ONLY, not advice**
   (port of the mvp `REAL_ALPHA_COMPANY_RESEARCH_KR.md`, reusing our modules). The remaining desks (company·strategy)
   have their L1 decomposition in [PROMPT_MAP](PROMPT_MAP.md) — build the L1 blocks and compose.
-- **L1_stages/**: the 8 industry blocks (macro·sweep·rotation·premortem·deep·bet·alpha·drift) + pulse ·
+  `wrap_account` is the **mandate layer above paper_desk**: sector target weights are declared and the same book
+  is managed against them (drift bands · single-name/theme caps · portfolio beta band). It reuses 5 of
+  paper_desk's L1s (mark·intake·decide·simulate·review) and reorders them — drift is measured *before* intake,
+  so the desk reads research only for the sectors it is short of. Engine = `module_paper_book._allocate`;
+  the module returns `NEEDS_CANDIDATE` instead of ever picking a name (P4). Paper only, `--commit` human-gated.
+- **L1_stages/**: the 9 industry blocks (macro·sweep·event_alpha·rotation·premortem·deep·bet·alpha·drift) + pulse ·
   mirror_ingest · stage_orders (미러링) + **forensic_pack · self_score · chain_alpha · money_forensic · set_diff ·
-  falsify · verdict** (real_alpha_kr).
-- **L2/L3**: orchestration + atomic functions, reused across L1s. real_alpha added L2 `money_trail` +
-  L3 `accruals_check · filing_diff · set_difference · contract_alpha`.
+  falsify · verdict** (real_alpha_kr) + **mandate_set · drift_check · rebalance_plan** (wrap_account).
+- **L2/L3**: orchestration + atomic functions, reused across L1s. wrap_account added L2 `mandate` + L3
+  `portfolio_beta` (regression beta vs `^KS11`/`SPY`) — everything else it needs (bookkeeping · risk_model ·
+  report_read · mark_position · size_from_risk) was already there. real_alpha added L2 `money_trail` +
+  L3 `accruals_check · filing_diff · set_difference · contract_alpha`. event_alpha added L2
+  `narrative_money` (trajectory × money-flow cross; **all its L3s are reused** — event_threads ·
+  drill_detail · related_companies · competitors — zero new atoms, which is the point).
 - **News has two axes** (L2 `news`): the **term** axis (`blindspot`·`fts`·`chain-hop` — "is my theme
-  hot?") and the **event** axis (L3 `daily_events` → `brief` — "what happened today, all of it").
-  They are not substitutes: on the measured KOSPI −8% circuit-breaker day the term `코스피` ran at
-  1.3× normal and ranked nowhere, while the event view had it at [39 articles/8 outlets]. A term
-  spikes when it is *new*; an event ranks when it is *big*. ⚠ The event axis is **client-only**
+  hot?") and the **event** axis — which itself has two time-shapes: the **snapshot** (L3
+  `daily_events` → `brief`, "what happened today, all of it") and the **trajectory** (L3
+  `event_threads` → `thread --days 7`, "how is each event moving across the week" —
+  BUILDING/FADING/REIGNITED/ENDED with per-day outlet curves). Term vs event are not substitutes:
+  on the measured KOSPI −8% circuit-breaker day the term `코스피` ran at 1.3× normal and ranked
+  nowhere, while the event view had it at [39 articles/8 outlets]. A term spikes when it is *new*;
+  an event ranks when it is *big*. Snapshot vs trajectory are not substitutes either: the BOK
+  rate-hike saga was a 2-outlet tail item 5 days before the hike — invisible in any one day's
+  brief, obvious as a climbing curve (`2→7→6→7→5→8`). ⚠ The event axis is **client-only**
   (GPU embeddings, CLAUDE.md P6) — the collection server cannot run it.
 - **Language rule**: every unit here is written in **English** — the US desk runs English-pure
   (Korean in context skews the frame), and the KR desk reads English instructions while emitting

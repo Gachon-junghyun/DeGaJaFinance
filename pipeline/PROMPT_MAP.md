@@ -32,8 +32,9 @@ value chain. Zero buy/sell calls. Output root `REPORT/industry_{KR|US}/`; previo
 
 | L1 | Phase | Calls | Input → output |
 |---|---|---|---|
-| **0** | MACRO | **both: `embed sync` → `brief`(events)** · KR: `news_fts --kr --syn` · `news blindspot --domestic` / US: `module_macro_us`(FRED) · `us_flow --cot` · `catalyst_calendar` | events + 7-bucket news + daily anchor → `MACRO_REPORT.md` (proposition table + ★transmission matrix + hit-rate) |
+| **0** | MACRO | **both: `embed sync` → `brief`(events) → `thread --days 7`(trajectories)** · KR: `news_fts --kr --syn` · `news blindspot --domestic` / US: `module_macro_us`(FRED) · `us_flow --cot` · `catalyst_calendar` | events + trajectories + 7-bucket news + daily anchor → `MACRO_REPORT.md` (proposition table + ★transmission matrix + hit-rate) |
 | **0.5** | SWEEP | `sector_flow --market {kr\|us}` · `{kr\|us}_live_shortlist` · (US) `cycle_exposure` | universe CSV → `SECTOR_FLOW.json` · `LIVE_SHORTLIST.json` · (US) `CYCLE_EXPOSURE.md` |
+| **0.7** | EVENT_ALPHA | `thread --days 7`(scope market-locked) · `drill_detail` · `chain-hop`/`industry_map` · `module_flow`/`us_flow` · `report_tags` | building threads × money flow → `EVENT_ALPHA.md` (forward cards; CONFIRMED-EARLY → ROTATION/BET, ENDED-thread book flags) |
 | **1** | ROTATION | `news_fts --count` (velocity) · `module_industry_map` | matrix + flow → `SECTOR_ROTATION.md` (11-sector OW/UW + 4 DEEP + DEEP_LOG) |
 | **1.5** | PRE-MORTEM *(US only)* | 4 adversarial subagents (fan-out) | rotation draft → `BLINDSPOT_PREMORTEM.md` |
 | **2** | DEEP | KR: `module_industry_map` · `module_business` · `module_disclosure` · `module_chart --read` / US: `module_business_us` · `module_disclosure_us` · `chain-hop` · `us_flow` | 4 targets → `SECTOR_DEEP_{code}.md` ×4 |
@@ -42,10 +43,13 @@ value chain. Zero buy/sell calls. Output root `REPORT/industry_{KR|US}/`; previo
 | **post** | DRIFT *(US)* | `drift_watch` | +3–6h kill-switch burst → MACRO_REPORT §5 ADDENDUM |
 
 **News has two axes** (L2 `news`): **term** (`news_fts`·`blindspot`·`chain-hop` — "is my theme hot?")
-and **event** (L3 `daily_events` → `brief` — "what happened today, all of it"). Not substitutes —
+and **event** (L3 `daily_events` → `brief` — "what happened today, all of it"; L3 `event_threads` →
+`thread --days 7` — "how each event moved across the week", BUILDING/FADING curves). Not substitutes —
 measured on the KOSPI −8% circuit-breaker day the term `코스피` ran at 1.3× normal and ranked
 **nowhere**, while the event view had it at [39 articles/8 outlets]. Terms spike when *new*; events
-rank when *big*. ⚠ Event axis is **client-only** (GPU, CLAUDE.md P6); market/non-market filtering is
+rank when *big*; and a snapshot cannot show runway — the BOK rate-hike saga sat at 2 outlets 5 days
+before the hike (`2→7→6→7→5→8`), visible only as a trajectory. ⚠ Event axis is **client-only** (GPU,
+CLAUDE.md P6); market/non-market filtering is
 **KR-only** (Korean-trained classifier — foreign feeds are 82% finance already, so nothing is filtered).
 
 **KR/US asymmetry (core)**: KR = 6 stages (no PRE-MORTEM/DRIFT), no macro primary module (cross-reads
@@ -141,7 +145,35 @@ Meta-rules: **M1** academic-alpha weighting (TS-momentum > mean-reversion > vola
 
 ---
 
-## 6. Open reorganization decisions (unresolved — a human locks these)
+## 6. Wrap account (wrap_account) — repo-native, no mvp ancestor
+
+Purpose: run the **same** paper book as a **discretionary mandate** instead of one undifferentiated pile.
+Sector target weights are declared, and the book is managed against them: drift bands, single-name and
+correlated-theme caps, and a portfolio beta band. This desk has no old-repo prompt — it was built here
+(`protocols/wrap_account.md`, 8 L1 blocks, compile-verified). Engine = `module_paper_book._allocate`
+(mandate tables live inside `data/paper_book.db`). Output `llm_outputs/{date}/wrap_account/`.
+
+| # | L1 stage | Content · calls |
+|---|---|---|
+| 1 | MARK *(reused)* | `module_paper_book status`/`mark` — equity, cash sleeves, P&L, stop-hits |
+| 2 | MANDATE_SET | `mandate --set` per market (KRX / GICS sector names) + `--band` + `--map` for unmapped ADRs + `--target-beta/--beta-band`; cash target = 100 − Σ targets |
+| 3 | DRIFT_CHECK | `drift` — target vs current weight in pp, band breach, cash vs cash target, book beta (L3 `portfolio_beta`, KR `^KS11` / US `SPY`) |
+| 4 | INTAKE *(reused)* | reports → candidates, **read after the drift** so only the short sectors are shopped |
+| 5 | DECIDE *(reused)* | trade the breach or carry it; which 🟢LIVE name fills each `NEEDS_CANDIDATE` gap |
+| 6 | REBALANCE_PLAN | `rebalance [--to target\|band]` — deterministic trims (weakest = smallest stop-distance first) / adds (strongest first), `MAX_POS_PCT` ceiling + post-plan `MAX_THEME_PCT` re-check |
+| 7 | SIMULATE *(reused)* | fills, DRY-RUN unless a human passes `--commit` (paper ledger only) |
+| 8 | REVIEW *(reused)* | journal + track record + mandate-compliance note |
+
+**Judgment boundary (P4)**: the module owns everything with one right answer (drift pp · the amount to move ·
+which *held* name absorbs it · the caps). It refuses to pick a **new** name for an underweight sector — that
+returns `NEEDS_CANDIDATE` + the amount, and DECIDE fills it from the research desks' ledger.
+**Gates**: bands as the anti-churn device · 🔴RESOLVED cannot fill a gap (freshness veto outranks the mandate) ·
+correlated basket capped as ONE risk unit · per-currency cash sleeve (KRW cash cannot fund a US add) ·
+`--commit` human-only, no scheduler.
+
+---
+
+## 7. Open reorganization decisions (unresolved — a human locks these)
 
 - **Folder axes**: (a) meta layer (spec/runtime/stage) × (b) Phase L1 × (c) runtime KR/US — how to fold 3 axes into folders.
 - **Name substitution**: prompts call `module_kis` · `module_text_chart` → this repo has `module_KIS` · `module_chart`. Batch-substitute during migration.

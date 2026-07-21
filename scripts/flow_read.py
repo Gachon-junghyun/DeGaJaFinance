@@ -7,10 +7,12 @@ CLI(flow 태그 테이블)는 `python -m module_flow` 를 쓴다.
 """
 from __future__ import annotations
 
+import _repo_path  # noqa: F401  — scripts/ 실행 시 sys.path 에 리포 루트 삽입(아래 import 전에)
+from module_flow._investor import investor_flow
 from module_flow._news_velocity import news_query as _news_query
 from module_flow._news_velocity import news_velocity
 from module_flow._price_flow import price_flow
 from module_flow._short import positioning
 from module_flow._synthesize import flow_tag
 
-__all__ = ["price_flow", "news_velocity", "_news_query", "flow_tag", "positioning"]
+__all__ = ["price_flow", "news_velocity", "_news_query", "flow_tag", "positioning", "investor_flow"]

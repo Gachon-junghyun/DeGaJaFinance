@@ -14,17 +14,20 @@
 |---|---|---|
 | 1 | [MACRO](../L1_stages/macro.md) | `MACRO_REPORT.md` |
 | 2 | [SWEEP](../L1_stages/sweep.md) | `SECTOR_FLOW.json` · `KR_LIVE_SHORTLIST.json` |
-| 3 | [ROTATION](../L1_stages/rotation.md) | `SECTOR_ROTATION.md` |
-| 4 | [DEEP](../L1_stages/deep.md) | `SECTOR_DEEP_{code}.md` ×4 |
-| 5 | [BET](../L1_stages/bet.md) | `BET_SHEET.md` |
-| 6 | [ALPHA](../L1_stages/alpha.md) | `BET_SHEET §B` tags |
+| 3 | [EVENT_ALPHA](../L1_stages/event_alpha.md) | `EVENT_ALPHA.md` (forward cards: building threads × money flow) |
+| 4 | [ROTATION](../L1_stages/rotation.md) | `SECTOR_ROTATION.md` |
+| 5 | [DEEP](../L1_stages/deep.md) | `SECTOR_DEEP_{code}.md` ×4 |
+| 6 | [BET](../L1_stages/bet.md) | `BET_SHEET.md` |
+| 7 | [ALPHA](../L1_stages/alpha.md) | `BET_SHEET §B` tags |
 
 ## KR runtime deltas (vs industry_us)
-- **No PREMORTEM·DRIFT blocks** (6 stages). No CYCLE_EXPOSURE / ACTION_TICKETS.
+- **No PREMORTEM·DRIFT blocks** (7 stages). No CYCLE_EXPOSURE / ACTION_TICKETS.
 - MACRO primary data: no FRED module for KR → cross-read the same-day US `MACRO_REPORT §A`,
   cited `[FRED via US-desk]`.
 - News `--scope domestic` + `news_fts --kr` (trigram index — ⚠ 2-char Korean terms return 0
-  (not absence); use 3+ char synonyms). Universe `kr_all` (KRX sectors).
+  (not absence); use 3+ char synonyms). The event axis (`brief`/`thread`) is also
+  `--scope domestic` — market/non-market classification only works there anyway. Universe `kr_all`
+  (KRX sectors).
 - **KR's edge axis**: SWEEP·DEEP·BET use `module_KIS` per-investor net-buy actuals
   (✅ real-hands / ❌ weak-hands) — the measured "who is buying" the US desk lacks.
 
