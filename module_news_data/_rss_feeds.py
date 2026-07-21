@@ -110,12 +110,11 @@ RSS_FEEDS: List[Dict] = [
     {"name": "전자신문",        "url": "https://rss.etnews.com/Section901.xml",          "source": "etnews"},     # (9) 반도체·전자
 
     # ── 2026-07-18 추가: 해외 1차출처·공급망 ──
+    # Nikkei Asia · FT Home · Investing news.rss · Fed press_all 은 아래 '해외 대량 확장(07-19)'
+    # 블록에 **같은 URL** 로 들어가 여기선 뺐다(중복 등록 금지 — 같은 기사를 두 번 긁는다).
     {"name": "DigiTimes",      "url": "https://www.digitimes.com/rss/daily.xml",        "source": "digitimes"},  # (35) 대만 반도체 공급망
-    {"name": "Nikkei Asia",    "url": "https://asia.nikkei.com/rss/feed/nar",           "source": "nikkei"},     # (50)
-    {"name": "FT Home",        "url": "https://www.ft.com/rss/home",                    "source": "ft"},         # (9)
-    {"name": "Investing.com",  "url": "https://www.investing.com/rss/news.rss",         "source": "investing_en"},  # (10)
     # 연준 = 발언 재인용 말고 원문. Warsh 축(2026-07 금리인상 리스크)이 여기서 먼저 뜬다.
-    {"name": "Fed Press All",      "url": "https://www.federalreserve.gov/feeds/press_all.xml",      "source": "federalreserve"},  # (20)
+    # press_monetary 는 통화정책만 따로 나오는 별도 피드 — press_all/speeches 와 URL 이 다르다.
     {"name": "Fed Press Monetary", "url": "https://www.federalreserve.gov/feeds/press_monetary.xml", "source": "federalreserve"},  # (15)
     {"name": "EIA Today in Energy","url": "https://www.eia.gov/rss/todayinenergy.xml",               "source": "eia"},             # (18) KMI·LNG 축
 
@@ -123,9 +122,8 @@ RSS_FEEDS: List[Dict] = [
     # 기존 종목피드는 AAPL/NVDA/MSFT/TSLA/META/GOOGL/AMZN = Magnificent 7 이고
     # 장부 보유와 한 종목도 안 겹쳤다. 실측 커버리지(7일 회사식별어): NVDA 648 vs KMI 2 · Cheniere 1.
     # 그 격차는 뉴스가 없어서가 아니라 **피드가 없어서**였다.
-    {"name": "Yahoo Finance AVGO", "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=AVGO&region=US&lang=en-US", "source": "yahoo_finance"},
-    {"name": "Yahoo Finance TSM",  "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=TSM&region=US&lang=en-US",  "source": "yahoo_finance"},
-    {"name": "Yahoo Finance VST",  "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=VST&region=US&lang=en-US",  "source": "yahoo_finance"},
+    # (AVGO·TSM 은 아래 '해외 대량 확장' 블록에 같은 URL 로 있다 — 여기선 뺐다.)
+    {"name": "Yahoo Finance VST","url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=VST&region=US&lang=en-US",  "source": "yahoo_finance"},
     {"name": "Yahoo Finance KMI",  "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=KMI&region=US&lang=en-US",  "source": "yahoo_finance"},
     {"name": "Yahoo Finance LNG",  "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=LNG&region=US&lang=en-US",  "source": "yahoo_finance"},
     {"name": "Yahoo Finance MA",   "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=MA&region=US&lang=en-US",   "source": "yahoo_finance"},
@@ -143,6 +141,136 @@ RSS_FEEDS: List[Dict] = [
     {"name": "EDGAR 8-K MA",   "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001141391&type=8-K&dateb=&owner=include&count=20&output=atom", "source": "sec_edgar"},
     {"name": "EDGAR 8-K RTX",  "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000101829&type=8-K&dateb=&owner=include&count=20&output=atom", "source": "sec_edgar"},
     {"name": "EDGAR 8-K NVDA", "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=8-K&dateb=&owner=include&count=20&output=atom", "source": "sec_edgar"},
+
+    # ── 해외 대량 확장 (2026-07-19) — 아래 전 피드 라이브 검증(HTTP 200 + 최신 항목 확인) 후 등록.
+    #    CNN RSS(2017년 정지)·Politico US·The Hill·Kitco·BLS·IMF 등은 죽어 있거나 봇차단이라 제외.
+    # US 마켓/종합
+    {"name": "WSJ Markets",        "url": "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain",   "source": "wsj"},
+    {"name": "WSJ Business",       "url": "https://feeds.content.dowjones.io/public/rss/WSJcomUSBusiness", "source": "wsj"},
+    {"name": "WSJ World",          "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",     "source": "wsj"},
+    {"name": "WSJ Economy",        "url": "https://feeds.content.dowjones.io/public/rss/socialeconomyfeed","source": "wsj"},
+    {"name": "WSJ Tech",           "url": "https://feeds.content.dowjones.io/public/rss/RSSWSJD",          "source": "wsj"},
+    {"name": "FT Home",            "url": "https://www.ft.com/rss/home",               "source": "ft"},
+    {"name": "FT International",   "url": "https://www.ft.com/rss/home/international", "source": "ft"},
+    {"name": "Fortune",            "url": "https://fortune.com/feed/",                 "source": "fortune"},
+    {"name": "Forbes Business",    "url": "https://www.forbes.com/business/feed/",     "source": "forbes"},
+    {"name": "Business Insider",   "url": "https://www.businessinsider.com/rss",       "source": "businessinsider"},
+    {"name": "BI Markets",         "url": "https://markets.businessinsider.com/rss/news", "source": "businessinsider"},
+    {"name": "Yahoo Finance All",  "url": "https://finance.yahoo.com/news/rssindex",   "source": "yahoo_finance"},
+    {"name": "TheStreet",          "url": "https://www.thestreet.com/.rss/full/",      "source": "thestreet"},
+    {"name": "Benzinga",           "url": "https://www.benzinga.com/feed",             "source": "benzinga"},
+    {"name": "ZeroHedge",          "url": "https://feeds.feedburner.com/zerohedge/feed", "source": "zerohedge"},
+    {"name": "Motley Fool",        "url": "https://www.fool.com/a/feeds/foolwatch?format=rss2&id=foolwatch&apikey=foolwatch-feed", "source": "fool"},
+    {"name": "Axios",              "url": "https://api.axios.com/feed/",               "source": "axios"},
+    {"name": "Semafor",            "url": "https://www.semafor.com/rss.xml",           "source": "semafor"},
+    # Nasdaq 카테고리
+    {"name": "Nasdaq Markets",     "url": "https://www.nasdaq.com/feed/rssoutbound?category=Markets",          "source": "nasdaq"},
+    {"name": "Nasdaq Stocks",      "url": "https://www.nasdaq.com/feed/rssoutbound?category=Stocks",           "source": "nasdaq"},
+    {"name": "Nasdaq Earnings",    "url": "https://www.nasdaq.com/feed/rssoutbound?category=Earnings",         "source": "nasdaq"},
+    {"name": "Nasdaq Commodities", "url": "https://www.nasdaq.com/feed/rssoutbound?category=Commodities",      "source": "nasdaq"},
+    {"name": "Nasdaq IPOs",        "url": "https://www.nasdaq.com/feed/rssoutbound?category=IPOs",             "source": "nasdaq"},
+    {"name": "Nasdaq Crypto",      "url": "https://www.nasdaq.com/feed/rssoutbound?category=Cryptocurrencies", "source": "nasdaq"},
+    {"name": "Nasdaq AI",          "url": "https://www.nasdaq.com/feed/rssoutbound?category=Artificial-Intelligence", "source": "nasdaq"},
+    {"name": "Nasdaq Technology",  "url": "https://www.nasdaq.com/feed/rssoutbound?category=Technology",       "source": "nasdaq"},
+    # Investing.com 카테고리
+    {"name": "Investing News",        "url": "https://www.investing.com/rss/news.rss",    "source": "investing_en"},
+    {"name": "Investing Stock",       "url": "https://www.investing.com/rss/news_25.rss", "source": "investing_en"},
+    {"name": "Investing EconIndicators", "url": "https://www.investing.com/rss/news_95.rss", "source": "investing_en"},
+    {"name": "Investing Forex",       "url": "https://www.investing.com/rss/news_1.rss",  "source": "investing_en"},
+    {"name": "Investing Commodities", "url": "https://www.investing.com/rss/news_11.rss", "source": "investing_en"},
+    {"name": "Investing Economy",     "url": "https://www.investing.com/rss/news_14.rss", "source": "investing_en"},
+    # MarketWatch·CNBC 추가 카테고리
+    {"name": "MarketWatch Bulletins",   "url": "https://www.marketwatch.com/rss/bulletins",         "source": "marketwatch"},
+    {"name": "MarketWatch RTHeadlines", "url": "https://www.marketwatch.com/rss/realtimeheadlines", "source": "marketwatch"},
+    {"name": "CNBC Top News",   "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html", "source": "cnbc"},
+    {"name": "CNBC Investing",  "url": "https://www.cnbc.com/id/15839069/device/rss/rss.html",  "source": "cnbc"},
+    {"name": "CNBC Earnings",   "url": "https://www.cnbc.com/id/15839135/device/rss/rss.html",  "source": "cnbc"},
+    {"name": "CNBC Technology", "url": "https://www.cnbc.com/id/19854910/device/rss/rss.html",  "source": "cnbc"},
+    {"name": "CNBC World",      "url": "https://www.cnbc.com/id/100727362/device/rss/rss.html", "source": "cnbc"},
+    {"name": "CNBC Asia",       "url": "https://www.cnbc.com/id/19832390/device/rss/rss.html",  "source": "cnbc"},
+    {"name": "CNBC US News",    "url": "https://www.cnbc.com/id/15837362/device/rss/rss.html",  "source": "cnbc"},
+    {"name": "CNBC Business",   "url": "https://www.cnbc.com/id/10001147/device/rss/rss.html",  "source": "cnbc"},
+    {"name": "CNBC Energy",     "url": "https://www.cnbc.com/id/19836768/device/rss/rss.html",  "source": "cnbc"},
+    {"name": "CNBC Health",     "url": "https://www.cnbc.com/id/10000108/device/rss/rss.html",  "source": "cnbc"},
+    # 영국/유럽
+    {"name": "Guardian Business",  "url": "https://www.theguardian.com/uk/business/rss",         "source": "guardian"},
+    {"name": "Guardian Economics", "url": "https://www.theguardian.com/business/economics/rss",  "source": "guardian"},
+    {"name": "Guardian World",     "url": "https://www.theguardian.com/world/rss",               "source": "guardian"},
+    {"name": "Guardian Tech",      "url": "https://www.theguardian.com/uk/technology/rss",       "source": "guardian"},
+    {"name": "Sky News Business",  "url": "https://feeds.skynews.com/feeds/rss/business.xml",    "source": "skynews"},
+    {"name": "Sky News World",     "url": "https://feeds.skynews.com/feeds/rss/world.xml",       "source": "skynews"},
+    {"name": "Independent Business","url": "https://www.independent.co.uk/news/business/rss",    "source": "independent"},
+    {"name": "Economist Finance",  "url": "https://www.economist.com/finance-and-economics/rss.xml", "source": "economist"},
+    {"name": "Economist Business", "url": "https://www.economist.com/business/rss.xml",          "source": "economist"},
+    {"name": "DW Business",        "url": "https://rss.dw.com/rdf/rss-en-bus",                   "source": "dw"},
+    {"name": "DW All",             "url": "https://rss.dw.com/rdf/rss-en-all",                   "source": "dw"},
+    {"name": "France24 Business",  "url": "https://www.france24.com/en/business/rss",            "source": "france24"},
+    {"name": "Euronews Business",  "url": "https://www.euronews.com/rss?level=vertical&name=business", "source": "euronews"},
+    {"name": "Euronews All",       "url": "https://www.euronews.com/rss",                        "source": "euronews"},
+    {"name": "Politico EU",        "url": "https://www.politico.eu/feed/",                       "source": "politico"},
+    # 아시아/월드
+    {"name": "Nikkei Asia",        "url": "https://asia.nikkei.com/rss/feed/nar",                "source": "nikkei"},
+    {"name": "Japan Times",        "url": "https://www.japantimes.co.jp/feed/",                  "source": "japantimes"},
+    {"name": "Al Jazeera",         "url": "https://www.aljazeera.com/xml/rss/all.xml",           "source": "aljazeera"},
+    {"name": "CNA Business",       "url": "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=6936", "source": "cna"},
+    {"name": "Straits Times Biz",  "url": "https://www.straitstimes.com/news/business/rss.xml",  "source": "straitstimes"},
+    {"name": "Times of India Biz", "url": "https://timesofindia.indiatimes.com/rssfeeds/1898055.cms", "source": "toi"},
+    {"name": "EconomicTimes Markets", "url": "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms", "source": "economictimes"},
+    # 중앙은행/공식 발표
+    {"name": "Fed Press All",      "url": "https://www.federalreserve.gov/feeds/press_all.xml",  "source": "federalreserve"},
+    {"name": "Fed Speeches",       "url": "https://www.federalreserve.gov/feeds/speeches.xml",   "source": "federalreserve"},
+    {"name": "ECB Press",          "url": "https://www.ecb.europa.eu/rss/press.html",            "source": "ecb"},
+    {"name": "BOE News",           "url": "https://www.bankofengland.co.uk/rss/news",            "source": "boe"},
+    # 원자재/크립토/물류
+    {"name": "OilPrice",           "url": "https://oilprice.com/rss/main",                       "source": "oilprice"},
+    {"name": "Mining.com",         "url": "https://www.mining.com/feed/",                        "source": "mining"},
+    {"name": "CoinDesk",           "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",     "source": "coindesk"},
+    {"name": "Cointelegraph",      "url": "https://cointelegraph.com/rss",                       "source": "cointelegraph"},
+    {"name": "CryptoSlate",        "url": "https://cryptoslate.com/feed/",                       "source": "cryptoslate"},
+    {"name": "Hellenic Shipping",  "url": "https://www.hellenicshippingnews.com/feed/",          "source": "hellenicshipping"},
+    # 테크 (시장영향)
+    {"name": "TechCrunch",         "url": "https://techcrunch.com/feed/",                        "source": "techcrunch"},
+    {"name": "The Verge",          "url": "https://www.theverge.com/rss/index.xml",              "source": "theverge"},
+    {"name": "Ars Technica",       "url": "https://feeds.arstechnica.com/arstechnica/index",     "source": "arstechnica"},
+    {"name": "VentureBeat",        "url": "https://venturebeat.com/feed/",                       "source": "venturebeat"},
+    {"name": "Tom's Hardware",     "url": "https://www.tomshardware.com/feeds/all",              "source": "tomshardware"},
+    {"name": "EE Times",           "url": "https://www.eetimes.com/feed/",                       "source": "eetimes"},
+    {"name": "The Register",       "url": "https://www.theregister.com/headlines.atom",          "source": "theregister"},
+    {"name": "Wired Business",     "url": "https://www.wired.com/feed/category/business/latest/rss", "source": "wired"},
+    {"name": "MIT Tech Review",    "url": "https://www.technologyreview.com/feed/",              "source": "mittr"},
+    # 보도자료
+    {"name": "GlobeNewswire Public Cos", "url": "https://www.globenewswire.com/RssFeed/orgclass/1/feedTitle/GlobeNewswire%20-%20News%20about%20Public%20Companies", "source": "globenewswire"},
+    # Google News EN 토픽 (Reuters·AP·Caixin 은 직접 RSS 가 없어 site: 검색으로 우회)
+    {"name": "Google EN Reuters biz",   "url": "https://news.google.com/rss/search?q=site:reuters.com+business&hl=en&gl=US&ceid=US:en", "source": "google_en"},
+    {"name": "Google EN AP biz",        "url": "https://news.google.com/rss/search?q=site:apnews.com+business&hl=en&gl=US&ceid=US:en",  "source": "google_en"},
+    {"name": "Google EN Caixin",        "url": "https://news.google.com/rss/search?q=site:caixinglobal.com&hl=en&gl=US&ceid=US:en",     "source": "google_en"},
+    {"name": "Google EN stock market",  "url": "https://news.google.com/rss/search?q=stock+market+today&hl=en&gl=US&ceid=US:en",        "source": "google_en"},
+    {"name": "Google EN earnings",      "url": "https://news.google.com/rss/search?q=quarterly+earnings+results&hl=en&gl=US&ceid=US:en", "source": "google_en"},
+    {"name": "Google EN semiconductor", "url": "https://news.google.com/rss/search?q=semiconductor+chips+TSMC+Nvidia&hl=en&gl=US&ceid=US:en", "source": "google_en"},
+    {"name": "Google EN oil OPEC",      "url": "https://news.google.com/rss/search?q=oil+prices+OPEC&hl=en&gl=US&ceid=US:en",           "source": "google_en"},
+    {"name": "Google EN AI",            "url": "https://news.google.com/rss/search?q=artificial+intelligence+AI+companies&hl=en&gl=US&ceid=US:en", "source": "google_en"},
+    {"name": "Google EN treasury yields", "url": "https://news.google.com/rss/search?q=Treasury+yields+bond+market&hl=en&gl=US&ceid=US:en", "source": "google_en"},
+    {"name": "Google EN China economy", "url": "https://news.google.com/rss/search?q=China+economy+stimulus&hl=en&gl=US&ceid=US:en",    "source": "google_en"},
+    {"name": "Google EN BOJ yen",       "url": "https://news.google.com/rss/search?q=Bank+of+Japan+yen&hl=en&gl=US&ceid=US:en",         "source": "google_en"},
+    {"name": "Google EN ECB euro",      "url": "https://news.google.com/rss/search?q=ECB+eurozone+economy&hl=en&gl=US&ceid=US:en",      "source": "google_en"},
+    {"name": "Google EN crypto",        "url": "https://news.google.com/rss/search?q=bitcoin+cryptocurrency&hl=en&gl=US&ceid=US:en",    "source": "google_en"},
+    {"name": "Google EN Korea",         "url": "https://news.google.com/rss/search?q=South+Korea+economy+Samsung&hl=en&gl=US&ceid=US:en", "source": "google_en"},
+    {"name": "Google EN M&A",           "url": "https://news.google.com/rss/search?q=merger+acquisition+deal&hl=en&gl=US&ceid=US:en",   "source": "google_en"},
+    {"name": "Google EN IPO",           "url": "https://news.google.com/rss/search?q=IPO+listing+shares&hl=en&gl=US&ceid=US:en",        "source": "google_en"},
+    {"name": "Google EN sanctions",     "url": "https://news.google.com/rss/search?q=sanctions+export+controls&hl=en&gl=US&ceid=US:en", "source": "google_en"},
+    # Yahoo Finance 추가 티커
+    {"name": "Yahoo Finance AVGO",  "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=AVGO&region=US&lang=en-US",   "source": "yahoo_finance"},
+    {"name": "Yahoo Finance AMD",   "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=AMD&region=US&lang=en-US",    "source": "yahoo_finance"},
+    {"name": "Yahoo Finance MU",    "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=MU&region=US&lang=en-US",     "source": "yahoo_finance"},
+    {"name": "Yahoo Finance TSM",   "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=TSM&region=US&lang=en-US",    "source": "yahoo_finance"},
+    {"name": "Yahoo Finance INTC",  "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=INTC&region=US&lang=en-US",   "source": "yahoo_finance"},
+    {"name": "Yahoo Finance QCOM",  "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=QCOM&region=US&lang=en-US",   "source": "yahoo_finance"},
+    {"name": "Yahoo Finance JPM",   "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=JPM&region=US&lang=en-US",    "source": "yahoo_finance"},
+    {"name": "Yahoo Finance XOM",   "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=XOM&region=US&lang=en-US",    "source": "yahoo_finance"},
+    {"name": "Yahoo Finance LLY",   "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=LLY&region=US&lang=en-US",    "source": "yahoo_finance"},
+    {"name": "Yahoo Finance PLTR",  "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=PLTR&region=US&lang=en-US",   "source": "yahoo_finance"},
+    {"name": "Yahoo Finance BA",    "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=BA&region=US&lang=en-US",     "source": "yahoo_finance"},
+    {"name": "Yahoo Finance SPX",   "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=%5EGSPC&region=US&lang=en-US", "source": "yahoo_finance"},
 ]
 
 

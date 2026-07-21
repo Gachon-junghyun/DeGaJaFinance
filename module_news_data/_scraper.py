@@ -63,6 +63,54 @@ SOURCE_SELECTORS: dict[str, list[str]] = {
     "seekingalpha":  ["div[data-test-id='content-container']", "div#a-body", "div[class*='article-body']", "article"],
     "sec_edgar":     ["div.formContent", "table.tableFile", "div#contentDiv", "div#main-content"],
     "prnewswire":    ["section.release-body", "div.release-body", "div[class*='release-body']", "article"],
+    # ── 2026-07-19 해외 확장분 (등록 안 된 source 는 _extract_generic 폴백) ──
+    "wsj":           [],   # 페이월 (RSS 헤드라인+요약만)
+    "ft":            [],   # 페이월
+    "economist":     [],   # 페이월
+    "nikkei":        [],   # 페이월
+    "straitstimes":  [],   # 페이월
+    "investing_en":  [],   # Cloudflare 봇차단
+    "zerohedge":     [],   # Cloudflare 봇차단
+    "guardian":      ["div#maincontent", "div[data-gu-name='body']", "article"],
+    "skynews":       ["div.sdc-article-body", "article"],
+    "independent":   ["div#main", "article"],
+    "dw":            ["div.rich-text", "article"],
+    "france24":      ["div.t-content__body", "article"],
+    "euronews":      ["div.c-article-content", "article"],
+    "politico":      ["div.article__content", "div[class*='article-body']", "article"],
+    "axios":         ["article", "div[class*='story']"],
+    "semafor":       ["article", "div[class*='article']"],
+    "fortune":       ["div#article-content", "div[class*='article-content']", "article"],
+    "forbes":        ["div.article-body", "div[class*='article-body']", "article"],
+    "businessinsider": ["div.content-lock-content", "div[class*='post-content']", "article"],
+    "thestreet":     ["div[class*='article__body']", "div[class*='article-body']", "article"],
+    "benzinga":      ["div#article-body", "div[class*='article-body']", "article"],
+    "fool":          ["div.article-body", "div[class*='article-body']", "article"],
+    "nasdaq":        ["div.body__content", "div[class*='article-body']", "article"],
+    "globenewswire": ["div#main-body-container", "div[class*='article-body']", "article"],
+    "aljazeera":     ["div.wysiwyg", "div[class*='article-body']", "article"],
+    "japantimes":    ["div.entry-content", "article"],
+    "cna":           ["div.text-long", "div[class*='article-body']", "article"],
+    "toi":           ["div._s30J", "div[class*='article']", "article"],
+    "economictimes": ["div.artText", "div[class*='article']", "article"],
+    "federalreserve": ["div#article", "div.col-xs-12", "article"],
+    "ecb":           ["main", "article"],
+    "boe":           ["div.page-content", "main", "article"],
+    "oilprice":      ["div#news-content", "div.singleArticle", "article"],
+    "mining":        ["div.post-inner", "div.entry-content", "article"],
+    "coindesk":      ["div[class*='article-body']", "article"],
+    "cointelegraph": ["div.post-content", "div[class*='post__content']", "article"],
+    "cryptoslate":   ["div.article-content", "article"],
+    "hellenicshipping": ["div.td-post-content", "article"],
+    "techcrunch":    ["div.entry-content", "article"],
+    "theverge":      ["div[class*='article-body']", "article"],
+    "arstechnica":   ["div.article-content", "article"],
+    "venturebeat":   ["div.article-content", "article"],
+    "tomshardware":  ["div#article-body", "article"],
+    "eetimes":       ["div.entry-content", "article"],
+    "theregister":   ["div#body", "article"],
+    "wired":         ["div[class*='body__inner-container']", "article"],
+    "mittr":         ["div[class*='contentBody']", "article"],
 }
 
 

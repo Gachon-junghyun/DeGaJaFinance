@@ -41,14 +41,31 @@ NEWS_API_BASE = (os.environ.get("DEGAJA_NEWS_API", "") or "").rstrip("/") or Non
 NEWS_API_PORT = int(os.environ.get("DEGAJA_NEWS_API_PORT", "8787"))
 
 # ── 해외(영문) 소스 집합 — scope=foreign/domestic 분류의 단일 원본 ────────
-# news_alert.db source 분포 기준(전체의 약 24%). 새 해외 소스 추가 시 여기만.
+# 새 해외 소스 추가 시 여기만. (2026-07-19 해외 대량 확장 — _rss_feeds.py 참조)
 FOREIGN_SOURCES = sorted({
     "bloomberg", "google_en", "bbc", "scmp", "marketwatch", "upi", "nyt",
     "seekingalpha", "yahoo_finance", "prnewswire", "cnbc", "thediplomat",
     "sec_edgar", "foreignpolicy", "investing_en", "google_news_en", "fxstreet",
-    # 2026-07-18 추가 — _rss_feeds.RSS_FEEDS 와 짝을 맞춘다(여기 빠지면 KR 로 태깅돼
-    # 국내 스코프로 새고, 한국어 학습 분류기가 영문을 시장/비시장 판정하게 된다).
-    "digitimes", "nikkei", "ft", "federalreserve", "eia",
+    # ⚠ 여기는 _rss_feeds.RSS_FEEDS 와 **짝**이다 — 해외 피드를 넣고 여기 빠뜨리면
+    #   그 소스가 KR 로 태깅돼 국내 스코프로 새고, 한국어 학습 분류기가 영문을
+    #   시장/비시장 판정하게 된다.
+    # US 마켓/종합
+    "wsj", "fortune", "forbes", "businessinsider", "thestreet", "benzinga",
+    "zerohedge", "fool", "axios", "semafor", "nasdaq", "globenewswire",
+    # 영국/유럽
+    "ft", "economist", "guardian", "skynews", "independent", "dw", "france24",
+    "euronews", "politico",
+    # 아시아/월드
+    "nikkei", "japantimes", "aljazeera", "cna", "straitstimes", "toi",
+    "economictimes", "digitimes",
+    # 중앙은행/공식
+    "federalreserve", "ecb", "boe",
+    # 원자재/크립토/물류
+    "oilprice", "mining", "coindesk", "cointelegraph", "cryptoslate",
+    "hellenicshipping", "eia",
+    # 테크
+    "techcrunch", "theverge", "arstechnica", "venturebeat", "tomshardware",
+    "eetimes", "theregister", "wired", "mittr",
 })
 
 BODY_MIN = 200   # 본문 '있음' 판정 최소 글자수 (coverage/fts has_body 공통)
