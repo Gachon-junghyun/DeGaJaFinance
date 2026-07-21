@@ -25,8 +25,13 @@ from ._dart_api import (
     fetch_disclosure_detail_all,
 )
 from ._corp_codes import resolve_corp_code, refresh_corp_codes
-from ._categorizer import categorize, CATEGORIES
-from ._detail_parser import parse_contract, parse_treasury, parse_capital
+from ._categorizer import categorize, CATEGORIES, CATEGORY_LABELS
+from ._detail_parser import (
+    parse_contract,
+    parse_treasury,
+    parse_capital,
+    parse_guarantee,
+)
 from ._renderer import (
     render_markdown,
     summarize_contracts,
@@ -34,12 +39,20 @@ from ._renderer import (
 )
 from ._business_report import (
     DartReport,
+    TocNode,
     fetch_business_report,
     search_recent_business_report,
     fetch_business_section,
+    fetch_toc,
+    fetch_toc_section,
 )
 
 __all__ = [
+    "CATEGORY_LABELS",
+    "TocNode",
+    "fetch_toc",
+    "fetch_toc_section",
+    "parse_guarantee",
     "DisclosureRow",
     "fetch_disclosures",
     "fetch_disclosure_detail",

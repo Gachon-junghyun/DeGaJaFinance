@@ -88,6 +88,101 @@ def _enrich_detail(rows, only_categories: set[str]) -> None:
     sys.stderr.write(f"[detail] {fetched}건 본문 파싱 완료\n")
 
 
+def _won(x) -> str:
+    if x is None:
+        return "n/a"
+    a = abs(float(x))
+    sign = "-" if x < 0 else ""
+    if a >= 1e12:
+        return f"{sign}{a / 1e12:,.2f}조원"
+    if a >= 1e8:
+        return f"{sign}{a / 1e8:,.0f}억원"
+    return f"{sign}{a:,.0f}원"
+
+
+def _render_guarantees(code: str, *, days: int, as_json: bool = False) -> str:
+    """채무보증 공시 → 건별 금액 + 최신 총잔액.
+
+    총잔액은 합산하지 않는다 — 각 공시가 '그 시점의 누적 잔액'을 담으므로 더하면
+    중복이다. 가장 최근 공시의 잔액이 현재 우발채무 총액이다.
+    """
+    import json as _json
+
+    from ._business_report import fetch_toc, fetch_toc_section
+    from ._categorizer import categorize
+    from ._dart_api import fetch_disclosures
+    from ._detail_parser import parse_guarantee
+
+    rows = fetch_disclosures(code, days=days)
+    grows = [r for r in rows if categorize(_rn(r)) == "guarantee"]
+
+    parsed = []
+    for r in grows:
+        rcept = _rcept(r)
+        try:
+            nodes = fetch_toc(rcept)
+            body = fetch_toc_section(nodes[0]) if nodes else ""
+        except Exception:
+            body = ""
+        d = parse_guarantee(body)
+        d["rcept_no"] = rcept
+        d["rcept_dt"] = _rdt(r)
+        d["report_nm"] = _rn(r).strip()
+        parsed.append(d)
+
+    if as_json:
+        return _json.dumps(
+            {"code": code, "days": days, "count": len(parsed), "guarantees": parsed},
+            ensure_ascii=False, indent=2,
+        )
+
+    L = [f"# {code} — 채무보증 (PF 우발채무)", "",
+         f"- 조회: 최근 {days}일 · 채무보증 공시 {len(parsed)}건", ""]
+    if not parsed:
+        L.append("_해당 기간 채무보증 공시 없음._")
+        return "\n".join(L) + "\n"
+
+    latest = next((d for d in parsed if d.get("total_guarantee_balance")), None)
+    if latest:
+        L.append(f"## 우발채무 총잔액 — {_won(latest['total_guarantee_balance'])}")
+        L.append("")
+        L.append(f"- 기준: {latest['rcept_dt']} 공시 (rcept_no={latest['rcept_no']})")
+        if latest.get("equity"):
+            ratio = latest["total_guarantee_balance"] / latest["equity"] * 100
+            L.append(f"- 자기자본 {_won(latest['equity'])} 대비 **{ratio:.0f}%**")
+        L.append("")
+        L.append("> 총잔액은 공시 시점의 누적치다 — 건별 금액을 더하면 중복이다.")
+        L.append("")
+
+    L.append("## 건별")
+    L.append("")
+    L.append("| 공시일 | 채무자 | 관계 | 보증금액 | 자기자본대비 | 만기 | PF추정 |")
+    L.append("|---|---|---|---:|---:|---|---|")
+    for d in parsed:
+        L.append(
+            f"| {d['rcept_dt']} | {d.get('debtor') or '—'} | {d.get('debtor_relation') or '—'} "
+            f"| {_won(d.get('guarantee_amount'))} "
+            f"| {('%.1f%%' % d['ratio_to_equity']) if d.get('ratio_to_equity') is not None else '—'} "
+            f"| {d.get('period_end') or '—'} | {'✓' if d.get('is_pf') else ''} |"
+        )
+    L.append("")
+    L.append("*PF추정은 채무자 이름 기반 휴리스틱 — 이름에 안 드러나는 SPC 는 놓친다.*")
+    L.append("")
+    return "\n".join(L)
+
+
+def _rn(r) -> str:
+    return (r.get("report_nm") if isinstance(r, dict) else getattr(r, "report_nm", "")) or ""
+
+
+def _rcept(r) -> str:
+    return (r.get("rcept_no") if isinstance(r, dict) else getattr(r, "rcept_no", "")) or ""
+
+
+def _rdt(r) -> str:
+    return (r.get("rcept_dt") if isinstance(r, dict) else getattr(r, "rcept_dt", "")) or ""
+
+
 def main() -> None:
     p = argparse.ArgumentParser(prog="module_disclosure")
     p.add_argument("code", help="6자리 종목코드 또는 기업명 (예: 034020 / 두산에너빌리티)")
@@ -99,6 +194,8 @@ def main() -> None:
                    help="특정 카테고리만 출력")
     p.add_argument("--no-detail", action="store_true",
                    help="본문 파싱 skip (목록만, 빠름)")
+    p.add_argument("--guarantees", action="store_true",
+                   help="채무보증(PF 우발채무) 공시 금액 파싱 + 총잔액 집계")
     p.add_argument("--business-report", action="store_true",
                    help="공시목록 대신 최근 사업/반기/분기 보고서 'II. 사업의 내용' 본문 fetch")
     p.add_argument("--json", action="store_true", help="JSON 으로 raw rows dump")
@@ -111,6 +208,17 @@ def main() -> None:
             args.code = _stem
     _utf8_stdout()
     _maybe_load_dotenv()
+
+    # 채무보증 모드 — PF 우발채무. 재무제표 부채에 안 잡히는 리스크라 따로 본다.
+    if args.guarantees:
+        md = _render_guarantees(args.code, days=args.days, as_json=args.json)
+        if args.out:
+            Path(args.out).parent.mkdir(parents=True, exist_ok=True)
+            Path(args.out).write_text(md, encoding="utf-8")
+            print(f"saved: {args.out}")
+        else:
+            print(md)
+        return
 
     # 사업보고서 본문 모드 — 공시목록 대신 "II. 사업의 내용" 섹션 fetch.
     if args.business_report:

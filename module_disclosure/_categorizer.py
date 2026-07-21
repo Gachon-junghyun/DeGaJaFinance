@@ -10,7 +10,7 @@
 """
 from __future__ import annotations
 
-CATEGORIES = ["contract", "treasury", "capital", "equity", "earnings", "other"]
+CATEGORIES = ["contract", "treasury", "capital", "equity", "earnings", "guarantee", "other"]
 
 CATEGORY_LABELS = {
     "contract": "수주 (단일판매·공급계약)",
@@ -18,6 +18,7 @@ CATEGORY_LABELS = {
     "capital":  "자본변동 (증자·CB·합병·분할)",
     "equity":   "지분변동 (5% 대량보유·임원)",
     "earnings": "실적 (분기·반기·사업보고서)",
+    "guarantee": "채무보증 (PF 우발채무)",
     "other":    "기타 주요사항",
 }
 
@@ -34,6 +35,11 @@ def categorize(report_nm: str) -> str:
 
     if "자기주식" in nm or "자사주" in nm:
         return "treasury"
+
+    # 건설사 리스크의 본체 — 시행사 차입에 선 보증은 재무제표 부채에 안 잡히고
+    # 이 공시로만 드러난다. capital 보다 먼저 봐야 "채무보증"이 사채로 오분류되지 않는다.
+    if "채무보증" in nm or "지급보증" in nm:
+        return "guarantee"
 
     if any(k in nm for k in [
         "유상증자", "무상증자", "전환사채", "신주인수권부사채",

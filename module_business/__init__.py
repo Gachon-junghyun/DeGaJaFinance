@@ -65,12 +65,26 @@ def extract(
     overview = extract_business_overview(ticker)
     ir_articles: Optional[list[IRArticle]] = None
     dart_section: Optional[str] = None
+    ir_note: Optional[str] = None
 
     if overview is None:
         return {"overview": None, "ir_articles": None, "dart_section": None}
 
     if include_ir:
-        ir_articles = find_q1_ir_articles(overview.corp_name, days=ir_days)
+        # IR 뉴스는 부가정보다. news_alert.db 는 서버 소유(P6)라 클라이언트에 없는 게
+        # 정상이므로, 없거나 실패해도 사업모델 본체(corp_embeddings.db)는 그대로 낸다.
+        try:
+            from ._ir_news import available as _ir_available
+            if _ir_available():
+                ir_articles = find_q1_ir_articles(overview.corp_name, days=ir_days)
+            else:
+                ir_note = (
+                    "로컬 news_alert.db 없음 — 이 DB 는 서버 PC 소유(P6). "
+                    "IR 발췌가 필요하면 서버에서 조회하거나 module_news_data 를 "
+                    "DEGAJA_NEWS_API 로 쓴다."
+                )
+        except Exception as e:
+            ir_note = f"IR 발췌 실패({type(e).__name__}) — 사업모델 본체만 낸다."
 
     if include_dart:
         try:
@@ -94,6 +108,7 @@ def extract(
         "overview": overview,
         "ir_articles": ir_articles,
         "dart_section": dart_section,
+        "ir_note": ir_note,
     }
 
 

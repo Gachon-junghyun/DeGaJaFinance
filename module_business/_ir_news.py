@@ -60,6 +60,16 @@ _NAME_VARIANTS = {
 }
 
 
+def available() -> bool:
+    """로컬 news_alert.db 가 있나.
+
+    P6 상 이 DB 는 **서버 PC 소유**다 — 클라이언트에 없는 것이 정상 상태이지 오류가
+    아니다. IR 뉴스는 사업모델 개요의 부가정보이므로, 없으면 그 부분만 비우고
+    모듈 전체는 계속 돌아야 한다(예전엔 여기서 FileNotFoundError 로 전 종목이 죽었다).
+    """
+    return DB_PATH.exists()
+
+
 def _connect() -> sqlite3.Connection:
     if not DB_PATH.exists():
         raise FileNotFoundError(f"news_alert.db 가 없습니다: {DB_PATH}")
@@ -82,6 +92,9 @@ def find_q1_ir_articles(
         limit: 최대 개수. default 15.
     """
     if not corp_name:
+        return []
+    if not available():
+        # 서버 소유 DB 가 클라이언트에 없는 정상 상태 — IR 발췌만 비우고 넘어간다.
         return []
     # 종목명 변형 — 뉴스 헤드라인은 보통 통칭 사용 (현대자동차 → 현대차)
     name_variants = set(_NAME_VARIANTS.get(corp_name, [corp_name]))
