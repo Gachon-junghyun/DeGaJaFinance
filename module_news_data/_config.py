@@ -31,11 +31,37 @@ KR_UNIVERSE_CSV = DATA_DIR / "kr_universe" / "kr_all.csv"   # rank,ticker,name,�
 # ── 이 리포 산출물 ────────────────────────────────────────────────────────
 OUT_DIR = REPO_ROOT / "out"
 
+# ── .env 주입 (module_disclosure·module_KIS 와 동일 패턴, stdlib 전용) ─────
+# 뉴스 API 설정(DEGAJA_NEWS_API·..._AUTH)을 setx(OS 환경변수) 없이도 프로젝트
+# 루트 `.env` 한 곳에 적어두면 되도록. OS 환경변수가 이미 있으면 그쪽이 이긴다
+# (`k not in os.environ`). 서버 PC 는 .env 의 DEGAJA_NEWS_API 를 비워두므로 무해.
+# P6: 서버도 이 모듈을 import 하지만 stdlib(os·pathlib)만 써서 기동에 안전.
+def _maybe_load_dotenv() -> None:
+    for p in (REPO_ROOT / ".env", REPO_ROOT.parent / ".env"):
+        if not p.exists():
+            continue
+        try:
+            for line in p.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if not line or line.startswith("#"):
+                    continue
+                k, _, v = line.partition("=")
+                k = k.strip()
+                v = v.strip().strip('"').strip("'")
+                if k and v and k not in os.environ:
+                    os.environ[k] = v
+        except Exception:
+            pass
+        break
+
+
+_maybe_load_dotenv()
+
 # ── 뉴스 API (서버 PC 수집기 → 클라이언트 검색) ───────────────────────────
 # 서버 PC가 Server/news_api.py 로 뉴스 DB 를 HTTP 로 노출한다. 클라이언트에서
 # 이 환경변수만 켜면 `fts search` 가 로컬 DB 대신 그 API 로 검색을 끌어온다
 # (명령어 동일 — Claude Code 는 로컬/원격 구분 없이 같은 CLI 를 쓴다).
-#   예) setx DEGAJA_NEWS_API "http://192.168.0.50:8787"   (서버 PC IP:PORT)
+#   예) DEGAJA_NEWS_API="http://192.168.0.50:8787"  를 .env 에 (또는 setx 로 OS 환경변수)
 # 비어 있으면 로컬 DB 직접 읽기(단일 PC 모드). 서버 PC 자신은 이 값을 비운다.
 NEWS_API_BASE = (os.environ.get("DEGAJA_NEWS_API", "") or "").rstrip("/") or None
 NEWS_API_PORT = int(os.environ.get("DEGAJA_NEWS_API_PORT", "8787"))
