@@ -1,0 +1,122 @@
+{
+  "as_of": "2026-07-21",
+  "horizon_days": 5,
+  "binaries": [
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    },
+    {
+      "date": "2026-07-21",
+      "event": "SCHW earnings",
+      "ticker": "SCHW",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 0,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-07-22",
+      "event": "TSLA earnings",
+      "ticker": "TSLA",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 1,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-07-22",
+      "event": "KMI earnings",
+      "ticker": "KMI",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 1,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "RTX earnings",
+      "ticker": "RTX",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 2,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "LMT earnings",
+      "ticker": "LMT",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 2,
+      "kind": "earnings"
+    }
+  ],
+  "macro": [
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    }
+  ],
+  "earnings": [
+    {
+      "date": "2026-07-21",
+      "event": "SCHW earnings",
+      "ticker": "SCHW",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 0,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-07-22",
+      "event": "TSLA earnings",
+      "ticker": "TSLA",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 1,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-07-22",
+      "event": "KMI earnings",
+      "ticker": "KMI",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 1,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "RTX earnings",
+      "ticker": "RTX",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 2,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "LMT earnings",
+      "ticker": "LMT",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 2,
+      "kind": "earnings"
+    }
+  ]
+}

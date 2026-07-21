@@ -1,0 +1,20 @@
+{
+  "_note": "Merge payload for llm_outputs/real_alpha_kr/ledger.json. NOT applied automatically — 3 concurrent real_alpha_kr runs share that file and an automatic merge could clobber them. Apply by hand after the other runs finish.",
+  "014680": {
+    "name": "한솔케미칼",
+    "last_run": "2026-07-20",
+    "verdict": "REAL-but-PRICED",
+    "verdict_prev": null,
+    "binding": false,
+    "op_hits": 0,
+    "op_misses": 0,
+    "prev_op_review": "최초 리서치 — 채점 대상 없음",
+    "observation_points": [
+      {"id": 1, "by_date": "2026-08-14", "claim": "2Q26 반기 OCF/NI < 1.0 이면 Block B 통과는 오판 — INFLATED 쪽으로 재평가", "status": "미도래"},
+      {"id": 2, "by_date": "2026-09-30", "claim": "컨센 목표주가 402,500원에서 10% 이상 하향 없으면 risk_unseen #1 과대평가", "status": "미도래"},
+      {"id": 3, "by_date": "2026-10-31", "claim": "국민연금 11.16%에서 추가 1%p 이상 감소 없으면 '이탈 진행형' 기각", "status": "미도래"},
+      {"id": 4, "by_date": "2026-12-31", "claim": "전북 완주 1,000억 MOU가 DART 신규시설투자/분기 capex로 미확인이면 증거 사용 오류", "status": "미도래"}
+    ],
+    "open_gaps": ["세그먼트별 영업이익률", "고객 집중도", "전자소재 ASP", "차트 풀 그리드"]
+  }
+}

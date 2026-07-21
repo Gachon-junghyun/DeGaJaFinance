@@ -1,6 +1,7 @@
 {
   "_note": "Dominant secular cycles ↔ ticker layers. Epicenter = the engine (own a core regardless of tape). Adjacent = beneficiary layer. Fuel = adjacent-of-adjacent. Human/find-cycle-curated; cycle_exposure.py reads this vs the KIS book. Update rank/tickers as find-cycle output evolves (md-ledger discipline: this JSON = deterministic registry, not LLM synthesis).",
-  "updated": "2026-07-14",
+  "_note_min_epicenter_pct": "min_epicenter_pct=0.0 means NO FLOOR ASSERTED — NOT 'zero exposure is fine'. The GAP test is `epi_pct < min_epicenter_pct`, so a 0.0 floor is unsatisfiable and the check is silently OFF for that cycle. Measured 2026-07-17: rank-2 Energy sat at 0.0 and reported '✅ no GAP' while the book held 0.0% of its epicenter. cycle_exposure.py now renders unfloored rank≤2 cycles as '⚪ n/a (기준 미설정)' instead of a pass. Set a real floor to arm the guard.",
+  "updated": "2026-07-17",
   "cycles": [
     {
       "name": "AI-compute / semiconductors",
@@ -15,7 +16,9 @@
     {
       "name": "Energy / oil-refining (Hormuz + Russia crack)",
       "rank": 2,
-      "min_epicenter_pct": 0.0,
+      "min_epicenter_pct": 8.0,
+      "core_pick": "PSX",
+      "core_pick_why": "cheapest large refiner on forward (11.2, PEG 1.17) + the only Energy name with shorts actively exiting (FINRA short-vol z -1.43, 5v5 -16.6▼) = clean structural entry, not an extended one (cf. MPC RSI 85.7). Crack-spread leverage, not crude beta. Human-locked 2026-07-17; evidence: llm_outputs/2026-07-17/industry_US/SECTOR_DEEP_ENRG.md",
       "epicenter": ["MPC", "PSX", "VLO", "XOM", "CVX", "EOG", "FRO", "STNG", "INSW", "DHT"],
       "adjacent": ["LNG", "KMI", "WMB", "OKE"],
       "fuel": []
@@ -24,6 +27,8 @@
       "name": "Missile-defense / rearmament",
       "rank": 3,
       "min_epicenter_pct": 0.0,
+      "core_pick": "RTX",
+      "core_pick_why": "the one leg of this cycle that fired — correctly bifurcated from the platform primes on 2026-07-15 and re-confirmed 07-17 (RTX flow 0.317 neutral vs LMT -0.742 / NOC -0.683, both distributing; LMT vol 0.58x = no interest). NOTE: min_epicenter_pct stays 0.0 deliberately = no floor asserted (and the GAP rule only checks rank<=2 anyway) — this records the epicenter name, it does not arm a guard.",
       "epicenter": ["RTX", "LMT", "NOC", "GD", "LHX"],
       "adjacent": ["MP", "USAR"],
       "fuel": []

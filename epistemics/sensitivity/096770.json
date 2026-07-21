@@ -1,0 +1,11 @@
+{
+  "ticker": "096770",
+  "factors": {
+    "oil_refining+SKon_battery": {
+      "dir": "up",
+      "event": "0716 refining margin strong + SK On loss narrowing + TerraPower SMR",
+      "conf": 0.6,
+      "updated": "2026-07-16"
+    }
+  }
+}

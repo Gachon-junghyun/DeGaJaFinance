@@ -1,0 +1,118 @@
+{
+  "asof": "2026-07-21",
+  "filter": {
+    "floor_jo": 1.0,
+    "tags": [
+      "🟢가속"
+    ],
+    "top": 15,
+    "days": 20
+  },
+  "shortlist": [
+    {
+      "ticker": "096770.KS",
+      "name": "SK이노베이션",
+      "sector": "화학",
+      "mcap_h": null,
+      "flow_score": 1.0,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.182,
+      "rs20": 42.0,
+      "rs60": -18.5,
+      "vol_surge": 1.69,
+      "investor": {
+        "foreign_20": -311527,
+        "inst_20": 2050270,
+        "indiv_20": -1524228,
+        "foreign_5": -371746,
+        "inst_5": 1437909,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "475150.KS",
+      "name": "SK이터닉스",
+      "sector": "건설",
+      "mcap_h": null,
+      "flow_score": 1.0,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.418,
+      "rs20": 65.4,
+      "rs60": -0.6,
+      "vol_surge": 1.6,
+      "investor": {
+        "foreign_20": 217934,
+        "inst_20": 1440261,
+        "indiv_20": -1725521,
+        "foreign_5": 552896,
+        "inst_5": 874567,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "089860.KS",
+      "name": "롯데렌탈",
+      "sector": "일반서비스",
+      "mcap_h": null,
+      "flow_score": 1.0,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.25,
+      "rs20": 53.6,
+      "rs60": 3.6,
+      "vol_surge": 1.76,
+      "investor": {
+        "foreign_20": -44222,
+        "inst_20": 122157,
+        "indiv_20": -77280,
+        "foreign_5": -4971,
+        "inst_5": 46563,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "073240.KS",
+      "name": "금호타이어",
+      "sector": "화학",
+      "mcap_h": null,
+      "flow_score": 0.844,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.53,
+      "rs20": 60.3,
+      "rs60": -3.4,
+      "vol_surge": 1.32,
+      "investor": {
+        "foreign_20": -8287346,
+        "inst_20": -4508537,
+        "indiv_20": 13179406,
+        "foreign_5": 11540,
+        "inst_5": -284501,
+        "smart_buy": false,
+        "distribution_to_retail": true,
+        "foreign_turning": true,
+        "state": "⚠개인 흡수(외국인 이탈)",
+        "days": 20
+      }
+    }
+  ],
+  "live": [
+    "096770.KS",
+    "475150.KS",
+    "089860.KS"
+  ]
+}

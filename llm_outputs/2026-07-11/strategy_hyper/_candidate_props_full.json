@@ -1,0 +1,150 @@
+[
+ {
+  "prop_key": "AVGO_add",
+  "title": "AVGO — coil-breakout ADD to held core (Apple $30B/2031 captive floor)",
+  "body": "AVGO coil-breakout add — 황성현·손현정·유재선이 print(Q3 $16B beat)을 방향이 아니라 속도 변수로 격하(Bn-01)하고, Apple $30B/2031 캡티브 실리콘을 non-cancellable·rate-agnostic '상태변수 매출 floor'로 재정의(Bn-05)하며 close>406.34+OBV누적을 미발표 구조수치로 역산한 SMP-임계형 감시선(Bn-02)으로 박았다. Cress는 상방엔진(breakout+OBV+96%)과 하방게이트(계약 floor+stop 358/close<400)를 단일점수로 뭉개지 말고 이중함수로 병렬(Bs-04)하라며, 신호는 px 스냅샷이 아니라 flow 1.78x·RS20 +3.9%·short-build(FINRA z+1.34)의 변화속도·breadth 일방향성(Bs-02)이라 짚었고, C&C는 계약-매출 래그(Bs-07)로 OBV 매집을 '인쇄 전 매집창', close<400을 좌측꼬리 캡(Bs-01 전이)으로 프레임했다. 유일 반대인 밸류/모멘텀 '익스텐션 추격'은 데스크 밸류-veto 룰로 소거 → go_add로 arm하되, breakout 확증 시 --investor로 OBV 단일축을 실측 보강.\n🏛 토론(5렌즈): go_add (5/5 for 전원 일치) | 비대칭: 하단은 Apple $30B/2031 non-cancellable·rate-agnostic 계약 floor + close<400 스탑으로 계약·기술 이중 차감, 상단은 breakout이 print과 무관하게 pays → 스윙이 공짜가 되는 6:1 heads-I-win. | GATE PASS | 생존반대: 경쟁 밸류/모멘텀 렌즈의 '고멀티플 400.71→406.34 익스텐션 추격' 프레임은 데스크 밸류-veto 룰(confirmed-turn+OBV누적+다이버전스없음을 고멀티플 하나로 veto 금지, close<400 스탑이 디레이트 꼬리를 캡)로 소거되어 thesis를 뒤집지 못함. 다만 신호품질 caveat로 살아남는 것: OBV +96% '매집'은 단일 축이라 개인/외국인 로테이션을 못 가림 — arming(close>406.34) 확증 순간 --investor 실측으로 head-fake 여부 재대조가 붙어야 진짜 매집으로 확정된다(방향은 유지, 확증 강도만 보강).",
+  "options": [
+   {
+    "key": "go_add",
+    "label": "GO — arm coil-breakout add close>406.34+OBV ★"
+   },
+   {
+    "key": "hold_only",
+    "label": "Hold core, no add (veto/dial)"
+   }
+  ],
+  "default_option": "go_add",
+  "desk_default": "go_add",
+  "debate_gate_pass": true
+ },
+ {
+  "prop_key": "VST_new",
+  "title": "VST — new-entry starter on MAX-LONG AI-power leg (Meta 2.6GW verified PPA floor)",
+  "body": "VST — MAX-LONG AI-전력 레그의 new-entry starter. 5렌즈 전원이 자본을 유형별로 쪼갠 R-003을 승계한다: $10B Helix/KKR은 anticipatory 헤드라인-자본(VST 백로그 아님)이라 감가 폐기하고, Meta 2,609MW 20yr 원전 PPA만 verified·VST-specific·rate-agnostic 계약현금 = 감가 없는 상태변수 floor로 남긴다. Courage&Conviction(Bs-05)과 유재선(Bn-01/Bn-03)은 '헤드라인 당사자 ≠ 실제 손익 귀착처'로 시장의 1차 오매핑을 분리하고, Steven Cress(Bs-04/Bs-02)는 상방 엔진(OBV+45%·RS20+10.6% 리더·short 5.3% squeeze)과 하방 게이트(PPA floor+stop 146.18)를 따로 돌리며 정태 200DMA 레벨 대신 RS20 속도 변곡을 신호로 읽는다. 황성현(Bn-02/Bn-07)·손현정(Bn-05/Bn-07)은 서명된 MW를 선행 바인딩변수로 승격. 진입 = starter half now + 167.2 reclaim add로, half-size가 미확정 below-200DMA 턴을 차감하는 게이트 그 자체 — watch_reclaim의 falling-knife 반대는 veto가 아니라 이 사이징 양보로 흡수된다.\n🏛 토론(5렌즈): for / go_starter (5:0 — 황성현·손현정·유재선·Steven Cress·Courage&Conviction 전원 채택, 다만 손현정은 conditional로 half-size 규율 강제) | 비대칭: stop 146.18이 below-200DMA knife(px 158.71 대비 ~-8%)를 affordable하게 캡, 검증된 2,609MW 20yr PPA floor + OBV 매집(+45%)이 222/259 상방을 받침 → trade 5.1:1 / business 1.7:1. 바이너리(Helix 전환) 폐기 → 페이오프가 촉매 방향에 비종속. | GATE PASS | 생존반대: below-200DMA 낙하칼 리스크는 죽지 않고 사이징으로 흡수됐을 뿐이다. turn 미확정 + 200DMA 아래이므로 watch_reclaim(200DMA 탈환 대기)의 반대는 veto가 아니라 half-size + 167.2 reclaim add라는 양보로만 살아남는다. 잔존 실질위험(Bs-07): 검증 PPA 현금이 P&L·테이프에 도착하기 전에 below-200DMA 기술적 그라인드가 stop 146.18을 먼저 때릴 수 있다 — floor는 '언젠가'를 보증하지 첫 스탑 방어를 보증하지 않는다. 그래서 full이 아니라 starter half가 맞다.",
+  "options": [
+   {
+    "key": "go_starter",
+    "label": "GO — starter half-size now, add on 167.2 reclaim ★"
+   },
+   {
+    "key": "watch_reclaim",
+    "label": "Wait for 200DMA reclaim before entry (veto/dial)"
+   }
+  ],
+  "default_option": "go_starter",
+  "desk_default": "go_starter",
+  "debate_gate_pass": true
+ },
+ {
+  "prop_key": "KMI_tranche3",
+  "title": "KMI — hold core, tranche-3 armed POST-7/16 (pre-print add prediction-bet → killed)",
+  "body": "KMI — hold core, tranche-3 armed POST-7/16 (pre-print add = 예측베팅 KILLED). Steven Cress(Bs-04)와 유재선(Bn-04)이 toll floor와 pre-print ENTRY를 한 함수로 섞은 오류를 분리: $35.67B RPO(XBRL 검증)+~64% take-or-pay/~90% fee-based toll은 rate·print-agnostic 상태변수(하방이 계약으로 차 있음)지만, pre-print add는 miss가 31 스탑을 갭관통하는 예측베팅이라 KILL. 황성현(Bn-01/Bn-08)은 print을 방향이 아니라 속도변수로 규정해 pays-regardless는 오직 post-print close>32.08+OBV 누적으로만 성립시키고, 손현정(Bn-03/Bn-04)은 그 톨을 검증가능 플로어로 못박아 pre-print 트림이 아니라 post-print 트리거가 게이트한다고 확정. 경쟁 인컴/모멘텀 렌즈의 'OBV −29% 분배·FCF 1.11× thin → trim' 반박은 −29%가 short COVERING(≠building)이라 clean exit tell이 아니고 thin cover는 thesis를 깨지 않고 사이즈만 조이는 dial로 강등 — front-run 금지, gap 위에서 트리거만 arm.\n🏛 토론(5렌즈): for → hold_arm_t3 (만장일치 5/5: 황성현·손현정·유재선·Steven Cress·Courage & Conviction) | 비대칭: 톨 RPO 플로어는 print-agnostic(구조)이나 pre-print 진입은 print-exposed(31 스탑 갭관통) — pre-print add를 KILL하고 post-print close>32.08+OBV만 arm하면 양방향 예측베팅이 하단 잘린 단방향 구조 add로 바뀌어 트리거 11.4:1 R/R이 허상이 아니라 실물이 된다. | GATE PASS | 생존반대: residual dial만 생존: 인컴 렌즈의 FCF/배당커버 1.11× thin은 trim-veto로는 죽었으나(RPO 톨이 print-agnostic이라 thin cover는 느린 known 변수) 트랜치-3 사이즈를 조이는 dial로 남는다. 모멘텀 렌즈의 OBV 분배 −29% exit tell 주장은 short building이 아니라 COVERING이라 clean directional 분산이 아니어서 기각.",
+  "options": [
+   {
+    "key": "hold_arm_t3",
+    "label": "Hold core, arm tranche-3 post-7/16 close>32.08+OBV ★"
+   },
+   {
+    "key": "hold_no_add",
+    "label": "Hold core, drop tranche-3 arm (veto/dial)"
+   },
+   {
+    "key": "trim",
+    "label": "Trim into weak pre-print flow (dial)"
+   }
+  ],
+  "default_option": "hold_arm_t3",
+  "desk_default": "hold_arm_t3",
+  "debate_gate_pass": true
+ },
+ {
+  "prop_key": "CEG_ignition",
+  "title": "CEG — armed nuclear-IPP ignition (PTC floor on nuclear sleeve)",
+  "body": "CEG는 무조건 GO가 아니라 조건부 무장으로 dock한다: 황성현·손현정이 PTC $43.75/MWh를 nuclear sleeve에 전량귀속하지 않은 것을 정확한 규율로 지지하고(Bn-02 부분플로어·Bn-06 하이퍼스케일러 브릿지전원·Bn-07 첫 PPA는 $/MW), Calpine 가스 슬리브가 un-floored라 하단이 절반만 잘린다는 점을 공통으로 못박는다. 유재선(Bn-03)과 Courage(Bs-01)는 헤드라인이 놓치는 진짜 2차 노출·좌측꼬리가 바로 그 un-floored 가스 슬리브임을 유형별 분해로 드러내고, Steven Cress(Bs-04/Bs-02)는 방어게이트가 모집단 절반만 덮으니 사이징으로 미보증 절반을 차감하되 살아있는 신호는 정태 후행 RS60이 아니라 OBV +65%+강세 divergence가 base 위로 도는 breadth 변곡이라 판정한다. 결론: below trigger는 BASING knife(pre-buy 금지), close>256.69+OBV 확정-턴이 anti-knife 가드로 발화할 때만 arm하고 반쪽 floor만큼 사이즈를 줄여 건다.\n🏛 토론(5렌즈): conditional→go_ignition (5렌즈 만장일치, 무조건 GO가 아닌 조건부 무장) | 비대칭: PTC $43.75/MWh가 원자력 half의 하단만 rate-agnostic으로 floor(가스 슬리브는 un-floored로 좌꼬리 잔존) → close>256.69+OBV 트리거가 basing knife를 확정-턴으로 바꾸는 anti-knife 가드, R/R ~3.6:1이되 반쪽 floor만큼 사이즈 차감. | GATE PASS | 생존반대: 살아남은 반대는 '반쪽 floor'다 — PTC는 nuclear sleeve만 floor하고 Calpine gas sleeve는 un-floored라 좌측꼬리가 가스 슬리브만큼 열려 있다(Bn-02 양방향 완전하단절단 미달, Bs-04 방어게이트가 모집단 절반만 커버). 여기에 watch_only 진영의 잔여 반론: RS60 −24%·−20%<200DMA·약세스택의 deep laggard라 트리거 미발화 시 dead-money 리스크가 실재하며, 아래에서 담는 순간 disclosure 캘린더에 베팅하는 것이 된다. 따라서 full-for가 아니라 conditional·사이즈 차감·pre-trigger 진입 절대금지가 유지된다.",
+  "options": [
+   {
+    "key": "go_ignition",
+    "label": "GO — arm ignition close>256.69+OBV ★"
+   },
+   {
+    "key": "watch_only",
+    "label": "Stay flat until PPA/LOAD disclosure by 8/6 (veto/dial)"
+   }
+  ],
+  "default_option": "go_ignition",
+  "desk_default": "go_ignition",
+  "debate_gate_pass": true
+ },
+ {
+  "prop_key": "GEV_fill",
+  "title": "GEV — armed ONLY on pullback fill 1000-1040 (extended, bearish divergence)",
+  "body": "5 렌즈 만장일치 go_on_fill. 유재선(상태변수 분리 Bn-01)·손현정(Bn-04/08 계약톨 건별 선검출·패키지화)이 $163B 2029-sold-out 백로그를 감가 없는 계약 toll 플로어로 세우고, 황성현(Bn-01/02 임계선 규율)·Courage(Bs-06 거대 매출 베이스 위 백로그 토크)가 px +35%>200DMA·bearish RSI divergence(px HH/RSI LH)·P/C 6.35를 tape fatigue로 읽어 \"방향은 위지만 속도에 프리미엄은 못 낸다\"며 chase-above를 금지한다. Steven Cress(Bs-02 궤적읽기)가 RS20 +21.7% leader를 정태 강도 스냅샷으로, 약세 RSI divergence를 그를 덮는 forward 속도신호로 분리해 1000-1040 fill이 둘의 화해점임을 못박는다. 살아남은 반대는 모멘텀/브레이크아웃 렌즈의 never-fills 경고(1092.71이 눌림 없이 달아날 위험)이므로 — fill은 arm하되 무진입 만료조건을 병기하고, R/R 2.5:1로 fatigue가 컨빅션을 캡하는 것까지 정직하게 남긴다.\n🏛 토론(5렌즈): go_on_fill — 5 렌즈 만장일치 fill-armed 구조 진입(황성현·Courage=conditional, 손현정·유재선·Cress=for). chase-above와 watch(무진입) 둘 다 기각. | 비대칭: 계약 백로그 toll 플로어라 fill 진입은 Q2 print과 무관하게 pays — 하방은 1000-1040 미시구조 리셋에 고정, 상방은 2029까지 sold-out toll이 carry. 단 R/R ~2.5:1은 tape fatigue(bearish RSI divergence + P/C 6.35)가 컨빅션을 정직하게 캡한 값. | GATE PASS | 생존반대: 모멘텀/브레이크아웃 렌즈(선제무력화된 경쟁 관점): OBV +68%·RS20 +21.7% leader·1092.71 돌파 임박이니 지금 사라, 안 올 눌림 기다리지 마라. → 살아남은 리스크는 never-fills: GEV가 1000-1040으로 되돌리지 않고 1092.71 위로 달아나면 fill-only 규율이 무브 전체를 놓친다. fill을 arm하되 만료/무진입 조건을 병기해야 이 반대가 봉인됨.",
+  "options": [
+   {
+    "key": "go_on_fill",
+    "label": "GO — enter only on pullback fill 1000-1040 ★"
+   },
+   {
+    "key": "watch",
+    "label": "No entry (extended + bearish divergence) (veto/dial)"
+   }
+  ],
+  "default_option": "go_on_fill",
+  "desk_default": "go_on_fill",
+  "debate_gate_pass": true
+ },
+ {
+  "prop_key": "AVAV_reclaim",
+  "title": "AVAV — armed reclaim octane (12.6% crowded-short squeeze fuel + OBV +90% vs crushed price)",
+  "body": "AVAV는 예측이 아니라 확증-게이트 구조 베팅으로 통과한다 — 손현정/유재선/황성현이 상태변수 다이버전스 카드로 축을 세웠다: $1.2B funded 백로그·book-to-bill 1.4가 주가 −42%<200DMA crush 중에도 상승했고 OBV +90%가 하락가에 역행 매집하는 라벨-실체 간극(Courage & Conviction의 '형편없는 회사 라벨 반증' + Steven Cress의 breadth 변곡). 12.6% 크라우디드 숏 + P/C 2.45 + skew −3.8 max-pessimism이 스퀴즈 옥탄이고, 광기 도그마에 정합하게 바이너리 print는 버린 채 오직 close>158.33 reclaim으로 턴을 확증한 뒤에만 TINY·stop 136.68·상관 washout max ONE으로 arm한다. 단 모멘텀 렌즈의 falling-knife 경고와 OBV 단일축 한계가 살아있으므로, reclaim 트리거와 tiny 사이징이 knife-catch를 값싼 비대칭 옵션으로 바꾸는 유일한 가드임을 못박는다 — 트리거 못 넘으면 진입 없음(watch).\n🏛 토론(5렌즈): for → go_reclaim (5/5, 황성현은 conditional이나 close>158.33 게이트를 달아 동일 착지) | 비대칭: 크라우디드 숏 12.6%+skew −3.8 max-pessimism+상태변수 다이버전스(백로그↑ vs 가격 −42%) = tiny·stop 136.68로 하방 캡한 값싼 옵션에 스퀴즈 옥탄이 target 230(~3.3:1)을 붙인다 — reclaim 게이트 덕에 확증 전까진 비용 0. | GATE PASS | 생존반대: 모멘텀/퀄리티 렌즈의 반박이 완전히 죽지 않고 살아 하방 가드로 잔존한다: 0/4 MA·RS60 −33.6% deep laggard·−42%<200DMA는 여전히 falling knife이며, 결정적으로 OBV +90%는 단일 축이라 '매집'을 증명하지 못한다(개인이 기관 이탈을 흡수 중일 수 있음 — flow_obv_investor_gap 교훈). 따라서 reclaim 트리거와 tiny 사이징은 장식이 아니라 load-bearing이다: close>158.33 확증이 빠지면 이건 knife-catch이고, OBV 다이버전스만으로 스마트머니라 단정 금지.",
+  "options": [
+   {
+    "key": "go_reclaim",
+    "label": "GO — arm reclaim close>158.33, TINY ★"
+   },
+   {
+    "key": "watch",
+    "label": "No entry until confirmed turn (veto/dial)"
+   }
+  ],
+  "default_option": "go_reclaim",
+  "desk_default": "go_reclaim",
+  "debate_gate_pass": true
+ },
+ {
+  "prop_key": "LNG_hold",
+  "title": "LNG — hold core, add-only on pullback 247-250 (extended RSI 76)",
+  "body": "LNG는 hold core, add-only on 247-250 pullback(RSI 76.0 EXTENDED). 황성현·손현정·유재선이 Cheniere take-or-pay 액화 톨(gas-to-AI-power 링크)을 계약된 rate-agnostic 상태변수/플로어(Bn-01·02·05·06)로 읽어 코어를 붙잡고, RSI 76은 방향이 아니라 속도 과열(구문 froth)이므로 추격 add를 금지한다. Steven Cress·C&C Investing는 하방 톨 플로어(Bs-04·06·07)와 상방 pullback-add 엔진을 한 점수로 뭉치지 말 것을 규율화 — add는 ≥3:1이 서는 247-250 눌림(Bs-02 진입 좌표 속도)에서만 earned. 모멘텀 렌즈의 'OBV +48%·FINRA z+1.48 confirmed-turn이니 지금 add'는 톨 플로어가 이미 코어를 지지해 긴급성이 없다는 논리로 선제무력화됐고, 남은 유보는 Cress의 RS60 −10.2% trailing 약세(눌림이 breakdown화하면 add 미실현) 한 가닥뿐.\n🏛 토론(5렌즈): hold_add_pullback (5/5 for) | 비대칭: 계약 take-or-pay 톨이 rate-agnostic 플로어로 좌측꼬리를 고정 → 코어는 공짜로 지지받고, add는 RSI 76 익스텐션 추격 대신 247-250 눌림(R/R≥3:1)에서만 earned. 비대칭은 익스텐션이 아니라 눌림에서만 회복된다. | GATE PASS | 생존반대: Steven Cress가 던진 RS60 −10.2% trailing 좌표 — 리더십이 식는 신호라면 247-250이 dip이 아니라 breakdown이 되어 earned add가 영영 트리거되지 않고 코어가 함께 흘러내릴 수 있다. confirmed-turn+OBV+48%로 반박됐지만, \"add가 안 뜨는 시나리오\"는 unanimous for 속에서도 살아남는 유일한 유보.",
+  "options": [
+   {
+    "key": "hold_add_pullback",
+    "label": "Hold core, add-only on 247-250 pullback ★"
+   },
+   {
+    "key": "hold_no_add",
+    "label": "Hold core only (veto/dial)"
+   }
+  ],
+  "default_option": "hold_add_pullback",
+  "desk_default": "hold_add_pullback",
+  "debate_gate_pass": true
+ },
+ {
+  "prop_key": "GD_ride",
+  "title": "GD — hold/ride to 393, keep stop 351 (near target, no add; R/R 0.83)",
+  "body": "5렌즈 만장일치 hold_ride, 살아남은 반대 없음. 유재선·황성현·손현정이 공통으로 진단: 서명된 NATO munitions/GD modifications(US card 07-11)는 감가되지 않는 실현 상태변수라 thesis 무손상(CONFIRMED-TURN·OBV +98%·약세 divergence 부재)이나, px 374.05가 target 393 코앞·RSI 71.6·R/R 0.83이라 신규 add 비대칭은 소진 — 저베타 diversifier라 공격책 우선순위 최하, add는 옳게 off. Steven Cress가 'add 함수 ≠ trim 함수' 분리(Bs-04)로 no-add와 no-trim을 동시 성립시키고, Courage & Conviction이 스탑이 좌측꼬리를 캡한 이상 19포인트 애널리스트 앵커를 위해 열린 꼬리를 forfeit할 이유 없음(Bs-06,Bs-02)을 못박아, 경쟁 모멘텀-트림 렌즈(RSI 71.6 익절)를 전원 선제무력화했다. 결론: hold_ride, stop 351 유지(엔진 Chandelier 346<351은 lowering이라 raise-only sanity로 351 hold), no add.\n🏛 토론(5렌즈): hold_ride | 비대칭: stop 351이 좌측꼬리를 이미 고정 → target 393까지 R/R 0.83으로 신규 자본 비대칭은 소진; 무장된 free 포지션은 스탑 위에서 태우되 add는 없다(add 관점 사실상 pass, 보드 최저 컨빅션). | GATE PASS",
+  "options": [
+   {
+    "key": "hold_ride",
+    "label": "Hold, ride to 393, keep stop 351, no add ★"
+   },
+   {
+    "key": "trim_partial",
+    "label": "Trim into RSI 71.6 near target (veto/dial)"
+   }
+  ],
+  "default_option": "hold_ride",
+  "desk_default": "hold_ride",
+  "debate_gate_pass": true
+ }
+]

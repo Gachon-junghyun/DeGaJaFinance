@@ -1,0 +1,11 @@
+{
+  "ticker": "086790",
+  "factors": {
+    "BOK_rate_NIM": {
+      "dir": "up",
+      "event": "0716 BOK hike 2.75% + Oct hike path -> NIM",
+      "conf": 0.6,
+      "updated": "2026-07-16"
+    }
+  }
+}

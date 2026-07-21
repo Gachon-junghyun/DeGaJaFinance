@@ -18,6 +18,8 @@ module_chart/output/
 # 생성물 (재생성 가능)
 REPORT/_tags.json
 REPORT/HANDOFF.md
+llm_outputs/_tags.json
+llm_outputs/HANDOFF.md
 pipeline/protocols/_compiled/
 epistemics/registry.json
 epistemics/REGISTRY_AUDIT.md

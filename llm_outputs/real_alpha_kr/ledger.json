@@ -1,13 +1,82 @@
 {
   "009150": {
     "name": "삼성전기",
-    "last_researched": "2026-07-16",
+    "last_researched": "2026-07-20",
     "last_verdict": "REAL_BUT_PRICED",
-    "report": "llm_outputs/2026-07-16/real_alpha_kr/009150/REPORT.md",
+    "prev_verdict": "REAL_BUT_PRICED",
+    "report": "llm_outputs/2026-07-20/real_alpha_kr/009150/REPORT.md",
     "observation_points": [
-      {"by_date": "2026-08-14", "claim": "Q2 기판믹스로 영업마진 개선", "falsifies_if": "마진 ≤6~7% 정체 → INFLATED"},
-      {"by_date": "2026-08-31", "claim": "외국인 순매수 유지", "falsifies_if": "순매도 전환 → 바닥지지 소멸"},
-      {"by_date": "2026-09-30", "claim": "재고 2.41조 소진", "falsifies_if": "매출 정체 속 재고 추가증가 → demand-pull"}
+      {
+        "by_date": "2026-08-14",
+        "claim": "Q2 영업마진 8.75% 이상 유지 + 패키지솔루션 매출비중 22.59% 이상",
+        "falsifies_if": "영업마진 8.0% 미만 후퇴 또는 패키지솔루션 비중 22.0% 미만 → 컨센 +86% 무근거 → INFLATED 하향"
+      },
+      {
+        "by_date": "2026-09-30",
+        "claim": "글라셈 3,191억 지분취득이 2026-09-01 예정대로 실행 완료·공시",
+        "falsifies_if": "09-30까지 취득완료 공시 부재 또는 금액·지분율 축소 정정 → 말vs행동 괴리표 최초 실패 → INFLATED"
+      },
+      {
+        "by_date": "2026-08-31",
+        "claim": "외국인 20일 누적 순매수 +10만주 이상 유지",
+        "falsifies_if": "순매도 전환 또는 +10만주 미만 감쇠 → 1,260,000 스윙저점 지지의 수급 근거 소멸"
+      },
+      {
+        "by_date": "2027-02-28",
+        "claim": "Si-Cap 1조 5,570억이 2027-01-01부터 매출 인식 개시, 컴포넌트 매출 가속으로 확인",
+        "falsifies_if": "계약 변경·해지·연기 공시 또는 2027 1Q 컴포넌트 매출 미가속 → Fwd 78배 전제 붕괴, BROKEN 검토"
+      }
+    ],
+    "op_hits": 0,
+    "op_misses": 0,
+    "note": "07-16 근거 3건 폐기(수주 오귀속·밸류업 공시 누락·신선도 위반). 티어 유지, 축 이동."
+  },
+  "047040": {
+    "name": "대우건설",
+    "last_researched": "2026-07-20",
+    "last_verdict": "REAL_BUT_PRICED",
+    "report": "llm_outputs/2026-07-20/real_alpha_kr/047040/REPORT.md",
+    "observation_points": [
+      {
+        "by_date": "2026-07-31",
+        "claim": "대미투자 1호 발표(07-22 김정관 산업장관 출국 → 07-24 러트닉 회담)에서 대우건설은 시공 주체로 지명되지 않으며, 07-31까지 대우건설의 원전 관련 단일판매·공급계약 공시는 0건이다",
+        "falsifies_if": "07-31 이전에 대우건설 명의의 체코·미국·베트남 원전 시공계약 공시(rcept_no)가 1건이라도 나오면 가설-1 반증이 틀린 것이며 평결은 REAL 쪽으로 재평가"
+      },
+      {
+        "by_date": "2026-08-31",
+        "claim": "30영업일 누적 외국인 순매수(module_KIS 047040 --investor 30)가 8월 말까지 플러스로 전환하지 못한다 (2026-07-20 현재 -68.2만주)",
+        "falsifies_if": "30영업일 창 기준 외국인 누적이 +300만주 이상 순매수로 전환하면 '되사기는 끝났다'는 판독이 기각되며 진짜 신규 매집이었다는 뜻"
+      },
+      {
+        "by_date": "2026-08-31",
+        "claim": "2026 반기보고서에서 영업활동현금흐름(OCF)이 순이익(NI)을 하회하며, 미청구공사·매출채권이 매출 증가율을 상회한다",
+        "falsifies_if": "반기보고서상 OCF >= NI 이고 매출채권 증가율이 매출 증가율 이하이면 B2 우려가 기각되며 평결은 REAL 쪽으로 한 칸 이동. 이 축은 이번 런이 검증에 실패한 축 — 다음 런은 여기서 시작"
+      }
+    ],
+    "op_hits": 0,
+    "op_misses": 0
+  },
+  "090430": {
+    "name": "아모레퍼시픽",
+    "last_researched": "2026-07-20",
+    "last_verdict": "REAL_BUT_PRICED",
+    "report": "llm_outputs/2026-07-20/real_alpha_kr/090430/verdict.json",
+    "observation_points": [
+      {
+        "by_date": "2026-08-14",
+        "claim": "2026 반기보고서에서 (a) 연결 OPM 이 7.9% 이상 유지, (b) 화장품 부문 OPM 이 8.45% 이상 유지, (c) 반기 OCF >= NI",
+        "falsifies_if": "연결 OPM 이 7% 미만으로 내려가거나 반기 OCF < NI 로 뒤집히면 'FY2025 마진 개선은 운전자본 일회성 청산의 산물'이 참이 되고 평결은 INFLATED 로 이동. 이번 런이 못 닫은 축 = TTM NI < FY2025 NI 원인 — 다음 런은 반드시 1Q/2Q 순이익 원문부터 연다."
+      },
+      {
+        "by_date": "2026-09-30",
+        "claim": "공매도 잔고(KRX, module_flow 090430.KS)가 covering 으로 전환하거나 2.87% 이하로 감소한다",
+        "falsifies_if": "잔고가 3.5% 이상으로 계속 building 하는데 주가가 120,000원대를 지키면 공매도가 내가 못 찾은 축(컨센 EPS +44% 붕괴 등)을 보고 있다는 뜻이며 이번 런의 B2 통과 판정을 재심한다. 반대로 covering 전환 시 실질 유통 기준 약 5.7% 크라우디드가 연료로 작동."
+      },
+      {
+        "by_date": "2026-08-31",
+        "claim": "(a) 서경배 회장의 추가 매도 공시(OpenDART elestock)가 0건이고 (b) 자기주식 소각 공시가 여전히 0건이며 (c) 안성 공장 매각 주간사 선정/본계약 공시가 진행된다",
+        "falsifies_if": "회장 추가 매도가 1건이라도 나오면 '트림이지 이탈 아님' 판독이 기각되고 내부자 분산 확정 → 평결 INFLATED 쪽으로 한 칸. 반대로 자기주식 소각 공시가 나오면 B3 괴리표의 최대 약점(인용된 베어 B-3)이 해소되며 REAL 쪽으로 한 칸."
+      }
     ],
     "op_hits": 0,
     "op_misses": 0

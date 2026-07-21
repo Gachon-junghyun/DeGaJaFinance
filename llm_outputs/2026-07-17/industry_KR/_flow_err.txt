@@ -1,0 +1,61 @@
+[dl] yfinance 배치 833종목 4mo …
+[dl] 완료 → prices_kr_2026-07-17.pkl
+[flow] 832종목 4축 계산 …
+  … 50/832
+  … 100/832
+  … 150/832
+  … 200/832
+  … 250/832
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 300/832
+  … 350/832
+  … 400/832
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 450/832
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 500/832
+  … 550/832
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 600/832
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 650/832
+  … 700/832
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 750/832
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 800/832
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\OneDrive\Desktop\mvp\research_Mvp\scripts\flow_read.py:114: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)

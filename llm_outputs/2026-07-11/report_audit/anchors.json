@@ -1,0 +1,238 @@
+{
+  "date": "2026-07-11",
+  "generated_at": "2026-07-12 08:45:15",
+  "stop_sanity": [
+    {
+      "book": "모의",
+      "ticker": "TSM",
+      "price": 437.6300048828125,
+      "stop": 419.9,
+      "target": 503.0,
+      "avg": 435.63,
+      "stop_below_price": true
+    },
+    {
+      "book": "모의",
+      "ticker": "GEV",
+      "price": 1089.5699462890625,
+      "stop": 1015.72,
+      "target": 1295.92,
+      "avg": 950.54,
+      "stop_below_price": true
+    },
+    {
+      "book": "모의",
+      "ticker": "WMB",
+      "price": 74.59329986572266,
+      "stop": 72.7,
+      "target": 83.0,
+      "avg": 72.99,
+      "stop_below_price": true
+    },
+    {
+      "book": "검증",
+      "ticker": "GOOGL",
+      "price": 354.94000244140625,
+      "stop": 340.87,
+      "target": 408.0,
+      "avg": 363.05,
+      "stop_below_price": true
+    },
+    {
+      "book": "검증",
+      "ticker": "NVDA",
+      "price": 209.8000030517578,
+      "stop": 190.0,
+      "target": 240.0,
+      "avg": 205.19,
+      "stop_below_price": true
+    },
+    {
+      "book": "검증",
+      "ticker": "AVGO",
+      "price": 400.7099914550781,
+      "stop": 366.03,
+      "target": 430.0,
+      "avg": 383.61,
+      "stop_below_price": true
+    },
+    {
+      "book": "검증",
+      "ticker": "RTX",
+      "price": 195.32009887695312,
+      "stop": 189.95,
+      "target": 215.0,
+      "avg": 190.66,
+      "stop_below_price": true
+    },
+    {
+      "book": "공격",
+      "ticker": "GD",
+      "price": 374.04998779296875,
+      "stop": 355.65,
+      "target": 393.0,
+      "avg": 344.71,
+      "stop_below_price": true
+    }
+  ],
+  "rr_check": [
+    {
+      "book": "모의",
+      "ticker": "TSM",
+      "rr": 3.69,
+      "below_rail": false,
+      "price": 437.6300048828125,
+      "stop": 419.9,
+      "target": 503.0
+    },
+    {
+      "book": "모의",
+      "ticker": "GEV",
+      "rr": 2.79,
+      "below_rail": false,
+      "price": 1089.5699462890625,
+      "stop": 1015.72,
+      "target": 1295.92
+    },
+    {
+      "book": "모의",
+      "ticker": "WMB",
+      "rr": 4.44,
+      "below_rail": false,
+      "price": 74.59329986572266,
+      "stop": 72.7,
+      "target": 83.0
+    },
+    {
+      "book": "검증",
+      "ticker": "GOOGL",
+      "rr": 3.77,
+      "below_rail": false,
+      "price": 354.94000244140625,
+      "stop": 340.87,
+      "target": 408.0
+    },
+    {
+      "book": "검증",
+      "ticker": "NVDA",
+      "rr": 1.53,
+      "below_rail": false,
+      "price": 209.8000030517578,
+      "stop": 190.0,
+      "target": 240.0
+    },
+    {
+      "book": "검증",
+      "ticker": "AVGO",
+      "rr": 0.84,
+      "below_rail": true,
+      "price": 400.7099914550781,
+      "stop": 366.03,
+      "target": 430.0
+    },
+    {
+      "book": "검증",
+      "ticker": "RTX",
+      "rr": 3.66,
+      "below_rail": false,
+      "price": 195.32009887695312,
+      "stop": 189.95,
+      "target": 215.0
+    },
+    {
+      "book": "공격",
+      "ticker": "GD",
+      "rr": 1.03,
+      "below_rail": true,
+      "price": 374.04998779296875,
+      "stop": 355.65,
+      "target": 393.0
+    }
+  ],
+  "catalyst_due": [
+    {
+      "id": 12,
+      "date": "2026-07-03",
+      "msg": "[catalyst] 7/3 NFP/claims = 레짐 마스터변수(us_macro_rates §1). NFP>100-150k & claims<250k = hawkish dot 생존(hyperscaler capped) / NFP<75k or claims>275k 3주연속 = dovish flip→long-duration(NVDA/GOOGL) snap-back ~2.5-3:1 진입. 6/24 M"
+    },
+    {
+      "id": 21,
+      "date": "2026-07-03",
+      "msg": "[strategy-US 7/3] NFP/claims = regime master var + Sept-HIKE delivery test. PCE printed 4.1% 3yr-high, Fed dot flipped to 1 HIKE, yet 10y FELL to 4.40 on Warsh credibility = word/price gap. Hot NFP -> gap closes, rate-se"
+    },
+    {
+      "id": 24,
+      "date": "2026-07-01",
+      "msg": "[strategy-kr 증권 점화감시] 국민연금 리밸런싱 실매도 07-01~ 도착 추적. 거래대금 증가→증권 OBV 누적 전환 확인처. 미래에셋 close>48,348 / 키움 close>399,358 / 삼성 close>115,245 + OBV→누적 동시충족 시 해당명 스타터 배치(엔진 size 재실행). 이동평균 분산으로 매도 온건하면 반사효과 약화=대기 지속"
+    },
+    {
+      "id": 26,
+      "date": "2026-07-07",
+      "msg": "[strategy-kr 7/7 삼성 2Q 잠정=전섹터 게이트] 오늘 D-1 신규 IT/부품 진입 동결. 결판 후: 본업(D램·HBM)마진 서프라이즈+D램20% 서면→삼성전자 close>328,988(#141)/SK하이닉스 close>2,488,350(#142) 점화 시 스타터. 본업부진 or '메모리 다이어트' 실증→killswitch, IT OW 재평가. SK OBV 07-06 분배→매집 "
+    },
+    {
+      "id": 27,
+      "date": "2026-07-08",
+      "msg": "[strategy-kr 조선/방산 이진] ①오늘밤(현지6일 오후5:10) 캐나다 60조 잠수함 우협 발표=한화오션 이진. 낙점→close>120,577(#145) 점화 확인 후 스타터 / TKMS 낙점→프리미엄 붕괴 진입금지. ②7-8일 앙카라 나토정상회의=한화에어로(보유#50) 무장노드. 유럽 지상무기 후속→hold, 미국산 락인→소외. 오늘 추격금지(한화오션 +6.5%)."
+    },
+    {
+      "id": 28,
+      "date": "2026-07-10",
+      "msg": "[strategy-kr 7/10 SK하이닉스 ADR 나스닥 상장 결판] BET_SHEET §D 캐스팅보트. 프리미엄 상장·초과청약 확증→'레버리지 되감기' 판정, 000660 급락 심화 킬스위치(#182 2.05M) 해제 후 진입 검토 / 디스카운트 상장→'피크아웃' 실자금 균열, IT OW 재평가·watch 유지. 당일 +4%↑ 초록봉 추격 금지 재확인."
+    }
+  ],
+  "ops_fired": [],
+  "book_facts": {
+    "모의": {
+      "book_value": 11012.87,
+      "deployed_pct": 22.2,
+      "n_positions": 3,
+      "unrealized_pnl_pct": 1.04
+    },
+    "검증": {
+      "book_value": 10957.07,
+      "deployed_pct": 30.5,
+      "n_positions": 4,
+      "unrealized_pnl_pct": 0.52
+    },
+    "공격": {
+      "book_value": 11022.06,
+      "deployed_pct": 14.2,
+      "n_positions": 1,
+      "unrealized_pnl_pct": 1.12
+    }
+  },
+  "report_files": [
+    "llm_outputs/2026-07-11/company_CEG/COMPANY_ANALYSIS.md",
+    "llm_outputs/2026-07-11/company_KMI/COMPANY_ANALYSIS.md",
+    "llm_outputs/2026-07-11/company_MRVL/COMPANY_ANALYSIS.md",
+    "llm_outputs/2026-07-11/company_MU/COMPANY_ANALYSIS.md",
+    "llm_outputs/2026-07-11/company_NRG/COMPANY_ANALYSIS.md",
+    "llm_outputs/2026-07-11/company_TLN/COMPANY_ANALYSIS.md",
+    "llm_outputs/2026-07-11/company_VST/COMPANY_ANALYSIS.md",
+    "llm_outputs/2026-07-11/industry_KR/BET_SHEET.md",
+    "llm_outputs/2026-07-11/industry_KR/MACRO_REPORT.md",
+    "llm_outputs/2026-07-11/industry_KR/SECTOR_DEEP_ENRG.md",
+    "llm_outputs/2026-07-11/industry_KR/SECTOR_DEEP_HLTH.md",
+    "llm_outputs/2026-07-11/industry_KR/SECTOR_DEEP_INDU.md",
+    "llm_outputs/2026-07-11/industry_KR/SECTOR_DEEP_IT.md",
+    "llm_outputs/2026-07-11/industry_KR/SECTOR_ROTATION.md",
+    "llm_outputs/2026-07-11/industry_US/BET_SHEET.md",
+    "llm_outputs/2026-07-11/industry_US/MACRO_REPORT.md",
+    "llm_outputs/2026-07-11/industry_US/SECTOR_DEEP_ENRG.md",
+    "llm_outputs/2026-07-11/industry_US/SECTOR_DEEP_INDU.md",
+    "llm_outputs/2026-07-11/industry_US/SECTOR_DEEP_IT.md",
+    "llm_outputs/2026-07-11/industry_US/SECTOR_DEEP_UTIL.md",
+    "llm_outputs/2026-07-11/industry_US/SECTOR_ROTATION.md",
+    "llm_outputs/2026-07-11/strategy_hyper/CYCLE_RADAR.md",
+    "llm_outputs/2026-07-11/strategy_hyper/HYPER.md",
+    "llm_outputs/2026-07-11/strategy_hyper/SOURCES.md",
+    "llm_outputs/2026-07-11/strategy_hyper/SOURCES_EXEC.md"
+  ],
+  "flags": {
+    "critical_stops": 0,
+    "rr_below_rail": 2,
+    "catalysts_to_verify": 6,
+    "ops_fired_48h": 0
+  }
+}

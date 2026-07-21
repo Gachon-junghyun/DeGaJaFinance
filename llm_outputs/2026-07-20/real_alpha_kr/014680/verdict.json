@@ -1,0 +1,179 @@
+{
+  "protocol": "real_alpha_kr",
+  "execution_note": "8 stages executed manually from pipeline/protocols/_compiled/real_alpha_kr.md. run_protocol.py NOT used and out/pipeline_runs/ NOT touched (3 concurrent runs share the checkpoint).",
+  "code": "014680",
+  "name": "한솔케미칼",
+  "run_date": "2026-07-20",
+  "binding": false,
+  "advice": false,
+  "read_only": true,
+  "verdict_prev": null,
+  "verdict": "REAL-but-PRICED",
+  "delta_line": "평결: 신규 → REAL-but-PRICED",
+  "basis_one_line": "OCF 2,004.0억 vs NI 1,481.3억 (accrual ratio -3.41%), 성장의 81.7%가 전자·이차전지소재, 600억 자사주 실제 소각 — 사업은 진짜. 그러나 전부 PER 17.7x/PBR 2.34x(피어 중앙값 위)와 미마킹다운 컨센 402,500원에 선반영.",
+
+  "asof": {
+    "flow_short_rs_obv": "2026-07-16 (BEFORE today's semiconductor selloff)",
+    "financials": "FY2025 사업보고서 (2026-03-18, rcept 20260318001424)",
+    "price": "2026-07-20 pre-open, 237,000~237,500원",
+    "news_brief": "2026-07-20 partial (publish-time binned, floor not full count)"
+  },
+
+  "pulse": {
+    "classification": "sector event",
+    "evidence": "brief 2026-07-20 domestic: 1,031 articles -> 182 events -> 100 market. Semiconductor selloff sits in BODY not HEAD: '미 반도체주 급락 여파·삼성전자·SK하이닉스 프리마켓 6%대 약세' [8건/4매체]. 014680 name-specific news in last 3 days: 0.",
+    "self_score": "SKIPPED - first-ever research (ledger holds only 009150)"
+  },
+
+  "block_a_chain_alpha": {
+    "node_verdict": "margin-capturing materials bottleneck, NOT pass-through",
+    "bottleneck_evidence": "OPM 16.59% -> 17.67% (+1.08%p) WHILE revenue +13.9%; inventory -1.7% during +13.9% sales",
+    "profit_engine_segment": {
+      "name": "전자 및 이차전지소재",
+      "revenue_eok": 3247.1, "share_pct": 47.5, "yoy_pct": 37.1, "growth_contribution_pct": 81.7
+    },
+    "segments_other": [
+      {"name": "정밀화학(과산화수소)", "revenue_eok": 2177.3, "share_pct": 31.9, "yoy_pct": 8.9, "growth_contribution_pct": 16.5},
+      {"name": "제지·환경", "revenue_eok": 1100.6, "share_pct": 16.1, "yoy_pct": 1.8, "growth_contribution_pct": 1.8}
+    ],
+    "subsidiary_taepax": {"revenue_eok": 1411.2, "electronic_materials_share_pct": 56.6},
+    "book_to_bill": "UNCOMPUTABLE - 0 단일판매·공급계약 공시 in 400 days",
+    "capex_commit": {"date": "2026-07-14", "amount_eok": 1000, "purpose": "반도체용 핵심 소재 제조시설 + 연구시설 (완주산단)", "vs_fy2025_capex": "1.20x", "label": "MOU - news-sourced, NOT a DART filing, no binding force"},
+    "pricing_power": "CONFIRMED (OP +21.3% > revenue +13.9%)",
+    "mispriced_node": "NONE - this name is itself well-covered (foreign 40.59% highest among peers, JPM AM 5.51%, consensus coverage)",
+    "gaps": ["segment-level operating margin 미확보", "customer concentration 미확보", "electronic-materials ASP 미확보 (only BPO legacy ASP disclosed, falling 3 yrs)", "no spec table -> any 'tech superiority' claim demoted to 직감"]
+  },
+
+  "block_b_money_forensic": {
+    "B1_revenue_real": {"verdict": "PASS", "label": "검증함", "evidence": "inventory -1.7% vs sales +13.9%; receivables +7.0% < sales +13.9%; OCF +23.4% > sales +13.9%"},
+    "B2_earnings_real": {"verdict": "PASS (strong)", "label": "검증함",
+      "NI_eok": 1481.3, "OCF_eok": 2004.0, "accrual_gap_eok": -522.6, "OCF_over_NI": 1.35,
+      "accrual_ratio_pct": -3.41, "capex_over_DA": 1.61, "FCF_eok": 1168.7, "net_cash_eok": 213.5,
+      "note": "OCF > NI in all three years (FY2023 1441.1 / FY2024 1623.6 / FY2025 2004.0). one-off isolation 미확보."},
+    "B3_words_vs_actions": {
+      "verdict": "COMPANY delivers; SHAREHOLDERS sell",
+      "promise_source": "DART 기업가치제고계획 rcept 20260430800358 (2026-04-30)",
+      "promised_2026": "revenue+OP +10% growth, payout 20-50%",
+      "delivered_2025": "revenue +13.9%, OP +21.3% (matches company's claimed +14%/+21%); payout = 다당 283.5억 + 자사주 600억 = 883.5억 / NI 1481.3억 = 59.6%",
+      "buyback_executed": "184,050주 취득 완료 (2026-06-19) -> 218,863주 소각 = 2.03% of shares",
+      "counter_insider": "조동혁 회장 2025-08-25 -310,910주 장외매도 (11.65% -> 8.91%); trade price 미확보 (KR discloses direction+qty only)",
+      "counter_institution": "국민연금 13.49% (2025-06) -> 11.16% (2026-07-02); June 2026 alone -244,593주"
+    }
+  },
+
+  "size_check_on_green_tag": {
+    "tag_survives": false,
+    "shares_outstanding": 10794036,
+    "source_shares": "DART 최대주주변경 rcept 20260701801017 (2026-07-01)",
+    "bench_flip": {"vs_KS11": {"tag": "🟢가속", "RS20_pct": 11.2, "RS60_pct": -24.7}, "vs_SPY": {"tag": "🟡중립", "RS20_pct": -14.9, "RS60_pct": -22.1}},
+    "absolute_momentum_20d_pct": -15.5,
+    "price_vs_MAs": "0 of 4 (bearish stack 5<20<60<120), RSI 37.6",
+    "volume_surge": "0.57x (trade drought - OBV state word not trustworthy here)",
+    "magnitudes": {
+      "inst_20d_shares": 80000, "inst_20d_pct_of_shares": 0.74, "inst_20d_eok": 190.0,
+      "foreign_20d_shares": -24000, "foreign_20d_pct_of_shares": -0.22, "foreign_20d_eok": -57.0,
+      "retail_20d_shares": -44000, "retail_20d_eok": -104.5,
+      "short_balance_pct_float": 2.56, "short_balance_shares": 276327, "short_balance_eok": 656.3,
+      "short_20d_increase_shares": 66923, "short_20d_increase_pct_pt": 0.62, "short_20d_increase_eok": 158.9,
+      "NPS_june_sell_shares": -244593, "NPS_june_sell_eok": -580.9,
+      "JPM_AM_holding_shares": 594751, "JPM_AM_holding_pct": 5.51, "JPM_AM_holding_eok": 1412.5
+    },
+    "decisive_ratios": {
+      "NPS_sell_over_inst_buy": 3.06,
+      "short_increase_over_inst_buy": 0.84,
+      "JPM_holding_over_foreign_20d_sell": 24.8
+    },
+    "reading": "The institutional +80,000 is not accumulation but ABSORPTION of NPS supply (3.06x larger, prior month). Short added 84% of what institutions bought - the two forces are the same size and cancel. Foreign -24,000 is a residual, not a direction: JPM AM built 594,751 shares (24.8x) over the same stretch. The green tag exists because (a) RS was benched to a crashing KOSPI so 'fell less' coded as 'winning', and (b) the KRX 화학 label kept it out of the 전기·전자 screen where zero names passed.",
+    "screen_fixes_suggested": [
+      "compute RS against 2 benches and require sign agreement before emitting a tag",
+      "suppress the OBV state word when volume surge < 0.8x",
+      "print flow as % of shares outstanding AND as a ratio to the last quarter's 5%-holder changes"
+    ]
+  },
+
+  "sector_reclassification": {
+    "krx_label": "화학",
+    "economic_substance": "반도체·디스플레이·이차전지 소재",
+    "evidence": "DART 사업보고서 rcept 20260318001424: 전자·이차전지소재 47.5% of standalone revenue and 81.7% of growth; subsidiary 테이팩스 electronic materials 56.6%; 정밀화학 = 과산화수소 for '반도체, 디스플레이, 제지 및 섬유' (end-market split 미확보)",
+    "belongs_to_negative_complex": true,
+    "complex_measurement": "전기·전자 wflow -0.420 / eqflow -0.314, negative at BOTH mega and breadth; zero 전기·전자 name cleared 🟢가속 in the 829-name KOSPI universe",
+    "irony": "module_industry_map cosine-clusters 014680 with 노루홀딩스·페이퍼코리아·케이씨씨·태광산업·코스모화학 - the FILING LANGUAGE is still chemical/paper. Label chemical, prose chemical, revenue semiconductor."
+  },
+
+  "set_diff": {
+    "market_knows": [
+      "consensus target 402,500 / +69.8% upside, rating intact",
+      "PER TTM 17.66x / Fwd 15.0x / PBR 2.34x vs peer median 13.41x / 1.57x - premium already granted",
+      "foreign ownership 40.59% (highest among peers) + JPMorgan AM 5.51% new",
+      "the AI/semiconductor-materials growth narrative itself",
+      "value-up plan and buyback/cancellation (filed and executed May-Jun 2026)",
+      "RS60 -24.7% - the de-rating has ALREADY happened",
+      "short interest 2.56% float building - the bear view is already a position"
+    ],
+    "i_measured": [
+      "accrual ratio -3.41%, OCF/NI 1.35x - exceptional earnings quality",
+      "inventory -1.7% against sales +13.9% - no channel stuffing",
+      "OPM 16.59 -> 17.67% during growth - pricing power confirmed",
+      "81.7% of growth from 전자·이차전지소재 - it is a semiconductor materials company",
+      "value-up promises actually delivered (+14%/+21%, 59.6% payout, 2.03% cancelled)",
+      "net cash +213.5억, FCF 1,168.7억 covers the entire return programme",
+      "NPS June sell -244,593 = 3.06x the 20d institutional buy",
+      "short increase = 84% of the institutional buy",
+      "1,000억 semiconductor capex commitment on 2026-07-14 (1.20x annual capex)"
+    ],
+    "alpha_delta": [
+      "earnings quality is exceptional and is not separately priced when the AI-materials basket sells off together",
+      "the value-up plan was executed, not announced - a track record the KR market discounts by default",
+      "the 1,000억 semiconductor expansion (D-6) drew 4 articles in 30 days, 0 in 3 days - nearly unseen"
+    ],
+    "alpha_delta_strength": "THIN - all three confirm REAL, none of them make it CHEAP",
+    "risk_unseen": [
+      {"item": "consensus target 402,500 never marked down while RS60 -24.7% - revision bomb still pending", "strength": "high"},
+      {"item": "customer concentration never verified (module_business failed, no fallback)", "strength": "high"},
+      {"item": "company's OWN 2026 guidance is +10%, an explicit deceleration from +13.9%/+21.3%", "strength": "high"},
+      {"item": "NPS exit is in progress; whether the residual 11.16% keeps coming is unknown", "strength": "high"},
+      {"item": "segment-level margin never verified", "strength": "mid"},
+      {"item": "battery headwind: China ends lithium battery consumption-tax exemption (07-19), 삼성SDI target cut (07-20)", "strength": "mid"},
+      {"item": "electronic-materials ASP undisclosed; only BPO legacy ASP visible, down 3 straight years", "strength": "mid"},
+      {"item": "ESG C+ (lowest tier of 100 majors), chairman off-market sale -310,910 shares", "strength": "low"}
+    ]
+  },
+
+  "falsify": {
+    "bear_items_total": 11,
+    "rejected": 4,
+    "upheld": 7,
+    "rejected_items": ["chemical-cosplay (rejected by DART segment mix)", "earnings inflated by accounting (rejected by accrual ratio -3.41%)", "growth is channel stuffing (rejected by inventory/receivables)", "value-up is talk only (rejected by executed buyback+cancellation)"],
+    "upheld_items": ["battery headwind", "company itself guided deceleration to +10%", "consensus not marked down = revision bomb", "NPS exit in progress", "the institutional buy is a residual", "0.57x volume means no accumulation", "customer concentration unverified"],
+    "key_finding": "All 7 upheld items concern PRICE/FLOW/TIMING, none concern the authenticity of the business. That is exactly what routes the verdict to REAL-but-PRICED rather than INFLATED.",
+    "thinking_card": "Size Before Sign (PLAY43 refutation hammer) - applied to BREAK my own green tag, not to build the thesis"
+  },
+
+  "who_is_right": {
+    "on_business_authenticity": "the accumulating side",
+    "on_price_path": "the building short",
+    "deciding_primary_fact": "FY2025 consolidated cash-flow statement, DART rcept 20260318001424: OCF 2,004.0억 vs NI 1,481.3억 (accrual ratio -3.41%), with inventory FALLING 1.7% while revenue rose 13.9%. A short thesis of 'narrative ahead of substance' cannot survive that fingerprint.",
+    "short_classification": "downward PRESSURE against a real business, NOT informed capital calling a fake",
+    "protocol_rule_applied": "crowded short (>=2%) is squeeze fuel only while COVERING; while BUILDING it is downward pressure. Currently building (+0.62%p) -> pressure, not fuel. But because the pressure is aimed at a cash-verified business, the verdict is REAL-but-PRICED, not INFLATED/BROKEN.",
+    "caveat": "both flows are small: institutional buy 0.74% of shares, foreign sell 0.22%, short increase 0.62%. Neither side is 'informed capital' at this size. The one large actor is NPS, and it is selling."
+  },
+
+  "observation_points": [
+    {"id": 1, "by_date": "2026-08-14", "claim": "2Q26 반기보고서: if half-year OCF falls BELOW half-year NI (OCF/NI < 1.0), the Block-B pass is wrong and the verdict must be re-graded toward INFLATED.", "falsifies": "the spine of this verdict (accrual ratio -3.41%)", "status": "미도래"},
+    {"id": 2, "by_date": "2026-09-30", "claim": "If the consensus target is NOT cut by >=10% from 402,500, my #1 risk_unseen ('revision bomb') was overstated.", "falsifies": "the PRICED half of REAL-but-PRICED", "status": "미도래"},
+    {"id": 3, "by_date": "2026-10-31", "claim": "If NPS does NOT fall a further >=1%p from 11.16%, the 'exit in progress' reading is rejected.", "falsifies": "the supply-overhang argument", "status": "미도래"},
+    {"id": 4, "by_date": "2026-12-31", "claim": "If the 2026-07-14 전북 완주 1,000억 MOU is not confirmed by a DART 신규시설투자 filing or a visible capex step-up in quarterly reports, using it as evidence was an error.", "falsifies": "the capex-commitment leg of B1", "status": "미도래"}
+  ],
+
+  "tool_failures": [
+    {"tool": "module_business 014680", "error": "FileNotFoundError data/news_alert.db - client does not own the server news DB (P6), no API fallback", "impact": "customer concentration and segment margin unobtainable through the module; worked around via DART original XML for segment mix, but customer concentration REMAINS UNVERIFIED"},
+    {"tool": "module_disclosure 014680 --business-report", "error": "returned only DART viewer page furniture, not the II. 사업의 내용 body", "impact": "worked around by fetching document.xml directly from DART OpenAPI"},
+    {"tool": "module_chart 014680.KS --read", "error": "emitted only the CHART_READ summary block; no chart_014680.txt full grid produced", "impact": "protocol's '풀 그리드 정독' requirement NOT met"},
+    {"tool": "module_flow 014680 (bare code)", "error": "yfinance 404 'possibly delisted' - empty row, silently", "impact": "none - rerun with 014680.KS as warned"},
+    {"tool": "chain-hop", "error": "universe hardcoded to us_top300 -> 0/0 for KR themes", "impact": "NOT a negative result; the lens was simply not run"}
+  ],
+
+  "confidence": "medium-high on Block B (primary DART cash-flow, three-year series). medium on Block A (segment mix is primary, but segment margins, customer concentration and electronic-materials ASP are all 미확보). Flow axis is asof 2026-07-16 and predates today's semiconductor selloff.",
+
+  "ledger_note": "Shared ledger llm_outputs/real_alpha_kr/ledger.json deliberately NOT merged - 3 concurrent real_alpha_kr runs share that root. Merge payload left in ledger_fragment.json for a human to apply. op_hits=0, op_misses=0 (first research)."
+}

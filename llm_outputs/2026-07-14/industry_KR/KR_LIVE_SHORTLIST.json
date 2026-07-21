@@ -1,0 +1,169 @@
+{
+  "asof": "2026-07-14",
+  "filter": {
+    "floor_jo": 1.0,
+    "tags": [
+      "🟢가속"
+    ],
+    "top": 15,
+    "days": 20
+  },
+  "shortlist": [
+    {
+      "ticker": "008930.KS",
+      "name": "한미사이언스",
+      "sector": "금융",
+      "mcap_h": null,
+      "flow_score": 1.0,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.186,
+      "rs20": 26.3,
+      "rs60": -30.9,
+      "vol_surge": 2.74,
+      "investor": {
+        "foreign_20": -517891,
+        "inst_20": 469847,
+        "indiv_20": 23574,
+        "foreign_5": -354670,
+        "inst_5": 362103,
+        "smart_buy": false,
+        "distribution_to_retail": true,
+        "foreign_turning": false,
+        "state": "⚠개인 흡수(외국인 이탈)",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "073240.KS",
+      "name": "금호타이어",
+      "sector": "화학",
+      "mcap_h": null,
+      "flow_score": 1.0,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.574,
+      "rs20": 49.8,
+      "rs60": -6.6,
+      "vol_surge": 3.42,
+      "investor": {
+        "foreign_20": -8285492,
+        "inst_20": -4479490,
+        "indiv_20": 13154496,
+        "foreign_5": -1253105,
+        "inst_5": -1826391,
+        "smart_buy": false,
+        "distribution_to_retail": true,
+        "foreign_turning": false,
+        "state": "⚠개인 흡수(외국인 이탈)",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "161890.KS",
+      "name": "한국콜마",
+      "sector": "화학",
+      "mcap_h": null,
+      "flow_score": 0.939,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.282,
+      "rs20": 44.5,
+      "rs60": 14.4,
+      "vol_surge": 1.49,
+      "investor": {
+        "foreign_20": 41898,
+        "inst_20": 891271,
+        "indiv_20": -941194,
+        "foreign_5": 145622,
+        "inst_5": -77687,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "010950.KS",
+      "name": "S-Oil",
+      "sector": "화학",
+      "mcap_h": null,
+      "flow_score": 0.817,
+      "tag": "🟢가속",
+      "velocity": 1.42,
+      "obv_norm": 0.398,
+      "rs20": 37.6,
+      "rs60": -0.2,
+      "vol_surge": 1.16,
+      "investor": {
+        "foreign_20": 362210,
+        "inst_20": 1095030,
+        "indiv_20": -1489150,
+        "foreign_5": 48885,
+        "inst_5": 723655,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "105560.KS",
+      "name": "KB금융",
+      "sector": "금융",
+      "mcap_h": null,
+      "flow_score": 0.753,
+      "tag": "🟢가속",
+      "velocity": 4.29,
+      "obv_norm": 0.087,
+      "rs20": 25.1,
+      "rs60": -0.2,
+      "vol_surge": 1.28,
+      "investor": {
+        "foreign_20": -2664490,
+        "inst_20": 2999918,
+        "indiv_20": -281989,
+        "foreign_5": -899533,
+        "inst_5": 1315823,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "006360.KS",
+      "name": "GS건설",
+      "sector": "건설",
+      "mcap_h": null,
+      "flow_score": 0.668,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.094,
+      "rs20": 10.6,
+      "rs60": -44.0,
+      "vol_surge": 1.25,
+      "investor": {
+        "foreign_20": 1709311,
+        "inst_20": 1859494,
+        "indiv_20": -3669121,
+        "foreign_5": 523948,
+        "inst_5": 783311,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    }
+  ],
+  "live": [
+    "161890.KS",
+    "010950.KS",
+    "105560.KS",
+    "006360.KS"
+  ]
+}

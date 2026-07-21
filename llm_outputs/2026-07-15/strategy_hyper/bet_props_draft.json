@@ -1,0 +1,65 @@
+{
+  "date": "2026-07-15",
+  "desk": "광기 (HYPER) id=5 paper",
+  "mode": "propose",
+  "macro_summary_fed_into_scenarios": "Fed funds 3.62% (hawkish-hold, Warsh) · 2y 4.21% · real-10y 2.32% rising · June CPI printed COOL (headline 3.5%, core 2.6% flat) = multiple-relief branch · regime risk_on scalar 1.0, VIX 16.5 · RS leader FLIPPED to power +31.4% vs chips +22.2% · oil/Hormuz structural (SPR 1983-low, WTI ~$81) but TACO ~30-40% · July CPI (mid-Aug) re-accel = 4-wk shelf life.",
+  "props": [
+    {
+      "prop_key": "VST_addfull_2026-07-15",
+      "archetype": "① 턴-트리거 (reclaim-gated)",
+      "title": "VST 풀-애드 점화 무장 — power RS-리더십 플립 + 쿨-CPI 멀티플 relief",
+      "binary_not_bet": "VST Q2 실적(8/7) 비트 · Meta PPA 인도 정시성 · 상인 전력가 스파이크",
+      "structure_bet": "159.20(20DMA) reclaim + OBV 누적 유지 시 발화. 검증된 Meta 2,176MW 20년 PPA floor(인도 Dec-2026 개시)+CEG 대비 진짜 디스카운트(fwd P/E 14.7 vs 18.9, EV/EBITDA 11.1 vs 14.4). 스탑 151.05가 손실 −4.7% 캡 → Aug-7 숫자와 무관하게 쿨-CPI 멀티플 relief+파워 RS 리더십 재평가에 베팅. 바이너리/구조 분리 = 예측베팅 아님.",
+      "전개": "트리거 159.20 발화 → base 200(최근 고점 +26%) / bull 222(+40%, 4Phase 비즈불 $225). 무효화: settled close<151.05(20DMA 상실+OBV 분배 전환)→스탠드다운. RS60 −11.4%=따라잡기 여력, 상인수익 오늘·계약floor 2분기 후 도착.",
+      "관건": "settled close>159.20이 '유지'되며 OBV가 누적을 지키나? (그 한 번의 확인이 상인 IPP를 비대칭 애드로 전환)",
+      "claude_lean": "arm_add ★ — 지난 사이클 2.61:1로 정직히 demote했던 바로 그 애드가 코일이 조여져 트리거↓(167.2→159.20)·스탑 타이트(146.18→151.05)로 trade R/R 7.71:1 재자격. 비즈 asym 1.8:1(정직 숫자; 7.71은 타이트-스탑 아티팩트)이나 ≥1.5 통과 + 쿨-CPI/파워-리더십이 정확히 이 이름 순풍. ★프레이밍 교정: '오늘 계약현금'이 아니라 '2분기 후 도착하는 가시적 계약floor'.",
+      "go_framing": {
+        "shot_value": "bull +40%(222) / 캡 −4.7%(151.05) = trade R/R 7.71:1 (biz 1.8:1)",
+        "go_trigger": "settled close>159.20 + OBV누적",
+        "size_preset": "컨비션 목표 ~5-6% (스타터 ½ 위 측정된 풀-애드 tranche; 파워 서브테마 현재 4.3%=여력 충분)",
+        "permission_stop": "151.05 = 최대 −4.7%만 잃음 → 타이트 스윙저점이라 질러도 된다"
+      },
+      "options": [
+        {"key": "arm_add", "label": "arm_add ★ (풀-애드 발화무장, 데스크 컨비션)"},
+        {"key": "arm_small", "label": "arm_small (하프-tranche로 다이얼다운)"},
+        {"key": "pass", "label": "pass (veto — 스타터 ½만 유지)"}
+      ],
+      "default_option": "arm_add",
+      "desk_default_conservative": "pass"
+    },
+    {
+      "prop_key": "AVGO_coiladd_2026-07-15",
+      "archetype": "① 턴-트리거 (coil reclaim-gated)",
+      "title": "AVGO 코일-애드 점화 무장 — Nasdaq COT 4%ile 크라우디드숏 + 쿨-CPI relief",
+      "binary_not_bet": "AVGO Q3 실적(9/4) 가이드 +84% 비트 · XPU 백로그의 $100B/2027 전환",
+      "structure_bet": "392.59 코일 reclaim + OBV +91% 누적 시 발화. 검증된 Apple $30B/2031 구매약정 floor(RF/무선 중심 retention)+$73B AI 백로그+깨끗한 현금(op-CF $27.5B>NI, FCF 배당+바이백 1.5x+VMware 부채 커버). 스탑 360.45=−8% 캡. Nasdaq-100 COT 4%ile 크라우디드숏=쿨-CPI relief 스퀴즈가 촉매(포지셔닝, 실적바이너리 아님). TACO 헤지(디에스컬레이션→반도체 rip) 겸함.",
+      "전개": "트리거 392.59 발화 → base 460(+18%) / bull 524(+34%, 4Phase 비즈불 $620 대비 보수). 무효화: settled close<360.45(코일 하단 상실). RS60 −9.5% 여력이나 재평가된 이름(NVDA가 fwd PE 더 쌈)이라 모디스트 사이즈.",
+      "관건": "settled close>392.59가 OBV 누적 유지하며 프린트되나? (펀더+QoE는 이미 애드 게이트 통과, 트리거 확인만 남음)",
+      "claude_lean": "arm_small ★ — trade R/R 4.09:1로 3:1 통과(지난 사이클 2.57:1서 재자격). 하지만 4Phase가 시드 6:1을 2.6:1로 정직히 내림(Apple floor는 AI-XPU 아닌 RF·매출 6%; XPU 백로그가 테제 90%). 재평가된 이름이라 컨비션 목표 모디스트. 크라우디드숏 스퀴즈+TACO 헤지 가치가 arm 정당화.",
+      "go_framing": {
+        "shot_value": "bull +34%(524) / 캡 −8%(360.45) = trade R/R 4.09:1 (biz 2.6:1)",
+        "go_trigger": "settled close>392.59 + OBV누적",
+        "size_preset": "컨비션 목표 ~4-5% (코어-애드 모디스트, 재평가 반영)",
+        "permission_stop": "360.45 = 최대 −8%만 잃음 → 코일 하단이라 질러도 된다"
+      },
+      "options": [
+        {"key": "arm_small", "label": "arm_small ★ (모디스트 코어-애드, 데스크 컨비션)"},
+        {"key": "arm_add", "label": "arm_add (풀-애드로 다이얼업)"},
+        {"key": "pass", "label": "pass (veto — 코어만 유지)"}
+      ],
+      "default_option": "arm_small",
+      "desk_default_conservative": "pass"
+    }
+  ],
+  "not_proposed": {
+    "CEG": "flow faded — OBV 매집→중립, short z+1.92 building(지난 사이클 base-built cover와 반대), BASING 미확인 turn, 무보호 biz 0.9:1. VST가 더 깨끗한 IPP 애드(7.71:1). 지난 #94 armed는 heads-up로만 잔존, 신규 컨비션 철회.",
+    "NRG": "OBV 축 충돌(text_chart 분배 −59% vs flow 매집)+NEUTRAL/CHOP 미확인 turn+RS60 −25% 심한 lag. watch.",
+    "MPC": "parabolic RSI 88.5 (px/200 +41.8%) — no-chase 레일. 최고 신선 테마지만 스탑이 멀어 R/R 붕괴. 눌림 대기.",
+    "PSX": "parabolic RSI 82.6 — no-chase 레일. BET_SHEET 2주 리드+TACO-resilient지만 진입 불가(눌림 대기). 포렌식 리포트 부재.",
+    "MET": "FIN 주변부 + BREAKOUT에서 bearish divergence + OBV 분배 −34% = 돌파 내부모멘텀 약화. 광기 rate-toll DNA 부적합.",
+    "Intel": "saw via blindspot(samples 'violent breakout'/'margins improving'), demoted: semi 턴어라운드-베팅, apex OW leg 아님+깨끗한 비대칭 부재.",
+    "SpaceX": "saw via blindspot(#8 emerging 181), demoted: private, no clean listed vehicle (recurring SPCX lesson).",
+    "Mega-cap (AAPL/META/NVDA/TSLA)": "saw via blindspot/cycle_radar absolute top, demoted: already-priced; 노출은 AVGO(Apple ASIC)+파워 legs(Meta PPA)로 표현.",
+    "C/CME/WAB/CAT/CMI": "screener 신규지만 below macro/cycle relevance cutoff — generic rate-sensitive 은행/산업 눌림, 광기 비대칭·사이클 OW leg 정렬 약함."
+  }
+}

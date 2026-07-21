@@ -1,0 +1,179 @@
+{
+  "code": "047040",
+  "name": "대우건설",
+  "protocol": "real_alpha_kr",
+  "run_date": "2026-07-20",
+  "binding": false,
+  "read_only": true,
+  "not_investment_advice": true,
+  "prev_verdict": null,
+  "verdict": "REAL_BUT_PRICED",
+  "delta_line": "평결: 신규→REAL-but-PRICED",
+  "cracked_axis": "서사(원전/대미투자) — 2026-06-26 NH 가 대미 원전 투자 지연을 사유로 원전 타깃 멀티플 27→19배, 목표가 5만→3.6만원으로 하향한 시점에 균열이 확인됨",
+  "confirmed_axis": "수주(국내 주택·공공) — DART 400일 17건 9.73조, 최근 120일 4.97조로 일평균 2.44배 가속, 2026-07-20 상도15구역 1조4,367억 추가",
+  "one_line": "서사는 원전이었지만 서명된 것은 아파트였고, 외국인은 매집한 게 아니라 되산 것이었다.",
+
+  "prev_op_review": {
+    "status": "최초 리서치 — 원장에 047040 엔트리 없음",
+    "graded": 0,
+    "hits": 0,
+    "misses": 0,
+    "pending": 0
+  },
+
+  "hypothesis_discrimination": {
+    "asked_by": "user — 외국인 매집이 원전/대미투자 다리인가",
+    "answer": "아니다",
+    "1_원전_대미투자": {
+      "verdict": "반증",
+      "evidence": "DART 400일 수주공시 39건 전수 — 체코 0건·미국 0건·해외 발주처 0건. 원전은 한수원 3,357억 1건(2025-08-29, 국내, 전체 9.73조의 3.4%). NH 2026-06-26 목표가 5만→3.6만(-28%) 하향, 사유 명시 '체코 원전 수주와 대미 원전 투자 관련 논의 지연'. 가격 궤적: 07-10 17,450 → 07-20 14,7xx (대미투자 1호 발표 D-2로 접근하며 신저가권)"
+    },
+    "2_해외건설": {
+      "verdict": "반증",
+      "evidence": "400일 해외 발주처 수주공시 0건. 중동재건 TF 출범(2026-06-23)·정원주 회장 인도네시아 면담(2026-07-09)은 준비 행위이며 계약이 아님"
+    },
+    "3_주택_부동산정책": {
+      "verdict": "확증 — 유일하게 계약으로 뒷받침됨",
+      "evidence": "2026-07-20 08:33 상도15구역 재개발 시공사 선정 공사비 1조4,367억(3,207가구, 연합 본문 정독) · 2026-07-08 청라국제업무단지 주상복합 8,181억(rcept 20260708800371) · 2026-07-16 대신자산신탁 5,292억(rcept 20260716800502) · LH 3건 2.03조 = 400일 수주의 20.9% · 2026-07-20 신축매입임대 지원안 시행(토지비 80% 선지원, 착공 5개월 단축)"
+    },
+    "4_밸류업_자본환원": {
+      "verdict": "반증",
+      "evidence": "DART 자기주식 공시 400일 0건, div_yield null(peer 4사 전원 0.85~1.96% 배당), 밸류업/기업가치제고 공시 0건, 관련 발언 0건. 뉴스 AND 검색 히트는 전원 타사 밸류업 기사에 병기된 것"
+    },
+    "5_저PBR_숏커버": {
+      "verdict": "절반 반증 절반 유지",
+      "evidence": "저PBR 반증 — PBR 1.72 = peer 5사 중 최고, 중앙값 0.81의 2.1배. 기술적 부분 유지 — 공매도 1.19% float covering -0.82%p, RSI 25.0 과매도, 되사기가 07-07~07-10 폭락 4일 집중 후 07-13 정지. 숏커버 귀속 분리는 미확보(KR 투자자별 공매도 미제공)"
+    },
+    "6_지배구조_중흥": {
+      "verdict": "반증",
+      "evidence": "DART 5% 대량보유 변동 400일 0건, 지분변동 6건 전원 임원 소유상황보고서. 뉴스 '중흥건설' 120일 13건·'중흥그룹' 180일 11건 전수 확인 — 대우건설 지분·지배구조 이벤트 0건. 2자 한글어 '중흥'은 trigram 인덱스 0건 반환하므로 3자 이상으로 재검색"
+    }
+  },
+
+  "flow_finding": {
+    "headline_claim": "외국인 20영업일 +644.8만주 매집",
+    "finding": "20일 창의 인공물 — 30영업일 기준 외국인 -68.2만주 순매도",
+    "window_sensitivity": {
+      "5d": 18.5, "10d": 282.7, "15d": 342.9, "20d": 644.8, "25d": 55.5, "30d": -68.2,
+      "unit": "만주 (외국인 순매수 누적)"
+    },
+    "derived": {
+      "days_16_20": 301.9,
+      "days_21_25": -589.3,
+      "days_26_30": -123.7,
+      "days_21_30_total": -713.0,
+      "note": "구간 역산치 — KIS 일별 상세 10행 캡으로 일별 분포 미확보"
+    },
+    "arithmetic_check": "표시 10일 외국인 합 +282.6만 ≈ 모듈 10일 누적 +282.7만 → 산술 정합 확인(수동 검산)",
+    "concentration": "07-07~07-10 나흘 +266.7만주, 같은 나흘 주가 18,080→15,830, 개인 -326.6만주",
+    "stopped": "07-13 이후 매수 소멸(5일 +18.5만), 07-16 순매도 전환"
+  },
+
+  "observation_points": [
+    {
+      "id": "OP-1",
+      "by_date": "2026-07-31",
+      "claim": "대미투자 1호 발표(07-22 김정관 산업장관 출국 → 07-24 러트닉 회담)에서 대우건설은 시공 주체로 지명되지 않으며, 07-31까지 대우건설의 원전 관련 단일판매·공급계약 공시는 0건이다",
+      "falsifies_if": "07-31 이전에 대우건설 명의의 체코·미국·베트남 원전 시공계약 공시(rcept_no)가 1건이라도 나오면 가설-1 반증이 틀린 것이며 평결은 REAL 쪽으로 재평가"
+    },
+    {
+      "id": "OP-2",
+      "by_date": "2026-08-31",
+      "claim": "30영업일 누적 외국인 순매수(module_KIS 047040 --investor 30)가 8월 말까지 플러스로 전환하지 못한다 (2026-07-20 현재 -68.2만주)",
+      "falsifies_if": "30영업일 창 기준 외국인 누적이 +300만주 이상 순매수로 전환하면 '되사기는 끝났다'는 판독이 기각되며 진짜 신규 매집이었다는 뜻"
+    },
+    {
+      "id": "OP-3",
+      "by_date": "2026-08-31",
+      "claim": "2026 반기보고서에서 영업활동현금흐름(OCF)이 순이익(NI)을 하회하며, 미청구공사·매출채권이 매출 증가율을 상회한다",
+      "falsifies_if": "반기보고서상 OCF >= NI 이고 매출채권 증가율이 매출 증가율 이하이면 B2 우려가 기각되며 평결은 REAL 쪽으로 한 칸 이동. 이 축은 이번 런이 검증에 실패한 축 — 다음 런은 여기서 시작"
+    }
+  ],
+
+  "key_numbers": {
+    "price_20260720": 14860,
+    "market_cap_eok": 61061,
+    "consensus_target": 30556,
+    "pbr": 1.72,
+    "peer_pbr_median": 0.81,
+    "bps": 8745,
+    "per_fwd": 13.0,
+    "per_ttm": null,
+    "eps_ttm": null,
+    "div_yield": null,
+    "foreign_pct": 11.86,
+    "peer_foreign_pct_median": 25.21,
+    "week52_high": 40350,
+    "week52_low": 3320,
+    "rally_multiple": 12.15,
+    "pbr_at_low": 0.38,
+    "pbr_at_high": 4.61,
+    "rally_decomposition": "약 100% multiple-driven, 이익 기여 약 0 (근사 — BPS 현재값 1개만 확보)",
+    "drawdown_from_high_pct": -62.7,
+    "orders_400d_trillion_krw": 9.73,
+    "orders_400d_count": 17,
+    "orders_120d_trillion_krw": 4.97,
+    "orders_overseas_count_400d": 0,
+    "orders_nuclear_count_400d": 1,
+    "orders_nuclear_share_pct": 3.4,
+    "order_rate_acceleration": 2.44,
+    "book_to_bill_range": "1.74~2.24",
+    "treasury_filings_400d": 0,
+    "capital_change_filings_120d": 0,
+    "major_holder_5pct_changes_400d": 0,
+    "short_pct_float": 1.19,
+    "short_covering_pp": -0.82,
+    "rsi14": 25.0,
+    "rs20_vs_KS11": -5.5,
+    "rs60_vs_KS11": -55.9,
+    "vol_surge": 0.32,
+    "bench": "^KS11",
+    "segment_gpm_housing_pct": 21,
+    "segment_gpm_plant_pct": 17
+  },
+
+  "unresolved": {
+    "B2_earnings_quality": "미확보 — NI-OCF, accrual ratio, 재고/채권, capex 전부 산출 실패",
+    "reasons": [
+      "module_business 047040 크래시: FileNotFoundError data/news_alert.db (_ir_news.py:65) — extract()가 DART 재무 파싱 이전에 IR 뉴스를 무조건 조회",
+      "module_disclosure --business-report 는 DART 뷰어 프레임 텍스트만 반환(본문 JS 렌더링) — rcept_no 20260318001029 만 확보",
+      "KR 전용 재무제표 모듈이 리포에 부재 — module_fundamentals_us 는 US XBRL 전용 (구조적 갭)",
+      "module_valuation TTM PER/EPS null"
+    ],
+    "other_gaps": [
+      "KIS 일별 수급 10행 캡 — 21~30일차는 구간 역산치",
+      "내부자 매매 단가 KR 제도상 미제공 + 지분변동 6건 방향·수량 원문 미파싱",
+      "PF 우발채무 금액 미확보 — 타인에대한채무보증결정 120일 9건 확인, 합계 미파싱",
+      "숏커버 귀속 분리 불가 — KR 투자자별 공매도 미제공",
+      "chain-hop universe 가 us_top300 하드코딩 → KR 테마 0/0 (음성 결과 아님)",
+      "filing_diff(Lazy Prices) 미실시 — 도구 부재",
+      "module_math_check 는 path 인자만 받아 인라인 검산 불가 → 수급 검산 수동",
+      "2026-07-20 종가 수급 미관측(장중) — 상도15구역에 대한 외국인 반응 미확인"
+    ]
+  },
+
+  "tool_reliability_warning": {
+    "obv_conflict": {
+      "module_flow_live": "매집",
+      "module_chart_read": "분배 (20d 기울기 -78%)",
+      "sector_flow_json": "중립 (asof 2026-07-16)"
+    },
+    "obv_history_flips": ["2026-07-13 매집", "2026-07-14 분산", "2026-07-15 중립", "2026-07-16 중립"],
+    "rs20_range_observed": "-8.8 ~ -20.8",
+    "conclusion": "OBV 상태어와 RS 는 이 종목에서 재현되지 않는다 — 논지의 근거로 쓰면 안 된다",
+    "stale_artifact": "llm_outputs/2026-07-20/industry_KR/SECTOR_FLOW_KR.json 의 asof 는 2026-07-16 — 07-17·07-20 파일이 동일한 07-16 데이터를 재적재. 오늘 폴더에 있다고 오늘 데이터가 아니다",
+    "reproduced_axes": ["DART 공시 (rcept_no)", "KIS 투자자수급 (산술 정합 확인)"]
+  },
+
+  "artifacts": [
+    "llm_outputs/2026-07-20/real_alpha_kr/047040/PULSE.md",
+    "llm_outputs/2026-07-20/real_alpha_kr/047040/DATAPACK.md",
+    "llm_outputs/2026-07-20/real_alpha_kr/047040/SELF_SCORE.md",
+    "llm_outputs/2026-07-20/real_alpha_kr/047040/CHAIN_ALPHA.md",
+    "llm_outputs/2026-07-20/real_alpha_kr/047040/MONEY_FORENSIC.md",
+    "llm_outputs/2026-07-20/real_alpha_kr/047040/SET_DIFF.md",
+    "llm_outputs/2026-07-20/real_alpha_kr/047040/FALSIFY.md",
+    "llm_outputs/2026-07-20/real_alpha_kr/047040/REPORT.md",
+    "llm_outputs/2026-07-20/real_alpha_kr/047040/verdict.json"
+  ]
+}

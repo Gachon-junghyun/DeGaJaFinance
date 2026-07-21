@@ -1,0 +1,251 @@
+{
+  "as_of": "2026-07-14",
+  "horizon_days": 60,
+  "binaries": [
+    {
+      "date": "2026-07-15",
+      "time_et": "08:30",
+      "event": "June PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 1,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-07-29",
+      "time_et": "14:00",
+      "event": "FOMC decision (Warsh, no SEP)",
+      "axis": "rates",
+      "binary": true,
+      "source": "fed",
+      "confidence": "confirmed",
+      "days_until": 15,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-07-30",
+      "time_et": "08:30",
+      "event": "June PCE (Personal Income & Outlays)",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bea",
+      "confidence": "confirmed",
+      "days_until": 16,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-08-07",
+      "time_et": "08:30",
+      "event": "July Employment / NFP",
+      "axis": "labor",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 24,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-08-12",
+      "time_et": "08:30",
+      "event": "July CPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 29,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-08-13",
+      "time_et": "08:30",
+      "event": "July PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 30,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-08-28",
+      "time_et": "08:30",
+      "event": "July PCE (Personal Income & Outlays)",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bea",
+      "confidence": "estimate",
+      "days_until": 45,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-09-04",
+      "time_et": "08:30",
+      "event": "Aug Employment / NFP",
+      "axis": "labor",
+      "binary": true,
+      "source": "bls",
+      "confidence": "pattern",
+      "days_until": 52,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-09-10",
+      "time_et": "08:30",
+      "event": "Aug PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 58,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-09-11",
+      "time_et": "08:30",
+      "event": "Aug CPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "estimate",
+      "days_until": 59,
+      "kind": "macro"
+    },
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    }
+  ],
+  "macro": [
+    {
+      "date": "2026-07-15",
+      "time_et": "08:30",
+      "event": "June PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 1,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-07-29",
+      "time_et": "14:00",
+      "event": "FOMC decision (Warsh, no SEP)",
+      "axis": "rates",
+      "binary": true,
+      "source": "fed",
+      "confidence": "confirmed",
+      "days_until": 15,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-07-30",
+      "time_et": "08:30",
+      "event": "June PCE (Personal Income & Outlays)",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bea",
+      "confidence": "confirmed",
+      "days_until": 16,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-08-07",
+      "time_et": "08:30",
+      "event": "July Employment / NFP",
+      "axis": "labor",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 24,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-08-12",
+      "time_et": "08:30",
+      "event": "July CPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 29,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-08-13",
+      "time_et": "08:30",
+      "event": "July PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 30,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-08-28",
+      "time_et": "08:30",
+      "event": "July PCE (Personal Income & Outlays)",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bea",
+      "confidence": "estimate",
+      "days_until": 45,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-09-04",
+      "time_et": "08:30",
+      "event": "Aug Employment / NFP",
+      "axis": "labor",
+      "binary": true,
+      "source": "bls",
+      "confidence": "pattern",
+      "days_until": 52,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-09-10",
+      "time_et": "08:30",
+      "event": "Aug PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 58,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-09-11",
+      "time_et": "08:30",
+      "event": "Aug CPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "estimate",
+      "days_until": 59,
+      "kind": "macro"
+    },
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    }
+  ],
+  "earnings": []
+}

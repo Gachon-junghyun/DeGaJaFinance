@@ -1,0 +1,86 @@
+{
+  "as_of": "2026-07-16",
+  "horizon_days": 5,
+  "binaries": [
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    },
+    {
+      "date": "2026-07-16",
+      "event": "TSM earnings",
+      "ticker": "TSM",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 0,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-07-16",
+      "event": "NFLX earnings",
+      "ticker": "NFLX",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 0,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-07-21",
+      "event": "SCHW earnings",
+      "ticker": "SCHW",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 5,
+      "kind": "earnings"
+    }
+  ],
+  "macro": [
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    }
+  ],
+  "earnings": [
+    {
+      "date": "2026-07-16",
+      "event": "TSM earnings",
+      "ticker": "TSM",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 0,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-07-16",
+      "event": "NFLX earnings",
+      "ticker": "NFLX",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 0,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-07-21",
+      "event": "SCHW earnings",
+      "ticker": "SCHW",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 5,
+      "kind": "earnings"
+    }
+  ]
+}
