@@ -26,6 +26,7 @@
 
 | # | L1 block | Output |
 |---|---|---|
+| 0 | [HANDOVER](../L1_stages/handover.md) | `HANDOVER.md` (inherited standing view + scenarios scored + dig list) |
 | 1 | [MACRO](../L1_stages/macro.md) | `MACRO_REPORT.md` (propositions + ★transmission matrix + self-backtest hit-rate) |
 | 2 | [SWEEP](../L1_stages/sweep.md) | `SECTOR_FLOW.json` · `US_LIVE_SHORTLIST.json` · `CYCLE_EXPOSURE.md` |
 | 3 | [EVENT_ALPHA](../L1_stages/event_alpha.md) | `EVENT_ALPHA.md` (forward cards: building threads × money flow — bottom-up rotation cross-check) |
@@ -49,5 +50,7 @@
 - Catalyst injection at run-start: any binary ≤48h ⇒ PREMORTEM must produce a both-sides bracket
   (a one-way tilt into a known binary is a protocol violation).
 
-**Start → read [MACRO](../L1_stages/macro.md) and execute.** Advance only after each L1's EXIT CHECK
-passes. Finish with [handoff](../handoff.md) to update the tag ledger.
+**Start → read HANDOVER (stage 0) first, then MACRO, and execute.** Advance only after each L1's EXIT
+CHECK passes. Finish with [handoff](../handoff.md) to update the tag ledger — and write the analytical
+carry back to `handoff/*.md` per the HANDOVER stage. The two are different objects: the ledger records
+*what was covered*, the carry records *what we believe, what we pre-committed to, and what we retracted*.

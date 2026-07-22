@@ -1,5 +1,10 @@
 # 변곡점 ↔ 뉴스 실험 (KR) — 실측 노트
 
+> 📌 **근거 아카이브 (2026-07-22 재분류).** §6의 방법론 5개는
+> [`handoff/RESEARCH.md`](../handoff/RESEARCH.md)에 통합됐다(→ C1·C3·S1·S2·S6).
+> **§1~5(관측·기각·정성 패턴·한계)는 여기가 원본** — 시장 관측이지 작업 규칙이 아니다.
+> §2-③의 "233건 중 65건이 하루" 실측은 RESEARCH **S1**의 근거로 인용된다.
+
 > 엔진: [`module_inflection`](../module_inflection/) · 재현: `python -m module_inflection build --top 200`
 > → `stats` / `phrases` / `events` / `analog`. 원시 산출 `out/inflection/*.json`.
 > **이 문서는 참고 노트다 — 매매 지시가 아니고, REPORT/ 밖에 둬서 데스크 인수인계·paper book

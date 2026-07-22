@@ -15,7 +15,12 @@
 ## What this stage does
 - Tag each bet 🟢LIVE / 🟡PARTIAL (state the residual) / 🔴RESOLVED → **🔴 is DROPPED from the
   bettable list + logged with why** (so "it's cheap" can't resurface next run).
-- **Momentum-only flag**: RS/volume green but OBV distribution = tape trade → stamp "hard-stop required".
+- **Momentum-only flag**: RS/volume green but the accumulation axis disagrees = tape trade → stamp
+  "hard-stop required". ⚠ **Grade the disagreement before acting on it** (carry rule D6): the
+  accumulation read is **A-grade** when it comes from KR KIS foreign/institution actuals,
+  **B-grade** as a conditional confirmation, and **C-grade when it is only OBV** (r≈0.49 vs real
+  flow, **no leading power, t=1.00**). A C-grade disagreement **downgrades to 🟡 and is reported as
+  a disagreement** — it does not by itself convert a bet into a tape trade.
 - Positioning gate: KR — weak-hands actuals demote even a 🟢 flow; US — ⚡crowded-short is
   turn-conditional squeeze fuel, never a standalone buy (stamp hard-stop).
 - (US) `action_bracket` → `ACTION_TICKETS.md`: pre-committed conditional tickets — the pre-mortem's

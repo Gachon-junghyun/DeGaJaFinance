@@ -28,8 +28,36 @@
 - ⚠ Field note (2026-07-15): watch for the **correlated-UW pattern** — two UW sectors that are one
   bet in disguise (RE+DISC both = "core-sticky wins"); the lens-2 bracket is what catches it.
 
+### Carry rules from `handoff/RESEARCH.md` (loaded by HANDOVER; binding here)
+- ⚠ **Grade each branch by information content before the event, not after** (lens B4). Branches are
+  not symmetric: one outcome may only be able to *confirm*, while the other can *falsify*. Measured
+  framing — a hyperscaler capex **cut** breaks both the volume and the price leg of a memory thesis,
+  while a **raise** confirms volume only and cannot un-measure the contract-price series, because
+  the same buyers signed the price caps. **If neither branch would change the conclusion, the event
+  is not worth bracketing** — say so and spend the bracket elsewhere.
+- ⚠ **Freeze the observable and its threshold at registration** and write them into
+  `handoff/SCENARIOS.md`. A bracket whose threshold moves after the print is a description wearing a
+  forecast's clothes. Scoring is L3 [scenario_score](../L3_functions/scenario_score.md), against the
+  frozen threshold only.
+- ★ **Take the magnitude threshold from the options market, not from your judgement.**
+  `module_flow <TKR> --positioning` now prints `예상변동 ±x%` — the nearest-expiry ATM straddle, i.e.
+  what is **already priced**. A bracket that fires inside the implied move is not a surprise; a
+  bracket needs a threshold *outside* it to carry information. *Measured 2026-07-22*: GOOGL **±7.1%**
+  into that night's print. ⚠ Read `D±n` with it — the straddle covers the whole path to expiry, not
+  the event alone.
+- ⚠ **Score the observable, not the price reaction.** A capex raise the tape sells off still scored
+  as a raise. Conflating the two lets the next day's candle rewrite the hypothesis.
+- ⚠ **Date-clustered moves are one observation** (lens B3). N names moving together on one day is
+  **n≈1**, not n=N — measured 2026-07-21: 18/18 US semis green (median +5.0%), next session 4/4 KR
+  semis green (median +7.1%). Normalize by each name's own 20-day volatility before calling a move
+  exceptional: **+14.3% on a 9.7% daily sigma is a 1.48 z**, inside the regime, not an outlier.
+
 ## ✅ EXIT CHECK
 - [ ] 4 lenses fanned out in parallel; each returned named tickers + dated catalysts.
+- [ ] **Every bracket names its observable + frozen threshold + date, and is registered in
+      `handoff/SCENARIOS.md` with BOTH branches.** One-way brackets are protocol violations.
+- [ ] **Each branch graded by information content**; any binary where no branch would change the
+      conclusion is dropped with that reason stated.
 - [ ] BLINDSPOT_PREMORTEM.md written (legs · brackets · re-tags · cycle GAP).
 - [ ] Every catalyst-bearing leg promoted or logged; brackets handed to ALPHA; GAP handed to BET.
 - [ ] DEEP set updated if a leg was promoted (state the final set).

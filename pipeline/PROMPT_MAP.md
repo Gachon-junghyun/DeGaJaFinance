@@ -11,6 +11,9 @@
 The prompts form 5 families (desk flows); each flow is a **chain of L1 parts (stages/phases)**.
 
 ```
+[all desks]  HANDOVER (stage 0 — inherit the standing view before anything else)
+                 │ reads/writes ../handoff/ : STANDING_VIEW · SCENARIOS · RESEARCH
+                 ▼
 [industry]   MACRO → SWEEP → ROTATION → (PRE-MORTEM) → DEEP → BET → ALPHA → DRIFT
    │ sector pick + name pick ↓
 [company]    Phase1 business model → Phase2 earnings quality → Phase3 valuation → Phase4 technical setup → verdict
@@ -22,6 +25,31 @@ The prompts form 5 families (desk flows); each flow is a **chain of L1 parts (st
 ```
 
 **Meta 3 layers** (the reorganization axes): `PROTOCOL (design SPEC)` → `runtime canon (KR·US language-pure)` → `stages/ (on-disk execution chain, each = one L1)`.
+
+### HANDOVER — the cross-desk stage 0 (repo-native, no mvp ancestor)
+
+| Layer | Unit | Role |
+|---|---|---|
+| L1 | [handover](L1_stages/handover.md) | Inherit the standing view · score matured scenarios · stale-check · load the binding research rules · write the carry back at run end |
+| L2 | [carryover](L2_modules/carryover.md) | Read `../handoff/` + reconcile it against the mechanical tag ledger (`module_report_tags`); re-pull anything whose suspension has cleared |
+| L3 | [scenario_score](L3_functions/scenario_score.md) | One pre-registered scenario → one branch verdict, against the **frozen** threshold. `EXPIRED` is logged, never dropped |
+
+**Why it is stage 0 and not a closing step.** The ledger in `pipeline/handoff.md` answers *what was
+covered*; nothing answered *what we believe, what we pre-committed to, and what we already retracted*.
+Measured 2026-07-22: six judgments reversed **inside one session** — a cross-listing venue distortion
+read as directional flow, a half-quoted export print, a KR-measured signal applied to a US index, an
+unlabelled benchmark, an uncited lead-lag claim repeated on authority, and the demand side of the
+thesis never examined. All six were carry failures, not data failures — so the fix belongs *before*
+the first proposition is formed, not after the last.
+
+**Where its rules are enforced** (loaded by HANDOVER, binding downstream):
+MACRO — cite both halves of a print · name the benchmark · no cross-market signal transfer.
+DEEP — second-derivative reading for price cycles · peak-margin vs low-multiple check · name the
+node's customers · test or tag every lead/lag claim · state sub-sector dispersion.
+PREMORTEM — grade branches by information content · freeze observable+threshold at registration ·
+score the observable, not the tape · date-clustered moves are n≈1.
+L2 indicators — check for a second listing venue before reading domestic flow · cross-check
+providers before theorizing about a late series.
 
 ---
 

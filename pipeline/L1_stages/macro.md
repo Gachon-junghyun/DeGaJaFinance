@@ -47,6 +47,19 @@
      body-read before classifying; append confirmed new macro terms to the protocol's term table —
      the term set is living, never frozen).
 
+- ⚠ **Cite both halves of every headline print** (carry rule A1 of `handoff/RESEARCH.md`). A record
+  YoY figure and a negative sequential figure routinely ship in the same release — measured
+  2026-07-21: KR semiconductor exports **+180.6% YoY** while the like-for-like 1–20th window was
+  **−11.3% MoM**. A proposition quoting one half is half-quoted, not evidence. Compare like-for-like
+  windows (1–20th vs 1–20th), never a partial window against a full month.
+- ⚠ **A signal's market of measurement is part of the signal.** The `--scope` rule below governs the
+  news feed; the same rule governs **statistical results**. Measured failure: a KR-measured
+  fear-gauge result applied to VIX/US, while the source document recorded that the US replication
+  failed. Cross-market transfer needs its own replication, not an analogy.
+- ⚠ **Name the benchmark inline on every relative-performance claim.** Excess return changes sign
+  with it — measured 2026-07-22: 005930 is **−12.1% vs SPY and +10.1% vs `^KS11`** over the same
+  20 days. An unlabelled excess figure is a defective claim, not a strong one.
+
 - **Continuity anchor (DeGaJa-native — replaces the old mvp `insight_corpus` daily anchor):**
   read the PREVIOUS run's `llm_outputs/{prev date}/industry_{US|KR}/MACRO_REPORT.md` (propositions +
   addendums) and query the handoff ledger (`module_report_tags show`) for inherited coverage.
@@ -72,5 +85,9 @@
 - [ ] **No bucket's 0/near-0 hit count is trusted until its terms were passed as separate argv.**
       A quoted multi-word bucket returns ~0 silently, and `coverage` calls that 🟢 양호 — "quiet" that
       came from a mis-passed CLI is a fabricated proposition, not an observation.
+- [ ] **Every headline print cited with BOTH its YoY and its sequential figure, on a like-for-like
+      window.** A half-quoted print is not admissible as a proposition anchor.
+- [ ] **Every relative-performance number names its benchmark inline**; no statistical result is
+      carried across markets without its own replication.
 - [ ] Transmission matrix produced (all 11 sectors, one line each) — the downstream input.
 - [ ] MACRO_REPORT.md written with primary numbers explicit; self-backtest hit-rate appended; new blind-spot terms folded back into the term table.

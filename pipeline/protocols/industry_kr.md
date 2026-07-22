@@ -12,6 +12,7 @@
 
 | # | L1 block | Output |
 |---|---|---|
+| 0 | [HANDOVER](../L1_stages/handover.md) | `HANDOVER.md` (inherited standing view + scenarios scored + dig list) |
 | 1 | [MACRO](../L1_stages/macro.md) | `MACRO_REPORT.md` |
 | 2 | [SWEEP](../L1_stages/sweep.md) | `SECTOR_FLOW.json` · `KR_LIVE_SHORTLIST.json` |
 | 3 | [EVENT_ALPHA](../L1_stages/event_alpha.md) | `EVENT_ALPHA.md` (forward cards: building threads × money flow) |
@@ -31,4 +32,7 @@
 - **KR's edge axis**: SWEEP·DEEP·BET use `module_KIS` per-investor net-buy actuals
   (✅ real-hands / ❌ weak-hands) — the measured "who is buying" the US desk lacks.
 
-**Start → read [MACRO](../L1_stages/macro.md) and execute.** Pass each EXIT CHECK, finish with [handoff](../handoff.md).
+**Start → read HANDOVER (stage 0) first, then MACRO, and execute.** Pass each EXIT CHECK, finish with
+[handoff](../handoff.md) for the tag ledger — and write the analytical carry back to `handoff/*.md`
+per the HANDOVER stage. The two are different objects: the ledger records *what was covered*, the
+carry records *what we believe, what we pre-committed to, and what we retracted*.
