@@ -1,0 +1,149 @@
+{
+  "as_of": "2026-07-22",
+  "horizon_days": 12,
+  "binaries": [
+    {
+      "date": "2026-07-29",
+      "time_et": "14:00",
+      "event": "FOMC decision (Warsh, no SEP)",
+      "axis": "rates",
+      "binary": true,
+      "source": "fed",
+      "confidence": "confirmed",
+      "days_until": 7,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-07-30",
+      "time_et": "08:30",
+      "event": "June PCE (Personal Income & Outlays)",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bea",
+      "confidence": "confirmed",
+      "days_until": 8,
+      "kind": "macro"
+    },
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    },
+    {
+      "date": "2026-07-29",
+      "event": "SK하이닉스 ADR ↔ 원주 양방향 전환 개시",
+      "ticker": "000660",
+      "axis": "conversion",
+      "binary": true,
+      "source": "news",
+      "confidence": "confirmed",
+      "note": "2026-07-10 나스닥 상장($26.5B) 이후 교환이 막혀 ADR 프리미엄이 최대 +50%, 현재 ~25%. 전환 개시로 차익거래가 열리면 프리미엄이 붕괴한다. ★ 이 날 전까지 서울 원주의 외국인 수급은 방향이 아니라 창구이동으로 오염돼 있어 해석 불가 — handoff/RESEARCH.md D1 참조.",
+      "days_until": 7,
+      "kind": "structural"
+    },
+    {
+      "date": "2026-07-29",
+      "event": "금융위·금감원 지배구조 선진화 방안 (8대 지주)",
+      "ticker": null,
+      "axis": "governance",
+      "binary": true,
+      "source": "news",
+      "confidence": "estimate",
+      "note": "회장 3연임 법적 금지·주총 2/3·클로백 등. 3연임 금지가 위헌 논란에 직면해 보완책 검토 보도가 나왔다 — 'D-1 with content'에서 'contested'로 강등된 상태. 날짜와 내용 모두 재확인 필요.",
+      "days_until": 7,
+      "kind": "structural"
+    },
+    {
+      "date": "2026-07-31",
+      "event": "SK이터닉스 KKR SPA 클로징 (SK디스커버리 30.98% 매각)",
+      "ticker": "475150",
+      "axis": "offering",
+      "binary": true,
+      "source": "dart",
+      "confidence": "estimate",
+      "note": "주당 ₩23,700 ≈ 시장가 대비 −58%. 06-30에서 1회 연기된 이력이 있어 재확인 필수. 공매도 2.53%는 스퀴즈가 아니라 이벤트 포지셔닝일 가능성.",
+      "days_until": 9,
+      "kind": "structural"
+    }
+  ],
+  "macro": [
+    {
+      "date": "2026-07-29",
+      "time_et": "14:00",
+      "event": "FOMC decision (Warsh, no SEP)",
+      "axis": "rates",
+      "binary": true,
+      "source": "fed",
+      "confidence": "confirmed",
+      "days_until": 7,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-07-30",
+      "time_et": "08:30",
+      "event": "June PCE (Personal Income & Outlays)",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bea",
+      "confidence": "confirmed",
+      "days_until": 8,
+      "kind": "macro"
+    },
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    }
+  ],
+  "earnings": [],
+  "structural": [
+    {
+      "date": "2026-07-29",
+      "event": "SK하이닉스 ADR ↔ 원주 양방향 전환 개시",
+      "ticker": "000660",
+      "axis": "conversion",
+      "binary": true,
+      "source": "news",
+      "confidence": "confirmed",
+      "note": "2026-07-10 나스닥 상장($26.5B) 이후 교환이 막혀 ADR 프리미엄이 최대 +50%, 현재 ~25%. 전환 개시로 차익거래가 열리면 프리미엄이 붕괴한다. ★ 이 날 전까지 서울 원주의 외국인 수급은 방향이 아니라 창구이동으로 오염돼 있어 해석 불가 — handoff/RESEARCH.md D1 참조.",
+      "days_until": 7,
+      "kind": "structural"
+    },
+    {
+      "date": "2026-07-29",
+      "event": "금융위·금감원 지배구조 선진화 방안 (8대 지주)",
+      "ticker": null,
+      "axis": "governance",
+      "binary": true,
+      "source": "news",
+      "confidence": "estimate",
+      "note": "회장 3연임 법적 금지·주총 2/3·클로백 등. 3연임 금지가 위헌 논란에 직면해 보완책 검토 보도가 나왔다 — 'D-1 with content'에서 'contested'로 강등된 상태. 날짜와 내용 모두 재확인 필요.",
+      "days_until": 7,
+      "kind": "structural"
+    },
+    {
+      "date": "2026-07-31",
+      "event": "SK이터닉스 KKR SPA 클로징 (SK디스커버리 30.98% 매각)",
+      "ticker": "475150",
+      "axis": "offering",
+      "binary": true,
+      "source": "dart",
+      "confidence": "estimate",
+      "note": "주당 ₩23,700 ≈ 시장가 대비 −58%. 06-30에서 1회 연기된 이력이 있어 재확인 필수. 공매도 2.53%는 스퀴즈가 아니라 이벤트 포지셔닝일 가능성.",
+      "days_until": 9,
+      "kind": "structural"
+    }
+  ]
+}

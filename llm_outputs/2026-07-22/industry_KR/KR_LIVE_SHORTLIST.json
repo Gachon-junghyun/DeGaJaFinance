@@ -1,0 +1,93 @@
+{
+  "asof": "2026-07-22",
+  "filter": {
+    "floor_jo": 1.0,
+    "tags": [
+      "🟢가속"
+    ],
+    "top": 15,
+    "days": 20
+  },
+  "shortlist": [
+    {
+      "ticker": "089860.KS",
+      "name": "롯데렌탈",
+      "sector": "일반서비스",
+      "mcap_h": null,
+      "flow_score": 0.95,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.312,
+      "rs20": 58.5,
+      "rs60": 1.2,
+      "vol_surge": 1.51,
+      "investor": {
+        "foreign_20": -51468,
+        "inst_20": 126610,
+        "indiv_20": -75106,
+        "foreign_5": -6797,
+        "inst_5": 23415,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "096770.KS",
+      "name": "SK이노베이션",
+      "sector": "화학",
+      "mcap_h": null,
+      "flow_score": 0.933,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.245,
+      "rs20": 49.5,
+      "rs60": -22.3,
+      "vol_surge": 1.48,
+      "investor": {
+        "foreign_20": -330463,
+        "inst_20": 2179812,
+        "indiv_20": -1619054,
+        "foreign_5": -200327,
+        "inst_5": 1232679,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "475150.KS",
+      "name": "SK이터닉스",
+      "sector": "건설",
+      "mcap_h": null,
+      "flow_score": 0.917,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.46,
+      "rs20": 87.8,
+      "rs60": 2.0,
+      "vol_surge": 1.45,
+      "investor": {
+        "foreign_20": 207782,
+        "inst_20": 1412138,
+        "indiv_20": -1686239,
+        "foreign_5": 681580,
+        "inst_5": 848227,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    }
+  ],
+  "live": [
+    "089860.KS",
+    "096770.KS",
+    "475150.KS"
+  ]
+}
