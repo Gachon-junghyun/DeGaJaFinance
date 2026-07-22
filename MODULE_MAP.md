@@ -217,13 +217,13 @@ industry_us/kr 프로토콜이 호출하는 분석 모듈. 전부 기능별 `_�
 
 | 모듈 | 트리거 | CLI(예) | 소유/의존 |
 |---|---|---|---|
-| `module_macro_us` | US 매크로 레짐(FRED 지표) | `python -m module_macro_us` | FRED_API_KEY |
+| `module_macro_us` | US 매크로 레짐(FRED **19개** — 금리·물가·달러 + **신용/유동성**) | `python -m module_macro_us --series hy_oas,nfci` | FRED_API_KEY |
 | `module_valuation` | KR 밸류에이션 스냅샷·목표가·peer 비교(수동 `--peers`) | `python -m module_valuation 005930 --peers 000660` | DART/KRX |
 | `module_industry_map` | 임베딩 클러스터로 산업 지도·밸류체인 | `python -m module_industry_map` | data/corp_embeddings.db (직접 sqlite) |
 | `module_business` | KR 사업모델(매출표·제품)+IR 발췌 | `python -m module_business 005930` | data/corp_embeddings.db + news_alert.db |
 | `module_business_us` | US 사업모델(EDGAR/yf) | `python -m module_business_us AAPL` | 자립(yf/EDGAR) |
 | `module_disclosure_us` | US 공시(SEC EDGAR) | `python -m module_disclosure_us AAPL` | ticker_cik 캐시(자체) |
-| `module_fundamentals_us` | US 펀더멘털(매출·이익엔진) | `python -m module_fundamentals_us AAPL` | ▶module_disclosure_us |
+| `module_fundamentals_us` | US 펀더멘털(매출·이익엔진 + **추정치 모멘텀**) | `python -m module_fundamentals_us AAPL` | ▶module_disclosure_us |
 | `module_fundamentals_kr` | **KR 재무제표 + 수익의 질**(발생액·미청구공사) | `python -m module_fundamentals_kr 000720` | DART 전체재무제표 ▶module_disclosure |
 | `module_math_check` | 리포트 수치 산술 검증 | `python -m module_math_check ...` | 자립(stdlib) |
 | `module_watchlist` | thesis 단위 워치리스트 DB | `python -m module_watchlist init` | data/watchlist.db |

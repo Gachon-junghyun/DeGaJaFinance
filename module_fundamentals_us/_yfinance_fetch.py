@@ -45,6 +45,17 @@ class FundamentalsSnapshot:
     quarterly_revenue: list[tuple[str, float]] = field(default_factory=list)
     # 분기 매출 (SEC XBRL, 교차 검증)
     quarterly_revenue_xbrl: list[tuple[str, float]] = field(default_factory=list)
+    # ── 추정치 모멘텀 (2026-07-22 추가) ────────────────────────────────
+    # 왜: 지금까지 밸류에이션을 **스냅샷**(PER/PEG)으로만 봤고, 추정치가 어느 방향으로
+    # 움직이는지는 아예 안 봤다. lab 이 검증한 유일한 A급 신호가 모멘텀인데
+    # (mom5 LR 0.880 · p=0.001 · 39,290관측) 그걸 **가격에만** 적용해 왔다.
+    # 실측 트리거: MU 의 +1y EPS 추정치가 90일 만에 100.53 → 150.91 (+50%),
+    # 상향 30 : 하향 0 — "forward PE 6.31배가 싸다"의 분모가 그 사이 50% 뛰었다는 뜻.
+    # 사이클이 꺾이면 가격보다 추정치가 먼저 꺾인다.
+    # eps_trend: period(0q/+1q/0y/+1y) × {current, 7daysAgo, 30daysAgo, 60daysAgo, 90daysAgo}
+    eps_trend: list[dict] = field(default_factory=list)
+    # eps_revisions: period × {upLast7days, upLast30days, downLast7Days, downLast30days}
+    eps_revisions: list[dict] = field(default_factory=list)
     # 사업 요약 (long)
     business_summary: Optional[str] = None
     # 메타
@@ -156,6 +167,30 @@ def _extract_recommendations(rec_df) -> list[dict]:
     return out
 
 
+def _extract_period_frame(df) -> list[dict]:
+    """period 를 **인덱스**로 갖는 프레임(eps_trend·eps_revisions) → list of dict.
+
+    `_extract_recommendations` 와 같은 모양을 내지만 그쪽은 period 가 컬럼이라 재사용이 안 된다
+    (컬럼 vs 인덱스). 값은 float 로 정규화하고, currency 같은 문자열 컬럼은 버린다.
+    """
+    if df is None:
+        return []
+    try:
+        if df.empty:
+            return []
+    except Exception:
+        return []
+    out: list[dict] = []
+    for idx, row in df.iterrows():
+        d: dict = {"period": str(idx)}
+        for col in df.columns:
+            f = _to_float(row[col])
+            if f is not None:
+                d[str(col)] = f
+        out.append(d)
+    return out
+
+
 def fetch_fundamentals(ticker: str) -> FundamentalsSnapshot:
     """yfinance 호출 묶음. 개별 호출 실패는 None 으로 두고 progress."""
     snap = FundamentalsSnapshot(ticker=ticker.upper())
@@ -243,6 +278,13 @@ def fetch_fundamentals(ticker: str) -> FundamentalsSnapshot:
         sys.stderr.write(f"[warn] calendar failed: {e}\n")
         cal = None
     snap.next_earnings_date = _extract_next_earnings(cal)
+
+    # 추정치 모멘텀 — 실패해도 나머지는 진행(P4: 빈칸이 거짓보다 낫다)
+    for attr, dest in (("eps_trend", "eps_trend"), ("eps_revisions", "eps_revisions")):
+        try:
+            setattr(snap, dest, _extract_period_frame(getattr(t, attr)))
+        except Exception as e:
+            sys.stderr.write(f"[warn] {attr} failed: {e}\n")
 
     return snap
 

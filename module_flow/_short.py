@@ -88,8 +88,38 @@ def _short_interest(tk: str) -> dict:
     return rec
 
 
+def _implied_move(t, exps: list[str], spot: float | None) -> dict:
+    """⑥-b 최근월 ATM 스트래들 = 시장이 이미 가격에 반영한 **예상 변동폭**.
+
+    왜 필요한가 (2026-07-22 추가): 스큐·P/C 는 '방어에 얼마나 지불하나'를 말하지만
+    '얼마나 움직일 거라 보나'는 말하지 않는다. 이벤트 시나리오의 임계값을 **사람이 임의로**
+    정하는 대신 시장이 정하게 한다 — handoff/SCENARIOS.md 의 브래킷 임계값 근거.
+    실측(2026-07-22): GOOGL ±7.1% (당일 실적) · MU ±4.5% · AMD ±3.6%.
+    ⚠ 스트래들은 만기까지의 **총** 예상변동이지 이벤트 단독 기여분이 아니다. 만기가 이벤트
+    직후일수록 이벤트 프리미엄에 가깝다 — `dte` 를 같이 읽어라.
+    """
+    if not exps or not spot:
+        return {}
+    try:
+        near = exps[0]
+        # 날짜끼리 뺀다 — datetime.now() 로 빼면 당일 만기가 D-1 로 찍힌다(실측 버그).
+        dte = (datetime.strptime(near, "%Y-%m-%d").date() - datetime.now().date()).days
+        ch = t.option_chain(near)
+        c, p = ch.calls, ch.puts
+        if not len(c) or not len(p):
+            return {}
+        ca = c.iloc[(c["strike"] - spot).abs().argmin()]
+        pa = p.iloc[(p["strike"] - spot).abs().argmin()]
+        prem = float(ca["lastPrice"]) + float(pa["lastPrice"])
+        if prem <= 0:
+            return {}
+        return {"im_expiry": near, "im_dte": dte, "implied_move_pct": round(prem / spot * 100, 1)}
+    except Exception:
+        return {}
+
+
 def _options_pos(tk: str, spot: float | None) -> dict:
-    """⑥ 옵션 — ~30DTE 만기 P/C OI비율 + IV스큐(OTM풋 IV − OTM콜 IV). 쓰레기 IV 필터."""
+    """⑥ 옵션 — ~30DTE 만기 P/C OI비율 + IV스큐(OTM풋 IV − OTM콜 IV) + 최근월 예상변동폭."""
     try:
         t = yf.Ticker(tk)
         exps = t.options or []
@@ -114,7 +144,7 @@ def _options_pos(tk: str, spot: float | None) -> dict:
             otm_c = cln(c[c["strike"] > spot * 1.05])
             if len(otm_p) and len(otm_c):
                 skew = round((otm_p["impliedVolatility"].median() - otm_c["impliedVolatility"].median()) * 100, 1)
-        return {"expiry": best, "pc_oi": pc_oi, "iv_skew": skew}
+        return {"expiry": best, "pc_oi": pc_oi, "iv_skew": skew, **_implied_move(t, exps, spot)}
     except Exception as e:
         return {"pc_oi": None, "iv_skew": None, "error": str(e)[:40]}
 

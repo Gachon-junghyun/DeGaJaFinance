@@ -100,7 +100,9 @@ def main() -> None:
             sf = "n/a" if si.get("pct_float") is None else f"{si['pct_float']}%float {si.get('trend','')}" + (f" DTC{dtc:.1f}" if dtc else "")
             pc = "n/a" if op.get("pc_oi") is None else f"P/C {op['pc_oi']}"
             sk = "n/a" if op.get("iv_skew") is None else f"스큐 {op['iv_skew']:+}"
-            print(f"         ⑤⑥ 포지셔닝: 숏 {sf}{' 🔥크라우디드' if si.get('crowded') else ''} · 옵션 {pc} {sk} → {po['read']}")
+            im = "" if op.get("implied_move_pct") is None else \
+                f" · 예상변동 ±{op['implied_move_pct']}%(만기 {op.get('im_expiry','?')}, D{op.get('im_dte','?')})"
+            print(f"         ⑤⑥ 포지셔닝: 숏 {sf}{' 🔥크라우디드' if si.get('crowded') else ''} · 옵션 {pc} {sk}{im} → {po['read']}")
     print("\n  뉴스속도>1=관심가속 · OBV 매집/분산 · RS=벤치대비(+면 이김) · 서지>1.3=돈유입")
     if any(r.get("investor") and "error" not in r["investor"] for r in rows):
         print("  ⑦수급=KIS 실측 외국인/기관/개인 순매수(만주,국내). 외국인 이탈+개인 흡수=OBV'매집'이 약한손→🟢 차단")

@@ -134,6 +134,67 @@ def _render_consensus(snap: FundamentalsSnapshot) -> str:
     return "\n".join(lines)
 
 
+_PERIOD_KO = {"0q": "당분기", "+1q": "다음분기", "0y": "당해년", "+1y": "내년"}
+
+
+def _render_estimate_momentum(snap: FundamentalsSnapshot) -> str:
+    """추정치 모멘텀 — 밸류에이션의 '분모가 어디로 가고 있나'.
+
+    ⚠ 이 표를 밸류에이션 표와 **반드시 같이** 읽어라. forward P/E 가 낮은데 추정치가
+    가파르게 상향 중이면 '싸다'가 아니라 '분모가 정점을 향해 달리는 중'일 수 있다
+    (handoff/RESEARCH.md 렌즈 L2 — peak-margin / low-multiple trap).
+    """
+    lines: list[str] = ["## 추정치 모멘텀 (컨센서스가 움직이는 방향)"]
+    tr = {d.get("period"): d for d in (snap.eps_trend or [])}
+    rv = {d.get("period"): d for d in (snap.eps_revisions or [])}
+    if not tr and not rv:
+        lines.append("- 데이터 없음")
+        lines.append("")
+        return "\n".join(lines)
+
+    if tr:
+        lines.append("")
+        lines.append("| 기간 | 현재 | 7일전 | 30일전 | 60일전 | 90일전 | 90일 변화 |")
+        lines.append("|---|---|---|---|---|---|---|")
+        for p in ("0q", "+1q", "0y", "+1y"):
+            d = tr.get(p)
+            if not d:
+                continue
+            cur, d90 = d.get("current"), d.get("90daysAgo")
+            chg = "—"
+            if cur is not None and d90 not in (None, 0):
+                chg = f"**{(cur / d90 - 1.0) * 100:+.1f}%**"
+            lines.append(
+                f"| {_PERIOD_KO.get(p, p)} | {_fmt_ratio(cur)} | {_fmt_ratio(d.get('7daysAgo'))} | "
+                f"{_fmt_ratio(d.get('30daysAgo'))} | {_fmt_ratio(d.get('60daysAgo'))} | "
+                f"{_fmt_ratio(d90)} | {chg} |"
+            )
+
+    if rv:
+        lines.append("")
+        lines.append("**리비전 브레드스 (상향 : 하향)**")
+        for p in ("0q", "+1q", "0y", "+1y"):
+            d = rv.get(p)
+            if not d:
+                continue
+            u7, d7 = d.get("upLast7days"), d.get("downLast7Days")
+            u30, d30 = d.get("upLast30days"), d.get("downLast30days")
+            def _n(x):
+                return "—" if x is None else f"{int(x)}"
+            lines.append(
+                f"- {_PERIOD_KO.get(p, p)}: 7일 {_n(u7)}↑ / {_n(d7)}↓ · 30일 {_n(u30)}↑ / {_n(d30)}↓"
+            )
+
+    lines.append("")
+    lines.append(
+        "> ⚠ 밸류에이션 표와 **같이** 읽어라. forward P/E 가 낮은데 추정치가 가파르게 상향 중이면 "
+        "'싸다'가 아니라 **분모가 정점을 향해 달리는 중**일 수 있다 (peak-margin / low-multiple trap). "
+        "추정치 방향은 컨센서스의 **모멘텀**이지 사실이 아니다 — 사이클이 꺾이면 가격보다 먼저 꺾인다."
+    )
+    lines.append("")
+    return "\n".join(lines)
+
+
 def _render_qrev_yfinance(snap: FundamentalsSnapshot) -> str:
     lines: list[str] = [f"## 분기 매출 (yfinance {len(snap.quarterly_revenue)}분기)"]
     if not snap.quarterly_revenue:
@@ -282,6 +343,7 @@ def render_markdown(
     )
 
     consensus_block = _render_consensus(snap) + "\n"
+    est_mom_block = _render_estimate_momentum(snap) + "\n"
     qrev_yf_block = _render_qrev_yfinance(snap) + "\n"
     qrev_xbrl_block = _render_qrev_xbrl(snap) + "\n" if xbrl_included else ""
 
@@ -300,6 +362,7 @@ def render_markdown(
         + price_block
         + val_block
         + consensus_block
+        + est_mom_block
         + qrev_yf_block
         + qrev_xbrl_block
         + event_block

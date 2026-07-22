@@ -265,7 +265,9 @@ def _series_section(sd: SeriesData) -> str:
         yoy = _yoy_pct(sd)
         if yoy is not None:
             lines.append(f"- yoy: {yoy:+.2f}%")
-    lines.append(f"- 빈도: {spec['freq']} | 단위: {spec['unit']} | KR: {spec['label_ko']}")
+    _lag = {"daily": "최근 영업일", "weekly": "주간 — 최대 7일 지연",
+            "monthly": "월간 — 최대 ~1개월 지연"}.get(spec["freq"], spec["freq"])
+    lines.append(f"- 빈도: {spec['freq']} ({_lag}) | 단위: {spec['unit']} | KR: {spec['label_ko']}")
     return "\n".join(lines) + "\n\n"
 
 
