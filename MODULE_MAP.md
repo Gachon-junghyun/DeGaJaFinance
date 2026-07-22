@@ -19,6 +19,7 @@
 | [산업 데스크 모듈 10](#산업-데스크-모듈) | industry_us/kr 프로토콜이 호출하는 분석 모듈 | 매크로·밸류·공시·사업·산업지도·워치리스트 등 |
 | [module_report_tags](#module_report_tags) | REPORT/ 태그추출 + 인수인계 원장(증분) | 데스크 재검색 방지 — 리포트 태그를 인수받기 |
 | [module_paper_book](#module_paper_book) | 데스크 리포트 → 모의투자(paper) 장부 | 리포트를 읽어 사이징·체결시뮬·시가평가·저널 (paper_desk 프로토콜 엔진) |
+| [module_growth](#module_growth) | 이익 성장 기업 스크리너(실험 모델) | "이익 성장 기업 찾기", 유니버스 성장 스윕·랭킹(순이익 YoY·가속·선행) |
 | [module_epistemics](#module_epistemics) | 베이지안 충돌평가·민감도 학습·verify·registry_audit | 신호 모순 해소, 종목 민감도 축적, 코드↔맵 감사 |
 | [module_order_desk](#module_order_desk) | KIS 주문 데스크(Tkinter GUI) — 스택형 휴먼 주문 | 시세 보며 주문을 스택에 쌓아 카드마다 [체결], 포폴·인기·흐름·만약에 |
 | [scripts/](#스크립트-데스크-호출) | 데스크가 `python scripts/X.py`로 호출하는 단일파일 도구 9 | 수급·섹터로테이션·촉매·숏리스트·스크리너 |
@@ -31,6 +32,7 @@ module_flow ─ news velocity ─▶ module_news_data (_config: FOREIGN_SOURCES�
             └ ⑦ 투자자수급 ──▶ module_KIS (_investor)
 module_disclosure ─ 사업보고서 corp_code ─▶ 자체 _corp_codes (corp_codes.csv)
 module_fundamentals_us ──▶ module_disclosure_us   ·   module_timefolio ──▶ module_webctl
+module_growth ─ US 재무 ──▶ module_fundamentals_us   ·   ─ KR 선행 ──▶ module_valuation
 scripts/sector_flow ──▶ scripts/flow_read(shim) ──▶ module_flow
 데이터·DB·유니버스 ──▶ 이 리포 data/ (로컬 소유). 시크릿 ──▶ 이 리포 .env.
 ```
@@ -200,7 +202,7 @@ industry_us/kr 프로토콜이 호출하는 분석 모듈. 전부 기능별 `_�
 | `module_business` | KR 사업모델(매출표·제품)+IR 발췌 | `python -m module_business 005930` | data/corp_embeddings.db + news_alert.db |
 | `module_business_us` | US 사업모델(EDGAR/yf) | `python -m module_business_us AAPL` | 자립(yf/EDGAR) |
 | `module_disclosure_us` | US 공시(SEC EDGAR) | `python -m module_disclosure_us AAPL` | ticker_cik 캐시(자체) |
-| `module_fundamentals_us` | US 펀더멘털(매출·이익엔진) | `python -m module_fundamentals_us AAPL` | ▶module_disclosure_us |
+| `module_fundamentals_us` | US 펀더멘털(매출·**순이익·EPS**엔진) | `python -m module_fundamentals_us AAPL` | ▶module_disclosure_us · ◀module_growth |
 | `module_math_check` | 리포트 수치 산술 검증 | `python -m module_math_check ...` | 자립(stdlib) |
 | `module_watchlist` | thesis 단위 워치리스트 DB | `python -m module_watchlist init` | data/watchlist.db |
 | `module_publish` | 산출물 렌더·발행 헬퍼 | `python -m module_publish ...` | 자립 |
@@ -227,6 +229,24 @@ industry_us/kr 프로토콜이 호출하는 분석 모듈. 전부 기능별 `_�
 - **미러링(`_mirror`)**: `mirror`=실 KIS 보유를 '이미 보유'로 시드(현금 슬리브 셋). `stage`=추천을 `out/order_desk/kis_stack.json`(주문 데스크 스택)에 intent 카드로 적재 — **사람이 [체결]로 발사, 자동 아님**. `learned_sensitivity/record_sensitivity`=epistemics 원장 조회/되먹임. 프로토콜 [`미러링`](pipeline/protocols/미러링.md).
 - **데이터**: `data/paper_book.db`(`PAPER_BOOK_DB_PATH` 로 이동가능). **안전**: 체결은 기본 드라이런, `--commit` 사람 명시 전용. 스케줄러 자동발사 없음.
 - **환경변수**: (KR 마크에) `KIS_APP_KEY/SECRET`. US 마크는 yfinance(무인증).
+
+## module_growth
+유니버스(us_top300·kr_all)를 훑어 분기 이익 시계열에서 **결정론 성장 지표**를 계산·랭킹하는 실험 스크리너. 판단(매수/매도)은 내지 않고 관측값·출처·신선도만(P4) — 무엇을 살지는 상위(에이전트).
+
+- **트리거**: "이익 성장 기업 찾기" / 성장주 스윕·랭킹. 후보 발굴 뒤 흐름·촉매·차트로 교차확인.
+- **CLI**:
+  ```bash
+  python -m module_growth --market us --limit 50 --top 20        # top50 시총 스윕 → 성장 랭킹
+  python -m module_growth --market us --sector Semiconductors    # 섹터(gics_sector·industry 둘 다 매칭)
+  python -m module_growth --ticker NVDA AMD AVGO --detail        # 임의 티커 직접 비교
+  python -m module_growth --market us --limit 30 --json          # 기계 소비용
+  ```
+- **기능 파일**: `_metrics`(순수 성장수식: YoY·TTM YoY·가속·선행EPS성장·PEG태그+성장점수/등급, **네트워크 0·합성 픽스처로 검증가능**) · `_universe`(유니버스 CSV 로더) · `_screen`(fetch 오케스트레이션+랭킹) · `_render`(마크다운 표) · `__main__`(CLI).
+- **성장 점수**: 대략 '연 YoY %'. 실현 순이익 성장(TTM YoY→분기 YoY→EPS YoY) 1순위, 없으면 선행·매출로 강등. 가속 보정 + 이익성장이 매출 뒷받침 없으면 감점. 가중치·임계값은 `_metrics` 모듈 상수(실험자가 튜닝).
+- **재사용(중복0)**: 재무 fetch 를 **재구현하지 않는다** — US=`module_fundamentals_us.fetch_fundamentals`(분기 손익+컨센), KR=`module_valuation.fetch_naver_snapshot`. 둘 다 lazy import.
+- **소유**: 성장 지표 계산(`_metrics`)·성장 점수/등급.
+- ⚠️ **시장별 데이터 한계(P4)**: US=yfinance 분기 손익=실현 순이익/매출/EPS 히스토리(보통 4~5분기, YoY 는 5분기+ 필요, 최대 8). **KR=네이버 스냅샷이라 선행 EPS 성장(컨센)만** — 실현 분기 이익 히스토리 부재. **KR 실현 성장은 DART 재무제표 API(fnlttSinglAcnt) 도입 후**(아래 '다음 후보').
+- **데이터**: `data/us_universe/us_top300.csv`·`kr_universe/kr_all.csv`(읽기전용 참조). 산출은 `--out` 지정 시 그 경로(기본 stdout).
 
 ## module_report_tags
 REPORT/ 폴더의 데스크 산출물(.md)에서 태그(종목·섹터·평결·테마·날짜)를 추출해 **인수인계 원장**을 증분 갱신. 매번 재검색·재리포트하는 대신 다운스트림이 이 원장을 읽는다.
@@ -285,3 +305,4 @@ REPORT/ 폴더의 데스크 산출물(.md)에서 태그(종목·섹터·평결·
 - 유니버스 빌더(us_top300·aliases) 자체 생성 스크립트(현재 data/에 스냅샷만 복사).
 - `registry.json` 자동렌더로 이 표를 코드↔맵 정합성까지 기계 검증(모듈 늘면).
 - DART 재무정보 API(fnlttSinglAcnt 등) 추가 — 현재는 공시목록·원문·사업보고서까지.
+  이게 붙으면 `module_growth` 의 **KR 실현 이익 성장**(현재는 네이버 선행 컨센만)이 열린다.

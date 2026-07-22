@@ -43,6 +43,10 @@ class FundamentalsSnapshot:
     recommendations: list[dict] = field(default_factory=list)
     # 분기 매출 (yfinance) — [(quarter_end_date_str, revenue_float), ...]
     quarterly_revenue: list[tuple[str, float]] = field(default_factory=list)
+    # 분기 순이익 (yfinance) — [(quarter_end_date_str, net_income_float), ...] 최신순
+    quarterly_net_income: list[tuple[str, float]] = field(default_factory=list)
+    # 분기 희석 EPS (yfinance) — [(quarter_end_date_str, diluted_eps_float), ...] 최신순
+    quarterly_diluted_eps: list[tuple[str, float]] = field(default_factory=list)
     # 분기 매출 (SEC XBRL, 교차 검증)
     quarterly_revenue_xbrl: list[tuple[str, float]] = field(default_factory=list)
     # 사업 요약 (long)
@@ -75,8 +79,11 @@ def _to_float(v) -> Optional[float]:
     return f
 
 
-def _extract_quarterly_revenue(qis) -> list[tuple[str, float]]:
-    """quarterly_income_stmt DataFrame → [(date_str, revenue), ...] 최신순."""
+def _extract_quarterly_row(qis, candidates: tuple[str, ...]) -> list[tuple[str, float]]:
+    """quarterly_income_stmt DataFrame 에서 candidates 중 첫 매칭 행 → [(date_str, val), ...] 최신순.
+
+    행 라벨은 yfinance 버전마다 공백 유무가 달라 candidates 를 순서대로 시도한다.
+    """
     if qis is None:
         return []
     try:
@@ -84,9 +91,8 @@ def _extract_quarterly_revenue(qis) -> list[tuple[str, float]]:
             return []
     except Exception:
         return []
-    # 매출 행: Total Revenue 우선, 없으면 Operating Revenue
     row = None
-    for candidate in ("Total Revenue", "Operating Revenue", "TotalRevenue"):
+    for candidate in candidates:
         if candidate in qis.index:
             row = qis.loc[candidate]
             break
@@ -107,9 +113,13 @@ def _extract_quarterly_revenue(qis) -> list[tuple[str, float]]:
         except Exception:
             ds = str(col)[:10]
         out.append((ds, f))
-    # 최신순 정렬 (이미 그렇지만 명시)
     out.sort(key=lambda x: x[0], reverse=True)
     return out
+
+
+def _extract_quarterly_revenue(qis) -> list[tuple[str, float]]:
+    """quarterly_income_stmt DataFrame → [(date_str, revenue), ...] 최신순."""
+    return _extract_quarterly_row(qis, ("Total Revenue", "Operating Revenue", "TotalRevenue"))
 
 
 def _extract_next_earnings(calendar) -> Optional[str]:
@@ -229,6 +239,12 @@ def fetch_fundamentals(ticker: str) -> FundamentalsSnapshot:
         sys.stderr.write(f"[warn] quarterly_income_stmt failed: {e}\n")
         qis = None
     snap.quarterly_revenue = _extract_quarterly_revenue(qis)[:8]
+    snap.quarterly_net_income = _extract_quarterly_row(
+        qis, ("Net Income", "Net Income Common Stockholders", "NetIncome")
+    )[:8]
+    snap.quarterly_diluted_eps = _extract_quarterly_row(
+        qis, ("Diluted EPS", "Basic EPS", "DilutedEPS")
+    )[:8]
 
     # quarterly_balance_sheet — 현재는 출력 표에서 안 쓰지만 호출 자체는 시도 (warm cache, 향후 확장)
     try:
