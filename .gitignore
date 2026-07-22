@@ -30,3 +30,6 @@ __pycache__/
 *.pyc
 scripts/.cache/
 *.pkl
+
+# 추정치 스냅샷 실행 로그(스케줄러) — 데이터는 커밋하되 로그는 제외
+data/estimates/*.log
