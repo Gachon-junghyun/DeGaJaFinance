@@ -38,7 +38,7 @@ which is why "shortage persists" and "stocks struggle" are both true and not con
 | M15 | **GOOGL estimate revisions** | Current quarter **1↑ : 4↓** (30d), next quarter 2↑ : 3↓; +1y level +9.7% | module_fundamentals_us | 2026-07-22 |
 | M16 | **Credit spreads** | HY OAS **2.69%** (365d low 2.63, −16bp/90d) · IG OAS 0.78% · NFCI −0.54 | module_macro_us (new axis) | 2026-07-20 |
 | M18 | **MU gross margin, 17-year series** | peak FY2018 **58.9%** · trough FY2009 −9.2% (FY2023 −9.1%) · median 32.0% → current **84.6% = 100th percentile, +25.7pp over peak** | own calc, SEC XBRL (`scripts/margin_history.py`) | 2026-07-22 |
-| M19 | **Estimate-revision IC (US, single date)** | Spearman **+0.249**, SE 0.106, CI [+0.041, +0.456], n=90. Q5−Q1 fwd excess **+19.5pp**. ⚠ **Q5 is 72% Information Technology (39% semiconductors)** — the top quintile is one theme, so the 90 names are not independent. **Verdict: indistinguishable (single-theme concentration)**, not "significant". Effective dates = 1. | own calc, `scripts/measure_ic.py` | 2026-07-22 |
+| M19 | **Estimate-revision IC (US, single date)** | Two non-overlapping windows: W1 (sig 90→60, ret 60→30) **+0.36** · W2 (sig 60→30, ret 30→0) **+0.28** → folded **+0.32**. Sign is stable across both. Q5−Q1 fwd excess **+19.5pp**. ⚠ **Q5 is 72% Information Technology (39% semiconductors)** — the top quintile is one theme, so the 90 names are not independent. **Verdict: indistinguishable (single-theme concentration)**, not "significant". Effective dates = 1. | own calc, `scripts/measure_ic.py` | 2026-07-22 |
 | M17 | **Implied moves** | GOOGL **±7.1%** (0DTE) · MU ±4.5% · AMD ±3.6% | module_flow --positioning (new axis) | 2026-07-22 |
 
 ## 3. Per-name standing theses

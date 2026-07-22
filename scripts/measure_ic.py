@@ -11,14 +11,18 @@ MEASURE_IC — 신호의 정보계수(IC)를 **가정이 아니라 측정**으�
   타깃   r_i = 60일전 → 오늘 수익률 − 벤치마크 같은 구간 … 겹치지 않는 선행 구간
   IC     = 횡단면 스피어만 상관(s, r)
 
-⚠ **정직한 한계 — 규칙 S3(검정력 먼저) 를 여기 그대로 적용한다.**
-yfinance `eps_trend` 는 시계열이 아니라 **스냅샷**(현재/7·30·60·90일전 수준)이라, 겹치지 않는
-관측 구간이 사실상 **1개**뿐이다. 즉 이 측정은 "한 시점의 횡단면 IC" 이고 유효 표본은 **날짜 1개**다.
-  · 횡단면 SE ≈ 1/√(n−1)  → n=80 이면 SE ≈ 0.11, 즉 |IC|<0.22 는 구분 불가
-  · lab 규칙 S1(날짜로 접어라) 상 **유효 n 은 종목 수가 아니라 날짜 수** — 여기선 1
-따라서 결과는 **[측정됨, 단일시점]** 으로만 태깅하고, kelly_size 의 --ic 근거로 쓸 때
-`--ic-n` 에 종목 수를 넣으면 안 된다(그건 날짜 수를 부풀리는 것). 시계열로 쌓으려면 eps_trend 를
-매일 스냅샷해 저장해야 한다 → dig D16.
+한 스냅샷에서 **겹치지 않는 창 2개**를 뽑는다(초판은 1개로 과소평가했다):
+  W1  신호 90→60일 · 수익 60→30일        W2  신호 60→30일 · 수익 30일→오늘
+신호도 수익도 서로 겹치지 않으므로 유효 '날짜' 는 2 다.
+
+⚠ **정직한 한계 — 규칙 S1·S3 을 여기 그대로 적용한다.**
+  · 창별 IC 를 낸 뒤 **접는다**. 풀링하면 (종목수×2) 를 독립 관측으로 세는 꼴이 된다.
+  · 접을 날짜가 **2개**뿐이라 접은 SE 는 자유도 1 — 사실상 의미가 없다.
+    창별 IC 가 **부호까지 갈리는지**를 보는 용도로만 읽어라.
+  · 상위분위가 한 섹터에 몰리면 종목들끼리도 독립이 아니다 → 집중도 점검을 내장했다.
+    실측 2026-07-22: IC 는 양수인데 **Q5 의 72% 가 IT 한 섹터** → 최종 판정 '구분 불가'.
+따라서 `kelly_size --ic-n` 에 **종목 수를 넣으면 안 된다**(날짜 수를 부풀리는 것).
+진짜 시계열은 `scripts/snapshot_estimates.py` 로 매일 쌓아야 생긴다 → dig D16.
 
 사용:
   python -X utf8 scripts/measure_ic.py --universe us_top300 --limit 80
@@ -78,14 +82,32 @@ def collect(tickers: list[str], bench: str, verbose: bool = True) -> list[dict]:
             e90, e60 = row.get("90daysAgo"), row.get("60daysAgo")
             if e90 is None or e60 is None or not np.isfinite([e90, e60]).all() or e90 == 0:
                 continue
-            signal = float(e60) / float(e90) - 1.0          # 90→60 구간 리비전
+            e30 = row.get("30daysAgo")
             if t not in px.columns:
                 continue
             s = px[t].dropna()
             if len(s) < 65:
                 continue
-            fwd = float(s.iloc[-1] / s.iloc[-61] - 1)        # 60일전 → 오늘
-            rows.append({"ticker": t, "signal": signal, "fwd_excess": fwd - bret})
+            # ★ 한 스냅샷에서 **겹치지 않는 관측 2개**가 나온다(초판이 1개로 과소평가했다):
+            #   W1: 신호 90→60 · 수익 60→30      W2: 신호 60→30 · 수익 30→오늘
+            # 두 창은 신호도 수익도 서로 겹치지 않는다. 유효 날짜가 1 → 2 로 는다.
+            # ⚠ 그래도 2 다. 규칙 S1 상 이걸로 IC 를 확정할 수는 없다.
+            for wlabel, ea, eb, ra, rb in (
+                ("W1", e90, e60, -61, -31),
+                ("W2", e60, e30, -31, -1),
+            ):
+                if ea in (None, 0) or eb is None:
+                    continue
+                try:
+                    if not np.isfinite([ea, eb]).all():
+                        continue
+                    sig_v = float(eb) / float(ea) - 1.0
+                    r_v = float(s.iloc[rb] / s.iloc[ra] - 1)
+                    b_v = float(b.iloc[rb] / b.iloc[ra] - 1)
+                except Exception:
+                    continue
+                rows.append({"ticker": t, "window": wlabel,
+                             "signal": sig_v, "fwd_excess": r_v - b_v})
         except Exception:
             continue
     return rows
@@ -152,10 +174,25 @@ def main() -> int:
         print(f"수집 {n}건 — 너무 적어 측정 불가(P4: 빈칸이 거짓보다 낫다)")
         return 0
 
-    sig = [r["signal"] for r in rows]
-    fwd = [r["fwd_excess"] for r in rows]
-    ic = spearman(sig, fwd)
-    se = 1 / math.sqrt(n - 1)
+    # ★ 규칙 S1 — 창(=날짜)별로 IC 를 내고 **접는다**. 풀링하면 180관측을 독립으로 세는 꼴이 된다.
+    wins = sorted({r.get("window", "W1") for r in rows})
+    per_win = []
+    for w in wins:
+        g = [r for r in rows if r.get("window", "W1") == w]
+        if len(g) >= 10:
+            per_win.append((w, len(g), spearman([x["signal"] for x in g],
+                                                [x["fwd_excess"] for x in g])))
+    n_dates = len(per_win)
+    if n_dates >= 2:
+        vals = [v for _, _, v in per_win]
+        ic = sum(vals) / n_dates
+        # 날짜로 접은 SE — 창 간 분산. n_dates 가 2 라 이 SE 자체가 극히 불안정하다.
+        var = sum((v - ic) ** 2 for v in vals) / (n_dates - 1)
+        se = math.sqrt(var / n_dates)
+    else:
+        ic = per_win[0][2] if per_win else spearman([r["signal"] for r in rows],
+                                                    [r["fwd_excess"] for r in rows])
+        se = 1 / math.sqrt(max(n - 1, 1))
     lo, hi = ic - 1.96 * se, ic + 1.96 * se
 
     # 5분위
@@ -174,17 +211,25 @@ def main() -> int:
     # 횡단면 SE 는 90종목을 **독립** 관측으로 센다. 상위분위가 한 섹터에 몰려 있으면
     # 실제 독립 관측은 종목 수가 아니라 그 테마 블록 수에 가깝다.
     conc = quintile_concentration(order[-q:])
-    print(f"■ 결과  (수집 {n}/{n_planned}종목)")
-    print(f"   IC(스피어만) = **{ic:+.3f}**   SE {se:.3f}   95% CI [{lo:+.3f}, {hi:+.3f}]")
+    print(f"■ 결과  (관측 {n}건 / 계획 {n_planned}종목)")
+    if per_win:
+        print("   창별 IC (겹치지 않는 관측 — 이게 '날짜'다):")
+        for w, gn, v in per_win:
+            lbl = "신호 90→60 · 수익 60→30" if w == "W1" else "신호 60→30 · 수익 30→오늘"
+            print(f"     {w}  {lbl:<26} n={gn:3d}  IC {v:+.3f}")
+    print(f"\n   날짜로 접은 IC = **{ic:+.3f}**   SE {se:.3f}   95% CI [{lo:+.3f}, {hi:+.3f}]")
+    if n_dates < 3:
+        print(f"   ⚠ **접을 날짜가 {n_dates}개뿐**이라 이 SE 는 사실상 의미가 없다(자유도 {max(n_dates-1,0)}).")
+        print("     창별 IC 가 서로 얼마나 다른지를 보는 용도로만 읽어라 — 부호가 갈리면 그 자체가 답이다.")
     naive = "구분 불가 (CI 가 0 포함)" if lo <= 0 <= hi else ("양(+)" if lo > 0 else "음(−)")
-    print(f"   횡단면 CI 만 보면: {naive}")
+    print(f"   CI 만 보면: {naive}")
     if conc and conc["top_share"] >= 0.5:
         print(f"   ⚠ **그러나 Q5 의 {conc['top_share']*100:.0f}% 가 단일 섹터({conc['top_sector']})다.**")
-        print("   → 90종목은 독립 관측이 아니다. 상위분위가 한 테마면 이 IC 는 '리비전이 수익을")
+        print(f"   → {n}관측은 독립이 아니다. 상위분위가 한 테마면 이 IC 는 '리비전이 수익을")
         print("     예측한다' 가 아니라 '그 테마가 추정치와 주가에 **동시에** 나타났다' 일 수 있다.")
         print("   → **최종 판정: 구분 불가 (단일 테마 집중).** 규칙 C4 대로 '효과 없음' 이 아니라")
         print("     '이 표본으로는 구분 못 한다' 로 적는다. 규칙 S1 의 '날짜로 접어라' 가 여기선")
-        print("     '상관단위로 접어라' 로 적용된다 — 접을 날짜가 1개라 접을 수조차 없다.")
+        print(f"     '상관단위로 접어라' 로 적용된다 — 창 {n_dates}개로는 그걸 분리할 수 없다.")
     else:
         print(f"   판정: **{naive}**")
     print(f"\n   5분위 선행 초과수익  Q1(리비전 최저) {q1:+.1f}%  ·  Q5(최고) {q5:+.1f}%  ·  Q5−Q1 {q5-q1:+.1f}%p")
@@ -192,8 +237,8 @@ def main() -> int:
     print("\n■ 이 숫자를 쓸 때의 규칙")
     if lo <= 0 <= hi:
         print("   · CI 가 0 을 포함한다 → **'효과 없음'이 아니라 '구분 불가'** 로 적는다(규칙 C4).")
-    print("   · 태그 **[측정됨, 단일시점]**. kelly_size 의 --ic-n 에 **종목 수를 넣지 마라** —")
-    print("     그건 날짜 수를 부풀리는 것이고, 규칙 S1 위반이다. 겹치지 않는 관측 날짜는 1개다.")
+    print(f"   · 태그 **[측정됨, 창 {n_dates}개]**. kelly_size 의 --ic-n 에 **종목 수를 넣지 마라** —")
+    print(f"     그건 날짜 수를 부풀리는 것이고, 규칙 S1 위반이다. 유효 표본은 창 {n_dates}개다.")
     print("   · 시계열로 쌓으려면 eps_trend 를 매일 스냅샷해 저장해야 한다 → dig D16.")
     print("   · 이 결과는 US 에서 잰 것이다. KR 로 옮기려면 자체 재현이 필요하다(규칙 W1).")
     return 0

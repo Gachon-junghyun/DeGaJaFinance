@@ -62,6 +62,8 @@ folder was built for). These are the exact commands.
 | **Implied move** | `python -X utf8 -m module_flow <TKR> --positioning` → `예상변동 ±x%(D±n)` | Scenario thresholds were hand-set. Enforced by PREMORTEM EXIT CHECK. |
 | **Rule linter** | `python -X utf8 scripts/report_lint.py <written file>` | Rules depended on the model remembering. Checks C1·C2·S6·D6 mechanically. Enforced by MACRO·ROTATION·DEEP·BET. |
 | **Structural calendar** | `python -X utf8 scripts/catalyst_calendar.py --days 12` → `[STRUCTURAL]` block | Lockups, block deals, conversions, index rebalances. The desk logged missing its biggest KR binary **twice**. |
+| **Estimate snapshot (daily)** | `python -X utf8 scripts/snapshot_estimates.py --limit 120` · `--status` | `eps_trend` is a **snapshot, not history** — a single run yields only 2 non-overlapping windows. **Not retroactively recoverable**: every unstored day is gone. Started 2026-07-22, needs ~40 days. |
+| **Measure a signal's IC** | `python -X utf8 scripts/measure_ic.py --limit 90` | Turns `--ic` from an assumption into a number — with a built-in concentration check that flips the verdict when the top quintile is one theme. |
 | **Sizing under uncertainty** | `python -X utf8 scripts/kelly_size.py <TKR> --ic <가정> --ic-n <n>` | The book sized by **stop distance only** — volatility, edge quality and the edge estimate's own error were absent. 1/4 Kelly + 1.5σ no-trade band (PLAY28). Enforced by SIZE EXIT CHECK. |
 | **Long-run margin** | `python -X utf8 scripts/margin_history.py <TKR> --current <gm>` | "A multiple without a margin percentile is not a valuation" (lens L2) — now on our own SEC series, not a press quote. |
 
