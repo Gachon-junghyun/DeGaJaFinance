@@ -89,5 +89,11 @@
       window.** A half-quoted print is not admissible as a proposition anchor.
 - [ ] **Every relative-performance number names its benchmark inline**; no statistical result is
       carried across markets without its own replication.
+- [ ] **Credit axis read and cited**: `hy_oas` (+ `nfci` if the proposition touches financial
+      conditions). Any claim of credit stress / risk-off that does not cite one of them is labelled
+      **narrative-only** in the text. ⚠ Measured 2026-07-21: a whole "credit surprise stack" was
+      built from narrative while HY OAS sat 6bp off its 365-day low.
+- [ ] **`real_10y` is quoted with `breakeven_10y`** — a real yield alone hides whether the move was
+      growth or inflation.
 - [ ] Transmission matrix produced (all 11 sectors, one line each) — the downstream input.
 - [ ] MACRO_REPORT.md written with primary numbers explicit; self-backtest hit-rate appended; new blind-spot terms folded back into the term table.

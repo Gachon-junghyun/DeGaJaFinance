@@ -63,7 +63,10 @@
 - [ ] Continuous-track files LED with the delta; rotating files are full fresh.
 - [ ] Any ROTATION-flagged matrix×flow divergence has an explicit resolution verdict in its sector file.
 - [ ] **Commodity/price-cycle nodes carry a QoQ rate-of-change series, not just levels.**
-- [ ] **Every "cheap on forward multiple" claim states where margin sits in that name's own history.**
+- [ ] **Every "cheap on forward multiple" claim states where margin sits in that name's own history
+      AND its estimate-revision trend** (`module_fundamentals_us` §추정치 모멘텀 — 90d change +
+      up:down breadth). A low multiple whose estimates are being revised up steeply is consensus
+      chasing, not cheapness.
 - [ ] **The node's customers are named and their disclosed spend checked** (or their print dates given).
 - [ ] **Every lead/lag claim is either measured this run or tagged `[unverified]`** — none inherited as fact.
 - [ ] Sub-sector dispersion stated; if it exceeds the sector move, the file says the sector label is the wrong unit.

@@ -56,6 +56,9 @@
 - [ ] 4 lenses fanned out in parallel; each returned named tickers + dated catalysts.
 - [ ] **Every bracket names its observable + frozen threshold + date, and is registered in
       `handoff/SCENARIOS.md` with BOTH branches.** One-way brackets are protocol violations.
+- [ ] **Every magnitude threshold is stated against the implied move** (`module_flow --positioning`
+      → `예상변동 ±x%`, with its `D±n`). A threshold inside the implied move is pre-declared as
+      **no-information** rather than presented as a trigger.
 - [ ] **Each branch graded by information content**; any binary where no branch would change the
       conclusion is dropped with that reason stated.
 - [ ] BLINDSPOT_PREMORTEM.md written (legs · brackets · re-tags · cycle GAP).
