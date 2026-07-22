@@ -203,6 +203,17 @@ say (B)? (3) is the move **date-clustered** (S1)? OBV enters only as agreement o
 those, and is reported as such.
 **Source** PLAY19 · PLAY25 · PLAY28 · PLAYGROUND §1 · ECONOPHYSICS §I·§III
 
+**부록 — 측정된 IC 눈금** (자기 IC 를 부풀리지 않기 위한 참조. `scripts/kelly_size.py --ic` 근거)
+
+| 신호 | IC | 상태 |
+|---|---|---|
+| 외국인 순매수 (좋았던 부분표본, 전력기기 2종목) | **0.33 ~ 0.44** | 측정됨 · **비정상** |
+| 외국인 순매수 (앞 18개월) | **≈ 0.015** | 측정됨 — 사실상 0 |
+| **추정치 리비전 (US, 90→60일 → 선행 60일)** | **+0.249** [+0.041, +0.456] | ⚠ **구분 불가** — Q5 의 72% 가 IT 한 섹터. 유효 날짜 1개 |
+
+⚠ 세 줄 모두 **"쓸 수 있는 IC"가 아니다.** 위 둘은 비정상(non-stationary), 아래는 단일 테마 집중.
+`--ic` 에 넣을 때 `--ic-n` 에 **종목 수를 넣지 마라** — 유효 표본은 날짜 수다(규칙 S1).
+
 ### D5 · Cross-check providers before theorizing about a late series
 **Fires when** data looks missing or stale.
 **Check** a second and third independent source before concluding the provider is lagging.
@@ -331,6 +342,8 @@ they sat unread** — both are code defects the lab found, documented, and never
 | **D14** | **Intraday order-flow imbalance (OFI)** — signed trade flow, VWAP deviation, opening/closing auction imbalance. | ★ **The lab's own §IV-4 lists this as unresolved**: "Hawkes 전염·진짜 OFI·공시 시각 정밀 이벤트는 일별 데이터의 벽". Daily net-buying is not order flow. Every impact law we measured (concavity δ, 5-day decay, Kyle λ) is a *daily* approximation of an intraday process. Check whether KIS exposes minute bars / tick data first — that determines feasibility. | module_KIS feasibility check first |
 
 | **D15** ★ | **PLAY23 never produced a result.** `Finance_PLAYGROUND/PLAY23_multiple_vs_flow_duel/out/` is **empty** — code and README exist, output does not. The lab doc carried it as "진행 중" for ~3 months. | It is the **only** experiment that directly tests this repo's founding hypothesis — *"multiples are an agreed-upon artificial yardstick; what moves price is flow and crowd psychology"* — via a KOSPI200 cross-sectional Fama-MacBeth duel. **The central claim has never been tested.** ⚠ Its own README flags the constraint: 3y / 20-day non-overlapping = only **27–31 rebalance points**, so "indistinguishable" is the likely honest outcome (rules C4 · S3) — which is still worth knowing, and must be written that way rather than stretched. | Finance_PLAYGROUND / human |
+
+| **D16** | **Snapshot `eps_trend` daily so revision IC becomes a time series.** yfinance returns a *snapshot* (current / 7 / 30 / 60 / 90 days ago), not history — so a single run yields **one** non-overlapping observation window. Store the snapshot each day into `data/estimates/` and the panel builds itself. | `scripts/measure_ic.py` can only produce a **single-date cross-sectional IC** today. Per rule S1 the effective sample is the **date count (1)**, not the ticker count — so the IC cannot yet justify an `--ic-n` in `kelly_size.py`. ~40 stored days would give a usable series; the cost is one cron-ish snapshot, and **the data is unrecoverable retroactively** — every day not stored is gone. That asymmetry makes this the cheapest dig on the list to start and the most expensive to postpone. | module_fundamentals_us / human |
 
 **Dig discipline** — D1, D3 and D8 are all mechanism or lead-lag claims the standing view currently
 carries as `[inferred]`. Per W2 each is cheap to test and expensive to keep assuming. Test before the
