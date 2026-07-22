@@ -26,3 +26,4 @@
 - [ ] Every DEEP sector has a section; cross-sector LIVE shortlist names included or explicitly dropped with reason.
 - [ ] Numbers cross-checked (math_check on any derived figure); blanks are blanks, not guesses.
 - [ ] Flow/positioning cross-read present per candidate; BET_SHEET.md written as ONE file.
+- [ ] **Linter run on this stage's own output** — `python -X utf8 scripts/report_lint.py <written file>`. Every finding is fixed or the paragraph carries its rule ID with a stated reason for exemption. ⚠ It checks form only (C1 benchmark · C2 both halves · S6 future label · D6 OBV-alone); a clean run is not a correct report.

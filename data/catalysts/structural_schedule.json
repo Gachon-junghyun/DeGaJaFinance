@@ -1,0 +1,68 @@
+{
+  "_note": "STRUCTURAL / CORPORATE-ACTION calendar — the dated events catalyst_calendar was blind to. Trigger (2026-07-22 audit): the desk logged its own failure twice — 'catalyst_calendar 모듈이 2런 연속 KR 최대 바이너리를 놓침', patched by hand both times. These are the CHEAPEST class of catalyst to stop missing because the dates are knowable in advance. Same discipline as econ_schedule.json: every row carries source + confidence so VERIFIED is never confused with ESTIMATE (P4). confidence: 'confirmed'=pulled from the official source this session · 'pattern'=rule-derived (e.g. MSCI reviews are quarterly) · 'estimate'=needs verification. Index-rebalance rows are DERIVED by the script from `rebalance_rules` — do not hand-enter them here.",
+  "updated": "2026-07-22",
+  "sources": {
+    "krx": "kind.krx.co.kr / data.krx.co.kr — 공시·공매도 과열종목 지정",
+    "dart": "dart.fss.or.kr — 유상증자·전환사채·보호예수(락업)",
+    "msci": "msci.com/index-review — quarterly index review",
+    "sec": "sec.gov — S-1/424B lockup terms, 13D/G"
+  },
+  "_schema": {
+    "date": "YYYY-MM-DD (the day the market can act on it)",
+    "event": "one line, in the market's own words",
+    "ticker": "affected name, or null for market-wide",
+    "axis": "lockup | offering | rebalance | short_designation | conversion | governance",
+    "binary": "true if it resolves one way or the other on that date",
+    "note": "why it moves price — mechanism, not narrative"
+  },
+  "events": [
+    {
+      "date": "2026-07-29",
+      "event": "SK하이닉스 ADR ↔ 원주 양방향 전환 개시",
+      "ticker": "000660",
+      "axis": "conversion",
+      "binary": true,
+      "source": "news",
+      "confidence": "confirmed",
+      "note": "2026-07-10 나스닥 상장($26.5B) 이후 교환이 막혀 ADR 프리미엄이 최대 +50%, 현재 ~25%. 전환 개시로 차익거래가 열리면 프리미엄이 붕괴한다. ★ 이 날 전까지 서울 원주의 외국인 수급은 방향이 아니라 창구이동으로 오염돼 있어 해석 불가 — handoff/RESEARCH.md D1 참조."
+    },
+    {
+      "date": "2026-07-29",
+      "event": "금융위·금감원 지배구조 선진화 방안 (8대 지주)",
+      "ticker": null,
+      "axis": "governance",
+      "binary": true,
+      "source": "news",
+      "confidence": "estimate",
+      "note": "회장 3연임 법적 금지·주총 2/3·클로백 등. 3연임 금지가 위헌 논란에 직면해 보완책 검토 보도가 나왔다 — 'D-1 with content'에서 'contested'로 강등된 상태. 날짜와 내용 모두 재확인 필요."
+    },
+    {
+      "date": "2026-07-31",
+      "event": "SK이터닉스 KKR SPA 클로징 (SK디스커버리 30.98% 매각)",
+      "ticker": "475150",
+      "axis": "offering",
+      "binary": true,
+      "source": "dart",
+      "confidence": "estimate",
+      "note": "주당 ₩23,700 ≈ 시장가 대비 −58%. 06-30에서 1회 연기된 이력이 있어 재확인 필수. 공매도 2.53%는 스퀴즈가 아니라 이벤트 포지셔닝일 가능성."
+    }
+  ],
+  "rebalance_rules": {
+    "_note": "규칙 기반이라 스크립트가 날짜를 계산한다. 손으로 넣지 마라.",
+    "msci_quarterly_review": {
+      "months": [2, 5, 8, 11],
+      "rule": "last_business_day",
+      "note": "MSCI 분기 리뷰 — 편출입 확정일 종가에 패시브 물량이 집중된다. 편입/편출 종목은 리뷰 발표일(보통 2주 전)에 이미 알려진다."
+    },
+    "sp_quarterly_rebalance": {
+      "months": [3, 6, 9, 12],
+      "rule": "third_friday",
+      "note": "S&P 분기 리밸런스 = 쿼드러플 위칭. 지수 추종 물량 + 옵션·선물 만기가 겹쳐 거래량이 평소의 배수."
+    },
+    "kospi200_review": {
+      "months": [6, 12],
+      "rule": "second_thursday",
+      "note": "KOSPI200 정기변경. 편입 예상 종목은 발표 전 선반영, 확정일에 패시브 유입."
+    }
+  }
+}

@@ -277,10 +277,23 @@ change series**. Two consecutive declines in the *rate* is the signal; the level
 
 ### L2 · The peak-margin / low-multiple trap
 A cyclical at its earnings peak prints its **lowest** forward multiple, because the denominator is
-peaking. Measured: Micron forward P/E **6.31×** at gross margin **84.6%**, against a prior-cycle peak
-of **59%** (2018) and an FY2023 margin of **−9.1%**.
-**Use** — put the forward multiple **next to** where margin sits in that name's own history before
-calling it cheap. A multiple without a margin percentile is not a valuation.
+peaking.
+**Now measured on our own series** (dig D2 closed 2026-07-22 — `scripts/margin_history.py MU`,
+SEC XBRL, 17 years FY2009–2025):
+
+```
+peak    FY2018  58.9%      trough  FY2009  −9.2%  (FY2023 −9.1%)
+median          32.0%      current FQ3'26  84.6%  → 100th percentile, +25.7pp above the 17y peak
+```
+
+The press figure we had been citing ("59%") is confirmed exactly — **but it is now our data, not a
+quotation.** Two negative-margin years inside 17 is the amplitude this industry actually runs.
+**Use** — put the forward multiple **next to** the margin percentile before calling anything cheap.
+A multiple without a margin percentile is not a valuation. `scripts/margin_history.py <TKR> --current <gm>`
+prints the percentile directly; it works for any SEC filer, so build the series once per cyclical.
+⚠ XBRL trap baked into the script: `companyfacts.fy` is the **filing** year, so a 10-K carries prior
+comparatives — filtering by that field pairs mismatched periods and yields margins near **−200%**
+(measured on the first attempt). Filter by **period length (340–400 days)** instead.
 **Counter held open** — long-term agreements with price floors may raise the trough structurally
 (STANDING_VIEW C1, unmeasured).
 
@@ -302,7 +315,7 @@ they sat unread** — both are code defects the lab found, documented, and never
 | # | Dig | Why it matters | Owner stage |
 |---|---|---|---|
 | **D1** | Do LTA price floors actually hold margin? Pull Micron/Hynix/Samsung long-term-agreement language from filings + call transcripts. | The best counterargument on file (STANDING_VIEW C1). If floors are real, the margin-peak call weakens and this cycle's *shape* differs from every prior one. | DEEP |
-| **D2** | Memory gross-margin history, 20 years, all three makers. | Lens L2 rests on "84.6% vs a 59% prior peak" — and that peak came from press, not a series we own. Build once, reuse. | DEEP |
+| ~~D2~~ ✅ | ~~Memory gross-margin history~~ — **CLOSED 2026-07-22**. `scripts/margin_history.py` (SEC XBRL, 17y). MU peak FY2018 **58.9%**, trough −9.2%, median 32.0%; current 84.6% = **100th pct, +25.7pp over peak**. KR makers still open (DART, not SEC). | Lens L2 rests on "84.6% vs a 59% prior peak" — and that peak came from press, not a series we own. Build once, reuse. | DEEP |
 | **D3** | Hyperscaler capex → memory revenue lead-lag, tested the way W2 demands. | M9's "30%→48% of capex" is a two-firm estimate. If capex genuinely leads, that is the real leading indicator W2 killed the fake version of. | DEEP |
 | **D4** | Score S1–S5 in SCENARIOS.md as their dates pass. | Unscored scenarios are how a desk keeps wins and forgets losses. | HANDOVER |
 | **D5** | 009150 Samsung Electro-Mechanics — resolve STANDING_VIEW C2. | An explicit coverage gap the KR desk flagged on itself. Substrate/MLCC is a distinct node and may run on the equipment clock. | DEEP |
@@ -314,7 +327,7 @@ they sat unread** — both are code defects the lab found, documented, and never
 | **D10** ★ | **News body boilerplate.** asiae/sedaily carry **100% page furniture in the first 400 chars**; measured boilerplate share asiae **55.6%**, donga 32.2%, sedaily 16.6%. | Documented as comments in **three** files (`_brief.py:54`, `_burst.py:87`, `_export.py:53`) and never fixed. The lab calls this **"the ceiling on every news experiment"** — fixing it raises the ceiling on all prior work, which beats running a new experiment. | module_news_data / human |
 
 | **D12** | **Borrow fee & utilization**, not just short balance. KRX publishes 대차잔고; US borrow data is harder. | We measure *how much* is short (KRX %float, FINRA daily volume) but not *how expensive/scarce the borrow is* — which is the actual squeeze pressure a trading desk watches. A crowded short on cheap, plentiful borrow is not the same trade as one on a hard-to-borrow name. | module_flow / L2 indicators |
-| **D13** | **Corporate-action & index calendar**: lockup expiries, block deals / secondary offerings, MSCI-FTSE rebalance dates, KRX short-selling overheated designations. | `catalyst_calendar` currently carries earnings and macro only — and the desk logged its own failure: *"catalyst_calendar 모듈이 2런 연속 KR 최대 바이너리를 놓침"*, patched by hand both times. These are **dated, mechanical, knowable in advance** — the cheapest class of catalyst to stop missing. | scripts/catalyst_calendar |
+| ~~D13~~ ✅ | **CLOSED 2026-07-22** — `data/catalysts/structural_schedule.json` + `catalyst_calendar` STRUCTURAL block. **Corporate-action & index calendar**: lockup expiries, block deals / secondary offerings, MSCI-FTSE rebalance dates, KRX short-selling overheated designations. | `catalyst_calendar` currently carries earnings and macro only — and the desk logged its own failure: *"catalyst_calendar 모듈이 2런 연속 KR 최대 바이너리를 놓침"*, patched by hand both times. These are **dated, mechanical, knowable in advance** — the cheapest class of catalyst to stop missing. | scripts/catalyst_calendar |
 | **D14** | **Intraday order-flow imbalance (OFI)** — signed trade flow, VWAP deviation, opening/closing auction imbalance. | ★ **The lab's own §IV-4 lists this as unresolved**: "Hawkes 전염·진짜 OFI·공시 시각 정밀 이벤트는 일별 데이터의 벽". Daily net-buying is not order flow. Every impact law we measured (concavity δ, 5-day decay, Kyle λ) is a *daily* approximation of an intraday process. Check whether KIS exposes minute bars / tick data first — that determines feasibility. | module_KIS feasibility check first |
 
 **Dig discipline** — D1, D3 and D8 are all mechanism or lead-lag claims the standing view currently

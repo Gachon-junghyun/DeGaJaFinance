@@ -69,4 +69,5 @@
       chasing, not cheapness.
 - [ ] **The node's customers are named and their disclosed spend checked** (or their print dates given).
 - [ ] **Every lead/lag claim is either measured this run or tagged `[unverified]`** — none inherited as fact.
+- [ ] **Linter run on this stage's own output** — `python -X utf8 scripts/report_lint.py <written file>`. Every finding is fixed or the paragraph carries its rule ID with a stated reason for exemption. ⚠ It checks form only (C1 benchmark · C2 both halves · S6 future label · D6 OBV-alone); a clean run is not a correct report.
 - [ ] Sub-sector dispersion stated; if it exceeds the sector move, the file says the sector label is the wrong unit.

@@ -217,6 +217,7 @@ industry_us/kr 프로토콜이 호출하는 분석 모듈. 전부 기능별 `_�
 
 | 모듈 | 트리거 | CLI(예) | 소유/의존 |
 |---|---|---|---|
+| `scripts/report_lint.py` | 데스크 산출물 **규칙 린터**(형식 검사) | `python -X utf8 scripts/report_lint.py "llm_outputs/{date}/**/*.md"` | — |
 | `module_macro_us` | US 매크로 레짐(FRED **19개** — 금리·물가·달러 + **신용/유동성**) | `python -m module_macro_us --series hy_oas,nfci` | FRED_API_KEY |
 | `module_valuation` | KR 밸류에이션 스냅샷·목표가·peer 비교(수동 `--peers`) | `python -m module_valuation 005930 --peers 000660` | DART/KRX |
 | `module_industry_map` | 임베딩 클러스터로 산업 지도·밸류체인 | `python -m module_industry_map` | data/corp_embeddings.db (직접 sqlite) |

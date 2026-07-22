@@ -55,6 +55,7 @@ other 82% was restatement. Structure the file so that cannot happen:
       macro argument is reverted to MACRO's verdict and the attempt logged as "macro re-argument, declined".
 - [ ] Every matrix×flow divergence named with a resolution owner (DEEP).
 - [ ] 4 DEEP targets picked by the rule (continuity + recency stated where applied); no padding.
+- [ ] **Linter run on this stage's own output** — `python -X utf8 scripts/report_lint.py <written file>`. Every finding is fixed or the paragraph carries its rule ID with a stated reason for exemption. ⚠ It checks form only (C1 benchmark · C2 both halves · S6 future label · D6 OBV-alone); a clean run is not a correct report.
 - [ ] DEEP_LOG line appended for the next run.
 - [ ] ⚠ If the delta count is 0, the correct output is a **short file saying "flow confirms the matrix
       on all 11"** plus the DEEP picks. That is a valid, informative run — not a reason to manufacture

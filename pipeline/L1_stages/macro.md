@@ -95,5 +95,6 @@
       built from narrative while HY OAS sat 6bp off its 365-day low.
 - [ ] **`real_10y` is quoted with `breakeven_10y`** — a real yield alone hides whether the move was
       growth or inflation.
+- [ ] **Linter run on this stage's own output** — `python -X utf8 scripts/report_lint.py <written file>`. Every finding is fixed or the paragraph carries its rule ID with a stated reason for exemption. ⚠ It checks form only (C1 benchmark · C2 both halves · S6 future label · D6 OBV-alone); a clean run is not a correct report.
 - [ ] Transmission matrix produced (all 11 sectors, one line each) — the downstream input.
 - [ ] MACRO_REPORT.md written with primary numbers explicit; self-backtest hit-rate appended; new blind-spot terms folded back into the term table.
