@@ -22,6 +22,22 @@ not by how interesting the desk finds it.
   opening on a name the desk had suspended its own flow read for, and a financial-holdco governance
   package). For a KR reader those two are the ones with a mechanism, not the US earnings.
 
+⚠ **The 5-tier order has a known blind spot: undated domestic policy.** Because tier 1 rewards "a
+  date attached", a domestic event with real transmission but no resolution date falls to tier 5 and
+  gets cut. Measured 2026-07-23 by a random 10% audit of the day's 246 market events against the
+  17-item draft: **6 of 25 covered (24%)** — most of the misses were correctly dropped (broker notes,
+  regional items, a contributed column), but **three should have been in**: the presidential
+  real-estate policy roundtable [20 articles/6 outlets, the day's #2 domestic event, with 보유세·
+  양도세 on the table], Samsung's foldable launch [9/6], and POSCO's collapsed wage talks going to
+  arbitration [4/3]. None had a resolution date; all three move banks, construction, handsets, steel.
+  **Give undated domestic policy/corporate events their own slot at tier 2**, judged by transmission
+  breadth rather than by whether a date happens to be attached.
+
+⚠ **Bucket by occurrence, not by topic.** The gather stage hands over 간밤 발생 / 누적·진행 중 /
+  오늘 예정. Rank inside each bucket and keep them visibly separate in the output — a reader must
+  never have to guess whether item 9 already happened. Measured: mixing a 4-day-old escalation into
+  the overnight block made a continuing war read as a fresh shock.
+
 ## Cap and the cut list
 - Target **~15 items**; going over is fine when the day is genuinely loaded — going over *silently*
   is not. Whatever is dropped is **counted** in the file, with a one-line reason class.

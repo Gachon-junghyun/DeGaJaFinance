@@ -6,13 +6,26 @@
 
 ## Form
 ```
-[YYYY-MM-DD]
+[YYYY-MM-DD] 08:30 · 장 시작 전
+※ 모든 시각은 한국시간(KST)입니다. 해외 발생 건은 현지시각을 괄호에 함께 적었습니다.
 
+■ 간밤에 일어난 일 (오늘 새벽)
 1. {한 문장 사실 + 숫자}. {필요하면 왜 중요한지 한 절.}
-출처: {독자가 확인할 수 있는 발신처}
+발생: {KST 시각} ({현지 시각})
+출처: {발행처} {URL — 한국 기사 우선}
 
-2. …
+■ 이어지고 있는 일 (오늘 새로 생긴 것이 아닙니다)
+■ 전 거래일 마감 기준
+■ 오늘 예정 (아직 일어나지 않았습니다)
+■ 이번 주 남은 일정 (한국시간)
 ```
+- The four `■` buckets come from the gather/rank stages and are **load-bearing, not decoration**: a
+  reader must be able to tell at a glance what is new, what is continuing, and what has not happened
+  yet. Never merge them to save space.
+- `발생:` before `출처:` on every item. KST first, local time in parentheses.
+- The URL sits on the item's own `출처:` line. **Prefer a Korean outlet** even for foreign
+  events — see the public_source unit for why (it is the better date check, and it carries
+  figures the English wires drop).
 - **Korean, plain text.** The file is Markdown so it renders anywhere, but the body must survive
   being pasted into a chat window with no formatting: no tables, no headers inside items, no bold
   runs, no emoji tags. A line that needs a table is a line that needs to be shorter.
@@ -43,6 +56,16 @@
 - Any number whose only provenance is "우리가 계산했다" without the input being public.
 
 ## ✅ EXIT CHECK
+- [ ] **Every item carries `발생:` in KST**, with the local time in parentheses for anything foreign.
+      No item's date was inherited from when an article was published.
+- [ ] Items sit in the right occurrence bucket; nothing in "간밤" happened days ago, nothing in
+      "오늘 예정" is written as if it already landed (no results, no numbers from it).
+- [ ] **Every `출처:` carries a URL where one exists, Korean-language wherever available.** Items
+      with no link are named as unverified in the closing note, not left looking checked.
+- [ ] **No index level, close, or headline price was copied from a desk file without checking the
+      issuing body** — and any figure the desk's own files disagree on was re-sourced or dropped.
+- [ ] **Every earnings line carries the quarter AND the cumulative when they point different ways.**
+      A cumulative-only profit line on a loss-making quarter is a defective item, not a short one.
 - [ ] **Ban list swept**: not one internal name, tag, module, or CLI string survives in the file.
       Grep it; do not eyeball it.
 - [ ] Every item's `출처:` names a body, a filing, or an outlet — something checkable without this
