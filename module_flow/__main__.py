@@ -14,7 +14,7 @@ from datetime import datetime
 import pandas as pd
 import yfinance as yf
 
-from ._config import OUT_DIR, utf8_stdout
+from ._config import OUT_DIR, kr_code, utf8_stdout
 from ._investor import investor_flow
 from ._news_velocity import news_query, news_velocity
 from ._price_flow import price_flow
@@ -52,7 +52,8 @@ def main() -> None:
     rows = []
     for t in a.tickers:
         q = news_query(t, names.get(t))
-        vel = news_velocity(q, a.recent, a.base)
+        # P3: KR 이면 국내 스코프로 센다. 이 판별을 안 넘기면 KR 은 항상 0건 → n/a 였다.
+        vel = news_velocity(q, a.recent, a.base, kr=bool(kr_code(t)))
         pf = price_flow(t, bench_close)
         inv = None if a.no_investor else investor_flow(t)
         sh = None if a.no_short else short_flow(t)

@@ -26,8 +26,40 @@ The two are different objects and must be cross-read, not merged:
 **3. Score matured scenarios** — L3 [scenario_score](../L3_functions/scenario_score.md), one call per
 `ARMED` row whose event date has passed. Atomic: one scenario → one branch verdict.
 
+**3b. Audit the rejection ledger for anything due — do not rely on `score` alone for this.**
+L3 [reject_ledger](../L3_functions/reject_ledger.md). Rejections are the one desk action that used
+to leave no score. Run **both**:
+```bash
+python -X utf8 scripts/reject_ledger.py due     # ★ run this one first, every HANDOVER, no exceptions
+python -X utf8 scripts/reject_ledger.py score   # per-class / per-type excess return (context, not a gate)
+```
+`score` benchmarks against the **equal-weight 1조+ universe**, never the index (measured 2026-07-23,
+equal-weight −2.6% vs cap-weight −15.7% — an index benchmark flatters every rejection). It tells you
+which reason classes are earning their keep. It does **not** by itself surface a revived name — that
+is `due`'s job, and until 2026-07-23 nothing called it: 24 of the ledger's 25 rows were entered with
+no `revives_if`/`recheck_date` at all, so "any row whose condition has now come true" was silently
+unstatable for almost the whole ledger. That gap cost **+41.2pp and +26.9pp on SK이터닉스 alone** —
+the ledger's two most expensive rows, both narrative-class, both never re-examined until a user
+prompted a manual re-audit.
+
+⚠ **A HANDOVER that skips `due` is not a lighter HANDOVER — it is the same failure mode as an
+unscored SCENARIOS.md row, just on the candidate side instead of the macro side.** `due` output has
+two sections and neither may be waved through silently:
+- **재확인일 도래/경과** (recheck date has passed) — re-pull flow/news for each name named here
+  (same re-pull commands as §4 below) and either `resolve --outcome revived` (back into §A/§B with
+  its original evidence, per the 2026-07-23 SK이터닉스 precedent) or `resolve --outcome reaffirmed`
+  (stays out, but now on fresh evidence, not a stale one).
+- **부활조건 없는 레거시** (no revival condition was ever set) — these cannot be re-checked on a
+  schedule because there is no schedule; HANDOVER may not carry them forward unexamined a second
+  time. Either audit one now with a fresh pull, or explicitly note it as still-pending audit in
+  `HANDOVER.md` so the gap is visible, not silent.
+- A `due` row that surfaces two HANDOVERs in a row without a `resolve` call against it is a process
+  failure to name in `HANDOVER.md`, the same way an `EXPIRED` scenario is named, never dropped quietly.
+
 **4. Re-measure anything the carry marked suspended-until-a-date.** When a suspension's clearing date
-has passed, the carry does not tell you the answer — it tells you to go get it. Typical re-pulls:
+has passed, the carry does not tell you the answer — it tells you to go get it. This includes any
+**watch condition an earlier stage armed** ("enter on the breakout", "revisit after the 2Q NIM print"):
+an armed condition that nobody re-reads is an idea the desk paid for and never collected. Typical re-pulls:
 ```bash
 python -X utf8 -m module_flow <TKR>.KS --bench ^KS11              # KR flow + short balance
 python -X utf8 -m module_KIS <6-digit> --investor 20              # KR investor actuals

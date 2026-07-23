@@ -27,3 +27,8 @@ Decide by composing, in this order:
 - [ ] Every open position has a HOLD/ADD/TRIM/EXIT verdict; every 🟢LIVE/★core candidate an ENTER/PASS.
 - [ ] Hard gates applied (stop-hit→EXIT, RESOLVED→out, momentum-only→hard-stop stamped).
 - [ ] Correlation guard applied (no stacked ENTERs on one risk unit); each verdict carries a flip-condition.
+- [ ] **Every PASS/EXIT is a ledger row with a reason class and a `--revives-if` condition** — L3
+      [reject_ledger](../L3_functions/reject_ledger.md). A PASS whose stated condition later comes true
+      (e.g. "wait for the breakout", "revisit after the print") returns as a candidate on evidence.
+      ★ Measured: the correlation guard is the one rejection class that has *earned* its keep so far
+      (−5.3pp avg); a PASS with no revival condition is where ideas quietly disappear.

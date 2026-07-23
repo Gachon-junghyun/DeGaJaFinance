@@ -21,9 +21,36 @@
 - Include the pre-mortem's **epicenter-starter module** if a cycle GAP was flagged: a partial core
   in the #1 cycle's epicenter exists on the sheet regardless of tape, tape gates only the remainder.
 - Sizing language is *influence illustration* only — zero buy/sell recommendation.
+- **Every name you set aside becomes a scored record** — L3 [reject_ledger](../L3_functions/reject_ledger.md).
+  Write it with its **reason class**, its **`--revives-if` condition**, and its **`--recheck-date`** —
+  **`add` will not run without both** (script-enforced since 2026-07-23, no bypass):
+  ```bash
+  python -X utf8 scripts/reject_ledger.py add --date <run date> --ticker <6자리> --name <종목> \
+      --cls <클래스> --why "<한 줄 근거>" --stage BET \
+      --revives-if "<부활 조건>" --recheck-date <YYYY-MM-DD>
+  ```
+  Measured 2026-07-23 (24 rejections): **67% changed nothing**, and the loss tail ran **2.2× the gain
+  tail** (+83.8pp vs −38.4pp). Almost all of that loss tail (**+41.2pp + 26.9pp on one name**) traces
+  to two rejections filed **without** a revival condition, never re-opened until a user forced a
+  manual audit. **Do not file a rejection you cannot attach both fields to** — if you cannot state
+  what would reverse it and by when, the rejection is not ready to be written yet; narrow the reason
+  until it is. HANDOVER now runs `reject_ledger.py due` every run (`carryover.md` §3b) — a condition
+  you set here **will** be re-examined without you having to remember it.
+- **When the flow gate still passes and only the story broke, RE-FILE the name — don't remove it.**
+  A thread going FADING/ENDED, a catalyst going quiet, or a *secondary* thesis being refuted
+  (e.g. "the squeeze premise died") is a reason to **restate the thesis and lower conviction**, not to
+  delete a name whose money is still measurably arriving. Give it a new thesis line and a dated
+  re-check. ★ Measured origin: 475150 was set aside twice on narrative grounds (07-16 "theme faded",
+  07-20 "squeeze thesis refuted") while its foreign+institution net-buy never stopped — the two
+  rejections cost **+41.2pp** and **+26.9pp**. Removal is for names the **measured** axes reject.
 
 ## ✅ EXIT CHECK
 - [ ] Every DEEP sector has a section; cross-sector LIVE shortlist names included or explicitly dropped with reason.
 - [ ] Numbers cross-checked (math_check on any derived figure); blanks are blanks, not guesses.
 - [ ] Flow/positioning cross-read present per candidate; BET_SHEET.md written as ONE file.
+- [ ] **Every set-aside name is in the ledger with a class AND a `--revives-if` condition**
+      (`reject_ledger.py add`), and any name whose stored condition has come true is back in §A/§B.
+      A rejection with an empty revival condition is a permanent ban — allowed, but say why.
+- [ ] **No name was removed on narrative grounds alone while its measured flow still passed** — such
+      names appear re-filed under a new thesis with a dated re-check, not absent.
 - [ ] **Linter run on this stage's own output** — `python -X utf8 scripts/report_lint.py <written file>`. Every finding is fixed or the paragraph carries its rule ID with a stated reason for exemption. ⚠ It checks form only (C1 benchmark · C2 both halves · S6 future label · D6 OBV-alone); a clean run is not a correct report.

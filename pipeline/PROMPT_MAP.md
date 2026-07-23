@@ -31,6 +31,7 @@ The prompts form 5 families (desk flows); each flow is a **chain of L1 parts (st
 | Layer | Unit | Role |
 |---|---|---|
 | L1 | [handover](L1_stages/handover.md) | Inherit the standing view · score matured scenarios · stale-check · load the binding research rules · write the carry back at run end |
+| L1 | [leak_audit](L1_stages/leak_audit.md) | **사후 감사** — 끝난 런이 지불하고 걷지 않은 것. 거부·커버리지소실·스쳐감·발굴부재 4클래스 × 선행검정(후행 동어반복 차단) × 창 레짐 라벨링 → 파일·줄 단위 프로토콜 처방 |
 | L2 | [carryover](L2_modules/carryover.md) | Read `../handoff/` + reconcile it against the mechanical tag ledger (`module_report_tags`); re-pull anything whose suspension has cleared |
 | L3 | [scenario_score](L3_functions/scenario_score.md) | One pre-registered scenario → one branch verdict, against the **frozen** threshold. `EXPIRED` is logged, never dropped |
 

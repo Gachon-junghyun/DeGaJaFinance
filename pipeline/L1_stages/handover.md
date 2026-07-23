@@ -38,6 +38,22 @@ re-discoverable from a prior run's material. This stage is the inheritance step.
   ambiguous, that is a finding about the scenario's construction — record it; do not improvise a
   new threshold to make the call scoreable.
 
+### 2b. Audit the rejection ledger — do not let a due row cross a second HANDOVER unexamined
+- Run L3 [reject_ledger](../L3_functions/reject_ledger.md) `due` — never `score` alone; `score`
+  tells you which reason classes are earning their keep, it does not surface a revived name.
+- ⚠ **A `due` row that carries into a second HANDOVER without a `resolve` call is a process
+  failure**, the same class as an unscored `EXPIRED` scenario — name it in `HANDOVER.md`, do not
+  drop it silently.
+- For every row `due` surfaces (recheck date passed, or a legacy row with no `revives_if` ever set),
+  re-pull the name's flow/news (§4 re-pull commands below) and either `resolve --outcome revived`
+  (back into the candidate pool with its original evidence, not laundered) or
+  `resolve --outcome reaffirmed` (stays out, on fresh evidence). Do not skip a legacy row twice in
+  a row just because it has no scheduled date — it has no schedule precisely because it was never
+  given one, which is the defect, not a reason to keep deferring it.
+- ⚠ **Do not treat a clean `due` run (nothing due) as proof the ledger is healthy.** Cross-check the
+  legacy-count line — a shrinking legacy count across runs is the only real evidence this practice is
+  taking hold, not a quiet pass this run.
+
 ### 3. Stale-check — every carry has an expiry
 - Flag any STANDING_VIEW row whose `asof` is older than this run's horizon, and any suspension whose
   clearing date has passed (e.g. a blocked cross-listing conversion window). A suspension that has
@@ -83,6 +99,10 @@ Rules are grouped **by the moment they fire**, so a stage can load the ones that
       retracted entry is either dropped or re-argued with a *new* measurement that names the old one.
 - [ ] **Every past-dated scenario scored or explicitly marked `EXPIRED` with a reason.** Zero silent
       skips — this is the check the stage exists for.
+- [ ] **`reject_ledger.py due` run this HANDOVER — not skipped, not substituted with `score` alone.**
+      Every row it surfaces is either `resolve`d this run or explicitly named as still-pending in
+      `HANDOVER.md` (never silently carried a second time). The legacy (no-`revives_if`) count is
+      reported and, run over run, does not sit flat forever.
 - [ ] Stale rows flagged with their `asof`; every cleared suspension converted into a dig item.
 - [ ] `[measured]` / `[inferred]` tags preserved on every carried claim. No `[inferred]` claim is
       passed downstream as evidence.

@@ -29,6 +29,11 @@
     {scenario + track KPI + horizon date}; ELSE → {kill condition that falsifies the card}
   - **Cell + hand-off**: CONFIRMED-EARLY → BET-stage candidate · STORY-ONLY → watchlist with a
     dated re-check · LATE-MONEY → valuation gate note · DEAD → drop
+  - ⚠ **DEAD is a MONEY verdict, not a story verdict.** The 2×2's bottom-right cell is
+    FADING/ENDED **×🔴 dispersing** — *both* axes. A thread that went quiet while the flow is still
+    🟢 accumulating is not DEAD; it is a name whose thesis needs rewriting, so re-file it (new thesis
+    line + dated re-check) rather than dropping it. Every drop is written to the ledger with its
+    **`--revives-if`** condition — L3 [reject_ledger](../L3_functions/reject_ledger.md).
 - **Book cross-check**: any ENDED thread that an open book position's thesis rides on → flag to
   the book desk (paper_desk / 미러링) in the card file's final section. Attention rotated;
   the position must re-justify on something that is still alive.
