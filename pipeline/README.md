@@ -113,6 +113,17 @@ Checkpoint at `out/pipeline_runs/{name}.json` (stage · passed · target). Do a 
   universe. Called by L2 [carryover](L2_modules/carryover.md); written by L1 bet · alpha · decide ·
   event_alpha. First observation (n=24): **67% of rejections changed nothing** and the loss tail ran
   **2.2×** the gain tail — the unit exists to make that ratio visible and improvable, not to rule.
+- **protocol `morning_brief`** (2026-07-23) — the second *publication* desk (paper_desk consumes the
+  research to trade; this one consumes it to **publish**). Three blocks — gather → rank → render —
+  emitting one phone-readable `MORNING_BRIEF.md` at 08:30 KST, pre-open. Two rules carry it, both
+  born from a measured draft failure the same day: **(a)** an 08:30 brief cannot quote a mid-session
+  number (the draft cited a 10:20 KST flow pull that did not exist at 08:30), and **(b)** our
+  filenames are not sources — four of the draft's eight `출처:` lines pointed at `MACRO_REPORT §1`,
+  `EVENT_ALPHA Card 1`, `module_flow`, `SCENARIOS S8-C`, each of which had a real public origin
+  (한국은행 · USTR · 거래소 · 외신) the draft walked past. An unresolvable citation is worse than
+  none: it still reads as authority. New L3 [public_source](L3_functions/public_source.md) holds the
+  substitution table and the ban list; **zero new L2** — it reuses report_read · news · schedule ·
+  bookkeeping as they are.
 - **L1 `leak_audit`** (2026-07-23) — the counterpart to §5 self-backtest: it scores what the desk did **not** do. Runs against a *past* run (≥3 sessions later), pairs `scripts/leak_scan.py` with L3 reject_ledger, and classifies every mover into A.런에있었음 / B.커버리지소실 / C.스쳐감 / D.발굴부재. Two guards are load-bearing: **forward-test only** (OBV is price×volume, so trailing scoring is tautological — measured: trailing said 매집 +42.2%, forward said it lost) and **label the window's regime** (measured: in the 07-20 bounce 🔴분산 +8.22% beat 🟢가속 +7.77%; in the 07-16 window 🟢 beat the universe 11×). First result: **B.커버리지소실 was the worst leak (+1.93pp, n=26) while D.발굴부재 UNDERPERFORMED (−0.70pp, n=89)** — discovery is not the leak, retention is.
 - **L2/L3**: orchestration + atomic functions, reused across L1s. handover added L2 `carryover`
   (reads the carry + reconciles it against the mechanical ledger — a belief with no coverage gets

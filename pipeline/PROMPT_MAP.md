@@ -202,6 +202,27 @@ correlated basket capped as ONE risk unit · per-currency cash sleeve (KRW cash 
 
 ---
 
+## 8. Morning brief (morning_brief) — repo-native, no mvp ancestor
+
+Purpose: **publish**, not research. Turn the previous desk run + the overnight foreign session +
+today's calendar into one pre-open file a person reads on a phone at 08:30 KST. No new number, no
+view, no recommendation. Output `llm_outputs/{date}/morning_brief/`.
+
+| # | L1 stage | Content · calls |
+|---|---|---|
+| 1 | BRIEF_GATHER | candidate facts + **origin** + asof *session* + 08:30 availability — L2 report_read(prev run) · news(`--scope foreign`, overnight; incl. the 1-outlet + non-market boundary sections) · schedule(10-day) · bookkeeping(prior-session marks, read-only) |
+| 2 | BRIEF_RANK | 5-tier consequence order (resolves ≤48h → moved overnight → confirmed yesterday → dated this week → standing) · ~15 cap **with a counted cut list** · bias check |
+| 3 | BRIEF_RENDER | Korean plain text, fact-first, `출처:` per item — L3 `public_source` ban list swept by grep |
+
+**Why it needed its own L3** (`public_source`): the 2026-07-23 draft cited **our own filenames** as
+sources on 4 of 8 items. Every one had a public origin it walked past. The unit's rule is one line —
+*cite where the fact entered the world, not where we wrote it down* — plus a translation table so
+desk tags (🟢가속 매집 · BUILDING · RS60 · D-0) become plain Korean instead of being deleted.
+**Gates**: no mid-session number in a pre-open file · every `출처:` checkable without this repo ·
+zero recommendation · cut count published so the reader knows it is a selection.
+
+---
+
 ## 7. Open reorganization decisions (unresolved — a human locks these)
 
 - **Folder axes**: (a) meta layer (spec/runtime/stage) × (b) Phase L1 × (c) runtime KR/US — how to fold 3 axes into folders.
