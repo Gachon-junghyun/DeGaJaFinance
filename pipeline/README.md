@@ -107,6 +107,13 @@ Checkpoint at `out/pipeline_runs/{name}.json` (stage · passed · target). Do a 
   (macro·sweep·event_alpha·rotation·premortem·deep·bet·alpha·drift) + pulse ·
   mirror_ingest · stage_orders (미러링) + **forensic_pack · self_score · chain_alpha · money_forensic · set_diff ·
   falsify · verdict** (real_alpha_kr) + **mandate_set · drift_check · rebalance_plan** (wrap_account).
+- **L3 `reject_ledger`** (2026-07-23) — the desk's rejections become a scored asset. Every
+  DROP/PASS/강등 is appended with a reason class and a **`--revives-if`** condition, then scored by
+  class and by **type** (`measured` / `structural` / `narrative`) against the equal-weight 1조+
+  universe. Called by L2 [carryover](L2_modules/carryover.md); written by L1 bet · alpha · decide ·
+  event_alpha. First observation (n=24): **67% of rejections changed nothing** and the loss tail ran
+  **2.2×** the gain tail — the unit exists to make that ratio visible and improvable, not to rule.
+- **L1 `leak_audit`** (2026-07-23) — the counterpart to §5 self-backtest: it scores what the desk did **not** do. Runs against a *past* run (≥3 sessions later), pairs `scripts/leak_scan.py` with L3 reject_ledger, and classifies every mover into A.런에있었음 / B.커버리지소실 / C.스쳐감 / D.발굴부재. Two guards are load-bearing: **forward-test only** (OBV is price×volume, so trailing scoring is tautological — measured: trailing said 매집 +42.2%, forward said it lost) and **label the window's regime** (measured: in the 07-20 bounce 🔴분산 +8.22% beat 🟢가속 +7.77%; in the 07-16 window 🟢 beat the universe 11×). First result: **B.커버리지소실 was the worst leak (+1.93pp, n=26) while D.발굴부재 UNDERPERFORMED (−0.70pp, n=89)** — discovery is not the leak, retention is.
 - **L2/L3**: orchestration + atomic functions, reused across L1s. handover added L2 `carryover`
   (reads the carry + reconciles it against the mechanical ledger — a belief with no coverage gets
   demoted, coverage with no belief becomes a DEEP candidate) + L3 `scenario_score` (one scenario →
@@ -128,6 +135,17 @@ Checkpoint at `out/pipeline_runs/{name}.json` (stage · passed · target). Do a 
   rate-hike saga was a 2-outlet tail item 5 days before the hike — invisible in any one day's
   brief, obvious as a climbing curve (`2→7→6→7→5→8`). ⚠ The event axis is **client-only**
   (GPU embeddings, CLAUDE.md P6) — the collection server cannot run it.
+  ⚠ **The snapshot's coverage is now a measured number, not a claim** (2026-07-23). 20% of a day's
+  articles drawn at random and traced back into the brief: **45.6% appeared nowhere**, with the tail
+  already emptied by `--body 2`. The leak was never the tail — it was 1-outlet clusters (35% of the
+  day, holding that day's FX/rates prints), the non-market bucket's unshown remainder (a `[:5]` cut
+  that structurally showed the *most certain* non-market items and hid every borderline one — the
+  Iran strike-planning event went that way while the head carried the oil move it caused), and topic
+  blobs (a 44-article US-tariff event had swallowed a domestic anti-dumping ruling). Now three
+  reported sections — `single_source` · `excluded_nonmarket.band` · `subevents` — at **64.6% recall
+  for +6.2k tokens**, with everything still withheld carried as a count. Re-measure any day with
+  `scripts/brief_recall.py`; the L1 EXIT CHECK now requires quoting those counts, because
+  `tail = 0` was never the coverage claim it looked like.
 - **Language rule**: every unit here is written in **English** — the US desk runs English-pure
   (Korean in context skews the frame), and the KR desk reads English instructions while emitting
   KR-market outputs. Field-tested run notes are embedded per unit as ⚠ notes.

@@ -21,8 +21,41 @@
   token argument for sampling the tail no longer holds.
 - **Output**: tiered — `head` (≥`--head` outlets, with evidence) · `body` (one line each) ·
   `tail` (below `--body`: **count + random 10; the other rows are not emitted**) ·
-  `denominator` (articles→clusters→events) · `excluded_nonmarket` (**count + first 5 only**).
+  `single_source` (1-outlet clusters above `--singles-nb`) · `excluded_nonmarket` (everything above
+  `--nonmarket-band`) · `denominator` (articles→clusters→events **+ `excluded_not_news`**).
+  Events that swallowed another event carry `subevents` (rendered `└`).
   Measured 2026-07-07: 3,782 articles → 512 events → 394 market → head 61 / body 143 / tail 190 ≈ 44k tokens.
+
+⚠ **This unit's recall was measured, and it was 54%.** 2026-07-23 KR domestic: 20% of the day's
+  articles drawn at random and traced back into the brief — **45.6% appeared nowhere**, with
+  `--body 2` already set and the tail already empty. The leak was never the tail. Three holes, all
+  since fixed; know what each flag now buys you:
+  1. **1-outlet clusters** — 35% of the day's articles, dropped silently by `MIN_SOURCES=2`. Half
+     were market news by the classifier, and that is where the day's FX/rates primaries lived
+     (`[외환] 1,470원선 급락` · `한은 "워시 연준 불확실성"` · `국고채 3년물 3.919%`). Now a tier,
+     gated by score: `--singles-nb` (default 10 → 48 rows; 5 → far more; measured).
+  2. **The non-market bucket showed the wrong 5.** `nonmarket[:5]` took the top of an outlet-count
+     sort, i.e. always the *most certain* non-market items (nb −5~−13: fires, gangs, verdicts), so
+     the boundary (nb 0~−3, where misclassification lives) was 100% hidden. That cut, by 3 rows,
+     buried 「"이란 곡괭이산 비밀 핵시설 타격"…美, 이스라엘에 공습 계획 통보」[3 outlets, nb −1.2]
+     on a day whose head read "뉴욕증시, 美-이란 긴장에 하락…국제유가 한 달 만에 최고치" — **the
+     effect was shown and its cause was cut.** Now a score band: `--nonmarket-band` (default −3).
+  3. **Topic blobs hid whole events inside events.** 15 of the 21 events with ≥8 articles were
+     really ≥2 events. Worst: [44 art/5 outlets] "美 301조 강제노동 관세" had swallowed the domestic
+     「무역위 중국산 부틸아크릴레이트 반덤핑 관세」[4 art/3 outlets] — one line in the brief, the KR
+     chemical event simply absent. Now split inside big clusters only (0.45) and printed as `└`.
+  Result: **recall 54.4% → 64.6% for +6.2k tokens.** Everything still withheld is reported as a count.
+
+⚠ **The denominator was wrong too.** 155 of that day's 1,821 "articles" were not news: chosun's
+  Japanese edition (61, a translation of its own Korean copy — detected by the `/jp/` URL path, not
+  by Japanese characters), photo captions (74), real-estate-bot listings (20). They are now removed
+  from the population and reported under `denominator.excluded_not_news`. Cite the corrected
+  denominator; "we missed 46%" was partly an artifact of counting furniture as news.
+
+⚠ **The 1-outlet tier is scoreless on `--scope foreign`.** The classifier is Korean-only, so English
+  singles come back with `nb: null` — that is *not measured low*, it is *not measured*. Those rows
+  are sampled at random (15) like the tail, and the count is stated. Do not read a foreign single's
+  absence as a judgment.
 
 ⚠ **The tail hides structural prints.** Measured 2026-07-17 (제헌절 holiday, 725 articles):
   **TSMC's ₩148tn US fab expansion, 환율 1480원 + the 24h FX-market opening, and CXMT's 667억위안
@@ -38,13 +71,13 @@
   cannot do is rank *importance to a position*, and **`brief` carries no prices**: this unit alone
   cannot tell you which events matter. Read the tape first (PULSE / `module_flow`), then rank.
 
-⚠ **`nb` is a sort hint, not a gate — and the nonmarket bucket is a real blind spot.** The classifier
-  splits at `nb > 0`, and `excluded_nonmarket` emits **only 5 of them** (hardcoded `nonmarket[:5]`,
-  **no CLI flag opens it**) at a self-declared 10–14% LOSO error — so ~40 nonmarket events × 10–14%
-  ≈ **4–6 real market events per day you cannot see**. Measured 2026-07-17: 트럼프's "China interfered
-  in the 2020 election" sat in head at nb=0.1 while the same thread's 트럼프 부정선거론 연설 fell to
-  nonmarket at nb=−2.7; a TV AI talk scored nb=11.0 against TSMC's ₩148tn at nb=17.9. Read every event
-  line and judge direction yourself (P4); do not treat `nb` ordering as importance.
+⚠ **`nb` is a sort hint, not a gate.** The classifier splits at `nb > 0` with a self-declared 10–14%
+  LOSO error, so ~40 nonmarket events/day × that rate ≈ **4–6 real market events sitting on the wrong
+  side**. That is why the bucket is now opened by band, not by count (above) — but the band only
+  *shows* them, it does not judge them. Measured 2026-07-17: 트럼프's "China interfered in the 2020
+  election" sat in head at nb=0.1 while the same thread's 트럼프 부정선거론 연설 fell to nonmarket at
+  nb=−2.7; a TV AI talk scored nb=11.0 against TSMC's ₩148tn at nb=17.9. Read every event line and
+  judge direction yourself (P4); do not treat `nb` ordering as importance — in either direction.
 ⚠ **This does not say direction.** 2026-07-07's top event [54 articles/9 outlets] was Hanwha Ocean
   **LOSING** the Canada submarine deal, not winning it. The headline alone misleads; `--lede` would
   carry the why but is **off by default** (asiae·sedaily bodies are 100% page furniture in the first

@@ -22,6 +22,20 @@
      Measured 2026-07-17 — TSMC's ₩148tn fab expansion, 환율 1480원 + the 24h FX-market opening, and
      CXMT's HBM-moat bypass **all sat at 2 outlets = all invisible**, and all three are transmission-
      matrix input. Cost of seeing every event: +2.3k tokens.
+     ⚠ **An empty tail does not mean you saw the day.** Measured 2026-07-23 (20% random sample of the
+     day's articles traced back into the brief): with `--body 2` set and tail = 0, **45.6% was still
+     invisible**. Read the three sections that now carry it, every run:
+       · `single_source` — 1-outlet clusters above `--singles-nb`. This is where FX and rates print:
+         `[외환] 'GDP 서프라이즈'에 1,470원선 아래로 급락` · `한은 "워시 연준 불확실성…장기금리 상승"` ·
+         `국고채 3년물 3.919%` · `30년물 미국채 5% 고공행진` were **all** here, none in head or body.
+         A rates/FX proposition written without reading this tier is written blind.
+       · `excluded_nonmarket.sample` — the non-market **boundary band** (nb > −3), i.e. the events the
+         classifier was least sure about. Measured: 「이란 핵시설 타격, 美→이스라엘 공습계획 통보」
+         [3 outlets] sat here while the head carried "뉴욕증시, 美-이란 긴장에 하락…유가 한 달 최고".
+         The oil branch of that day's macro had its cause in this list and its effect in the head.
+       · `subevents` (`└`) — events swallowed by a bigger event. Measured: 「무역위 중국산 부틸
+         아크릴레이트 반덤핑 19.17%」 was inside 「美 301조 강제노동 관세」[44 articles]. Sector
+         transmission for KR chemicals lived in a `└` line.
      ⚠ **But do not read the head as noise, and do not rank events before you read the tape.** That
      same day's top item (최태원 "just hold SK hynix", 7 outlets) looks like a platitude and was in
      fact damage control after SK하이닉스 −11.53% the prior session — `brief` carries no prices, so it
@@ -79,6 +93,15 @@
 - [ ] Catalysts injected; narrative (**events + trajectories + 7-bucket + blindspot**) and indicators (primaries + positioning) read; daily anchor read.
 - [ ] Events read via `--body 2` (tail count = 0). A head-only read is a failed stage — the day's
       macro prints hide at 2 outlets.
+- [ ] **`tail = 0` is NOT the coverage claim.** The three recovery sections were read and their
+      counts quoted: `single_source` (shown/total + `min_nb`), `excluded_nonmarket` (shown/total +
+      band), `subevents_recovered`. Measured 2026-07-23: tail was 0 and **45.6% of the day was still
+      unseen** — the FX print, the Iran strike-planning cause, and a KR anti-dumping ruling were all
+      in those three. Any "quiet day / nothing in bucket X" claim must cite what was still withheld
+      (`single_source.count − shown`, `excluded_nonmarket.count − shown`), not just the tail.
+- [ ] **Denominator is the corrected one.** Quote `denominator.articles` *after*
+      `excluded_not_news` (translation dupes / photo captions / real-estate bots) is removed, and say
+      so. Measured: 155 of 1,821 were furniture, not news.
 - [ ] Trajectories read (`thread --days 7`): every proposition carries its thread's tag+curve (or
       states "no thread" explicitly); any ENDED thread under an inherited proposition is flagged.
 - [ ] Every "nothing happened in bucket X" claim carries the event denominator that backs it (P4).

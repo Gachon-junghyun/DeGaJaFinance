@@ -110,6 +110,16 @@ KIS 주문 데스크 — Tkinter 스택형 주문 GUI. 주문을 '스택'에 카
 - ⚠️ **파이프라인**: `embed sync`(하루2초) → `cluster`(7초) → `classify` → `brief` → `thread`(7일 17초).
   실측 하루 3,782건 → 사건 512 → 시장 394 → 머리61/몸통143/꼬리190 → **44k 토큰**(제목전부 146k 대비 3배 압축).
   꼬리는 **자르지 않고** 분모+무작위표본으로 준다 — 매체수는 중요도의 대리지표지 진실이 아니다.
+- ⚠️ **회수율은 100% 가 아니다 — 실측하고 고쳤다(2026-07-23).** 그날 국내기사의 20%를 무작위로
+  뽑아 브리핑에서 되찾히나 대조했더니 **45.6%가 어디에도 없었다**(꼬리는 `--body 2` 로 이미 비운 뒤).
+  샌 곳은 꼬리가 아니라 *표시 없이 사라지던* 세 곳: ①1매체 덩어리(국내기사의 35%. 그날 환율·국고채·
+  한은 코멘트가 전부 거기) ②비시장 66개 중 61개(`[:5]` 가 매체수 상위만 떠서 **경계선이 100% 은폐** —
+  「이란 핵시설 타격」[3매체·nb−1.2]이 그렇게 잘렸는데 같은 날 머리는 "뉴욕증시 美-이란 긴장 하락"이었다)
+  ③토픽 블롭(「美 301조 관세」44건이 국내 「부틸아크릴레이트 반덤핑」4건을 삼킴). 각각 `single_source`(nb 게이트)·
+  `excluded_nonmarket.band`(개수 컷 → **점수 밴드**)·`subevents`(큰 덩어리 내부 재분할 0.45)로 수선.
+  **회수 54.4% → 64.6%, +6.2k 토큰.** 남는 것은 전부 개수로 보고된다(P4).
+  ⚠ 분모도 정정했다 — 번역중복(chosun `/jp/`)·포토·실거래봇 155건은 **뉴스가 아니다**(`_config.noise_class`).
+  ⚠ 해외 1매체층은 nb 가 **없다**(분류기 한글 전용) — "점수 미달"이 아니라 "못 잼", 그래서 무작위 표본.
 - ⚠️ **`brief`(사진) 와 `thread`(필름)도 대체재가 아니다.** `thread` 는 일별 사건을 주간 윈도우로
   재연결해 매체수 곡선(BUILDING/FADING/REIGNITED/ENDED)을 준다. 실측(7/11~17): 한은 금리인상
   사가가 **7/11 [14건/2매체] 꼬리 → 7/16 [101건/8매체] 발표**로 5일 활주로가 곡선에 미리 보였다
@@ -132,9 +142,9 @@ KIS 주문 데스크 — Tkinter 스택형 주문 GUI. 주문을 '스택'에 카
 | `burst` | **고정 검색어 0** — 그날 평소보다 튄 단어 + 근거(①z급등 ②신생어) | `... burst --date 2026-07-07 --scope domestic --json` |
 | `export` | 제목 벌크 반출(증분) — 서버(수집)→클라(GPU) 동기화. 기계 소비 전용 | `... export --count --since <커서>` / `... export --since <커서>` |
 | `embed` | 제목 → 문장벡터(ko-sroberta·GPU). **클라 전용**·증분 따라잡기 | `... embed sync` · `... embed status` |
-| `cluster` | 하루 기사 → **사건**(같은 일 27건→1줄, 매체수=중요도). **클라 전용** | `... cluster --date 2026-07-07 --scope domestic --json` |
+| `cluster` | 하루 기사 → **사건**(같은 일 27건→1줄, 매체수=중요도) + 숨은 하위사건(`subevents`) + 1매체 덩어리(`singles`). **클라 전용** | `... cluster --date 2026-07-07 --scope domestic --json` |
 | `classify` | 제목 → 시장/비시장(NB·의존성0·URL 라벨 자가학습). 근거어 감사 | `... classify --eval` · `... classify --words` |
-| `brief` | 하루 → **계층 브리핑**(머리5매체+/몸통3+/꼬리표본+분모). **클라 전용** | `... brief --date 2026-07-07 --scope domestic --json` |
+| `brief` | 하루 → **계층 브리핑**(머리5매체+/몸통3+/꼬리표본/**1매체 nb게이트**/**비시장 경계밴드**+분모). **클라 전용** | `... brief --date 2026-07-07 --scope domestic --body 2 --json` · `--singles-nb 5` · `--nonmarket-band -5` |
 | `thread` | 여러 날 사건 **궤적**(스레드) — BUILDING/FADING/REIGNITED/ENDED + 일별 매체수 곡선. **클라 전용** | `... thread --days 7 --scope domestic` |
 
 | `theme-age` | 테마 나이·가속(FRESH vs ECHO) | `... theme-age humanoid "Strait of Hormuz" --scope foreign` |
@@ -219,6 +229,10 @@ industry_us/kr 프로토콜이 호출하는 분석 모듈. 전부 기능별 `_�
 |---|---|---|---|
 | `scripts/kelly_size.py` | **1/4 Kelly + 무거래밴드 사이징**(엣지×신호×변동성×IC오차) | `python -X utf8 scripts/kelly_size.py MU --ic 0.05 --ic-n 200` | — |
 | `scripts/report_lint.py` | 데스크 산출물 **규칙 린터**(형식 검사) | `python -X utf8 scripts/report_lint.py "llm_outputs/{date}/**/*.md"` | — |
+| `scripts/risk_units.py` | **위험 단위 실측** — 벤치 잔차 상관 → 평균연결 군집. `MAX_THEME_PCT` 가 세는 '테마 라벨'이 진짜 위험 단위인지 검증(안정성 ARI·임계값 스윕 동봉). numpy만, sklearn 미사용(P6) | `python -X utf8 scripts/risk_units.py --book --candidates VLO MPC PSX` | module_paper_book(보유·테마 읽기)·yfinance |
+| `scripts/reject_ledger.py` | **거부 원장 + 사후 채점** — DROP/PASS/강등을 기계가독 JSONL 로 남기고 사유클래스(measured/structural/**narrative**)별 초과수익을 누적 채점. 거부가 산문에만 남아 채점 불가였던 구멍을 메운다. 벤치는 지수 아닌 **시총1조+ 동일가중**(지수는 대형주 사건에 지배됨 — 실측 동일가중 −2.6% vs 시총가중 −15.7%) | `python -X utf8 scripts/reject_ledger.py score` · `… add --date … --cls F.테마소멸 --revives-if "…"` | `llm_outputs/sector_flow/prices_kr_*.pkl`(P1 재사용)·SECTOR_FLOW_KR.json |
+| `scripts/leak_scan.py` | **누수 스캔** — 끝난 런이 지불하고 걷지 않은 것. 전 유니버스 상승주를 런 산출물과 대조해 A.런에있었음/B.커버리지소실/C.스쳐감/D.발굴부재 로 분류 + **선행검정**(런시점 상태→이후 실현, 후행 동어반복 차단). 벤치는 시총floor 동일가중 | `python -X utf8 scripts/leak_scan.py --run 2026-07-20 --top 25` | `llm_outputs/sector_flow/prices_kr_*.pkl`·SECTOR_FLOW_KR.json·llm_outputs/**/*.md |
+| `scripts/brief_recall.py` | **brief 회수율 감사** — 그날 기사의 N%를 무작위로 뽑아 "브리핑에서 되찾히나"를 대조. 회수율은 주장이 아니라 **측정치**여야 한다: 처음 재보니 `--body 2`+꼬리0 인데도 **45.6% 가 안 보였다**(1매체 35%·비시장 미노출·토픽 블롭). 수선 후 64.6%. 못 본 기사 목록을 같이 뱉어 `--singles-nb` 조정 근거를 준다. **클라 전용(GPU)** | `python -X utf8 scripts/brief_recall.py --date 2026-07-23 --scope domestic` | module_news_data(`_brief`·`_cluster`·`_embed` 재사용, P1) |
 | `module_macro_us` | US 매크로 레짐(FRED **19개** — 금리·물가·달러 + **신용/유동성**) | `python -m module_macro_us --series hy_oas,nfci` | FRED_API_KEY |
 | `module_valuation` | KR 밸류에이션 스냅샷·목표가·peer 비교(수동 `--peers`) | `python -m module_valuation 005930 --peers 000660` | DART/KRX |
 | `module_industry_map` | 임베딩 클러스터로 산업 지도·밸류체인 | `python -m module_industry_map` | data/corp_embeddings.db (직접 sqlite) |

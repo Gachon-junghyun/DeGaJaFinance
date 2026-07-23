@@ -56,7 +56,7 @@ from datetime import date as _date, datetime, timedelta
 
 from ._classify import applies_to, train
 from ._cluster import DISTANCE, MIN_SOURCES, cluster_day
-from ._config import OUT_DIR, utf8_stdout
+from ._config import NONMARKET_BAND, OUT_DIR, utf8_stdout
 from ._embed import load_vectors
 
 THREAD_OUT = OUT_DIR / "news_threads"
@@ -106,7 +106,10 @@ def thread_window(end_day: str, days: int = WINDOW_DAYS, scope: str = "domestic"
     centroids: list = []
     per_day: list[dict] = []
     for day in _day_list(end_day, days):
-        cl = cluster_day(day, scope, distance, min_sources, with_members=True)
+        # split_big=False — 스레드는 사건의 **궤적**만 본다. 하위사건까지 받으면 산출물만
+        # 무거워지고 날짜 간 매칭 단위가 흔들린다(같은 사건이 날마다 다르게 쪼개진다).
+        cl = cluster_day(day, scope, distance, min_sources, with_members=True,
+                         split_big=False)
         per_day.append({"date": day, "articles": cl.get("n_articles", 0),
                         "events": cl.get("n_events", 0)})
         if not cl.get("events"):
@@ -120,7 +123,9 @@ def thread_window(end_day: str, days: int = WINDOW_DAYS, scope: str = "domestic"
                 continue
             c = Z[rows].mean(axis=0)
             centroids.append(c / (np.linalg.norm(c) or 1.0))
-            day_events.append({"day": day, **{k: v for k, v in e.items() if k != "members"}})
+            day_events.append({"day": day,
+                               **{k: v for k, v in e.items()
+                                  if k not in ("members", "subevents")}})
 
     if len(day_events) < 2:
         return {"window": {"end": end_day, "days": days}, "scope": scope,
@@ -250,8 +255,13 @@ def run(end_day: str | None, days: int, scope: str, link_distance: float,
             print(f"   [{t['first'][5:]}~{t['last'][5:]}] {t['curve']:>10} "
                   f"피크{t['peak_sources']}매체 {t['title'][:48]}")
     if nonmkt and not tag_filter:
-        print(f"\n  ── 비시장 스레드 {len(nonmkt)}개 — 분류기 판정(오분류 10~14%). 표본 5개 ──")
-        for t in nonmkt[:5]:
+        # brief 와 **같은 규칙**: 개수 컷이 아니라 경계밴드. 앞 5개를 자르면 그 5개는 늘
+        # 가장 확실한 비시장(nb −20 대 스포츠)이라 오분류 후보가 100% 숨는다.
+        # 값은 `_config.NONMARKET_BAND`(형제끼리 import 하지 않는다), 근거는 `_brief` 의 ⚠.
+        band = sorted([t for t in nonmkt if t["nb"] > NONMARKET_BAND], key=lambda t: -t["nb"])
+        print(f"\n  ── 비시장 스레드 {len(nonmkt)}개 — 분류기 판정(오분류 10~14%). "
+              f"경계선(nb>{NONMARKET_BAND}) {len(band)}개 ──")
+        for t in band:
             print(f"   [{t['tag'][:5]}] {t['curve']:>10} nb={t['nb']} {t['title'][:48]}")
     print(f"\n  ⚠ 태그는 매체수 곡선의 모양이지 중요도·방향이 아니다 — 근거를 읽어야 안다(P4).")
     print(f"  ⚠ 윈도우 끝이 휴일/저물량이면 FADING 이 과대해진다 — 위 per-day 분모 먼저.")

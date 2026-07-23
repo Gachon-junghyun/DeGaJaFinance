@@ -10,6 +10,7 @@
 from __future__ import annotations
 
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -95,6 +96,50 @@ FOREIGN_SOURCES = sorted({
 })
 
 BODY_MIN = 200   # 본문 '있음' 판정 최소 글자수 (coverage/fts has_body 공통)
+
+# ── '뉴스가 아닌 것' 판정 — 분모 정정의 단일 원본(P1) ─────────────────────
+# 왜 필요한가(실측 2026-07-23 국내 1,821건): 사건 클러스터가 못 묶어 '1매체 단독'으로
+# 남는 638건 중 **140건(21.9%)이 애초에 뉴스가 아니었다** — 같은 기사의 일본어 번역판
+# 61 · 포토캡션 59 · 부동산 실거래 자동기사 20. 이걸 분모에 넣어두면 "오늘 기사의 46%를
+# 못 봤다"가 실제보다 나쁘게 나오고, 동시에 진짜 사각(매크로 단독기사)이 잡동사니에 묻힌다.
+# ⚠ **자르는 게 아니라 분류해서 센다.** 호출부는 개수를 산출물에 실어야 한다(P4) —
+#    "안 봤다"와 "볼 게 없었다"는 다른 말이고, 그 차이는 숫자로만 증명된다.
+_JP_EDITION = re.compile(r"/jp/", re.I)      # chosun 일본어판 = 한국어 기사의 번역 중복
+_PHOTO_LEAD = re.compile(r"^\s*\[(포토|사진|화보|한번에쓱)")
+_REALESTATE_BOT = re.compile(r"\d+\s*㎡.{0,40}(거래|원에)")
+
+
+# 비시장 경계밴드 — 분류기가 '비시장'으로 본 사건 중 **이 점수 위는 전부 보여준다**.
+# 여기(설정)에 두는 이유: `_brief`(하루)와 `_thread`(주간)가 **같은 규칙**을 써야 하는데
+# 둘은 같은 층의 형제라 한쪽이 다른 쪽을 import 하면 옆으로 가는 의존이 된다(pipeline
+# README 의 "calls go one way"). 공용 상수는 아래층에 둔다 = P1 + 층 규칙 동시 충족.
+# 왜 개수 컷이 아니라 점수 밴드인가는 `_brief.NONMARKET_BAND` 의 ⚠ 참조(실측 근거).
+NONMARKET_BAND = -3.0
+
+
+def noise_class(title: str | None, url: str | None = None) -> str | None:
+    """이 기사는 '사건'의 재료가 되나. 아니면 왜 아닌지 라벨을, 맞으면 None 을 준다.
+
+    ⚠ 판정 근거를 URL 에 두는 게 제목보다 튼튼하다 — 실측으로 chosun `/jp/` 경로 551건과
+      일본어 제목 550건이 3건 차이로 일치했다. 일본어 '글자'로 거르면 일본을 인용한
+      한국어 기사가 같이 날아간다.
+
+    ⚠ **이 필터의 실측 비용**(2026-07-17·21·23 국내, 필터 유/무 클러스터를 구성기사 단위로 대조):
+      구성기사가 전부 노이즈여서 **통째로 사라진 사건**이 하루 1~13개, 그중 **시장분류는 0·0·1개**.
+      유일한 실측 손실은 「한병도 "수사·기소 분리…"」[2매체·nb 2.5] — 그 사건이 `[포토]` 캡션으로만
+      존재했다. 하루 155~444건의 가구를 걷어내는 대가로 2매체짜리 한계 사건 0~1개를 잃는다.
+      제목 기준으로 세면 훨씬 나쁘게 보이지만(60~126개) 그건 medoid 가 바뀐 것이지 소멸이 아니다
+      — 「[포토] 코스피, 7000선 회복」이 「코스피 7000 재탈환…」으로 바뀌는 식(오히려 개선).
+      ⚠ 이 비용은 **다시 잴 수 있어야 한다** — 필터를 건드리면 같은 대조를 다시 돌려라.
+    """
+    if url and _JP_EDITION.search(url):
+        return "translation_dup"
+    t = title or ""
+    if _PHOTO_LEAD.match(t):
+        return "photo"
+    if _REALESTATE_BOT.search(t):
+        return "realestate_bot"
+    return None
 
 
 def origin_tag(source: str | None) -> str:

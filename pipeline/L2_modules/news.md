@@ -14,6 +14,11 @@ Use the event axis for coverage, the term axis for discovery — and run both wh
    tiered + denominator). Same story told 27–54× collapses to one line; ranking = how many outlets ran it.
    ⚠ **Pass `--body 2`** — the default samples a random 10 of the tail and drops the rest (measured
    2026-07-17: TSMC ₩148tn / 환율 1480원 / CXMT HBM bypass were ALL at 2 outlets = invisible).
+   ⚠ **`--body 2` is necessary, not sufficient.** Measured 2026-07-23 against a 20% random sample of
+   the day's articles: with the tail already empty, **45.6% of the day was still invisible** — it was
+   hiding in 1-outlet clusters, in the non-market bucket's unshown tail, and inside topic blobs. Those
+   are now the `single_source` / `excluded_nonmarket.band` / `subevents` sections (recall 64.6%). Read
+   them: that is where the FX print, the geopolitical cause, and the domestic anti-dumping ruling were.
    ⚠ Client-only (GPU). ⚠ Says *what*, not *why* — see that unit's ⚠ before acting on any event.
 0b. L3 [event_threads](../L3_functions/event_threads.md) — `thread --days 7` (the same events
    re-linked ACROSS days → per-day outlet curves + BUILDING/FADING/REIGNITED/ENDED). The daily

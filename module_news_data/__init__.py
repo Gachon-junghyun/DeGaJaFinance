@@ -23,8 +23,10 @@ DB(news_alert.db / news_fts*.db)를 읽는 소비층이다 (CLAUDE.md §3, P5 �
     _export     제목 벌크 반출(증분) — 서버(수집)→클라이언트(GPU 임베딩) 동기화 통로
     _embed      제목 → 문장벡터 (ko-sroberta·GPU, **클라 전용**) — 사건 클러스터의 재료
     _cluster    하루 기사 → **사건**(중복 압축·매체수 랭킹, k 없음, **클라 전용**)
+                + 큰 사건이 삼킨 `subevents` · 자격미달 `singles` · `excluded_noise`(분모 정정)
     _classify   제목 → 시장/비시장 (NB·의존성0·URL 섹션 라벨 자가학습·근거어 감사)
-    _brief      하루 → **계층 브리핑**(머리/몸통/꼬리+분모) — LLM 이 먹을 크기로
+    _brief      하루 → **계층 브리핑**(머리/몸통/꼬리/1매체/비시장경계+분모) — LLM 이 먹을 크기로
+                ⚠ 회수율은 실측 대상이다(`scripts/brief_recall.py`) — 54.4%→64.6%(2026-07-23)
 
 빠른 사용:
     from module_news_data import search, fts_search, theme_analyze
