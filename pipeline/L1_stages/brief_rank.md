@@ -38,11 +38,30 @@ not by how interesting the desk finds it.
   never have to guess whether item 9 already happened. Measured: mixing a 4-day-old escalation into
   the overnight block made a continuing war read as a fresh shock.
 
-## Cap and the cut list
-- Target **~15 items**; going over is fine when the day is genuinely loaded — going over *silently*
-  is not. Whatever is dropped is **counted** in the file, with a one-line reason class.
-- One fact = one item. A story split across three lines reads as three events and inflates the day.
-- Merge only what shares a mechanism, never what shares a keyword.
+## The cap: **15 news items, hard.** Calendar sections are separate and not counted.
+Fifteen is a reading budget, not a coverage claim. A day holds ~539 knowable events; the brief keeps
+the fifteen a reader must not miss and **publishes the number it dropped**.
+
+**Merge before you cut.** Most of the pressure on the cap is fake — it comes from one event written
+as three items. Merge anything sharing a *mechanism*; never merge on a shared keyword.
+Measured 2026-07-23: a 29-item news list collapsed to 15 with nothing lost —
+- tariff announcement + the June 12.5% proposal + the 15% cap + LG's $28bn delay = **one** item
+  (they are one policy with a history, and the history is what makes the announcement readable);
+- Iran fighting + Trump's bridge/power-plant threat + Red Sea tanker diversions = **one**;
+- Alphabet capex + revenue + first-ever negative FCF + the 5% drop = **one** (one earnings release).
+
+**Slot discipline** — decide by consequence class, not by how interesting the item reads:
+| Class | Slots | Rule |
+|---|---|---|
+| Resolves ≤48h | 1–2 | Automatic. A dated binary always outranks a bigger undated story |
+| The open's reference points | 3 | Index close · FX · oil. Fixed cost; the reader needs the baseline |
+| New structural facts | 4–6 | Ratings actions · policy approvals · capacity · price setting — things that change a forward number |
+| Value-chain single names | 2–4 | Only where the read-through is nameable (a foundry price rise, a panel maker's loss). Not "a company did a thing" |
+| Continuing conditions | 1–2 | Geopolitics, credit stress. One line each, only if the state changed |
+| PR · awards · MOUs · regional · broker notes | **0** | Never. Measured: these were ~46% of a day's domestic events |
+
+**The cut list is published**, as a count plus reason classes — the reader must know the brief is a
+selection, not the day. Silent truncation would make fifteen items look like fifteen events happened.
 
 ## L3 called
 - [public_source](../L3_functions/public_source.md) — run the **DROP test early**, at ranking, not at
@@ -56,6 +75,8 @@ not by how interesting the desk finds it.
   item survives only because we are long it, cut it and count it.
 
 ## ✅ EXIT CHECK
+- [ ] **News items = 15, after merging by mechanism.** Calendar sections are separate. If 15 feels
+      tight, check for unmerged duplicates before cutting anything real — that is where the room is.
 - [ ] Items ordered by the 5-tier consequence rule; each carries a one-clause "why now".
 - [ ] Cut list written **with counts and reason classes** — no silent truncation.
 - [ ] No item appears twice under different wording; merged items share a mechanism, not a keyword.

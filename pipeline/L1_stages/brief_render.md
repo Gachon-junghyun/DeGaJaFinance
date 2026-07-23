@@ -32,6 +32,20 @@
 - 2–4 lines per item on a phone. Numbers keep their units and their scale (억/조/%/bp).
 - `출처:` on its own line, one per item.
 
+## Length — locked at ~9,000–9,500 characters
+15 news items at 3–4 lines each, plus the two calendar blocks. That is the settled size; do not
+compress below it to make the file "chat-sized."
+- **The background clauses are the readable part, not padding.** Measured 2026-07-23: the tariff item
+  is only interesting because the merged history rides with it — a June 12.5% proposal, a
+  pre-agreed 15% cap, LG's unretracted $28bn delay warning. Strip those and the line becomes
+  "관세 발표 예고", which tells the reader nothing about what is at stake tonight. The same holds for
+  the Iran item (why the oil bid is there) and the petrochemical item (why 7,000억 is being spent).
+- If a chat window cannot take it in one message, **split at the `■` boundaries** — never mid-item,
+  and never by dropping the `발생:`/`출처:` lines. An item without its date and source is not a
+  shorter item; it is an unverifiable one.
+- Going shorter is a coverage decision, not a formatting one: it means fewer than 15 items, and the
+  cut count in the closing note has to move with it.
+
 ## L3 called
 - [public_source](../L3_functions/public_source.md) — the binding rule for this stage: cite the
   **origin**, never our own filename; translate every desk tag into what it means; drop what has no
