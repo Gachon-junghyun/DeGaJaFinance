@@ -33,3 +33,20 @@ scripts/.cache/
 
 # 추정치 스냅샷 실행 로그(스케줄러) — 데이터는 커밋하되 로그는 제외
 data/estimates/*.log
+
+# 백업본 — *.pkl·data/*.db 는 이미 무시되는데 뒤에 접미사가 붙으면 그 규칙을 빠져나간다
+# (prices_*.pkl.contaminated.bak · paper_book.db.bak_20260812 가 실제로 그렇게 새어나왔다)
+*.bak
+*.bak_*
+*.contaminated*
+*.untrimmed
+*.benchgap_bak
+.bak_*/
+.presplit_bak_*/
+
+# 임시 출력·실행 로그 (셸 리다이렉트 찌꺼기)
+/b2.txt
+/b_out.txt
+/b_err.txt
+/err.log
+.build_cache.jsonl
