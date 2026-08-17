@@ -29,6 +29,38 @@ UNIVERSE_CSV = DATA_DIR / "us_universe" / "us_top300.csv"
 ALIASES_JSON = DATA_DIR / "us_universe" / "us_aliases.json"
 KR_UNIVERSE_CSV = DATA_DIR / "kr_universe" / "kr_all.csv"   # rank,ticker,name,…,sector,market
 
+# ── 자유 텍스트에서 **티커를 탐지하는** 소비자용 상한 (단일 원본) ─────────────
+# ⚠ 숫자 스윕(`sector_flow`·스크리너·IC)은 유니버스 **전체**를 쓴다. 여기서 자르는 것은
+#   **기사·리포트 본문에서 대문자 토큰을 티커로 판정하는** 경로뿐이다.
+# 왜: 유니버스를 S&P 1500 으로 넓히면 4자 이하 티커가 **1,201개** 늘고, 그중 **최소 26개가
+#   일반 영어 단어와 철자가 같다** — CASH · FORM · POST · TECH · UNIT · WAY · PLUS · RUN ·
+#   ROAD · ROCK · SAFE · STEP · PATH · POOL … (2026-08-10 실측. 손으로 센 값이라 **하한**).
+#   이 단어들은 금융 기사에 매 문단 나오므로 **유니버스 확장 = 오탐 폭증**이 된다.
+#   기존 방어(`_chain_hop.AMBIGUOUS_TICKERS` + `len(tk) < 3`)는 하드코딩 ~50개라 못 막는다.
+# 기본 300 = **확장 이전 `us_top300` 과 동일한 동작**(회귀 0). 낮추는 것은 사람의 명시적 결정.
+US_TEXT_TOP_N = 300
+
+
+def us_text_universe_rows() -> list[dict]:
+    """티커 탐지용 US 유니버스 — 시총 상위 `US_TEXT_TOP_N`. 파일이 커져도 동작이 고정된다.
+
+    `market_cap_usd` 열이 없으면 자르지 않고 원본 순서를 그대로 쓴다(옛 스키마 하위호환).
+    """
+    import csv as _csv
+
+    if not UNIVERSE_CSV.exists():
+        return []
+    with open(UNIVERSE_CSV, encoding="utf-8-sig") as f:
+        rows = list(_csv.DictReader(f))
+    if rows and "market_cap_usd" in rows[0]:
+        def _cap(r):
+            try:
+                return float(r.get("market_cap_usd") or 0)
+            except (TypeError, ValueError):
+                return 0.0
+        rows.sort(key=_cap, reverse=True)
+    return rows[:US_TEXT_TOP_N] if US_TEXT_TOP_N else rows
+
 # ── 이 리포 산출물 ────────────────────────────────────────────────────────
 OUT_DIR = REPO_ROOT / "out"
 

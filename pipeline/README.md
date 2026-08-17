@@ -89,8 +89,17 @@ Checkpoint at `out/pipeline_runs/{name}.json` (stage · passed · target). Do a 
   failures. The rules it loads are enforced downstream (MACRO citation discipline · DEEP cyclical
   lens + peak-margin check · PREMORTEM branch grading · L2 indicators venue-contamination check).
 - **protocols/**: `industry_us.md` (10 blocks) · `industry_kr.md` (8 blocks) · `paper_desk.md` (6 blocks) ·
-  `wrap_account.md` (8 blocks) · `미러링.md` (7 blocks) · `real_alpha_kr.md` (8 blocks) — complete,
-  compile-verified. Only US adds premortem·drift.
+  `wrap_account.md` (8 blocks) · `미러링.md` (7 blocks) · `real_alpha_kr.md` (8 blocks) ·
+  `idle_probe.md` (7 blocks) · **`preflight.md` (2 blocks)** — complete, compile-verified.
+  Only US adds premortem·drift.
+  ★ **`preflight` runs BEFORE HANDOVER in any desk run.** It is a few-minute mechanical gate check
+  whose output is not a report but a **claim-permission table**: a failed gate removes a citation
+  right for that run (dead news axis ⇒ no theme-freshness claim; a sign-flipping sector bucket ⇒ no
+  promotion off it). Born from 2026-08-09/10, where **12 instrument defects were found in one day and
+  none of them threw** — every one returned a plausible number, and one silently inflated **every**
+  flow score by **+0.305**. `idle_probe` *finds* such defects (slow, exploratory); `preflight`
+  *prevents their return* (fast, boring). Keeping them separate is deliberate — a heavy daily check
+  stops being run, which is the exact failure `measure_ic` demonstrated (0 invocations in 3 weeks).
   `paper_desk` is the *downstream* desk — it consumes the research desks' `REPORT/` output and runs a simulated book
   (engine = `module_paper_book`; paper only, no real order). `미러링` mirrors the **real KIS account** into that book,
   applies judgment, and stages recommendations onto the real KIS order desk stack as **human-fireable intent cards**
@@ -106,7 +115,9 @@ Checkpoint at `out/pipeline_runs/{name}.json` (stage · passed · target). Do a 
 - **L1_stages/**: **handover** (stage 0, all desks) + the 9 industry blocks
   (macro·sweep·event_alpha·rotation·premortem·deep·bet·alpha·drift) + pulse ·
   mirror_ingest · stage_orders (미러링) + **forensic_pack · self_score · chain_alpha · money_forensic · set_diff ·
-  falsify · verdict** (real_alpha_kr) + **mandate_set · drift_check · rebalance_plan** (wrap_account).
+  falsify · verdict** (real_alpha_kr) + **mandate_set · drift_check · rebalance_plan** (wrap_account)
+  + **census · pair · probe · control · adjudicate** (idle_probe)
+  + **instrument_check** (preflight; reuses census).
 - **L3 `reject_ledger`** (2026-07-23) — the desk's rejections become a scored asset. Every
   DROP/PASS/강등 is appended with a reason class and a **`--revives-if`** condition, then scored by
   class and by **type** (`measured` / `structural` / `narrative`) against the equal-weight 1조+
@@ -124,7 +135,44 @@ Checkpoint at `out/pipeline_runs/{name}.json` (stage · passed · target). Do a 
   none: it still reads as authority. New L3 [public_source](L3_functions/public_source.md) holds the
   substitution table and the ban list; **zero new L2** — it reuses report_read · news · schedule ·
   bookkeeping as they are.
+- **Scoreboard, third leg — `exposure_rule` + `missed_ledger`** (2026-07-31). The desk could already
+  score what it *rejected* (L3 reject_ledger). It could not score **what it did not buy**, and it had
+  never scored **its own cash weight** — which turned out to be the variable that actually moves the
+  number. Measured that day: of a **+16.86pp** lead over the benchmark, roughly **14pp was cash
+  weight**, and stock selection contributed **+2.54pp with one name (삼성물산 +0.89pp) carrying it** —
+  n=11 over one window, i.e. indistinguishable from zero (C4). The next session the same cash weight
+  gave back **−12.5pp in a day**. Same variable, opposite sign, no gate in between: the desk had
+  "reduce risk" triggers and **no "restore risk" trigger** (F1 — the 🟢LIVE tag fired 0 times in 8
+  consecutive runs because it required a FRESH theme age that the board structurally could not have).
+  ⇒ `scripts/exposure_rule.py` makes the exposure decision an **explicit, dated, scored** one: four
+  states (정상/방어/**복귀**/과열) against `069500.KS`, one ledger row per day, and a daily attribution
+  that closes as an identity (`총초과 = (w−1)×벤치 + 잔차`). **The load-bearing half is 복귀** — it does
+  not predict the bottom, it fires only on *evidence of a turn*, so a missed rebound becomes a lag of
+  a few pp instead of a total loss. Its thresholds are **human-set** (`data/exposure_bands.json`);
+  absent that file the tool refuses to render a verdict and logs `밴드미설정 🚨`. `scripts/missed_ledger.py`
+  is reject_ledger's mirror with the sign flipped. **Why this layer and not more prediction**: exposure
+  yields one independent observation per session (n≈20 in a month), while stock selection yields
+  10–20 per *year* — it is the only place in this repo where significance is arithmetically reachable.
+  **Wiring** (the tools are not the point; being *called without anyone remembering* is): new L3
+  [missed_ledger](L3_functions/missed_ledger.md) + L3 [exposure_state](L3_functions/exposure_state.md),
+  both invoked by L2 [carryover](L2_modules/carryover.md) §3c/§3d, so **every desk's HANDOVER** runs
+  `missed_ledger due` beside `reject_ledger due` and carries the exposure verdict as size context.
+  L1 bet · alpha · event_alpha now write missed entries the way they already wrote rejections; L1
+  leak_audit is the ledger's **supply line** (its B/C/D buckets become rows — previously `leak_scan`
+  recomputed the same leak every audit and accumulated nothing). ⚠ Zero new L2 — carryover absorbed
+  both, which is the test that these were functions and not stages.
 - **L1 `leak_audit`** (2026-07-23) — the counterpart to §5 self-backtest: it scores what the desk did **not** do. Runs against a *past* run (≥3 sessions later), pairs `scripts/leak_scan.py` with L3 reject_ledger, and classifies every mover into A.런에있었음 / B.커버리지소실 / C.스쳐감 / D.발굴부재. Two guards are load-bearing: **forward-test only** (OBV is price×volume, so trailing scoring is tautological — measured: trailing said 매집 +42.2%, forward said it lost) and **label the window's regime** (measured: in the 07-20 bounce 🔴분산 +8.22% beat 🟢가속 +7.77%; in the 07-16 window 🟢 beat the universe 11×). First result: **B.커버리지소실 was the worst leak (+1.93pp, n=26) while D.발굴부재 UNDERPERFORMED (−0.70pp, n=89)** — discovery is not the leak, retention is.
+  ⚠ **RETRACTED 2026-07-31 — that ordering does not reproduce, and it was quoted as settled for a week.**
+  Re-scoring **the same 07-20 window** today (i.e. only the measurement horizon extended, through the
+  07-28~30 crash and the 07-31 rebound) inverts it completely: **D.발굴부재 +2.58pp · C.스쳐감 +2.56 ·
+  A.런에있었음 −0.31 · B.커버리지소실 −4.68pp** — B goes from *worst* to *best*. The 07-24 window scores
+  the same way (D +3.57 · C +2.35 · A −0.73 · B −4.90), so the ordering is stable **across windows** and
+  unstable **across horizons**. ⚠ The n's also disagree (26 vs 51, 89 vs 48), so the two runs were not
+  like-for-like to begin with — which is the second half of the defect: the original figure was recorded
+  without the parameters needed to reproduce it. ⇒ **"retention, not discovery" is withdrawn as a
+  standing claim.** A single-window, single-horizon class mean is an observation, not a finding, and
+  must not be cited as a reason to change the protocol (it was — see `industry_kr.md` DEEP budget,
+  now corrected).
 - **L2/L3**: orchestration + atomic functions, reused across L1s. handover added L2 `carryover`
   (reads the carry + reconciles it against the mechanical ledger — a belief with no coverage gets
   demoted, coverage with no belief becomes a DEEP candidate) + L3 `scenario_score` (one scenario →

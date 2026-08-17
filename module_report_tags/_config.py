@@ -38,14 +38,27 @@ VERDICT_TAGS = {
 
 
 def load_us_tickers() -> dict[str, str]:
-    """ticker -> name (us_top300). 대문자 토큰 티커 검증에 사용."""
+    """ticker -> name. **대문자 토큰 티커 검증**에 쓰이므로 유니버스 전체가 아니다.
+
+    시총 상위 N 만 쓴다 — 판정 규칙의 단일 원본은 `module_news_data._config.US_TEXT_TOP_N`
+    (모호티커 필터 `_chain_hop.AMBIGUOUS_TICKERS` 를 재사용하는 것과 같은 이유: 이 리포에서
+    「자유 텍스트에서 티커를 알아보는 법」은 한 곳이 정한다, P1).
+    유니버스가 S&P 1500 으로 커지면 4자 이하 티커가 1,201개 늘고 그중 최소 26개가 일반 영어
+    단어(CASH·FORM·POST·TECH·UNIT·WAY…)와 철자가 같다 — 리포트 본문에서 그대로 오탐이 된다.
+    """
     out: dict[str, str] = {}
-    if US_UNIVERSE.exists():
-        with open(US_UNIVERSE, encoding="utf-8-sig") as f:
-            for row in csv.DictReader(f):
-                tk = (row.get("ticker") or "").strip().upper()
-                if tk:
-                    out[tk] = (row.get("name") or "").strip()
+    try:
+        from module_news_data._config import us_text_universe_rows
+        rows = us_text_universe_rows()
+    except Exception:                                    # noqa: BLE001
+        rows = []
+        if US_UNIVERSE.exists():                         # 폴백: 단독 사용 시 원본 그대로
+            with open(US_UNIVERSE, encoding="utf-8-sig") as f:
+                rows = list(csv.DictReader(f))
+    for row in rows:
+        tk = (row.get("ticker") or "").strip().upper()
+        if tk:
+            out[tk] = (row.get("name") or "").strip()
     return out
 
 

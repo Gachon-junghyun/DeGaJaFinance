@@ -12,7 +12,10 @@
   (⚠ always `--json`: the markdown view has KR headers; cite values `[FRED]`; monthly series
   (CPI/M2) lag ~1 month — say so instead of pretending freshness) + `us_flow --cot` positioning
   percentiles (≥80 crowded-long / ≤20 crowded-short; Tue-close data, 3–4d lag = context, not trigger).
-  KR: cross-read same-day US MACRO_REPORT §A.
+  KR: cross-read same-day US MACRO_REPORT §A **+ its own KR positioning axis now — index-futures
+  basis + open-interest via `module_KIS --futboard` (KOSPI200 근월물).** Basis(선물−현물)/괴리율 is a
+  carry/risk-appetite read; OI is positioning. ⚠ Context, not a trigger (OI-building is not
+  directional). This is the KR-native positioning read the desk previously lacked entirely.
 - [news](../L2_modules/news.md) — **event pass first, then the term sweep** (that L2 explains why they
   are different axes). ⚠ **Scope is market-locked**: KR desk = `--scope domestic`, US desk =
   `--scope foreign`, on EVERY news call here (`brief`·`thread`·fts·blindspot). Never let the KR

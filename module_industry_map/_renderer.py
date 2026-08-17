@@ -52,7 +52,11 @@ def render_industry_map(
     parts.append("위 클러스터 / corp pool / 자동 키워드를 가지고:")
     parts.append("- (a) 좌→우 가치사슬 ASCII 다이어그램 작성 (노드 5~8개로 압축)")
     parts.append("- (b) 각 클러스터 = 가치사슬의 어느 칸인지 라벨 부여 (LLM 판단)")
-    parts.append("- (c) `module_scenario_scan` + `search_news_alert` 로 병목·정량 anchor 추가")
+    # (c) 는 은퇴 모듈(`module_scenario_scan` · `search_news_alert`)을 지시하고 있었다 —
+    # 이 리포에 존재하지 않는 CLI 를 산출물이 사람/에이전트에게 시키면, 그 지시는 조용히 무시되거나
+    # 대체된다(실측: DEEP 브리프가 `module_text_chart` 를 지시해 에이전트가 `module_chart` 로 갈아탐).
+    # 현존 모듈로 교체. MODULE_MAP 의 「호출부는 제거 대상」 항목을 실제로 제거한 것.
+    parts.append("- (c) `module_news_data fts search` + `module_disclosure(_us)` 로 병목·정량 anchor 추가")
     parts.append("- (d) `module_business` 로 핵심 5종목 회사 단위 매출 분해")
     parts.append("")
     return "\n".join(parts)

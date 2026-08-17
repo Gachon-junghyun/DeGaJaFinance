@@ -42,8 +42,43 @@
   ★ **And read the estimate-momentum table with it** (`module_fundamentals_us` §추정치 모멘텀,
   added 2026-07-22). It shows where the denominator has been *going*: MU's +1y EPS ran
   **100.53 → 150.91 in 90 days (+50.1%)** on **30 upgrades : 0 downgrades**. A low multiple whose
-  estimates are being revised up that steeply is consensus **chasing**, not cheapness. Revisions turn
-  before price does — a first downgrade in a 30:0 name is a bigger event than the multiple.
+  estimates are being revised up that steeply is consensus **chasing**, not cheapness.
+  🚨 **But do NOT write "revisions turn before price does" — that was tested and it did not hold**
+  (2026-08-09, `scripts/measure_ic.py`, its first-ever invocation).
+  · Two non-overlapping windows disagreed **in sign**: W1 **+0.403**, W2 **−0.299** — and **both
+    cleared the |IC|<0.21 power floor while pointing opposite ways**, so the folded +0.052 is empty.
+  · The control arm settles the cause: on **ex-IT 120 names** the same measurement gives
+    **+0.074 / −0.064** and the Q5−Q1 spread goes **+9.4pp → −1.1pp**. ⇒ **the effect is an
+    Information-Technology loading, not a revision axis.** (`RESEARCH.md` had it as *"indistinguishable
+    — Q5 is 72% IT"*, an inference from composition; the control makes it a measurement.)
+  ⇒ **Use the revision table as a description of the denominator's direction** — that part is
+  arithmetic and still valid. **Do not use it as a leading indicator, and never as independent
+  evidence on an IT name** (that is precisely where the confound lives). Sizing on it is barred:
+  see SIZE's `--ic` note.
+- 🚨 **Before calling a cyclical's margin unsustainable, read its CONTRACT terms from the filing —
+  not the press** (added 2026-08-10; this is the L2 lens's own escape hatch and it fired).
+  Lens L2 says a peaking denominator collapses. **Whether it can collapse is a contractual question**,
+  and the answer is in the 10-Q, which the desk had never opened. Measured on MU's FY26Q3 10-Q
+  (`module_disclosure_us` → SEC primary, **its first-ever call**): strategic customer agreements are
+  **take-or-pay with binding multi-year volumes**, carry a **ceiling at ~the 2Q CY2026 market price**
+  **and a floor for the term**, and management states that at **floor** pricing gross margin runs
+  *above any prior cycle's peak*. The FY2025 10-K, nine months earlier, said the opposite
+  (*customers reluctant to enter fixed-price contracts; terms periodically renegotiated*) —
+  **the contracting regime changed between two filings and no desk file noticed.**
+  ⇒ Two consequences, both binding here:
+  (a) **L2's mechanism does not apply to contracted volume** — say which share is contracted, or
+      mark it `unknown` (C3). Never assert the collapse without that share.
+  (b) ⚠⚠ **A contractual ceiling flattens the very series L1 tells you to read.** The desk's evidence
+      #1 for its regime call is the contract-price QoQ deceleration (+90~95% → +58~63% → +13~18%).
+      If price is renegotiated **inside a floor/ceiling band** and the ceiling is pinned to a dated
+      market price, that deceleration is **arithmetic hitting a cap, not demand weakening.**
+      **Check for a band before reading a second derivative as a demand signal.**
+  ★ **Generalized, and this is the transferable part**: the desk already ran the take-or-pay frame
+  *well* — 21 files apply it to KMI's $35.67B RPO, LNG's tolling, VST's 20-year PPA floor, listed as
+  *"things the Fed can't reach"*. **Zero of them applied it to memory**, where the same structure sat
+  in the filing and where the desk's own §6 carried it as an open contradiction for three weeks.
+  ⇒ **When a frame is load-bearing in one sector, ask which other position it should be pointed at.**
+  The failure class is not a missing capability; it is a capability aimed at only one target.
 - ⚠ **Name the node's customers and check their disclosed spend** (rule A6). A supply-chain verdict
   written without looking at the buyers' capex is missing the demand side of its own thesis. If their
   prints are pending, say so **with the date** rather than concluding around them.
@@ -66,7 +101,16 @@
 - [ ] **Every "cheap on forward multiple" claim states where margin sits in that name's own history
       AND its estimate-revision trend** (`module_fundamentals_us` §추정치 모멘텀 — 90d change +
       up:down breadth). A low multiple whose estimates are being revised up steeply is consensus
-      chasing, not cheapness.
+      chasing, not cheapness. ⚠ The revision table describes the denominator's **direction**; it is
+      **not** a leading indicator and carries **no independent weight on an IT name** (measured: the
+      effect is an IT loading, ex-IT Q5−Q1 = −1.1pp).
+- [ ] 🚨 **Every "the margin must mean-revert" claim names the contract terms it checked** —
+      floor/ceiling bands, take-or-pay volumes, contracted share — read from the **filing**, or marks
+      that share `unknown` (C3). And **before reading a QoQ rate-of-change as a demand signal, state
+      whether a contractual ceiling could be producing it.**
+- [ ] **One frame-transfer question answered**: name a frame this desk trusts elsewhere (take-or-pay
+      floors, RPO lock-in, regulated-return) and say whether it applies to this node. *"Checked, does
+      not apply"* is a pass; never having asked is not.
 - [ ] **The node's customers are named and their disclosed spend checked** (or their print dates given).
 - [ ] **Every lead/lag claim is either measured this run or tagged `[unverified]`** — none inherited as fact.
 - [ ] **Linter run on this stage's own output** — `python -X utf8 scripts/report_lint.py <written file>`. Every finding is fixed or the paragraph carries its rule ID with a stated reason for exemption. ⚠ It checks form only (C1 benchmark · C2 both halves · S6 future label · D6 OBV-alone); a clean run is not a correct report.

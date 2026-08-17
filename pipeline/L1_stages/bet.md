@@ -36,6 +36,22 @@
   what would reverse it and by when, the rejection is not ready to be written yet; narrow the reason
   until it is. HANDOVER now runs `reject_ledger.py due` every run (`carryover.md` §3b) — a condition
   you set here **will** be re-examined without you having to remember it.
+- **★ And the names you never got as far as rejecting — L3 [missed_ledger](../L3_functions/missed_ledger.md).**
+  A name that surfaced in SWEEP/EVENT_ALPHA and simply **did not make this sheet** leaves no trace at
+  all unless you write one. That gap (F2) is why "we were disciplined" and "we never saw it" produced
+  identical evidence for months.
+  ```bash
+  python -X utf8 scripts/missed_ledger.py add --date <run date> --ticker <6자리> --name <종목> \
+      --cls <클래스> --why "<한 줄 근거>" --stage BET \
+      --enters-if "<진입 조건>" --recheck-date <YYYY-MM-DD>
+  ```
+  ⚠ **Do not file here what belongs in `reject_ledger`** — if you stated a reason and set it aside,
+  that is a *rejection*. `missed_ledger add` refuses any ticker×date already in the rejection ledger
+  (exit 1), so the boundary is machine-enforced, not a judgment call.
+  ⚠ Sign is inverted vs the rejection ledger: `excess > 0` here means **missing it cost us**.
+  ⚠ The `P.현금부족` class exists for names blocked by the exposure rule rather than by their own
+  merits — file those there, so the cost lands on the **beta** decision where it belongs
+  (L3 [exposure_state](../L3_functions/exposure_state.md)), not on stock selection.
 - **When the flow gate still passes and only the story broke, RE-FILE the name — don't remove it.**
   A thread going FADING/ENDED, a catalyst going quiet, or a *secondary* thesis being refuted
   (e.g. "the squeeze premise died") is a reason to **restate the thesis and lower conviction**, not to
@@ -53,4 +69,10 @@
       A rejection with an empty revival condition is a permanent ban — allowed, but say why.
 - [ ] **No name was removed on narrative grounds alone while its measured flow still passed** — such
       names appear re-filed under a new thesis with a dated re-check, not absent.
+- [ ] **Names that surfaced upstream but never reached a rejection are in `missed_ledger`** with a
+      class AND an `--enters-if` condition. A sheet that produces zero rejections *and* zero missed
+      entries from a multi-name sweep has not scored its own funnel — say why, or file the rows.
+- [ ] **Sizing language is consistent with the exposure state carried by HANDOVER** (§3d). If the
+      state is `복귀` the sheet must actually supply enough candidates to reach the target, or state
+      plainly that it cannot — an unfillable target is how cash silently stays where it was.
 - [ ] **Linter run on this stage's own output** — `python -X utf8 scripts/report_lint.py <written file>`. Every finding is fixed or the paragraph carries its rule ID with a stated reason for exemption. ⚠ It checks form only (C1 benchmark · C2 both halves · S6 future label · D6 OBV-alone); a clean run is not a correct report.

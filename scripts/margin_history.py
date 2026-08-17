@@ -1,6 +1,6 @@
 # FILE: scripts/margin_history.py
 """
-MARGIN_HISTORY — 장기 총이익률 시계열 (SEC XBRL 1차자료).
+MARGIN_HISTORY — 장기 총이익률 시계열 (US: SEC XBRL · KR: DART 전체재무제표).
 
 왜 (handoff/RESEARCH.md dig D2, 2026-07-22): lens L2(peak-margin / low-multiple trap)가
 "현재 84.6% vs 직전 사이클 정점 59%"에 걸려 있었는데, 그 59% 는 **언론 인용**이지 우리 데이터가
@@ -11,9 +11,16 @@ MARGIN_HISTORY — 장기 총이익률 시계열 (SEC XBRL 1차자료).
 그대로 쓰면 매출·원가가 다른 기간끼리 짝지어져 총이익률이 −200% 로 나온다(실측). 그래서
 **기간 길이(340~400일)로 연간만 남기고**, 같은 연도가 여러 번이면 가장 최근 제출본을 쓴다.
 
+**KR 티커(6자리 숫자)는 자동감지해 DART 경로로 넘긴다**(P3 — 시장별 파일 미러 복제 금지).
+D70: 이 스크립트가 KR 에서 "CIK not found" 로 죽어 DEEP 의 마진 백분위 게이트가 KR 에서
+호출조차 되지 않았다. KR 구현은 `module_fundamentals_kr/_margin_history.py` — 그 파일 상단에
+받아지는 기간·결측·함정이 실측으로 적혀 있다.
+
 사용:
   python -X utf8 scripts/margin_history.py MU
   python -X utf8 scripts/margin_history.py MU --current 84.6 --json
+  python -X utf8 scripts/margin_history.py 042700               # KR — DART 자동경로
+  python -X utf8 scripts/margin_history.py 042700 --quarterly --current 57.6
 
 결정론 산출물 — 판단은 하지 않는다(P4).
 """
@@ -22,6 +29,8 @@ from __future__ import annotations
 import argparse
 import datetime as _dt
 import json
+import os
+import re
 import sys
 import urllib.request
 from pathlib import Path
@@ -29,6 +38,27 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
+
+_KR_CODE = re.compile(r"^\d{6}$")
+
+
+def _load_dotenv() -> None:
+    """DART_API_KEY 는 리포 .env 가 단일 원본(CLAUDE.md 시크릿 규약)."""
+    for c in (ROOT / ".env", ROOT.parent / ".env"):
+        if not c.exists():
+            continue
+        try:
+            for line in c.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                k, _, v = line.partition("=")
+                k, v = k.strip(), v.strip().strip('"').strip("'")
+                if k and v and k not in os.environ:
+                    os.environ[k] = v
+        except Exception:
+            pass
+        break
 
 # CIK 해석과 SEC UA 는 이미 단일 원본이 있다 — 재구현하지 않는다(P1).
 # ⚠ sec.gov/files/company_tickers.json 을 직접 치면 403(실측). data.sec.gov 만 열려 있다.
@@ -92,6 +122,9 @@ def main() -> int:
     ap.add_argument("tickers", nargs="+")
     ap.add_argument("--current", type=float, default=None, help="현재 분기 총이익률(%) — 백분위 비교용")
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--quarterly", action="store_true",
+                    help="KR 전용 — 분기(3개월) 시계열. Q4 는 연간−3분기누적 유도값")
+    ap.add_argument("--start-year", type=int, default=2015, help="KR 전용 — 시작 사업연도 (기본 2015)")
     a = ap.parse_args()
     try:
         sys.stdout.reconfigure(encoding="utf-8")
@@ -100,6 +133,17 @@ def main() -> int:
 
     out = []
     for tk in a.tickers:
+        # KR 6자리 코드는 DART 경로로. SEC 는 KR 종목을 모른다(D70).
+        if _KR_CODE.match(tk):
+            _load_dotenv()
+            from module_fundamentals_kr import build_margin_history, render_text  # noqa: PLC0415
+
+            d = build_margin_history(tk, start_year=a.start_year, quarterly=a.quarterly)
+            out.append(d)
+            if not a.json:
+                print(render_text(d, current=a.current))
+            continue
+
         d = build(tk)
         out.append(d)
         if a.json:

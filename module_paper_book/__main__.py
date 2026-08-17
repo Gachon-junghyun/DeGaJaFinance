@@ -22,7 +22,8 @@ from ._config import DEFAULT_CAPITAL_KRW, DEFAULT_CAPITAL_USD, DEFAULT_FX_USDKRW
 from ._intake import read_actionable, summarize
 from ._journal import log_decision, recent, track_record
 from ._mark import mark_book, position_pnl
-from ._risk import RiskParams, concentration_check, size_position, theme_exposure
+from ._risk import (RiskParams, concentration_check, load_measured_units,
+                    size_position, theme_exposure)
 
 
 def _equity_krw(conn, fx: float, marks: dict | None = None) -> float:
@@ -112,17 +113,35 @@ def cmd_mark(a):
         positions = get_positions(conn, open_only=True)
         marks = mark_book(conn)
         eq = _equity_krw(conn, a.fx)
-        flags = concentration_check(positions, marks, eq, a.fx)
+        # D9: 실측 위험단위(잔차상관 군집)를 라벨과 **나란히** 잰다. 없으면 라벨만(사유 출력).
+        units, umeta = load_measured_units()
+        flags = concentration_check(positions, marks, eq, a.fx, units=units or None)
         snap = snapshot_equity(conn, marks, a.fx, note=a.note or "mark")
         print(f"# MARK  총자산 {snap['equity_krw']:,.0f} KRW (미실현 {snap['unrealized_krw']:,.0f})")
         hits = [p.ticker for p in positions if (position_pnl(p, marks.get(p.ticker)).get("stop_hit"))]
         print(f"  ⛔ 스탑히트: {', '.join(hits) or '없음'}")
         print(f"  테마노출(원화): " + " · ".join(f"{k}:{v:,.0f}" for k, v in theme_exposure(positions, marks, a.fx).items()))
-        if flags:
-            for fl in flags:
-                print(f"  ⚠ 집중도 초과 [{fl['kind']}] {fl['key']} {fl['pct']}% > {fl['limit']}%")
+        if units:
+            print(f"  실측 위험단위: {len(units)}개  (출처 {umeta.get('date')} · 벤치 {umeta.get('bench')} "
+                  f"· ARI {umeta.get('ari')} · {umeta.get('n_days')}일)")
+            if umeta.get("stale"):
+                print(f"    ⚠ {umeta.get('note')}")
         else:
-            print("  ✅ 집중도 한도 내")
+            print(f"  실측 위험단위: 없음 — {umeta.get('note')}")
+        mism = [f for f in flags if f["kind"].endswith("_across_labels") or f["kind"].endswith("_across_units")]
+        over = [f for f in flags if f not in mism]
+        if over:
+            for fl in over:
+                extra = ("  " + ",".join(fl["members"])) if fl.get("members") else ""
+                print(f"  ⚠ 집중도 초과 [{fl['kind']}] {fl['key']} {fl['pct']}% > {fl['limit']}%{extra}")
+        else:
+            print("  ✅ 집중도 한도 내(라벨·실측 양쪽)")
+        for fl in mism:
+            if fl["kind"] == "unit_split_across_labels":
+                print(f"  🚨 D9 [단위가 라벨보다 큼] 실측단위 U{fl['unit']}({','.join(fl['members'])}) 가 "
+                      f"라벨 {fl['labels']} 로 쪼개져 있다 — {fl['note']}")
+            else:
+                print(f"  🚨 D9 [라벨이 단위보다 큼] 라벨 '{fl['label']}' 이 실측단위 {fl['units']} 에 걸쳐 있다 — {fl['note']}")
 
 
 def cmd_snapshot(a):

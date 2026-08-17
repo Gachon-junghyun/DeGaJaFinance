@@ -6,9 +6,10 @@ fnlttSinglAcntAll 이 유일한 결정론 원본이라 별도 모듈로 둔다(P
 데이터 소스 자체가 다름 — 시장 인자로 흡수 불가).
 
 기능 지도:
-    _dart_fin   DART 전체재무제표 fetch + 계정 추출 (account_id 우선, 한글명 폴백)
-    _quality    수익의 질 — 발생액 · 미청구공사 · 운전자본
-    _renderer   마크다운
+    _dart_fin        DART 전체재무제표 fetch + 계정 추출 (account_id 우선, 한글명 폴백)
+    _quality         수익의 질 — 발생액 · 미청구공사 · 운전자본
+    _margin_history  장기 총이익률 시계열 (D70 — DEEP 의 "마진 백분위" 게이트 KR 판)
+    _renderer        마크다운
 
 빠른 사용:
     from module_fundamentals_kr import fetch_by_stock, compute, render_markdown
@@ -25,6 +26,7 @@ from ._dart_fin import (
     fetch_financials,
     REPRT_CODES,
 )
+from ._margin_history import build_margin_history, render_text
 from ._quality import Flag, QualityMetrics, compute
 from ._renderer import render_markdown
 
@@ -34,7 +36,9 @@ __all__ = [
     "Flag",
     "QualityMetrics",
     "REPRT_CODES",
+    "build_margin_history",
     "compute",
+    "render_text",
     "fetch_by_stock",
     "fetch_financials",
     "render_markdown",

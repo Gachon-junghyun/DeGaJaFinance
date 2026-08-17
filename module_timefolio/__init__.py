@@ -30,6 +30,8 @@ class Holding:
     weight: float          # 보유 비중 %
     eval_manwon: float     # 평가액(만원)
     pnl_pct: Optional[float] = None
+    day_pct: Optional[float] = None   # 당일 등락 % — 일별 수익분해(선택기여)의 재료
+
 
 
 @dataclass
@@ -57,7 +59,13 @@ class Timefolio:
         self.w = w
 
     @classmethod
-    def attach(cls, *, port: int = 9222, ensure_login: bool = True) -> "Timefolio":
+    def attach(cls, *, port: int | None = None, ensure_login: bool = True) -> "Timefolio":
+        # ⚠ 포트 기본값의 단일 원본(P1). 2026-08-07 실측: 다른 크롬이 9222 를 먼저 잡으면
+        #   `start_timefolio_chrome.bat` 이 점유자 확인 없이 skip 하고, 이 클래스를 쓰는
+        #   **모든 호출부**(module_timefolio CLI · scripts/exposure_rule.py)가 CDPError 로 죽는다.
+        #   env 로 한 곳만 돌리면 전부 따라온다: set TIMEFOLIO_CDP_PORT=9223
+        if port is None:
+            port = int(os.environ.get("TIMEFOLIO_CDP_PORT", "9222"))
         w = WebController.attach(match_url="timefolio", port=port)
         tf = cls(w)
         if ensure_login:
@@ -137,6 +145,7 @@ class Timefolio:
                 weight=_num(g(5)) or 0.0,
                 eval_manwon=_num(g(6)) or 0.0,
                 pnl_pct=_num(g(8)),
+                day_pct=_num(g(3)),   # 이미 표에 있던 값 — 버리고 있었다
             ))
         return out
 

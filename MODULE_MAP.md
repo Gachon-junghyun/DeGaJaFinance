@@ -23,6 +23,7 @@
 | [module_inflection](#module_inflection) | 가격 변곡점 ↔ 뉴스 정렬 + 과거 전례 검색 | "이런 말 나올 때 이렇게 흘렀다", 변곡 주변 기사, 유사국면 |
 | [module_order_desk](#module_order_desk) | KIS 주문 데스크(Tkinter GUI) — 스택형 휴먼 주문 | 시세 보며 주문을 스택에 쌓아 카드마다 [체결], 포폴·인기·흐름·만약에 |
 | [scripts/](#스크립트-데스크-호출) | 데스크가 `python scripts/X.py`로 호출하는 단일파일 도구 9 | 수급·섹터로테이션·촉매·숏리스트·스크리너 |
+| [점수판 3종](#산업-데스크-모듈) | `exposure_rule`(노출·수익분해) · `reject_ledger`(거부) · `missed_ledger`(미진입) | **데스크가 자기를 채점하는 층** — 베타 / 거부 / 미진입. 셋 다 같은 벤치·같은 노이즈밴드(±5pp)로 합산 가능하게 맞춰져 있다 |
 
 > 층위 설계(큰축→모듈→기능 + 인수인계)는 [`pipeline/`](pipeline/README.md).
 
@@ -61,17 +62,21 @@ scripts/sector_flow ──▶ scripts/flow_read(shim) ──▶ module_flow
 ## module_order_desk
 KIS 주문 데스크 — Tkinter 스택형 주문 GUI. 주문을 '스택'에 카드로 쌓아 **카드마다 [체결]로 사람이 하나씩 발사**(자동매매 아님, 확인 다이얼로그 1회). 옛 mvp `kis_desk.py`를 이관.
 
-- **트리거**: 시세·잔고를 보며 국내/미국 주문을 손으로 쌓아 발사할 때. 포트폴리오 도넛·인기종목·흐름(수급)·'만약에'(반사실 결정 추적)를 한 창에서.
+- **트리거**: 시세·잔고를 보며 국내/미국 주문을 손으로 쌓아 발사할 때. 포트폴리오 도넛·인기종목·흐름(수급)·'만약에'(반사실 결정 추적)·**손익분기(거래비용 원장)**를 한 창에서.
 - **실행**:
   ```bash
-  python -m module_order_desk        # GUI 실행 (cwd=리포 루트)
-  run_kis_desk.bat                   # 더블클릭(윈도우)
+  python -m module_order_desk                                   # GUI 실행 (cwd=리포 루트)
+  run_kis_desk.bat                                              # 더블클릭(윈도우)
+  python -m module_order_desk breakeven 005930 --qty 10 --price 70000 --target 75000
+  python -m module_order_desk breakeven RTX --krw --fx 1380     # 미국+환전 포함(원화 현금흐름)
+  python -m module_order_desk breakeven --scan                  # 보유 전 종목 손익분기 vs 현재가 갭
   ```
-- **기능 파일**: `_desk`(GUI·주문카드·포폴/인기/흐름/만약에 창) · `_decisions`(반사실 결정 추적) · `_stack`(계획 스택 저장/로드). 공개 API `KisDesk · main`.
-- **재사용**: 시세/잔고/주문은 `module_KIS`(복제 0). 흐름창은 `python -m module_flow` 서브프로세스 → `out/flow/<date>.json` 읽기.
-- **소유**: 없음(순수 GUI 오케스트레이션). 산출은 `out/order_desk/`(계획 `kis_stack.json`·결정 `kis_decisions.json`), 오류로그 `kis_desk_error.log`.
+- **기능 파일**: `_desk`(GUI·주문카드·포폴/인기/흐름/만약에/손익분기 창) · **`_costs`(거래비용·손익분기 — 수수료·거래세·SEC/TAF·환전스프레드·배당까지 세서 순현금 0이 되는 매도가를 이분법으로 푼다)** · `_decisions`(반사실 결정 추적) · `_stack`(계획 스택 저장/로드). 공개 API `KisDesk · main · breakeven · holding_ledgers · render · render_scan`.
+- **재사용**: 시세/잔고/주문은 `module_KIS`(복제 0). 흐름창은 `python -m module_flow` 서브프로세스 → `out/flow/<date>.json` 읽기. `_costs` 는 API 를 부르지 않는다(잔고 객체를 받아 계산만).
+- **소유**: **거래비용 요율·손익분기 계산의 단일 원본(`_costs`)** — 수수료율/세율을 다른 모듈에 다시 적지 않는다. 그 외는 순수 GUI 오케스트레이션. 산출은 `out/order_desk/`(계획 `kis_stack.json`·결정 `kis_decisions.json`), 오류로그 `kis_desk_error.log`.
 - **안전(P5·규약)**: 기본 드라이런 미리보기 카드, `execute=True`는 [체결] 버튼+확인 1회로만. 스케줄러 자동발사 없음. `KIS_ENV=prod`면 상단 붉은 실전 배너.
 - **환경변수**: `KIS_APP_KEY/SECRET` + `KIS_ACCOUNT_NO`(리포 루트 `.env`), 선택 `USDKRW_FALLBACK`.
+  **요율 덮어쓰기(선택, 계좌마다 다름)**: `KIS_FEE_KR_PCT·KIS_FEE_KR_MIN·KIS_TAX_KOSPI_PCT·KIS_TAX_KOSDAQ_PCT·KIS_TAX_KONEX_PCT·KIS_TAX_ETF_PCT·KIS_FEE_US_PCT·KIS_FEE_US_MIN·KIS_SEC_FEE_PCT·KIS_TAF_PER_SHARE·KIS_TAF_MAX·KIS_FX_SPREAD_PCT`. 기본값은 '한국투자 온라인 일반 + 2025 세율' 가정 — 요율이 틀리면 손익분기가도 틀린다(P4).
 
 ## module_news_data
 뉴스 **수집 + 소비**. 이 리포가 수집을 소유·구동(`run_fetch_loop.bat`). 기능 하나 = `_파일` 하나.
@@ -231,6 +236,11 @@ industry_us/kr 프로토콜이 호출하는 분석 모듈. 전부 기능별 `_�
 | `scripts/report_lint.py` | 데스크 산출물 **규칙 린터**(형식 검사) | `python -X utf8 scripts/report_lint.py "llm_outputs/{date}/**/*.md"` | — |
 | `scripts/risk_units.py` | **위험 단위 실측** — 벤치 잔차 상관 → 평균연결 군집. `MAX_THEME_PCT` 가 세는 '테마 라벨'이 진짜 위험 단위인지 검증(안정성 ARI·임계값 스윕 동봉). numpy만, sklearn 미사용(P6) | `python -X utf8 scripts/risk_units.py --book --candidates VLO MPC PSX` | module_paper_book(보유·테마 읽기)·yfinance |
 | `scripts/reject_ledger.py` | **거부 원장 + 사후 채점** — DROP/PASS/강등을 기계가독 JSONL 로 남기고 사유클래스(measured/structural/**narrative**)별 초과수익을 누적 채점. 거부가 산문에만 남아 채점 불가였던 구멍을 메운다. 벤치는 지수 아닌 **시총1조+ 동일가중**(지수는 대형주 사건에 지배됨 — 실측 동일가중 −2.6% vs 시총가중 −15.7%) | `python -X utf8 scripts/reject_ledger.py score` · `… add --date … --cls F.테마소멸 --revives-if "…"` | `llm_outputs/sector_flow/prices_kr_*.pkl`(P1 재사용)·SECTOR_FLOW_KR.json |
+| `scripts/exposure_rule.py` | ★ **대칭 노출 규칙 + 일별 노출·수익분해 적립.** 벤치 `069500.KS`(⚠`^KS11` 은 봉 누락 3회 — M49/M194) 로 정상/방어/**복귀**/과열 4상태를 판정하고 매일 1행을 `out/exposure/ledger.csv` 에 upsert. **복귀 규칙이 본체** — 바닥을 예측하지 않고 "20일 저점 대비 회복률 ∧ 거래량 ∧ 상승마감" 증거로만 발화(F1 의 비대칭 게이트를 닫는다). 수익분해는 **항등식으로 닫는다**(총초과 = 현금기여 (w−1)×벤치 + 선택기여 잔차) — 측정된 알파의 ~14/16.86pp 가 현금비중 변수였다. ⚠ **밴드 숫자는 `data/exposure_bands.json`(사람 결정)** — 없으면 판정 대신 `밴드미설정`+🚨. `propose` 가 임계값 후보별 발화·지각·놓친폭 실측표를 낸다. ⚠ 장중엔 미정착 봉이라 거래량 다리를 **투영**하거나 `판정불가`로 둔다(D74·C3). `target --json` 이 **현금 목표비중의 단일 원본**(F5). ★ **`min_hold_sessions` 게이트 필수** — 없으면 120세션 전이 36회·주당 회전 **43.3pp**(데스크 전체 회전율 26.9%의 1.6배)를 규칙 혼자 쓴다. 3세션이면 19.6pp 로 절반이고 07-31 복귀는 그대로 발화. `simulate` 가 회전 비용을, `backfill` 이 냉시동(경보 삼킴)을 막는다 | module_timefolio(계좌)·module_KIS(장중 벤치)·module_webctl._env(.env)·yfinance |
+| `scripts/missed_ledger.py` | **기회비용 원장** — `reject_ledger` 의 **대칭 짝**(F2). "검토했으나 사지 않은 것"을 같은 축(사유클래스·**부활조건=`--enters-if`**·재확인일·동일 벤치)으로 채점한다. ★ **부호가 반대**: `excess>0` = 놓쳐서 손해. 거부 원장에 이미 있는 종목·날짜는 `add` 가 **거부한다**(같은 사건 이중계상 방지). 첫 관측(n=6, leak_scan 07-24 런): **커버리지소실 +23.4pp > 발굴부재 +15.0pp** — 누수는 발굴이 아니라 **보유**다 | ▶`scripts/reject_ledger.py`(가격캐시·벤치유니버스·채점산술 **import 재사용**, 재구현 0) |
+| `scripts/ic_ledger.py` | ★ **신호 축의 정보계수(IC)를 매일 1행씩 적립** — 이 리포의 **시계**. 실력을 11개 포지션 손익으로 배우면 월 11관측이라 수십 년 걸리지만, 같은 신호를 **828종목 횡단면**으로 재면 **관측 1개 = 런 1개**라 3~5개월이면 축마다 부호가 갈린다. `kelly_size --ic` 가 가정이 아니게 되는 유일한 경로. ⚠ **겹침 보정 필수** — 일별 런의 h일 선행창은 겹친다. NW(lag h−1) + `n_eff=n/h`, **n_eff<4 면 판정 안 함**(실측: 보정 전 h=10 이 `n=3·양수100%·t=+6.7` 거짓양성, 그 3창이 전부 07-31 반등 하나로 끝났다). 다중비교 Bonferroni 임계 자동 표시 | `llm_outputs/*/industry_KR/SECTOR_FLOW_KR.json` + `llm_outputs/sector_flow/prices_*.pkl`(P1 재사용, yfinance 재호출 0) |
+| `scripts/axis_inflection.py` | **패턴 발견기 → IC 축 배관.** `module_inflection` 의 `mention_z`(뉴스 관심도 z = 군중심리 축)·`mention_z_chg`(관심 가속)를 `out/ic/axes/{market}_{run}.json` 으로 내보낸다. **`ic_ledger` 수정 0으로 새 축이 채점된다** — 앞으로 경제레짐·수급물리 축이 늘어도 같은 서식이면 끝. ⚠ 이 리포에 없던 것은 발견기가 아니라 **눈금자**였다(발견기는 이미 3개). ⚠ mention 계열은 CPU·sqlite — GPU 경로(`analog`) 미사용(P6) | ▶`module_inflection._newslink`(`mention_frame`·`mention_z` 재사용, 재구현 0) |
+| `scripts/axis_window_flow.py` | ★ **수급의 「창 의존성」을 정식 지표로 → IC 축 배관.** `module_KIS --investor` 는 M295 이래 있었지만 **한 종목씩** 쓰였다. 코호트로 돌리자 «외국인·기관 **양다리 순매수**» 종목 수가 창마다 달라졌다 — 산업재 14종 **20일 1 → 12일 4 → 5일 5**(창 단축 시 증가 = 롤오버 착시 후보) · 042660 한화오션 외국인 **−137.4만 → +52.1만 → +103.7만**(20일의 음수는 **창 앞쪽 유물**). ⇒ 같은 종목에 「외국인이 던진다/받는다」가 둘 다 참이고 **창을 고른 사람이 답을 정했다.** 종목 스칼라 3축 `bothleg_rollover`(b(5)−b(20), 이산) · `flow_accel_5_20`(z(5)−z(20), 연속) · `flow_level_20`(**대조축** — 없으면 「그냥 20일 수급」과 구분 불가). ⚠ **비용 실측 종목당 1콜 0.134s**(엔드포인트가 30일 통째 ⇒ **창 3개 = 1콜**), 전수 827종 111s. ⚠ **백필 불가**(KIS 는 오늘 기준 30일만) ⇒ 오늘부터 하루 1행. ⚠ **방향 가설 없음(P4)** — 어느 창이 옳은지는 IC 가 답한다 | `python -X utf8 scripts/axis_window_flow.py cohort --preset indu` · `… axes --limit 0` | ▶`module_KIS.fetch_investor_trend`(재구현 0)·SECTOR_FLOW_KR.json(유니버스) → `out/ic/axes/kr_{run}.json` |
 | `scripts/leak_scan.py` | **누수 스캔** — 끝난 런이 지불하고 걷지 않은 것. 전 유니버스 상승주를 런 산출물과 대조해 A.런에있었음/B.커버리지소실/C.스쳐감/D.발굴부재 로 분류 + **선행검정**(런시점 상태→이후 실현, 후행 동어반복 차단). 벤치는 시총floor 동일가중 | `python -X utf8 scripts/leak_scan.py --run 2026-07-20 --top 25` | `llm_outputs/sector_flow/prices_kr_*.pkl`·SECTOR_FLOW_KR.json·llm_outputs/**/*.md |
 | `scripts/brief_recall.py` | **brief 회수율 감사** — 그날 기사의 N%를 무작위로 뽑아 "브리핑에서 되찾히나"를 대조. 회수율은 주장이 아니라 **측정치**여야 한다: 처음 재보니 `--body 2`+꼬리0 인데도 **45.6% 가 안 보였다**(1매체 35%·비시장 미노출·토픽 블롭). 수선 후 64.6%. 못 본 기사 목록을 같이 뱉어 `--singles-nb` 조정 근거를 준다. **클라 전용(GPU)** | `python -X utf8 scripts/brief_recall.py --date 2026-07-23 --scope domestic` | module_news_data(`_brief`·`_cluster`·`_embed` 재사용, P1) |
 | `module_macro_us` | US 매크로 레짐(FRED **19개** — 금리·물가·달러 + **신용/유동성**) | `python -m module_macro_us --series hy_oas,nfci` | FRED_API_KEY |
@@ -240,7 +250,7 @@ industry_us/kr 프로토콜이 호출하는 분석 모듈. 전부 기능별 `_�
 | `module_business_us` | US 사업모델(EDGAR/yf) | `python -m module_business_us AAPL` | 자립(yf/EDGAR) |
 | `module_disclosure_us` | US 공시(SEC EDGAR) | `python -m module_disclosure_us AAPL` | ticker_cik 캐시(자체) |
 | `module_fundamentals_us` | US 펀더멘털(매출·이익엔진 + **추정치 모멘텀**) | `python -m module_fundamentals_us AAPL` | ▶module_disclosure_us |
-| `module_fundamentals_kr` | **KR 재무제표 + 수익의 질**(발생액·미청구공사) | `python -m module_fundamentals_kr 000720` | DART 전체재무제표 ▶module_disclosure |
+| `module_fundamentals_kr` | **KR 재무제표 + 수익의 질**(발생액·미청구공사) + **장기 총이익률 시계열** | `python -m module_fundamentals_kr 000720` · `python scripts/margin_history.py 042700` | DART 전체재무제표 ▶module_disclosure |
 | `module_math_check` | 리포트 수치 산술 검증 | `python -m module_math_check ...` | 자립(stdlib) |
 | `module_watchlist` | thesis 단위 워치리스트 DB | `python -m module_watchlist init` | data/watchlist.db |
 | `module_publish` | 산출물 렌더·발행 헬퍼 | `python -m module_publish ...` | 자립 |
@@ -258,6 +268,18 @@ IS 가 비고 CIS 만 있는 회사) 이름 매칭은 조용히 빗나간다.
 수주산업(건설·조선)에선 **미청구공사(계약자산)/매출과 그 YoY 방향**이 1번 지표 — 진행률로 인식했지만 청구 못 한 매출이고,
 매출보다 빨리 늘면 공기지연·정산분쟁·원가초과 이연이 고인 것이다.
 US 대응(`module_fundamentals_us`)과 **미러 복제가 아니다** — 데이터 소스 자체가 달라(yfinance/SEC XBRL vs DART) P3 의 시장인자로 흡수 불가.
+
+### 장기 총이익률 시계열 — KR (D70, 2026-08-03)
+`_margin_history` 가 DEEP EXIT CHECK 의 "마진 백분위" 게이트 KR 판이다. 호출은 US 와 **같은 진입점**:
+`scripts/margin_history.py` 가 6자리 티커를 자동감지해 DART 경로로 넘긴다(P3 — 시장별 스크립트 복제 안 함).
+실측: 042700·005930 **연간 FY2015~FY2025 11/11 결측 0**, 042700 **분기 42/48(2015Q1~2026Q1)**.
+- US 의 기간길이 함정(`fy`=제출연도)은 KR 에 **없다** — DART 는 당기/전기/전전기가 열로 명시된다.
+  대신 KR 함정 셋: **분기 3개월(`thstrm_amount`) vs 누적(`thstrm_add_amount`)** 혼용,
+  **FY2019 이전 account_id 부재**(한글명 폴백으로만 잡힘), **비12월 결산**(`acc_mt` 로 확인해 경고).
+- **금융·성격별비용 기업은 총이익률이 정의되지 않는다**(실측 105560·086790 매출계정 자체 없음,
+  035420 매출원가 없음) — 버그가 아니라 표시방법. 빈 시계열 + 사유를 낸다(P4).
+- ⚠ 밸류 두 다리 중 **추정치 리비전(US 전용, D120)은 KR 에 여전히 없다** — `pipeline/protocols/industry_kr.md`
+  의 KR runtime deltas 에 그 사실과 표기 규칙이 박혀 있다.
 
 ## module_paper_book
 데스크 리포트(BET_SHEET·ACTION_TICKETS·평결)를 읽어 **모의투자(paper) 장부**를 굴린다. `paper_desk` 프로토콜의 결정론 엔진 — 판단(무엇을 살지)은 프로토콜(에이전트)이, 이 모듈은 '얼마나·어떻게'의 기계만 제공한다(P4).
@@ -348,7 +370,7 @@ REPORT/ 폴더의 데스크 산출물(.md)에서 태그(종목·섹터·평결·
 | 모듈 | 트리거 | 안전장치 |
 |---|---|---|
 | `module_webctl` | CDP(9222) 브라우저 제어 | 조회/제어만 |
-| `module_timefolio` | 타임폴리오 미러 자동매매 | **이중게이트**: `--execute` + `TIMEFOLIO_EXECUTE=1` 둘 다 있어야 제출, 아니면 드라이런. ▶module_webctl |
+| `module_timefolio` | 타임폴리오 **콘테스트 집행 어댑터**(RFM). ★ 2026-07-31 SSOT 컷오버(F4, 사람 결정): 옛 mvp `alert_bot` 책(id=6) 미러를 **끊었다** — `book_targets()` 은퇴, 콘테스트 계좌 자체가 SSOT. 타깃 = **투자총량**(`scripts/exposure_rule.py target`, 현금의 단일 원본 — F5) × **이름·상대비중**(`out/timefolio/targets.json`, 데스크가 씀). `Holding.day_pct` 추가(수익분해 재료) | **⚠ 이중게이트가 아니다**: `.env` 에 `TIMEFOLIO_EXECUTE=1` 이 **살아 있어**(2026-07-31 실측) `--execute` 하나로 제출된다. 인텐트 부재·밴드 미설정·보유 0건은 전부 `SyncBlocked` 로 **소리 내어 멈춘다**(조용한 폴백 금지 — 그 침묵이 F4 를 9일 숨겼다). ▶module_webctl |
 
 ## 스크립트 (데스크 호출)
 데스크가 `python scripts/X.py`로 호출하는 단일파일 도구. 데이터는 전부 로컬 `data/` 참조로 수정됨.
@@ -368,9 +390,24 @@ REPORT/ 폴더의 데스크 산출물(.md)에서 태그(종목·섹터·평결·
 | `yf_snapshot.py` | 일봉 OHLCV → 스칼라 지표(last·rsi14·sma50/200·px_vs_sma200). 스크리너 전용 어댑터 | `module_chart._indicators`(RSI·MA 단일 원본 — 산식 재구현 안 함) |
 | `_repo_path.py` | **부트스트랩** — `python scripts/foo.py` 가 module_* 를 import 하게 sys.path 에 리포 루트 삽입 | 없음(스크립트 dir 이 sys.path[0]) |
 
+### 유니버스 빌더 (주1회 · 데스크 런이 아니라 유지보수 잡)
+| 스크립트 | 트리거 | 의존 |
+|---|---|---|
+| `data/kr_universe/build_kr_universe.py` | KR 유니버스 재빌드(시총 stale 경고 8일) | KRX/네이버 |
+| **`data/us_universe/build_us_universe.py`** ★2026-08-10 | **US 유니버스 재빌드 — S&P 500+400+600 = 1,506종목.** 구성종목·**GICS 섹터/산업**은 위키 목록(현행 CSV 스키마와 열 일치), 시총은 `yfinance fast_info.market_cap`(실측 0.6초/종목 ⇒ 약 15분). 캐시 JSONL 로 중단 후 재개 | requests·pandas(read_html)·yfinance |
+
+⚠ **두 빌더 모두 기본 출력이 「후보 파일」이다** — 라이브(`kr_all.csv`·`us_top300.csv`) 덮어쓰기는
+`--out` 으로 명시해야 한다. **유니버스가 바뀌면 스윕·섹터집계·거부원장 벤치의 분모가 전부 바뀌므로**,
+US 빌더는 현행 파일과의 **차집합(추가/이탈)을 항상 보고**한다.
+⚠ `fast_info` 함정: dict 키는 camelCase(`marketCap`)인데 **속성은 snake_case(`market_cap`)** —
+`.get("market_cap")` 은 조용히 `None` 을 준다(실측 2026-08-10).
+★ **왜 지었나**: `us_top300.csv` 는 빌더 없는 스냅샷 복사본이었고, **유니버스 밖 종목은 「안 보이는」
+게 아니라 「존재하지 않았다」** — 데스크가 `LNG` 에 대해 *"us_top300 밖 = flow·RS·OBV·숏 어느 축도
+데스크 계기로는 존재하지 않는다"* 를 **9런 연속** 기록했고, 탱커 5종목도 같은 이유로 태그 불가였다.
+
 ---
 
 ## 다음 후보 (미착수)
-- 유니버스 빌더(us_top300·aliases) 자체 생성 스크립트(현재 data/에 스냅샷만 복사).
+- `us_aliases.json` 자체 생성(현재 스냅샷 복사 — 유니버스 본체는 위 빌더로 닫힘).
 - `registry.json` 자동렌더로 이 표를 코드↔맵 정합성까지 기계 검증(모듈 늘면).
 - DART 재무정보 API(fnlttSinglAcnt 등) 추가 — 현재는 공시목록·원문·사업보고서까지.

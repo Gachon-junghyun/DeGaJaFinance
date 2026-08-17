@@ -40,6 +40,11 @@ python -m module_kis 005930 --json                 # 시세 JSON
 python -m module_kis --balance                     # 계좌 잔고(예수금+보유종목), 코드 불필요
 python -m module_kis 005930 --all --balance        # 종목조회 + 잔고
 
+# 국내 지수선물 (읽기 전용 v1) — 코드 불필요
+python -m module_kis --futboard                    # KOSPI200 근월물 전광판(현재가·미결제·이론가·잔존일)
+python -m module_kis --futopt A05608               # 계약 상세(베이시스·미결제 증감·괴리율·기초지수)
+python -m module_kis --futopt A05608 --json        # 위 JSON
+
 # 주문 — 기본 드라이런(미리보기). 실제 발사는 --execute 를 사람이 직접.
 python -m module_kis 005930 --order buy --qty 1 --price 349000            # 미리보기
 python -m module_kis 005930 --order buy --qty 1 --price 349000 --execute  # 실발사
@@ -71,6 +76,7 @@ rows = fetch_investor_trend("005930", days=20)        # list[InvestorDay]
 | `_account.py` | 국내 잔고(읽기전용) (`inquire-balance`, `TTTC8434R`/`VTTC8434R`) |
 | `_overseas.py` | 외화/해외 잔고(읽기전용) (`inquire-present-balance`, `CTRP6504R`) |
 | `_order.py` | 현금 주문(휴먼 트리거) (`order-cash`, `TTTC0802U`/`TTTC0801U`, hashkey) |
+| `_derivatives.py` | 국내 지수선물 시세 읽기전용 (전광판 `display-board-futures`/`FHPIF05030200`, 시세 `inquire-price`/`FHMIF10000000`). TR_ID 는 공식 open-trading-api 리포에서 확정, 필드는 라이브 응답 실측. 옵션(IV/그릭)은 v1.1 대기. |
 | `_renderer.py` | markdown 렌더러 |
 
 ## 엔드포인트 메모

@@ -15,7 +15,26 @@
   (🟢/🟡/🔴; KR adds `--names` per-investor actuals; `--positioning` is slow — finalists only).
   ⚠ **KR tickers need the `.KS` suffix here.** A bare 6-digit code returns empty rows **without
   erroring** — measured, and read as "no flow signal" on a day flow had actually reversed.
+- **KR index-futures positioning** — `python -X utf8 -m module_KIS --futboard`
+  (KOSPI200 근월물: 현재가·등락·거래량·**미결제약정**·이론가·잔존일수) and
+  `python -X utf8 -m module_KIS --futopt <FCODE>` (계약 상세: **basis(선물−현물)·괴리율·미결제 증감·
+  최종거래일**). Primary source (KIS Open API, read-only; TR confirmed from the official repo).
+  ⚠ **Context, not a trigger** — read like COT: `basis`/괴리율 is a **carry / risk-appetite** read
+  (backwardation vs contango) and OI-change is **positioning buildup/unwind**, neither a directional
+  alpha. ⚠ **"OI building" is NOT directional** — the same class as the REJECTED "short building =
+  bearish" (below); do not read a rising OI as bullish or bearish on its own.
 - News velocity — `python -X utf8 -m module_news_data fts search "<theme>" --count` (corroborant, not primary).
+  🚨 **`velocity: None` is returned for TWO different worlds and they are not distinguishable from the
+  value** (measured 2026-08-09): *"genuinely no articles"* and *"could not reach the index"*.
+  The search rides a remote API (`DEGAJA_NEWS_API`, an ngrok tunnel) with **no local FTS fallback on
+  the client** (`data/news_fts.db` does not exist there — the server owns it, P6), and the tunnel
+  **intermittently drops**: within one hour we measured success → 5/5 failure → success.
+  ⚠ **And the scope flag is not optional.** `news_velocity(query, recent, base, kr=False)` defaults to
+  the **foreign** pool; `module_flow/__main__.py` passes `kr=kr_code(t)` but the universe sweep did
+  **not** for months, so Korean company names were counted against English wires —
+  삼성바이오로직스 base **5**, LG에너지솔루션 **2** ⇒ velocity `0.00`.
+  ⇒ **Before writing "the theme is quiet", verify the pipe answered.** A zero that came from a dead
+  tunnel is not evidence of silence (P4 — a blank beats a falsehood).
 
 ## ★ Three axes added 2026-07-22 — use them, they close measured blind spots
 
@@ -47,6 +66,13 @@ to travel*. **PREMORTEM/SCENARIOS thresholds should come from here rather than b
 *Measured 2026-07-22*: GOOGL **±7.1%** into that night's print · MU ±4.5% · AMD ±3.6%.
 ⚠ The straddle is the **total** move to expiry, not the event's isolated contribution — read `D±n`
 with it; a 0DTE chain is nearly pure event premium but its OI ratios are noisy.
+⚠ **This axis is US-only, and KR has no implied-move equivalent yet** — so KR `SCENARIOS.md`
+thresholds are still hand-set (the exact gap this axis closed for US). What KR *does* have now is the
+index-futures line above (`--futboard`/`--futopt`): **basis + OI is positioning context, not an
+implied move**, so it informs *direction/crowding*, not a threshold. The real KR equivalent —
+**KOSPI200 index-option IV / ATM straddle** — is the `module_KIS` derivatives **v1.1** (options), and
+until it lands a KR scenario threshold taken from anything here would be fabricated. Say so rather
+than inventing one.
 
 ## ⚠ Grade the signal before you weight it (carry rule D6 of `handoff/RESEARCH.md`)
 
@@ -67,6 +93,15 @@ The tools here print every axis at the same visual weight. **They are not equall
   can unlock 🟢가속 with nothing to override it. Treat a US 🟢 whose only conviction source is OBV as
   **🟡 with a stated disagreement**, and say so in the report. (Fixing the gate itself is open dig
   **D11** — a scoring change needs human approval.)
+- 🚨 **The tag and the SCORE are two different objects with two different failure modes** (2026-08-10).
+  `flow_tag` handles a missing news velocity **correctly** — `(vel or 0) >= 1.2` keeps unknown out of
+  green and `(vel is not None and vel < 0.7)` keeps it out of red, i.e. **unknown is neutral in both
+  directions**, which is rule C3 done right. `flow_score` did **not**: it dropped the 4th axis per
+  name, changing the **denominator** and therefore the **scale**, then those scores were averaged into
+  sector `wflow`. General form `(s₃+3)/12 ∈ [0, +0.5]` — dropping was never a penalty.
+  ⇒ **Do not reason from the tag to the score or back.** The tag is a classification; the score is a
+  cardinal number that only means something within one `n_axes` regime. Fixed in
+  `scripts/sector_flow.py`; the run's regime is stamped in `SECTOR_FLOW.json §scoring`.
 - **Substitution when tempted to write "OBV accumulating"**: (1) what does RS20/RS60 say (A)?
   (2) for KR, what do KIS actuals say (B)? (3) is the move date-clustered (S1)? Report OBV as
   agreement or disagreement with those, not as the finding.

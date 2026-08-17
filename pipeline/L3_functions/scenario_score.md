@@ -5,7 +5,8 @@
 > reports which branch fired. It does not interpret, re-weight, or explain away.
 
 ## Input
-One `ARMED` row from `handoff/SCENARIOS.md` whose event date has passed, carrying:
+One `ARMED` row from `handoff/SCENARIOS_{US|KR}.md` (located via the MASTER INDEX in the
+`handoff/SCENARIOS.md` spine) whose event date has passed, carrying:
 `id · event · date · branches[A,B,C] · observable · threshold`
 
 ## Procedure
@@ -41,4 +42,5 @@ One `ARMED` row from `handoff/SCENARIOS.md` whose event date has passed, carryin
 {id} · {event date} · {verdict} · observed: {raw value} · threshold was: {frozen threshold}
 {one line: what this does to the standing view, or "no change"}
 ```
-Appends to the scoring log in `handoff/SCENARIOS.md`. Zero buy/sell language.
+Appends to the **MASTER scoring log in the `handoff/SCENARIOS.md` spine** — which is deliberately
+NOT split, so an `EXPIRED` row cannot hide in the other market's file. Zero buy/sell language.

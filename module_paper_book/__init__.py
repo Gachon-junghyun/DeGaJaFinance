@@ -75,7 +75,8 @@ from ._mirror import (
     seed_position,
     stage_to_kis,
 )
-from ._risk import RiskParams, concentration_check, size_position, theme_exposure
+from ._risk import (RiskParams, concentration_check, label_unit_mismatch,
+                    load_measured_units, measured_unit_exposure, size_position, theme_exposure)
 
 __all__ = [
     "Fill", "Position", "book_summary", "connect", "equity_krw", "get_cash", "get_position",
@@ -89,4 +90,5 @@ __all__ = [
     "MirrorPosition", "apply_mirror", "seed_position", "stage_to_kis",
     "learned_sensitivity", "record_sensitivity",
     "RiskParams", "concentration_check", "size_position", "theme_exposure",
+    "measured_unit_exposure", "label_unit_mismatch", "load_measured_units",
 ]

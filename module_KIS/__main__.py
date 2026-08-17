@@ -41,6 +41,14 @@ from ._order import to_dict as order_to_dict
 from ._overseas import fetch_overseas_balance
 from ._overseas import to_dict as overseas_to_dict
 from ._quote import fetch_quote, to_dict
+from ._derivatives import (
+    fetch_futures_board,
+    fetch_futopt_price,
+    board_to_dict,
+    quote_to_dict as futopt_to_dict,
+    render_board as render_fut_board,
+    render_futopt,
+)
 from ._renderer import (
     render_balance,
     render_investor,
@@ -140,6 +148,22 @@ def main() -> int:
         help="⚠️ 실제 주문 전송. 없으면 드라이런. 사람이 직접 당기는 트리거.",
     )
     p.add_argument("--all", action="store_true", help="시세+일봉+수급 모두")
+    p.add_argument(
+        "--futboard",
+        action="store_true",
+        help="국내 지수선물 전광판(KOSPI200 근월물 목록·미결제·이론가). 종목코드 불필요.",
+    )
+    p.add_argument(
+        "--futopt",
+        metavar="FCODE",
+        help="선물옵션 계약코드 시세(예: A05608, 전광판의 코드). 베이시스·미결제 포함.",
+    )
+    p.add_argument(
+        "--fo-market",
+        choices=["F", "O"],
+        default="F",
+        help="--futopt 시장구분 F:지수선물(기본) / O:지수옵션.",
+    )
     p.add_argument("--json", action="store_true", help="JSON dump (선택한 항목)")
     p.add_argument("--out", default="", help="markdown 저장 경로 (없으면 stdout)")
     args = p.parse_args()
@@ -153,10 +177,13 @@ def main() -> int:
         if not args.market and not args.price:
             p.error("지정가 주문은 --price 가 필요합니다. 시장가면 --market.")
 
-    # 종목 단위 플래그가 있으면 code 필수. --balance/--order 는 별도 처리.
+    # 파생(선물옵션) 모드: 종목코드 불필요, 별도 단독 처리.
+    want_deriv = args.futboard or bool(args.futopt)
+
+    # 종목 단위 플래그가 있으면 code 필수. --balance/--order/--futboard/--futopt 는 별도 처리.
     per_ticker = args.all or args.ohlcv or (args.investor is not None)
-    if not args.code and not args.balance and not args.order:
-        p.error("종목코드가 필요합니다 (예: 005930). 잔고만 보려면 --balance.")
+    if not args.code and not args.balance and not args.order and not want_deriv:
+        p.error("종목코드가 필요합니다 (예: 005930). 잔고만 보려면 --balance, 선물전광판은 --futboard.")
     if per_ticker and not args.code:
         p.error("종목코드가 필요합니다 (예: 005930).")
 
@@ -194,6 +221,24 @@ def _run(args, want_quote, want_ohlcv, want_investor, want_balance=False,
             print(json.dumps(order_to_dict(order), ensure_ascii=False, indent=2))
         else:
             print(render_order(order))
+        return 0
+
+    # 파생(선물옵션) 조회 모드 — 종목코드 무관, 단독 처리.
+    if args.futboard or args.futopt:
+        parts: list[str] = []
+        dump: dict = {}
+        if args.futboard:
+            rows = fetch_futures_board()
+            dump["futures_board"] = [board_to_dict(r) for r in rows]
+            parts.append(render_fut_board(rows))
+        if args.futopt:
+            fq = fetch_futopt_price(args.futopt, market=args.fo_market)
+            dump["futopt"] = futopt_to_dict(fq)
+            parts.append(render_futopt(fq))
+        if args.json:
+            print(json.dumps(dump, ensure_ascii=False, indent=2))
+        else:
+            print("\n\n".join(parts))
         return 0
 
     q = bars = invs = bal = ovs = None

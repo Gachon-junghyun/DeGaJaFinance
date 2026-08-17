@@ -29,6 +29,46 @@ def _utf8_stdout() -> None:
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 
+# 결측 표기 — 빈칸과 크래시는 다른 물건이다(D119).
+# 네이버 페이지에 항목이 없으면 스크래퍼가 None 을 남기는데, 헤더가 그 None 에
+# ':,.0f' 포맷을 걸어 TypeError 로 죽었다(실측 042700: per_fwd·eps_fwd 결측).
+_MISSING = "—"
+
+
+def _num(v, spec: str = ",.0f") -> str:
+    """숫자를 포맷하되 None/비수치는 빈칸으로. 값이 있으면 기존 출력과 동일."""
+    if v is None:
+        return _MISSING
+    try:
+        return format(v, spec)
+    except (TypeError, ValueError):
+        return _MISSING
+
+
+def _val(v) -> str:
+    """포맷 스펙 없이 그대로 찍던 자리(기존 동작 유지) — None 만 빈칸으로."""
+    return _MISSING if v is None else str(v)
+
+
+# 헤더가 실제로 찍는 필드만 결측 점검한다(표시하지 않는 값은 보고하지 않는다).
+_HEADER_FIELDS = [
+    ("name", "종목명"),
+    ("price", "현재가"),
+    ("market_cap_eok", "시총"),
+    ("target_price", "컨센 목표주가"),
+    ("per_fwd", "12M Fwd PER"),
+    ("eps_fwd", "추정 EPS"),
+    ("per_ttm", "TTM PER"),
+    ("pbr", "PBR"),
+    ("foreign_pct", "외국인 소진율"),
+    ("industry_per", "동일업종 PER"),
+]
+
+
+def _missing_fields(snap) -> list:
+    return [f for f, _ in _HEADER_FIELDS if getattr(snap, f, None) is None]
+
+
 def main() -> None:
     p = argparse.ArgumentParser(prog="module_valuation")
     p.add_argument("code", help="대상 종목 6자리 코드 (예: 267260)")
@@ -50,7 +90,15 @@ def main() -> None:
 
     if args.json:
         snap = fetch_naver_snapshot(args.code)
-        print(json.dumps(to_dict(snap), ensure_ascii=False, indent=2))
+        payload = to_dict(snap)
+        miss = _missing_fields(snap)
+        payload["missing_fields"] = miss
+        payload["missing_reason"] = (
+            "naver finance item page did not carry these fields (null != 0)"
+            if miss
+            else ""
+        )
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
         return
 
     peers = [c.strip() for c in args.peers.split(",") if c.strip()]
@@ -61,13 +109,22 @@ def main() -> None:
     snap = fetch_naver_snapshot(args.code)
 
     header = (
-        f"# {snap.name} ({snap.code}) — Valuation Snapshot\n\n"
-        f"- 현재가: {snap.price:,.0f}원 / 시총: {snap.market_cap_eok:,.0f}억원\n"
-        f"- 컨센 목표주가: {snap.target_price:,.0f}원 (상승여력 {snap.upside_pct():+.2f}%)\n"
-        f"- 12M Fwd PER: {snap.per_fwd}배 / EPS: {snap.eps_fwd:,.0f}원\n"
-        f"- TTM PER: {snap.per_ttm}배 / PBR: {snap.pbr}배\n"
-        f"- 외국인 소진율: {snap.foreign_pct}% / 동일업종 PER: {snap.industry_per}배\n\n"
+        f"# {_val(snap.name)} ({snap.code}) — Valuation Snapshot\n\n"
+        f"- 현재가: {_num(snap.price)}원 / 시총: {_num(snap.market_cap_eok)}억원\n"
+        f"- 컨센 목표주가: {_num(snap.target_price)}원 "
+        f"(상승여력 {_num(snap.upside_pct(), '+.2f')}%)\n"
+        f"- 12M Fwd PER: {_val(snap.per_fwd)}배 / EPS: {_num(snap.eps_fwd)}원\n"
+        f"- TTM PER: {_val(snap.per_ttm)}배 / PBR: {_val(snap.pbr)}배\n"
+        f"- 외국인 소진율: {_val(snap.foreign_pct)}% / 동일업종 PER: {_val(snap.industry_per)}배\n\n"
     )
+    miss = _missing_fields(snap)
+    if miss:
+        labels = {f: ko for f, ko in _HEADER_FIELDS}
+        header += (
+            f"> ⚠ 결측 {len(miss)}개 — {', '.join(labels[f] for f in miss)}: "
+            "네이버 금융 종목페이지에 해당 항목이 없다(수집 실패가 아니라 미제공). "
+            "빈칸은 0 이 아니다.\n\n"
+        )
     header += "## Peer Multiple Comparison\n\n"
 
     body = render_markdown(df, target_code=args.code)

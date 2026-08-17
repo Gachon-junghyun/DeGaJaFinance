@@ -43,6 +43,7 @@ def _load_dotenv() -> None:
 
 _load_dotenv()
 
+from . import _costs as kcost  # noqa: E402
 from . import _decisions as kd  # noqa: E402
 from . import _stack as kstack  # noqa: E402
 
@@ -208,28 +209,27 @@ class KisDesk(tk.Tk):
             fg="#ffffff", font=FONT_B, pady=5,
         ).pack(side="left", padx=12)
 
-        # 잔고 바
+        # 잔고 바 — 잔고(1줄) 와 도구버튼(2줄)을 **분리**한다.
+        # pack 은 가로 공간이 모자라면 나중에 쌓은 위젯을 조용히 버린다. 잔고 라벨과 한 줄에 두면
+        # 창을 좁혔을 때 오른쪽 버튼부터 통째로 사라진다(실제로 손익분기·인기종목·흐름·만약에가 증발).
         bar = tk.Frame(self, bg=C["panel"]); bar.pack(fill="x")
         self.lbl_balance = tk.Label(
             bar, text="잔고 불러오는 중…", bg=C["panel"], fg=C["text"],
-            font=FONT, anchor="w", justify="left", pady=8, padx=12,
+            font=FONT, anchor="w", justify="left", pady=6, padx=12,
         )
-        self.lbl_balance.pack(side="left", fill="x", expand=True)
-        self._mk_btn(bar, "↻ 새로고침", self.refresh_balance, C["panel2"]).pack(
-            side="right", padx=(0, 10)
-        )
-        self._mk_btn(bar, "📊 포트폴리오", self.open_portfolio, C["amber"], fg="#000").pack(
-            side="right", padx=4
-        )
-        self._mk_btn(bar, "🔥 인기종목", self.open_movers, C["panel2"]).pack(
-            side="right", padx=4
-        )
-        self._mk_btn(bar, "🌊 흐름", self.open_flow, C["panel2"]).pack(
-            side="right", padx=4
-        )
-        self._mk_btn(bar, "🔀 만약에", self.open_whatif, C["panel2"]).pack(
-            side="right", padx=4
-        )
+        self.lbl_balance.pack(fill="x")
+
+        tools = tk.Frame(self, bg=C["panel"]); tools.pack(fill="x")
+        for i, (txt, cmd, bg, fg) in enumerate((
+            ("↻ 새로고침", self.refresh_balance, C["panel2"], None),
+            ("📊 포트폴리오", self.open_portfolio, C["amber"], "#000"),
+            ("⚖ 손익분기", self.open_breakeven, C["panel2"], None),
+            ("🔥 인기종목", self.open_movers, C["panel2"], None),
+            ("🌊 흐름", self.open_flow, C["panel2"], None),
+            ("🔀 만약에", self.open_whatif, C["panel2"], None),
+        )):
+            self._mk_btn(tools, txt, cmd, bg, fg=fg).pack(
+                side="left", padx=(12 if i == 0 else 4, 0), pady=(0, 6))
 
         # 주문 추가 폼
         form = tk.Frame(self, bg=C["panel2"], padx=12, pady=10)
@@ -390,6 +390,18 @@ class KisDesk(tk.Tk):
             self._wi.lift()
             return
         self._wi = WhatIfWindow(self)
+
+    def open_breakeven(self, market=None, code=None, qty=None, price=None) -> None:
+        """손익분기(거래비용 원장) 창. 인자를 주면 폼 프리필 + 즉시 계산."""
+        if not self.cfg:
+            messagebox.showerror("설정 오류", self._fatal or "설정 없음")
+            return
+        if getattr(self, "_be", None) and self._be.winfo_exists():
+            self._be.lift()
+        else:
+            self._be = BreakevenWindow(self)
+        if code:
+            self._be.query(market or "kr", code, qty, price)
 
     def open_movers(self) -> None:
         if not self.cfg:
@@ -630,6 +642,13 @@ class OrderCard(tk.Frame):
         tk.Label(top, text=est_txt, bg=C["panel"],
                  fg=C["muted"], font=FONT).pack(side="right")
 
+        # 비용 한 줄 — 매수는 '수수료·세금까지 0이 되는 가격', 매도는 실수령액.
+        cost_txt = self._cost_line(preview, name)
+        if cost_txt:
+            tk.Label(self, text=cost_txt, bg=C["panel"], fg=C["amber"],
+                     font=("Malgun Gothic", 8), anchor="w").pack(
+                fill="x", padx=10, pady=(0, 2))
+
         real_warns = [w for w in preview.warnings if not w.startswith("DRY-RUN")]
         if real_warns:
             tk.Label(self, text="⚠ " + "  ·  ".join(real_warns), bg=C["panel"],
@@ -648,6 +667,29 @@ class OrderCard(tk.Frame):
                   cursor="hand2", bd=0).pack(side="left", padx=6)
         self.lbl_state = tk.Label(bot, text="대기", bg=C["panel"], fg=C["muted"], font=FONT)
         self.lbl_state.pack(side="left", padx=8)
+
+    def _cost_line(self, preview, name) -> str:
+        """카드 한 줄 비용 요약. 계산 실패해도 카드는 살아야 하니 조용히 빈 문자열."""
+        try:
+            market = "us" if self.is_us else "kr"
+            qty = preview.qty
+            price = float(preview.price or 0)
+            if not price:
+                return "⚖ 시장가 — 체결가 확정 후 [⚖ 손익분기]에서 계산"
+            code = preview.symbol if self.is_us else preview.code
+            if preview.side == "buy":
+                led = kcost.breakeven(market, price, qty, code=code, name=name)
+                be = kcost.fmt_price(led.breakeven_tick, led.currency)
+                cost = kcost.fmt_amount(led.roundtrip_cost, led.settle_currency).lstrip("+")
+                return (f"⚖ 손익분기 {be} ({led.breakeven_pct:+.2f}%) · "
+                        f"왕복비용 {cost} — 이 값 아래로 팔면 실제로는 손실")
+            sch = kcost.schedule(market, kcost.guess_board(name, code))
+            net, _ = kcost.sell_flow(sch, price, qty)
+            drag = price * qty - net
+            return (f"⚖ 실수령 예상 {kcost.fmt_amount(net, sch.settle_currency).lstrip('+')}"
+                    f" (수수료·세금 {kcost.fmt_amount(drag, sch.settle_currency).lstrip('+')} 차감)")
+        except Exception:  # noqa: BLE001 — 카드 렌더는 절대 막지 않는다
+            return ""
 
     def set_state(self, txt, color) -> None:
         self.lbl_state.config(text=txt, fg=color)
@@ -1240,6 +1282,217 @@ class FlowWindow(tk.Toplevel):
     def _to_order(self) -> None:
         if self._cur_code:
             self.app.prefill_order(self._cur_code)
+
+
+class BreakevenWindow(tk.Toplevel):
+    """손익분기 원장 — 매수부터 청산까지 현금흐름을 대차대조표처럼 세워 '순현금 0' 가격을 푼다.
+
+    계산은 전부 `_costs` 가 한다(이 창은 입력을 모아 넘기고 결과 문자열을 붙일 뿐 — 중복 0).
+    """
+
+    def __init__(self, app: KisDesk) -> None:
+        super().__init__(app, bg=C["bg"])
+        self.app = app
+        self.cfg = app.cfg
+        self.title("손익분기 — 거래비용 원장")
+        self.geometry("900x640")
+
+        top = tk.Frame(self, bg=C["panel"]); top.pack(fill="x")
+        tk.Label(top, text="⚖ 손익분기", bg=C["panel"], fg=C["amber"], font=FONT_BIG,
+                 pady=8, padx=12).pack(side="left")
+        tk.Label(top, text="수수료·세금·환전·배당까지 다 세서 순현금이 0이 되는 매도가",
+                 bg=C["panel"], fg=C["muted"], font=FONT).pack(side="left")
+
+        f1 = tk.Frame(self, bg=C["panel2"], padx=12, pady=8); f1.pack(fill="x")
+        self.mkt = tk.StringVar(value="kr")
+        for txt, val in (("국내", "kr"), ("미국", "us")):
+            tk.Radiobutton(f1, text=txt, variable=self.mkt, value=val, fg=C["amber"],
+                           bg=C["panel2"], selectcolor=C["bg"], activebackground=C["panel2"],
+                           font=FONT_B).pack(side="left", padx=(0, 6))
+        tk.Frame(f1, width=1, bg=C["border"]).pack(side="left", fill="y", padx=6)
+        self.e_code = self._entry(f1, "종목코드/티커", 10)
+        self.e_qty = self._entry(f1, "수량", 7)
+        self.e_buy = self._entry(f1, "매입가(빈칸=계좌 평단)", 13)
+        self.e_target = self._entry(f1, "목표가(선택)", 11)
+        self.e_div = self._entry(f1, "받은 배당(선택)", 11)
+
+        f2 = tk.Frame(self, bg=C["panel2"], padx=12); f2.pack(fill="x", pady=(0, 8))
+        self.is_etf = tk.BooleanVar(value=False)
+        self._check(f2, "ETF/ETN (거래세 면제)", self.is_etf)
+        self.krw_settle = tk.BooleanVar(value=False)
+        self._check(f2, "원화정산(환전 포함·미국)", self.krw_settle)
+        self.cgt = tk.BooleanVar(value=False)
+        self._check(f2, "양도세 22%(미국·시나리오만)", self.cgt)
+        self.avg_fee = tk.BooleanVar(value=False)
+        self._check(f2, "평단에 매수수수료 포함됨", self.avg_fee)
+        self.e_fx = self._entry(f2, "환율(원/$)", 9)
+        self.e_fx.insert(0, f"{_usdkrw(None):,.2f}")
+
+        # 버튼은 옵션과 **다른 줄**에 — 한 줄에 몰면 창이 좁을 때 뒤엣것부터 잘려 사라진다.
+        f3 = tk.Frame(self, bg=C["panel2"], padx=12); f3.pack(fill="x", pady=(0, 8))
+        self.app._mk_btn(f3, "계산", self.calc, C["amber"], fg="#000").pack(side="left")
+        self.app._mk_btn(f3, "📋 잔고 전체", self.scan, C["panel"]).pack(side="left", padx=8)
+
+        wrap = tk.Frame(self, bg=C["bg"]); wrap.pack(fill="both", expand=True, padx=12, pady=8)
+        self.txt = tk.Text(wrap, bg=C["bg"], fg=C["text"], relief="flat", wrap="none",
+                           font=("Consolas", 10), insertbackground=C["text"])
+        sb = ttk.Scrollbar(wrap, orient="vertical", command=self.txt.yview)
+        self.txt.configure(yscrollcommand=sb.set)
+        self.txt.pack(side="left", fill="both", expand=True)
+        sb.pack(side="right", fill="y")
+        self._say("종목코드 + 수량 + 매입가를 넣고 [계산].\n"
+                  "매입가를 비우면 계좌 평단을 그대로 쓴다. [📋 잔고 전체]는 보유 전 종목의 "
+                  "손익분기 vs 현재가 갭을 한 표로.\n\n"
+                  f"적용 요율(국내): {kcost.rate_summary('kr')}\n"
+                  f"적용 요율(미국): {kcost.rate_summary('us')}\n"
+                  "→ 요율이 네 계좌와 다르면 리포 루트 .env 에서 덮어써라(KIS_FEE_*·KIS_TAX_*·KIS_FX_SPREAD_PCT).")
+
+    # ── 위젯 헬퍼 ────────────────────────────────────────────────
+    def _entry(self, parent, label, width):
+        f = tk.Frame(parent, bg=C["panel2"]); f.pack(side="left", padx=4)
+        tk.Label(f, text=label, bg=C["panel2"], fg=C["muted"],
+                 font=("Malgun Gothic", 8)).pack(anchor="w")
+        e = tk.Entry(f, width=width, bg=C["bg"], fg=C["text"], insertbackground=C["text"],
+                     relief="flat", font=FONT)
+        e.pack()
+        return e
+
+    def _check(self, parent, text, var):
+        tk.Checkbutton(parent, text=text, variable=var, fg=C["text"], bg=C["panel2"],
+                       selectcolor=C["bg"], activebackground=C["panel2"],
+                       font=("Malgun Gothic", 9)).pack(side="left", padx=(0, 8))
+
+    def _say(self, text: str) -> None:
+        self.txt.delete("1.0", "end")
+        self.txt.insert("1.0", text)
+
+    def _float(self, entry, default=None):
+        raw = entry.get().strip().replace(",", "")
+        if not raw:
+            return default
+        try:
+            return float(raw)
+        except ValueError:
+            return default
+
+    # ── 외부에서 프리필(주문폼·포트폴리오에서 넘어올 때) ─────────────
+    def query(self, market, code, qty=None, price=None) -> None:
+        self.mkt.set(market if market in ("kr", "us") else "kr")
+        self.e_code.delete(0, "end"); self.e_code.insert(0, code)
+        if qty:
+            self.e_qty.delete(0, "end"); self.e_qty.insert(0, str(qty))
+        if price:
+            self.e_buy.delete(0, "end"); self.e_buy.insert(0, str(price))
+        self.calc()
+
+    # ── 단일 종목 계산 ───────────────────────────────────────────
+    def calc(self) -> None:
+        code = self.e_code.get().strip()
+        if not code:
+            messagebox.showwarning("입력", "종목코드/티커를 넣어라.")
+            return
+        market = self.mkt.get()
+        qty = self._float(self.e_qty)
+        buy = self._float(self.e_buy)
+        target = self._float(self.e_target)
+        div = self._float(self.e_div, 0.0) or 0.0
+        fx = self._float(self.e_fx)
+        settle_krw = bool(self.krw_settle.get()) and market == "us"
+        self._say("조회 중…")
+
+        def work():
+            name = None
+            cur = None
+            avg = buy
+            n_qty = qty
+            if market == "us":
+                sym = code.upper()
+                q = fetch_us_quote(sym, cfg=self.cfg)
+                cur = q.price
+                if avg is None or n_qty is None:
+                    try:
+                        ovs = fetch_overseas_balance(cfg=self.cfg)
+                    except KisError:
+                        ovs = None
+                    h = next((x for x in (ovs.holdings if ovs else [])
+                              if (x.code or "").upper() == sym), None)
+                    if h:
+                        name = h.name
+                        avg = avg if avg is not None else h.avg_price
+                        n_qty = n_qty if n_qty is not None else h.qty
+                return market, sym, name, avg, n_qty, cur
+            q = fetch_quote(code, cfg=self.cfg)
+            cur = q.price
+            try:
+                _, name = fetch_ohlcv(code, "D", count=1, cfg=self.cfg)
+            except KisError:
+                pass
+            if avg is None or n_qty is None:
+                bal = fetch_balance(cfg=self.cfg)
+                h = next((x for x in bal.holdings if x.code == code), None)
+                if h:
+                    name = name or h.name
+                    avg = avg if avg is not None else h.avg_price
+                    n_qty = n_qty if n_qty is not None else h.qty
+            return market, code, name, avg, n_qty, cur
+
+        def done(res, err):
+            if not self.winfo_exists():
+                return
+            if err:
+                self._say(f"조회 실패: {err}")
+                return
+            mkt, code_, name, avg, n_qty, cur = res
+            if not avg:
+                self._say("매입가를 못 찾았다 — 직접 넣어라(계좌에 없는 종목이면 평단이 없다).")
+                return
+            if not n_qty:
+                n_qty = 1
+            board = "etf" if self.is_etf.get() else (None if mkt == "kr" else "us")
+            led = kcost.breakeven(
+                mkt, avg, n_qty, code=code_, name=name, board=board,
+                settle_krw=settle_krw, fx_buy=fx, dividend=div,
+                cur_price=cur, target_price=target, cgt=bool(self.cgt.get()),
+                avg_includes_fee=bool(self.avg_fee.get()),
+            )
+            self._say(kcost.render(led))
+
+        self.app._async(work, done)
+
+    # ── 잔고 전체 스캔 ───────────────────────────────────────────
+    def scan(self) -> None:
+        self._say("잔고 조회 중…")
+        settle_krw = bool(self.krw_settle.get())
+
+        def work():
+            dom = fetch_balance(cfg=self.cfg)
+            try:
+                ovs = fetch_overseas_balance(cfg=self.cfg)
+            except KisError:
+                ovs = None
+            return dom, ovs
+
+        def done(res, err):
+            if not self.winfo_exists():
+                return
+            if err:
+                self._say(f"잔고 실패: {err}")
+                return
+            dom, ovs = res
+            fx = _usdkrw(ovs)
+            leds = kcost.holding_ledgers(
+                dom, ovs, settle_krw=settle_krw, fx=fx,
+                avg_includes_fee=bool(self.avg_fee.get()))
+            head = ("보유 종목별 손익분기 (수수료·세금 포함, 실제 호가 기준)\n"
+                    f"환율 {fx:,.2f}원/$ · "
+                    + ("미국분 원화정산(환전 포함)\n" if settle_krw else "미국분 USD 기준\n"))
+            self._say(head + "\n" + kcost.render_scan(leds)
+                      + "\n\n갭 = 현재가가 손익분기가보다 몇 % 위/아래인가."
+                        " 음수면 지금 팔았을 때 비용도 못 건진다.\n"
+                      + f"적용 요율(국내): {kcost.rate_summary('kr')}\n"
+                      + f"적용 요율(미국): {kcost.rate_summary('us')}")
+
+        self.app._async(work, done)
 
 
 def main() -> None:

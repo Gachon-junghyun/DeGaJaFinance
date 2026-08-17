@@ -9,6 +9,10 @@
   🟢FRESH (≤14d + accel ≥2×, the golden zone) / 🟡ACCELERATING / ⚪ECHO (loud but consumed) /
   🔴FADING. ECHO/FADING theses need *stronger* live evidence to survive.
 - [indicators](../L2_modules/indicators.md) — `module_flow --positioning` quantitative first.
+  ⚠ **`--positioning` (implied move) is US-only.** For KR the positioning read is
+  `module_KIS --futboard`/`--futopt` — index-futures **basis + OI (context, not a threshold)**. KR
+  scenario thresholds therefore stay hand-set until the **options-IV v1.1** lands (the true KR implied
+  move); do not fabricate a KR threshold from futures basis. Stamp KR positioning as context only.
 - [news](../L2_modules/news.md) — targeted live WebSearch per bet: catalyst already fired?
   move already made? thesis already street consensus?
 
@@ -19,6 +23,31 @@
   with its reason class and its **`--revives-if`** condition. The condition is what lets a 🔴 come back
   on evidence rather than on someone remembering it: measured, 475150's kill condition (short
   `covering→building`) reversed three runs later while the ban stayed on.
+  ★ **And the tags that never got issued.** A name carried into ALPHA that receives **no tag at all**
+  — because the sheet ran out of room, or its sector lost its DEEP slot — is not a 🔴; it is a
+  *missed* entry, and it leaves no record unless you write one to L3
+  [missed_ledger](../L3_functions/missed_ledger.md) with an `--enters-if`. Measured why this matters:
+  🟢LIVE fired **0 times in 8 consecutive runs** (F1) because it required a FRESH theme age the board
+  structurally could not produce — a gate that never fires looks identical to a universe with
+  nothing in it, and neither leaves a row.
+
+  🚨🚨 **AND THAT ZERO MAY NOT BE THE MARKET — CHECK THE PIPE BEFORE READING IT AS ARITHMETIC**
+  (added 2026-08-10; the KR count is now **18 consecutive runs**). This whole stage stands on
+  `theme_age`, which stands on the news index, and **the news index was measured failing silently**:
+  · The search rides a remote tunnel (`DEGAJA_NEWS_API`) with **no local fallback on the client**
+    (`data/news_fts.db` does not exist there — the server owns it, P6), and it **intermittently
+    drops**: success → 5/5 failure → success, inside one hour.
+  · A dead pipe and a quiet theme return the **identical** value. Nothing distinguishes them.
+  · Separately, the KR universe sweep queried the **foreign/English** pool for Korean company names
+    for months (`kr=` never passed) — 삼성바이오로직스 base **5 articles**, LG에너지솔루션 **2**.
+  ⇒ **Before writing "F1 is arithmetic — no FRESH theme exists", run the falsification probe:**
+  `python -X utf8 -m module_news_data fts search 삼성전자 --days 7 --count` (KR) — a known-loud name
+  must come back loud. If it does not, **the zero is the instrument** and this stage must say so
+  instead of issuing another F1 line. This is gate **G1** of [preflight](../protocols/preflight.md);
+  when G1 FAILs, ALPHA may not issue a freshness verdict at all.
+  ★ **Eighteen identical observations are not eighteen observations if one wire is loose.** The
+  desk has been recording the count faithfully and never once asked whether the counter worked —
+  the same shape as the estimate-snapshot daemon that reported *"35 days to go"* while dying (D16).
 - **A 🟡PARTIAL is a dated appointment, not a shelf.** Whenever you state a residual ("enters on the
   breakout", "revisit after the 2Q NIM print"), give it an explicit **re-check date** and hand it to
   [carryover](../L2_modules/carryover.md) so the next run re-reads it. An armed condition nobody

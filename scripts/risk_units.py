@@ -257,7 +257,7 @@ def main() -> None:
     ap.add_argument("--bench", default="SPY")
     ap.add_argument("--threshold", type=float, default=DEFAULT_THRESHOLD)
     ap.add_argument("--exposure", action="store_true",
-                    help="측정 단위별 **현재 노출 %** 를 계산해 MAX_THEME_PCT 와 대조")
+                    help="측정 단위별 **현재 노출 %%** 를 계산해 MAX_THEME_PCT 와 대조")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--out", default="")
     a = ap.parse_args()

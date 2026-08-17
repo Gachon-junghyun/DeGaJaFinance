@@ -5,10 +5,22 @@
 > money without narrative means you don't know what you're holding. Composes L3s + flow modules.
 
 ## Market separation — HARD RULE
-`--scope domestic` for the KR desk, `--scope foreign` for the US desk. **Never let the KR feed
-rank the US frame**: measured, the KR pool ran 787 rate-cut hits against 0 US-bank hits in a US
-bank-earnings week — the KR feed's obsession is not the US market's attention. `--scope all` is
-banned inside a desk run (it is a research tool, not a desk input).
+**Let each desk's frame come from its own market's feed**: `--scope domestic` for the KR desk,
+`--scope foreign` for the US desk. Measured, the KR pool ran 787 rate-cut hits against 0 US-bank hits
+in a US bank-earnings week — the KR feed's obsession is not the US market's attention, so a KR feed
+ranking a US frame describes the wrong country's mood. `--scope all` is banned inside a desk run
+(it is a research tool, not a desk input).
+
+★ **The same rule, stated for a desk that legitimately reads both feeds** (trigger **W6**): a
+publication desk writing for one market runs both passes, and **the reader's own market sets the
+spine while the other feed fills the gaps**. Measured 2026-07-24 on `morning_brief`: the overnight
+foreign pool held **810 market events off 5,576 articles** against the domestic session's **357 off
+3,093** — the non-reader feed is **larger by construction every day**, so ordering by event size hands
+the frame to the wrong market automatically. **Set the reader's market as the spine first**, then
+admit a foreign row **when a domestic outlet has already printed it for domestic readers** — one test
+that simultaneously proves relevance, dates the event in the reader's timezone, and carries the
+figures the other feed drops. Result that run: **5 of 810 foreign rows admitted (0.6%)**, with no
+coverage lost.
 
 ## Calls — A. narrative leg
 1. L3 [event_threads](../L3_functions/event_threads.md) — `thread --days 7 --scope {domestic|foreign}`.

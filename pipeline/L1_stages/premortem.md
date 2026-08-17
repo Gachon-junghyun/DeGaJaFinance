@@ -36,7 +36,10 @@
   the same buyers signed the price caps. **If neither branch would change the conclusion, the event
   is not worth bracketing** — say so and spend the bracket elsewhere.
 - ⚠ **Freeze the observable and its threshold at registration** and write them into
-  `handoff/SCENARIOS.md`. A bracket whose threshold moves after the print is a description wearing a
+  `handoff/SCENARIOS_{US|KR}.md` (this desk's half — split 2026-07-29; the ID must ALSO be added to
+  the MASTER INDEX in the `handoff/SCENARIOS.md` spine, and IDs are still allocated against EVERY
+  existing row in BOTH files — the D76 collision class).
+  A bracket whose threshold moves after the print is a description wearing a
   forecast's clothes. Scoring is L3 [scenario_score](../L3_functions/scenario_score.md), against the
   frozen threshold only.
 - ★ **Take the magnitude threshold from the options market, not from your judgement.**
@@ -55,7 +58,8 @@
 ## ✅ EXIT CHECK
 - [ ] 4 lenses fanned out in parallel; each returned named tickers + dated catalysts.
 - [ ] **Every bracket names its observable + frozen threshold + date, and is registered in
-      `handoff/SCENARIOS.md` with BOTH branches.** One-way brackets are protocol violations.
+      `handoff/SCENARIOS_{US|KR}.md` with BOTH branches, and indexed in the `SCENARIOS.md` spine.**
+      One-way brackets are protocol violations.
 - [ ] **Every magnitude threshold is stated against the implied move** (`module_flow --positioning`
       → `예상변동 ±x%`, with its `D±n`). A threshold inside the implied move is pre-declared as
       **no-information** rather than presented as a trigger.

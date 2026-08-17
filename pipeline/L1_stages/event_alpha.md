@@ -34,6 +34,10 @@
     🟢 accumulating is not DEAD; it is a name whose thesis needs rewriting, so re-file it (new thesis
     line + dated re-check) rather than dropping it. Every drop is written to the ledger with its
     **`--revives-if`** condition — L3 [reject_ledger](../L3_functions/reject_ledger.md).
+  - ⚠ **A thread you read and did not turn into a card is not a drop — it is a miss.** Threads that
+    cleared the money axis but never became cards go to L3
+    [missed_ledger](../L3_functions/missed_ledger.md) (`M.숏리스트탈락` or `Q.확신부족`) with an
+    `--enters-if`. Otherwise the funnel's widest stage is the one with no scoreboard.
 - **Book cross-check**: any ENDED thread that an open book position's thesis rides on → flag to
   the book desk (paper_desk / 미러링) in the card file's final section. Attention rotated;
   the position must re-justify on something that is still alive.

@@ -1,130 +1,6 @@
-# SCENARIOS — pre-registered branches, scored after the fact
-
-> Read at HANDOVER (run start) and at PREMORTEM. A scenario is only valid if it was written
-> **before** its event, carries **both** branches, and names a **date** and an **observable with a
-> threshold**. Registered-after-the-fact entries are worthless — they are hindsight wearing a table.
-> Scoring is done by L3 [`scenario_score`](../pipeline/L3_functions/scenario_score.md). Not advice.
-
-**asof 2026-07-22 12:12 KST** (US Eastern 2026-07-21 23:12 — the US 07-22 session had **not opened**)
-
-## Status legend
+﻿## Status legend
 `ARMED` registered, event pending · `FIRED-A/B/C` branch that occurred · `EXPIRED` date passed unscored
 (a scoring failure, log it) · `VOID` premise invalidated before the event
-
----
-
-## S1 — Alphabet Q2 print · ARMED · 2026-07-22 after US close (≈2026-07-23 05:00 KST)
-
-**Why it matters here**: first of four hyperscaler prints; the only one inside a 24h horizon.
-**The observable is capex, not EPS.** Consensus EPS $2.86–2.95, revenue $116.8–120.2B — neither
-is the variable that touches the memory thesis.
-
-**Derived threshold (own arithmetic, not a cited figure)**: FY guide midpoint $185B minus Q1 actual
-$35.7B leaves $149.3B over three quarters = **~$49.8B/quarter run-rate**. Q2 capex materially below
-~$40B under-runs the guide; materially above ~$50B implies another raise.
-⚠ Capex normally ramps into year-end, so a Q2 below the flat average is not by itself a shortfall.
-
-### Pre-print state — measured 2026-07-22 with the three axes added today
-
-| Axis | Reading | What it means before the print |
-|---|---|---|
-| **Implied move** (`module_flow --positioning`) | **±7.1%**, 0DTE (expiry 2026-07-22) | The market has already priced a ~7% move. **A reaction inside ±7.1% is not information** — thresholds must sit outside it to carry any. |
-| **Estimate revisions** (`module_fundamentals_us`) | Current quarter **1↑ : 4↓ over 30 days**; next quarter 2↑ : 3↓; current year 3↑ : 4↓ | ★ **Near-term estimates have been drifting DOWN into the print** — the bar was quietly lowered. This is the exact opposite of MU (**30↑ : 0↓**). |
-| Estimate level | +1y EPS 13.38 → **14.69** over 90 days (+9.7%); current year +23.1% | Longer-dated estimates still rising, near-term cut. A classic "push the good news out" pattern. |
-| Valuation | fwd P/E **23.66**, PEG 1.37, consensus target **$433.51 (+24.9%)** vs price $347.15 | Sell-side target is 25% above the tape while it trims the near quarter — read the two together. |
-| **Credit backdrop** (`module_macro_us hy_oas`) | HY OAS **2.69%**, 6bp off its 365-day low, **16bp tighter over 90 days** | No risk-off backdrop. A disappointment lands into a *complacent* credit market, which is why the second-order test below matters. |
-
-★ **Two pre-commitments from this state, binding:**
-1. **A move inside ±7.1% scores as branch B (no information)** regardless of the headline. Do not
-   convert an in-line reaction into a thesis change.
-2. **A "beat" against estimates that were cut 4:1 into the print is not a beat** — it is a lowered
-   bar being cleared. Score against the **capex line and the revision trend**, not against consensus EPS.
-
-| Branch | Observable | Meaning for the standing view | Information content |
-|---|---|---|---|
-| **A · raise** | FY guide lifted above $190B, or 2027 quantified upward | Volume leg extends; margin-peak timing **pushed later**. M1 unaffected. | **Low** |
-| **B · hold** | $180–190B reaffirmed, no change | No information. Thesis unchanged. | ~None |
-| **C · cut or ROI defensiveness** | Guide lowered, or management hedges on returns, or Cloud margin disappoints | **Rewrite required** — breaks the volume leg *and* the price leg together. Extends beyond memory to NVDA/AVGO. | **High** |
-
-**Second-order test (new, from the credit axis)** — if branch C fires, watch **HY OAS** the following
-session. A capex cut that widens high-yield spreads is a *regime* event (the AI-capex complex is a
-credit story too); one that leaves HY at ~2.7% is a single-name repricing. This distinction was
-unavailable before 2026-07-22 and is the reason the credit series were added.
-
-**Prior**: A or B far more likely than C — Alphabet raised in each recent quarter, Q1 capex was
-+107% YoY, the 2027 increase is already publicly stated, Cloud backlog >$460B. `[inferred]`
-⚠ **But the revision trend cuts against that prior** — near-term estimates fell 4:1 over 30 days,
-which is not what a desk expecting an unambiguous raise usually looks like. Hold both and let the
-capex line settle it.
-**Transmission path**: print ≈05:00 KST 07-23 → US after-hours → **KR semis open 09:00 KST 07-23**
-(~4h later) → US regular session 22:30 KST. Same day: TSLA. Next day: INTC (foundry read-through).
-
-**Pre-commitment (binding)**: a beat on EPS/revenue with capex merely reaffirmed is **branch B, not A**.
-Do not upgrade the thesis on the wrong line item.
-
----
-
-## S2 — The 2026-07-29 cluster · ARMED · four events, one day
-
-The single most loaded date on the calendar. Two of them resolve currently-unreadable state.
-
-| Event | Resolves |
-|---|---|
-| **Microsoft earnings** | Second half of hyperscaler capex (with META) |
-| **Meta earnings** | ditto |
-| **FOMC decision** | The duration/real-rate gate the US desk carries (`real 10Y > 2.50~2.55%` kill line; 2.31% asof 07-17) |
-| **SK hynix ADR ↔ ordinary two-way conversion opens** | **Un-suspends the 000660 flow read** (STANDING_VIEW §3) and collapses the ~25% premium |
-
-| Branch | Observable | Meaning |
-|---|---|---|
-| **A** | MSFT+META both raise capex | Volume leg confirmed across 3 of 4 hyperscalers; margin-peak timing pushed out |
-| **B** | Mixed / reaffirmed | Partial; wait for AMZN + AAPL (07-30) |
-| **C** | Either cuts, or real 10Y closes >2.55% | Thesis rewrite (C) or duration-book invalidation (rate) — **two independent triggers stacked on one day** |
-
-⚠ **Stacked-tail warning**: a hawkish FOMC and a capex disappointment hit the same book from
-different directions on the same date. The US desk's own PREMORTEM flagged this class of
-concentration on 07-21 for Energy; it applies here.
-
-**On the ADR leg**: whichever way convergence runs, the *mechanical* distortion ends. From 07-30 the
-000660 foreign-flow series is readable again — but the pre-07-29 series is **not retroactively
-clean**. Do not backfill a directional read onto it.
-
----
-
-## S3 — 4Q26 DRAM contract guidance · ARMED · ~2026-09/10
-
-**The only frontal falsifier of the standing regime call.**
-
-| Branch | Observable | Meaning |
-|---|---|---|
-| **A** | 4Q26 QoQ guide **>18%** (re-acceleration) | **The deceleration read (M1) is wrong.** Retract §1 of STANDING_VIEW. |
-| **B** | 4Q26 in the 5–18% band | Deceleration continues as read |
-| **C** | 4Q26 <5% or negative | Deceleration is steeper than read; margin peak arrives sooner |
-
----
-
-## S4 — Micron FQ4 print + FQ1'27 guide · ARMED · ~2026-09 late
-
-**The actual test of the margin-peak hypothesis**, because FQ4 (Jun–Aug) still carries decent
-pricing; the 3Q26 calendar price deceleration lands in **FQ1'27 (Sep–Nov)**. `[inferred]` on timing.
-
-| Branch | Observable | Meaning |
-|---|---|---|
-| **A** | FQ4 GM ≈86% delivered **and** FQ1'27 GM guided flat/up | LTA floors (C1) are real; margin-peak call weakens materially |
-| **B** | FQ4 in line, FQ1'27 GM guided down | Margin-peak hypothesis confirmed on schedule |
-| **C** | FQ4 GM misses 86% | Peak already passed; earlier than read |
-
----
-
-## S5 — KR semiconductor exports, 1–10 August · ARMED · ~2026-08-11
-
-| Branch | Observable | Meaning |
-|---|---|---|
-| **A** | Semis up MoM on a like-for-like window | M12's MoM decline was a one-month artifact |
-| **B** | **Second consecutive MoM decline** | Deceleration confirmed on an independent series (customs, not TrendForce) |
-
-⚠ **Comparison discipline**: compare 1–10th to 1–10th, or 1–20th to 1–20th. Mixing a partial window
-against a full month is how M12 got mis-cited the first time (R2).
 
 ---
 
@@ -132,12 +8,876 @@ against a full month is how M12 got mis-cited the first time (R2).
 
 | ID | Registered | Event date | Branch fired | Scored on | Note |
 |---|---|---|---|---|---|
-| S1 | 2026-07-22 | 2026-07-22 AMC | — | — | ARMED |
+| S1 | 2026-07-22 | 2026-07-22 AMC | **FIRED-A** | 2026-07-23 HANDOVER (industry_kr) | FY26 capex guide $180–190B → $195–205B; observable pulled cleanly, no judgment call |
 | S2 | 2026-07-22 | 2026-07-29 | — | — | ARMED |
 | S3 | 2026-07-22 | ~2026-09/10 | — | — | ARMED |
 | S4 | 2026-07-22 | ~2026-09 | — | — | ARMED |
 | S5 | 2026-07-22 | ~2026-08-11 | — | — | ARMED |
+| ~~S6~~ | 2026-07-22 (PREMORTEM) | 2026-07-23 | — | — | *original row, kept per append-only — **superseded by the annotated S6 row below***|
+| ~~S7~~ | 2026-07-22 (PREMORTEM) | 2026-07-23 | — | — | *original row, kept per append-only — **superseded by the scored S7 row below*** |
+| S8 | 2026-07-22 (PREMORTEM) | `[blank]` undated | — | — | ARMED |
+| S9 | 2026-07-22 (PREMORTEM) | 2026-07-29 + running | — | — | ARMED |
+| S10 | 2026-07-23 | 2026-07-24 | — | — | ARMED |
+| S11 | 2026-07-23 | 2026-07-29 | — | — | ARMED — found via a 10-day catalyst-calendar re-pull; the standard 5-day window misses this date entirely |
+| **S6** | 2026-07-22 (PREMORTEM) | 2026-07-23 AMC | — | — | **ARMED (annotated 2026-07-23)** — the registered ±4.4% was tagged D0 / "a FLOOR, not a fair estimate"; a fresh pull gives **±12.7% (expiry 07-24, D1, covers the event)**, i.e. **2.9× the registered figure — the floor caveat is measured to have been correct.** ⚠ The **frozen observable is UNCHANGED** (a named external 18A customer, or capex/utilisation guided up); only the magnitude context is annotated |
+| **S7** | 2026-07-22 (PREMORTEM) | 2026-07-23 pre-mkt | **FIRED-A (backlog leg)** · band leg **deferred** | 2026-07-23 HANDOVER (industry_US) | RTX backlog **$289B** (from $271B), FY26 revenue guide raised to **$95–96B**; LMT **record $230.4B** on **$65B of quarterly orders** (b:b ≈3.2×), FY sales guide raised to $79.75–81.75B. **Backlog up at both, unambiguous.** ⚠ Branch A also required both to move outside their implied bands — **unscoreable at run clock (09:1x ET, session not open)**; scoreable only against the 07-23 close, at the next HANDOVER. ★ **Registration defect logged (dig D28)**: S7 put a *price reaction* inside the branch condition of an *observable*, contradicting L3 `scenario_score`'s own rule. Future brackets put implied-move bands in a separate, labelled reaction test |
+| S12 | 2026-07-23 (PREMORTEM) | 2026-07-23 | — | — | ARMED — D-0 binary **absent from CATALYST_WATCH** (D18, 3rd consecutive run). Information grade **modest**, kept small on purpose |
+| **S13** | 2026-07-23 (PREMORTEM) | 2026-07-29 | — | — | ARMED — ★ **the branch nothing in the book bracketed**: a capex RAISE priced as a margin drag. Cross-condition; no usable implied move (both straddles expire before the event) |
+| S14 | 2026-07-23 (PREMORTEM) | 2026-07-30 | — | — | ARMED — settles DEEP ②'s own question (is FIN's eqflow +0.320 breadth, or a payments/insurance concentration?) |
+| S15 | 2026-07-23 (PREMORTEM) | 2026-07-30 | — | — | ARMED — the independent series that can break P1's "reaction-function, not inflation" framing. ⚠ threshold is judgement, flagged |
+| S16 | 2026-07-23 (PREMORTEM) | 2026-07-29 | — | — | ARMED — tests whether COMM N− is a sector verdict or a misapplied single-name one (GOOGL 🔴 vs META 🟢 on the same 07-22 close) |
+| **S6** | 2026-07-22 (PREMORTEM) | 2026-07-23 AMC | **FIRED-A** | **2026-07-24 HANDOVER (industry_kr)** | **Both legs of the frozen observable fired.** (i) **Named external foundry customer: Fortinet** — *"Fortinet becomes Intel 4's first foundry customer"* [tomshardware 07-22, yahoo_finance 07-21], announced **before** the print. ⚠ The node is **Intel 4 (mature), not 18A** — satisfies the "foundry customer" clause, not the "18A" clause; logged so the next registration names the node. (ii) **Capex guided up**: *"Intel sales, profit forecast beat estimates; **company boosts spending plans on AI boom**"* [yahoo_finance 07-23]; KR confirm: *"인텔, 2분기 매출 25%↑ 어닝서프라이즈…15년 만에 최대 성장"* [yonhap 07-24]. **Leg (ii) alone satisfies branch A**, so the node dispute does not affect the verdict. Price (context only, not the score): 07-23 regular close **100.23** (−2.3%, *pre*-print), **+10~11% after hours**. ★ The registered ±4.4% "a FLOOR, not a fair estimate" caveat is now **measured correct** (fresh pull ±12.7%). **Meaning**: the US equipment leg (AMAT/LRCX/KLAC) was a pullback, not a downtrend — the industry_US IT underweight is short the wrong thing |
+| **S7** (band leg) | 2026-07-22 (PREMORTEM) | 2026-07-23 | **FIRED-A — branch A now COMPLETE** | **2026-07-24 HANDOVER (industry_kr)** | The 07-23 US desk scored the backlog leg and **deferred the band leg** as unscoreable at its run clock. Scored today on the settled 07-23 closes: **RTX 194.88 → 209.16 = +7.33% vs ±5.0% implied → outside** · **LMT 514.36 → 568.59 = +10.54% vs ±5.4% → outside**. **Both outside ⇒ branch A's second condition met**, so backlog-up-at-both ∧ both-outside-bands is satisfied in full. ⚠ **Registration defect D28 stands regardless of the outcome** — a *price reaction* was placed inside an *observable's* branch condition; future brackets put implied-move bands in a separate, labelled reaction test |
+| **S10** | 2026-07-23 (industry_kr) | 2026-07-24 | **FIRED-B** | **2026-07-24 HANDOVER (industry_kr)** | Fired **before the KR open**. *"美, 60개국에 '301조 강제노동 관세' 확정…**한국은 12.5%**"* [yonhap 속보 07-24; mk·mt same-hour; 45 articles / 8 outlets = the day's largest cluster]. Threshold was "at or near 12.5–15%" ⇒ **clean FIRED-B**. ★ Direction body-read, which the headline inverts: Korea's government was fighting for a **15% cap** right up to the print (*"정부, 15% 상한선에 촉각"* [yonhap 07-23], *"韓정부, 15% 사수 총력"* [mk 07-23]) — **12.5% landed BELOW the cap they were defending.** Registered meaning holds: LG그룹's disclosed **$28.0bn** US-investment delay risk is unresolved. **Score each name separately (W5)** — measured the same week, **034220 LG디스플레이** (foreign 20d **−652.0만주**, short **5.07%float building +0.98 🔥**) vs **066570 LG전자** (foreign **+85.9만** AND institution **+77.3만**, RS60 **+38.4% vs `^KS11`**): same headline, opposite money. ⚠ **Registration scope was too narrow (new dig D34)**: the bracket named only the two LG entities, while the day's domestic feed named **포스코·현대제철** as additional tariff exposure, and a **`└` sub-event** carried a KR chemicals node (무역위 中 부틸 아크릴레이트 anti-dumping **19.17%**). A 60-country, all-industry measure bracketed on two tickers is a scenario defect, not market noise |
+| **S12** | 2026-07-23 (PREMORTEM) | 2026-07-23 | — **PENDING, not EXPIRED** | (checked 2026-07-24) | **The decision printed; the frozen observable did not.** ECB **held at 2.25%** with a **hawkish** tilt — *"ECB Keeps Rates Unchanged, Warns 'Full Energy Inflationary Shock Yet To Come'"* [zerohedge] · *"ECB holds rates at 2.25% as the reignited Iran war keeps a second hike in play"* [euronews] · Lagarde: *"Some asked whether we should consider a hike"* [fxstreet]; market pricing a **September hike** [cnbc / Commerzbank / ING]. **But the frozen observable is `DTWEXBGS`, whose latest FRED print is still 120.53 asof 2026-07-17 — the same value as at registration, i.e. pre-event.** The 3-session invalidation window is still running ⇒ **not EXPIRED. Re-check by 2026-07-28; if DTWEXBGS still has not printed, score `AMBIGUOUS` with the reason and do NOT substitute another proxy.** ⚠ **Registration defect (new dig D35)**: the branches were "hawkish surprise" (A) and "hold-with-**dovish** tilt" (B). **What actually happened — hold with a HAWKISH tilt — is in neither branch.** On the decision axis this is already `AMBIGUOUS`; only the DXY axis remains scoreable. Branch grids must be written on **one** observable axis, or fill the grid on both |
+| **S17** | **2026-07-24 (industry_kr MACRO)** | 2026-07-29 → 08-05 | — | — | ARMED — ★ **written because S2's ADR leg turned out to have an unscoreable observable.** Replaces "does conversion open" with the daily-printing ADR premium. Anti-signal: an issuer disclosure raising the ceiling voids it |
+| **S18** | **2026-07-24 (industry_kr DEEP-COMM)** | 2026-07-29 | — | — | ARMED — KT sanction hearing, max ₩200bn ≈ 1.5% of cap. **Absent from `CATALYST_WATCH.json` = D18's 4th consecutive occurrence**, and the **6th** trigger stacked on 2026-07-29 |
+
+### Scoring-log rows added 2026-07-30 by the `industry_kr` run
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S39** | 2026-07-29 (industry_kr DEEP-HLTH/ALPHA, 08:39 KST pre-open) | **2026-07-29 close** (event-conditional: next `069500.KS` ≤ −3.0% session) | **FIRED-B** | **2026-07-30 (industry_kr MACRO §F-0)** | ★★ **It fired on its own registration day and this run's HANDOVER missed it.** The trigger condition — a benchmark session ≤−3.0% — was met the same afternoon: `069500.KS` closed **−6.344%**. HANDOVER listed S39 as *"ARMED · event-conditional"* and **did not check whether the condition had already been met**; MACRO caught it three stages later. **Named as a process failure, same class as an unscored past-dated row**: an undated bracket can be silently filed as not-yet-due. **Observed** (method frozen at registration: β on the 60 sessions ending the day before, `residual = excess − (β−1)×bench`): **207940 −3.38pp** (β 0.18, absolute −4.52%) · **068270 +2.98pp** (β 0.24, absolute **+1.47%**). Registration betas were 0.200/0.258; the shift is the frozen one-day window roll. **Threshold was** A = both > +1.0pp · B = **either < 0** · C = both 0~+1.0pp ⇒ **B fired on 207940.** ★ **Effect on the standing view, exactly as branch B pre-stated**: the 07-28 shelter reading is **n=1 luck**, **M-07 loses its only tested price axis**, and **M-13's shelter half dies — so M-13 is dead on both halves** (driver already gone with R26). ⇒ **R27 filed.** ★ **What survives is a sharper claim**: the property is **one name's**, not 제약's — 068270 ran **+2.16 → +2.98 monotone** while 207940 went **+2.49 → −3.38**, and the rest of the bucket lost (**128940 −11.82 · 326030 −2.76**). ⚠ Scored on the observable, not the price narrative. ⚠ **n = 2 sessions (S1)**, and this run separately measured the estimator's own residual σ at **2.3–3.8pp in a sibling cohort** ⇒ see **S43-ANNEX** |
+| **S11** | 2026-07-23 (`catalyst_calendar --days 10`) | 2026-07-29 | — **PENDING, not EXPIRED** | (pulled 2026-07-30) | **The observable was pulled and it has not printed.** Four separate domestic sweeps (`금융위 선진화` 1 hit / irrelevant · `지배구조 금융지주` 6 · `독립이사` 4 · `금융위원회` 70 over 2 days) contain **no FSC governance-package announcement on 07-29**; the term axis agrees (`지배구조` pool-normalised **0.90× = no acceleration on its own event date**). What exists is **hankyung 07-27 [단독]**: the FSC has **drafted** a 금융회사지배구조법 amendment allowing **one reappointment only (3+3 = six years maximum)**, **2/3 shareholder approval to reappoint**, `사외이사`→`독립이사` with an **all-independent 임추위**, and nomination rights at **0.1% ownership** — *"final version to be announced as early as this week."* **Independently corroborated the same day: the announcement was expected 07-22, slipped, and an FSC official states the date is still not set.** ⇒ **REGISTRATION DEFECT, logged**: the branches ask whether the limit is **enacted** (a National Assembly act) while the registered date was an **executive announcement** date — two observables that cannot settle on one day (**same structure as D46**). The draft's content is branch A's *shape*, but drafting is not enacting and **is not scored as A.** **Re-check deadline 2026-08-06**; if still unprinted, score **`AMBIGUOUS`** with the reason and **do not widen the threshold**. ★ Successor **S45** registered on a scoreable observable (the announced clause form). ★ Load-bearing detail carried forward: the draft names **KB금융 (105560), whose next chairman is selected in November, as the first holdco affected** — the first material that could split KB out of the `E.상관가드` risk unit it has been rejected under for five runs |
+| **S18** | 2026-07-24 (industry_kr DEEP-COMM) | 2026-07-29 | — **PENDING, not EXPIRED** | (pulled 2026-07-30) | **The deliberation was held on the registered date; the observable publishes today.** Two primary bodies say so explicitly: yonhap 07-29 06:00 (*"개보위, KT 제재안 오늘 심의"*, plenary that afternoon) and **mt 07-29** (*"개인정보위 29일 전체회의, **30일** KT 과징금 제재 수준 발표"*). Web corroboration agrees the final disposition is disclosed ~07-30. ★ **The frozen denominator is confirmed and slightly sharpened**: the statutory cap is **3% of the relevant segment's trailing-3-year average revenue**, and wireless revenue is **₩6.6689tn (yonhap) / ~₩6.5tn (mt)** ⇒ cap **≈₩200bn / ≈₩190bn**, so branch A's ₩150bn line (75% of max) stands unchanged. **Facts logged, not scored** — aggravating: real monetary harm (**368 people · 777 transactions · ₩243m**) and a **2024 server-malware infection not reported to the government** (43 servers); mitigating: **USIM authentication keys were NOT leaked**, scale of **22,227** vs SKT 23m / Coupang 37m, a **₩450bn** customer-compensation programme and femtocell replacement. **Precedents from the same regulator under the same law: Coupang ₩624.6bn ≈ 2% of revenue · SKT ₩127.8bn ≈ 1%.** ⚠ **Not pre-scored**: arithmetic only — branch A requires **≈2.3% of relevant revenue**, above Coupang's 2% and 2.3× SKT's 1%. Tagged `[inferred]`, **not admissible as evidence.** **Scoring deadline: the next run's HANDOVER (2026-07-31). Carrying it a second time is a failure to log as one** |
+| **S43 · S43-ANNEX · S44 · S45** | **2026-07-30 (industry_kr MACRO / ALPHA)** | see `SCENARIOS_KR.md` | — | — | ARMED — ★ **S43** is S39's successor and separates *name vs sector* on the shelter property · **S43-ANNEX** is a construction-defect notice registered **hours after S43** because this run's own DEEP measured the estimator's residual σ (2.3–3.8pp) to be **wider than S43's ±1.0pp band** — **S43 is NOT re-frozen** · **S44** scores the crash's *agent* from the KRW sign (the axis `fts --kr` cannot reach at all, D63) · **S45** replaces S11's unsettleable "enacted" observable with the announced clause form |
+
+### Scoring-log rows added 2026-07-31 by the `industry_kr` run
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S18** | 2026-07-24 (industry_kr DEEP-COMM) | 2026-07-29 심의 → **2026-07-30 발표** | **FIRED-B** | **2026-07-31 HANDOVER (industry_kr)** | **The observable printed and it is not close.** 개인정보보호위 07-29 제15회 전체회의 의결, **07-30 발표: 과징금 ₩539.79bn (539억7,900만원)** [yonhap 07-30 11:27 본문 · mt 07-31 본문 · asiae ×5 = 6개 매체]. Threshold was **A ≥ ₩150bn** / **B < ₩150bn or deferred** ⇒ **B fired at 36% of the line.** **Frozen denominator confirmed from the primary and NOT adjusted after the fact**: 산정매출 **₩6.6689tn** (무선 3년 평균), 법정 상한 3% ≈ **₩190–200bn** — the registration's "≈₩200bn max" was right. **부과율 0.81%**, against 선례 SKT ~1% and 쿠팡 1.8%. ★ **The prior run's `[inferred]` arithmetic was WRONG and was correctly not used as evidence**: it computed that branch A needed ≈2.3% of relevant revenue and tagged the reasoning inadmissible; the outcome came in **below even SKT's 1%**. **Effect, as branch B pre-stated: a sector-level non-event** — ₩53.98bn against KT 본사 annual OP ≈₩800bn is **about a quarter of one quarter's operating profit** (yonhap). ⚠⚠ **REGISTRATION DEFECT, logged as D100**: the bracket froze **the amount only**, so it could not see that **the same 의결 referred KT to prosecutors (거짓자료 제출·로그 삭제) and requested a criminal investigation of LG유플러스 (조사 착수 전 서버 폐기, 공무집행방해)** — a criminal track now open at **2 of the 3 telcos**. The amount is a non-event; the legal track is not. **The verdict is scored on the frozen observable regardless (L3 rule); the defect is recorded, not used to re-score.** Next regulatory bracket writes **amount** and **sanction type** as separate legs |
+| **S29** | 2026-07-27 (industry_kr DEEP-HLTH / ALPHA) | **by 2026-08-06** (price-trigger form) | **FIRED-A** | **2026-07-31 MACRO §F-0 (industry_kr)** | ★ **It fired 7 days early, and this run's HANDOVER classified it "미도래" — the SECOND consecutive run in which a bracket's condition was already met while HANDOVER filed it as not-yet-due (S39 was the first, one day earlier).** Both frozen legs, reported separately and not merged: **(1) `068270 close > 189,737` → 07-30 close 190,000 ✅** (margin +₩263 = +0.14%); **(2) 5d/50d volume ratio > 1.0 → 1.783 ✅** (0.78 at registration = a 2.3× rise). ⇒ branch A: *"the accumulation was leading, and it finally cleared the elastic retail supply inside the ₩170,100–183,600 box."* ★★ **The registration's own instruction — "a future scorer must read the FOREIGN leg (M168)" — was executed and it REVERSES M168's leg identification**: into the breakout the foreign leg was **net SELLING three sessions straight (07-27 −8.7만 · 07-28 −15.6만 · 07-29 −14.0만 = −38.3만)** and turned only on the day itself (+4.9만); the buyer was **institution (20d +204.5만 against retail −239.3만)**. **M168's "the live leg is foreign" is marked stale — updated by measurement, not retracted.** ⚠ **Two honest caveats recorded WITHOUT moving the threshold**: (i) the 5-day window contains the 07-28/07-29 circuit-breaker sessions, so 1.783 carries a market-wide volume event — **partially defended by a counter-example measured the same run: 009150's ratio is 0.842 on the identical window**, so the ratio is not pure market beta; (ii) the breakout margin is +0.14%, and the threshold was declared hand-set at registration (no KR implied-move axis exists). **This does NOT substitute for S43** — S43 asks a shelter question that is only testable on a ≤−3.0% session, and 07-30 was −2.199% |
+| — | — | — | ★ **Condition-check executed on every event-conditional row (the S39 lesson, first execution)** | 2026-07-31 HANDOVER (industry_kr) | **S43 and S44 both trigger on "the next `069500.KS` session ≤ −3.0%".** Measured: **07-27 +1.283% · 07-28 −11.190% · 07-29 −6.344% · 07-30 −2.199%** ⇒ **the condition has NOT been met since registration; both stay legitimately ARMED.** This is recorded as a *check performed*, not a skip. ⚠ **−2.199% sits just under the line** and the benchmark has fallen 18.5% in three sessions, so either may fire on any session. **S22's event date is 2026-07-31 = today and its observable had not printed at the 09:1x KST re-check (DART: 475150 최근 2일 1건 = 07-30 [기재정정]타인에대한담보제공결정 only; 006120 SK디스커버리 지분변동 0건; domestic news 0 hits) ⇒ NOT scoreable, NOT `EXPIRED` — named here as the next run's #1 scoring job (the S28 precedent).** **S11 re-pulled and still PENDING (deadline 08-06)**: mt 2026-07-30 primary — the 8-holdco 간담회 was **cancelled**, deferral is *"8월 이후"* with a source calling it *"무기한 연기된 분위기"*, the 3연임 statutory ban is **still unconfirmed**, and a **new cause is named — the market crash pushed the package down the priority list.** ⇒ an `AMBIGUOUS` verdict at 08-06 is now the likely outcome and **the threshold will not be widened** |
+
+### Scoring-log rows added 2026-08-02 by the `industry_kr` run
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S22** | 2026-07-25 (industry_kr BET/ALPHA) | **2026-07-31** | ★★★ **FIRED-B — the carried kill fired** | **2026-08-02 HANDOVER (industry_kr)** | **Both counterparties filed the same amendment on the event date.** `[PRIMARY — DART]` **SK디스커버리 rcpNo 20260731801112**「[기재정정]타법인주식및출자증권처분결정」, 정정사유 ***"거래종결 예상일 변경에 따른 처분예정일자 변경"***, **처분예정일자 2026-07-31 → 2026-08-11**; **SK이터닉스 rcpNo 20260731801128**「[기재정정]투자판단 관련 주요경영사항」, 정정사유 ***"처분예정일 변경"***, same dates. ⇒ **the SPA did not close on 07-31, and this is the SECOND deferral** (06-30 filing had set 07-31). **Branch B, not C**: 처분주식수 **10,455,825주 (30.98%)** and 처분금액 **₩247,800,000,000** are **both unchanged** — only the date moved, so "terms revised" did not fire. ✅ **Registered price re-derived from the primary: 247,800,000,000 ÷ 10,455,825 = ₩23,700/share, matching the registration exactly (C1 — the handed-down number was re-measured).** ★ **New facts recorded but NOT used to score (L3)**: buyer is **Eclipse Holdco L.P.**, an SPV of a KKR-managed fund, 처분후 지분 **0%**; a **conditional earn-out of ₩22.1bn** tied to revenue/OP milestones sits **on top of** the ₩247.8bn base; **공정거래위원회 신고대상 미해당** ⇒ antitrust cannot be the cause of the delay; **풋옵션 없음**; 처분목적 *"포트폴리오 리밸런싱을 통한 재원 확보"*. ★★ **What this scoring says about the desk, and it is not flattering**: **S28 scored FIRED-A on 07-28** (both KKR nominees elected 99.4%/99.5%, an explicit 거래종결 정지조건) and its registration text said *"S22 branch A becomes materially more likely"* — **the condition precedent cleared and the closing slipped anyway.** Registered as **D109**. ★★ **And the news axis never saw it**: `search "SK이터닉스" --days 5 --scope domestic` → 1 irrelevant hit; `fts search 이터닉스`·`KKR`·`SK디스커버리 --days 7 --kr` → **0 mentions of the deferral across all three** ⇒ **two independent query forms agree, so this is genuine absence of coverage, not a query-vocabulary failure (the mirror image of R29)** — registered as **D110**. Price context, **not the score**: 475150 closed **45,450 (+8.73%)** against a **+24.174%** benchmark ⇒ residual **−3.46pp** on β 0.504 with an **own-residual σ of 10.37pp** ⇒ **inside its own noise; the tape did not price the deferral on the day** |
+| **S46-KR** | 2026-07-31 (industry_kr MACRO) | **2026-07-31 close** | **FIRED-B** | **2026-08-02 HANDOVER (industry_kr)** | **Anti-signal checked first, and neither VOID condition fired as written**: `069500.KS` was **+24.174%** (the condition is ≤ −3.0%) and Brent `BZ=F` **+1.22%** (the condition is ±5%). ⇒ scoreable. **Observed, frozen method (β on the 60 sessions ending 07-30, `residual = excess − (β−1)×bench`)**: 096770 **−5.232%** vs bench **+24.174%** ⇒ excess **−29.41pp**, **residual −11.03pp on the frozen β 0.24** (β **re-measured by this run at +0.232, R² 0.063 — the registration reproduces**). **Threshold was ±3.8pp ⇒ B fired at 2.9× the band.** ★ **Robustness the registration did not require and this run did anyway**: sweeping β across **0 → 0.5** gives residuals **−5.23 → −17.3pp**, all below −3.8 ⇒ **the verdict is not decided by window choice (M253's failure mode avoided)**; and against the **`^KS200`** benchmark instead of the ETF the residual is **−9.87pp** ⇒ **not an artifact of M298's ETF premium either.** ⚠⚠ **Two honest caveats recorded WITHOUT moving the threshold**: (i) **D104 stands and cost something** — the anti-signal was written one-sided, so a **+24.17%** session is not a VOID condition even though it is the same "cannot separate the name from a market event" problem in the other direction (**successor rule staged as D111: write `|bench| ≥ x%`**); (ii) **the ±3.8pp band came from M260's σ measured on ordinary sessions**, and this session's own base rate is **mean −2.23pp, sd 3.73pp** (M299) ⇒ **recentred, the threshold should have been ≈ −6.03pp, which −11.03 still clears; and 096770's own estimation-window σ is 4.38pp, already wider than the band.** ★ **Control measured the same session and NOT merged into the verdict**: **010950 −0.78pp** (≈ +1.45pp *above* the session mean) · 068270 −6.96 · 475150 −3.46 ⇒ **096770 is the complex's own event, not a refining-node event** — ⚠ weak leg, because 010950's β is indistinguishable from zero (M253) |
+| **S32** *(US-owned, scored by KR)* | 2026-07-27 (industry_US PREMORTEM) | 2026-07-28 COT → **2026-07-31 release** | **FIRED-B** | **2026-08-02 HANDOVER (industry_kr)** | ★ **Scored by the KR desk because the US desk has not run since 07-30 and the CFTC release published 07-31** — the spine's "a past-dated row in the other file is still this run's to score" rule, executed. **Feed freshness verified before scoring** (the 07-28 US run had caught a byte-identical stale snapshot and logged that the tool prints no `asof`): **7 of 8 instruments moved** vs the 07-21 read — S&P 84→**82**%ile · R2K 88→**57** · UST10Y 12→**13** with **−48,031 → +3,587** · WTI 11→**10** · NatGas 11→**3** · Copper 98→**96** ⇒ **the release is fresh and NDX holding at the 5th percentile is the observation, not staleness.** **Observed**: **NDX net-spec −9,914, 1-year percentile 5%** ⇒ **0 points of rise from the registered 5th, so branch A's ">15 points" leg fails and branch B's "<10th" leg is met**; **QQQ RS5 vs SPY = −0.55pp** (07-24→07-31: QQQ +0.55% · SPY +1.10%) ⇒ **≤ 0, branch B's second leg met.** **Invalidation (HY OAS ≥ 3.10% on a close) did not fire — 2.84% (FRED 07-30).** ⇒ **B: "positioning stayed crowded-short; the prints were settled on fundamentals"** ⇒ **S13 and S16 keep their fundamental basis.** ⚠ **The registration's constraint is carried forward intact and is NOT relaxed by this scoring**: *"COT crowded-long/short contrarian sits in this desk's REJECTED ledger (D6) and this bracket does NOT re-buy it — it may not be cited as a signal by any stage."* |
+| — | — | — | ★ **Condition-check executed on every condition-settled row (second consecutive run)** | 2026-08-02 HANDOVER (industry_kr) | Every ARMED row was classified **date-settled vs condition-settled** and each condition-settled row was compared against today's data — the promotable form of the rule candidate that S29 defeated. **S43 and S44 both trigger on "the next `069500.KS` session ≤ −3.0%": measured 07-30 −2.00% · 07-31 +24.17% ⇒ the condition has NOT been met; both stay legitimately ARMED.** **S44's second leg checked separately: `DTWEXBGS` is still 120.71 asof 2026-07-24 — unprinted (next ~08-04)** ⇒ both legs pending. ⚠ **The prior run recorded 07-30 as −2.199% and the same series now returns −2.00%** (0.2pp, dividend-adjustment presumed, **unverified — C3**); **the ≤−3.0% verdict is identical either way.** **S11 re-pulled and still PENDING (deadline 08-06)**: primary **mt 2026-07-30「금융지주 지배구조 개선안 발표, 8월 이후로 또 밀려」** independently reproduces the prior run's finding ⇒ **an `AMBIGUOUS` verdict at 08-06 remains the likely outcome and the threshold will not be widened.** **S17 is in-window and NOT scored (settles 08-05)**, but its series was **independently rebuilt by this run and reproduces the prior run's values** (07-22 +33.64 vs +33.6 · 07-24 +29.53 vs +29.5 · 07-30 +62.56 vs +62.6); **the new in-window point 07-31 is +18.85% = branch C territory, the first non-B reading inside the window** — carried, not concluded. **`EXPIRED` = 0 · silent skips = 0.** |
+
+
+### Scoring-log rows added 2026-08-03 by the `industry_kr` run
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S47-KR** | 2026-07-31 (industry_kr MACRO) | **2026-08-03 10:00** | — **NOT SCOREABLE, NOT `EXPIRED`** | (polled 5× 2026-08-03) | ⛔⛔ **The observable is absent from the filing that landed, and the run ended before the one that carries it.** DART polled at **08:59 (0 실적) · 09:15 (0) · 09:29 (공정공시 게시 — ahead of its own registered 10:00) · 09:52 · 09:56**. **`rcpNo 20260803800274` 「연결재무제표기준영업(잠정)실적(공정공시)」 carries NO segment split and NO inventory-gain figure**; its own text points to *"첨부자료 또는 홈페이지 … 경영실적발표 자료"* and declares **「정보제공(예정) 2026년 8월 3일 10:00 · 2분기 실적발표 컨퍼런스 콜」**. ⇒ ★ **Branch C ("the company does not disclose an inventory-gain figure") was DELIBERATELY NOT scored early — the company had not finished disclosing, and an early `AMBIGUOUS` is observable fabrication in the other direction.** ★★ **Named as the 2026-08-04 run's #1 scoring job (the S28 precedent): read 「재고관련이익 ÷ 정유부문 영업이익」 from the IR pack or the 반기보고서, score A(≥50%) / B(<50%) / C(non-disclosure), and DO NOT substitute an estimate (D95).** ★ **What the 공정공시 DID give, recorded but not used to score**: 매출 **₩11,343,488m (+26.8% QoQ · +40.9% YoY)** · **영업이익 ₩965,015m (−21.6% QoQ · 흑자전환 YoY)** ⇒ **OPM 13.766% → 8.507% = −5.26pp** `[own calc]`, i.e. **the same "level high, rate turning" shape 096770 printed** (**C2 both halves quoted**). ⚠ Side facts, explicitly outside the observable: 한국투자증권's ₩1tn forecast vs the actual **₩965bn = −3.5% miss**; **the lubricants mechanism is common to both refiners** (yonhap 08-03: SK엔무브 2Q OP **₩691.9bn, +414.4% YoY**), and **theme `윤활기유` 🟡 82d / 2.14× / n=14** — **a mechanism corroboration may not substitute for the frozen ratio** |
+| — | — | — | ★ **Condition-check executed on every condition-settled row (THIRD consecutive run)** | 2026-08-03 HANDOVER (industry_kr) | Every ARMED row was classified **date-settled vs condition-settled** and each condition-settled row compared against today's data. **S43 and S44 both trigger on "the next `069500.KS` session ≤ −3.0%": settled closes 07-27 +1.283 · 07-28 −11.190 · 07-29 −6.344 · 07-30 −2.199 · 07-31 +24.174 ⇒ the condition has NOT been met; both stay legitimately ARMED.** **S44's second leg checked separately: `DTWEXBGS` still 120.7105 asof 2026-07-24 — unprinted for 10 calendar days (next ~08-04)** ⇒ both legs pending. ★ **The 07-30 value discrepancy the prior run logged as `[unverified, C3]` is RESOLVED and it is a call convention, not a mystery**: `auto_adjust=False` gives **−2.199%**, the default `True` gives **−2.00%** — **the ≤−3.0% verdict is identical either way**, and the standing convention proposed is `auto_adjust=False` with the flag stated. **S11 re-pulled and still PENDING (deadline 08-06)**: `search "금융지주 지배구조" --days 5 --scope domestic` returns **exactly one article, the same mt 2026-07-30 「금융지주 지배구조 개선안 발표, 8월 이후로 또 밀려」** ⇒ **a third consecutive run reproducing the same finding; an `AMBIGUOUS` at 08-06 remains the likely outcome and the threshold will not be widened.** **S17 is in-window and NOT scored (settles 08-05)** — its series was **independently rebuilt a second time and reproduces to the decimal** (07-22 +33.64 · 07-24 +29.53 · 07-27 +14.83 · 07-30 +62.56 · **07-31 +18.85**), and the window now reads **B · B · C**; the series was also **extended backwards two sessions (07-20 +27.46 · 07-21 +38.13)**. **The 000660 flow suspension stays on.** **`EXPIRED` = 0 · silent skips = 0.** ⚠ **Note for S38 and S48-KR (both settle 2026-08-12)**: this run measured the **KOSPI200 front-month final trading day as 2026-08-13** — **one session after both brackets settle** — so an index-expiry roll sits directly against a stock-of-shorts observable. **Neither bracket is re-frozen; the fact is registered as D133 and must be recorded at scoring** |
+
+### Scoring-log rows added 2026-08-03 by the `industry_US` run
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S43** *(KR-owned, scored by US)* | 2026-07-30 (industry_kr MACRO) | **event-conditional — TRIGGERED 2026-08-03** | ★★ **`VOID`** | **2026-08-03 HANDOVER (industry_US)** | ★★★ **The anti-signal was checked FIRST and it fired.** `[PRIMARY — DART]` **rcpNo 20260803800514**, filed **2026-08-03 by 셀트리온**: 「**투자판단관련주요경영사항** (CTP44(다잘렉스 바이오시밀러) 한국 임상 3상 시험계획…)」 — a company-specific material disclosure **landing on the trigger session itself**; 국민연금공단 `대량보유상황보고서(약식)` filed the same date. S43's registered anti-signal: *"a 068270-specific disclosure (trial data, an order, an equity raise) landing on that session ⇒ the low-beta axis and the news axis become inseparable ⇒ score `VOID` and re-register on a different session."* ⇒ **VOID.** ⚠ **The interpretive edge is stated rather than resolved in the desk's favour**: this is a trial *plan*, not results — but the governing phrase is *"a 068270-specific disclosure"* and the stated mechanism applies. **Narrowing an anti-signal after the print is the same violation as widening a threshold.** ★★ **The observable had been computed and would have scored the other way**: trigger `069500.KS` **−8.928%**; β on the 60 sessions ending 07-31, `residual = excess − (β−1)×bench` — **068270 −1.194pp** (β 0.136, R² 0.067) · 207940 −3.289 · 128940 +7.045 · 326030 +1.676 ⇒ **branch B on the frozen arithmetic. NOT recorded as a B**, because the anti-signal precedes the observable. ★★★ **S43-ANNEX's requirement executed anyway and it is the more useful output**: 068270's **own-window residual σ = 2.923pp** against a **±1.0pp band and a −1.194pp verdict = 0.41σ** ⇒ **the band sits entirely inside the estimator's own noise, exactly as the ANNEX predicted from a different cohort — D93 confirmed prospectively, and the second KR instance of L3-bis.** ⚠ **Beta sweep: the verdict flips sign inside the plausible range** (β 0.00 → −2.410 · **0.24 registration → −0.268** · 0.30 → **+0.268** · 0.50 → +2.054) ⇒ B holds at the frozen and measured β and **dies at β ≥ 0.27.** ⇒ **Even absent the anti-signal this bracket could not have carried a conclusion.** ★ Caught by the US desk because the `industry_kr` run of the same date ended at **08:59 KST, one minute before the KR open** — the condition was met at the **15:30 KST close, seven hours later.** **Not a KR-desk failure; the shared-spine rule working as designed.** |
+| **S44** *(KR-owned, scored by US)* | 2026-07-30 (industry_kr MACRO) | **event-conditional — TRIGGERED 2026-08-03** | **FIRED-B** | **2026-08-03 HANDOVER (industry_US)** | **Leg 1, the frozen sign pair**: `069500.KS` **−8.928% ≤ −3.0%** ∧ **KRW=X 1,420.60 (07-31) → 1,428.08 (08-03) = +0.527% ⇒ the won WEAKENED** ⇒ **branch B: *"ordinary capital-flight shape ⇒ M-15 is retracted."*** ⇒ **R42 filed.** **Leg 2, reported separately and NOT used to score** (B does not require it): **`DTWEXBGS` still 120.7105 asof 2026-07-24 — unprinted for 10 calendar days**, a 4th consecutive run pending. ⚠⚠ **Three caveats recorded WITHOUT moving the threshold.** (i) **`KRW=X` is a 24-hour OTC quote, not a KRX-session close**, and the registration named no venue ⇒ **registration defect D138**. Direction corroborated by **DXY 99.800 → 99.783 (−0.02%, flat)** ⇒ the won weakened against a **stationary** dollar, which strengthens the read (it is not the dollar-side artifact branch C exists to catch). (ii) **n = 1 (S1)**, as the registration pre-stated; the +0.53% magnitude is not cited. (iii) ★★★ **found two stages later, at EVENT_ALPHA, and it is material**: **a *rare Japan-Korea joint FX intervention* occurred 2026-07-31** [straitstimes], so the won's 07-31 base (1,420.60, a −1.503% single-session strengthening) is **an intervened level** and part of the 08-03 weakening is intervention decay rather than capital flight. **The verdict is NOT changed — re-interpreting a pre-registered sign after the print is exactly what L3 forbids** — but it is **a registration defect of D138's family, logged as D142.** ★ Hand-forward to the KR desk: **the yen hit a 3-month high on 08-03 while the won weakened — the two currencies DIVERGED three sessions after a joint intervention.** |
+| **S47-KR** *(KR-owned)* | 2026-07-31 (industry_kr MACRO) | 2026-08-03 10:00 | — **STILL NOT SCOREABLE, NOT `EXPIRED`** | (carried 2026-08-03, industry_US) | The 09:29 KST 공정공시 (`rcpNo 20260803800274`) carries **no segment split and no inventory-gain figure** — verified by the KR run at five separate clocks; the 10:00 KST IR pack is the carrier. **This US desk did not reach the IR pack, and per D95 an estimate is not admissible.** ⇒ **carried forward to the 2026-08-04 `industry_kr` run as its #1 job, exactly as that run designated it — named HERE so the hand-forward is visible in both files rather than living only in the KR run's own report.** |
+| — | — | — | ★ **Condition-check executed on every condition-settled row — FIRST US execution, and it caught two rows on its first pass** | 2026-08-03 HANDOVER (industry_US) | Every ARMED row classified **date-settled vs condition-settled**. **S43 · S44 fired (above).** **S8** — undated `[blank]`, and **R30/D95 measured its own 60/84 kill lines un-scoreable on this data** ⇒ **carried as un-scoreable for a 2nd consecutive run and named as needing a human `VOID` or re-registration.** **S52** — condition-settled ≤48h class; **tracks branch C**: *"talks begin Monday"* is a date for **TALKS**, not the *"dated Strait-reopening term in a primary text"* branch A requires, and is an extension of the exact conditional S52 was registered on; branch B's named-infrastructure strike is absent. **The 07-27 run refused to score S8-A off a precondition and S52's registration says that refusal binds — it binds.** **S49 · S26 · S41 · S9 · S23** all re-pulled: **no new settled US bar exists**, so all are unchanged. **`EXPIRED` = 0 · silent skips = 0.** |
+
+### Scoring-log rows added 2026-08-04 by the `industry_kr` run
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S47-KR** | 2026-07-31 (industry_kr MACRO) | 2026-08-03 10:00 | ★★★ **FIRED-B** | **2026-08-04 HANDOVER (industry_kr)** | ★★ **The hand-forward worked: two prior runs named this "the next run's #1 scoring job" and it was scored on the first clock that could see the observable.** **Observed**: the frozen ratio 「재고관련이익 ÷ 정유부문 영업이익」 = **₩113.7bn ÷ ₩532.4bn = 21.36%** against a **≥50%** branch-A line ⇒ **B at 43% of the threshold.** `[PRIMARY-adjacent — the company's own 2Q conference call, yonhap 2026-08-03 11:09 종합2보 body: *"윤활 부문이 대부분을 차지한 2분기 재고 관련 이익은 1천137억원으로, 전 분기(6천434억원) 대비 크게 감소"* · *"정유 부문은 **정제마진 상승** 등의 영향으로 매출 9조293억원, 영업이익 5천324억원"*]` — the segment OP figure is carried by **3 outlets** (yonhap 종합2보 · mt 종합 · sedaily), the inventory figure by yonhap alone. ⚠⚠ **The true ratio is LOWER than 21.36%**: the company attributes most of that ₩113.7bn to the **lubricants** segment, so 21.36% is a **conservative upper bound** computed with the whole-company numerator. **Either way B, decisively.** ★ **Anti-signal checked FIRST and did not fire**: the registered VOID condition was a **재고자산평가손실** from a post-quarter crude collapse — what printed is a shrunken inventory *gain*, not a valuation *loss*. ⇒ **Meaning, exactly as branch B pre-stated: the 86% is SK-specific, M-19's generalisation is WITHDRAWN (R43), and the two refiners must be tracked on different KPIs.** ⇒ **Branch A's consequence did NOT happen: `정제마진` is NOT dropped as this node's KPI — the company itself attributed refining OP to it.** ★ **Side observations recorded, not scored**: **샤힌** is answered for the first time (mechanical-completion verification + pre-commissioning under way, **4Q startup → commercial operation early 2027, 2026 capex ₩2.1tn held, "no large 2027 investment planned"**) — the body EVENT_ALPHA could not obtain on 07-31; and **M-12's loss-compensation booking is still blank, but for the first time the reason comes from a primary speaker**: *"정산위원회가 보상 기준과 산정 방식을 마련하고 있는 단계라 구체적 보상 규모는 예측하기 어렵다."* ⚠ **Evidence grade stated: this is a conference-call figure carried by news bodies, NOT a DART filing** — the observable does not exist in the 공정공시 form. **The 1차 substitute is the 반기보고서 segment note (~2026-08-14) and re-confirmation there is scheduled** (the 08-03 staged rule candidate #1: when a filing exists for the same event, the filing decides the magnitude). |
+| — | — | — | ★ **Condition-check executed on every condition-settled row — FOURTH consecutive run, and this time it came back EMPTY** | 2026-08-04 HANDOVER (industry_kr) | Every ARMED row was classified **date-settled vs condition-settled**. ⇒ **KR condition-settled rows remaining: ZERO.** S39 (FIRED-B), S43 (`VOID`), S44 (FIRED-B) closed the class. **This is recorded as a check performed with a null result, not as a skip** — the practice has caught a bracket on each of its first three runs (S39/S29 · S22 · S43+S44) and today there was nothing left to catch. **KR ARMED rows are now all date-settled**: S11 (08-06) · S17 (08-05) · S27 (~08 late) · S34 (10-31) · S38 (08-12) · S45 (09-30) · S48-KR (08-12) · S49-KR (10-30). **`SCENARIOS_US.md` was opened and checked for past-dated rows this desk owes a score: S49/S50/S51/S52/S53/S54 all settle 2026-08-05 or later ⇒ zero US rows due.** **S17 is in-window and NOT scored (settles 08-05); its anti-signal was re-checked at the primary — `module_disclosure 000660 --days 5` returns 2 filings, neither an issuer disclosure raising the 2.5% ceiling ⇒ the 000660 flow suspension stays on.** **S11 re-pulled, still PENDING (deadline 08-06); `AMBIGUOUS` remains the likely outcome and the threshold will not be widened.** ⚠ **New fact for S11's scoring, recorded now so it is not mistaken for a signal later: `지배구조` measures 🟡ACCELERATING 2.27× on n=1,025 today, but the S11-specific query still returns exactly ONE article (the same mt 2026-07-30 deferral piece) for a FOURTH consecutive run** ⇒ **the theme acceleration's denominator is almost certainly the 08-03 세제개편, not the FSC package. Do not read it as an S11 imminence signal (C3).** ⚠ **D133 restated for S38/S48-KR (both settle 08-12): the KOSPI200 front-month final trading day is 2026-08-13, measured again today from the board (`잔존일수 10 · futs_last_tr_date 20260813`). Neither bracket is re-frozen; the fact is recorded so it is stated at scoring.** **`EXPIRED` = 0 · silent skips = 0.** |
+| **S50-KR · S51-KR** | **2026-08-04 (industry_kr MACRO / DEEP-ENRG)** | see `SCENARIOS_KR.md` | — | — | ARMED — **S50-KR** brackets the run's own largest instrument finding (the desk benchmark deviating from its index) **on its own anti-signal, and its threshold is taken from a measured spread rather than a round number** · **S51-KR** converts today's news-body scoring of S47-KR into a **primary-source re-confirmation** on the 반기보고서, i.e. it pre-commits the desk to checking its own evidence grade |
+
+### Scoring-log rows added 2026-08-04 by the `industry_US` run
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S49** | 2026-07-30 (industry_US PREMORTEM Lens 2) | **event-conditional — TRIGGERED on the 2026-08-03 settled close** | ★★★ **FIRED-B** | **2026-08-04 MACRO §D (industry_US)** | ★★ **The 08-03 HANDOVER pre-named this as *"the bracket most likely to fire next… tonight's 08-03 close is the first bar that can settle it"* — and it fired. The first time this desk has pre-named the next bracket to fire and been right on the next session.** **Observed, frozen method (5-session change in the settled distillate crack HO×42 − WTI, yfinance DAILY settled bars, one source): 82.502 (08-03) − 90.077 (07-27) = −7.575 against a branch-B line of ≤ −5.0 ⇒ B, by 2.575 points.** ★ **D140's remedy EXECUTED rather than cited — the whole window was re-pulled, and the 07-31 value reproduced at the REVISED +2.158 (not the +1.066 an earlier pull carried), so the revision has settled.** ⚠⚠ **The MEANING is annexed, not scored — see `S49-ANNEX` (registered the same day) for five measured objections**, of which the two largest are: **(i) the crack LEVEL 82.502 sits at the 92.1st percentile of the trailing year (n=252, mean 51.15, sd 18.48), so *"the bottleneck is releasing"* describes a bottleneck tighter than 92% of the past year**; and **(ii) DEEP-ENRG measured the break to be a GASOLINE event — 5/21/63-session rates distillate −7.575/+17.540/+18.694 vs gasoline −12.875/−9.575/−4.797, with the distillate−gasoline spread WIDENING +5.300 to 38.241 on the firing session, and widening a further +10.4 points on the live 08-04 bar. A releasing distillate bottleneck COMPRESSES that spread.** ★ **On the D93 test S49 never ran, its threshold survives: the 5-session-change estimator measures mean +2.170 · σ 6.221 (trailing 60), so −5.0 sits at ≈ mean −1.15σ and fires in 6.7% of trailing-60 windows — NOT inside noise. Set by hand without measurement, and it got lucky.** ⚠⚠ **INVALIDATION — evaluated, and NOT resolved in the desk's favour.** S49's clause reads *"a Hormuz reopening statement ⇒ S8 owns that as a narrative event, not this."* **On 08-02/08-03 the feed carried Trump's *"Perimeters Of A Deal Reached With Iran To Reopen Hormuz"*, Iran's *"negotiations with Oman… in final stages"*, and bloomberg's *"Iran Says Strait of Hormuz Talks Are Underway"* — against aljazeera's *"Tehran DENIES it is in talks"* the same day.** **The fire is recorded because the nearest OPERATIONALISED standard — S52 branch A, written by this desk on 08-02 and checked as unmet by the 08-03 run — was not met.** ⇒ ★★★ **`D149` registered: an invalidation clause must carry the same evidentiary standard as the branches it can override. A human ruling that S49's eight-word clause means what its words say would make this `VOID`. The crack MEASUREMENT survives either ruling; only the score is at stake.** ★ **Free consistency check now armed and previously unstated: S54 branch A is the SAME physical event with the opposite sign (rail surcharge = revenue, airline fuel = cost). Measured on the settled 08-03 bar, S54 = +3.567pp on the branch-A side, with UAL +5.82% · ALK +5.82% · DAL +4.75% · LUV +4.67% vs SPY +1.42% — the day's biggest winners. ⇒ R44 filed against this run's own PREMORTEM line that said otherwise.** |
+| — | — | — | ★ **Condition-check executed on every condition-settled row — SECOND US execution** | 2026-08-04 HANDOVER (industry_US) | Every ARMED row classified **date-settled vs condition-settled**. **S49 FIRED-B (above) and leaves the class.** **S8** — undated `[blank]`, un-scoreable on this data (R30/D95) — **carried for a 3rd consecutive run and named again**: ★ **S49-B has now delivered S8 branch A's *economics* without S8's *narrative trigger*, so the bracket is not merely unscoreable — its question has been answered by a different instrument. It should be formally `VOID`ed or re-registered by a human.** **S52** re-checked against the fresh foreign pool: **branch A evaluated and NOT fired** — Bessent, verbatim on CNBC, *"There is a chance we **may** have a deal today or tomorrow to open the strait… It would be freedom of movement"* is **a dated conditional about a DEAL, not a dated term for the OPENING**, and S52-A explicitly excludes *"a repeat of the 08-02 conditional wording"*; the counterparty **denies the talks exist** and WSJ reports the opening *"Uncertain After New Strike."* **Branch B (a strike on NAMED Iranian energy infrastructure, ≥2 outlets on one primary) is ABSENT** — the strikes in the feed are on third-party shipping. **Tracks C; window 08-06.** ⚠ **Recorded honestly: this is the second consecutive run in which this desk declines to fire a branch that runs against its own OW.** **S9** — `[FRED]` **DFII10 2.47 (07-31), up from 2.41 held flat for four prints ⇒ the buffer HALVED, 14bp → 8bp, and it is now the closest US kill line on the board.** **S23/S51** — derived **2s10s +0.47**, 27bp from S23's line and receding. **S26** HY **2.85** (25bp) · **S41** IG **0.79** (11bp) ⚠ `ig_oas` needed a retry after a **FRED 502**. **S44 leg 2** — ★★ **`DTWEXBGS` PRINTED after 11 calendar days and 4 pending runs: 120.7105 (07-24) → 119.7034 (07-31) = −0.83%. Recorded, NOT used to re-score** — branch B fired on leg 1 alone and a settled verdict is not reopened by a late-arriving leg. **S12 checked explicitly rather than assumed** (the print could look like it reopens it): **already scored FIRED-B / AMBIGUOUS on 2026-07-28. Closed, stays closed.** **`SCENARIOS_KR.md` opened: ZERO KR rows past-dated for this desk** — the 08-04 `industry_kr` run scored S47-KR itself and closed the KR condition-settled class. **`EXPIRED` = 0 · silent skips = 0.** |
+| **S55 · S56 · S57 · S49-ANNEX · S50-ANNEX(2nd)** | **2026-08-04 (industry_US PREMORTEM Lens 2)** | see `SCENARIOS_US.md` | — | — | ARMED / notices — ★ **S55** is the row that decides what to do with S49-B (physical release vs whole-barrel de-risking, `HO% − CL%`), **and D93 executed BEFORE freezing CHANGED its design: the estimator's centre is +1.981, not 0, so a symmetric band would have been biased toward branch B by construction — the third independent reproduction of that bias** · **S56** is a dated, share-counted natural experiment on the desk's own **REJECTED** positioning rule (D6), **registered with its weakness in the text (n=32 overlapping windows, 35 post-IPO sessions, no unlock precedent)** · **S57** exists because **S36 closes 08-05 and leaves MATR UW− with no live falsifier** · **S49-ANNEX** records five measured objections to S49-B's meaning (**S49 NOT re-frozen; the FIRE stands**) · **S50-ANNEX 2nd entry** records that **AMD's straddle now COVERS its print for the first time (±8.2%, expiry 08-05)** and that **ANET's band drifted ±11.7% → ±10.7% in ONE session** (**S50 NOT re-frozen**) |
+
+### Scoring-log row added 2026-08-05 by the `industry_US` desk (post-run scoring of an 08-04 print)
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S50** | 2026-07-31 (industry_US PREMORTEM Lens 2) | 2026-08-04 AMC → window 08-06 | ⚠ **`AMBIGUOUS`** — and it is a **registration** finding, not a market one | **2026-08-05 (industry_US, post-run)** | **The ANET leg scores cleanly and the AMD leg cannot be scored in the form it was frozen.** ★ **ANET** `[Reuters + company call, 4 outlets]`: Q2 revenue **$3.04bn (+40% y/y, +12% q/q)** vs $2.82–2.83bn consensus, adj EPS **$1.02** vs $0.88–0.89; **Q3 guide $3.3bn against a $2.94–2.95bn consensus** and adj EPS **$1.06–1.08** vs $0.91 — *"forecast third-quarter revenue **above** Wall Street estimates … betting on strong demand for its networking gear as companies expand their **AI infrastructure**"*, and **the outlook was raised for the second consecutive quarter.** ⇒ **branch B's ANET disjunct ("guides next-Q datacenter/cloud-titan revenue DOWN y/y") is decisively NOT met.** ⚠ **Evidence-grade note: no separate *cloud-titan* revenue line appears in any body read; the scoring is on the datacenter/AI direction, and Reuters records the opposite-signed nuance that ANET *"has been expanding beyond its core cloud customer base … to diversify"* — a mix shift, recorded, not scored.** ⛔ **AMD**: the print is strong — revenue **$11.54bn (+50% y/y)** vs $11.28bn expected, adj EPS **$1.66** vs $1.62, non-GAAP GM **56%**, **Data Center $6.7bn, +107% y/y, 58% of total (from 42% a year earlier)**, Q3 revenue guide **~$13bn ±$300m (+41% y/y, +13% q/q)** against a $12.52bn consensus. **But branch A's threshold is *"next-Q DATACENTER revenue guide ≥ prior-Q Y/Y GROWTH RATE"* (i.e. ≥ +107%), and AMD guides the segment SEQUENTIALLY and QUALITATIVELY: *"AMD expects strong double-digit SEQUENTIAL growth in both data center and embedded revenue."*** **No y/y datacenter guide exists, and it cannot be derived from the disclosed material without importing an out-of-sample Q3'25 segment figure — which D95 forbids.** ⇒ **branch A's AMD conjunct is UNSCOREABLE; branch B does not fire (a sequential-growth guide is not a y/y cut); branch C ("one up, one down") does not describe it either, because BOTH legs are up.** ⇒ **`AMBIGUOUS`, per L3: the observable printed but does not cleanly map to any branch.** ★★ **And the bracket's INSTINCT was right even though its instrument could not settle: the deceleration branch A was written to catch IS visible — total revenue growth guides from +50% y/y to +41% y/y, and the market sold a beat-and-raise (see the reaction test).** ⇒ **registration defect `D157`: a branch may not compare a Y/Y GROWTH RATE against a line the issuer gives SEQUENTIALLY and QUALITATIVELY. Same family as D46 (a bracket that cannot settle in the form it was written) and D149.** ★ **Reaction test, SEPARATE and LABELLED (the D28 fix), and NOT part of the verdict**: AMD's regular-session 08-04 close was **+7.00%** — but that is **PRE-print** (the release is AMC), so the band test is **not yet scoreable**; the after-hours move is reported at **−8%** [yahoo_finance body: *"then fell 8% after hours"*] and **">10%"** [CNBC video caption] — **two figures, both recorded (C2/C3), against the ±8.2% band pulled 2026-08-04 (expiry 08-05, D1).** **Score it on the 08-05 settled close.** ANET was **+3.04%** in the regular session and **"up 3 per cent after the bell"** [Reuters]. ⚠ **The registration's own rule binds symmetrically and is stated: *"scored on the stated guide, NOT the price reaction — a cut the tape buys still scores as a cut."* ⇒ a RAISE the tape SELLS still scores as a raise, and the −8% is not evidence about the guide.** |
+
+### Scoring-log rows added 2026-08-05 by the `industry_kr` run
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S17** | 2026-07-24 (industry_kr MACRO) | 2026-07-29 → **2026-08-05 = today** | — **NOT scoreable yet, NOT `EXPIRED`** · ★ **but branch B is already ELIMINATED** | (measured 2026-08-05 08:5x, industry_kr HANDOVER) | ⛔ **The window's last bar does not exist at this run's clock.** S17 froze *"the ADR-to-ordinary premium, measured on closes, 07-29 → 08-05"*; the 08-05 KR close prints at 15:30 KST and the 08-05 ADR close ~13.5h later. ⇒ **named as the 2026-08-06 run's #1 scoring job (the S22 / S47-KR precedent), not `EXPIRED`.** ★★ **What IS settled without the final bar: branch B (*"stays ≥25% through 08-05"*) is falsified.** This run rebuilt the series independently for the **third** time (`SKHY × 10 × KRW=X ÷ 000660.KS − 1`, `auto_adjust=False`) and it reproduces to the decimal (07-29 **+31.51** · 07-30 **+62.56** · 07-31 **+18.85** · 08-03 **+30.76** · 08-04 **+39.84**). **07-31 printed 18.85% < 25%** ⇒ B dead. ★★★ **And S17-ANNEX's required dual reading AGREES for the first time**: lagging the ADR leg one session so the two legs share an information timestamp gives 07-29 +35.02 · 07-30 +38.33 · **07-31 +23.21** · 08-03 +31.69 · 08-04 +29.28 — **also below 25% on the same day.** ⇒ **the third KR instance of L3-bis, and the first where the two readings CONVERGE**: the timestamp mismatch the ANNEX identified is real (it compresses the range from 14.8~62.6% to 23.2~38.3%, a 2.4× amplitude difference) **but it does not change a branch verdict here.** Branch **A (≤15%) was never touched in-window** on either reading (minima 18.85 / 23.21); the 14.83% reading is dated **07-27, before the window opened**, exactly as the ANNEX pre-stated. ⇒ **the only live branch is C (15–25%), whose registered meaning is "partial — re-register with a tighter band; do not read a partial move as resolution."** ★ **Anti-signal checked FIRST and did not fire**: `module_disclosure 000660 --days 7` returns 3 filings (07-29 연결영업(잠정)실적 공정공시 · 07-30 최대주주등소유주식변동신고서 · 07-31 최태원 임원소유상황보고) — **no issuer disclosure raising the 2.5% ADR ceiling** ⇒ **the 000660 flow suspension stays on, and a C landing is a reason to hold it longer, never to lift it (D1 / retracted R1).** ⚠ Corroborated independently by the domestic feed the same morning: 「월가 증권사들 "SK하이닉스 저평가"…**ADR 주가 급등세**」[2 articles / 2 outlets] — the news axis and the price axis agree, and both point **away** from branch A |
+| **S11** | 2026-07-23 (`catalyst_calendar --days 10`) | 2026-07-29 | — **PENDING, deadline 2026-08-06 = tomorrow** | (re-pulled 2026-08-05) | **A FIFTH consecutive run reaching the same single primary** — `search "금융지주 지배구조" --days 5 --scope domestic` still returns exactly one article, mt 2026-07-30 「금융지주 지배구조 개선안 발표, 8월 이후로 또 밀려」. ⇒ **`AMBIGUOUS` at 08-06 remains the likely outcome and the threshold will not be widened.** ⚠ **The C3 warning the 08-04 run registered is restated because the divergence widened**: `지배구조` measures 🟡ACCELERATING **2.25× on n=1,024** (theme-age) and **2.27× on the bucket instrument**, while the S11-specific query returns **one** article — **the denominator of that acceleration is the 08-03 세제개편 (🟡 **14.6×**, doubled from 7.5× in one run), not the FSC package.** Do not read it as an S11 imminence signal |
+| — | — | — | ★ **Condition-check executed on every condition-settled row — FIFTH consecutive run, SECOND consecutive empty result** | 2026-08-05 HANDOVER (industry_kr) | Every ARMED row classified date-settled vs condition-settled. **KR condition-settled rows remaining: ZERO** (S39 FIRED-B · S43 `VOID` · S44 FIRED-B closed the class on 08-04). **All KR ARMED rows are date-settled**: S11 (08-06) · S17 (**today**) · S27 (~late 08) · S34 (10-31) · S38 (08-12) · S45 (09-30) · S48-KR (08-12) · S49-KR (10-30) · S50-KR (→08-07) · S51-KR (→08-17) · **S52-KR (→08-19, registered today)**. **Recorded as a check performed with a null result, not a skip.** **`SCENARIOS_US.md` opened and checked: ZERO US rows past-dated for this desk** — the run clock 08:46 KST = **08-04 19:46 ET**, so the 08-04 US session had settled (and the 08-04 `industry_US` run scored S49 itself) while the **08-05 US session had not opened**; every US row dated 08-05 (S9 · S19 · S23 · S30 · S31 · S36 · S53 · PSX) is **today's, not past-dated**. ⚠ **One genuine cross-desk open item is named rather than dropped: `S8`** — undated `[blank]`, carried un-scoreable for **three** consecutive US runs, and the 08-04 US run wrote that S49-B has now delivered S8 branch A's economics without its narrative trigger ⇒ **it needs a human `VOID` or re-registration; the KR desk cannot rule on it (P5).** **`EXPIRED` = 0 · silent skips = 0.** |
+| **S52-KR** | **2026-08-05 (industry_kr DEEP-HLTH)** | → **2026-08-19** | — | — | ARMED — ★★★ registered because **S43's `VOID` on 08-03 left this node with no falsifier at all**, and this run then found that **S29's own ignition session (07-30) carried the same 068270-specific-disclosure contamination that killed S43** — three consecutive weeks of such filings (07-24 · 07-30 · 08-03), never recorded. **S52-KR fixes both of S43's measured failure modes by construction**: every threshold is taken from a measured σ (**O1**: the larger of two measured 10-session log-change sds, **6.916pp**, giving 199,105 / 173,384 — cross-checked against the daily residual sd 2.832~2.983pp that reproduces S43's post-hoc 2.923pp; **O2**: a binomial null sd 3.391 that the **measured 20-session sd 3.35 confirms**, autocorrelation-inflated ×1.508, giving 28.14 / 25.06), **and the two observables are scored INDEPENDENTLY so that one contaminated leg cannot VOID the bracket** (AS-1 VOIDs O1 only). ⚠ AS-1's base rate is explicitly recorded as **high** rather than assumed away |
+
+
+### Scoring-log rows added 2026-08-06 by the `industry_kr` run
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S17** | 2026-07-24 (industry_kr MACRO) | 2026-07-29 → **2026-08-05 (창 종료)** | ⚠ **`AMBIGUOUS`** — 관측값 **+29.34%**, 동결 임계 **A ≤15 / B ≥25 유지 / C 15–25 착지** | **2026-08-06 HANDOVER (industry_kr)** | ★ **창의 마지막 봉이 양쪽 다 존재하는 첫 시계에서 채점했다**(런 08:19 KST = 08-05 19:19 ET ⇒ 08-05 KR 종가·ADR 종가 둘 다 정착). 동일일자 계열(4번째 독립 재구축, `SKHY×10×KRW=X÷000660.KS−1`, `auto_adjust=False`): 07-29 **+31.51** · 07-30 **+62.56** · 07-31 **+18.85** · 08-03 **+30.76** · 08-04 **+39.84** · **08-05 +29.34**. **A 미발화**(창 내 최저 18.85 > 15). **B 미발화**(07-31 이 25 를 깼다). **C 도 미발화 — 종료값 29.34% 는 15–25 밴드 밖이고 밴드 안 프린트는 07-31 하나뿐**이다. ⇒ **셋 중 어느 것도 깨끗이 발화하지 않으므로 `AMBIGUOUS`**, 그리고 **이것은 시장이 아니라 등록에 대한 발견이다(D173)**: A·B 는 **경로조건**, C 는 **종점조건**이라 **밴드에 들어갔다 나오는 계열은 셋 다 만족하지 않는다.** ⚠ 08-05 런의 *"유일한 생존 분기는 C"* 는 **소거법**이었고 C 의 문자 조건은 오늘 충족되지 않았다 — L3 는 사후에 더 합리적인 임계로 비교하는 것을 금하므로 **소거법으로 C 를 발화시키지 않았다.** ★ **다만 두 읽기의 처방은 같다**: C 의 등록된 의미(*"부분적 — 더 좁은 밴드로 재등록"*)와 `AMBIGUOUS` 가 동일하게 **000660 유동 판독 정지 유지**를 낸다. ★★★ **그리고 S17-ANNEX 의 이중읽기가 규약 의존임이 드러났다(R48)**: ANNEX 는 *"ADR 다리를 한 세션 지연"* 만 규정하고 **환율 다리의 타임스탬프를 쓰지 않았다.** ADR지연+FX당일(08-05 런의 구현) → 07-31 **+23.21**(B 깨짐); ADR지연+**FX 동반지연**(이번 런) → 07-31 **+25.09**(B **0.09pp 차로 유지**). ⇒ **08-05 런의 *"두 읽기가 처음으로 수렴한다"* 는 문장을 철회한다(R48).** 동결 관측값(동일일자)의 판정은 영향 없다. **D174 등록**: 두 시장 종가로 스프레드를 동결할 때 지연 규약은 **가격 다리와 환율 다리 둘 다** 명시한다. ★ **안티시그널 먼저 확인, 미발화**: `module_disclosure 000660 --days 9` = 5건(08-05 SK스퀘어 대량보유 · 07-31 최태원 임원소유 · 실적 1 · 기타 2) — **발행사의 2.5% ADR 한도 상향 공시 없음** ⇒ **정지 유지(D1 / 철회된 R1: A 만이 정지를 풀 수 있다)** |
+| **S11** | 2026-07-23 (`catalyst_calendar --days 10`) | 2026-07-29 → **마감 2026-08-06 = 오늘** | **`FIRED-B`** — 관측값 **"발표 연기(간담회 잠정취소 · 8월 이후 · 무기한 연기 분위기) · 3연임 법적금지 최종 미확정"**, 동결 임계 **A 원안대로 입법 / B 권고수준 완화 ∨ 지연 / C 철회** | **2026-08-06 HANDOVER (industry_kr)** | ★★★ **6런 만에 처음으로 새 1차 자료가 나왔고, 그것이 나온 이유는 세계가 아니라 질의형이었다.** 등록 질의 `search "금융지주 지배구조" --days 5 --scope domestic` 는 오늘도 **1건**(mt 07-30)인데, **같은 코퍼스에 `fts search "3연임" --days 10 --kr`(본문 trigram 색인)를 걸면 11건**이고 그중 **mt 2026-08-05 「[광화문]3연임 금지가 금융지배구조 선진화? 번지수 틀렸다」** 는 제목이 「금융**지배구조**」라 **등록 질의로는 영원히 못 닿는다.** **M406**: 제목+요약 LIKE **1건** vs 본문 FTS **11건**, 동일 코퍼스·동일 창 ⇒ **R29(테마축)·R25(`capex cut`)의 세 번째 재현 — 도구가 아니라 질의가 틀렸다.** **본문(mt 07-30, 1,303자)**: 금융위 간담회 **잠정 취소**(8대 지주 회장 소집 예정이었으나 무산), 관계자 *"무기한 연기된 분위기… 상당 기간 못 나올 가능성"*, 개선안은 청와대·정무위에 **보고된 상태이나 3연임 법적 금지안은 최종 미확정**, 이억원 위원장 07-29 정무위 답변 *"조만간 내놓겠다"* 면서 **연임 횟수 제한 미확정**. **지연 사유로 명시된 것: 여당 내 반대 · 증시 폭락으로 우선순위 밀림 · 당국–청와대 이견.** ⚠ **등록 문구의 「위헌 심판이 지연시킨다」는 본문에 없다** ⇒ **D175**: B 가 결과(지연)에 메커니즘(위헌 심판)을 묶어 놨고 지연은 다른 메커니즘으로 왔다. **승격형: 분기는 관측값으로만 쓰고 메커니즘은 「의미」 칸에만 적는다.** ★★ **그리고 B 의 등록된 의미가 지금 상황을 과소서술한다 — 여기가 이 채점의 알파다**: mt 08-05 칼럼이 *"개선안에 결국 **3연임 금지를 포함시키기로 가닥**을 잡았다. 금융당국은 **주주총회 의결 기준을 대폭 강화하는 선에서** 대책을 마련했지만 **청와대가 3연임 금지를 밀어붙인 것**으로 알려졌다"* 고 적는다 ⇒ **일정은 B 로, 내용은 A 쪽으로 갈렸다.** ⚠ **증거등급 정직하게**: 단일매체·칼럼·"알려졌다" ⇒ `[news — 단일매체·칼럼·무출처]`, **방향만이고 분기 판정의 근거로 쓰지 않았다.** ⇒ **후속 브래킷 `S53-KR` 등록**(내용 다리, →2026-10-31). ★ **독립 확인**: `지배구조` 버킷 배율 **2.27× → 0.28×** 로 붕괴한 반면 `세제개편` 은 **3.52× 유지** ⇒ **08-05 런이 등록한 경고(*"지배구조 가속의 분모는 세제개편이지 FSC 패키지가 아니다"*)가 두 축의 분리로 확증됐다(M411).** ⚠ **D162 확정**: 316140 우리금융의 부활조건 다리 2 는 **S11 branch C(철회)** 를 AND 참조하는데 **B 가 발화한 이상 C 는 영원히 발화할 수 없다.** 다리 1(외국인 20d 순매수 부호 반전)은 08-05 런에서 **+104.9만주로 이미 충족** ⇒ **다리 1 충족 · 다리 2 도달불가 ⇒ AND 영구 미충족. 다음 런이 `resolve` 로 닫아야 할 1순위** |
+| — | — | — | ★ **조건정산형(condition-settled) 행 점검 — 6번째 연속 실행, 3번째 연속 공집합** | 2026-08-06 HANDOVER (industry_kr) | 모든 ARMED 행을 날짜정산형/조건정산형으로 분류. **KR 조건정산형 잔여 ZERO**(S39 FIRED-B · S43 `VOID` · S44 FIRED-B 가 07-30~08-03 에 클래스를 닫았다). **수행했고 결과가 null 인 점검**으로 기록 — 생략이 아니다. **`SCENARIOS_US.md` 열었다**: 런 시계 08-06 08:19 KST = **08-05 19:19 ET** 라 08-05 US 세션이 마감됐고 **08-05자 US 행(S9·S19·S23·S30·S31·S36·S53·PSX)은 오늘부로 날짜가 지났다.** ⚠ **이 런은 그중 어느 것도 채점하지 않았고 숨기지 않는다** — 사유: (i) 08-05 `industry_US` 런이 이미 돌아 S50 을 사후 채점했고 그 행들을 자기 창으로 들고 있다, (ii) **KR 데스크는 이 시계에 US 데이터 축(FRED·COT·FINRA)을 갖고 있지 않다** ⇒ **08-06 `industry_US` 런의 몫으로 명시 인계.** ★ **S8** (무날짜 `[blank]`)은 **여전히 열린 크로스데스크 항목**이고 **사람이 `VOID` 하거나 재등록해야 한다 — KR 데스크는 판정할 수 없다(P5).** **`EXPIRED` = 0 · 조용한 생략 = 0.** |
+| **S53-KR** | **2026-08-06 (industry_kr HANDOVER)** | → **2026-10-31** | — | — | ARMED — ★★ **S11 의 내용 다리 후속.** S11 은 *일정* 을 물었고 `FIRED-B` 로 닫혔다. **내용(3연임 법적금지가 최종안에 들어가는가)은 아직 관측되지 않았고, FIN 섹터 전체를 동시에 때리는 축은 그쪽이다.** 전문은 `SCENARIOS_KR.md`. **D173 적용 — 세 분기 전부 종점조건**(발표 시점의 조항 형태), 경로조건 없음. **D175 적용 — 분기 문구에 메커니즘(청와대/여당) 이름을 넣지 않았다.** |
+| **S54-KR** | **2026-08-06 (industry_kr MACRO §I)** | → **2026-09-30** | — | — | ARMED — ★★ **C10(*"재생에너지 = 유가연동인가"*)을 교란 없는 세션에서 정산한다.** 오늘 두 번째 관측이 나왔는데 **부호가 반대**다: 07-27 은 크루드 붕괴 → KR 재생에너지 4종 −12.7~−29.4%; 오늘 창은 브렌트 5일 **−12.54%** → 475150 초과 **+16.40pp** · 010060 **+28.22pp**(둘 다 벤치 `069500.KS`). **두 관측 다 교란요인이 있어 표본으로 못 쓴다** ⇒ 트리거 세션을 사전에 정의하고 σ 를 그 자리에서 산출한다. 전문은 `SCENARIOS_KR.md`. **DEEP-MATR 이 교란 크기를 쟀다: 관세 2세션 기여 +2.18pp = 010060 20일 초과 +40.00pp 의 ~5%** ⇒ **교란은 있지만 20일 움직임을 설명하지 못한다.** |
+
+---
 
 **Scoring rule**: a scenario is scored at its next HANDOVER after the event date, whether or not
 anyone remembers to look. An `EXPIRED` row is a process failure and is logged as one — an unscored
 scenario is how a desk keeps its wins and forgets its losses.
+
+---
+
+
+---
+
+## ★ MASTER INDEX — every registered bracket, its owner desk, and its file
+
+> **Added 2026-07-29 when this file was split by market.** ⚠ **Ownership is the REGISTERING desk,
+> not the subject market** — **S5** is about Korean exports and is US-owned; **S8** was registered
+> by US and **scored by KR**; **S33** was registered by KR and **scored by US**.
+> ⇒ **A desk may not skip the other file when it has a row to score there.** This index exists so
+> that "which brackets exist" is answerable from the spine alone, at ~2 KB instead of ~137 KB.
+
+| ID | Owner | File | Bracket |
+|---|---|---|---|
+| **S1** | US | `SCENARIOS_US.md` | S1 — Alphabet Q2 print |
+| **S52-KR** | KR | `SCENARIOS_KR.md` | S52-KR — Is the pharma OW a sector or a one-name proposition (→2026-08-19) |
+| **S2** | US | `SCENARIOS_US.md` | S2 — The 2026-07-29 cluster |
+| **S3** | US | `SCENARIOS_US.md` | S3 — 4Q26 DRAM contract guidance |
+| **S4** | US | `SCENARIOS_US.md` | S4 — Micron FQ4 print + FQ1'27 guide |
+| **S5** | US | `SCENARIOS_US.md` | S5 — KR semiconductor exports, 1–10 August |
+| **S6** | US | `SCENARIOS_US.md` | S6 — Intel FQ2 print |
+| **S7** | US | `SCENARIOS_US.md` | S7 — RTX + LMT |
+| **S8** | US | `SCENARIOS_US.md` | S8 — Hormuz "Strait open" / oil de-escalation |
+| **S9** | US | `SCENARIOS_US.md` | S9 — The DOVISH real-rate branch |
+| **S10** | KR | `SCENARIOS_KR.md` | S10 — USTR Section 301 "forced-labor tariff" on Korea |
+| **S11** | KR | `SCENARIOS_KR.md` | S11 — Financial holding company governance reform |
+| **S12** | US | `SCENARIOS_US.md` | S12 — ECB rate decision |
+| **S13** | US | `SCENARIOS_US.md` | S13 — ★ MSFT + META capex, and the branch nothing in the book brackets |
+| **S14** | US | `SCENARIOS_US.md` | S14 — Mastercard Q2 |
+| **S14-ANNEX** | US | `SCENARIOS_US.md` | S14-ANNEX — ★ pre-registered contamination notice (NOT a rewrite of S14) |
+| **S14-num** | US | `SCENARIOS_US.md` | S14-num — Mastercard Q2 |
+| **S15** | US | `SCENARIOS_US.md` | S15 — June PCE |
+| **S16** | US | `SCENARIOS_US.md` | S16 — Meta Q2 |
+| **S17** | KR | `SCENARIOS_KR.md` | S17 — ★ SK hynix ADR–ordinary premium |
+| **S18** | KR | `SCENARIOS_KR.md` | S18 — KT regulatory sanction hearing |
+| **S19** | US | `SCENARIOS_US.md` | S19 — ★★ FOMC 2026-07-29 |
+| **S20** | US | `SCENARIOS_US.md` | S20 — UPS Q2 |
+| **S20-ANNEX** | US | `SCENARIOS_US.md` | S20-ANNEX — UPS Q2 |
+| **S21** | US | `SCENARIOS_US.md` | S21 — STNG Q2 |
+| **S22** | KR | `SCENARIOS_KR.md` | S22 — SK이터닉스 KKR SPA closing |
+| **S23** | US | `SCENARIOS_US.md` | S23 — ★ FOMC 2026-07-29 |
+| **S24** | US | `SCENARIOS_US.md` | S24 — ★ MSFT/META/AMZN capex 2026-07-29→31 |
+| **S25** | US | `SCENARIOS_US.md` | S25 — ★ RE OW− |
+| **S26** | US | `SCENARIOS_US.md` | S26 — ★★ The credit escape hatch |
+| **S27** | KR | `SCENARIOS_KR.md` | S27 — ★★ Korea's 9th 석유제품 최고가격 designation |
+| **S28** | KR | `SCENARIOS_KR.md` | S28 — ★ SK이터닉스 임시주총 |
+| **S29** | KR | `SCENARIOS_KR.md` | S29 — 셀트리온: which branch is live |
+| **S30** | US | `SCENARIOS_US.md` | S30 — ★ The SUPPLIER leg's 20-day reversal |
+| **S31** | US | `SCENARIOS_US.md` | S31 — ★ Is the book's Energy epicenter the business or the war premium? |
+| **S32** | US | `SCENARIOS_US.md` | S32 — ★★ The positioning branch nothing brackets |
+| **S33** | KR | `SCENARIOS_KR.md` | S33 — ★ KR refiners on the first session that knows the crack held |
+| **S33-ANNEX** | KR | `SCENARIOS_KR.md` | S33-ANNEX — ★★ beta-contamination notice (**S33 is NOT re-frozen**) |
+| **S34** | KR | `SCENARIOS_KR.md` | S34 — ★★★ CXMT's capacity ramp: the supply-side falsifier the regime call n… |
+| **S35** | US | `SCENARIOS_US.md` | S35 — ★★ The regulated-Utilities print cluster |
+| **S36** | US | `SCENARIOS_US.md` | S36 — ★★ Materials: the A-grade price and the sweep's breadth disagree |
+| **S37** | US | `SCENARIOS_US.md` | S37 — ★★★ The CXMT branch in which a funded entrant is BULLISH for the incu… |
+| **S38** | KR | `SCENARIOS_KR.md` | S38 — ★ 006360 GS건설: accumulation against the largest crowded short this de… |
+| **S39** | KR | `SCENARIOS_KR.md` | S39 — ★★ The pharma shelter property: a second observation, beta-adjusted a… |
+| **S40** | US | `SCENARIOS_US.md` | S40 — ★★★ A capex GUIDE is not a capex MEASUREMENT when a gigawatt arrives … |
+| **S41** | US | `SCENARIOS_US.md` | S41 — ★★ The AI-issuer credit channel S26 explicitly excluded |
+| **S42** | US | `SCENARIOS_US.md` | S42 — ★★ This run's own new verdict, bracketed against itself |
+| **S43** | KR | `SCENARIOS_KR.md` | S43 — ★★ Is the shelter property a NAME or a SECTOR? (S39's successor) |
+| **S43-ANNEX** | KR | `SCENARIOS_KR.md` | S43-ANNEX — ★★ estimator-error notice (**S43 is NOT re-frozen**) |
+| **S44** | KR | `SCENARIOS_KR.md` | S44 — ★★ Who sold? The crash's agent, read off the KRW sign |
+| **S46** | US | `SCENARIOS_US.md` | S46 — ★★ AAPL: a ledger revival, hours before a binary the calendar did n… |
+| **S47** | US | `SCENARIOS_US.md` | S47 — ★★★ The Utilities SPREAD: the object neither S35 nor S24 contains |
+| **S48** | US | `SCENARIOS_US.md` | S48 — ★★ The optical / interconnect layer, which no bracket has ever cove… |
+| **S49** | US | `SCENARIOS_US.md` | S49 — ★★★ S8's successor: a crack observable that survives its own data |
+| **S50** | US | `SCENARIOS_US.md` | S50 — ★★ AMD/ANET 08-04 AI-capex-guidance read (asymmetric; only the CUT branch changes a conclusion) |
+| **S51** | US | `SCENARIOS_US.md` | S51 — ★★ NFP 08-07 FIN OW− flattener risk (2s10s ≤ +0.20 breaks the NIM mechanism) |
+| **S45** | KR | `SCENARIOS_KR.md` | S45 — ★★ The FSC governance package's announced clause form (S11's successor) |
+| **S17-ANNEX** | KR | `SCENARIOS_KR.md` | S17-ANNEX — ★★ leg-timing notice (**S17 is NOT re-frozen**) |
+| **S46-KR** | KR | `SCENARIOS_KR.md` | S46-KR — ★★★ the first session that knows SK이노's profit was lubricants, not crack |
+| **S47-KR** | KR | `SCENARIOS_KR.md` | S47-KR — ★★ Does S-Oil reproduce the "86% inventory gain" refining split? |
+| **S48-KR** | KR | `SCENARIOS_KR.md` | S48-KR — ★★★ S38's bigger twin: a 4.0%-float crowded short against the sheet's largest measured accumulation, on the SAME settlement date |
+| **S49-KR** | KR | `SCENARIOS_KR.md` | S49-KR — ★★ 롯데렌탈: the control-transfer the theme axis could not see, on the issuer's own re-disclosure deadline |
+| **S52** | US | `SCENARIOS_US.md` | S52 — ★★★ Iran: a DATED Strait reopening vs resumed strikes on Iranian ENERGY INFRASTRUCTURE |
+| **S53** | US | `SCENARIOS_US.md` | S53 — ★★ MPC (08-04) + PSX (08-05): the equity-EXECUTION leg S49 cannot see |
+| **S35-ANNEX** | US | `SCENARIOS_US.md` | S35-ANNEX — ★★★ basket-contamination notice: D is a merger-arb security (NEE/D DEFM14A 07-28) — **S35 and S47 are NOT re-frozen** |
+| **S54** | US | `SCENARIOS_US.md` | S54 — ★★★ The beneficiaries of S52 branch A, whom S52's own exposure map omits |
+| **S50-ANNEX** | US | `SCENARIOS_US.md` | S50-ANNEX — ★★ implied-move availability notice (**S50 is NOT re-frozen**) |
+| **S50-KR** | KR | `SCENARIOS_KR.md` | S50-KR — ★★★ Is the desk's own benchmark tracking its index? (`069500.KS` vs `^KS11`) |
+| **S51-KR** | KR | `SCENARIOS_KR.md` | S51-KR — ★★ S47-KR's primary-source re-confirmation on the 반기보고서 (evidence-grade pre-commitment) |
+| **S55** | US | `SCENARIOS_US.md` | S55 — ★★★ Is the crack release PHYSICAL or WAR-PREMIUM? The leg discrimination S49 cannot perform (HO% − CL%, → 08-11) |
+| **S56** | US | `SCENARIOS_US.md` | S56 — ★★★ SPCX 08-06 unlock: counted supply vs counted positioning, on the desk's own REJECTED rule (D6) |
+| **S57** | US | `SCENARIOS_US.md` | S57 — ★★ Materials UW− has NO live falsifier after 2026-08-05 (S36 closes; the DTWEXBGS row is dormant by construction) |
+| **S49-ANNEX** | US | `SCENARIOS_US.md` | S49-ANNEX — ★★★ five measured objections to S49-B's MEANING (**S49 is NOT re-frozen; the FIRE stands**) |
+| **S50-ANNEX (2nd)** | US | `SCENARIOS_US.md` | S50-ANNEX 2nd entry — ★★ AMD's straddle now COVERS its print for the first time (**S50 is NOT re-frozen**) |
+| **S58** | US | `SCENARIOS_US.md` | S58 — ★★★ MET 2026-08-06 print: a binary entered without a bracket, registered after the fact (→ 2026-08-11) |
+| **S59** | US | `SCENARIOS_US.md` | S59 — ★★ NDAQ: the slope-transmission mechanism DEEP-FIN named but never registered an observable for (→ 2026-08-12) |
+| **S60** | US | `SCENARIOS_US.md` | S60 — ★★ the XLE sale's falsifier, standing in for the fact that this desk has NO ledger that scores an exit (D159) (→ 2026-08-11) |
+| **S61** | US | `SCENARIOS_US.md` | S61 — ★★ The Red Sea / tanker war-risk premium: the leg the Iran-scoped brackets cannot reach (STNG+FRO vs SPY, → 2026-08-12) |
+| **S62** | US | `SCENARIOS_US.md` | S62 — ★★★ Are INDU OW− and UTIL UW one bet wearing two GICS labels? The correlated-tilt falsifier ({EMR,ETN,AME,PWR} median RS20 − XLU RS20, → 2026-08-07) |
+
+**Count: 78 brackets — 54 US-owned · 24 KR-owned.**
+⚠⚠ **S61 · S62 registered 2026-08-05 by the `industry_US` PREMORTEM (Lens 2).** IDs checked at
+**WRITE time** (D137 / D76 / M319) against every row in **all three** SCENARIOS files **and** both
+STANDING_VIEW files **and** RESEARCH.md: `grep` for `S61`/`S62` returned **0 registrations in all
+seven**; highest existing was **S60 (US) / S52-KR (KR)**.
+⚠ **S58 · S59 · S60 were registered 2026-08-05 by the human-execution loop directly into
+`SCENARIOS_US.md` and were MISSING from this index until now** — added here by the 08-05
+`industry_US` PREMORTEM. ★ **An index that does not contain a registered bracket is exactly the
+failure this index was created to prevent**; the omission is recorded rather than silently repaired.
+⚠ Those three rows are written in **Korean inside the English-pure US file** — a human call, named
+once and not changed by a pipeline stage.
+⚠⚠ **S55 · S56 · S57 · S49-ANNEX · S50-ANNEX(2nd) registered 2026-08-04 by the `industry_US`
+PREMORTEM (Lens 2).** IDs checked at **WRITE time** (D137 / M319) against EVERY row in **all three**
+SCENARIOS files **and** both STANDING_VIEW files **and** RESEARCH.md: `grep` for `S55`/`S56`/`S57`
+returned **0 registrations in all seven files**; highest existing was **S54 (US) / S51-KR (KR)**.
+⚠ **`S55` returns exactly ONE textual hit — prose inside the 08-03 collision note** (*"grep for
+S54/S55/S50-ANNEX returned 0"*) — **checked and confirmed not to be a registration, rather than
+assumed.** **The shared-counter proposal for a human now stands for a TWELFTH run.**
+★ **And this run ran D137's three-grep check as written** — highest `M###` **355**, highest `D###`
+**148**, highest `R##` **43** — before assigning **M356–M370 · D149–D154 · R44**.
+⚠⚠ **S50-KR · S51-KR registered 2026-08-04 by the `industry_kr` run.** IDs checked at **WRITE time**
+(**D137**'s measured requirement, per-counter) against EVERY row in **all three** SCENARIOS files **and**
+both STANDING_VIEW files **and** RESEARCH.md: `grep` for `S50-KR`/`S51-KR` returned **0 in all seven
+files**; highest existing was **S54 (US) / S49-KR (KR)**. The **`-KR` suffix is mandatory here** — S50
+and S51 are already US-owned (registered 2026-07-31). **The shared-counter proposal for a human now
+stands for an ELEVENTH run.** ★ **And this run ran D137's three-grep check as written** — highest
+`M###` **343**, highest `D###` **142**, highest `R##` **42** — before assigning M344–M355 · D143–D148 · R43.
+⚠⚠ **S54 · S50-ANNEX registered 2026-08-03 by the `industry_US` PREMORTEM.** IDs checked at **WRITE
+time**, not read time (**M319**'s measured requirement) against EVERY row in BOTH files: `grep` for
+`S54`/`S55`/`S50-ANNEX` returned **0 in all three files**; highest existing was **S53 (US) / S49-KR
+(KR)**. **The shared-counter proposal for a human now stands for a TENTH run.**
+⚠⚠ **S52 · S53 registered 2026-08-02 by the `industry_US` PREMORTEM (Lens 2).** IDs checked against
+every existing row in BOTH files (**D76**); highest existing was **S51 (US)** and **S49-KR (KR)** —
+**no collision.** ★ **And this run observed the collision hazard live for the first time: the
+`industry_kr` desk registered S48-KR/S49-KR into THIS FILE while the US run was mid-stage**, so the
+US run's first read of the master index (61 brackets) was already stale by the time it wrote. **The
+append-only discipline held and nothing was clobbered — but "check IDs at write time, not at read
+time" is now a MEASURED requirement rather than a precaution.** **The shared-counter proposal for a
+human now stands for a NINTH run, and it is the second same-day concurrent-write instance
+(cf. the 2026-06-30 `industry_US` double-run).**
+⚠ **S48-KR · S49-KR registered 2026-08-02 by the `industry_kr` BET/ALPHA stages.** IDs checked
+against every existing row in BOTH files (**D76** collision class); highest existing was **S51 (US)**
+and **S47-KR (KR)**. **The shared-counter proposal for a human now stands for an eighth run.**
+⚠ **S50 · S51 registered 2026-07-31 by the `industry_US` PREMORTEM.** IDs checked against every existing
+row in BOTH files (**D76** collision class); highest existing ID was S49 (US) / S47-KR (KR). **The
+shared-counter proposal for a human now stands for a seventh run.**
+⚠ **S46-KR · S47-KR are suffixed `-KR` deliberately: `S46`–`S49` were already taken by the
+2026-07-30 `industry_US` PREMORTEM.** The **D76** ID-collision class was checked against every
+existing row in BOTH files before writing. **The shared-counter proposal for a human now stands for a
+sixth run** — and this run is the first that had to *work around* the collision rather than merely
+report it.
+⚠ **S46–S49 registered 2026-07-30 by the `industry_US` PREMORTEM.** IDs were checked against EVERY existing row in BOTH files before writing (the **D76** collision class); the highest existing ID was S45, taken by the `industry_kr` run the same morning. **The shared-counter proposal for a human now stands for a fifth run.**
+⚠ **The master scoring log above stays SHARED and un-split** — an `EXPIRED` row is a process
+failure in whichever market it sits, and splitting the log would hide half of them from each desk.
+
+| **S58 · S59 · S60** | **2026-08-05 (human-execution loop, 파이프라인 스테이지 아님)** | see `SCENARIOS_US.md` | — | — | ARMED — ★ **2026-08-04 KIS 실계좌 집행 4건을 사후에 채점 가능하게 만든 행들이다.** **S58(MET)** 은 **브래킷 없는 바이너리에 단방향 진입한 규칙 위반의 기록**이고(MET 는 08-05 장마감후 프린트였다), **S59(NDAQ)** 는 **DEEP-FIN 이 회귀로 지목했으나 관측치를 등록하지 않은 메커니즘**에 벤치를 XLF 로 두어 시장베타를 뺀 검정이며, **S60(XLE 매도)** 은 **이 데스크에 매도를 채점할 원장이 없다는 사실의 대리물**이다(**D159**). ⚠ **세 밴드 모두 trailing-252 실측 분위수에서 뽑았고(D93), 세 추정량 모두 중심이 0 이 아니어서 그 편향을 등록 시점에 밝혔다** — MET +0.130 · NDAQ−XLF −0.159 · XLE−SPY +0.332 |
+| **S58** | US | `SCENARIOS_US.md` | S58 — ★★★ MET 08-06 프린트: 브래킷 없이 들어간 바이너리를 사후 등록 (실집행 채점) |
+| **S59** | US | `SCENARIOS_US.md` | S59 — ★★ NDAQ: DEEP-FIN 이 회귀로 지목했으나 관측치가 없던 메커니즘 (벤치 XLF) |
+| **S60** | US | `SCENARIOS_US.md` | S60 — ★★ XLE 매도의 반증조건 — 집행 채점 원장 부재(D159)의 대리물 |
+
+| **S63** | US | `SCENARIOS_US.md` | S63 — ★★★ Are UW Utilities + UW Real Estate + OW Financials ONE duration bet wearing three GICS labels? (DUR composite, CPI 08-12 → 08-13) |
+| **S64** | US | `SCENARIOS_US.md` | S64 — ★★ Do N+ Energy and OW− Industrials take the SAME crude tick in opposite directions? (XLI forward-6-session excess vs SPY, → 08-13) |
+| **S65** | US | `SCENARIOS_US.md` | S65 — ★★★ FIN's OW promotion tested on the axis it was made on — median RS20 {JPM,BAC,WFC,BRK-B} vs SPY (NFP 08-07 → 08-11) |
+
+## Scored by the 2026-08-06 `industry_US` run (appended to the MASTER scoring log — the log stays shared and un-split)
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S30** | 2026-07-27 (industry_US PREMORTEM Lens 2) | → 2026-08-05 settle | ★★ **FIRED-B** | **2026-08-06 HANDOVER §2b (industry_US)** | **Frozen observable, median RS20 vs SPY of {STX, MU, WDC} on the 2026-08-05 settled close: STX −5.87 · MU −9.13 · WDC −8.93 ⇒ median −8.93, against branch B's "stays ≤ 0".** ★★★ **The knife-edge did not merely hold — it inverted.** The observable ran **−23.7 (registration 07-24) → −9.55 (08-03) → −1.0 (08-04) → −8.93 (08-05)**: nine sessions of convergence toward branch A **reversed −7.9pp on the final bar**. ⇒ **M149's decaying-stock reading is NOT falsified and the roll-off defence holds.** ★★★ **And the registration's own control pair decided the MEANING in the direction the desk did not get to claim**: DELL and HPE were **both already positive** (+3.84 / +15.87 on 08-05), so per S30's text *"if both turn it is an IT-beta event"* — **had the median flipped, the reading was pre-committed to IT-beta.** It did not flip, so **the memory leg reversed while the IT-beta control pair stayed positive** = the cleanest memory-specific signature the bracket could produce. ⚠ **The 08-05 HANDOVER pre-committed "B at a 1.0pp margin" one day early; the final bar came in at 8.93pp.** ★ **Estimator verified before scoring (C1): the RS convention was re-derived from scratch and reproduced the 08-05 run's independently-computed 08-04 figures to 0.1pp on all five names.** ⚠ **P10's carried note stands: the observable moved in a sign-relevant way on four of four sessions, which is the strongest evidence this desk has produced for L3's rule that branch information content must be checked against the observable's own volatility BEFORE freezing** |
+| **S31** | 2026-07-27 (industry_US PREMORTEM Lens 2) | → 2026-08-05 settle | 🚨 **`AMBIGUOUS`** — and it is a **registration** finding, not a market one | **2026-08-06 HANDOVER §2b (industry_US)** | **XOM RS20 vs SPY on the 2026-08-05 settled close = +4.17, with RS60 vs SPY +0.52 quoted alongside as the frozen observable requires.** Branch A needs **> +10**, branch B needs **≤ 0** — **XOM finished inside the unassigned corridor, where it sat all week (+5.5 on 08-04).** ⇒ **per L3, `AMBIGUOUS` is a finding about the scenario: the two branches do not partition the observable's range and the MODAL outcome was given no meaning at registration.** ⚠⚠ **Second consecutive `AMBIGUOUS` on this row — the 08-05 run pre-committed exactly this verdict and the final bar confirmed it. Two occurrences is a pattern, not an accident.** ★ One measured detail carried forward: the **13.1pp RS20/RS60 gap at registration closed to +3.65pp, and it closed by RS20 FALLING, not RS60 rising** — the exhaustion geometry the bracket was written to detect, arriving without a scoreable branch. ⚠ **The branch labels also inherit R39** (*"the one with 0% refining exposure (M146)"*) — scored on the frozen observable regardless, meaning-inheritance recorded not smoothed. 🚨 **And a reconciliation fact found the same run: XOM is NOT in the book** (`cycle_exposure` reads the held Energy epicenter as **MPC, PSX**), so a bracket written throughout as *"the only Energy name the book holds"* has been describing a position that no longer exists. ⇒ **PREMORTEM must re-register with an exhaustive partition, or retire it** |
+| **S36** | 2026-07-28 (industry_US PREMORTEM Lens 2) | → 2026-08-05 settle | **FIRED-B** | **2026-08-06 HANDOVER §2b (industry_US)** | **XLB 5-day excess return vs SPY on settled closes = −3.79pp ⇒ branch B ("excess ≤ 0, or the green count rises above 0").** Green count is separately still **0 of 12**, so B fires on the excess leg alone and the second leg is not needed. Pre-committed **B by 4.76pp** on the 08-04 bar; final bar **B by 3.79pp**. ⚠⚠ **The fire does NOT settle the divergence it was written to settle.** On the same day the flow axis went the other way: **MATR eqflow +0.167 (3rd of 11) and Δ +0.204 (3rd) against 0 greens and breadth 0.00**, which moved ROTATION to upgrade MATR **UW− → N−**. ⇒ **the price axis fired B while the breadth axis strengthened — three straight weeks of the two axes disagreeing, and a settled bracket did not resolve it.** **S57 carries the same series to 08-12 and is already inside its branch-B region by 1.39pp.** ⚠ **Copper's 96th COT percentile was NOT cited** — byte-identical 07-28 file for a 5th read (next publication 08-07) |
+| **S53** | 2026-08-02 (industry_US PREMORTEM Lens 2) | MPC 2026-08-04 + PSX 2026-08-05 | **FIRED-A** *(confirmatory, LOW information **by its own registration**)* | **2026-08-06 HANDOVER §2b (industry_US)** | **Both legs A, scored on the STATED GUIDE as registered — not on the price reaction.** **PSX (08-05)**: revenue **$52.04bn (+55.3% y/y)**, EPS **$9.41 vs $7.68 consensus (+22.5% surprise)**, worldwide realised refining margin **$24.08/bbl vs a $23.15 four-analyst estimate**, and the guide — *"expects soaring refining margins will last through the next quarter and **into 2027**, as the impacts of supply disruptions from the war in Iran likely will continue to weigh on markets for fuels such as gasoline and diesel"* `[seekingalpha body + bloomberg title + Reuters via google_en — 3 independent outlets]`. **MPC (08-04)**: *"Beats Q2 Earnings and Revenue Estimates"* / *"Q2 2026 earnings beat on refining margin surge"* `[nasdaq 4,847자 + yahoo_finance bodies]`. **No hedging-timing lag, no unplanned turnaround drag, no compression language in either.** ⚠⚠ **C2 — the half that does NOT confirm, recorded rather than smoothed: PSX's Atlantic Basin/Europe margin printed $14.44/bbl against a $19.77 four-analyst estimate, a 27% MISS and the ONLY regional miss** (Western/Pacific $29.65 vs $19.93 · Central $29.56 vs $26.35 · Gulf Coast $24.25 vs $22.42 all beat). **The branch is scored on the guide as registered; the regional dispersion is recorded as a fact and NOT folded into the verdict.** ★ **And it is a 2.05× spread inside one company, in the geography physically closest to the Russian distillate shortfall — W5 with a receipt, handed to DEEP-ENRG.** ⚠ **The registration's own caveat binds: n ≈ 1** (the prints are date-clustered 08-04/08-05 and are not independent samples, S1), and **branch A can only confirm — no conclusion changes** |
+| **S52** | 2026-08-02 (industry_US PREMORTEM Lens 2) | → 2026-08-06 | **FIRED-C** (neither branch) | **2026-08-06 HANDOVER §2a + DRIFT (industry_US)** | ★★★ **The evidence CLASS branch A demanded finally arrived, and it still fails the threshold.** Branch A requires *"a **dated** Strait-reopening term in a **primary text** … a direct Iran-government statement carrying **a date or 'effective' language**."* On 2026-08-05 Iran's Foreign Ministry spokesperson **Esmaeil Baghaei** stated on the record `[hellenicshipping 2,626자 · bbc 3,153자 · aljazeera 3,525자 · guardian · euronews · scmp · upi · ft — 8+ independent outlets, bodies read]` that Iran and Oman have agreed **the geographic coordinates for a shipping route**, that a joint announcement is **"in its final stage, provided certain third parties do not interfere"**, and — decisively — that **"any agreement between Iran and Oman does not, by itself, guarantee security in the strategic waterway."** ⇒ **coordinates of a route ≠ a dated reopening. No date. No "effective" language. An explicit non-guarantee.** ⚠ **C2, both halves**: `guardian`, citing a senior Iranian source and two regional officials via Reuters, records that they **"pushed back against assertions by Donald Trump that a deal reopening the strait was imminent, saying important details still had to be agreed"**, and that the reported terms would **"give Tehran control over ships entering the gulf"** — a concession, not an opening. **Branch B separately NOT met**, and R46's category rule is what caught it: an `Iranian AND refinery AND strike` query surfaces, at the top, two 08-05 items reading *"strikes have deepened a nationwide gasoline shortage, with several major refineries shut down"* — **body-read, those refineries are RUSSIAN** `[nasdaq/Barchart + oilprice bodies]`. **A title-level read fires branch B on the wrong country.** ★★★ **This threshold has now refused FOUR escalating near-misses across four consecutive runs** (a Bessent conditional · a CENTCOM "free and open" post · a Trump "perimeters of a deal" post · a direct Iran-government route agreement) **while the price paid −12%+ against the desk.** ⚠ Scoring clock stated: HANDOVER measured it at **09:11 ET** with ~15 hours of the window remaining, pre-committed **C**, and **DRIFT re-checked before writeback with no change** |
+
+## Scored by the 2026-08-07 `industry_kr` run (appended to the MASTER scoring log — the log stays shared and un-split)
+
+> ⚠ Written by **append** (`cat >>`), never a whole-file `'w'` rewrite — the **D165** pre-commitment
+> after the 2026-08-05 truncation, kept for a third consecutive run.
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S50-KR** | 2026-08-04 (industry_kr MACRO) | → **2026-08-07** (observable = the 08-04/08-05/08-06 settled closes) | ★★★ **FIRED-A** | **2026-08-07 HANDOVER §2a (industry_kr)** | **Frozen observable, `\|069500.KS daily % − ^KS11 daily %\|` on the three settled sessions, `auto_adjust=False`: 08-04 `069500` +1.2361% vs index +1.6221% ⇒ **0.386pp** · 08-05 +3.9569% vs +3.7634% ⇒ **0.194pp** · 08-06 −5.1774% vs −4.5751% ⇒ **0.602pp**. Branch A required all three < 1.5pp ⇒ **A, with the largest of the three at 40% of the line.** ⇒ **the 07-31 (+6.26pp) / 08-03 (−3.80pp) deviation was a crash/rebound ETF-premium artifact; only those two sessions' residuals are contaminated and the benchmark `exposure_rule` uses does NOT become a human decision item.** ★ **The registration's own substitution rule was executed rather than improvised**: `^KS11` **has no 2026-08-06 bar** (it stops at 08-05 — **D130's 4th consecutive occurrence**), and the bracket had pre-written *"substitute the `module_KIS --futopt` 기초지수 종합 and say so — do NOT use `^KS200` (D146: path-dependent)."* Substitute pulled at 08:45 KST pre-open: `A05608` → **기초지수 종합 6,296.38 at 0.00% on the day** (i.e. the settled 08-06 close) against the 08-05 `^KS11` close 6,598.2598 ⇒ **−4.5751%**; the same call's **KOSPI200 982.92** is recorded for cross-check. ⚠ **Anti-signal checked FIRST and did not fire**: the VOID condition is *"a KRX-wide trading halt / circuit breaker truncating any of the three sessions"* — a 4-day domestic sweep returns **zero circuit-breaker activations** (all 21 `서킷브레이커` hits are retrospective/analysis pieces). ⚠⚠ **Recorded without widening the anti-signal**: a **KOSPI sell sidecar fired on 08-06** [chosun 속보 · mt · yonhap] and **KOSDAQ buy sidecars ran three consecutive sessions 08-03~08-05 (a first)**. **A sidecar is a 5-minute program-trading halt, not a KRX-wide halt, so it is not the registered VOID condition** — narrowing or widening an anti-signal after the print is the same violation as moving a threshold. The fact is logged, not used. ⚠ **Scope held exactly as registered (C4)**: branch A establishes *"the desk's benchmark and the most-quoted index do not diverge repeatedly"*, **NOT** *"the ETF has no tracking error"* — `069500.KS` tracks **KOSPI200** while the comparison index is the **composite**, and the composite-vs-200 dispersion is still measurable on the same bar (`069500.KS` 98,900/100 = **989.0 vs KOSPI200 982.92 = +0.62% premium**). ⚠ **n = 3 sessions (S1)**: A says the two crash-window gaps were the exception, not that the gap cannot reopen in the next dislocation |
+| — | — | — | ★ **Condition-check executed on every event-conditional row (SIXTH consecutive run) — and the class is now CLOSED** | 2026-08-07 HANDOVER §2b (industry_kr) | **Every ARMED row was classified date-settled vs condition-settled. Result: there are ZERO condition-settled KR rows left.** S39 (FIRED-B 07-30), **S43 (`VOID` 08-03)** and **S44 (FIRED-B 08-03)** all consumed the *"next `069500.KS` session ≤ −3.0%"* trigger. ⚠⚠ **And that is itself the finding: `069500.KS` closed −5.177% on 2026-08-06 and NO registered observable was settled by it.** The desk bracketed the crash class three times, spent all three, and currently has **no instrument that a down session can pay** — registered as **D194**, an *registration* gap rather than a market one. **All remaining KR ARMED rows are date-settled**: S27 (~late 08) · S34 (10-31) · S38 (08-12) · S45 (09-30) · S48-KR (08-12) · S49-KR (10-30) · S51-KR (08-17, filing window 08-14 ±3 business days) · S52-KR (08-19) · S53-KR (10-31) · S54-KR (09-30). **`EXPIRED` = 0 · silent skips = 0.** ★ **`SCENARIOS_US.md` opened and checked (the shared-spine rule)**: the 08-06 `industry_US` run closed its past-dated rows (S30 FIRED-B · S31 `AMBIGUOUS` · S36 FIRED-B · S53 FIRED-A · S52 FIRED-C), and S21/S32/S49/S50 already carry verdicts in this log ⇒ **no US row was left past-dated for this desk to score.** ⚠ **The US rows dated 2026-08-07 (S35 · S35-ANNEX · S47 · S62, and S65's NFP trigger) were deliberately NOT scored**: NFP prints 08-07 08:30 ET = 21:30 KST and this run's clock is **08:45 KST**, so scoring them would be observable fabrication. Handed to the US desk explicitly |
+
+## MASTER INDEX — appended 2026-08-07 by the `industry_kr` run
+
+| **S55-KR** | KR | `SCENARIOS_KR.md` | S55-KR — ★★★ 관세 서명 직후 첫 3세션의 외국인 순매수 (R53 이 만든 관측 공백을 브래킷한다, → 2026-08-13) |
+
+**Count: 79 brackets — 54 US-owned · 25 KR-owned.**
+⚠⚠ **S55-KR registered 2026-08-07 by the `industry_kr` BET/ALPHA stages.** IDs checked at **WRITE
+time** (D137, per-counter) against every row in **all three** SCENARIOS files **and** both
+STANDING_VIEW files **and** RESEARCH.md: `grep S55-KR` returned **0 in all seven**; highest existing
+was **S65 (US) / S54-KR (KR)**. The **`-KR` suffix is mandatory** — S55 was taken by the 2026-08-04
+`industry_US` PREMORTEM (D76). **The shared-counter proposal for a human now stands for a THIRTEENTH run.**
+★ **And this run ran D137's three-grep check as written** — highest `M###` **450**, highest `D###`
+**192**, highest `R##` **52** — before assigning **M451–M465 · D193–D201 · R53–R55**.
+
+## MASTER INDEX — appended 2026-08-07 by the `industry_US` run (PREMORTEM registrations)
+
+> IDs checked at WRITE time against EVERY row in BOTH scenario files (the D76 collision class):
+> highest existing was **S65 (US) / S55-KR (KR)** ⇒ this run took **S66 – S69**.
+
+| **S66** | US | `SCENARIOS_US.md` | S66 — ★★★ The BULL-steepener-with-credit-fear leg S51's own text refuses to score (ΔDGS2 + ΔHY OAS from the 08-05 anchor; **four branches A / A′ / B / C — the first exhaustive partition written on this desk**, NFP 08-07 → first FRED close covering it, expect 08-10) |
+| **S67** | US | `SCENARIOS_US.md` | S67 — ★★★ Was this run's own ENRG N+ → OW− promotion right? (median RS20 vs SPY of {MPC, VLO, PSX}, → 08-13) |
+| **S68** | US | `SCENARIOS_US.md` | S68 — ★★★ Is the COMM UW → UW− promotion money broadening or a revision mirage? (two independently-scored legs: median RS20 vs SPY of {DIS, EA} + DIS current-year revision breadth, → 08-13) |
+| **S69** | US | `SCENARIOS_US.md` | S69 — ★★ MET: a 🟢가속 flow tag against FALLING estimates (MET RS20 vs SPY quoted with its FY revision breadth, → 08-13) |
+
+| **S68-ANNEX** | US | `SCENARIOS_US.md` | S68-ANNEX — 🚨🚨 leg (i) is half a NON-TRADING security: **EA went private 2026-08-04/05 ($55bn Saudi-led buyout, Form 25-NSE + 8-K 2.01/5.01)**; price frozen 209.70 on two ZERO-volume bars. **S68 NOT re-frozen — leg (i) VOID BY CONSTRUCTION, leg (ii) (DIS revision breadth) stands.** D50 third instance; the COMM promotion it tested is WITHDRAWN |
+
+## Scored by the 2026-08-08 `industry_kr` run (appended to the MASTER scoring log — the log stays shared and un-split)
+
+> ⚠ Written by **append**, never a whole-file `'w'` rewrite — the **D165** pre-commitment, **6런 연속 유지.**
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| — | — | — | ★ **날짜 지난 KR 행 0건 — 채점할 것이 없었고, 그 사실을 확인한 과정을 적는다** | 2026-08-08 HANDOVER §2 (industry_kr) | 모든 ARMED 행을 날짜정산형/조건정산형으로 전수 분류. **이벤트 날짜가 2026-08-08 이전인 KR 행이 하나도 없다** — 직전 런이 S50-KR 을 `FIRED-A` 로 닫으면서 큐가 비었고, **다음 정산점은 08-11(S22)** 이다. **조건정산형(event-conditional) 잔여 = ZERO, 4런 연속** (S39 FIRED-B · S43 `VOID` · S44 FIRED-B 가 클래스를 닫았다). ⚠⚠ **그리고 그 공백이 오늘도 비용을 낳는다 — `D194` 는 메워지지 않은 채 두 번째 런을 넘어간다**: 이 데스크에는 **하락 세션을 정산할 등록 관측값이 여전히 0개**이고, 08-06 의 **−5.177%** 세션은 끝내 어떤 브래킷도 사지 못했다. ⇒ **오늘 `S56-KR` 을 등록해 부분적으로 메운다.** ★ **`SCENARIOS_US.md` 열어서 확인(공유 스파인 규칙)**: 08-07 `industry_US` 런이 자기 창을 들고 있고, **S35(FIRED-A) · S47(FIRED-B) 은 이미 08-02 에 채점 완료**돼 로그에 있다 ⇒ **이 데스크가 채점해야 할 날짜 지난 US 행은 없다.** ⚠ **여전히 열린 크로스데스크 항목 `S8`**(무날짜 `[blank]`)은 **다섯 번째 런째** 정산 불가로 넘어간다 — **KR 데스크는 판정할 수 없고(P5) 사람이 `VOID` 하거나 재등록해야 한다.** 조용히 넘기지 않고 다시 적는다. **`EXPIRED` = 0 · 조용한 생략 = 0.** |
+| **S55-KR** | 2026-08-07 (industry_kr BET/ALPHA) | → 2026-08-13 (관측창 08-07·08-10·08-11) | — **세션 1/3 관측, 판정 없음** | (관측 2026-08-08 HANDOVER/MACRO §F-1) | **첫 세션 = 08-07 정착: 010060 외국인 −4.1만주**(밴드 ±20만 안). 함께 보고(판정 미합산): 기관 +4.3만 · 개인 +0.6만 · 종가 272,500 **+11.68%**; 레인 확인용 009830 외국인 **−112.5만주 = 5일 창 최대 매도**, 기관 +136.1만, 종가 33,900 **+11.51%**. ★ **안티시그널 3건 전수 확인, 전부 미발화**: (i) **한국 예외조항 — 라이브 WebSearch 로 확정적으로 부재**(한국은 예외가 아니라 **Section 232 + HTSUS Column 1 합산 15% 상한** 대상이고 EU·일본·대만·스위스·리히텐슈타인과 동일 처우) · (ii) `module_disclosure 010060 --days 5` = **공시 0건** · (iii) 08-07 KRX 전체 거래정지 없음. ⇒ **정상 ARMED, 남은 세션 08-10 · 08-11.** ⚠ **말레이시아산 처우는 1차 미확인으로 `unknown` 유지(C3)** — 유진투자증권의 *"테라서스 말레이시아산은 15% 관세 대상이 아니다"* 는 증권사 서술이고 포고령 본문으로 확인하지 못했다 |
+
+## MASTER INDEX — appended 2026-08-08 by the `industry_kr` run
+
+| **S56-KR** | KR | `SCENARIOS_KR.md` | S56-KR — ★★★ 「탑재량(GB/GPU) 레버」가 HBM 순수도로 000660/005930 을 가르는가 (벤치 `069500.KS` 일간 초과수익 차의 부호 다수결, 3세션, → 2026-08-12) |
+
+**Count: 80 brackets — 54 US-owned · 26 KR-owned.**
+⚠⚠ **S56-KR registered 2026-08-08 by the `industry_kr` MACRO/ALPHA stages.** IDs checked at **WRITE
+time** (D137, per-counter) against **all three** SCENARIOS files **and** both STANDING_VIEW files
+**and** RESEARCH.md: `grep S56-KR` returned **0 in all seven**; **`S56` (US) exists in 11 places** ⇒
+**the `-KR` suffix is mandatory** (D76 collision class). Highest existing was **S69 (US) / S55-KR (KR)**.
+**The shared-counter proposal for a human now stands for a FOURTEENTH run.**
+★ **And this run ran D137''s three-grep check as written** — highest `M###` **486**, highest `D###`
+**210**, highest `R##` **59** — before assigning **M487–M500 · R60**.
+🚨 **New counter finding, stated rather than papered over**: **the dig counter has the same collision
+the scenario counter had.** This run''s stages wrote **D202-KR … D208-KR** and its DEEP-IT agent wrote
+**D209-KR … D214-KR**, while the 2026-08-07 `industry_US` run already owns **D202–D210 unsuffixed**.
+**The `-KR` suffix keeps them distinct and that is how they are registered in `RESEARCH.md`** — but the
+defect is now on the record as **D211** (see RESEARCH Part C).
+
+
+## Scored by the 2026-08-08 `industry_US` run (appended to the MASTER scoring log — the log stays shared and un-split)
+
+> ⚠ Written by **append**, never a whole-file `'w'` rewrite — the **D165** pre-commitment, **7th
+> consecutive run.**
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S62** | 2026-08-05 (industry_US PREMORTEM Lens 2) | → 2026-08-07 settle | ★★ **FIRED-B** — **and it is DEGENERATE by its own registration** | **2026-08-08 HANDOVER §2a (industry_US)** | **Frozen observable, settled 2026-08-07 close: (median RS20 vs SPY of {EMR, ETN, AME, PWR}) − (XLU RS20 vs SPY). EMR +11.529 · ETN +7.740 · AME +5.986 · PWR −0.406 ⇒ median +6.863; XLU −6.389; SPREAD +13.252**, against branch B ≥ +7.42 ⇒ **B, cleared by 5.83pp.** ★ **Estimator verified BEFORE scoring (C1)**: the convention was re-derived from scratch and reproduced the 08-07 HANDOVER's independently-computed **08-06** figures on **every leg to ≤0.004pp** (EMR 11.626 vs 11.63 · ETN 8.196 vs 8.20 · AME 5.651 vs 5.65 · PWR −2.291 vs −2.29 · median 6.924 vs 6.925 · XLU −6.119 vs −6.12 · spread **13.043 vs 13.045**). ⇒ **What it establishes: INDU-electrical and Utilities are SEPARABLE on this observable — the correlated-tilt objection PREMORTEM raised is NOT confirmed by its own registered test.** ⚠⚠ **What it does NOT establish, and this is the larger finding: branch A sat 19.16pp away on the final bar, so the fire is ONE-WAY CONFIRMATION with near-zero information content — `D206` confirmed on a settle rather than predicted.** ★★ **The named contamination mechanism did NOT fire**: the 08-07 HANDOVER flagged that **VST prints from inside XLU** and a large beat would compress the spread toward A without moving the leg it is long. Measured on the settle — **VST −0.56% · XLU +0.53% · SPY +0.61%**, so XLU lost only **0.08pp** to SPY and **the spread WIDENED +0.209pp**, in the direction it was already tracking. ⇒ **`R58` (VST reported PRE-market, not AMC) was RIGHT about the mechanism and it turned out not to change the outcome — both halves recorded rather than the convenient one.** ⚠ **Scoring clock: 09:1x ET Saturday, market closed since Friday's settle ⇒ the scoring bar is fully settled, D74 = 0** |
+| — | — | — | ★ **Condition-check executed on every event-conditional US row** | 2026-08-08 HANDOVER §2b (industry_US) | **Against a `[FRED]` pull one day fresher than the 08-07 run had (`asof` 2026-08-06): `S9` real 10y 2.43 vs a ≥2.55 kill = 12bp buffer (⚠ narrowed 14 → 12bp, THIRD consecutive narrowing) · `S23`/`S51` derived 2s10s 4.69 − 4.25 = +0.44 vs a ≤+0.20 kill = 24bp (narrowed 25 → 24; the 08-07 widening did NOT continue) · `S26` HY OAS 2.71 vs ≥3.10 = 39bp (★ WIDENED 35 → 39bp — credit TIGHTENED into the print) · `S41` IG OAS 0.78 vs ≥0.90 = 12bp, unchanged for a 4th read.** ★★★ **`S66` is correctly NOT scoreable and the reason is now a measurable defect: `DGS2`, `DGS10`, `DFII10` and `BAMLH0A0HYM2` all stop at 08-06, so the 08-07 print is uncovered — while `T10YIE`, which IS `DGS10 − DFII10`, printed 08-07 at 2.25.** ⇒ **`D212`; S66 stays ARMED, expect 08-10.** ⚠ **The 10y breakeven's 1bp fall is recorded as the ONLY post-print FRED observable in existence and is explicitly NOT used to call the direction (C3).** 🚨🚨 **`S8` carried un-scoreable for a SEVENTH consecutive run — undated `[blank]`, must be `VOID`ed or re-registered BY A HUMAN (P5). Named again, not dropped.** **`EXPIRED` = 0 · silent skips = 0 · past-dated rows unscored = 0** |
+| — | — | — | ★★ **`D206`'s staged rule EXECUTED for the whole board — the first branch-REACHABILITY audit on this desk** | 2026-08-08 HANDOVER §2c (industry_US) | **Distance to the nearest branch, on the settled bar: S62 A 19.16pp ❌ unreachable (settled today) · S57 A 0.59pp ✅ · S61 B 0.006pp ✅ · S60 B already past by 1.90pp ✅ · S58 A 1.33pp with one session left △ · S65 A 3.01 / B 3.46pp ✅ genuinely two-sided · S55 A 3.32 / B 6.18pp △ · S59 blocked by its 2s10s CONDITIONING leg, not by level · S68 leg (i) VOID by construction.** ⇒ ★ **the statistic this produces is about REGISTRATION QUALITY, not any one row: of nine live US brackets, one settled degenerate, one is void on half its construction and one is blocked by a conditioning leg — a third of the board could not have paid information this week regardless of what the market did.** 🚨 **And PREMORTEM Lens 2 found the SIBLING failure: `S61` sits 0.006pp from branch B against ±7.2–8.7% implied moves ⇒ it will cross on ordinary noise, i.e. it is not unreachable but INEVITABLE.** ⇒ **`D216` — reachability must be checked in BOTH directions, and this desk measured both failure modes inside one week** |
+| — | — | — | 🚨 **A correction to the 08-07 run's own HANDOVER: `S61` was read on the WRONG ESTIMATOR** | 2026-08-08 HANDOVER §2d (industry_US) | **The 08-07 §2c table reported S61 as *"STNG −2.07 · FRO +5.96 · ★★ FRO has FLIPPED POSITIVE"*. Those are RS20 values; S61's frozen observable is a 5-SESSION CUMULATIVE EXCESS.** On the bracket's own axis the same 08-06 bar reads **STNG −2.50 · FRO −2.45 · EW −2.472** — **FRO was NEGATIVE, not positive** ⇒ **the row's reported direction was inverted by an estimator substitution.** ⚠ **Not cosmetic: on the correct axis the row has since moved to −4.184, six thousandths from branch B, which the RS20 reading would never have surfaced.** ⇒ **`D213`, and this run's operating rule — every branch line is re-read from `SCENARIOS_US.md` AT SOURCE each HANDOVER, which is how the whole §2b table above was built.** ⚠ **C4 scope: this corrects ONE row's reading in ONE file. S61's registration text and bands are untouched, and it does NOT imply the 08-07 run's other rows were mis-estimated — S62's were verified to 0.002pp** |
+
+## MASTER INDEX — appended 2026-08-08 by the `industry_US` run
+
+> IDs checked at **WRITE time** (D137 / D76 / M319) against EVERY row in **all three** `SCENARIOS*.md`
+> **and** both `STANDING_VIEW*.md` **and** `RESEARCH.md`: `grep S70` / `S71` / `S72` returned **0 in
+> all nine files**; highest existing was **S69 (US) / S56-KR (KR)** ⇒ this run took **S70 – S72**.
+> ★ **And this run ran D137's three-grep check as written** — highest `M###` **500**, `D###` **211**,
+> `R##` **60** — before assigning **M501–M524 · D212–D219 · R61**.
+
+| **S70** | US | `SCENARIOS_US.md` | S70 — ★★★ Did the 08-07 credit print read RELIEF or FEAR? The leg S66 leaves open, scored ALONE so one lagging series cannot swallow the question (HY OAS at the first `[FRED]` close covering 08-07, expect **2026-08-10**) |
+| **S71** | US | `SCENARIOS_US.md` | S71 — ★★★ The CPI→PPI DIVERGENCE: the one genuinely un-covered falsifiable gap (XLU 1-session excess vs SPY on 08-13 MINUS on 08-12; bands from trailing-252 quantiles, → **2026-08-13**) |
+| **S72** | US | `SCENARIOS_US.md` | S72 — ★★★ Is the four-tilt cluster ONE bet? Two stages of one run disagreed about WHICH tilts are correlated, so the disagreement is registered rather than resolved (sign pattern of XLI/XLF/XLB/XLU/XLE 1-session excess vs SPY, → **2026-08-12**) |
+| **S57-ANNEX** | US | `SCENARIOS_US.md` | S57-ANNEX — ★★★ contamination notice on branch A's stated MEANING (**S57 NOT re-frozen; thresholds unchanged**). **SIX independent legs** |
+| **S61-ANNEX** | US | `SCENARIOS_US.md` | S61-ANNEX — ★★★ mechanism + information-content notice (**S61 NOT re-frozen; bands unchanged**). Branch B's label says *"no premium appears / D168 inert"* while D168's event is the most active object in the run, **and the branch is 0.006pp from being mechanically inevitable** |
+
+**Count: 85 brackets — 59 US-owned · 26 KR-owned.**
+⚠⚠ **The shared-counter proposal for a human now stands for a FIFTEENTH run.**
+🚨 **And the dig counter carries the same collision the scenario counter had**: the 08-07 `industry_US`
+run owns **D202–D210 unsuffixed** while the 08-08 `industry_kr` run wrote **D202-KR – D214-KR**,
+distinguished only by suffix (registered as **D211**). **This run took D212–D219 unsuffixed, which does
+not collide with either** — checked at write time.
+
+
+## Scored by the 2026-08-09 `industry_kr` run (appended to the MASTER scoring log — the log stays shared and un-split)
+
+> ⚠ Written by **append**, never a whole-file `'w'` rewrite — the **D165** pre-commitment, **7런 연속 유지.**
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| — | — | — | ★ **날짜 지난 KR 행 0건 — 채점할 것이 없었고, 그 사실을 확인한 과정을 적는다** | 2026-08-09 HANDOVER §2 (industry_kr) | 모든 ARMED 행을 날짜정산형/조건정산형으로 전수 분류. **이벤트 날짜가 2026-08-09 이전인 KR 행이 0건**이고, **다음 정산점은 08-11(S22)** 이다. **조건정산형(event-conditional) 잔여 = ZERO, 5런 연속**(S39 FIRED-B · S43 `VOID` · S44 FIRED-B 가 클래스를 닫았다). ⚠⚠ **`D194` 가 세 번째 런을 넘어간다** — 08-08 이 등록한 `S56-KR` 은 *하락*이 아니라 *두 이름의 상대 부호*를 재는 브래킷이라 **부분 해소일 뿐**이고, **「벤치가 −3% 이상 빠지는 세션이 무엇을 지불하는가」는 오늘도 미등록**이다. ⇒ **오늘 `S57-KR` 을 등록해 이벤트 세션 쪽을 한 칸 더 메운다.** ★ **`SCENARIOS_US.md` 열어서 확인(공유 스파인 규칙)**: 08-08 `industry_US` 런이 **S62 `FIRED-B`** 로 자기 창을 닫았고 조건정산형(S9·S23·S26·S41·S51)은 전부 그 데스크가 버퍼를 재측정했다 ⇒ **이 데스크가 채점해야 할 날짜 지난 US 행은 없다.** 🚨🚨 **`S8` 은 무날짜 `[blank]` 인 채 정산 불가로 넘어간다 — US 데스크 기준 8런째, KR 데스크가 이 사실을 적는 것은 7번째.** **KR 은 판정할 수 없다(P5) — 사람이 `VOID` 하거나 날짜를 붙여 재등록해야 한다. 조용히 넘기지 않는다.** ⚠ **US 소유 `S66` 도 오늘 채점 불가**이고 그 이유를 KR 데스크가 **독립 재현**했다(`DGS2`·`DGS10`·`DFII10`·`BAMLH0A0HYM2` 전부 08-06 정지, `T10YIE` 만 08-07 = 2.25 ⇒ **`D212` 2일 연속**). **`EXPIRED` = 0 · 조용한 생략 = 0.** |
+| **S55-KR** | 2026-08-07 (industry_kr BET/ALPHA) | → 2026-08-13 (관측창 08-07·08-10·08-11) | — **세션 1/3 유지, 새 세션 없음** | (확인 2026-08-09 DEEP-MATR §5) | **주말 휴장으로 새 관측 세션이 없다.** ★ **안티시그널 3건 전수 재확인, 전부 미발화**: (i) 한국 예외조항 — 08-08 런이 라이브 WebSearch 로 부재 확정(한국 = Section 232 + Column 1 합산 **15% 상한**, EU·일본·대만·스위스 동일 처우), 오늘 새 정보 없음 (ii) `module_disclosure 010060` 신규 공시 0건 (iii) 08-07 KRX 전체 거래정지 없음. ⇒ **정상 ARMED, 남은 세션 08-10 · 08-11.** ⚠ **말레이시아산(테라서스) 처우는 1차 미확인 `unknown` 유지(C3) — 포고령 본문 미도달 3런 연속.** ★ 오늘 국내 1매체가 *"폴리실리콘에 美 15% 관세… **영향 적고 반사이익 기대**"*[mt 08-09]를 실었고 **R60 의 방향과 같은 쪽**이나, **기록만 하고 브래킷을 흔들지 않는다**(L3: 사후에 기준을 바꾸지 않는다). ⚠ **두 이름은 오늘 보드의 `❌약한손` 전부**이고 **둘 다 🟢 가 `vol_surge` 단독 점화(velocity 결측)라 D6 로 인용 불가.** |
+| **S56-KR** | 2026-08-08 (industry_kr MACRO/ALPHA) | → 2026-08-12 (3세션 부호 다수결) | — **세션 0/3, 관측창 미개시** | (확인 2026-08-09 EVENT_ALPHA C4) | **관측창은 08-10 부터.** 오늘 앞당기지 않는다. 서사축 확인: 「삼성·SK AI 메모리」 스레드가 **REIGNITED 4→7→7→5→7→2, 총 134건, nb 25.0 = 살아있는 스레드 중 최고**로 살아 있다. ★ **반대 절반도 같은 창에 있다**(C2): *"중국 추격·이익배분 시험대"* · *"중국, DUV까지 국산화?"* · 블라인드 신흥어 **`CXMT` 4런 연속 상위**. ⚠ **새 사건 2건이 §3b 에 없다**: **"SK하이닉스, 중국 충칭 패키징공장 지분매각 등 검토"**[6건/5매체 08-08] · **"SK하이닉스 통합노조 신설 추진"**[08-09] |
+| **S27** | 2026-07-27 (industry_kr MACRO/DEEP-ENRG) | ~2026-08 말 | — **관측면 미도래, 그리고 오늘 그 사실이 1차에 가깝게 확인됐다** | (확인 2026-08-09 MACRO §G) | **9차 최고가격 지정은 아직 없다** — *"주유소 기름값 **12주째 하락**…휘발유·경유 1,800원대"*[yonhap·sedaily 08-08]의 본문이 **7차 최고가격을 현행으로 서술**한다(M538). ⇒ **12주 연속 하락은 9차 지정 압력을 낮추는 방향의 관측**이고, 그것 자체가 브랜치 정보다. **정상 ARMED.** |
+
+## MASTER INDEX — appended 2026-08-09 by the `industry_kr` run
+
+| **S57-KR** | KR | `SCENARIOS_KR.md` | S57-KR — ★★★ 호르무즈 재개방이 KR 정유 두 이름에서 「전쟁 프리미엄」과 「시설 병목」을 가르는가 (010950+096770 등가중 초과 vs `069500.KS`, 밴드 −6.07pp = 실측 120세션 sd, → **2026-08-20**) |
+
+**Count: 81 brackets — 54 US-owned · 27 KR-owned.**
+⚠⚠ **S57-KR registered 2026-08-09 by the `industry_kr` MACRO/BET stages.** IDs checked at **WRITE
+time** (D137, per-counter) against **all three** SCENARIOS files **and** both STANDING_VIEW files
+**and** RESEARCH.md: `grep S57-KR` returned **0 in all seven**; `grep S73` returned **0**. Highest
+existing was **S72 (US) / S56-KR (KR)**. **The `-KR` suffix is mandatory** (D76 collision class).
+**The shared-counter proposal for a human now stands for a FIFTEENTH run.**
+★ **And this run ran D137's three-grep check as written** — highest `M###` **524**, highest `D###`
+**219**, highest `R##` **61** — before assigning **M525–M543 · D220-KR–D226-KR**.
+★ **이 런의 철회(R) 는 0건이다** — 그리고 그 이유를 적는다: **이 런이 저지른 오류(MACRO §H 의
+승계값 4칸 오기)는 캐리에 들어간 적이 없어 R 번호를 주지 않는다.** ROTATION §0 이 같은 런 안에서
+잡아 ADDENDUM 으로 교정했다(**D48 패턴의 KR 12번째 인스턴스**).
+🚨 **dig 카운터 충돌은 15런째 미해결** — 이 런은 **`-KR` 접미사**로 `D220-KR ~ D226-KR` 을 썼고,
+무접미사 `D220~D226` 은 비어 있으나 **US 데스크가 다음 런에 가져갈 수 있다**(D211).
+
+
+## Scored by the 2026-08-10 `industry_kr` run (appended to the MASTER scoring log — the log stays shared and un-split)
+
+> ⚠ Written by **append**, never a whole-file `'w'` rewrite — the **D165** pre-commitment, **8런 연속 유지.**
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| — | — | — | ★ **날짜 지난 KR 행 0건 — 그리고 US 파일도 열어 확인했다** | 2026-08-10 HANDOVER §2 (industry_kr) | 전 ARMED 행을 날짜정산형/조건정산형으로 전수 분류. **이벤트 날짜가 2026-08-10 이전인 KR 행이 0건**, **다음 정산점은 08-11(`S22`)**. **조건정산형 잔여 = ZERO, 6런 연속.** ★ **`SCENARIOS_US.md` 열어 확인**: **US 소유 `S70`(08-07 커버 HY OAS, expect 08-10)과 `S66` 은 오늘도 채점 불가**이고 그 이유를 KR 데스크가 **3일 연속 독립 재현**했다 — `BAMLH0A0HYM2`·`DGS2`·`DGS10`·`DFII10` 전부 **08-06 정지**(HY OAS 2.71), `T10YIE` 만 **08-07 = 2.25**(`D212`). ⚠ **`DTWEXBGS` 는 07-31 정지 = 10일.** 🚨🚨 **`S8` 은 무날짜 `[blank]` 인 채 정산 불가로 넘어간다 — US 기준 9런째, KR 데스크가 이 사실을 적는 것은 8번째. KR 은 판정할 수 없다(P5).** **`EXPIRED` = 0 · 조용한 생략 = 0.** |
+| **S55-KR** | 2026-08-07 (industry_kr BET/ALPHA) | → 2026-08-13 (관측창 08-07·08-10·08-11) | — **세션 2/3 관측일이나 미정착** | (확인 2026-08-10 HANDOVER §2a) | **오늘이 세션 2/3 인데 런 시각이 08:29 KST = 개장 전**이라 관측값이 아직 없다. **미정착 봉으로 세지 않는다(D74).** 세션 1/3(08-07 정착) 유지: 010060 외국인 **−4.1만주**(밴드 ±20만 안). ★ **안티시그널 3건 재확인 전부 미발화**: (i) 한국 예외조항 새 1차 정보 없음 (ii) `module_disclosure 010060` 신규 0건 (iii) 08-07 KRX 전체 거래정지 없음. ⚠ **말레이시아산 처우 `unknown` 4런 연속.** ⚠ **오늘 서사 축이 반대로 움직였다**: **「폴리실리콘 15% 관세」 스레드가 ENDED(피크 8매체)** 이고 **버킷 배율 0.19×** 인데 **`theme-age` 는 🟡ACCELERATING 45.13×** — `D223-KR` 최대 격차(237배). **기록만 하고 브래킷을 흔들지 않는다(L3).** |
+| **S56-KR** | 2026-08-08 (industry_kr MACRO/ALPHA) | → 2026-08-12 (3세션 부호 다수결) | — **세션 0/3, 관측창 오늘 개시** | (확인 2026-08-10 EVENT_ALPHA 카드 8 / BET §B) | **관측창이 오늘 열리는데 08-10 봉이 없다** ⇒ **세션 0/3 유지.** 서사 확인: **오늘 두 이름을 「묶는」 재료가 크다**(삼전·SK하닉 프리마켓 반등[12건/3매체] + 모건스탠리 *"메모리 조정 끝"*[3건/2매체]), **가르는 재료는 1매체에 있다** — **chosun nb 25.5 「엔비디아 베라 루빈, 원가의 62%가 메모리… HBM4보다 비중 큰 소캠2」** = **이 브래킷의 레버(탑재량)가 원가비중 숫자로 처음 인쇄**됐다. ⚠ **그런데 `소캠` 테마는 🔴FADING 0.0×(n=31, 나이 80일)** ⇒ **레버는 인쇄됐고 서사는 없다.** ⚠ **두 이름 모두 오늘 🔴분산 · 개인 흡수**(005930 외 −782.0만/개 +1,750.7만 · 000660 외 −273.9만/개 +342.5만) — **브래킷은 가격만 보므로 VOID 사유가 아니다.** 반대 절반(C2): **"애플, 中반도체 도입 추진"[5건/4매체]** · **[中반도체굴기]①[4건/2매체]** · 블라인드 `CXMT` **5런 연속**. |
+| **S52-KR** | 2026-08-05 (industry_kr DEEP-HLTH) | → 2026-08-19 (11세션 창) | — **관측값 2개 모두 실측, 채점 아님** | (측정 2026-08-10 DEEP-HLTH §2) | **O2 = 31/46**(앵커 26.60 · 상한 28.14 ⇒ **+2.85 SE**); 창 내 확보 세션 **08-05 = 30 · 08-07 = 31 ⇒ 평균 30.5**. **O1 = 199,300 vs 상한 199,105 = +0.10%.** ★★ **`D225-KR` 오염 가설을 세웠다가 통제 실험으로 반박했다** — 같은 정착 바를 구코드·신코드 세 파일로 계산해 **31/31/31 동일**(랭크 비교라 단조변환에 불변, 최대 이동 종목 207940 은 top-2 제외) ⇒ **O2 는 오염되지 않았다.** 안티시그널 전수: **AS-1 미발화**(068270 공시 2건은 **08-03 = 창 시작 전**: 투자판단관련주요경영사항 CTP44 · 국민연금 대량보유) · **AS-2 미발화**(n=48) · **AS-4 미발화**(top-2 시총비중 **78.4% = 앵커와 일치**) · **AS-5 미발화**(외 +60.1만 ∧ 기 +146.7만) · **AS-3 는 창 미완이라 `unknown`(C3)**. 🚨 **새 결함 `D230-KR`: 창 11세션 중 08-06 정착 바가 어떤 산출물에도 없다**(`sector_flow.py` 에 `--asof` 부재) ⇒ 정산 시 n<11, 브래킷의 SE 1.542 는 과소. |
+| **S38 / S48-KR** | 2026-07-29 / 2026-08-02 | → **2026-08-12 (둘 다)** | — **분기 거리 첫 측정(2런째 미측정이던 항목)** | (측정 2026-08-10 DEEP-INDU 델타②) | **006360: 4.42% `building(+1.13)` 🔥** — 등록 시점 3.63% `building(+0.08)`(07-28) 대비 **+0.79pp/9세션**, **building 계수가 14배 가속**. **B(≥5.00%)까지 0.58pp · A(≤2.00%)까지 2.42pp** ⇒ **D216: B 도달가능, A 사실상 불가.** **006340: 3.03% `covering(−0.12)` 🔥** — 등록 4.00% `building(+0.99)`(07-31) 대비 **−0.97pp/6세션, 부호 반전**. **A(≤2.50%)까지 0.53pp · B(≥5.50%)까지 2.47pp** ⇒ **A 도달가능, B 불가.** ★★★ **같은 날짜에 같은 구성의 n=2 를 만들려던 쌍이 정반대로 가고 있다** ⇒ 08-12 에 나올 것은 한 방향 2관측이 아니라 **갈림**일 가능성이 높다. ⚠ **밴드를 사후에 바꾸지 않는다(L3) — 위는 거리 보고이지 예측이 아니다.** ⚠ **`S38` 안티시그널 감시**: BUILDING 4일 「은행 가계대출 조이기」 스레드가 정책 이벤트로 격상되면 `S38` **`VOID`**. 🚨 **`D148` 11런 미실행 ⇒ 정산일에도 백분위를 말할 수 없다.** ⚠ **006340 의 안티시그널 2건(HG=F ±10% · 006340 개별공시)은 오늘 확인하지 않았다.** |
+| **S27** | 2026-07-27 | ~2026-08 말 | — **관측면 미도래** | (확인 2026-08-10 MACRO §D-3) | `최고가격` 테마 **⚪ECHO 1.05×**(n=126, 어제 1.00×). 9차 지정 관련 새 1차 재료 없음. **정상 ARMED.** |
+
+## MASTER INDEX — appended 2026-08-10 by the `industry_kr` run
+
+| **S52-KR-ANNEX** | KR | `SCENARIOS_KR.md` | S52-KR-ANNEX — ★★★ 정보량 통지: **O1 이 분기선 위 +0.10% = 일간 sd 의 1/29** ⇒ A/B 가 노이즈로 갈린다(`D216` 「불가피」형의 KR 첫 사례). **`S52-KR` 은 재동결하지 않는다 — 임계·밴드·분기·정산일 전부 불변** |
+
+**Count: 82 brackets — 54 US-owned · 28 KR-owned.**
+⚠⚠ **`S52-KR-ANNEX` registered 2026-08-10 by the `industry_kr` DEEP-HLTH stage.** IDs checked at
+**WRITE time** (D137, per-counter) against **all three** SCENARIOS files **and** both STANDING_VIEW
+files **and** RESEARCH.md: `grep S52-KR-ANNEX` returned **0 in all seven**. 기존 최고
+**S72(US) / S57-KR(KR)** · **M543 · D226-KR · R61**.
+**The shared-counter proposal for a human now stands for a SIXTEENTH run.**
+★ **And this run ran D137's three-grep check as written** before assigning **M544–M559 · D227-KR–D230-KR**.
+⚠ **애넥스는 브래킷이 아니다** — 카운트에는 넣되 **`S52-KR` 의 어떤 값도 바꾸지 않는다.**
+
+---
+
+## MASTER INDEX — appended 2026-08-10 by the `industry_US` run
+
+> IDs checked at **WRITE time** (D137 / D76 / M319) against EVERY row in **all three** `SCENARIOS*.md`
+> **and** both `STANDING_VIEW*.md` **and** `RESEARCH.md`: `grep S73` / `S74` returned **0 in all nine
+> files**; highest existing was **S72 (US) / S57-KR (KR)** ⇒ this run took **S73 – S74**.
+> ★ **D137's three-grep check run as written** — highest `M###` **559**, `D###` **D230 (as `-KR` only;
+> unsuffixed D227–D230 were empty and reserved for this desk by the 08-10 KR run's own note at
+> `RESEARCH.md:1884`)**, `R##` **61** — before assigning **M560– · D227–D232 · R62–**.
+> ⚠⚠ **Provenance note that matters for the count**: the **2026-08-09 `industry_US` run never wrote
+> back** (it produced five output files and stopped before writeback; `handoff/` holds zero trace of
+> it). Its `D227`/`D228` (HANDOVER) and `D229`/`D230` (MACRO §J) are **rescued at their original
+> numbers by this run**, and its `M544–M552` are **re-registered at M560+ because the KR runs of
+> 08-09/08-10 consumed M544–M559 in the interval.** **The absence itself is registered as `D231`.**
+
+| ID | Owner | File | One line |
+|---|---|---|---|
+| **S73** | US | `SCENARIOS_US.md` | S73 — ★★★ **July CPI 2026-08-12, the ≤48h binary the protocol makes MANDATORY.** **TWO legs scored independently** (the S70 pattern applied at registration, because `D212` has blocked S51/S66/S70 for four runs): **macro leg** ΔDGS2 ≥ +0.15 ∧ ΔHY OAS ≥ +0.10 (branch H) vs ΔDGS2 ≤ −0.15 ∧ ΔHY OAS ≤ −0.05 (branch C), anchored on the 08-06 close; **equity leg** median 1-session excess vs SPY of {JPM,BAC,XLI} ≤ −1.50pp vs XLU ≥ +2.00pp on the **08-12 session**. All legs **1.4σ–2.9σ**, base rates 6.7%/10.0%, and **outside** the ±1.9–2.2% D4 implied moves. **Branch H falsifies INDU/FIN/STPL simultaneously; branch C falsifies UTIL/RE/MATR simultaneously** |
+| **S74** | US | `SCENARIOS_US.md` | S74 — ★★★ **Hormuz: the reopening condition is NAMED for the first time in nine runs.** The IRGC's two conditions (end of the US naval blockade · compensation for war damages), explicitly **decoupled from the Oman track** — which retires the mechanism every desk file has watched since 08-05. `[news]` grade, ≥2 outlet **bodies** required. **`S8` is NOT touched (human-gated, P5).** ⚠ **S61 explicitly REFUSED as the price confirmation (0.001σ from firing = D216 *inevitable*); `S54` used instead at ±1.0σ symmetric.** → **2026-08-24** or first occurrence |
+| **S57-ANNEX-2** | US | `SCENARIOS_US.md` | S57-ANNEX-2 — ★★★ the carrier's driver is now **dated and primary-sourced** (**S57 NOT re-frozen; thresholds unchanged**). NEM = **~85% of the observable**, its 5-session excess **+17.05pp = its own trailing-60 MAXIMUM, +3.32σ**, and on 2026-08-10 the issuer disclosed **Newmont PAYS Barrick $1.95bn** + consent to Barrick's NA IPO. ★ **Its 21–60-day base is −26.50pp — the whole move sits on a losing base** (computed twice independently this run, agreeing to 0.01pp) |
+
+**Count: 88 brackets — 62 US-owned · 26 KR-owned.**
+⚠⚠ **The shared-counter proposal for a human now stands for a SEVENTEENTH run.**
+🚨 **And this run made the collision worse in the one direction that was still clean**: it took
+**D227–D230 unsuffixed**, which now exist alongside **D227-KR–D230-KR**, distinguishable only by
+suffix — the exact class `D211` was registered to complain about. **It was done deliberately**, because
+the 08-10 KR run's own note reserved those four numbers for this desk and because rescuing the
+orphaned findings under *different* numbers would have created two ids for one defect. **The cost is
+stated rather than hidden, and it strengthens rather than weakens the case for a human to fix the
+counter.**
+
+## Scored by the 2026-08-12 `industry_kr` run (appended to the MASTER scoring log — the log stays shared and un-split)
+
+| ID | 등록 | 정산 | 결과 | 확인 위치 | 근거 |
+|---|---|---|---|---|---|
+| **S22** | 2026-07-25 (industry_kr BET/ALPHA) | 07-31 → **재정산 08-11** | ✅ **`FIRED-A`** | 2026-08-12 HANDOVER §2-1 | **DART 1차**(rcept 20260811800737): **거래종결일 2026-08-11**, 최대주주 **30.74% → 43.15%**, 이클립스㈜가 SK디스커버리 10,455,825주 + 한앤코 4,225,455주 취득. ★★ **그런데 이 채점은 두 가지를 죽인다**: ① **인수자가 KKR 이 아니다** ⇒ **R62** ② **브랜치 B 의 「두 번째 연기 = 킬」 규칙 자체가 반증됐다**(07-31 을 넘기고 종결) — 1차에는 **연기 기록이 없고** SPA 03-06 체결·종결 08-11 이 한 문서에 있다 ⇒ **우리가 센 것은 회사가 아니라 우리 캘린더의 오차** ⇒ **R63**. ★ **S28**(07-28 임시주총 두 후보 선임 = A)이 예고한 대로 정산 — **리딩 인디케이터가 처음으로 본 브래킷을 맞혔다** |
+| **S55-KR** | 2026-08-07 (industry_kr BET/ALPHA) | → 2026-08-13 (관측창 08-07·08-10·08-11) | ✅ **`FIRED-C` (AMBIGUOUS)** | 2026-08-12 HANDOVER §2-4 | **010060 외국인 3세션 합 −12.1만주**(−4.1 / −5.1 / −2.9), 밴드 **±20만 안**. 병기(판정 미합산): 기관 **+9.2만** · 개인 **+4.3만** · 레인 확인 **009830 외국인 −105.4만주**. **관측창이 08-11 로 닫혔고 값이 더 바뀔 수 없어 오늘 채점**했다(정산일 08-13 은 창 다음 런). 등록 문언대로 **밴드를 넓히지 않고 발효 D-30(2026-11-04)로 재등록 ⇒ `S59-KR`**. ⚠ **교란 1건 기록**: 010060 이 **08-10 「자기주식취득신탁계약 해지결정」 2건**(본사·자회사) 공시 — **등록된 안티시그널 열거(유상증자·대규모수주·지분변동)에 자기주식이 없어** VOID 사유로 쓰지 않았다. 브랜치가 C(무정보)라 실무 결론은 불변 |
+| **S38** · **S48-KR** | 2026-07-29 / 2026-08-02 | **2026-08-12 = today** | ⛔ **`PENDING-DATA` — 정산 불가, `EXPIRED` 아님** | 2026-08-12 HANDOVER §2-2 | **동결 관측값(「08-12 의 KRX %float」)이 아직 인쇄되지 않았다** — 잔고 시계열의 마지막 행이 **2026-08-07**(08-10·08-11 조차 없음) ⇒ **공표 지연을 등록 시점에 계산하지 않은 구성 결함**(**D231-KR**). **밴드 불변, 대체 관측값 없음.** 거리 보고: **006360 4.61%(C 구간, B 까지 0.39pp)** · **006340 3.22%(C 구간, A 까지 0.72pp, `covering(−0.34)`)**. ★★ **`D148` 을 12런 만에 집행**(M562): 006360 **92.1 백분위**·자기최대 6.30%(05-08) ⇒ **B 에 전례 있음** · 006340 **93.2 백분위**·**자기최대 4.00% = 정확히 S48-KR 등록일(07-29)** ⇒ **극값에서 등록됨, 평균회귀가 귀무가설**(**D236-KR**). ⚠ **D133 재기재**: 관측값 인쇄 시점(≈08-14~18)이 **KOSPI200 최종거래일 08-13 이후**라 만기 효과가 섞인다. **다음 런의 #1 채점 작업** |
+| **S56-KR** | 2026-08-08 (industry_kr MACRO/ALPHA) | → 2026-08-12 (3세션 부호 다수결) | ⛔ **PENDING — 결정 세션이 이 런의 시계 뒤에 있다** | 2026-08-12 HANDOVER §2-3 | 세션별 차 = (000660 초과)−(005930 초과) vs `069500.KS`: **08-10 +0.292(+)** · **08-11 −3.778(−)** · **08-12 (−2.061) 미정착**. ★ **안티시그널 (ii) 가 실제로 발화해 08-10 을 제외했다** — **2026-08-10 10:10 KRX 조회공시요구**(4조 충칭 지분매각) + 같은 날 **「미확정」 답변**(M567) = 000660 고유 사건. 남는 세션 2개 ⇒ VOID 아님. **유효 1세션 부호 `−`, 오늘 15:30 정착분이 결정한다.** ⚠ 005930 쪽 지분변동 6건은 **전부 임원 소유상황보고서(일상)** — 문자대로면 VOID 지만 실질이 아니다 ⇒ **열거를 좁혀야 한다(D233-KR)**. ⚠ **오전 크론인 이 데스크는 당일 정산 브래킷을 구조적으로 못 센다(D232-KR)** |
+| — | — | — | ★ **날짜 지난 행 전수 채점 · `EXPIRED` = 0 · 조용한 생략 = 0** | 2026-08-12 HANDOVER §2 (industry_kr) | 전 ARMED 행을 날짜정산형/조건정산형으로 분류. **조건정산형 잔여 = ZERO, 7런 연속.** ★ **`SCENARIOS_US.md` 열어 확인**: 이 데스크가 채점할 날짜 지난 US 행은 **`S8` 외에 없다**. 🚨🚨 **`S8`(무날짜 `[blank]`)은 오늘도 정산 불가 — KR 데스크가 이 사실을 적는 것은 9번째.** **KR 은 판정할 수 없다(P5)** — 사람이 `VOID` 하거나 날짜를 붙여 재등록해야 한다. ⚠ **`D194`(−3% 하락 세션을 살 브래킷)는 오늘도 0 — 7런째.** ★ **`D212`(FRED 정지) 4런 만에 해소** — DGS2·DGS10·DFII10·HY OAS 전부 08-10, T10YIE 08-11 |
+
+## MASTER INDEX — appended 2026-08-12 by the `industry_kr` run
+
+| ID | 시장 | 파일 | 한 줄 |
+|---|---|---|---|
+| **S58-KR** | KR | `SCENARIOS_KR.md` | S58-KR — ★★★ 000660 충칭 패키징 지분매각(₩4조): 회사가 스스로 박은 재공시 기한 → **2026-09-09** |
+| **S59-KR** | KR | `SCENARIOS_KR.md` | S59-KR — ★★ `S55-KR` 재등록(밴드 불변 ±20만주), 관세 발효 D-30 → **2026-11-04** |
+
+⚠⚠ **S58-KR·S59-KR registered 2026-08-12 by the `industry_kr` ALPHA/handoff stages.** IDs checked at
+**WRITE time** with a 3-grep across all handoff files: 기존 최고 **S74(US) / S57-KR(KR)** ⇒ 이 런은
+**`-KR` 접미사**로 **S58-KR · S59-KR** 을 쓴다(**D76** 충돌 클래스 · **D211** 카운터 충돌 사람 대기 5런째).
+
+---
+
+## Scored by the 2026-08-12 `industry_US` run (appended to the MASTER scoring log — the log stays shared and un-split)
+
+> ⚠ Written by **append**, never a whole-file `'w'` rewrite — the **D165** pre-commitment, held.
+> ★★ **TEN rows scored in one run — the largest batch this desk has run** — because **there was no
+> `industry_US` run on 2026-08-11 at all** (`llm_outputs/2026-08-11/` holds only `PULSE.md`) and the
+> FRED yield/credit block published on 08-10, releasing four rows blocked for four consecutive runs.
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S51** | 2026-07-31 (PREMORTEM Lens 2) | → 2026-08-10 | ★ **FIRED-A** | 2026-08-12 HANDOVER §2b (industry_US) | Derived 2s10s = `DGS10 − DGS2` at the settled **2026-08-07** close = **4.65 − 4.19 = +0.46** ≥ the +0.35 line ⇒ **the bear steepener persisted and the FIN NIM mechanism is intact on a fresh, non-retracted measurement.** ⚠ Its own registered bull-steepener caveat is scored separately by **S66** and did **not** fire. **Blocked for 2 days by `D212`, then released when the H.15 block published through 08-10.** |
+| **S66** | 2026-08-07 (PREMORTEM Lens 2) | → first `[FRED]` close covering 08-07 | ★ **FIRED-B (with us)** | 2026-08-12 HANDOVER §2b | Anchored on the 08-05 print (`DGS2` 4.18 · HY OAS 2.75). At the covering close: **ΔDGS2 = +0.01** and **ΔHY OAS = −0.05** ⇒ branch B (`ΔDGS2 > −0.05` **and** `ΔHY OAS < +0.08`) fires. **Neither leg of the growth-scare conjunction moved on a −23k payroll.** ⚠ Branch A was pre-declared a sub-1% conjunction and **B is the modal outcome — reported as modal, not as a win.** ⚠ Branch **A′** (exactly one leg clearing its tail) also did not fire. |
+| **S70** | 2026-08-08 (MACRO) | → first `[FRED]` close covering 08-07 | ★ **FIRED-A (relief)** | 2026-08-12 HANDOVER §2b | `BAMLH0A0HYM2` at the covering close = **2.70%** ≤ the 2.71 line ⇒ **credit TIGHTENED 1bp through the payroll shock** (2.75 → 2.71 → 2.70). ⇒ **the 08-07 rally reads as rate relief, not credit fear.** ⚠ **DEEP-FIN's own grading is carried with the verdict: A is the MODAL branch and mostly confirms the tape; the information was entirely in branch B, which did not fire.** **Blocked for four consecutive runs by `D212`.** |
+| **S54** | 2026-08-03 (PREMORTEM Lens 1) | → 2026-08-10 | 🚨 **AMBIGUOUS — not scored** | 2026-08-12 HANDOVER §2b | ★★★ **A construction defect, registered as `D233`.** The frozen text names *"the equal-weight **5-session** excess … from the **2026-07-31 close** to the **2026-08-10 close**"* — **but 07-31 → 08-10 is SIX sessions.** The two readable constructions give **different branches**: anchored **−1.467pp (C)** vs rolling-5 ending 08-10 **−5.130pp (B, < −4.5)**. ★ **The ambiguity was invisible until today by arithmetic accident** — at the 08-07 bar the two coincide (07-31 → 08-07 *is* five sessions), which is why every prior run reported one number (+2.110) and saw no conflict. **No threshold was improvised (the L3 rule); both readings are recorded so a human can settle the anchor-vs-window convention once, for every anchored row on the board.** |
+| **S55** | 2026-08-04 (PREMORTEM Lens 2) | → 2026-08-11 settle | **FIRED-C** | 2026-08-12 HANDOVER §2b | `HO=F` **+13.828%** − `CL=F` **+10.611%** = **+3.217pp**, inside the −3.0 / +6.5 band (registration state −2.953pp). ⇒ **the physical-vs-war-premium cause STAYS UNSEPARATED and `R47` stands: no stage may state "the distillate bottleneck released" as fact.** ★ **The economically loud fact sits inside branch C: BOTH legs rallied double digits**, which is the whole-barrel signature the row was written to detect — pointing weakly at B without reaching it. **Both bars re-pulled in full at scoring (D140).** |
+| **S56** | 2026-08-04 (PREMORTEM Lens 2) | → 2026-08-11 (3 sessions from the 08-05 settle) | ★★★ **FIRED-A, by 24pp** | 2026-08-12 HANDOVER §2b | SPCX 3-session excess vs SPY, 08-05 settle → 08-10 settle = **+27.722pp** (108.27 → 138.74) against a +3.5 line. ⇒ **the counted short (219.3M sh ≈ 34% of public float) beat the counted supply (up to 911.5M sh) decisively.** ★★ **This threatens a METHOD conclusion, as registered: `D6` ("positioning is not a signal") survives for *percentile* positioning and is measured WRONG for *share-counted* positioning. PREMORTEM owns writing the scope limit; the rule is not overturned by one event.** ⚠⚠ **The D149 invalidation check (lock-up waiver / secondary / index inclusion) COULD NOT BE RUN — it requires the news path, which PREFLIGHT G1 revoked. The verdict is recorded WITH that gap named, not laundered.** ⚠ **S1: σ rests on 32 overlapping windows over 35 post-IPO sessions with no unlock in sample — the weakest estimator on this board, as disclosed at registration.** |
+| **S57** | 2026-08-04 (PREMORTEM Lens 2) | → 2026-08-12 (branch A at ANY settled close through) | ★★ **FIRED-A (against the tilt)** | 2026-08-12 HANDOVER §2b | `XLB` 5-session excess vs SPY crossed the +1.9 line on **two** settled closes: **+2.227 (08-10)** and **+2.484 (08-11)**; path −4.762 → −3.789 → −2.596 → +1.307 → +2.227 → +2.484. ⇒ **Materials outperformed while the dollar fell (`DTWEXBGS` 119.5977 → 119.0649) and copper net-spec hit the 100th percentile ⇒ MATR UW− loses BOTH of its stated legs.** ★★★ **And `S57-ANNEX`/`ANNEX-2`'s NEM-contamination concern was TESTED and did not hold**: ex-NEM cap-weighted **+1.203**, equal-weighted **+0.908**, **8 of 12 names positive**, NEM only **11.6%** of sector cap ⇒ **P44's own registered anti-signal fired and P44 is scored MISS** (MACRO §F). ⚠ **ROTATION nonetheless DECLINED the promotion** on the `top1_flips_sign` rule (LIN 24.7%) and on `eqflow` decaying +0.040 → +0.018 ⇒ **the tilt ran without a falsifier until `S77` replaced it the same day.** |
+| **S58** | 2026-08-05 (human-execution loop) | → 2026-08-11 | **FIRED-C** | 2026-08-12 HANDOVER §2b | MET cumulative excess vs SPY over the first 3 settled sessions after the 08-05 AMC print (08-06 · 08-07 · 08-10) = **+3.993 → +1.118 → +0.379pp**, inside the −2.70 / +2.45 band. ⇒ **the print carried NO information for the thesis**, and the row's own registered meaning applies to the desk rather than the market: *"the price of entering a binary one-way is that risk was taken to learn something we did not need to know."* ★ It **touched +3.99 on day 1 and gave it all back** — a within-window path a single endpoint hides. |
+| **S60** | 2026-08-05 (human-execution loop) | → 2026-08-11 settle | ★★ **FIRED-A (the SALE was wrong)** | 2026-08-12 HANDOVER §2b | `XLE` 5-session excess vs SPY, 08-04 settle → 08-11 settle = **+4.218pp** ≥ the +3.90 line (path −1.993 → +2.616 → +4.218). ⇒ **the 2026-08-04 XLE liquidation was wrong on its own observable**: the integrated complex re-rated, the *"denominator artifact"* reading did not hold, and **"unmeasurable ⇒ sell" cost something measurable.** ⚠ **The row's registration disclosed its own bias (estimator centred +0.332, so A is the structurally easier branch) — carried WITH the verdict and it does not change it: +4.218 clears the measured 85th percentile.** ★ **This is the desk's substitute for the execution-scoring ledger it does not have (`D159`), and the substitute came back negative.** |
+| **S65** | 2026-08-06 (PREMORTEM Lens 2) | → 2026-08-11 settle | **FIRED-C** | 2026-08-12 HANDOVER §2b | Median RS20 vs SPY of {JPM, BAC, WFC, BRK-B} at the 08-11 settle = **+2.871** (JPM +3.09 · BAC +3.08 · WFC +0.04 · BRK-B +2.66), inside +0.34 / +6.81. ⇒ **the velocity-lit breadth that carried the 08-06 FIN promotion NEITHER converted NOR collapsed through the binary — the promotion is neither validated nor falsified on the axis it was made on.** ★ **The BRK-B contamination pre-commitment is fully DISCHARGED**: ex-BRK-B median **+3.084** vs headline **+2.871** = a **0.21pp** gap ⇒ **branch C cannot be attributed to BRK-B in either direction.** ⚠ Its unresolved question is re-armed as **`S78`** on the same basket with fresh bands. |
+
+**Not scoreable this run, named rather than dropped**: **S59 · S61 · S72** (all settle at the **08-12**
+close, which has not occurred at this clock) · **S73** (its equity leg settles tonight; its **macro leg
+settles at the first `[FRED]` close covering 08-12, which on the measured publication clock is
+≈08-13/08-14, NOT tomorrow**) · **S63 · S64 · S67 · S68 · S69 · S71** (→ 08-13) · **S74** (→ 08-24).
+🚨🚨 **`S8` remains undated `[blank]` and un-scoreable for a TENTH consecutive run — a human must VOID
+or re-register it (P5). Named again, not dropped.**
+**`EXPIRED` = 0 · silent skips = 0 · past-dated rows unscored = 0.**
+
+---
+
+## MASTER INDEX — appended 2026-08-12 by the `industry_US` run
+
+> IDs checked at **WRITE time** (D137 / D76 / M319) against EVERY row in **all three** `SCENARIOS*.md`
+> **and** both `STANDING_VIEW*.md` **and** `RESEARCH.md`: `grep S75` / `S76` / `S77` / `S78` returned
+> **0 in all nine files**; highest existing was **S74 (US) / S57-KR (KR)** ⇒ this run took **S75 – S78**.
+> ★ **All four bracket TILT CHANGES MADE BY THIS RUN** — the protocol's rule that a changed tilt without
+> a falsifier is a one-way bet, applied to the desk's own three deltas plus the one decline that left a
+> live tilt uncovered.
+
+| ID | Owner | File | One line |
+|---|---|---|---|
+| **S75** | US | `SCENARIOS_US.md` | **ENRG N+ → OW− promoted today.** `XLE` 5-session excess vs SPY at the **08-19** settle: **A ≤ −3.60 · B ≥ +3.94** (D93 mean +0.280 · sd 3.815). State **+4.218 — already above B, disclosed**; **A is the adversarial ask at 2.05σ** |
+| **S76** | US | `SCENARIOS_US.md` | **HLTH N → N+ promoted today on a breadth artifact.** **TWO legs scored independently** — leg 1 `XLV` exc5 (**A ≤ −2.67 · B ≥ +2.62**); ★ **leg 2 = the HLTH count at `OBV 매집 ∧ RS20>0` (A ≤ 10 · B ≥ 22 of 32, anchored on today's 18)** — the leg that tests the *mechanism* the promotion was argued from |
+| **S77** | US | `SCENARIOS_US.md` | ★★★ **MATR's REPLACEMENT falsifier.** S57 fired twice and the N− was carried anyway. **EW 5-session excess vs SPY of the 11 NON-NEM `us_top300` Materials names (listed in full): A ≥ +2.03 forces a tilt change · B ≤ −2.04 is the UW's first NEM-free confirmation.** **The most nearly centred estimator of the four (A 0.52σ · B 1.38σ)** |
+| **S78** | US | `SCENARIOS_US.md` | **FIN N+ → N demoted today on `eqflow` while S51 CONFIRMED its mechanism.** Median RS20 {JPM,BAC,WFC,BRK-B} at 08-19: **A ≥ +4.68 (the demote was wrong) · B ≤ −5.65**. Deliberately re-uses S65's basket — its question settled **C = unresolved, not answered** |
+
+**Count: 92 brackets — 66 US-owned · 26 KR-owned.**
+⚠⚠ **The shared-counter proposal for a human now stands for an EIGHTEENTH run.**
+★ **This run's own ID hygiene, stated with its cost**: `handoff_id_audit` reported **max M559** because
+**the 2026-08-10 `industry_US` run's writeback reached only TWO of five handoff files** — its facts,
+digs, retractions and asof entry never landed (see this run's `HANDOVER.md §5`). **This run rescues
+them**, which forced a renumbering of **its own** MACRO facts from M573–M580 to **M580–M587**; the
+correction is appended visibly to `MACRO_REPORT.md §I-CORRECTION` rather than silently applied.
+
+---
+
+## MASTER INDEX addendum — registered by the **2026-08-12 `industry_US` RUN-2** (post-CPI-print, pre-open)
+
+> ⚠ **Second `industry_US` run of 2026-08-12.** RUN-1 (10:50–11:47 KST) closed with the July CPI still
+> ~10h away; RUN-2 (22:10–23:40 KST) ran **53 minutes after the print and 7 minutes before the cash
+> open.** All RUN-2 outputs are **append-only addenda** to RUN-1's files — nothing was overwritten.
+
+| ID | Owner | File | One line |
+|---|---|---|---|
+| **S79** | US | `SCENARIOS_US.md` | ★★★ **NVDA 2026-08-26 — the binary RUN-1's DRIFT surfaced as un-bracketed and handed forward; it is now INSIDE the `CATALYST_WATCH` 14-day window.** **TWO legs scored independently.** **Leg 1 (the name)**: NVDA 1-session excess vs SPY on the **08-27** settle — **A ≥ +5.0pp · B ≤ −5.0pp · N between** (D93 mean −0.081 · sd 2.028 ⇒ **±2.5σ**, each tail fired **1/60 = 1.7%**). ★ **Leg 2 (the risk unit — the informative leg)**: same session, AVGO and TSM excess vs SPY — **U-ONE** (both same sign as NVDA **and** ≥2.0pp) · **U-SPLIT** (NVDA ≥5.0pp while both peers <2.0pp) · **U-MIXED**. **Leg 2 converts PREFLIGHT G4's three-run-old window artifact — `{AVGO,NVDA,TSM}` merges at 500/750d, splits at 250d — into one dated observation.** Anti-signals: print moved ⇒ VOID · 08-27 halt ⇒ VOID · **a separate ≤48h macro binary on 08-26/27 ⇒ Leg 2 AMBIGUOUS** (a macro shock counterfeits U-ONE) |
+
+**Count: 93 brackets — 67 US-owned · 26 KR-owned.**
+⚠⚠ **The shared-counter proposal for a human now stands for a NINETEENTH run** — and RUN-2 adds a
+**new instance of the same defect class**: `handoff_id_audit` reports **`D233`–`D236` declared twice**,
+once by today's `industry_kr` block (`D231-KR ~ D237-KR`) and once by today's `industry_US` block
+(`D227–D236`). **Two desks allocated dig numbers from one counter on the same date.** M-side: **153
+colliding ids, max M587**, of which **M561–M572** is the 08-10-rescue-vs-today collision RUN-1
+documented in `MACRO_REPORT.md §I-CORRECTION`; the **M22–M256** bulk is the known 2026-07-29
+split duplication.
+
+> ⚠⚠ **CORRECTION to the RUN-2 index block immediately above (D48 — left visible, not rewritten).**
+> That block states *"`D233`–`D236` declared twice… **Two desks allocated dig numbers from one counter
+> on the same date**."* **That is FALSE.** `handoff/RESEARCH.md` registers the KR rows as
+> **`D231-KR`…`D237-KR` (suffixed)** and the US rows as **`D233`–`D236` (unsuffixed)** — **two
+> correctly-formed namespaces, no shared counter.** `handoff_id_audit` parses the `##` range header by
+> its numerals and **drops the `-KR` suffix**, producing a false-positive collision. **The defect is
+> the audit tool's and is registered as `D240`.**
+> ✅ **The `M###` half of that block STANDS** (153 colliding ids, max **M587**, `M561`–`M572` = the
+> 08-10-rescue overlap, `M22`–`M256` = the known 2026-07-29 split duplication) — **those are
+> same-namespace collisions.** ⚠ **RUN-2 asserted the collision before opening the file; that is this
+> desk's dominant failure mode reproduced inside the stage that catalogues it.**
+
+
+---
+
+## Scored by the 2026-08-13 `industry_kr` run (appended to the MASTER scoring log — the log stays shared and un-split)
+
+| id | 정산 | 판정 | 관측값 (동결된 것 그대로) | 임계값이었던 것 |
+|---|---|---|---|---|
+| **S56-KR** | 2026-08-12 | **`FIRED-A`** | `069500.KS` 벤치 일간 초과의 차 = (000660 초과)−(005930 초과). **08-10 제외**(안티시그널 (ii) 발화: 000660 조회공시요구·답변, DART 1차 확인) · **08-11 −3.778** · **08-12 −1.137**(000660 +5.544% / 005930 +6.681% / 벤치 +4.015%) ⇒ **유효 2세션 전부 음(−)** | **A = 3세션 중 2세션 이상 차<0** · 안티시그널 (ii) 의 «남는 세션 2개 미만이면 VOID» 는 **2개 남아 미발화** |
+| **S38** | 2026-08-12 | **`PENDING-DATA` (2런 연속)** | 006360 KRX 공매도잔고 **최신 4.71%(08-10)**, 08-12 값 **미인쇄**. ★ **공표 지연을 이번에 실측했다: T+2 정착세션**(08-12 조회 시 마지막 08-07 · 08-13 조회 시 08-10) ⇒ **08-12 잔고는 2026-08-14 인쇄** | A ≤2.00% / B ≥5.00% — **밴드 불변, 대체 관측값 없음.** 현재 **B까지 0.29pp**, 추세 `building(+0.81)` |
+| **S48-KR** | 2026-08-12 | **`PENDING-DATA` (2런 연속)** | 006340 KRX 공매도잔고 **최신 3.36%(08-10)**, 08-12 값 미인쇄. 같은 T+2 지연 | A ≤2.50% / B ≥5.50% — 밴드 불변. 추세 `covering(−0.10)` |
+| **S8** | `[blank]` | **정산 불가 — KR 데스크가 이 사실을 적는 것이 11번째** | 무날짜 등록이라 정산 조건이 존재하지 않는다 | **KR 은 판정할 수 없다(P5).** 사람이 `VOID` 하거나 날짜를 붙여 재등록해야 한다 |
+
+**`EXPIRED` = 0 · 조용한 생략 = 0.**
+⚠ **오늘의 정산 실패 2건(S38·S48-KR)은 시장이 아니라 등록 문법이 만든 것이고, 이번 런이 그 결함의 수치를 확정했다**
+(`D231-KR` 의 수리값 = **KRX 공매도잔고 T+2**). **다음 KR 런이 첫 채점 기회다.**
+
+## MASTER INDEX — appended 2026-08-13 by the `industry_kr` run
+
+| id | owner | file | 한 줄 |
+|---|---|---|---|
+| **S60-KR** | KR | `SCENARIOS_KR.md` | S60-KR — 전력망 업무협약이 60일 안에 수주 공시로 전환되는가 (→ 2026-10-12) |
+
+---
+
+## Scored by the 2026-08-13 `industry_US` run (appended to the MASTER scoring log — the log stays shared and un-split)
+
+> ⚠ Written by **append**, never a whole-file `'w'` rewrite — the **D165** pre-commitment, held.
+> Run clock **2026-08-13 09:10–10:20 ET (pre-open into the first hour)**. Every settlement below uses
+> the **2026-08-12 settled close**; **no 08-13 bar is used anywhere** (D74). Prices re-pulled in full
+> at scoring (D140): `yfinance`, `auto_adjust=False`, benchmark named inline (C1).
+
+| ID | Registered | Event date | Branch fired | Scored on | Note |
+|---|---|---|---|---|---|
+| **S59** | 2026-08-05 (human-execution loop) | → 2026-08-12 | **FIRED-C** | 2026-08-13 HANDOVER §2a (industry_US) | `NDAQ − XLF` 10-session cumulative, **2026-07-29 → 2026-08-12**: NDAQ **+0.115%** vs XLF **+2.188%** = **−2.073pp**, inside the −5.17 / +4.43 band. ⇒ **the slope-dominant exchange name UNDERPERFORMED its own sector across a window containing both NFP and CPI, but not far enough to falsify M363's β +33.2.** ★ **Scoreable despite the FRED gap**: the 2s10s direction is a qualifier on branches A and B only, and the observable landed **between** them ⇒ C fires on either 2s10s path. ⚠ The row's own text predicted C would be frequent *because the mechanism is conditional* — **it was, for that reason, not a new one.** |
+| **S61** | 2026-08-05 (PREMORTEM Lens 2) | → 2026-08-12 | **FIRED-C** | 2026-08-13 HANDOVER §2a | EW{`STNG`,`FRO`} 5-session cumulative excess vs `SPY`. Path: 08-05 −9.863 · 08-06 −2.472 · 08-07 −4.184 · 08-10 **−4.711** · 08-11 −2.411 · **08-12 +3.174**. **Branch A (≥ +6.80 at ANY settled close) never reached** (max +3.174); **branch B (≤ −4.19 at the 08-12 close) not met** — the terminal value is **positive**. ⇒ **no Red Sea war-risk premium appeared in tanker equities; `D168` stays named-but-inert.** 🚨 **CONSTRUCTION FINDING → `D242`: branch B WAS satisfied at the 08-10 close (−4.711 ≤ −4.19), but B settles only on the terminal bar while A settles on ANY bar.** The asymmetry is in the frozen text and is **honoured — no threshold was improvised.** ⚠ Instrument disclosure repeated: **STNG/FRO are outside `us_top300`**, so this is a hand-built series with no flow/RS/short row. |
+| **S72** | 2026-08-08 (PREMORTEM Lens 2) | → 2026-08-12 | 🚨 **AMBIGUOUS — by its own PRE-REGISTERED rule, not by a scorer's choice** | 2026-08-13 HANDOVER §2a | 1-session excess vs `SPY` on the 08-12 CPI close: **XLI −0.154 · XLF −0.043 · XLB −1.490 · XLU +0.231 · XLE −0.086.** **THREE of five legs read \|excess\| < 0.20pp** ⇒ the row's own clause fires verbatim (*"any leg reading \|excess\| < 0.20pp is recorded as `flat` and the row scores AMBIGUOUS rather than being forced into a sign"*). ★★ **This is the desk pre-registering its own failure mode and the failure mode arriving on schedule.** The only two non-flat legs — **XLB −1.490 and XLU +0.231 — carry OPPOSITE signs** ⇒ **neither MACRO's three-tilt grouping nor Lens 2's four-tilt grouping gains support. The question is NOT answered and must not be reported as C.** ⚠ Anti-signals (a) CPI delay and (b) an intraday halt **did not fire**; the AMBIGUOUS is structural, not a VOID. |
+| **S73 · Leg 2 (equity)** | 2026-08-10 (PREMORTEM Lens 2) | → 2026-08-12 close | **NEITHER equity branch fired** | 2026-08-13 HANDOVER §2a | **H-equity**: median 1-session excess vs SPY of {JPM **+0.617**, BAC **+1.015**, XLI **−0.154**} = **+0.617**, against a **≤ −1.50** line ⇒ not fired. **C-equity**: `XLU` **+0.231**, against **≥ +2.00** ⇒ not fired. ⇒ **the July CPI produced no tail equity reaction in either direction.** ★ **Leg 2 did exactly the job it was registered for** — it settled on the CPI session itself and **could not be blocked by the FRED lag that is once again blocking Leg 1.** ⚠ Its registration pre-stated that Leg 2 is *"a directional CONFIRMATION, not a second discriminator"* ⇒ **a null Leg 2 is NOT evidence that Leg 1 will be null.** |
+
+**Not scoreable this run, NAMED rather than dropped:**
+- **S73 Leg 1 (macro)** — 🚨 **`PENDING-DATA`, exactly as the row pre-declared.** `[FRED]` publishes
+  `DGS2` · `DGS10` · `BAMLH0A0HYM2` through **2026-08-11 only**; the 08-12 CPI-day close is
+  unpublished. The row's own text: *"the first FRED close covering 08-12 may not print until
+  08-14–08-18. That is NOT grounds to re-date it."* **Band unchanged.** ★ The lag is now measurably
+  **shorter** than when the row was written — **1 session, not the 3–4** that blocked four runs
+  (`T10YIE` already prints 08-12 at **2.26**, −1bp).
+- **S63 · S64 · S67 · S68 · S69 · S71** — all six settle on the **2026-08-13 SETTLED CLOSE**, which
+  was ~20 minutes in the future at this run's clock. **Re-read at source this run to confirm none
+  settles earlier.** ⚠⚠ **The next `industry_US` run inherits SIX settlements at once — the largest
+  scheduled batch on this board.**
+- **S74** (→ 08-24) · **S75 · S76 · S77 · S78** (→ 08-19) · **S79** (→ 08-27) — ARMED.
+- 🚨🚨 **`S8` remains undated `[blank]` and un-scoreable for an ELEVENTH consecutive run by this desk.
+  A human must `VOID` it or re-register it with a date (P5). Named again, not dropped.**
+
+**`EXPIRED` = 0 · silent skips = 0 · past-dated rows left unscored = 0.**
+
+⚠ **Two live rows are measuring the wrong object, found by this run's PREMORTEM and recorded WITHOUT
+moving either band** (`D249`): **`S64`** scores **`XLI`** while the actual INDU position is **defense**
+(defense EW exc20 vs SPY **+7.81** vs XLI **+0.89**; corr(defense, XLI) **0.48**), and **`S63`**
+brackets **UTIL+RE+FIN** while the measured third leg on 252 days is **STPL** (`XLU–XLF` **0.24**) —
+⚠ though the 60-day window reads `XLF`–complex **0.70**, so this is also a **C5 window-choice** problem.
+**Both settle tonight on their frozen text.**
+
+⚠ **One live row is graded NO-INFORMATION before its own settle** (`D248`): **`S71`**'s branches are
+symmetric in σ (+0.97σ / −1.04σ, firing ~14.7% / ~14.3% of 252) but **asymmetric in practice** — its
+08-12 base bar (+0.231) makes branch A a **6.0%** event and branch B a **10.3%** event, so **the
+against-us branch is 1.7× harder to fire.** Its differencing also inflated sd by **√2** and induced
+negative autocorrelation. **The band is NOT moved; `S80` replaces its job on a 4-session window.**
+
+---
+
+## MASTER INDEX — appended 2026-08-13 by the `industry_US` run (PREMORTEM registrations)
+
+> IDs checked at **WRITE time** (D137 / D76 / M319) against EVERY row in **all three** `SCENARIOS*.md`
+> **and** both `STANDING_VIEW*.md` **and** `RESEARCH.md`: `grep S80` / `S81` / `S82` / `S83` returned
+> **0 in all nine files**; highest existing was **S79 (US) / S60-KR (KR)** ⇒ this run took **S80 – S83**.
+> ★ **Every band was MEASURED on a trailing-252 distribution by the registering run**, and every
+> magnitude threshold is stated against a measured implied move (`module_flow --positioning`, this run).
+
+| ID | Owner | File | One line |
+|---|---|---|---|
+| **S80** | US | `SCENARIOS_US.md` | ★★★ **Is the UTIL/RE/STPL underweight ONE duration bet, and is it right?** EW{XLU,XLRE,XLP} **4-session** excess vs SPY at the **08-19** settle: **A ≥ +1.85 (against us — all three UWs wrong together) · B ≤ −2.29 (first multi-session confirmation)**. D93: mean −0.245 · sd 2.068 ⇒ ±1.0σ, **A 15.5% · B 13.1% · no-settle 71%**. State **−0.408**. **Replaces `S71`'s job**, which was graded no-information before its own settle |
+| **S81** | US | `SCENARIOS_US.md` | ★★ **NVDA 08-26 READTHROUGH, with NVDA deliberately EXCLUDED.** EW{AVGO,ANET,HPE} **2-session** excess vs SPY, 08-25 → **08-27**: **A ≥ +3.66 · B ≤ −2.86 (the book's 4-of-11 concentration is ONE correlated loss)**. D93: mean +0.403 · sd 3.258. ★ **Band size = the measured beta**: β(basket~NVDA) **0.35 (252d) / 0.33 on top-decile \|NVDA\| days (n=26)** ⇒ a 10% NVDA gap maps to ~3.3pp. **Converts PREFLIGHT G4's four-run-old window artifact into one dated observation** |
+| **S82** | US | `SCENARIOS_US.md` | ★★★ **The highest-information row on the board: two lenses of THIS pre-mortem disagreed about HLTH and this settles it.** [XLV 5-session excess vs SPY] MINUS [EW{XLU,XLRE,XLP} 5-session excess vs SPY] at the **08-20** settle: **A ≥ +2.45 (idiosyncratic med-tech leg — the zero-exposure GAP is real) · B ≤ −1.62 (HLTH is the 4th leg of a factor we are UW three times ⇒ the tilt set is internally inconsistent)**. D93: mean +0.414 · sd 2.065. State **+3.091 — already above A, DISCLOSED; B is the adversarial ask** |
+| **S83** | US | `SCENARIOS_US.md` | ★★ **The book holds ANET and HPE as one AI-compute position — are they?** [ANET 5-session excess vs SPY] MINUS [HPE 5-session excess vs SPY] at the **08-20** settle: **A ≥ +7.16 · B ≤ −9.68**. D93: mean −1.260 · **sd 8.417 = the widest estimator on this board, DISCLOSED at registration ⇒ C is the heavy favourite**. Registered anyway because the desk sizes the two as one theme and **no row tests that** |
+
+**Count: 97 brackets — 71 US-owned · 26 KR-owned.**
+⚠⚠ **The shared-counter proposal for a human now stands for a TWENTIETH run.**
+★ **This run's own ID hygiene**: `handoff_id_audit` reports **max M612 · 153 colliding M ids** (real,
+same-namespace) and **D237–D241 "declared 2×"** — 🚨 **the D-side collisions are FALSE POSITIVES and
+this run OPENED `RESEARCH.md` BEFORE saying so**, which is the correction 08-12 RUN-2 had to make in
+place. `RESEARCH.md:1948` declares `D231-KR ~ D237-KR` (suffixed) and `:2045` declares `D237–D241`
+(unsuffixed): **two correctly-formed namespaces**, i.e. `D240` reproducing. **This run takes
+`D242`–`D251` unsuffixed**, the range the 2026-08-13 `industry_kr` run explicitly reserved for this
+desk at `RESEARCH.md:2075`.
+
+---
+
+## Scored by the 2026-08-13 `portfolio_US` desk (appended to the MASTER scoring log — the log stays shared and un-split)
+
+> **Run clock: KST 2026-08-14 00:00 = ET 2026-08-13 11:00, Thursday — the US cash session is OPEN
+> and has ~5h to run.** Seven rows were handed to this desk to score "on the 2026-08-13 settled
+> close". **That close does not exist yet.** Four of the seven are therefore **NOT SCORED**, and the
+> refusal is the finding rather than an omission.
+>
+> 🚨 **The failure this prevents is registered on this desk in `S63`'s own text**: *"the first
+> verification pass accidentally included the LIVE 2026-08-06 partial bar and read DUR −5.336;
+> pinning to the 08-05 settle gave −6.197. The 0.86-point gap is D74."* **Scoring the four price
+> rows tonight would have reproduced D74 on four rows at once.**
+>
+> **Mechanical proof the last bar is live, not settled** (last-bar volume ÷ prior-20-session median):
+> `SPY` **0.20×** · `XLU` **0.26×** · `XLI` **0.35×** · `ANET` **0.21×**. `HPE` reads 0.81× — **a
+> volume-heavy session in progress, not a settled bar**, and it is the one name where the ratio alone
+> would not have caught it. ⇒ **the volume test needs the clock beside it; neither is sufficient alone.**
+> ★ This desk's own `PREFLIGHT_US.md §G0`, written 09:10 ET the same morning, independently agrees:
+> *"Last bar **2026-08-12**, settled."*
+
+| ID | Verdict | Measured | Note |
+|---|---|---|---|
+| **S63** | ⏸ **NOT SCORED — settle does not exist** | At the **08-12** settle `DUR = −4.009` (XLU −5.394 · XLRE −2.499 · XLF +0.062); anchor −6.197 | **C band, 0.709pp from branch A's −3.3.** ⚠ Its third leg's known defect (C5 — at 252d the leg is STPL, not FIN) is **carried, not resolved**; the row is not re-cut |
+| **S64** | 🚫 **VOID — and the VOID is settle-invariant** | **WTI `CL=F` 08-12 settle 83.27**, 08-13 live 81.14, against the row's own base **75.22** | The row VOIDs on *"WTI settled 2026-08-13 ≥ 75.22 ⇒ the discriminating tick never arrived."* Crude would have to fall **−7.3% intraday** to un-VOID it ⇒ **scoreable now.** ★ **`D249` (the row measures XLI while the book's position is defense) is MOOT — the row never scores at all.** Crude **rose 10.7%** over the window the row needed it to fall in. ⚠ Consistent with `R65`: `XLE exc5 +6.140` was best-of-11 for exactly this reason |
+| **S67** | ⏸ **NOT SCORED — settle does not exist** | At the **08-12** settle `median{MPC,VLO,PSX} RS20 = +12.656` (MPC +14.059 · VLO +10.488 · PSX +12.656); anchor +5.488 | **C band, 0.904pp below branch B's +13.56** — the *"with us"* branch is within one session's noise. ⚠ **This is the row `SECTOR_ROTATION.md §2b` explicitly deferred the ENRG OW−→OW promotion for.** It settles tonight |
+| **S68** | ✅ **FIRED-A** — on the only scoreable leg | **leg (ii): DIS current-year 30-day revision breadth = 1↑ / 7↓ — IDENTICAL to registration** | Branch A is *"leg (i) ≤ +0.29 **OR** leg (ii) still net-negative"*; leg (ii) **is** still net-negative ⇒ **A fires.** **leg (i) stays VOID BY CONSTRUCTION** (`S68-ANNEX`: EA went private 08-04, Form 25-NSE, two zero-volume bars). ⚠ **Read at 11:00 ET, not at the settle — disclosed.** The margin is **6 counts**, so no close can flip it ⇒ **settle-invariant.** ★ The verdict **confirms a withdrawal already made** (ROTATION withdrew the COMM notch on 08-07), so it changes no tilt — but it is the first row this desk has scored on a **count** axis rather than a price axis, and the count axis was the one the promotion did not use |
+| **S69** | ⏸ **NOT SCORED — settle does not exist** | At the **08-12** settle `MET RS20 = +2.495` against branch A's line **≤ +2.53** — **0.035pp INSIDE A** | ⚠⚠ **The thinnest margin this desk has carried into a settle.** Companion (C2, quoted not frozen): MET FY 30-day breadth **5↑/9↓ = still net-down**, FY consensus **−0.6%/90d** ⇒ **the revision book is unchanged from registration.** If A fires it fires on a 0.035pp edge and **must be reported with that number attached** |
+| **S71** | ⏸ **NOT SCORED — settle does not exist** | 08-12 leg fixed: `XLU` 1-session excess **+0.231**. A needs the 08-13 excess **≥ +1.801**, B needs **≤ −1.459** | ⚠ Registered defect **`D248` carried, band NOT moved**: the +0.231 base makes **A a 6.0% event and B a 10.3% event ⇒ the against-us branch is 1.7× harder.** ★ `S80` (08-19) was registered to replace this row's job on a 4-session window |
+| **S73 Leg 1** | ✅ **N — and it is determined by ONE leg** | `hy_oas` **08-12 = 2.71** vs the row's 08-06 anchor **2.71** ⇒ **ΔHY OAS = 0.00** | Branch H needs `ΔHY ≥ +0.10`; branch C needs `ΔHY ≤ −0.05`. **Both are conjunctions and both fail on the HY leg alone ⇒ N, regardless of what `DGS2` prints.** ⚠⚠ **`D212` reproduces for a FIFTH consecutive run and it is why this row looked unsettleable**: `hy_oas` carries **08-12**, `us_2y` stops at **08-11 (4.22)**. ★ **The desk was asking the wrong question** — *"has DGS2 published?"* is not the gate; the row was **already decided by the leg that had published.** ⇒ registered as the general lesson: **on a conjunction bracket, check whether the published leg alone forecloses every branch before waiting on the lagging leg.** |
+
+**Scored 3 (1 VOID · 1 FIRED-A · 1 N) · NOT SCORED 4 (all four blocked by the same missing close).**
+⚠ **The four unscored rows settle at tonight's 16:00 ET close and are readable 2026-08-14 morning KST.
+They are NOT re-dated** — the observable is anchored, not the calendar (the `S73` treatment).
+
+
+---
+
+## MASTER scoring log — appended 2026-08-14 by the `industry_kr` run
+
+> ⚠ **이 로그는 시장별로 쪼개지 않는다**(README §2). 아래 첫 행은 **US 소유 행을 KR 런이 채점한 것**이고,
+> 그것이 정확히 이 로그를 안 쪼개는 이유다.
+
+| 브래킷 | 등록 | 정산점 | **판정** | 채점 주체 | 관측값 / 근거 |
+|---|---|---|---|---|---|
+| **S67** (US 소유) | 2026-08-07 `industry_US` PREMORTEM | → **2026-08-13 US 정착 종가** | ✅ **`FIRED-C`** | **2026-08-14 HANDOVER §2-1 (industry_kr)** | **median RS20 vs SPY of {MPC, VLO, PSX} = +11.925** (MPC +12.90 · VLO +10.59 · PSX +11.93; SPY 20일 +3.618%). 밴드 **A ≤−2.20 / B ≥+13.56** ⇒ C 구간, **B까지 1.635pp · A와는 14.1pp**. 08-12 시점 +12.656 → 08-13 +11.925 로 소폭 후퇴. ⇒ **이 데스크의 ENRG 승격은 반증되지도 검증되지도 않았다.** ⚠ **범위(C4)**: 등록문이 *"B 가 발화해도 싸다는 뜻이 아니다"*(컨센이 목표가를 이미 쫓았고 `margin_history` 3종 blank) 라 적었으므로 **C 는 더더욱 아무것도 말하지 않는다.** ⚠ **미실행 점검 명시**: D149 무효화 조건(정유소 특이사건)을 **KR 런은 1차 공시로 확인하지 않았다** — C 판정이라 결론 불변이나 확인하지 않은 것을 확인한 것으로 적지 않는다 |
+| **S38** | 2026-07-29 `industry_kr` DEEP-INDU/BET | → 2026-08-12 | ⏸ **`PENDING-DATA` · 3런 연속** | 2026-08-14 HANDOVER §2-2 | 관측값(**2026-08-12 KRX 공매도잔고 %float**)이 오늘도 미인쇄. 08-14 08:37 조회 시 시계열 마지막 행 **2026-08-11**. **T+2 규칙은 3회 독립 측정으로 확정**(08-12→08-07 · 08-13→08-10 · 08-14→08-11)됐고 **틀린 것은 적용 산수**였다 ⇒ **첫 채점 기회 = 2026-08-17(월) 아침.** 현재 거리: **4.89%**, 브랜치 B(≥5.00)까지 **0.11pp**, `building(+0.65)`. **밴드 불변 · 재동결 없음** |
+| **S48-KR** | 2026-08-02 `industry_kr` BET/ALPHA | → 2026-08-12 | ⏸ **`PENDING-DATA` · 3런 연속** | 동일 | 006340 최신 관측 **3.62%(08-11)**, 밴드 A ≤2.50 / B ≥5.50 ⇒ C 구간. ⚠ **추세 서술은 창이 정한다**: 10세션 `covering(−0.38)` 이나 **최근 5세션은 3.03→3.62 = +0.59 `building`** — 10세션 창이 07-31 급락(3.91→2.85)을 물고 있다 |
+| **S8** (US 소유, 무날짜 `[blank]`) | — | — | 🚨🚨 **정산 불가 · 11번째** | 2026-08-14 HANDOVER §2-3 | **KR 은 판정할 수 없다(P5).** 사람이 `VOID` 하거나 날짜를 붙여 재등록해야 한다 |
+| — | — | — | ⏸ **US 데스크로 명시 이관 4건** | 동일 | **S63 · S68 · S69 · S71** — 전부 08-13 US 정착에 걸려 있고 관측값이 **US 섹터 ETF·컨센 리비전**(KR preflight 미검사 계기). 날짜 경과 **약 3.5시간**이고 US 런은 오늘 밤 ⇒ **EXPIRED 아님.** 🚨 **오늘 밤 US 런이 이 넷을 안 채점하면 그때부터 EXPIRED 다** — 그 사실을 여기 못박는다 |
+
+**`EXPIRED` = 0 · 조용한 생략 = 0 · 날짜 지난 미채점 = 0**(전부 위 표에 사유와 함께 있다).
+
+
+## 채점 로그 — appended 2026-08-15 by the `industry_kr` run
+
+> ★ **3런 연속 `PENDING-DATA` 였던 두 행이 오늘 정산됐다.** 08-14 런이 예고한 「첫 채점 기회 = 08-17(월)」보다 **이틀 이르게** 관측면이 인쇄됐다
+> (`pykrx get_shorting_balance_by_date` 최종행 = **2026-08-12**, 양 종목 모두).
+
+| 브래킷 | 등록 | 정산점 | **판정** | 채점 주체 | 관측값 / 근거 |
+|---|---|---|---|---|---|
+| **S38** | 2026-07-29 `industry_kr` DEEP-INDU/BET | → 2026-08-12 | ✅ **`FIRED-B`** | 2026-08-15 HANDOVER §3-1 (`industry_kr`) | 006360 공매도잔고 **5.01% float · `building`** (08-04 4.36 → 08-05 4.42 → 08-06 4.69 → 08-07 4.61 → 08-10 4.71 → 08-11 4.89 → **08-12 5.01**). 브랜치 B = **≥5.00% ∧ still building** ⇒ **두 다리 모두 충족.** ⚠⚠ **레벨 다리 마진 0.01pp — 이 데스크가 정산한 가장 얇은 마진**(직전 최박 S69 0.035pp); `building` 다리는 7세션 중 6세션 상승으로 얇지 않다. **안티시그널 실제로 점검함**: 「국내 주택정책/PF 사건이 전체 건설 버킷을 움직이면 VOID」 — **8·13 부동산대책은 실존하나 관측일(08-12) 다음날**이고, **발표일 08-13 건설 중앙 −0.27% · 양의비율 31% vs 벤치 `^KS11` +3.56% = 초과 −3.84pp (sell-the-news)** 이며, 창 내 움직임은 **12세션 중 10세션 양(+)의 그라인드**로 이벤트 점프가 아니다 ⇒ **미발화, 판정 유효.** 🚨🚨 **그러나 B 에 등록된 의미(*"숏이 이겼다 · 그 🟢 은 깔고 앉은 매집이다"*)는 같은 창의 가격이 반증한다 — 006360 은 07-31→08-12 에 **+50.11%** (벤치 −0.25%). **관측면은 발화했고 인과 서술은 죽었다**(C2). 새 명제 **`M-61`** 이 이를 소유 |
+| **S48-KR** | 2026-08-02 `industry_kr` BET/ALPHA | → 2026-08-12 | ✅ **`FIRED-C`** | 동일 | 006340 공매도잔고 **3.53% (`covering −0.38`)** — 밴드 A ≤2.50 / B ≥5.50 ⇒ **C 구간, 정보 없음**(등록문 그대로: *"더 좁은 밴드로 재등록하되 사후에 넓히지 마라"*). **안티시그널 둘 다 실제로 점검함**: ① 구리 `HG=F` 07-31 **6.4360** → 08-12 **6.5970 = +2.50%**(창내 최저→최고 +6.85%) ⇒ **±10% 문턱 미달, 미발화** ② 006340 DART 20일 — 창 **안쪽** 공시는 **반기보고서(08-12)** 뿐, 명시 3클래스(수주·증자·지배권) 해당 없음 ⇒ 미발화. ⚠ **정직하게 남긴다**: 07-31 「최대주주등소유주식변동신고서」+「대량보유상황보고서」가 있으나 **등록 asof(07-31)와 동일자 = 동결 상태의 일부**로 읽었다; 더 엄격한 독법이면 「지배권 이전」에 가깝게 셀 여지가 있는 **판단 호출**이다. ★ **재등록 시 첫 분포 표본**: 이 브래킷이 C5(손 설정)로 선언했던 「2주 변화 분포」의 실측 두 점 = **006340 −0.47pp · 006360 +1.38pp** |
+| **S8** (US 소유, 무날짜 `[blank]`) | — | — | 🚨🚨 **정산 불가 · 12번째** | 2026-08-15 HANDOVER §3-3 | **KR 은 판정할 수 없다(P5).** 사람이 `VOID` 하거나 날짜를 붙여 재등록해야 한다. **12연속을 프로세스 실패로 명시 기록** |
+
+**`EXPIRED` = 0 · 조용한 생략 = 0 · 날짜 지난 미채점 = 0.**
+★ **이 쌍이 만든 것**: 같은 날 정산된 두 크라우디드 숏이 **정반대 공매도 경로**(building +1.38pp / covering −0.47pp)를 걷고 **둘 다 급등**했다(+50.11% / +23.31%, 벤치 −0.25%)
+⇒ **공매도 잔고 방향은 이 표본에서 가격에 대해 정보를 갖지 않았다**(n=2, C4). 이는 이 데스크의 **REJECTED 신호 원장(D6)** 의 **첫 KR 자체 실측**이다.
+
+
+## MASTER INDEX — appended 2026-08-14 by the industry_kr run
+
+> IDs checked at **WRITE time** (D137 3-grep): 기존 최고 **S60-KR(KR) / S83(US)**.
+
+| ID | Market | File | One line |
+|---|---|---|---|
+| **S61-KR** | KR | SCENARIOS_KR.md | S61-KR — ★★★ 레짐 콜을 처음으로 KR 1차 관측면에 묶는다: 한국은행 **총 수출물가 MoM**(원화 기준), A ≤0.0% / B ≥+3.0% / C 사이, → **~2026-09-14**. 공표 지연 **0 영업일** — D231-KR 이 요구한 칸을 처음 채운 브래킷 |
+
+
+---
+
+## Scored by the 2026-08-14 `industry_US` run (appended to the MASTER scoring log — the log stays shared and un-split)
+
+> ⚠ Written by **append**, never a whole-file `'w'` rewrite — the **D165** pre-commitment, held.
+> Run clock **2026-08-14 22:10–23:3x KST = 09:10–10:3x ET**. Every settlement uses the **2026-08-13
+> settled close**; **no 08-14 bar is used anywhere** (D74 — and a live 08-14 bar WAS caught intruding
+> mid-run, see `MACRO_REPORT §C`). Prices re-pulled in full at scoring (D140): `yfinance`,
+> `auto_adjust=False`, benchmark **`SPY` named inline (C1)**.
+> ★ **Method validated before any new number was read**: this pull reproduces the 08-12 anchors
+> exactly (XLU −5.394 · XLRE −2.499 · XLF +0.062 · MET +2.495 · PSX +12.656) **and** the KR desk's
+> 08-13 numbers exactly (MPC +12.900 · VLO +10.590 · PSX +11.925).
+> ★★ **This clears the deadline the 2026-08-14 `industry_kr` run set in this same log**
+> (*"🚨 오늘 밤 US 런이 이 넷을 안 채점하면 그때부터 EXPIRED 다"*). **`EXPIRED` = 0.**
+
+| ID | Registered | Event date | Branch fired | Note |
+|---|---|---|---|---|
+| **S63** | 2026-08-06 (PREMORTEM Lens 2) | → 2026-08-13 | **FIRED-C** | `DUR = (XLU+XLRE)/2 − XLF` RS20 vs SPY: XLU **−6.763** · XLRE **−4.366** · XLF **−0.957** ⇒ **−4.6075**, inside the −9.2 / −3.3 band (**1.308pp from A**, 4.59pp from B). ★ **The PATH is the finding**: the CPI session moved DUR **toward** A (−6.197 → −4.009) and the PPI session moved it **back away** (→ −4.608) ⇒ **the cool CPI began pulling the three tilts together and the split PPI un-did it inside one session** — agreeing independently with `S71`. ⚠ **C4**: C means the question is **not answered**. ⚠ **`D249` carried, NOT re-cut**: at 252 days the measured third leg is **STPL, not FIN**. ✅ Invalidation checked and did not fire; the NEE/Dominion Virginia intervention (`cnbc`+`bloomberg` 08-06) is named as a real in-window event **outside the three specified classes**, and `R40`'s standing note that `D` is a merger-arb security inside `XLU` is re-stated |
+| **S69** | 2026-08-07 (PREMORTEM Lens 3) | → 2026-08-13 | ✅ **FIRED-A** | MET RS20 vs SPY **+0.406** against branch A's **≤ +2.53** ⇒ fires, **2.124pp inside**. Companion axis quoted as the row demands (C2): FY consensus **9.79, −0.6%/90d**, FY revision breadth **30d 5↑/9↓** and **7d 0↑/3↓** — **unchanged from registration and still net-down**, so branch A's meaning holds on **both** axes. 🚨 **AND THE QUALIFIER TRAVELS WITH THE FIRE**: RS20 fell **+2.495 → +0.406 = −2.089pp while MET OUTPERFORMED** (MET +0.838% vs SPY +0.698% = **+0.140pp**). The entire move was the **07-16 bar rolling out of the back of the window** (07-15→07-16 was **+1.627% MET / −0.542% SPY = +2.17pp excess**). ⇒ **the observable fired exactly as frozen and no threshold was improvised — but "the flow tag lagged" is measured HERE by a July session leaving the window, not by August weakness.** Registered **`D257`** |
+| **S71** | 2026-08-08 (PREMORTEM Lens 2) | → 2026-08-13 | **FIRED-C** | `Δ` = XLU 1-session excess vs SPY on 08-13 (**−0.2415**) minus on 08-12 (**+0.2309**) = **−0.4724pp**, inside the −1.69 / +1.57 band ⇒ **the two prints did not disagree materially.** ✅ **Anti-signal (a)** did not fire — CPI 08-12 and PPI 08-13 08:30 ET both on schedule. ✅ **Anti-signal (b) MEASURED rather than asserted**: the Δ was decomposed across XLU's constituents and **10 of 14 carry a negative Δ** while the two candidate contaminants push the **other** way (`DUK` storm outages **+0.119**, `D` merger-arb **+0.376**); the move is **broad regulated-utility**, driven by `SO −0.808` · `AEP −0.727` · `XEL −1.174` · `PEG −1.246`. ⚠ **`D248` carried, band NOT moved**: the +0.231 base made A a **6.0%** event and B a **10.3%** event ⇒ **C was the heavy favourite before the settle and was graded no-information at registration.** `S80` (08-19) replaces its job |
+
+**Already settled elsewhere and NOT re-scored, named rather than dropped:**
+- **S67** ✅ `FIRED-C` — scored by the 2026-08-14 `industry_kr` run; **independently reproduced by this
+  run's own pull to the third decimal** (median{MPC,VLO,PSX} RS20 **+11.925**). ⚠ The KR run disclosed
+  it did **not** check `S67`'s D149 invalidation at a primary source; **this run checked and it does
+  not fire** — no refinery-specific incident filing in-window.
+- **S68** ✅ `FIRED-A` (portfolio_US 08-13, settle-invariant at a 6-count margin) · **S64** 🚫 `VOID`
+  (settle-invariant; crude **rose 10.7%** over the window the row needed a fall in) ·
+  **S73 Leg 1** ✅ `N` (determined by the published leg alone: ΔHY OAS **0.00**).
+- **S74** (→08-24) · **S75 · S76 · S77 · S78 · S80** (→08-19) · **S82 · S83** (→08-20) ·
+  **S79 · S81** (→08-27) — **ARMED, none past-dated.**
+- 🚨🚨 **`S8` remains undated `[blank]` and un-scoreable for a TWELFTH consecutive run by this desk.
+  A human must `VOID` it or re-register it with a date (P5). Named again, not dropped.**
+
+**`EXPIRED` = 0 · silent skips = 0 · past-dated rows left unscored = 0.**
+
+## MASTER INDEX — appended 2026-08-14 by the `industry_US` run (PREMORTEM registrations)
+
+| ID | Owner | File | One line |
+|---|---|---|---|
+| **S84** | US | `SCENARIOS_US.md` | ★★★ **The MANDATORY Hormuz both-sides bracket.** `[XLE exc5] − [EW{XLU,XLRE} exc5]` vs SPY at the **08-21** settle: **A ≤ −3.174 (p15, 15.1%) · B ≥ +5.544 (p95, 5.2%)**. D93 mean +0.634 · sd 3.474. **State +3.880 is ALREADY AT p85**, so B was set at p95 to avoid a zero-information branch. **Branch A falsifies ENRG OW− and four underweights on one tick** |
+| **S85** | US | `SCENARIOS_US.md` | ★★★ **The falsifier for the SAME RUN'S IT N→N+ promotion, on the axis the promotion used.** `RSPT − XLK` 5-session, **08-21**: **A ≤ −0.994 · B ≥ +2.046**. **State +1.980 is already above p85 ⇒ the promotion was made at the 85th–95th percentile of its own justifying estimator, DISCLOSED** |
+| **S86** | US | `SCENARIOS_US.md` | ★★ **The optical/interconnect layer — 2 of the desk's 6 admissible 🟢, zero exposure, no cycle-registry entry.** `EW{COHR,LITE,CIEN}` exc5 vs SPY, **08-21**: **A ≥ +12.584 · B ≤ −5.948**. **sd 8.998 = the widest estimator on the board, disclosed ⇒ C favoured** |
+| **S87** | US | `SCENARIOS_US.md` | ★★ **Are the book's biggest runners EXTENDED-BUT-LIVE or EXHAUSTED?** `EW{DELL,HPE}` exc5 vs SPY, **08-21**: **A ≤ −4.961 · B ≥ +16.143**. State **+12.331**, between p85 and p95 |
+
+**Count: 101 brackets — 75 US-owned · 26 KR-owned.**
+⚠⚠ **The shared-counter proposal for a human now stands for a TWENTY-FIRST run.**
+★ **Every one of the four states its SETTLEMENT MODE (`TERMINAL` on both branches) — the first
+application of `D242`'s remedy on this desk.**
+
+---
+
+## MASTER INDEX — appended 2026-08-15 by the `industry_US` run (PREMORTEM registrations)
+
+> ⚠ Written by **append**, never a whole-file `'w'` rewrite — the **D165** pre-commitment, held.
+> ⚠ **ID 3-grep at WRITE time (D137)**: highest existing **S87** (US) / **S61-KR** (KR).
+
+| ID | Owner | File | One line |
+|---|---|---|---|
+| **S88** | US | `SCENARIOS_US.md` | ★★★ **The falsifier for the SAME RUN'S Energy OW promotion, on the node the promotion trades.** `EW{MPC,VLO,PSX}` 5-session excess vs `SPY`, **08-21**: **A ≤ +0.061 (the 2-year median) · B ≥ +8.144 (p95)**. **State +15.698 = the 100th percentile of two years** ⇒ **B declared NO-INFORMATION at registration** (it tolerates only −7.6pp ≈ 1.7× `MPC`'s ±4.4% implied move); **A is the entire row**, and A is exactly what falsifies a promotion made at the top of its own distribution |
+| **S89** | US | `SCENARIOS_US.md` | ★★ **Is Materials' one name exhausted?** `NEM` 5-session excess vs `SPY`, **08-21**: **A ≤ −5.217 · B ≥ +9.658**. State **+3.833 (70th %ile)**. `NEM` carries the board's most extreme exhaustion geometry — **+429% of its 60-day excess earned in the last 20 sessions, days 21–60 = −20.59** — while being the whole of `P59`'s positive case. **sd 6.056 = 2nd-widest estimator this desk has registered ⇒ C is the favourite, disclosed now** |
+| **S90** | US | `SCENARIOS_US.md` | ★★ **Is Real Estate's accumulating node early, or 20 sessions old?** `DLR` 5-session excess vs `SPY`, **08-21**: **A ≤ −3.199 · B ≥ +5.223**. State **+2.878 (84th %ile)**. `DLR` leads the 4-of-12 accumulating node that won DEEP Rotating slot 2 — **and its days 21–60 are −9.02 on a +1.64 60-day base**. 🚨 **No implied-move check was pulled for this row and the gap is stated** |
+| **S91** | US | `SCENARIOS_US.md` | ★★★ **The consumer binary nobody was bracketing — the week's actual regime event.** `XLY` 5-session excess vs `SPY`, **08-21**: **A ≤ −2.467 (p05) · B ≥ +1.553 (p85)**. State **−1.783 (14th %ile)**. **Branch A was set at p05 rather than the customary p15 because the state already sat below p15** — disclosed at registration. **`sd 1.639` is the narrowest estimator on this desk's board ⇒ both branches reachable ⇒ the most informative row registered today** |
+
+**Count: 105 brackets — 79 US-owned · 26 KR-owned.**
+⚠⚠ **The shared-counter proposal for a human now stands for a TWENTY-SECOND run.**
+🚨🚨 **`S8` remains undated `[blank]` and un-scoreable for a THIRTEENTH consecutive run by this desk.
+A human must `VOID` it or re-register it with a date (P5). Named again, not dropped.**
+★ **One candidate binary was considered and DROPPED with its reason** (Navy shipbuilding / foreign-yard
+opening) — neither branch would change a conclusion, because the beneficiaries are foreign-listed and
+the pure-play `HII` is outside `us_top300`. **Kept as a watch KPI, not minted as a bracket.**
+
+
+---
+
+## Scored by the 2026-08-16 `industry_kr` run (appended to the MASTER scoring log — the log stays shared and un-split)
+
+| id | event date | verdict | observed | threshold was | effect on the standing view |
+|---|---|---|---|---|---|
+| — | — | ★ **Condition-check executed on every ARMED row — null result, recorded as a check, not a skip** | **Zero rows past-dated for either desk.** `SCENARIOS_KR.md` opened in full: the nearest is **S51-KR → 2026-08-17 (tomorrow)**, then S52-KR 08-19 · S57-KR 08-20 · S27 ~late-Aug · S58-KR 09-09 · S61-KR ~09-14 · S45 & S54-KR 09-30 · S60-KR 10-12 · S49-KR 10-30 · S34 & S53-KR 10-31 · S59-KR 11-04. `SCENARIOS_US.md` opened: nearest US rows settle **08-19 (S75–S78) · 08-24 (S74) · 08-27 (S79)**. **This run had zero new settled sessions, so no observation window closed.** | — | **`EXPIRED` = 0 · silent skips = 0** |
+| **S8** | `[blank]` undated | 🚨🚨 **UNSCOREABLE — 13th consecutive run** | The KR desk cannot rule on it (P5). ⚠ And the observable **moved this week while the bracket stayed undated**: 2026-08-15 「이란, 美호르무즈 소유권 주장에 "과거에도, 앞으로도 우리 땅"」 [asiae, 1 outlet] and 2026-08-14 「'개방도 폐쇄도 아냐'…호르무즈 항로 다층화 '뉴노멀' 형성」 [yonhap, single-source tier]; `CATALYST_WATCH` still carries *Iran 'Strait of Hormuz open' statement* as an **undated 🔀binary** | — | **A human must `VOID` it or re-register it with a date.** Logged as a process failure for the 13th time |
+| **M-61 anti-signal ②** (KR, `MACRO_REPORT` proposition, not a SCENARIOS row) | condition-settled | ✅ **NOT FIRED — settled without a new session** | Residual correlation of 006360 × 006340 after removing `^KS11`: **+0.2694** (window 2026-04-15→08-14, **n=83**; betas +0.628 / +1.017) against a threshold of **+0.50** ⇒ branch (a) survives | +0.50 | ⚠ **Both halves recorded (C2/C5)**: restricted to the registration→observation window (07-31→08-12, **n=9**) the same statistic reads **+0.4610 — 0.04 from the line.** The window choice nearly decided the verdict, and short windows manufacture structure (S5) |
+
+## MASTER INDEX — appended 2026-08-16 by the `industry_kr` run
+
+| id | owner desk | file | one-line |
+|---|---|---|---|
+| **S62-KR** | industry_kr | `SCENARIOS_KR.md` | Transshipment tariffs: the board's fastest narrative finally gets a dated bracket (4 runs overdue) |
+| **S63-KR** | industry_kr | `SCENARIOS_KR.md` | Cosmetics: is "ODM vs brand" a real unit or a one-week artifact? |
+
+## Scored by the 2026-08-16 `industry_US` run (appended to the MASTER scoring log ??the log stays shared and un-split)
+
+| id | event date | verdict | observed | threshold was | effect on the standing view |
+|---|---|---|---|---|---|
+| ??| ??| ??**Condition-check executed on every ARMED row ??null result, recorded as a check, not a skip** | **Zero rows past-dated for either desk.** `SCENARIOS_US.md` opened in full: nearest US settlements **08-19** (`S75`??S78`, `S80`) 쨌 **08-20** (`S82`, `S83`) 쨌 **08-21** (`S84`??S87`) 쨌 08-24 (`S74`) 쨌 08-26/27 (`S79`, `S81`). `SCENARIOS_KR.md` opened (the other market's file is this run's to score if past-dated): nearest **`S51-KR` ??08-17**. ??**The reason is mechanical, not lucky: NO OBSERVATION WINDOW COULD CLOSE, because zero sessions settled.** The KR desk logged the identical null result this morning | ??| **`EXPIRED` = 0 쨌 silent skips = 0** |
+| **S8** | `[blank]` undated | ?슚?슚 **UNSCOREABLE ??14th consecutive run** | The US desk cannot rule on it (P5). ??**And its observable moved twice this weekend while the bracket stayed undated**: *"Trump threatens to declare strait of Hormuz 'territory of the United States'"* [`guardian` **08-14**] and ??found by DRIFT after this run's MACRO was written ??***"Iran, Oman home in on Hormuz Strait deal as ship attacks mount"*** [`fortune` **08-15**] with talks **live on 08-16** [`aljazeera`]. `CATALYST_WATCH` still carries it as an **undated ??binary** | ??| **A human must `VOID` it or re-register it with a date.** Logged as a process failure for the 14th time. ??**`S92` was registered this run partly to stop the desk depending on it** |
+| **P56 / M653** | condition-settled | ??**PARTIAL RETRACTION ??`R73`** | **Re-measured on the SAME `[FRED]` pull, current window (08-06 ??08-13)**: the spread half **survives and extended** (30y??0y **0.53 ??0.58**), the level half is **refuted** ??**`DGS30` FELL** 5.22 ??5.21, `DGS10` ??bp, **`DGS2` ??0bp (4.25 ??4.15), i.e. NOT "unchanged"** | *"30y??0y widened with `DGS2` unchanged"* | **A BULL steepener, not a term-premium level rise.** `P65` replaces the mechanism and keeps the sign. ??**`S80` (08-19) must be read as a THREE-SECTOR event** ??UTIL/RE/STPL may be one rate bet whose sign just changed. ??Found **on a run with ZERO new sessions**, by re-measuring the window (C1) |
+| **P61 쨌 P62 쨌 P63 쨌 P64** | 08-20 / 08-21 | **UNSCOREABLE ??window did not advance** | Every price-anchored KPI settles 08-20 or 08-21 and **no session settled.** Explicitly **not** recorded as "carried favourably" | ??| **Running hit-rate this run: 0 HIT 쨌 0 HALF 쨌 0 MISS 쨌 5 UNSCOREABLE 쨌 1 PARTIAL RETRACTION.** ??**A zero-scored backtest is a finding**: the desk ran a full macro stage and could not move a single scoreboard row |
+
+## MASTER INDEX ??appended 2026-08-16 by the `industry_US` run (PREMORTEM registrations)
+
+| id | owner desk | file | one-line |
+|---|---|---|---|
+| **S92** | industry_US | `SCENARIOS_US.md` | The mandatory Hormuz bracket ??**widened to a third branch** because B4 showed both Hormuz branches are confirm-only; branch C (a US-brokered halt to Ukrainian strikes on Russian energy infrastructure) is the only one that can falsify the Energy OW |
+| **S93** | industry_US | `SCENARIOS_US.md` | The consumer complex: one factor or two? Cross-sectional sign test on `WMT`/`HD`/`TGT` ??registered because the desk's own catalyst instrument carried **zero** of the three prints |
+| **S94** | industry_US | `SCENARIOS_US.md` | The cycle registry cannot see the cycles this desk finds ??`cycle_registry.json` has **no entry** for optical/interconnect while `COHR`/`LITE` are IT's only admissible ?윟 and the book holds neither |
+
+
+---
+
+## Scored by the 2026-08-17 `industry_kr` run (appended to the MASTER scoring log — the log stays shared and un-split)
+
+| id | event date | verdict | observed | threshold was | effect on the standing view |
+|---|---|---|---|---|---|
+| **S51-KR** | **2026-08-17** | ★ **FIRED-C** (the "missing line" branch) | **The 반기보고서 exists and was filed 2026-08-14** (DART `rcpNo=20260814000827`, inside the registered window "08-14 ± 3 business days", on day one). **Denominator reproduces almost exactly**: segment note 5 gives 1H26 refining OP **1,571,420** and the 1Q 분기보고서 (`20260515000478`) gives **1,039,042** ⇒ **2Q26 = 532,378 백만원** vs the **532,400** the desk scored off a news body — **a 0.0041% difference**. **Numerator does not exist**: the string 「재고관련」 appears **0 times in the entire 3,977,008-character filing**; the nearest filed concept is 재고자산평가손실(환입) **343,126 백만원** (1H26 consolidated, vs 3,355 a year earlier), which is a **lower-of-cost-or-NRV loss charged to COGS — opposite sign, different concept**. | ratio inside [16.4%, 26.4%] = A · outside but <50% = B · **≥50% OR no inventory-gain line = C** | ★ **S47-KR is NOT re-scored (thresholds frozen).** **M-19″'s ratio anchor loses its primary**: the numerator is IR-only and has never been filed. **Anti-signal checked and NOT fired** — 010950 did not change segment basis (정유/윤활/석유화학, identical in 1Q and 1H, no restatement) ⇒ not `VOID`. ★★ **What the bracket actually bought — the measurement it said it wanted**: the dispersion between a KR conference-call figure and its later filing is **not one number, it splits**: **0.0041% where the figure IS filed, and undefined where it is NOT.** ⇒ the operative rule is not "news bodies are unreliable" but **"ask first whether the number exists in the filing at all."** ⚠ **n=1**, one company, one quarter, one figure — not generalizable (C4). ⚠ The 2Q figure is **derived by subtraction from two primaries**, not itself disclosed; both sources are primary but the derivation is stated, not hidden. ⚠ A missing 재고관련이익 line is **not concealment** — it is not a required item of a K-IFRS segment note. |
+| **M-69 anti-signal ④** (KR, `MACRO_REPORT` proposition, not a SCENARIOS row) | condition-settled, same run | 🚨 **FIRED — and it killed half of the proposition that registered it, 40 minutes after registration** | Registered condition: *"if another KR refiner's (096770 · GS) half-year segment note shows 2Q QoQ **positive**, branch (b) is retracted."* **Measured**: 096770 SK이노베이션 「에너지 및 화학」 segment OP — 1Q26 **2,368,674** (`rcpNo=20260515001455`) · 1H26 **5,053,621** (`20260814002500`) ⇒ **2Q26 = 2,684,947, QoQ +13.35%.** Against 010950 refining **−48.76%**. | 2Q QoQ > 0 | **Branch (b) — "the −48.8% is refining-margin contraction" — is RETRACTED (→ R74).** Branch (a) — a one-off inventory-valuation effect, consistent with S-Oil's ₩343.1bn 1H26 valuation loss (102× the prior year) — is strengthened. ⚠ **Segment definitions are not like-for-like** (SK이노's "Energy & Chemicals" is wider than S-Oil's "Refining"); the pre-registered wording fired anyway and **was not narrowed after the fact**. ⚠ **The GS half of the anti-signal was unobservable by construction** — GS's half-year segment note has **no refining segment at all** (유통/무역/가스전력/투자및기타; GS칼텍스 is equity-method) → `D272-KR`. |
+| — | — | ★ **Condition-check executed on every remaining ARMED row — one row due, one row scored, zero skipped** | **KR past-dated: S51-KR only (above).** Remaining KR ARMED, none past-dated: S52-KR 08-19 · S57-KR 08-20 · S63-KR 08-20 · S27 ~late-Aug · S58-KR 09-09 · S61-KR ~09-14 · S62-KR 09-15 · S45 & S54-KR 09-30 · S60-KR 10-12 · S49-KR 10-30 · S34 & S53-KR 10-31 · S59-KR 11-04. **`SCENARIOS_US.md` opened in full: nearest US rows settle 08-19 (S75–S78) · 08-21 (S93) · 08-24 (S74) · 08-27 (S79) · 08-31 (S92, S94) ⇒ zero US rows past-dated for this desk.** | — | **`EXPIRED` = 0 · silent skips = 0** |
+| **S57-KR** | → 2026-08-20 | ⏳ **NOT scored — its observation session did not occur, and today the trigger moved AWAY** | The bracket's frozen observable requires *"the first settled session that knows Hormuz has been reopened."* **Today's event axis carries the opposite**: 「미·이란 '60일 협상시한' 종료…'압박 對 버티기' 경제전 전환」 [yonhap, 4 articles / 2 outlets, 2026-08-17]. Narrative axes cooling with it: `호르무즈` **0.94×** (below 1.0 for the first time) · `국제유가` **0.36× = board low**. | reopening announced | ⚠ **Recorded now so the 08-20 deadline is not met with a surprise: the current trajectory is `EXPIRED-미도래`.** ★ Separately worth carrying: **the two refiners outperformed intraday on a session where the reopening did NOT happen** (010950 +4.76% · 096770 +5.75% vs KOSPI200 front-month +2.34%, **unsettled**) — that is evidence for the bracket's branch-B *direction* but **cannot be used to score it**, because the session does not satisfy the frozen observable. Registered as `M-71`, settling on today's close. |
+| **S8** | `[blank]` undated | 🚨🚨 **UNSCOREABLE — 14th consecutive run** | The KR desk cannot rule on it (P5). The undated 🔀binary is still on `CATALYST_WATCH`, and today the axis moved again (the 60-day negotiation deadline expired without a deal). | — | **A human must `VOID` it or re-register it with a date.** Logged as a process failure for the 14th time |

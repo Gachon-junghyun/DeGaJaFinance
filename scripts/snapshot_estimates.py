@@ -106,6 +106,58 @@ def snapshot(tickers: list[str], verbose: bool = True) -> dict:
     return rows
 
 
+def cadence_report(files: list[Path], target: int = 40) -> list[str]:
+    """저장 **속도를 실측**해 남은 기간을 캘린더 일로 낸다.
+
+    🚨 예전 구현은 `40 - len(files)` 를 *"N일 더 필요"* 라고 출력했다. 그건 **하루도 안 거르고
+    저장될 때만 참**이다. 실측(2026-08-09): 19 캘린더일에 **5개**, 간격 **2→3→4→6 단조 증가** —
+    그 상태에서 화면은 *"35일 더"* 라고 말했지만 실제 속도로는 **~134일**이었다.
+    ⇒ **계기가 진행률의 단위를 바꿔 자기 고장을 숨겼다.** 파일 개수는 진행률이 아니다.
+
+    근본 원인은 코드가 아니라 배치다(P6): 이 데몬은 *"필요할 때만 켜는"* 클라이언트 PC 의 일일
+    작업으로 걸려 있고, 24시간 도는 것은 서버 PC 다. 간격 증가는 사실상 **PC 를 켜는 빈도**다.
+    """
+    out: list[str] = []
+    dates: list[_dt.date] = []
+    for f in files:
+        try:
+            dates.append(_dt.date.fromisoformat(f.stem.replace("eps_", "")))
+        except Exception:
+            continue
+    n = len(dates)
+    if n == 0:
+        return ["· 저장된 날짜 없음."]
+    dates.sort()
+    today = _dt.date.today()
+    span = (dates[-1] - dates[0]).days + 1
+    rate = n / span if span > 0 else 1.0
+    remain = max(0, target - n)
+
+    out.append(f"· 누적 **{n}개 파일** / **{span} 캘린더일** (첫 {dates[0]} → 끝 {dates[-1]})"
+               f" ⇒ 실측 속도 **{rate:.2f}개/일**")
+    if remain == 0:
+        out.append(f"· 목표 {target}일치 도달 (규칙 S1: 유효 표본 = 날짜 수)")
+    else:
+        eta = remain / rate if rate > 0 else float("inf")
+        ideal = remain
+        out.append(f"· 목표 {target}일치까지 **{remain}개** 더 — 매일 쌓으면 {ideal}일, "
+                   f"**실측 속도로는 약 {eta:.0f}일** (규칙 S1: 유효 표본 = 날짜 수)")
+        if eta > ideal * 1.5:
+            out.append(f"  🚨 실측 속도가 이상 대비 **{eta/ideal:.1f}배 느리다** — 스케줄이 도는지 확인하라. "
+                       f"「파일 개수」로 보면 정상처럼 보이는 것이 이 계기의 함정이다(D16).")
+
+    gaps = [(dates[i] - dates[i - 1]).days for i in range(1, n)]
+    if gaps:
+        out.append(f"· 간격(일): {gaps[-8:]} · 중앙 {sorted(gaps)[len(gaps)//2]} · 최대 {max(gaps)}")
+        if len(gaps) >= 3 and gaps[-1] > gaps[0] and gaps[-1] >= 3:
+            out.append("  ⚠ 간격이 **벌어지는 추세** — 하루 거르면 그날 관측은 영영 없다(소급 불가).")
+    stale = (today - dates[-1]).days
+    if stale >= 1:
+        out.append(f"· 마지막 저장 이후 **{stale}일** 경과"
+                   + ("  🚨 오늘 것부터 회수하라." if stale >= 2 else ""))
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="추정치 스냅샷 저장 (dig D16)")
     ap.add_argument("--universe", default="us_top300")
@@ -118,6 +170,7 @@ def main() -> int:
         sys.stdout.reconfigure(encoding="utf-8")
     except Exception:
         pass
+
 
     STORE.mkdir(parents=True, exist_ok=True)
     files = sorted(STORE.glob("eps_*.json"))
@@ -134,8 +187,8 @@ def main() -> int:
             except Exception as e:
                 print(f"  {f.name}  읽기 실패 {e}")
         print(f"\n  총 {len(files)}일치.")
-        need = max(0, 40 - len(files))
-        print(f"  · IC 시계열로 쓰려면 대략 40일 → **{need}일 더** 필요 (규칙 S1: 유효 표본 = 날짜 수)")
+        for line in cadence_report(files, target=40):
+            print("  " + line)
         print("  · ⚠ 소급 복구 불가. 안 쌓은 날은 영영 없다.")
         return 0
 
@@ -162,8 +215,8 @@ def main() -> int:
     }
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"  저장 {out}  ({len(rows)}종목, {out.stat().st_size/1024:.1f}KB)")
-    n_days = len(sorted(STORE.glob("eps_*.json")))
-    print(f"  누적 {n_days}일치 — IC 시계열까지 대략 {max(0, 40-n_days)}일 더")
+    for line in cadence_report(sorted(STORE.glob("eps_*.json")), target=40):
+        print("  " + line)
     return 0
 
 

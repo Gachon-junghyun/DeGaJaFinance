@@ -53,7 +53,11 @@ DB_READ_CMDS = {"search", "fts", "coverage", "blindspot", "theme-age", "chain-ho
 
 # 대량 반출은 60초로 모자란다(12만행 ~13MB). 명령별 타임아웃 — 기본은 _api_client 값.
 # chain-hop 은 본문 스캔이라 저사양 서버에서 60초를 넘긴다(실측 2026-07-19 타임아웃).
-REMOTE_TIMEOUT = {"export": 600, "chain-hop": 300}
+# burst 도 같다 — 하루치 제목 전량 × 30일 기준선이라 서버가 바쁘면 기본값을 넘긴다
+# (실측 2026-08-16: 여러 날을 연속으로 부르자 TimeoutError 가 13번 났고, 한산할 땐 통과했다.
+#  즉 «--date 미지원»이 아니라 «부하»다 — 실패 메시지만 보면 헷갈린다).
+# ⚠️ 이건 **클라이언트 쪽 읽기 타임아웃**이라 서버 재시작이 필요 없다.
+REMOTE_TIMEOUT = {"export": 600, "chain-hop": 300, "burst": 300}
 
 
 def build_parser() -> argparse.ArgumentParser:

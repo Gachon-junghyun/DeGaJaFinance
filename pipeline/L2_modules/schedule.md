@@ -16,6 +16,12 @@
   never cross-checks its own window against `SCENARIOS.md`'s already-armed dates is not a complete
   schedule read.** Run `--days 10` (or further, to the furthest ARMED date inside ~2 weeks) whenever
   any `ARMED` row's date sits beyond the default window, not only when something feels incomplete.
+- **KR 선물옵션 동시만기(네 마녀의 날)** — `python -X utf8 -m module_KIS --futboard` gives each
+  contract's **`hts_rmnn_dynu`(잔존일수)·`futs_last_tr_date`(최종거래일)**, so the front-month expiry
+  is a **structural, knowable-in-advance date** (index-arb unwind / positioning rollover). Treat it
+  the same class as lockups/index-rebalances (dig D13 STRUCTURAL): a dated binary the news calendar
+  routinely misses. If the front-month `days_left` ≤ ~5, register the expiry as a binary the
+  pre-mortem brackets — not guessed, read from the board.
 - Theme age — `python -X utf8 -m module_news_data theme-age "<theme>" --scope foreign`
   (🟢FRESH ≤14d+accel / 🟡ACCELERATING / ⚪ECHO / 🔴FADING — deterministic novelty BEFORE spending WebSearch).
 - Kill-switch burst — `python -X utf8 scripts/drift_watch.py --report <MACRO_REPORT path>`

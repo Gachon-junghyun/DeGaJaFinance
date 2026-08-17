@@ -22,10 +22,19 @@
   `DEGAJA_REPORT_DIR=llm_outputs` OR copy finalized reports into `REPORT/`. ⚠ Open decision
   (PROMPT_MAP §6) — a human locks which; until then state which mode you used in the run log.
 
+## DEEP budget — **N = 4** (2 continuous-track + 2 rotating)
+
+ROTATION reads this line to size its selection rule. **Unchanged 2026-07-31** when `industry_kr`
+cut to N=2: that cut was justified by KR-specific measurement (the contest book's own return
+decomposition + M224's negative grade on the KR sweep axes), and importing a conclusion across
+markets is exactly the W1 violation this repo keeps logging. If the US desk should shrink too, it
+needs **its own** measurement first.
+
 ## Composition (L1 order)
 
 | # | L1 block | Output |
 |---|---|---|
+| −1 | [INSTRUMENT_CHECK](../L1_stages/instrument_check.md) ★preflight | `preflight/PREFLIGHT.md` — 7 gates; **a FAIL removes a citation right for this run** (protocol [preflight](preflight.md)) |
 | 0 | [HANDOVER](../L1_stages/handover.md) | `HANDOVER.md` (inherited standing view + scenarios scored + dig list) |
 | 1 | [MACRO](../L1_stages/macro.md) | `MACRO_REPORT.md` (propositions + ★transmission matrix + self-backtest hit-rate) |
 | 2 | [SWEEP](../L1_stages/sweep.md) | `SECTOR_FLOW.json` · `US_LIVE_SHORTLIST.json` · `CYCLE_EXPOSURE.md` |

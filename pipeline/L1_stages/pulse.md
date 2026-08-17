@@ -14,6 +14,11 @@ answers one question fast: **is this a broad crash, a sector event, an idiosyncr
 - [news](../L2_modules/news.md) — **same-day only**: `python -X utf8 -m module_news_data fts search <name/theme>
   --scope foreign --days 1 --snippet` (and `--days 1 --count` for a selloff-term velocity spike). ⚠ `--days 1`
   is the whole point — do not widen the window; a crash diagnosis uses fresh data, not last week's.
+  🚨 **A `--days 1` window has the least tolerance for a dead pipe of any stage here.** The news
+  search rides a tunnel that intermittently drops, and an empty result is indistinguishable from a
+  quiet day (measured 2026-08-09). ⇒ On a PULSE run, **probe a known-loud name first**; if it comes
+  back empty, report **"뉴스축 판정 불가"** rather than "촉매 없음". Calling a crash uncatalysed on a
+  dead feed is the exact failure P4 forbids — and this stage's whole job is a same-day diagnosis.
   - **Then ask what the tape says you missed**: `brief --date <today>` (run `embed sync` first, ~2s).
     You searched the names you already suspect; the event view surfaces the one you didn't. On the
     measured crash day the term search would have chased `영업이익` while 8 outlets ran the

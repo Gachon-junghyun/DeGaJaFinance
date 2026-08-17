@@ -10,12 +10,35 @@
 > the US desk runs English-pure (Korean in context skews the frame). Korean-market facts are fine;
 > Korean prose is not.
 
+## ★ Split by market — 2026-07-29, and what it does NOT change
+
+The 8-run size escalation was resolved by a human: `STANDING_VIEW` and `SCENARIOS` are now **a
+shared spine plus a per-market half**. Measured effect: a **KR run reads 314 KB instead of 433 KB
+(−119)**; a **US run reads 405 KB (−28)** — the asymmetry is real and is itself the finding, because
+the US desk has written 33 of the 46 brackets and 98 of the 176 fact rows.
+
+⚠⚠ **Three things the split deliberately does NOT do:**
+1. **§5, the retracted ledger, is NOT split.** A retraction is cross-market by construction — R13
+   killed a KR belief the US desk was carrying, R25 killed a US probe the KR desk was using.
+   Splitting it would let a killed claim resurface in the other market, which is the exact failure
+   the ledger exists to prevent. It stays in the spine, byte-identical, read by both desks.
+2. **The master scoring log is NOT split.** An `EXPIRED` row is a process failure in whichever
+   market it sits; halving the log would hide half of them from each desk.
+3. **Ownership is the REGISTERING desk, not the subject market, and it confers no exclusivity.**
+   S5 is about Korean exports and is US-owned; **S8 was registered by US and scored by KR**;
+   **S33 and S28 were registered by KR and scored by US**. **A desk with a past-dated row in the
+   other file must open that file and score it.**
+
 ## Files
 
 | File | Holds | Written by | Read by |
 |---|---|---|---|
-| [STANDING_VIEW.md](STANDING_VIEW.md) | The live thesis: macro regime, per-name theses, what is measured vs inferred | HANDOVER (end of run) | HANDOVER (start), MACRO |
-| [SCENARIOS.md](SCENARIOS.md) | Pre-registered dated branches + their scoring | HANDOVER, PREMORTEM | HANDOVER (start), PREMORTEM |
+| [STANDING_VIEW.md](STANDING_VIEW.md) | **SHARED SPINE** — regime call · the seed measured chain · §4 asymmetry · **§5 retracted ledger (never split)** · §6 open contradictions | HANDOVER (end of run) | **BOTH desks, in full** |
+| [STANDING_VIEW_US.md](STANDING_VIEW_US.md) | §2 US fact rows + §3a per-name registry | `industry_US` HANDOVER | US desk in full; KR desk only when it touches a US name |
+| [STANDING_VIEW_KR.md](STANDING_VIEW_KR.md) | §2 KR fact rows + §3b per-name registry | `industry_kr` HANDOVER | KR desk in full; US desk only when it touches a KR name |
+| [SCENARIOS.md](SCENARIOS.md) | **SHARED SPINE** — legend · scoring rules · **the master scoring log** · **the master index of all 46 brackets** | HANDOVER, PREMORTEM | **BOTH desks, in full** |
+| [SCENARIOS_US.md](SCENARIOS_US.md) | The 33 brackets registered by `industry_US` | US PREMORTEM/HANDOVER | US desk; KR desk when it scores a US-owned row (it has) |
+| [SCENARIOS_KR.md](SCENARIOS_KR.md) | The 13 brackets registered by `industry_kr` | KR PREMORTEM/HANDOVER | KR desk; US desk when it scores a KR-owned row (it has) |
 | [RESEARCH.md](RESEARCH.md) | **The single source for research rules** — 21 triggers + 3 lenses + the open dig list | HANDOVER (end of run) | HANDOVER (start), every stage |
 
 ### RESEARCH.md is the only place rules live (consolidated 2026-07-22)
@@ -72,10 +95,38 @@ tickers or it returns empty rows *without erroring*. `margin_history` filters XB
 not by the `fy` field — `fy` is the *filing* year, so filtering on it pairs mismatched periods and
 produces gross margins near **−200%**.
 
+## Retention — this folder is read IN FULL every run, so it has a size budget
+
+★ **Added 2026-07-25, from a measurement.** `handoff/` had grown to **286 KB read at every HANDOVER**,
+growing ~30 KB per run. `STANDING_VIEW.md` alone was **132 KB, of which 76% was un-curated per-run
+append blocks** — the 07-25 `industry_US` run appended **26.9 KB in one pass, more than the file's
+entire live view (25.7 KB)**. Meanwhile the evidence for the file's own top-line regime call (the
+84.6% / 59% margin series) appeared **nowhere in the live view** — it was buried in an 07-22 block,
+under 100 KB of spent observations.
+
+**The cause was a misread of the rule below.** *"Append-only"* is scoped to **reversals** — the §5
+retracted ledger. It was being applied to everything.
+
+| | Rule |
+|---|---|
+| **Budget** | `STANDING_VIEW` ≤ 60 KB · `SCENARIOS` ≤ 60 KB · `RESEARCH` ≤ 85 KB. Run `python -X utf8 scripts/handoff_compact.py --budget-only` at HANDOVER; a breach is a **finding to report**, not an error. |
+| **§2 is ONE table** | A run **appends rows to §2**; it does not open a new `### Added by …` section. Surviving facts carry a `run` column. |
+| **§3 is ONE registry** | A run **OVERWRITES the row for a name it touched.** It does not append a per-run per-name block. (Five such blocks, 24.3 KB, were merged on 07-25 — VLO/MPC/PSX had been living in **four** places while §3 still called 009150 *"UNOWNED"* six days after C2 closed.) |
+| **Row length** | **≤ 0.35 KB per fact row.** A fact row is *a number plus its source*, not a paragraph — the argument belongs in §3 or in the run's own report. Measured 07-25: 0.59 KB/row. |
+| **Expiry** | A fact leaves §2 for `ARCHIVE_FACTS.md` when nothing cites it and it is **not** (a) pinned as load-bearing, (b) from the current run, or (c) the newest member of a replication family. **Nothing is deleted — it moves, and stays greppable.** |
+| **Replications collapse** | N measurements of one mechanism become **one row plus a counter**, not N rows. (The 🟢-gate was 5 rows; R7's spread was 4.) |
+| **§5 is untouchable** | The compaction script **asserts §5 is byte-identical** before it writes, and refuses otherwise. |
+
+⚠ **Why an archive and not a delete.** The desk's most expensive measured errors come from *losing*
+carry, not from carrying too much (see "Why it exists" below, and the 475150 rejections that cost
++41.2pp / +26.9pp). Compaction is only safe because it is a **move**: after the 07-25 pass,
+**0 of 154 facts were lost** — 88 live, 80 in the archive.
+
 ## Rules
 
 - **Append-only for reversals.** A retracted claim is never deleted — it moves to the retracted
   ledger with the measurement that killed it. Deleting it lets it resurface next run.
+  ⚠ **This is scoped to reversals.** It is not a licence to append everything else forever.
 - **Every carried claim is tagged `[measured]` or `[inferred]`.** An inferred claim may still be
   carried; it may not be cited as evidence.
 - **Every scenario carries both branches and a date.** A one-way scenario is not a scenario.

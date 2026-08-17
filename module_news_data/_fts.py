@@ -166,12 +166,19 @@ def _print_fts(data: dict, show_snip: bool, show_full: bool) -> None:
 
 
 def search(terms, days, scope, mode, use_syn, show_snip, limit,
-           show_full=False, kr=False, count_only=False) -> None:
+           show_full=False, kr=False, count_only=False, as_json=False) -> None:
     """CLI 진입 — 로컬 DB 조회 후 출력. (원격 라우팅은 __main__ 이 /exec 로 전담하므로
     이 함수는 항상 로컬. 서버 /exec 도 여기로 들어와 서버 자신의 로컬 DB 를 읽는다.)"""
     utf8_stdout()
     data = query_fts(terms, days, scope, mode, use_syn, show_snip, limit,
                      show_full=show_full, kr=kr, count_only=count_only)
+    if as_json:
+        # `query_fts` 가 이미 구조화 dict 라 여기선 찍기만 한다 (P1 — 쿼리 단일 원본).
+        # ⚠ 사람용 출력(`_print_fts`)은 날짜를 `d[:10]` 로 자르는데, published_at 이
+        #   RFC822("Fri, 14 Aug …")인 소스가 있어 화면에 `Fri, 14 Au` 가 찍힌다.
+        #   JSON 은 원본을 그대로 준다 — 기계가 소비할 땐 이쪽을 써라.
+        print(json.dumps(data, ensure_ascii=False))
+        return
     if count_only:
         if data.get("error"):
             print(data["error"], file=sys.stderr)
@@ -202,6 +209,8 @@ def cli_register(sub) -> None:
     s.add_argument("--kr", action="store_true", help="KR 색인(trigram) 검색")
     s.add_argument("--count", action="store_true", help="매칭 카운트 숫자만")
     s.add_argument("--limit", type=int, default=40)
+    s.add_argument("--json", action="store_true", dest="as_json",
+                   help="기계 소비용 — query_fts 결과를 그대로 dump (날짜 원본 유지)")
     s.set_defaults(func=lambda a: search(
         a.terms, a.days, a.scope, a.mode, a.syn, a.snippet, a.limit,
-        a.full, a.kr, a.count))
+        a.full, a.kr, a.count, a.as_json))

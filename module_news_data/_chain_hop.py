@@ -21,7 +21,8 @@ import sqlite3
 import sys
 from datetime import datetime, timedelta
 
-from ._config import ALIASES_JSON, FOREIGN_SOURCES, FTS_DB, UNIVERSE_CSV, utf8_stdout
+from ._config import (ALIASES_JSON, FOREIGN_SOURCES, FTS_DB, UNIVERSE_CSV,
+                      us_text_universe_rows, utf8_stdout)
 
 # 일반 영단어와 충돌하는 티커 — 티커 문자열 자체로는 매칭하지 않는다(별칭 이름으로만).
 AMBIGUOUS_TICKERS = {
@@ -40,27 +41,29 @@ def load_universe() -> dict[str, dict]:
     if ALIASES_JSON.exists():
         alias_map = json.load(open(ALIASES_JSON, encoding="utf-8"))
     out: dict[str, dict] = {}
-    with open(UNIVERSE_CSV, encoding="utf-8-sig") as f:
-        for row in csv.DictReader(f):
-            tk = row["ticker"].strip()
-            names: set[str] = set()
-            for a in alias_map.get(tk, [tk, row["name"]]):
-                a = a.strip()
-                if not a or not a.isascii():   # 한국어 별칭은 영문 코퍼스에 불필요
+    # 유니버스 **전체가 아니라** 텍스트 탐지용 상위 N — `_config.us_text_universe_rows()`.
+    # 유니버스가 S&P 1500 으로 커져도 자유 텍스트 오탐이 폭증하지 않게 하는 단일 원본
+    # (상세 근거와 실측은 `_config.US_TEXT_TOP_N` 주석).
+    for row in us_text_universe_rows():
+        tk = row["ticker"].strip()
+        names: set[str] = set()
+        for a in alias_map.get(tk, [tk, row["name"]]):
+            a = a.strip()
+            if not a or not a.isascii():   # 한국어 별칭은 영문 코퍼스에 불필요
+                continue
+            if a == tk:
+                if tk in AMBIGUOUS_TICKERS or len(tk) < 3:
                     continue
-                if a == tk:
-                    if tk in AMBIGUOUS_TICKERS or len(tk) < 3:
-                        continue
-                    names.add(tk)              # 3자+ 비모호 티커는 그대로
-                else:
-                    if a in AMBIGUOUS_NAMES:
-                        continue
-                    names.add(a)
-            pats = [re.compile(r"\b" + re.escape(n) + r"\b") for n in names]
-            out[tk] = {
-                "name": row["name"], "sector": row["gics_sector"],
-                "industry": row["gics_industry"], "patterns": pats,
-            }
+                names.add(tk)              # 3자+ 비모호 티커는 그대로
+            else:
+                if a in AMBIGUOUS_NAMES:
+                    continue
+                names.add(a)
+        pats = [re.compile(r"\b" + re.escape(n) + r"\b") for n in names]
+        out[tk] = {
+            "name": row["name"], "sector": row["gics_sector"],
+            "industry": row["gics_industry"], "patterns": pats,
+        }
     return out
 
 

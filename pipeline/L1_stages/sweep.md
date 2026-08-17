@@ -43,6 +43,38 @@ per-name shortlist rows. Cite the artifact (`SECTOR_FLOW_US.json §sector_rotati
 **Size discipline** — this is a reading, not a report. If it is longer than the deltas it found,
 it is restating. ⚠ It is **not** load-bearing (nothing globs it); it exists to feed ROTATION §2.
 
+## 🚨 Read the instrument's own health line BEFORE reading its numbers (added 2026-08-10)
+
+`SECTOR_FLOW.json` now opens with a `scoring` block — `n_axes` · `vel_coverage` · `scored` ·
+`dropped_missing_axis` — and the sweep logs a 🚨 line when the news axis dies. **Read it first.**
+
+**Why this block exists — four defects measured 2026-08-09/10, all silent:**
+1. **The 4th axis was dropped per NAME, not per run.** A name with no news velocity got a 3-axis
+   mean; one with velocity got a 4-axis mean — **different scales, then averaged into `wflow`**.
+   General form: `3축평균 − 4축평균 = (s₃+3)/12 ∈ [0, +0.5]`, i.e. **dropping is never a penalty and
+   is worth up to +0.5**. Measured: **799 of 827 names (96.6%)** carried an average **+0.305** bonus.
+2. **`clip(nan)` returned `+1.0`** — `min(1.0, nan)` is `1.0` in Python — so a **missing** axis scored
+   the **maximum positive** value. All 20 NaN names printed exactly `flow_score +0.667`.
+3. **The KR sweep queried the FOREIGN news pool** — `news_velocity(..., kr=)` was never passed, so
+   Korean company names were counted against English wires: 삼성바이오로직스 base **5 articles**,
+   LG에너지솔루션 **2** ⇒ velocity `0.00` ⇒ `clip(−2.5) = −1.0` **maximum penalty**, cap-weighted,
+   on the largest companies in Korea. **That axis never once fired as a reward.**
+4. **The news search rides a tunnel that drops.** Velocity `None` is returned identically for
+   *"no articles"* and *"could not reach the index"* — and defect ① turned the second case into a
+   **universe-wide score inflation** with nothing in the output saying so.
+
+⇒ **A low `vel_coverage` is not evidence about the news. It is evidence about the pipe.**
+Verify before concluding: `python -X utf8 -m module_news_data fts search 삼성전자 --days 7 --count`.
+
+## ★ Invariant: the desk must be able to tag what it holds
+Measured 2026-08-10 — the book held **`TSM` and `LNG`**, and **neither was in the sweep universe**.
+Both were invisible to every flow/RS/OBV/short axis while being owned; the desk had logged
+*"LNG: 어느 축도 데스크 계기로는 존재하지 않는다"* for **9 consecutive runs** without connecting it
+to the universe file. ⚠ **Index membership is not a universe** — S&P lists exclude foreign domiciles
+(ASML·ARM·TSM·PDD·SHOP) and non-members regardless of size (LNG, the tankers).
+`data/us_universe/build_us_universe.py` now builds the union (지수 ∪ 현행 ∪ **보유** ∪ `--include`)
+and reports held-but-missing names; this stage reads that report rather than assuming.
+
 ## ⚠ Field notes (2026-07-15 run)
 - **S1→S2 is SERIAL**: `{us}_live_shortlist` reads *today's* `SECTOR_FLOW.json` by default path —
   running them in parallel feeds it an empty file (JSONDecodeError). Sweep first, then shortlist.
@@ -51,6 +83,13 @@ it is restating. ⚠ It is **not** load-bearing (nothing globs it); it exists to
 - The sweep **cross-checks** macro rotation; it never replaces it (flow = money now, matrix = why).
 
 ## ✅ EXIT CHECK
+- [ ] 🚨 **`scoring` block read and quoted in `SWEEP_READ.md`** — `n_axes` · `vel_coverage` ·
+      `dropped_missing_axis`. If coverage < 80% the file states **"news axis dead this run"** and
+      names the likely cause (pipe vs genuinely quiet), having actually probed it — not assumed.
+- [ ] **Every sector with `top1_flips_sign` is listed with its `top1` and `top1_w`.** This list is
+      handed to ROTATION, which may not promote/demote on those buckets.
+- [ ] **Held-but-not-in-universe check run.** If any owned name is outside the universe, that is
+      reported as a 🚨 (the desk cannot tag what it owns), not left for a later stage to trip over.
 - [ ] sector_flow sweep done → SECTOR_FLOW.json; sector ranking + new-🟢 read.
 - [ ] LIVE_SHORTLIST written (real-hands / short-pressure verdicts read).
 - [ ] (US) CYCLE_EXPOSURE GAP read; any 🚨 handed to ALPHA's action bracket.
