@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-05",
+  "scope": "foreign",
+  "denominator": {
+    "articles": 1665,
+    "clusters": 621,
+    "events_2src_plus": 281,
+    "market_events": 281,
+    "nonmarket_events": 0,
+    "subevents_recovered": 66,
+    "single_source_clusters": 340,
+    "excluded_not_news": {}
+  },
+  "head": 21,
+  "body": 260,
+  "tail": 0,
+  "single_source_shown": 15,
+  "nonmarket_shown": 0,
+  "bytes": 69469,
+  "approx_tokens": 48628
+}
+
+(전체 → C:\Users\fivep\DeGaJaFinance\out\news_brief\2026-09-05_foreign.json)

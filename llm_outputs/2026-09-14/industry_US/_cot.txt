@@ -1,0 +1,16 @@
+# 선물 포지셔닝 — CFTC COT (투기자 net, 주간)  [1yr 백분위]
+  INSTRUMENT        BUCKET               NET_SPEC     WK_Δ     %OI  1Y_%ILE  판정
+  ────────────────────────────────────────────────────────────────────────────────────────────
+  S&P500 (E-mini)   equity/concentration      -76,036    -95▼  -3.7%     62%ile  🟡 중립
+  Nasdaq-100        equity/tech            20,704 -6,373▼   6.6%     76%ile  🟡 중립
+  Russell 2000      equity/smallcap        -8,865  5,876▲ -22.3%     28%ile  🟡 중립
+  UST 10Y           rates                -834,783 74,492▲ -16.0%     23%ile  🟡 중립
+  UST 2Y            rates                -929,107 -46,589▼ -21.4%     69%ile  🟡 중립
+  USD Index         dollar                 17,604    579▲  30.4%     72%ile  🟡 중립
+  WTI Crude         energy(ENRG)           35,358   -216▼  18.4%     69%ile  🟡 중립
+  Nat Gas           energy(ENRG)         -219,767 -10,856▼ -12.1%      0%ile  🔴 크라우디드-숏(반등탄약)
+  Gold              metals(MATR)          231,960  3,836▲  56.4%     53%ile  🟡 중립
+  Copper            metals(MATR)           92,476 11,607▲  31.1%    100%ile  🟢 크라우디드-롱(과열주의)
+  Silver            metals(MATR)           26,049   -690▼  25.2%     43%ile  🟡 중립
+  net_spec>0=투기자 순매수 · WK_Δ=주간증감 · 1Y_%ile≥80=크라우디드롱 ≤20=크라우디드숏
+  ⚠️ COT는 화요일 마감·금요일 발표 → 3~4일 지연. 극단 백분위=역발상 탄약, 방향 확정 아님.

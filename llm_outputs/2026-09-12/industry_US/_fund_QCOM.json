@@ -1,0 +1,179 @@
+{
+  "ticker": "QCOM",
+  "company_name": "QUALCOMM Incorporated",
+  "sector": "Technology",
+  "industry": "Semiconductors",
+  "price": 181.97,
+  "market_cap": 194354970624,
+  "trailing_pe": 20.796572,
+  "forward_pe": 17.842451,
+  "peg_ratio": 0.79,
+  "price_to_sales": 4.4102426,
+  "price_to_book": 6.954179,
+  "trailing_eps": 8.75,
+  "forward_eps": 10.19871,
+  "fifty_two_week_high": 259.92,
+  "fifty_two_week_low": 121.99,
+  "target_low": 100.0,
+  "target_mean": 194.43333,
+  "target_high": 400.0,
+  "target_median": 175.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 2,
+      "buy": 9,
+      "hold": 23,
+      "sell": 1,
+      "strongSell": 2
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 2,
+      "buy": 9,
+      "hold": 23,
+      "sell": 1,
+      "strongSell": 2
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 2,
+      "buy": 9,
+      "hold": 23,
+      "sell": 1,
+      "strongSell": 2
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 2,
+      "buy": 10,
+      "hold": 23,
+      "sell": 1,
+      "strongSell": 2
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      9947000000.0
+    ],
+    [
+      "2026-03-31",
+      10599000000.0
+    ],
+    [
+      "2025-12-31",
+      12252000000.0
+    ],
+    [
+      "2025-09-30",
+      11271000000.0
+    ],
+    [
+      "2025-06-30",
+      10365000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-28",
+      9947000000.0
+    ],
+    [
+      "2026-03-29",
+      10599000000.0
+    ],
+    [
+      "2025-12-28",
+      12252000000.0
+    ],
+    [
+      "2025-06-29",
+      10365000000.0
+    ],
+    [
+      "2025-03-30",
+      10979000000.0
+    ],
+    [
+      "2024-12-29",
+      11669000000.0
+    ],
+    [
+      "2024-06-23",
+      9393000000.0
+    ],
+    [
+      "2024-03-24",
+      9389000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 2.1566,
+      "7daysAgo": 2.15586,
+      "30daysAgo": 2.1666,
+      "60daysAgo": 2.3761,
+      "90daysAgo": 2.35134
+    },
+    {
+      "period": "+1q",
+      "current": 2.29658,
+      "7daysAgo": 2.29732,
+      "30daysAgo": 2.32584,
+      "60daysAgo": 2.68354,
+      "90daysAgo": 2.67046
+    },
+    {
+      "period": "0y",
+      "current": 10.52469,
+      "7daysAgo": 10.52302,
+      "30daysAgo": 10.53003,
+      "60daysAgo": 10.80199,
+      "90daysAgo": 10.80011
+    },
+    {
+      "period": "+1y",
+      "current": 10.19871,
+      "7daysAgo": 10.20195,
+      "30daysAgo": 10.26489,
+      "60daysAgo": 11.00662,
+      "90daysAgo": 10.66716
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 0.0,
+      "upLast30days": 1.0,
+      "downLast30days": 24.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 0.0,
+      "upLast30days": 1.0,
+      "downLast30days": 23.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 0.0,
+      "upLast30days": 1.0,
+      "downLast30days": 27.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 0.0,
+      "upLast30days": 3.0,
+      "downLast30days": 27.0,
+      "downLast7Days": 2.0
+    }
+  ],
+  "business_summary": "QUALCOMM Incorporated engages in the development and commercialization of foundational technologies for the wireless industry worldwide. It operates through three segments: Qualcomm CDMA Technologies (QCT); Qualcomm Technology Licensing (QTL); and Qualcomm Strategic Initiatives (QSI). The QCT segment develops and supplies integrated circuits and system software with connectivity and computing technologies for use in mobile devices; automotive systems for connectivity, digital cockpit, and ADAS/AD; and IoT, including consumer electronic devices, industrial devices, and edge networking products. The QTL segment grants licenses or provides rights to use portions of its intellectual property portfolio, which include various patent rights useful in the manufacture and sale of wireless products comprising products implementing LTE, and/or OFDMA-based 5G products and derivatives; to use cellular standard-essential patents, including 3G, 4G and 5G for cellular devices. The QSI segment invests in early-stage companies in various industries, including 5G, artificial intelligence, automotive, consumer, enterprise, cloud, IoT, and extended reality, and investments, including non-marketable equity securities and, to a lesser extent, marketable equity securities, and convertible debt instruments. It also provides development, and other services and sells related products to the United States government agencies and their contractors. In addition, the company is also involved in Qualcomm government technologies and data center businesses. Further, it provides security and intelligence services for unmanaged networks through software-based network security solutions. QUALCOMM Incorporated was incorporated in 1985 and is headquartered in San Diego, California.",
+  "next_earnings_date": "2026-10-30",
+  "beta": 1.679,
+  "dividend_yield": 2.08
+}

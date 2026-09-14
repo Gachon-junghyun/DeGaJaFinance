@@ -1,0 +1,357 @@
+{
+  "date": "2026-09-14",
+  "bench": "SPY",
+  "threshold": 0.65,
+  "min_corr_implied": 0.35,
+  "n_days_aligned": 249,
+  "n_days_intersection_full": 354,
+  "trimmed_by_days_arg": 104,
+  "window": [
+    "2025-08-25",
+    "2026-09-11"
+  ],
+  "missing": [],
+  "calendar_loss": {
+    "028050.KS": 20,
+    "316140.KS": 20,
+    "ANET": 21,
+    "AVGO": 21,
+    "ETN": 21,
+    "HPE": 21,
+    "MET": 21,
+    "MPC": 21,
+    "NDAQ": 21,
+    "NUE": 21,
+    "NVDA": 21,
+    "PSX": 21,
+    "RTX": 21,
+    "SPY": 21
+  },
+  "gap_days_median": 1.0,
+  "gap_days_max": 8.0,
+  "gaps_over_4d": 2,
+  "betas_vs_bench": {
+    "028050.KS": 0.61,
+    "316140.KS": 0.126,
+    "ANET": 1.831,
+    "AVGO": 2.135,
+    "ETN": 1.737,
+    "HPE": 1.957,
+    "MET": 0.671,
+    "MPC": -0.139,
+    "NDAQ": 0.565,
+    "NUE": 0.927,
+    "NVDA": 1.889,
+    "PSX": -0.291,
+    "RTX": 0.376
+  },
+  "ari_half_vs_half": 0.381,
+  "within_group_corr": 0.6005,
+  "between_group_corr": 0.007,
+  "max_residual_corr": 0.8508,
+  "threshold_sweep": [
+    {
+      "threshold": 0.4,
+      "min_corr_implied": 0.6,
+      "n_units": 12,
+      "within": 0.8508
+    },
+    {
+      "threshold": 0.5,
+      "min_corr_implied": 0.5,
+      "n_units": 12,
+      "within": 0.8508
+    },
+    {
+      "threshold": 0.55,
+      "min_corr_implied": 0.45,
+      "n_units": 12,
+      "within": 0.8508
+    },
+    {
+      "threshold": 0.6,
+      "min_corr_implied": 0.4,
+      "n_units": 12,
+      "within": 0.8508
+    },
+    {
+      "threshold": 0.65,
+      "min_corr_implied": 0.35,
+      "n_units": 11,
+      "within": 0.6005
+    },
+    {
+      "threshold": 0.7,
+      "min_corr_implied": 0.3,
+      "n_units": 10,
+      "within": 0.5097
+    },
+    {
+      "threshold": 0.75,
+      "min_corr_implied": 0.25,
+      "n_units": 7,
+      "within": 0.376
+    },
+    {
+      "threshold": 0.8,
+      "min_corr_implied": 0.2,
+      "n_units": 7,
+      "within": 0.376
+    },
+    {
+      "threshold": 0.85,
+      "min_corr_implied": 0.15,
+      "n_units": 5,
+      "within": 0.2668
+    }
+  ],
+  "residual_corr": {
+    "028050": {
+      "028050": 1.0,
+      "316140": 0.35,
+      "ANET": 0.113,
+      "AVGO": -0.066,
+      "ETN": 0.061,
+      "HPE": -0.016,
+      "MET": -0.056,
+      "MPC": -0.143,
+      "NDAQ": 0.076,
+      "NUE": -0.112,
+      "NVDA": 0.002,
+      "PSX": -0.166,
+      "RTX": 0.078
+    },
+    "316140": {
+      "028050": 0.35,
+      "316140": 1.0,
+      "ANET": -0.036,
+      "AVGO": -0.041,
+      "ETN": 0.071,
+      "HPE": -0.017,
+      "MET": 0.061,
+      "MPC": -0.101,
+      "NDAQ": -0.072,
+      "NUE": 0.068,
+      "NVDA": -0.031,
+      "PSX": -0.073,
+      "RTX": 0.13
+    },
+    "ANET": {
+      "028050": 0.113,
+      "316140": -0.036,
+      "ANET": 1.0,
+      "AVGO": 0.285,
+      "ETN": 0.328,
+      "HPE": 0.271,
+      "MET": -0.161,
+      "MPC": 0.026,
+      "NDAQ": -0.075,
+      "NUE": -0.06,
+      "NVDA": 0.159,
+      "PSX": 0.043,
+      "RTX": -0.13
+    },
+    "AVGO": {
+      "028050": -0.066,
+      "316140": -0.041,
+      "ANET": 0.285,
+      "AVGO": 1.0,
+      "ETN": 0.225,
+      "HPE": 0.198,
+      "MET": -0.346,
+      "MPC": -0.038,
+      "NDAQ": -0.225,
+      "NUE": -0.012,
+      "NVDA": 0.256,
+      "PSX": -0.06,
+      "RTX": -0.122
+    },
+    "ETN": {
+      "028050": 0.061,
+      "316140": 0.071,
+      "ANET": 0.328,
+      "AVGO": 0.225,
+      "ETN": 1.0,
+      "HPE": 0.279,
+      "MET": -0.183,
+      "MPC": 0.018,
+      "NDAQ": -0.33,
+      "NUE": 0.113,
+      "NVDA": 0.054,
+      "PSX": -0.016,
+      "RTX": 0.014
+    },
+    "HPE": {
+      "028050": -0.016,
+      "316140": -0.017,
+      "ANET": 0.271,
+      "AVGO": 0.198,
+      "ETN": 0.279,
+      "HPE": 1.0,
+      "MET": 0.006,
+      "MPC": 0.207,
+      "NDAQ": -0.1,
+      "NUE": 0.109,
+      "NVDA": 0.02,
+      "PSX": 0.158,
+      "RTX": -0.117
+    },
+    "MET": {
+      "028050": -0.056,
+      "316140": 0.061,
+      "ANET": -0.161,
+      "AVGO": -0.346,
+      "ETN": -0.183,
+      "HPE": 0.006,
+      "MET": 1.0,
+      "MPC": 0.055,
+      "NDAQ": 0.297,
+      "NUE": 0.178,
+      "NVDA": -0.239,
+      "PSX": 0.142,
+      "RTX": 0.13
+    },
+    "MPC": {
+      "028050": -0.143,
+      "316140": -0.101,
+      "ANET": 0.026,
+      "AVGO": -0.038,
+      "ETN": 0.018,
+      "HPE": 0.207,
+      "MET": 0.055,
+      "MPC": 1.0,
+      "NDAQ": -0.076,
+      "NUE": 0.098,
+      "NVDA": -0.078,
+      "PSX": 0.851,
+      "RTX": -0.084
+    },
+    "NDAQ": {
+      "028050": 0.076,
+      "316140": -0.072,
+      "ANET": -0.075,
+      "AVGO": -0.225,
+      "ETN": -0.33,
+      "HPE": -0.1,
+      "MET": 0.297,
+      "MPC": -0.076,
+      "NDAQ": 1.0,
+      "NUE": -0.051,
+      "NVDA": -0.166,
+      "PSX": -0.039,
+      "RTX": 0.048
+    },
+    "NUE": {
+      "028050": -0.112,
+      "316140": 0.068,
+      "ANET": -0.06,
+      "AVGO": -0.012,
+      "ETN": 0.113,
+      "HPE": 0.109,
+      "MET": 0.178,
+      "MPC": 0.098,
+      "NDAQ": -0.051,
+      "NUE": 1.0,
+      "NVDA": -0.082,
+      "PSX": 0.111,
+      "RTX": 0.163
+    },
+    "NVDA": {
+      "028050": 0.002,
+      "316140": -0.031,
+      "ANET": 0.159,
+      "AVGO": 0.256,
+      "ETN": 0.054,
+      "HPE": 0.02,
+      "MET": -0.239,
+      "MPC": -0.078,
+      "NDAQ": -0.166,
+      "NUE": -0.082,
+      "NVDA": 1.0,
+      "PSX": -0.151,
+      "RTX": -0.135
+    },
+    "PSX": {
+      "028050": -0.166,
+      "316140": -0.073,
+      "ANET": 0.043,
+      "AVGO": -0.06,
+      "ETN": -0.016,
+      "HPE": 0.158,
+      "MET": 0.142,
+      "MPC": 0.851,
+      "NDAQ": -0.039,
+      "NUE": 0.111,
+      "NVDA": -0.151,
+      "PSX": 1.0,
+      "RTX": -0.113
+    },
+    "RTX": {
+      "028050": 0.078,
+      "316140": 0.13,
+      "ANET": -0.13,
+      "AVGO": -0.122,
+      "ETN": 0.014,
+      "HPE": -0.117,
+      "MET": 0.13,
+      "MPC": -0.084,
+      "NDAQ": 0.048,
+      "NUE": 0.163,
+      "NVDA": -0.135,
+      "PSX": -0.113,
+      "RTX": 1.0
+    }
+  },
+  "units": {
+    "0": [
+      "028050",
+      "316140"
+    ],
+    "1": [
+      "MPC",
+      "PSX"
+    ],
+    "2": [
+      "ANET"
+    ],
+    "3": [
+      "AVGO"
+    ],
+    "4": [
+      "ETN"
+    ],
+    "5": [
+      "HPE"
+    ],
+    "6": [
+      "MET"
+    ],
+    "7": [
+      "NDAQ"
+    ],
+    "8": [
+      "NUE"
+    ],
+    "9": [
+      "NVDA"
+    ],
+    "10": [
+      "RTX"
+    ]
+  },
+  "book_theme_labels": {
+    "028050": "KR-E&C/plant",
+    "316140": "KR-bank-holding",
+    "AVGO": "AI-compute-EPICENTER",
+    "NDAQ": "exchanges/FIN",
+    "NVDA": "AI-compute-EPICENTER",
+    "ANET": "AI-compute-EPICENTER",
+    "ETN": "AI-power/electrical",
+    "HPE": "AI-compute-chain",
+    "MET": "life-insurer/FIN",
+    "MPC": "energy-refining",
+    "NUE": "steel/MATR",
+    "PSX": "energy-refining",
+    "RTX": "defense-missile"
+  }
+}

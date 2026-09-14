@@ -1,0 +1,26 @@
+# REJECT LEDGER — 재확인 감사 asof 2026-09-12
+  전체 315건 · 해소됨 197건 · 부활조건 없는 레거시(감사 필요) 0건 · 재확인일 도래/경과 22건
+
+## 재확인일이 지났다 — 확인 없이 다음 런으로 넘기지 않는다
+  2026-08-19 CTVA Corteva        [A.flow미도착] D+3    부활조건: rs20 vs SPY > 0 AND OBV state 매집 on a settled sweep
+  2026-08-19 CRH CRH plc        [C.차트붕괴] D+3    부활조건: px reclaims its 200DMA AND OBV state 매집
+  2026-08-26 XOM Exxon Mobil    [K.본문반증] D+3    부활조건: XOM obv turns 매집 AND delta > 0 on two consecutive settled sweeps, OR a confirmed Hormuz closure priced into Brent above 100
+  2026-08-31 KEYS Keysight Technologies [I.테제반증] D+3    부활조건: LITE confirms card-6 KPI AND KEYS OBV turns 매집
+  2026-08-31 CIEN Ciena          [I.테제반증] D+3    부활조건: LITE confirms card-6 KPI AND CIEN OBV turns 매집
+  2026-08-13 001060 JW중외제약         [H.밸류소진] D+2    부활조건: KIS 20d 외국인 순매수 양(+) 전환 AND 다음 기 총이익률이 46.3퍼 이상 유지(피크가 정점이 아니었음을 확인)
+  2026-08-27 FN Fabrinet       [K.본문반증] D+2    부활조건: FN re-enters us_top300 OR a body names the specific guidance line that caused the 08-24 de-rate AND FN prints a positive 5-session excess vs SPY
+  2026-08-27 HON Honeywell      [A.flow미도착] D+2    부활조건: HON Wilder RSI(14) falls below 32 on a settled bar AND OBV turns 매집
+  2026-08-27 CCL Carnival       [A.flow미도착] D+2    부활조건: CCL Wilder RSI(14) falls below 32 on a settled bar AND OBV turns 매집
+  2026-09-02 HWM Howmet Aerospace [I.테제반증] D+2    부활조건: OBV>0 AND rs20>0 vs SPY on a settled close
+  2026-09-02 GEV GE Vernova     [A.flow미도착] D+2    부활조건: tag reaches green OR OBV>+0.10
+  2026-09-05 NVDA Nvidia (Hugging Face thread as an entry reason) [A.flow미도착] D+2    부활조건: NVDA obv_state turns 매집 while the Hugging Face thread is still BUILDING/REIGNITED, OR S130 (settles 09-10) fires its accumulation branch
+  2026-08-21 036460 한국가스공사         [A.flow미도착] D+1    부활조건: 종가 > SMA200 AND KIS 외국인 20d 순매수 부호 (+) 유지 AND 8월 도시가스용 판매량 YoY >= 0
+  2026-08-27 052690 한전기술           [D.약한손] D+1    부활조건: KIS 개인 순매수가 음(-)으로 전환 AND 외국인 또는 기관 중 한 축이 양(+) 전환
+  2026-08-28 006220 제주은행           [J.사이즈미미] D+1    부활조건: KIS 9세션 기관 또는 외국인 순매수가 양(+)으로 확대되면서 OBV 매집 유지, 또는 시총이 1조를 넘어 쇼트리스트 컷 안으로 들어옴
+  2026-08-28 052690 한전기술           [D.약한손] D+1    부활조건: KIS 9세션 외국인 또는 기관 순매수가 양(+) 전환하면서 개인 순매수가 음(-)으로 바뀌고 OBV 매집 유지, 또는 051600·015760 중 하나 이상이 Δ 양(+)으로 돌아 원전 레인이 다시 붙음
+  2026-08-29 RETAILX 개미 증시 이탈(thread) [K.본문반증] D+1    부활조건: KIS 개인 순매수가 005930·000660 양쪽에서 2세션 연속 음(-)으로 전환 AND CMA 잔고 증가가 2매체 이상 인쇄
+  2026-08-29 047040 대우건설           [D.약한손] D+1    부활조건: KIS 20일 외국인 순매수가 2세션 연속 양(+)으로 전환 AND 우발채무 총잔액이 자기자본 대비 300% 아래로 내려간 공시가 인쇄되면
+  2026-08-12 NDAQ Nasdaq Inc     [A.flow미도착] D+0    부활조건: 데스크 런에서 NDAQ 가 실제로 커버되어 테제를 받고 AND vol_surge >= 1.2 로 볼륨확인된 OBV 매집 전환
+  2026-08-31 XOM Exxon Mobil    [A.flow미도착] D+0    부활조건: OBV turns 매집 AND rs20 > 0 vs SPY on two consecutive settled closes
+  2026-08-31 EOG EOG Resources  [A.flow미도착] D+0    부활조건: OBV turns 매집 while DCOILWTICO [FRED] >= 88.00
+  2026-08-31 FANG Diamondback Energy [A.flow미도착] D+0    부활조건: OBV turns 매집 while DCOILWTICO [FRED] >= 88.00

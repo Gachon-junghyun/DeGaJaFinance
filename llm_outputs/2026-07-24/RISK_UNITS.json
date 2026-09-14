@@ -1,0 +1,201 @@
+{
+  "date": "2026-07-24",
+  "bench": "SPY",
+  "threshold": 0.65,
+  "min_corr_implied": 0.35,
+  "n_days_aligned": 499,
+  "n_days_intersection_full": 750,
+  "trimmed_by_days_arg": 250,
+  "window": [
+    "2024-07-29",
+    "2026-07-24"
+  ],
+  "missing": [],
+  "calendar_loss": {
+    "AVGO": 0,
+    "KMI": 0,
+    "LNG": 0,
+    "MA": 0,
+    "NVDA": 0,
+    "RTX": 0,
+    "SPY": 0,
+    "VST": 0,
+    "XOM": 0
+  },
+  "gap_days_median": 1.0,
+  "gap_days_max": 4.0,
+  "gaps_over_4d": 0,
+  "betas_vs_bench": {
+    "AVGO": 1.993,
+    "KMI": 0.429,
+    "LNG": 0.351,
+    "MA": 0.656,
+    "NVDA": 1.982,
+    "RTX": 0.485,
+    "VST": 1.927,
+    "XOM": 0.256
+  },
+  "ari_half_vs_half": 0.186,
+  "within_group_corr": 0.4344,
+  "between_group_corr": 0.026,
+  "max_residual_corr": 0.5883,
+  "threshold_sweep": [
+    {
+      "threshold": 0.4,
+      "min_corr_implied": 0.6,
+      "n_units": 8,
+      "within": null
+    },
+    {
+      "threshold": 0.5,
+      "min_corr_implied": 0.5,
+      "n_units": 7,
+      "within": 0.5883
+    },
+    {
+      "threshold": 0.55,
+      "min_corr_implied": 0.45,
+      "n_units": 7,
+      "within": 0.5883
+    },
+    {
+      "threshold": 0.6,
+      "min_corr_implied": 0.4,
+      "n_units": 7,
+      "within": 0.5883
+    },
+    {
+      "threshold": 0.65,
+      "min_corr_implied": 0.35,
+      "n_units": 5,
+      "within": 0.4344
+    },
+    {
+      "threshold": 0.7,
+      "min_corr_implied": 0.3,
+      "n_units": 4,
+      "within": 0.4005
+    },
+    {
+      "threshold": 0.75,
+      "min_corr_implied": 0.25,
+      "n_units": 4,
+      "within": 0.4005
+    },
+    {
+      "threshold": 0.8,
+      "min_corr_implied": 0.2,
+      "n_units": 4,
+      "within": 0.4005
+    },
+    {
+      "threshold": 0.85,
+      "min_corr_implied": 0.15,
+      "n_units": 4,
+      "within": 0.4005
+    }
+  ],
+  "residual_corr": {
+    "AVGO": {
+      "AVGO": 1.0,
+      "KMI": -0.048,
+      "LNG": -0.03,
+      "MA": -0.34,
+      "NVDA": 0.358,
+      "RTX": -0.088,
+      "VST": 0.312,
+      "XOM": -0.158
+    },
+    "KMI": {
+      "AVGO": -0.048,
+      "KMI": 1.0,
+      "LNG": 0.588,
+      "MA": 0.07,
+      "NVDA": 0.042,
+      "RTX": 0.175,
+      "VST": 0.272,
+      "XOM": 0.366
+    },
+    "LNG": {
+      "AVGO": -0.03,
+      "KMI": 0.588,
+      "LNG": 1.0,
+      "MA": 0.108,
+      "NVDA": 0.007,
+      "RTX": 0.162,
+      "VST": 0.205,
+      "XOM": 0.426
+    },
+    "MA": {
+      "AVGO": -0.34,
+      "KMI": 0.07,
+      "LNG": 0.108,
+      "MA": 1.0,
+      "NVDA": -0.324,
+      "RTX": 0.138,
+      "VST": -0.221,
+      "XOM": 0.085
+    },
+    "NVDA": {
+      "AVGO": 0.358,
+      "KMI": 0.042,
+      "LNG": 0.007,
+      "MA": -0.324,
+      "NVDA": 1.0,
+      "RTX": -0.117,
+      "VST": 0.353,
+      "XOM": -0.11
+    },
+    "RTX": {
+      "AVGO": -0.088,
+      "KMI": 0.175,
+      "LNG": 0.162,
+      "MA": 0.138,
+      "NVDA": -0.117,
+      "RTX": 1.0,
+      "VST": 0.083,
+      "XOM": 0.09
+    },
+    "VST": {
+      "AVGO": 0.312,
+      "KMI": 0.272,
+      "LNG": 0.205,
+      "MA": -0.221,
+      "NVDA": 0.353,
+      "RTX": 0.083,
+      "VST": 1.0,
+      "XOM": -0.042
+    },
+    "XOM": {
+      "AVGO": -0.158,
+      "KMI": 0.366,
+      "LNG": 0.426,
+      "MA": 0.085,
+      "NVDA": -0.11,
+      "RTX": 0.09,
+      "VST": -0.042,
+      "XOM": 1.0
+    }
+  },
+  "units": {
+    "0": [
+      "KMI",
+      "LNG",
+      "XOM"
+    ],
+    "1": [
+      "AVGO",
+      "NVDA"
+    ],
+    "2": [
+      "MA"
+    ],
+    "3": [
+      "RTX"
+    ],
+    "4": [
+      "VST"
+    ]
+  },
+  "book_theme_labels": {}
+}

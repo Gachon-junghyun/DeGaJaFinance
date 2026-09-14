@@ -1,0 +1,30 @@
+# MISSED LEDGER — 재확인 감사 asof 2026-09-14
+  전체 367건 · 해소됨 245건 · 진입조건 없는 레거시 0건 · 재확인일 도래/경과 26건
+
+## 재확인일이 지났다 — 확인 없이 다음 런으로 넘기지 않는다
+  2026-08-24 MSTR MicroStrategy  [Q.확신부족] D+6    진입조건: rs60 turns >= 0 AND OBV stays accumulating
+  2026-08-26 AMD Advanced Micro Devices [M.숏리스트탈락] D+5    진입조건: AMD tags 🟢가속 on a SETTLED-bar sweep with vol_surge >= 1.2 while OBV stays 매집
+  2026-08-27 LITE Lumentum       [Q.확신부족] D+5    진입조건: S128 settles and its verdict does not falsify the rs60 reversal, AND LITE still prints OBV 매집 on a settled bar
+  2026-08-31 LITE Lumentum Holdings [Q.확신부족] D+5    진입조건: cycle_registry.json gains an optical row AND LITE OBV stays 매집
+  2026-09-02 PSX Phillips 66    [M.숏리스트탈락] D+5    진입조건: vol_surge >= 1.00
+  2026-09-02 CVX Chevron        [M.숏리스트탈락] D+5    진입조건: vol_surge >= 1.00
+  2026-09-08 CTVA Corteva        [S.테마회피] D+4    진입조건: P102 settles and its verdict does not rest on CTVA, AND CTVA z20 stays above +1.5
+  2026-08-27 DASH DoorDash       [Q.확신부족] D+3    진입조건: DASH next-quarter EPS revision turns positive on a fresh pull AND OBV still 매집 on a settled bar
+  2026-08-31 005490 POSCO홀딩스       [R.타이밍대기] D+3    진입조건: flow_score 가 🟢가속으로 전환 OR rs20(벤치 ^KS11)이 0 위로 복귀
+  2026-09-07 VLO Valero Energy  [M.숏리스트탈락] D+3    진입조건: vol_surge >= 1.2 on a settled close OR P140 settles branch B on 2026-09-11
+  2026-08-30 SLB Schlumberger   [M.숏리스트탈락] D+2    진입조건: SLB tag turns green in a sweep with vel_coverage>=80% OR rs60 turns positive while OBV stays accumulating
+  2026-08-30 CRM Salesforce     [Q.확신부족] D+2    진입조건: a multi-day foreign thread with peak>=4 outlets names Salesforce, while flow stays >=+0.5
+  2026-08-31 COP ConocoPhillips [M.숏리스트탈락] D+2    진입조건: OBV > +0.15 AND rs20 > +8 vs SPY
+  2026-08-14 003070 Kolon Global   [T.사이즈미미] D+0    진입조건: Market cap exceeds 1tn KRW, OR a separate lower-floor screen admits it while flow stays GREEN
+  2026-08-14 280360 Lotte Wellfood [T.사이즈미미] D+0    진입조건: Market cap recovers above 1tn KRW AND the flow tag stays GREEN
+  2026-08-29 STX Seagate (STX)  [M.숏리스트탈락] D+0    진입조건: EW{MU,SNDK,WDC} 10-session excess vs SPY >= +5.00pp at P111 settle (2026-09-14) AND STX OBV still 매집
+  2026-08-29 ISRG Intuitive Surgical (ISRG) [M.숏리스트탈락] D+0    진입조건: ISRG prints OBV 매집 with rs20 > 0 on a settled sweep while S133 branch A is live
+  2026-09-06 NEM Newmont        [Q.확신부족] D+0    진입조건: a SECOND named central-bank bullion relocation carried by >=4 foreign outlets AND NEM rs20 > +15 on a settled close
+  2026-09-06 XOM ExxonMobil     [Q.확신부족] D+0    진입조건: XOM flow_score > +0.30 with obv_state turning 매집 on a settled close
+  2026-09-06 FANG Diamondback Energy [M.숏리스트탈락] D+0    진입조건: FANG obv_state turns 매집 with rs20 > 0 on a settled close
+  2026-09-06 KMI Kinder Morgan  [M.숏리스트탈락] D+0    진입조건: KMI obv_state turns 매집 AND rs60 > 0 on a settled close
+  2026-09-06 ISRG Intuitive Surgical [R.타이밍대기] D+0    진입조건: the Health Care Equipment node eqflow turns positive AND ISRG obv_state turns 매집
+  2026-09-06 EW Edwards Lifesciences [M.숏리스트탈락] D+0    진입조건: the Equipment node eqflow turns positive AND EW obv_state turns 매집
+  2026-09-06 ABT Abbott Laboratories [M.숏리스트탈락] D+0    진입조건: the Equipment node eqflow turns positive AND ABT obv_state turns 매집
+  2026-09-07 LNG Cheniere Energy (US LNG export chain) [N.유니버스부재] D+0    진입조건: data/us_universe rebuilt with an explicit LNG/gas/tanker include-list AND the name returns a flow/OBV/short reading
+  2026-09-07 CEG Constellation Energy [M.숏리스트탈락] D+0    진입조건: vol_surge >= 1.2 on a settled close OR the flow_tag gate stops using velocity while vel_axis is false

@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\fivep\DeGaJaFinance\module_news_data\__main__.py", line 112, in <module>
+    main()
+  File "C:\Users\fivep\DeGaJaFinance\module_news_data\__main__.py", line 108, in main
+    args.func(args)
+  File "C:\Users\fivep\DeGaJaFinance\module_news_data\_embed.py", line 231, in <lambda>
+    p.set_defaults(func=lambda a: run(a.cmd, a.limit, a.device))
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fivep\DeGaJaFinance\module_news_data\_embed.py", line 217, in run
+    r = sync(limit, device)
+        ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fivep\DeGaJaFinance\module_news_data\_embed.py", line 116, in sync
+    data = pull(cursor, limit)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fivep\DeGaJaFinance\module_news_data\_export.py", line 157, in pull
+    raise RuntimeError(f"원격 반출 실패: {res['error']}")
+RuntimeError: 원격 반출 실패: 뉴스 API 접속 실패(https://impolite-coherent-props.ngrok-free.dev/exec): URLError(FileNotFoundError(2, 'No such file or directory')) — 서버 PC 수집기/방화벽/DEGAJA_NEWS_API 확인. (비우면 로컬 DB 폴백)

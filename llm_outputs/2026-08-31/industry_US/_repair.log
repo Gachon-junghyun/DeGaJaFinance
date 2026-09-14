@@ -1,0 +1,35 @@
+[cache] prices_2026-08-31.pkl 301 tickers
+  [5m] 40/301 covered=40
+  [5m] 80/301 covered=80
+$EA: possibly delisted; no price data found  (period=5d)
+
+1 Failed download:
+['EA']: possibly delisted; no price data found  (period=5d)
+  [5m] 120/301 covered=119
+  [5m] 160/301 covered=159
+  [5m] 200/301 covered=199
+  [5m] 240/301 covered=239
+  [5m] 280/301 covered=279
+  [5m] 301/301 covered=300
+repair stats {'patched': 300, 'trimmed': 1, 'no_ghost': 0, 'bars_lt78': 9}
+[bench] SPY last=2026-08-28 px=769.38 n=85
+  [flow] 60/300
+  [flow] 120/300
+  [flow] 180/300
+  [flow] 240/300
+  [flow] 300/300
+[axis] velocity 측정 0/299 = 0.0% → 속도축 제외(전원 3축) · 기준 80% (D225-KR)
+scoring {'vel_axis': False, 'vel_coverage': 0.0, 'n_axes': 3, 'scored': 299, 'dropped_missing_axis': 0}
+[prev] snapshot names=299
+wrote SECTOR_FLOW_US_REPAIRED.json
+Materials                  n= 12 wflow +0.225 d=0.197 eqflow +0.164 g/r 0/0 breadth 0.00 top1 LIN w 24.7% ex_top1 0.233 FLIP False
+Information Technology     n= 56 wflow +0.033 d=0.025 eqflow -0.034 g/r 3/13 breadth 0.05 top1 NVDA w 19.4% ex_top1 -0.016 FLIP True
+Health Care                n= 32 wflow +0.021 d=0.047 eqflow +0.135 g/r 1/2 breadth 0.03 top1 LLY w 19.4% ex_top1 0.095 FLIP False
+Financials                 n= 47 wflow -0.072 d=0.073 eqflow -0.089 g/r 0/5 breadth 0.00 top1 BRK-B w 13.9% ex_top1 -0.02 FLIP False
+Energy                     n= 16 wflow -0.097 d=-0.046 eqflow +0.005 g/r 0/3 breadth 0.00 top1 XOM w 30.5% ex_top1 0.074 FLIP True
+Consumer Discretionary     n= 28 wflow -0.262 d=-0.126 eqflow -0.247 g/r 0/12 breadth 0.00 top1 AMZN w 40.2% ex_top1 0.056 FLIP True
+Consumer Staples           n= 19 wflow -0.264 d=0.08 eqflow -0.187 g/r 0/4 breadth 0.00 top1 WMT w 28.9% ex_top1 -0.13 FLIP False
+Industrials                n= 50 wflow -0.317 d=-0.129 eqflow -0.291 g/r 0/17 breadth 0.00 top1 CAT w 8.7% ex_top1 -0.291 FLIP False
+Real Estate                n= 12 wflow -0.338 d=0.078 eqflow -0.333 g/r 0/4 breadth 0.00 top1 WELL w 16.9% ex_top1 -0.415 FLIP False
+Communication Services     n= 12 wflow -0.422 d=-0.162 eqflow +0.080 g/r 0/3 breadth 0.00 top1 GOOGL w 38.3% ex_top1 -0.338 FLIP False
+Utilities                  n= 15 wflow -0.549 d=-0.025 eqflow -0.524 g/r 0/10 breadth 0.00 top1 NEE w 17.7% ex_top1 -0.525 FLIP False

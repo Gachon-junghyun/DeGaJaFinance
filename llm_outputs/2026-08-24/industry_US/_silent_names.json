@@ -1,0 +1,362 @@
+{
+ "NDAQ": {
+  "recent": 13,
+  "base": 12835,
+  "recent_rate": 1.86,
+  "base_rate": 213.92,
+  "velocity": 0.01,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "AXP": {
+  "recent": 68,
+  "base": 513,
+  "recent_rate": 9.71,
+  "base_rate": 8.55,
+  "velocity": 1.14,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "LIN": {
+  "recent": 1,
+  "base": 26,
+  "recent_rate": 0.14,
+  "base_rate": 0.43,
+  "velocity": 0.33,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "A": {
+  "recent": 10,
+  "base": 27,
+  "recent_rate": 1.43,
+  "base_rate": 0.45,
+  "velocity": 3.17,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "COHR": {
+  "recent": 50,
+  "base": 245,
+  "recent_rate": 7.14,
+  "base_rate": 4.08,
+  "velocity": 1.75,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "MDT": {
+  "recent": 30,
+  "base": 143,
+  "recent_rate": 4.29,
+  "base_rate": 2.38,
+  "velocity": 1.8,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "STX": {
+  "recent": 124,
+  "base": 439,
+  "recent_rate": 17.71,
+  "base_rate": 7.32,
+  "velocity": 2.42,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "CSX": {
+  "recent": 1,
+  "base": 15,
+  "recent_rate": 0.14,
+  "base_rate": 0.25,
+  "velocity": 0.57,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "CI": {
+  "recent": 9,
+  "base": 79,
+  "recent_rate": 1.29,
+  "base_rate": 1.32,
+  "velocity": 0.98,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "RCL": {
+  "recent": 6,
+  "base": 16,
+  "recent_rate": 0.86,
+  "base_rate": 0.27,
+  "velocity": 3.21,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "DASH": {
+  "recent": 103,
+  "base": 611,
+  "recent_rate": 14.71,
+  "base_rate": 10.18,
+  "velocity": 1.44,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "SYK": {
+  "recent": 8,
+  "base": 26,
+  "recent_rate": 1.14,
+  "base_rate": 0.43,
+  "velocity": 2.64,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "SNPS": {
+  "recent": 59,
+  "base": 370,
+  "recent_rate": 8.43,
+  "base_rate": 6.17,
+  "velocity": 1.37,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "WAT": {
+  "recent": 2,
+  "base": 18,
+  "recent_rate": 0.29,
+  "base_rate": 0.3,
+  "velocity": 0.95,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "PRU": {
+  "recent": 6,
+  "base": 44,
+  "recent_rate": 0.86,
+  "base_rate": 0.73,
+  "velocity": 1.17,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "SPG": {
+  "recent": 4,
+  "base": 58,
+  "recent_rate": 0.57,
+  "base_rate": 0.97,
+  "velocity": 0.59,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "BX": {
+  "recent": 18,
+  "base": 134,
+  "recent_rate": 2.57,
+  "base_rate": 2.23,
+  "velocity": 1.15,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "AMGN": {
+  "recent": 71,
+  "base": 302,
+  "recent_rate": 10.14,
+  "base_rate": 5.03,
+  "velocity": 2.02,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "SYY": {
+  "recent": 15,
+  "base": 62,
+  "recent_rate": 2.14,
+  "base_rate": 1.03,
+  "velocity": 2.07,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "EMR": {
+  "recent": 7,
+  "base": 46,
+  "recent_rate": 1.0,
+  "base_rate": 0.77,
+  "velocity": 1.3,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "GD": {
+  "recent": 9,
+  "base": 136,
+  "recent_rate": 1.29,
+  "base_rate": 2.27,
+  "velocity": 0.57,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "AON": {
+  "recent": 8,
+  "base": 36,
+  "recent_rate": 1.14,
+  "base_rate": 0.6,
+  "velocity": 1.9,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "ETR": {
+  "recent": 6,
+  "base": 84,
+  "recent_rate": 0.86,
+  "base_rate": 1.4,
+  "velocity": 0.61,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "TRV": {
+  "recent": 0,
+  "base": 5,
+  "recent_rate": 0.0,
+  "base_rate": 0.08,
+  "velocity": 0.0,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "KKR": {
+  "recent": 14,
+  "base": 85,
+  "recent_rate": 2.0,
+  "base_rate": 1.42,
+  "velocity": 1.41,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "KMB": {
+  "recent": 17,
+  "base": 80,
+  "recent_rate": 2.43,
+  "base_rate": 1.33,
+  "velocity": 1.82,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "MRSH": {
+  "recent": 4,
+  "base": 34,
+  "recent_rate": 0.57,
+  "base_rate": 0.57,
+  "velocity": 1.01,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "MCHP": {
+  "recent": 20,
+  "base": 172,
+  "recent_rate": 2.86,
+  "base_rate": 2.87,
+  "velocity": 1.0,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "BMY": {
+  "recent": 44,
+  "base": 322,
+  "recent_rate": 6.29,
+  "base_rate": 5.37,
+  "velocity": 1.17,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "CIEN": {
+  "recent": 27,
+  "base": 98,
+  "recent_rate": 3.86,
+  "base_rate": 1.63,
+  "velocity": 2.36,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "RTX": {
+  "recent": 24,
+  "base": 87,
+  "recent_rate": 3.43,
+  "base_rate": 1.45,
+  "velocity": 2.36,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "ECL": {
+  "recent": 7,
+  "base": 47,
+  "recent_rate": 1.0,
+  "base_rate": 0.78,
+  "velocity": 1.28,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "APD": {
+  "recent": 5,
+  "base": 36,
+  "recent_rate": 0.71,
+  "base_rate": 0.6,
+  "velocity": 1.19,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "OKE": {
+  "recent": 7,
+  "base": 57,
+  "recent_rate": 1.0,
+  "base_rate": 0.95,
+  "velocity": 1.05,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "HCA": {
+  "recent": 5,
+  "base": 43,
+  "recent_rate": 0.71,
+  "base_rate": 0.72,
+  "velocity": 1.0,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "ROK": {
+  "recent": 8,
+  "base": 69,
+  "recent_rate": 1.14,
+  "base_rate": 1.15,
+  "velocity": 0.99,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "PEG": {
+  "recent": 3,
+  "base": 32,
+  "recent_rate": 0.43,
+  "base_rate": 0.53,
+  "velocity": 0.8,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "PAYX": {
+  "recent": 5,
+  "base": 43,
+  "recent_rate": 0.71,
+  "base_rate": 0.72,
+  "velocity": 1.0,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "PDD": {
+  "recent": 23,
+  "base": 42,
+  "recent_rate": 3.29,
+  "base_rate": 0.7,
+  "velocity": 4.69,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "MLM": {
+  "recent": 7,
+  "base": 40,
+  "recent_rate": 1.0,
+  "base_rate": 0.67,
+  "velocity": 1.5,
+  "scope": "foreign",
+  "source": "api"
+ }
+}

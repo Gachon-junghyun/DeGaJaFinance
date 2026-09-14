@@ -1,0 +1,179 @@
+{
+  "ticker": "COP",
+  "company_name": "ConocoPhillips",
+  "sector": "Energy",
+  "industry": "Oil & Gas E&P",
+  "price": 137.35,
+  "market_cap": 165003706368,
+  "trailing_pe": 18.192053,
+  "forward_pe": 14.169802,
+  "peg_ratio": 1.24,
+  "price_to_sales": 2.559824,
+  "price_to_book": 2.5249555,
+  "trailing_eps": 7.55,
+  "forward_eps": 9.69315,
+  "fifty_two_week_high": 138.89,
+  "fifty_two_week_low": 85.57,
+  "target_low": 126.0,
+  "target_mean": 145.44,
+  "target_high": 189.0,
+  "target_median": 146.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 4,
+      "buy": 15,
+      "hold": 8,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 4,
+      "buy": 15,
+      "hold": 6,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 5,
+      "buy": 14,
+      "hold": 7,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 5,
+      "buy": 14,
+      "hold": 7,
+      "sell": 0,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      19161000000.0
+    ],
+    [
+      "2026-03-31",
+      15761000000.0
+    ],
+    [
+      "2025-12-31",
+      13392000000.0
+    ],
+    [
+      "2025-09-30",
+      15031000000.0
+    ],
+    [
+      "2025-06-30",
+      14004000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      19161000000.0
+    ],
+    [
+      "2026-03-31",
+      15761000000.0
+    ],
+    [
+      "2025-09-30",
+      15031000000.0
+    ],
+    [
+      "2025-06-30",
+      14004000000.0
+    ],
+    [
+      "2025-03-31",
+      16517000000.0
+    ],
+    [
+      "2024-09-30",
+      13041000000.0
+    ],
+    [
+      "2024-06-30",
+      13620000000.0
+    ],
+    [
+      "2024-03-31",
+      13848000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 2.66196,
+      "7daysAgo": 2.61714,
+      "30daysAgo": 2.62818,
+      "60daysAgo": 2.38233,
+      "90daysAgo": 2.65622
+    },
+    {
+      "period": "+1q",
+      "current": 2.68286,
+      "7daysAgo": 2.62328,
+      "30daysAgo": 2.55341,
+      "60daysAgo": 2.29762,
+      "90daysAgo": 2.47291
+    },
+    {
+      "period": "0y",
+      "current": 10.62712,
+      "7daysAgo": 10.44348,
+      "30daysAgo": 10.36435,
+      "60daysAgo": 9.36417,
+      "90daysAgo": 9.82722
+    },
+    {
+      "period": "+1y",
+      "current": 9.69315,
+      "7daysAgo": 9.5093,
+      "30daysAgo": 9.40235,
+      "60daysAgo": 8.99118,
+      "90daysAgo": 9.19492
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 4.0,
+      "upLast30days": 10.0,
+      "downLast30days": 4.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 4.0,
+      "upLast30days": 10.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 5.0,
+      "upLast30days": 14.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 6.0,
+      "upLast30days": 12.0,
+      "downLast30days": 4.0,
+      "downLast7Days": 0.0
+    }
+  ],
+  "business_summary": "ConocoPhillips explores for, produces, transports, and markets crude oil, bitumen, natural gas, liquefied natural gas (LNG), and natural gas liquids. It operates in five segments: Alaska; Lower 48; Canada; Europe, Middle East and North Africa; and Asia Pacific. The company's portfolio includes unconventional plays in North America; conventional assets in North America, Europe, Asia, and Australia; global LNG developments; oil sands assets in Canada; and an inventory of global exploration prospects. It serves in the United States, Canada, China, Equatorial Guinea, Libya, Malaysia, Norway, Singapore, the United Kingdom, and internationally. ConocoPhillips was founded in 1917 and is headquartered in Houston, Texas.",
+  "next_earnings_date": "2026-11-05",
+  "beta": 0.134,
+  "dividend_yield": 2.45
+}

@@ -1,0 +1,18 @@
+# REJECT LEDGER — 재확인 감사 asof 2026-09-14
+  전체 324건 · 해소됨 217건 · 부활조건 없는 레거시(감사 필요) 0건 · 재확인일 도래/경과 14건
+
+## 재확인일이 지났다 — 확인 없이 다음 런으로 넘기지 않는다
+  2026-08-26 XOM Exxon Mobil    [K.본문반증] D+5    부활조건: XOM obv turns 매집 AND delta > 0 on two consecutive settled sweeps, OR a confirmed Hormuz closure priced into Brent above 100
+  2026-08-27 FN Fabrinet       [K.본문반증] D+4    부활조건: FN re-enters us_top300 OR a body names the specific guidance line that caused the 08-24 de-rate AND FN prints a positive 5-session excess vs SPY
+  2026-08-31 XOM Exxon Mobil    [A.flow미도착] D+2    부활조건: OBV turns 매집 AND rs20 > 0 vs SPY on two consecutive settled closes
+  2026-08-14 000720 Hyundai E&C    [B.모멘텀only] D+0    부활조건: 60-day order total exceeds 2tn KRW AND Fwd PER falls to the peer median (13x) or below
+  2026-08-14 011170 Lotte Chemical [C.차트붕괴] D+0    부활조건: OBV turns to accumulation AND the BOK chemical-product export price MoM turns positive
+  2026-08-14 066970 L&F            [D.약한손] D+0    부활조건: KIS 20d foreign net-buy turns positive AND retail net-buy turns negative
+  2026-08-14 010060 OCI Holdings   [D.약한손] D+0    부활조건: KIS 20d foreign net-buy turns positive AND retail absorption disappears
+  2026-08-14 003670 POSCO Future M [D.약한손] D+0    부활조건: KIS 20d foreign net-buy turns positive AND the flow tag stays GREEN
+  2026-08-14 007070 GS Retail      [A.flow미도착] D+0    부활조건: theme-age 편의점 recovers above 1.0x OR KIS 20d both legs exceed +50man shares each
+  2026-08-14 000660 SK hynix       [C.차트붕괴] D+0    부활조건: OBV turns to accumulation AND flow_score returns above 0 on a settled close, OR the BOK D-ram export price MoM turns negative (which would make the regime-call level leg the tradeable object rather than the name)
+  2026-09-06 GEV GE Vernova     [A.flow미도착] D+0    부활조건: GEV flow_score > +0.30 with obv_state 매집 AND rs20 > 0 on a settled close
+  2026-09-06 PWR Quanta Services [A.flow미도착] D+0    부활조건: PWR obv_state turns 매집 with rs20 > 0 on a settled close, OR P127 (2026-09-10) fires branch A
+  2026-09-06 LLY Eli Lilly      [B.모멘텀only] D+0    부활조건: LLY flow_score > 0 AND obv_state turns 매집 on a settled close
+  2026-09-07 XOM ExxonMobil     [I.테제반증] D+0    부활조건: flow_score > +0.30 AND obv_state turns accumulation

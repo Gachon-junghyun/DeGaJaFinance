@@ -1,0 +1,99 @@
+rcpNo=20260818800167 viewDoc pairs: [('20260818800167', '11540953')]
+enc=cp949
+ 
+.xforms * { font-family: 돋움체;} 
+.xforms_title * { font-size: 13pt; padding : 0 0 10 0;} 
+.xforms table { 
+ font-size: 10px; 
+ padding:0px; 
+ border-collapse:collapse; 
+ color: #3D3D3D; 
+} 
+.xforms td { 
+ padding-left:0px; 
+ padding-top:0px; 
+ border-collapse:collapse; 
+ line-height:22px; 
+ color: #3D3D3D; 
+ /*text-align:right;*/ 
+ vertical-align:middle; 
+ border: 1px solid #7f7f7f; 
+} 
+.xforms span { 
+ /*display: inline-block;*/ 
+ padding-left:3px; 
+ padding-right: 1px; 
+ line-height:22px; 
+ padding-top:0px; 
+ padding-bottom:0px; 
+ text-align:left; 
+ vertical-align:middle; 
+ border: 0px solid #DBDBDB; 
+} 
+.xforms.img{ 
+ border : 0px; 
+} 
+.xforms a:link { 
+ color: #194866; 
+ text-decoration: none; 
+} 
+.xforms a:active { 
+ color: #194866; 
+ text-decoration: none; 
+} 
+.xforms a:visited { 
+ color: #194866; 
+ text-decoration: none; 
+} 
+.xforms A:hover { 
+ color:008BE3; 
+ text-decoration: none; 
+} 
+.xforms_input{ 
+ border: 0px solid #DBDBDB; 
+ padding-left:3px; 
+ padding-right: 1px; 
+ height:22px; 
+ padding-top:0px; 
+ padding-bottom:0px; 
+ text-align:left; 
+} 
+ 한미반도체/유형자산 취득결정/(2026.08.18)유형자산 취득결정 
+ 유형자산 취득결정 
+ 1. 취득물건 구분 
+ 토지 및 건물 
+ - 취득물건명 
+ 인천광역시 서해구 가좌동 소재 토지 및 건물 일체 
+ 2. 취득내역 
+ 취득가액(원) 
+ 56,000,000,000 
+ 자산총액(원) 
+ 813,331,626,120 
+ 자산총액대비(%) 
+ 6.89 
+ 대규모법인여부 
+ 미해당 
+ 3. 거래상대 
+ (주)머큐리 
+ 4. 취득목적 
+ 글로벌 반도체 기업들의 설비 투자 확대에 따라 장비 공급 부족(쇼티지)에 선제적 대응하기 위한 신공장(8공장) 확보 
+ 5. 취득예정일자 
+ 2027-02-17 
+ 6. 이사회결의일(결정일) 
+ 2026-08-18 
+ - 사외이사 참석여부 
+ 참석(명) 
+ 1 
+ 불참(명) 
+ 0 
+ - 감사(사외이사가 아닌 감사위원) 참석여부 
+ 참석 
+ 7. 기타 투자판단과 관련한 중요사항 
+ 1) 취득 목적물에 대한 사항 
+ - 인천광역시 서해구 가좌동 소재 토지 및 건물 일체 
+ - 토지: 20,582.1㎡(6,226.1평) 
+ - 건물: 25,694.3㎡(7,772.5평) 
+ ※ 한미반도체 창사 최대 규모 공장 부지 매입 2) 상기 취득가액은 제세공과금과 부대비용을 제외한 매매계약서상의 계약금액입니다. 3) 상기 자산총액은 최근 사업연도말(2025년 12월 31일)현재 한국채택국제회계기준 (K-IFRS)에 따라 작성한 연결재무제표 기준 입니다. 4) 상기 취득예정일자는 잔금 지급 예정일입니다. 5) 상기 일정 및 대금 지급에 관한 사항은 거래상대방과의 협의에 따라 변경될 수 있습니다. 
+ ※ 관련공시 
+ - 
+ 

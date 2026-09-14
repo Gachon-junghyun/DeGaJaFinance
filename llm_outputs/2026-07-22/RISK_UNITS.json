@@ -1,0 +1,235 @@
+{
+  "date": "2026-07-22",
+  "bench": "SPY",
+  "threshold": 0.65,
+  "min_corr_implied": 0.35,
+  "n_days_aligned": 699,
+  "n_days_intersection_full": 988,
+  "trimmed_by_days_arg": 288,
+  "window": [
+    "2023-07-31",
+    "2026-07-22"
+  ],
+  "missing": [],
+  "calendar_loss": {
+    "009150.KS": 61,
+    "AVGO": 62,
+    "KMI": 62,
+    "LNG": 62,
+    "MA": 62,
+    "NVDA": 62,
+    "RTX": 62,
+    "SPY": 62,
+    "TSM": 62,
+    "VST": 62
+  },
+  "gap_days_median": 1.0,
+  "gap_days_max": 8.0,
+  "gaps_over_4d": 8,
+  "betas_vs_bench": {
+    "009150.KS": 0.365,
+    "AVGO": 1.974,
+    "KMI": 0.436,
+    "LNG": 0.314,
+    "MA": 0.67,
+    "NVDA": 1.998,
+    "RTX": 0.462,
+    "TSM": 1.629,
+    "VST": 1.74
+  },
+  "ari_half_vs_half": 1.0,
+  "within_group_corr": 0.4421,
+  "between_group_corr": -0.024,
+  "max_residual_corr": 0.5843,
+  "threshold_sweep": [
+    {
+      "threshold": 0.4,
+      "min_corr_implied": 0.6,
+      "n_units": 9,
+      "within": null
+    },
+    {
+      "threshold": 0.5,
+      "min_corr_implied": 0.5,
+      "n_units": 8,
+      "within": 0.5843
+    },
+    {
+      "threshold": 0.55,
+      "min_corr_implied": 0.45,
+      "n_units": 8,
+      "within": 0.5843
+    },
+    {
+      "threshold": 0.6,
+      "min_corr_implied": 0.4,
+      "n_units": 7,
+      "within": 0.503
+    },
+    {
+      "threshold": 0.65,
+      "min_corr_implied": 0.35,
+      "n_units": 6,
+      "within": 0.4421
+    },
+    {
+      "threshold": 0.7,
+      "min_corr_implied": 0.3,
+      "n_units": 6,
+      "within": 0.4421
+    },
+    {
+      "threshold": 0.75,
+      "min_corr_implied": 0.25,
+      "n_units": 6,
+      "within": 0.4421
+    },
+    {
+      "threshold": 0.8,
+      "min_corr_implied": 0.2,
+      "n_units": 5,
+      "within": 0.3419
+    },
+    {
+      "threshold": 0.85,
+      "min_corr_implied": 0.15,
+      "n_units": 4,
+      "within": 0.2994
+    }
+  ],
+  "residual_corr": {
+    "009150": {
+      "009150": 1.0,
+      "AVGO": 0.035,
+      "KMI": -0.146,
+      "LNG": -0.128,
+      "MA": -0.068,
+      "NVDA": -0.03,
+      "RTX": -0.031,
+      "TSM": 0.075,
+      "VST": 0.024
+    },
+    "AVGO": {
+      "009150": 0.035,
+      "AVGO": 1.0,
+      "KMI": -0.119,
+      "LNG": -0.072,
+      "MA": -0.264,
+      "NVDA": 0.375,
+      "RTX": -0.118,
+      "TSM": 0.422,
+      "VST": 0.203
+    },
+    "KMI": {
+      "009150": -0.146,
+      "AVGO": -0.119,
+      "KMI": 1.0,
+      "LNG": 0.584,
+      "MA": 0.041,
+      "NVDA": -0.069,
+      "RTX": 0.147,
+      "TSM": -0.139,
+      "VST": 0.178
+    },
+    "LNG": {
+      "009150": -0.128,
+      "AVGO": -0.072,
+      "KMI": 0.584,
+      "LNG": 1.0,
+      "MA": 0.094,
+      "NVDA": -0.08,
+      "RTX": 0.154,
+      "TSM": -0.103,
+      "VST": 0.16
+    },
+    "MA": {
+      "009150": -0.068,
+      "AVGO": -0.264,
+      "KMI": 0.041,
+      "LNG": 0.094,
+      "MA": 1.0,
+      "NVDA": -0.26,
+      "RTX": 0.108,
+      "TSM": -0.339,
+      "VST": -0.201
+    },
+    "NVDA": {
+      "009150": -0.03,
+      "AVGO": 0.375,
+      "KMI": -0.069,
+      "LNG": -0.08,
+      "MA": -0.26,
+      "NVDA": 1.0,
+      "RTX": -0.168,
+      "TSM": 0.387,
+      "VST": 0.211
+    },
+    "RTX": {
+      "009150": -0.031,
+      "AVGO": -0.118,
+      "KMI": 0.147,
+      "LNG": 0.154,
+      "MA": 0.108,
+      "NVDA": -0.168,
+      "RTX": 1.0,
+      "TSM": -0.134,
+      "VST": 0.058
+    },
+    "TSM": {
+      "009150": 0.075,
+      "AVGO": 0.422,
+      "KMI": -0.139,
+      "LNG": -0.103,
+      "MA": -0.339,
+      "NVDA": 0.387,
+      "RTX": -0.134,
+      "TSM": 1.0,
+      "VST": 0.211
+    },
+    "VST": {
+      "009150": 0.024,
+      "AVGO": 0.203,
+      "KMI": 0.178,
+      "LNG": 0.16,
+      "MA": -0.201,
+      "NVDA": 0.211,
+      "RTX": 0.058,
+      "TSM": 0.211,
+      "VST": 1.0
+    }
+  },
+  "units": {
+    "0": [
+      "AVGO",
+      "NVDA",
+      "TSM"
+    ],
+    "1": [
+      "KMI",
+      "LNG"
+    ],
+    "2": [
+      "009150"
+    ],
+    "3": [
+      "MA"
+    ],
+    "4": [
+      "RTX"
+    ],
+    "5": [
+      "VST"
+    ]
+  },
+  "book_theme_labels": {
+    "KMI": "energy-fuel/AI-power-adjacency",
+    "MA": "payments/FIN",
+    "LNG": "energy-fuel/AI-power-adjacency",
+    "VST": "AI-power-IPP",
+    "TSM": "AI-compute-EPICENTER",
+    "AVGO": "AI-compute-EPICENTER",
+    "NVDA": "AI-compute-EPICENTER",
+    "RTX": "defense-missile",
+    "009150": "IT-substrate/MLCC"
+  }
+}

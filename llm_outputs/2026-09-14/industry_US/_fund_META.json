@@ -1,0 +1,179 @@
+{
+  "ticker": "META",
+  "company_name": "Meta Platforms, Inc.",
+  "sector": "Communication Services",
+  "industry": "Internet Content & Information",
+  "price": 648.03,
+  "market_cap": 1650860490752,
+  "trailing_pe": 24.389538,
+  "forward_pe": 18.536509,
+  "peg_ratio": 0.86,
+  "price_to_sales": 7.232781,
+  "price_to_book": 6.321011,
+  "trailing_eps": 26.57,
+  "forward_eps": 34.95966,
+  "fifty_two_week_high": 790.8,
+  "fifty_two_week_low": 520.26,
+  "target_low": 580.0,
+  "target_mean": 758.2758,
+  "target_high": 1000.0,
+  "target_median": 750.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 9,
+      "buy": 47,
+      "hold": 6,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 8,
+      "buy": 47,
+      "hold": 7,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 8,
+      "buy": 47,
+      "hold": 7,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 8,
+      "buy": 49,
+      "hold": 6,
+      "sell": 0,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      60801000000.0
+    ],
+    [
+      "2026-03-31",
+      56311000000.0
+    ],
+    [
+      "2025-12-31",
+      59893000000.0
+    ],
+    [
+      "2025-09-30",
+      51242000000.0
+    ],
+    [
+      "2025-06-30",
+      47516000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      60801000000.0
+    ],
+    [
+      "2026-03-31",
+      56311000000.0
+    ],
+    [
+      "2025-09-30",
+      51242000000.0
+    ],
+    [
+      "2025-06-30",
+      47516000000.0
+    ],
+    [
+      "2025-03-31",
+      42314000000.0
+    ],
+    [
+      "2024-09-30",
+      40589000000.0
+    ],
+    [
+      "2024-06-30",
+      39071000000.0
+    ],
+    [
+      "2024-03-31",
+      36455000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 6.53036,
+      "7daysAgo": 6.53026,
+      "30daysAgo": 6.76256,
+      "60daysAgo": 7.05481,
+      "90daysAgo": 7.04256
+    },
+    {
+      "period": "+1q",
+      "current": 8.22329,
+      "7daysAgo": 8.22325,
+      "30daysAgo": 8.23063,
+      "60daysAgo": 8.50879,
+      "90daysAgo": 8.48633
+    },
+    {
+      "period": "0y",
+      "current": 31.42921,
+      "7daysAgo": 31.37308,
+      "30daysAgo": 31.80798,
+      "60daysAgo": 32.9189,
+      "90daysAgo": 32.87264
+    },
+    {
+      "period": "+1y",
+      "current": 33.94283,
+      "7daysAgo": 33.94621,
+      "30daysAgo": 33.98561,
+      "60daysAgo": 35.005,
+      "90daysAgo": 34.90343
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 0.0,
+      "upLast30days": 7.0,
+      "downLast30days": 33.0,
+      "downLast7Days": 4.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 0.0,
+      "upLast30days": 10.0,
+      "downLast30days": 27.0,
+      "downLast7Days": 2.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 0.0,
+      "upLast30days": 4.0,
+      "downLast30days": 45.0,
+      "downLast7Days": 7.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 1.0,
+      "upLast30days": 7.0,
+      "downLast30days": 39.0,
+      "downLast7Days": 4.0
+    }
+  ],
+  "business_summary": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality (VR) headsets, and AI glasses in the United States, Canada, Europe, Asia-Pacific, and internationally. It operates through two segments, Family of Apps (FoA) and Reality Labs (RL). The FoA segment offers Facebook, which enables people to build community through feed, reels, stories, groups, marketplace, and other; Instagram that brings people closer through Instagram feed, stories, reels, live, and messaging; Messenger, a messaging application for people to connect with friends, family, communities, and businesses across platforms and devices through text, audio, and video calls; Meta AI, an assistant that's available across apps, as a stand-alone app, on AI glasses, and on the web; Threads, an application for text-based updates and public conversations; and WhatsApp, a messaging application that is used by people and businesses to communicate and transact. The RL segment provides virtual and augmented reality products, including consumer hardware, software, and content that help people feel connected, as well as Meta Quest devices that enable social experiences across gaming, fitness, entertainment, and more. The segment also includes wearables such as AI glasses like Ray Ban Meta and Oakley Meta glasses; and the Meta Ray Ban Display, which combines AI glasses with an integrated lens display and the Meta Neural Band, a wrist worn device using electromyography that lets people control their AI glasses through neuromuscular signals. Meta Platforms, Inc. has a collaboration with Microsoft Corporation, NVIDIA Corporation, Advanced Micro Devices, Inc., Broadcom Inc., and OpenAI, L.L.C. The company was formerly known as Facebook, Inc. and changed its name to Meta Platforms, Inc. in October 2021. The company was incorporated in 2004 and is headquartered in Menlo Park, California.",
+  "next_earnings_date": "2026-10-29",
+  "beta": 1.243,
+  "dividend_yield": 0.32
+}

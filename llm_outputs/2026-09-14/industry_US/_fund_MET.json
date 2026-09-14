@@ -1,0 +1,179 @@
+{
+  "ticker": "MET",
+  "company_name": "MetLife, Inc.",
+  "sector": "Financial Services",
+  "industry": "Insurance - Life",
+  "price": 97.14,
+  "market_cap": 61730230272,
+  "trailing_pe": 18.609196,
+  "forward_pe": 8.895132,
+  "peg_ratio": 0.51,
+  "price_to_sales": 0.7774784,
+  "price_to_book": 2.2575996,
+  "trailing_eps": 5.22,
+  "forward_eps": 10.92058,
+  "fifty_two_week_high": 100.93,
+  "fifty_two_week_low": 67.33,
+  "target_low": 84.0,
+  "target_mean": 105.0625,
+  "target_high": 119.0,
+  "target_median": 107.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 4,
+      "buy": 8,
+      "hold": 5,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 4,
+      "buy": 8,
+      "hold": 5,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 4,
+      "buy": 8,
+      "hold": 5,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 4,
+      "buy": 8,
+      "hold": 5,
+      "sell": 0,
+      "strongSell": 1
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      18877000000.0
+    ],
+    [
+      "2026-03-31",
+      18616000000.0
+    ],
+    [
+      "2025-12-31",
+      23291000000.0
+    ],
+    [
+      "2025-09-30",
+      16881000000.0
+    ],
+    [
+      "2025-06-30",
+      17176000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      19154000000.0
+    ],
+    [
+      "2026-03-31",
+      19074000000.0
+    ],
+    [
+      "2025-09-30",
+      17361000000.0
+    ],
+    [
+      "2025-06-30",
+      17340000000.0
+    ],
+    [
+      "2025-03-31",
+      18569000000.0
+    ],
+    [
+      "2024-09-30",
+      18440000000.0
+    ],
+    [
+      "2024-06-30",
+      17823000000.0
+    ],
+    [
+      "2024-03-31",
+      16057000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 2.5503,
+      "7daysAgo": 2.55033,
+      "30daysAgo": 2.52795,
+      "60daysAgo": 2.54112,
+      "90daysAgo": 2.53501
+    },
+    {
+      "period": "+1q",
+      "current": 2.60207,
+      "7daysAgo": 2.60224,
+      "30daysAgo": 2.57365,
+      "60daysAgo": 2.57112,
+      "90daysAgo": 2.55728
+    },
+    {
+      "period": "0y",
+      "current": 9.84837,
+      "7daysAgo": 9.82559,
+      "30daysAgo": 9.85166,
+      "60daysAgo": 9.90756,
+      "90daysAgo": 9.89592
+    },
+    {
+      "period": "+1y",
+      "current": 10.92058,
+      "7daysAgo": 10.91614,
+      "30daysAgo": 10.98767,
+      "60daysAgo": 11.00566,
+      "90daysAgo": 10.99443
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 0.0,
+      "upLast30days": 7.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 0.0,
+      "upLast30days": 7.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 2.0,
+      "upLast30days": 14.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 2.0,
+      "upLast30days": 13.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 1.0
+    }
+  ],
+  "business_summary": "MetLife, Inc., a financial services company, provides insurance, annuities, employee benefits, and asset management services worldwide. It operates in six segments: Group Benefits; Retirement and Income Solutions; Asia; Latin America; Europe, the Middle East and Africa; and MetLife Holdings. The company offers life, dental, group short-and long-term disability, paid family and medical leave, individual disability, accidental death and dismemberment, accident and health, vision, and pet insurance, as well as prepaid legal plans; administrative services-only arrangements to employers; and general and separate account, and synthetic guaranteed interest contracts, as well as private floating rate funding agreements. It also provides pension risk transfers, institutional income annuities, structured settlements, and capital markets investment products; and other products and services, such as life insurance products and funding agreements for funding postretirement benefits, as well as company, bank, or trust-owned life insurance used to finance nonqualified benefit programs for executives. In addition, it offers fixed, indexed-linked, and variable annuities; pension products; regular savings products; whole and term life, endowments, universal and variable life, and group life products; longevity and funded reinsurance solutions; credit insurance products; accident & health products covering hospitalization, cancer, critical illness, income protection, and scheduled medical reimbursement plans; and protection against long-term health care services. The company was incorporated in 1999 and is based in New York, New York.",
+  "next_earnings_date": "2026-11-10",
+  "beta": 0.759,
+  "dividend_yield": 2.44
+}

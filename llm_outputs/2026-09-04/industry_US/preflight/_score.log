@@ -1,0 +1,35 @@
+last row: 2026-09-03  NaN: 0
+
+=== S109  FRO exc5, 08-26 -> 09-02 close · A>=+8.043 · B<=-4.620 ===
+  FRO 41.20 -> 45.42 | SPY 766.08 -> 765.16
+  exc5 = +10.3628pp  => FIRED-A
+
+=== S105  [MRVL exc10] - [AVGO exc10] @09-03 · A<=-10.836 · B>=+30.484 ===
+  base 2026-08-20 | MRVL 251.01->208.83 exc10 -18.1902 | AVGO 364.03->357.16 exc10 -3.2733
+  spread = -14.9169pp  => FIRED-A
+
+=== S106  MSFT exc10 @09-03 · A>=+7.969 · B<=-9.184 ===
+  base 2026-08-20 MSFT 481.15->510.12  exc10 = +4.6349pp  => FIRED-C
+
+=== S107  EW{T,VZ} exc10 @09-03 · A>=+12.244 · B<=-9.533 ===
+  T 25.15->26.19 exc10 +2.7491 | VZ 49.19->50.59 exc10 +1.4601
+  EW = +2.1046pp  => FIRED-C
+
+=== S110  [HPE exc5] - [DELL exc5] @09-03 · A>=+6.022 · B<=-6.141 ===
+  base 2026-08-27 | HPE 54.41->54.44 exc5 -0.2133 | DELL 472.26->516.39 exc5 +9.0760
+  spread = -9.2893pp  => FIRED-B
+
+=== S114  EW{NUE,STLD} exc5, 08-26 -> 09-03 close · A<=-6.219 · B>=+0.826 ===
+  NUE 252.80->262.47 exc +2.8997 | STLD 235.90->246.03 exc +3.3687
+  EW = +3.1342pp  => FIRED-B
+
+=== AVGO exc1 09-02 -> 09-03 (S132 A>=+9 B<=-9 · S138 A>=+11 B<=-11) ===
+  AVGO 367.24->357.16 = -2.745% | SPY 765.16->773.17 = +1.047%
+  exc1 = -3.7916pp  => S132 FIRED-C · S138 FIRED-C
+
+=== S141  SMH exc1 09-02 -> 09-03 · A>=+1.802 · B<=-1.732 ===
+  SMH 550.48->552.60  exc1 = -0.6617pp  => FIRED-C
+
+=== NOT SETTLED (need the 09-04 close) — reference states only, NOT scores ===
+  S134 XLF exc(08-28->09-03, 4 of 5 sessions) = +0.2952pp   [A>=+2.00 B<=-2.00 at the 09-04 close]
+  S139 EW{XLU -0.391, XLRE -1.018, XLP -1.483} = -0.9642pp over 2 of 3 sessions  [A>=+1.653 B<=-1.757 at the 09-04 close]

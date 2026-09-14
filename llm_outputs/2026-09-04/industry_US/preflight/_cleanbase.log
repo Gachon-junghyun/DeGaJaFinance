@@ -1,0 +1,22 @@
+[clean] healed cache rows 86 -> truncated 85  last 2026-09-02
+[axis] velocity 측정 0/299 = 0.0% → 속도축 제외(전원 3축) · 기준 80% (D225-KR)
+[clean] rescored 09-02 on healed data: {"vel_axis": false, "vel_coverage": 0.0, "n_axes": 3, "scored": 299, "dropped_missing_axis": 0}
+[baseline contamination] n=299  mean|d| 0.1078  median 0.0550  max 0.5570  sign-flips 19/299
+[baseline worst] LLY +0.433->-0.124 · FANG +0.151->+0.702 · CCI -0.235->+0.285 · TRI +0.031->+0.517 · CVS -0.615->-0.147 · AEP -0.340->+0.112 · APH -0.497->-0.056 · ANET -0.284->-0.720
+[delta] names with clean delta: 298
+
+[sector clean delta, cap-weighted]
+  Utilities                clean +0.131   (stored +0.308)   eq +0.159  n=15
+  Real Estate              clean +0.091   (stored +0.091)   eq +0.109  n=12
+  Financials               clean +0.077   (stored +0.003)   eq +0.122  n=47
+  Communication Services   clean +0.058   (stored +0.059)   eq -0.044  n=12
+  Industrials              clean +0.051   (stored +0.023)   eq +0.059  n=50
+  Consumer Discretionary   clean +0.023   (stored -0.022)   eq +0.050  n=28
+  Information Technology   clean +0.018   (stored +0.025)   eq +0.023  n=55
+  Consumer Staples         clean -0.031   (stored -0.074)   eq -0.035  n=19
+  Materials                clean -0.035   (stored -0.123)   eq -0.027  n=12
+  Health Care              clean -0.069   (stored -0.207)   eq -0.036  n=32
+  Energy                   clean -0.151   (stored -0.075)   eq -0.099  n=16
+
+[name movers up]   AXON +0.84 · HPE +0.72 · IBKR +0.58 · UPS +0.52 · D +0.51 · EXC +0.43 · DDOG +0.42 · STT +0.42 · VRT +0.40 · F +0.40
+[name movers down] BKR -0.33 · BKNG -0.35 · XOM -0.35 · AMD -0.35 · LLY -0.38 · ASML -0.40 · ABT -0.44 · STX -0.44 · ADSK -0.44 · MSI -0.57

@@ -29,6 +29,9 @@ def main() -> None:
     ap.add_argument("--names", default=None, help="티커별 회사명 콤마구분(뉴스속도 매칭 보강; 'A|B' 동의어 가능)")
     ap.add_argument("--recent", type=int, default=7)
     ap.add_argument("--base", type=int, default=30)
+    ap.add_argument("--through", default=None, metavar="YYYY-MM-DD",
+                    help="예상변동을 «이 날짜를 span 하는» 만기로 잰다 (D315). "
+                         "정산일/이벤트일을 줘라 — 안 주면 최근접 만기라 D0/D1 을 집을 수 있다.")
     ap.add_argument("--positioning", action="store_true",
                     help="⑤공매도+⑥옵션(P/C·IV스큐) 추가 — 느림, 최종 후보(≤20)에만. 공매도는 캐싱.")
     ap.add_argument("--no-investor", action="store_true",
@@ -58,7 +61,7 @@ def main() -> None:
         inv = None if a.no_investor else investor_flow(t)
         sh = None if a.no_short else short_flow(t)
         tag = flow_tag(pf, vel.get("velocity"), inv, sh)
-        pos = positioning(t, pf.get("last")) if (a.positioning and "error" not in pf) else None
+        pos = positioning(t, pf.get("last"), a.through) if (a.positioning and "error" not in pf) else None
         rows.append({"ticker": t, "tag": tag, "news": vel, "price": pf,
                      "investor": inv, "short_kr": sh, "positioning": pos})
 
@@ -101,9 +104,15 @@ def main() -> None:
             sf = "n/a" if si.get("pct_float") is None else f"{si['pct_float']}%float {si.get('trend','')}" + (f" DTC{dtc:.1f}" if dtc else "")
             pc = "n/a" if op.get("pc_oi") is None else f"P/C {op['pc_oi']}"
             sk = "n/a" if op.get("iv_skew") is None else f"스큐 {op['iv_skew']:+}"
-            im = "" if op.get("implied_move_pct") is None else \
-                f" · 예상변동 ±{op['implied_move_pct']}%(만기 {op.get('im_expiry','?')}, D{op.get('im_dte','?')})"
+            if op.get("implied_move_pct") is not None:
+                im = (f" · 예상변동 ±{op['implied_move_pct']}%(만기 {op.get('im_expiry','?')}"
+                      f", D{op.get('im_dte','?')}"
+                      + (f", through {op['im_through']}" if op.get("im_through") else "") + ")")
+            else:
+                im = ""
             print(f"         ⑤⑥ 포지셔닝: 숏 {sf}{' 🔥크라우디드' if si.get('crowded') else ''} · 옵션 {pc} {sk}{im} → {po['read']}")
+            if op.get("im_note"):                      # D315 — 만기가 창을 못 덮을 때 침묵하지 않는다
+                print(f"            ⚠ {op['im_note']}")
     print("\n  뉴스속도>1=관심가속 · OBV 매집/분산 · RS=벤치대비(+면 이김) · 서지>1.3=돈유입")
     if any(r.get("investor") and "error" not in r["investor"] for r in rows):
         print("  ⑦수급=KIS 실측 외국인/기관/개인 순매수(만주,국내). 외국인 이탈+개인 흡수=OBV'매집'이 약한손→🟢 차단")

@@ -1,0 +1,15 @@
+Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 2.10.0+cu128).
+W0829 10:01:06.817000 5644 site-packages\torch\distributed\elastic\multiprocessing\redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4099.88it/s]
+[1mRobertaModel LOAD REPORT[0m from: jhgan/ko-sroberta-multitask
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+
+# embed sync
+  서버에서 받음 3,338건 · 발행시각없어 제외 21건 · 새로 임베딩 3,317건  [cuda]
+  누적 기사 529,892 · 벡터 529,892
+  커서 2026-08-29T09:04:46.799448

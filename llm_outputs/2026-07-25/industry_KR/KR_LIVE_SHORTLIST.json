@@ -1,0 +1,41 @@
+{
+  "asof": "2026-07-24",
+  "filter": {
+    "floor_jo": 1.0,
+    "tags": [
+      "🟢가속"
+    ],
+    "top": 15,
+    "days": 20
+  },
+  "shortlist": [
+    {
+      "ticker": "017670.KS",
+      "name": "SK텔레콤",
+      "sector": "통신",
+      "mcap_h": null,
+      "flow_score": 0.851,
+      "tag": "🟢가속",
+      "velocity": 4.29,
+      "obv_norm": 0.147,
+      "rs20": NaN,
+      "rs60": NaN,
+      "vol_surge": 1.29,
+      "investor": {
+        "foreign_20": -1448912,
+        "inst_20": 2626160,
+        "indiv_20": -1225133,
+        "foreign_5": -2861260,
+        "inst_5": 2790774,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    }
+  ],
+  "live": [
+    "017670.KS"
+  ]
+}

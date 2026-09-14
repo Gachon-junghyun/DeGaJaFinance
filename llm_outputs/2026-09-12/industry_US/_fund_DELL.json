@@ -1,0 +1,179 @@
+{
+  "ticker": "DELL",
+  "company_name": "Dell Technologies Inc.",
+  "sector": "Technology",
+  "industry": "Computer Hardware",
+  "price": 567.29,
+  "market_cap": 360690188288,
+  "trailing_pe": 33.00116,
+  "forward_pe": 19.785532,
+  "peg_ratio": 0.63,
+  "price_to_sales": 2.3855643,
+  "price_to_book": -256.4602,
+  "trailing_eps": 19.23,
+  "forward_eps": 28.67196,
+  "fifty_two_week_high": 567.75,
+  "fifty_two_week_low": 110.22,
+  "target_low": 465.0,
+  "target_mean": 570.48,
+  "target_high": 735.0,
+  "target_median": 570.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 6,
+      "buy": 14,
+      "hold": 9,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 5,
+      "buy": 14,
+      "hold": 9,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 5,
+      "buy": 14,
+      "hold": 8,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 5,
+      "buy": 14,
+      "hold": 8,
+      "sell": 0,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-07-31",
+      46971000000.0
+    ],
+    [
+      "2026-04-30",
+      43842000000.0
+    ],
+    [
+      "2026-01-31",
+      33379000000.0
+    ],
+    [
+      "2025-10-31",
+      27005000000.0
+    ],
+    [
+      "2025-07-31",
+      29776000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-07-31",
+      46971000000.0
+    ],
+    [
+      "2026-05-01",
+      43842000000.0
+    ],
+    [
+      "2025-10-31",
+      27005000000.0
+    ],
+    [
+      "2025-08-01",
+      29776000000.0
+    ],
+    [
+      "2025-05-02",
+      23378000000.0
+    ],
+    [
+      "2025-01-31",
+      23931000000.0
+    ],
+    [
+      "2024-11-01",
+      24366000000.0
+    ],
+    [
+      "2024-08-02",
+      25026000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 4.91833,
+      "7daysAgo": 4.90501,
+      "30daysAgo": 4.90022,
+      "60daysAgo": 4.89104,
+      "90daysAgo": 4.87972
+    },
+    {
+      "period": "+1q",
+      "current": 6.87486,
+      "7daysAgo": 4.0475,
+      "30daysAgo": 3.925,
+      "60daysAgo": 3.8475,
+      "90daysAgo": 3.8475
+    },
+    {
+      "period": "0y",
+      "current": 25.88376,
+      "7daysAgo": 25.88306,
+      "30daysAgo": 18.53612,
+      "60daysAgo": 18.38601,
+      "90daysAgo": 18.35084
+    },
+    {
+      "period": "+1y",
+      "current": 24.66365,
+      "7daysAgo": 20.15625,
+      "30daysAgo": 19.4275,
+      "60daysAgo": 18.3525,
+      "90daysAgo": 18.3525
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 3.0,
+      "upLast30days": 5.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 1.0,
+      "upLast30days": 1.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 4.0,
+      "upLast30days": 8.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 2.0,
+      "upLast30days": 2.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    }
+  ],
+  "business_summary": "Dell Technologies Inc. designs, develops, manufactures, markets, sells, and supports various comprehensive and integrated solutions, products, and services in the Americas, Europe, the Middle East, Asia, and internationally. The company operates through Infrastructure Solutions Group (ISG) and Client Solutions Group (CSG) segments. The ISG segment provides modern and traditional storage solutions, including all-flash, purpose-built, hyper-converged infrastructure, software-defined storage, and general-purpose and AI-optimized servers. This segment also offers networking products and services comprising wide area network infrastructure, data center and edge networking switches, and cables and optics that help its business customers to transform and modernize their infrastructure and complementing its server and storage solutions; and software, peripherals, and services, including consulting and support, and deployment. The CSG segment provides notebooks, desktops, and workstations and branded peripherals that include displays, docking stations, keyboards, mice, webcam and audio devices, and third-party software and peripherals; and configuration, and extended warranties services. The company is involved in originating, collecting, and servicing customer financing arrangements and offers payment and consumption solutions and services, such utility, subscription, as-a-service, leases, and loans, as well as fixed-term leases and loans. It serves enterprises, governmental agencies and other public institutions, educational institutions, healthcare organizations, small and medium-sized businesses, and consumers. The company has a strategic alliance with Rafay Systems for the development of AI infrastructure solutions. The company was formerly known as Denali Holding Inc. and changed its name to Dell Technologies Inc. in March 2013. Dell Technologies Inc. was founded in 1984 and is headquartered in Round Rock, Texas.",
+  "next_earnings_date": "2026-11-28",
+  "beta": 1.409,
+  "dividend_yield": 0.44
+}

@@ -42,6 +42,18 @@
 - 새 프로토콜/스테이지 = `pipeline/`(protocols·L1_stages·L2_modules·L3_functions)에 두고 **`pipeline/README.md`·`PROMPT_MAP.md`에 등록**(MODULE_MAP은 모듈 전용). 스테이지 링크는 composition 표에만(산문은 plain-text — 컴파일 순서 보호). **긴 프로토콜은 `run_protocol.py <name>`로 스테이지별(그 L1+호출 L2/L3만) 실행해 컨텍스트 누락을 막는다** — 한 스테이지 → EXIT CHECK → `--next`, 이전 산출물은 메모리 말고 run 디렉토리를 다시 읽는다.
 - 다른 모듈의 기능이 필요하면 **그 모듈에서 import** 한다(복제 금지). 새로 지어야 할 것 같으면 먼저 MODULE_MAP.md에
   같은 기능이 있는지 확인한다.
+- **근거는 등록하고, 등록된 근거는 다시 재지 않는다 (`module_evidence`).** 숫자를 인용하기 전에
+  `cite`/`where`/`show` 로 **이미 재 놓은 것이 있는지 먼저 본다** — 원장·리포트에 있는 걸 다시
+  검색하는 것이 이 데스크의 가장 흔한 낭비고, 재검색은 같은 사실을 **다른 값으로** 다시 적는다.
+  - **원장(`handoff/*.md`)에 새 행을 append 할 땐 ID 를 `next-id <계열> --count N` 으로 발급한다.**
+    손으로 치던 "ID 3-grep at WRITE time" 은 **금지** — 그게 실패하면 같은 번호가 두 뜻을 갖는다
+    (`D76` 충돌 클래스). 발급은 산수라 틀리지 않고, 기본이 라이브 스캔이라 색인이 낡아도 안전하다.
+  - **인용은 세탁하지 않는다**: `[measured]`/`[inferred]` 태그와 **출처 범위**(`scope=line` = 줄에
+    박힌 출처 / `scope=section` = 위 헤더에서 **상속**)를 그대로 들고 간다. 상속된 출처를 줄에 박힌
+    출처처럼 인용하면 P4 위반이다.
+  - **색인은 파생물이다** — 단일 원본은 md. `data/evidence.db` 는 언제든 지우고 `build`(실측 2.6초)로
+    복원되어야 하며, **사실 본문을 DB 에만 두지 않는다**(`news_vectors.db` 와 같은 지위).
+  - `cite` 가 0건이라고 **부재의 증거가 아니다** — 어휘 불일치일 수 있다(`D94`). 다른 표면형으로 다시 묻는다.
 - 의존성은 표준라이브러리 + `requests` + (데이터 모듈은) `pandas`/`numpy`/`yfinance`. 그 밖의 서드파티는 추가 전에 사람 확인.
   - **승인된 예외 (2026-07-17, 사람 승인): `sentence-transformers`·`torch`·`scikit-learn`.**
     뉴스 사건 클러스터링 전용 — 어휘 기반(자카드·코사인·LSA)으로는 같은 사건을 못 묶는다는 걸

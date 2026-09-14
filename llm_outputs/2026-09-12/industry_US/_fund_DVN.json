@@ -1,0 +1,179 @@
+{
+  "ticker": "DVN",
+  "company_name": "Devon Energy Corporation",
+  "sector": "Energy",
+  "industry": "Oil & Gas E&P",
+  "price": 50.23,
+  "market_cap": 55253000192,
+  "trailing_pe": 10.919565,
+  "forward_pe": 9.374697,
+  "peg_ratio": 2.92,
+  "price_to_sales": 2.9419627,
+  "price_to_book": 1.383556,
+  "trailing_eps": 4.6,
+  "forward_eps": 5.35804,
+  "fifty_two_week_high": 52.71,
+  "fifty_two_week_low": 31.47,
+  "target_low": 44.0,
+  "target_mean": 59.85714,
+  "target_high": 68.0,
+  "target_median": 60.5,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 3,
+      "buy": 23,
+      "hold": 3,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 3,
+      "buy": 21,
+      "hold": 3,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 4,
+      "buy": 21,
+      "hold": 2,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 4,
+      "buy": 21,
+      "hold": 2,
+      "sell": 0,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      7417000000.0
+    ],
+    [
+      "2026-03-31",
+      3807000000.0
+    ],
+    [
+      "2025-12-31",
+      4121000000.0
+    ],
+    [
+      "2025-09-30",
+      4331000000.0
+    ],
+    [
+      "2025-06-30",
+      4284000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      7417000000.0
+    ],
+    [
+      "2026-03-31",
+      3807000000.0
+    ],
+    [
+      "2025-09-30",
+      4331000000.0
+    ],
+    [
+      "2025-06-30",
+      4284000000.0
+    ],
+    [
+      "2025-03-31",
+      4452000000.0
+    ],
+    [
+      "2024-09-30",
+      4024000000.0
+    ],
+    [
+      "2024-06-30",
+      3917000000.0
+    ],
+    [
+      "2024-03-31",
+      3596000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 1.24618,
+      "7daysAgo": 1.2523,
+      "30daysAgo": 1.28958,
+      "60daysAgo": 1.26844,
+      "90daysAgo": 1.39025
+    },
+    {
+      "period": "+1q",
+      "current": 1.32847,
+      "7daysAgo": 1.31283,
+      "30daysAgo": 1.3091,
+      "60daysAgo": 1.32658,
+      "90daysAgo": 1.4023
+    },
+    {
+      "period": "0y",
+      "current": 5.35624,
+      "7daysAgo": 5.41044,
+      "30daysAgo": 5.43116,
+      "60daysAgo": 5.28472,
+      "90daysAgo": 5.47073
+    },
+    {
+      "period": "+1y",
+      "current": 4.79326,
+      "7daysAgo": 4.82475,
+      "30daysAgo": 5.05093,
+      "60daysAgo": 5.55776,
+      "90daysAgo": 5.45467
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 0.0,
+      "upLast30days": 10.0,
+      "downLast30days": 4.0,
+      "downLast7Days": 2.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 1.0,
+      "upLast30days": 10.0,
+      "downLast30days": 4.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 1.0,
+      "upLast30days": 12.0,
+      "downLast30days": 4.0,
+      "downLast7Days": 2.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 3.0,
+      "upLast30days": 5.0,
+      "downLast30days": 3.0,
+      "downLast7Days": 1.0
+    }
+  ],
+  "business_summary": "Devon Energy Corporation, an independent energy company, engages in the exploration, development, and production of oil, natural gas, and natural gas liquids in the United States. The company operates in Delaware Basin located in southeast New Mexico and west Texas, Eagle Ford located in North America, Anadarko Basin located in western Oklahoma, Williston Basin located in North Dakota, and Powder River Basin located in Wyoming. Devon Energy Corporation was founded in 1971 and is headquartered in Houston, Texas.",
+  "next_earnings_date": "2026-11-05",
+  "beta": 0.426,
+  "dividend_yield": 2.55
+}

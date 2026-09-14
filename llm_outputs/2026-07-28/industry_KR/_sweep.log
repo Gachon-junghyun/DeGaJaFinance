@@ -1,0 +1,68 @@
+﻿python : [warn] 유니버스 kr_all.csv 13일 경과 — 시총 stale. build_kr_universe.py 재빌드 권장(주1회).
+At line:1 char:335
++ ... aJaFinance; python -X utf8 scripts/sector_flow.py --market kr --json  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([warn] 유니버스 kr_...py 재빌드 권장(주1회).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[dl] yfinance 배치 833종목 4mo …
+[dl] 완료 → prices_kr_2026-07-28.pkl
+[flow] 832종목 4축 계산 …
+  … 50/832
+  … 100/832
+  … 150/832
+  … 200/832
+  … 250/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 300/832
+  … 350/832
+  … 400/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 450/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 500/832
+  … 550/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 600/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 650/832
+  … 700/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 750/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 800/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)

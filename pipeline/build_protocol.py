@@ -58,8 +58,18 @@ def compile_protocol(name: str) -> Path:
                 l2_names.append(m)
     l2_texts = {n: _read("L2_modules", n) for n in l2_names}
 
-    # 3) L3s the L2s call (appearance order, global dedup)
+    # 3) L3s called by the L1s **and** by the L2s (appearance order, global dedup).
+    #    ⚠ L1s call L3s directly all the time (handover→reject_ledger, set_diff→set_difference,
+    #    forensic_pack→filing_diff, chain_alpha→contract_alpha…). Collecting only from L2 silently
+    #    dropped those units from the compiled protocol — measured 2026-08-21: real_alpha_kr named
+    #    filing_diff · contract_alpha · set_difference in its stages and shipped an executable
+    #    containing none of the three. A stage that orders a unit the file does not carry does not
+    #    fail loudly; it just stops happening (PROMPT_MAP §7).
     l3_names: list[str] = []
+    for n in l1_names:
+        for m in _ordered_refs(l1_texts[n], "L3_functions"):
+            if m not in l3_names:
+                l3_names.append(m)
     for n in l2_names:
         for m in _ordered_refs(l2_texts[n], "L3_functions"):
             if m not in l3_names:

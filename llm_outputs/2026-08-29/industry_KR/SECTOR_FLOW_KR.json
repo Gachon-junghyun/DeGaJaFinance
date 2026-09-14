@@ -1,0 +1,19 @@
+{
+  "asof": "2026-08-28",
+  "scoring": {
+    "vel_axis": false,
+    "vel_coverage": 0.0617,
+    "n_axes": 3,
+    "scored": 0,
+    "dropped_missing_axis": 826
+  },
+  "universe": {
+    "n": 0,
+    "n_requested": 832,
+    "wflow": 0.0,
+    "green": 0,
+    "red": 0
+  },
+  "sector_rotation": [],
+  "names": []
+}

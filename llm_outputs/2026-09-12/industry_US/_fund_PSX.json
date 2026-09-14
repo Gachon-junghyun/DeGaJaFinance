@@ -1,0 +1,179 @@
+{
+  "ticker": "PSX",
+  "company_name": "Phillips 66",
+  "sector": "Energy",
+  "industry": "Oil & Gas Refining & Marketing",
+  "price": 259.47,
+  "market_cap": 104030609408,
+  "trailing_pe": 14.750995,
+  "forward_pe": 11.900868,
+  "peg_ratio": 1.25,
+  "price_to_sales": 0.6803969,
+  "price_to_book": 3.2861774,
+  "trailing_eps": 17.59,
+  "forward_eps": 21.80261,
+  "fifty_two_week_high": 265.43,
+  "fifty_two_week_low": 126.74,
+  "target_low": 160.0,
+  "target_mean": 240.05263,
+  "target_high": 335.0,
+  "target_median": 242.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 3,
+      "buy": 9,
+      "hold": 6,
+      "sell": 2,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 3,
+      "buy": 9,
+      "hold": 6,
+      "sell": 1,
+      "strongSell": 1
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 3,
+      "buy": 9,
+      "hold": 6,
+      "sell": 1,
+      "strongSell": 1
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 3,
+      "buy": 9,
+      "hold": 6,
+      "sell": 1,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      51004000000.0
+    ],
+    [
+      "2026-03-31",
+      32540000000.0
+    ],
+    [
+      "2025-12-31",
+      34108000000.0
+    ],
+    [
+      "2025-09-30",
+      34515000000.0
+    ],
+    [
+      "2025-06-30",
+      33323000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      51004000000.0
+    ],
+    [
+      "2026-03-31",
+      32540000000.0
+    ],
+    [
+      "2025-09-30",
+      34515000000.0
+    ],
+    [
+      "2025-06-30",
+      33323000000.0
+    ],
+    [
+      "2025-03-31",
+      30430000000.0
+    ],
+    [
+      "2024-09-30",
+      35528000000.0
+    ],
+    [
+      "2024-06-30",
+      38129000000.0
+    ],
+    [
+      "2024-03-31",
+      35811000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 9.89978,
+      "7daysAgo": 9.51916,
+      "30daysAgo": 9.25305,
+      "60daysAgo": 6.72136,
+      "90daysAgo": 6.29318
+    },
+    {
+      "period": "+1q",
+      "current": 6.82002,
+      "7daysAgo": 6.60869,
+      "30daysAgo": 6.31035,
+      "60daysAgo": 4.73442,
+      "90daysAgo": 4.71487
+    },
+    {
+      "period": "0y",
+      "current": 26.41843,
+      "7daysAgo": 25.66632,
+      "30daysAgo": 25.75898,
+      "60daysAgo": 18.53458,
+      "90daysAgo": 17.84999
+    },
+    {
+      "period": "+1y",
+      "current": 21.80261,
+      "7daysAgo": 21.29967,
+      "30daysAgo": 20.89569,
+      "60daysAgo": 17.79899,
+      "90daysAgo": 17.18574
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 0.0,
+      "upLast30days": 10.0,
+      "downLast30days": 4.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 1.0,
+      "upLast30days": 12.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 1.0,
+      "upLast30days": 16.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 1.0,
+      "upLast30days": 14.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 0.0
+    }
+  ],
+  "business_summary": "Phillips 66 operates as an integrated downstream energy provider in the United States, the United Kingdom, Germany, and internationally. It operates through five segments: Midstream, Chemicals, Refining, Marketing and Specialties (M&S), and Renewable Fuels. The Midstream segment provides crude oil and refined petroleum product transportation, terminaling, and storage services, as well as natural gas and natural gas liquids (NGL) gathering, processing, transportation, fractionation, storage and marketing services. It also exports liquefied petroleum gas. The Chemicals segment produces and markets ethylene and other olefin products; aromatics and styrenics products, such as benzene, cyclohexane, styrene, and polystyrene; various specialty chemical products, including organosulfur chemicals, solvents, catalysts, and chemicals used in drilling and mining; and petrochemicals and plastics. The Refining segment refines crude oil and other feedstocks into petroleum products, such as gasolines and distillates, including aviation fuels. The M&S segment purchases for resale and markets refined products, including gasolines, distillates, and aviation fuels. This segment also manufactures and markets specialty products, such as automotive, commercial, industrial, and specialty lubricants, as well as base oils. The Renewable Fuels segment processes renewable feedstocks into renewable products, as well as supplies sustainable aviation fuel. This segment also procures renewable feedstocks, manages certain regulatory credits, and markets renewable diesel, renewable jet fuel, and other renewable fuels. The company markets its products under the Phillips 66, Conoco and 76, JET, Kendall, Red Line, and other private label brands. Phillips 66 was founded in 1875 and is headquartered in Houston, Texas.",
+  "next_earnings_date": "2026-10-29",
+  "beta": 0.704,
+  "dividend_yield": 1.96
+}

@@ -1,0 +1,911 @@
+foreign-titled rows 09-12..09-14: 909 Counter({'2026-09-12': 749, '2026-09-13': 160})
+sources: [('yahoo_finance', 120), ('google_en', 90), ('scmp', 50), ('bloomberg', 45), ('guardian', 44), ('fool', 40), ('thestreet', 40), ('seekingalpha', 37), ('economictimes', 31), ('nasdaq', 31), ('japantimes', 30), ('wsj', 29), ('euronews', 28), ('aljazeera', 25), ('forbes', 25)]
+2026-09-12 [aljazeera     ] Alexander Zverev vs Ben Shelton: US Open men’s singles final – all to know
+2026-09-12 [aljazeera     ] Arteta seethes at Sunderland penalty decision despite Arsenal win
+2026-09-12 [aljazeera     ] Death toll from Philippine ferry fire rises to 76
+2026-09-12 [aljazeera     ] Ebola spreads to seventh DRC province as gov’t insists cases are declining
+2026-09-12 [aljazeera     ] Elena Rybakina defeats Aryna Sabalenka in US Open women’s singles final
+2026-09-12 [aljazeera     ] Fire at nursing home in Chile kills 16 elderly residents
+2026-09-12 [aljazeera     ] First naval battle between drones takes place in the Black Sea
+2026-09-12 [aljazeera     ] Gaza genocide documentary ‘NAZA’ wins Special Jury Prize at Venice
+2026-09-12 [aljazeera     ] Israel bombs southern Lebanon as talks postponed
+2026-09-12 [aljazeera     ] Mbappe double helps Real Madrid thump Rayo Vallecano 4–1 in La Liga
+2026-09-12 [aljazeera     ] Second crypto billionaire donates record $49m to far-right Reform UK
+2026-09-12 [aljazeera     ] Teen rescued after clinging to boat for two days off Alaska
+2026-09-12 [aljazeera     ] Tens of thousands march across Germany to protest far-right party AfD
+2026-09-12 [aljazeera     ] USA edge Spain to book Women’s Basketball World Cup final against France
+2026-09-12 [arstechnica   ] I spent $4,000 on a robot dog from China
+2026-09-12 [axios         ] Anthropic report: 5 ways Claude was exploited for war, spying and repression
+2026-09-12 [axios         ] Anthropic, OpenAI CEOs call for slowdown in AI development
+2026-09-12 [axios         ] Behind the Curtain: It's not too late
+2026-09-12 [axios         ] Jewish institutions' security spending tops $1 billion as antisemitism persists
+2026-09-12 [axios         ] OpenAI delaying IPO amid AI safety concerns, Sam Altman says
+2026-09-12 [axios         ] The world reconsiders America
+2026-09-12 [bbc           ] 'It's like a dog set loose on us' - fear over Kenya's crackdown on foreign traders
+2026-09-12 [bbc           ] 'Skimpflation' warning as tinned mackerel alternative hits more supermarket shelves
+2026-09-12 [bbc           ] Afghan woman deported from US in first use of 'alien terrorist' court
+2026-09-12 [bbc           ] Anthropic boss Dario Amodei calls for AI development to slow down
+2026-09-12 [bbc           ] Arrest made over the death of black woman found hanged from tree in Mississippi
+2026-09-12 [bbc           ] Best friends for decades - until a DNA test revealed they were sisters
+2026-09-12 [bbc           ] Bulgaria investigates fire at weapons  site that owner calls sabotage
+2026-09-12 [bbc           ] Céline Dion fans prepare for comeback concert in Paris
+2026-09-12 [bbc           ] Death toll from Philippines ferry fire rises to 76, with more still missing
+2026-09-12 [bbc           ] Fire at nursing home in Chile kills 16 residents
+2026-09-12 [bbc           ] Five minutes to steal a Renoir: Why museum thefts are becoming bolder across Europe
+2026-09-12 [bbc           ] French officials investigate if malicious act caused train derailment
+2026-09-12 [bbc           ] Grammy-winning US rapper Lil Durk acquitted in murder-for-hire trial
+2026-09-12 [bbc           ] Only Roland Garros towel left, says Ukraine tennis player after Russian strike hits flat
+2026-09-12 [bbc           ] Record heatwaves in France set to make champagne stronger
+2026-09-12 [bbc           ] Saudi Arabia shuts key oil pipeline after drone attack launched from Iraq
+2026-09-12 [bbc           ] Trump's comments on a united Ireland may have targeted audience across the Atlantic
+2026-09-12 [bbc           ] Uganda's King Oyo buried amid calls for unity over his successor
+2026-09-12 [bbc           ] Ukraine faces 'toughest winter' since Russia's full-scale invasion, UN official tells BBC
+2026-09-12 [benzinga      ] Algorand (ALGO) Price Prediction: 2025, 2026, 2030
+2026-09-12 [benzinga      ] Arweave (AR) Price Prediction: 2025, 2026, 2030
+2026-09-12 [benzinga      ] Bittensor (TAO) Price Prediction: 2025, 2026, 2030
+2026-09-12 [benzinga      ] Filecoin (FIL) Price Prediction: 2025, 2025, 2030
+2026-09-12 [benzinga      ] Hedera Hashgraph (HBAR) Price Prediction: 2025, 2026, 2030
+2026-09-12 [benzinga      ] Myro (MYRO) Price Prediction: 2025, 2026, 2030
+2026-09-12 [benzinga      ] PancakeSwap (CAKE) Price Prediction: 2025, 2026, 2030
+2026-09-12 [benzinga      ] Polkadot (DOT) Price Prediction: 2025, 2026, 2030
+2026-09-12 [benzinga      ] Toncoin (TON) Price Prediction 2025, 2026, 2027-2030
+2026-09-12 [benzinga      ] Uniswap (UNI) Price Prediction: 2025, 2026, 2030
+2026-09-12 [bloomberg     ] AI Agents Test the Limits of Human Control
+2026-09-12 [bloomberg     ] All Eyes on Warsh as Rate-Hike Fever Spreads Across G7 Central Banks
+2026-09-12 [bloomberg     ] BRICS Countries Call for Maximum Restraint in the Middle East
+2026-09-12 [bloomberg     ] BRICS Nations Reach Consensus on Communique: India Official
+2026-09-12 [bloomberg     ] Bank of France Issues Statement on Debt Amid ‘False’ Information
+2026-09-12 [bloomberg     ] Bloomberg This Weekend 09/12/2026
+2026-09-12 [bloomberg     ] By The Way: Headlines You May Have Missed
+2026-09-12 [bloomberg     ] Carney to Meet UK’s Burnham as Canada Deepens Europe Ties
+2026-09-12 [bloomberg     ] Charting the Global Economy: Oil Surge Fans Global Inflation
+2026-09-12 [bloomberg     ] Drug-Dealing Gangs Hold Key to Swedish Election in This Suburb
+2026-09-12 [bloomberg     ] ECB’s Lagarde Says Current Inflation Shock Will Be Longer Lasting
+2026-09-12 [bloomberg     ] Energy Driven Inflation Complicates Fed Rate Call
+2026-09-12 [bloomberg     ] Europe’s Solar Boom Has a Storage Problem
+2026-09-12 [bloomberg     ] Far-Right Win Puts Germany’s Economic Renewal on Shakier Ground
+2026-09-12 [bloomberg     ] Farage’s Reform Raises Record £72 Million in Less Than 24 Hours
+2026-09-12 [bloomberg     ] Germany Identifies Russian Agent Behind Drone Attack, WamS Says
+2026-09-12 [bloomberg     ] Higher Interest Rates May Be the New Normal
+2026-09-12 [bloomberg     ] Iran Nuclear Activity Raises New Concerns
+2026-09-12 [bloomberg     ] Iran Nuclear Blind Spot Deepens as IAEA Loses Access
+2026-09-12 [bloomberg     ] Iran War Revives Lessons of Iraq for Fukuyama
+2026-09-12 [bloomberg     ] Iraq Fires Commander After Drone Attacks on Saudi Arabia’s East-West Pipeline
+2026-09-12 [bloomberg     ] Lagarde Joins France Election Debate at Normandy Rally, Feeding ECB Exit Talk
+2026-09-12 [bloomberg     ] Le Pen Opens Door for Compromise on 2027 Budget Law, AFP Says
+2026-09-12 [bloomberg     ] Luxury Shoppers Put Value Ahead of Labels
+2026-09-12 [bloomberg     ] Modi Forges BRICS Consensus in Shadow of Worsening Iran War
+2026-09-12 [bloomberg     ] Modi Seeks BRICS Unity as Global Tensions Rise
+2026-09-12 [bloomberg     ] Number of Vessels Redirected in US Blockade on Iran Reaches 100
+2026-09-12 [bloomberg     ] Oil Supply Risks Rise After Saudi Pipeline Attack
+2026-09-12 [bloomberg     ] Pointed! Bloomberg's Weekly News Quiz For Risk-Takers
+2026-09-12 [bloomberg     ] RBI Said to Reject Tata Sons Request to Avoid An IPO
+2026-09-12 [bloomberg     ] SpaceX to Get Weighting Boost in Nasdaq 100 After Rebalance
+2026-09-12 [bloomberg     ] Trump Jabs at Europe on Trade, Immigration During Ireland Visit
+2026-09-12 [bloomberg     ] Trump Says He Could Settle UK-Argentina Dispute Over Falklands
+2026-09-12 [bloomberg     ] Trump Says He’d Love to See a ‘United’ Ireland During Visit
+2026-09-12 [bloomberg     ] Trump Says He’d Love to See a ‘United’ Ireland During Visit
+2026-09-12 [bloomberg     ] Trump Says Iran-Backed Houthis Asked US Not to Target Them
+2026-09-12 [bloomberg     ] Trump Says US, Canada Will Probably Reach a Deal ‘Fairly Soon’
+2026-09-12 [bloomberg     ] Trump Sees Canada Deal ‘Fairly Soon,’ Downplays Leaving USMCA
+2026-09-12 [bloomberg     ] Trump Wades Into Debate Over Irish Unification
+2026-09-12 [bloomberg     ] Trump’s Convention Promises Face Tough Road Even If GOP Wins
+2026-09-12 [bloomberg     ] Trump’s Foes Find Common Ground at Modi’s New Delhi Summit
+2026-09-12 [bloomberg     ] What Many Miss Regarding the US-China Rivalry: New Economy
+2026-09-12 [bloomberg     ] Xi Resets Ties With Modi on First Visit to India in Seven Years
+2026-09-12 [bloomberg     ] ‘Crazy’ French Inversion Shows Credit Is a Haven: Credit Weekly
+2026-09-12 [businessinside] 48-HOUR REGN INVESTOR DEADLINE: Regeneron Pharmaceuticals, Inc. Investors with Substantial Losses Have Opportunity to Lead Class Action Lawsuit
+2026-09-12 [businessinside] Building Global Trust in the AI Search Era: DigiMentumPR Explores the Future of PR for Technology Brands
+2026-09-12 [businessinside] CBRE, BXP among real estate losers; Host Hotels & Resorts, Fermi in gainers
+2026-09-12 [businessinside] Insider trades: Nvidia, Tesla, Uber among notable names
+2026-09-12 [businessinside] Key deals this week: META, ADI, BSP, AAPL, and more
+2026-09-12 [businessinside] New to The Street Show 771 Airs Today on Bloomberg, Featuring Bill Mobley, Panna Sharma, Phillip Toppino and Dr. Kelley Gurley
+2026-09-12 [businessinside] NewsOut, the "Place for Pubcos(TM)" Expands Its 1.2 Million-Subscriber YouTube Channel With New TV Commercials and Varticles(TM) Columns
+2026-09-12 [chosun        ] ソウルマンション86週連騰 文政権最長超え
+2026-09-12 [cna           ] AI startup Discovery Loop seeks around $50 billion valuation, Business Insider reports
+2026-09-12 [cna           ] Anthropic CEO urges AI companies to slow model development amid fears over misuse
+2026-09-12 [cna           ] Crypto investor pardoned by Trump donates £36 million to Farage's Reform UK
+2026-09-12 [cna           ] Investors brace for possible rate hike at uncertain Fed meeting
+2026-09-12 [cna           ] Nvidia in talks to invest in Anthropic’s mega IPO: Sources
+2026-09-12 [cna           ] Roblox expands tools to help creators build, distribute games
+2026-09-12 [cna           ] US Senate negotiators consider requiring AI firms to mitigate known major risks
+2026-09-12 [cnbc          ] Buffett's confidence in troubled decade-old acquisition finally pays off
+2026-09-12 [cnbc          ] College sticker prices keep rising. Why many schools are still under financial strain
+2026-09-12 [cnbc          ] Construction robots are tackling America's housing shortage, but we're a long way from humanoid homebuilders
+2026-09-12 [cnbc          ] Conversations that AIs are having in the office that may influence your performance review and pay
+2026-09-12 [cnbc          ] GM plans U.S. battery development as Trump's DOT attacks Ford for China ties
+2026-09-12 [cnbc          ] I worked with Gloria Steinem for 30 years—This was her No. 1 antidote to fear
+2026-09-12 [cnbc          ] Indian Prime Minister Modi says border peace is key to India-China ties
+2026-09-12 [cnbc          ] Inflation is outpacing wage growth again, squeezing Americans’ paychecks
+2026-09-12 [cnbc          ] Larry Ellison nixes plan to offload up to $7.5 billion worth of Oracle stock
+2026-09-12 [cnbc          ] Oil's roundtrip back to $100. Why China could determine what happens next
+2026-09-12 [cnbc          ] OpenAI rules out IPO this year as Altman, Musk & Amodei warn AI is moving too fast
+2026-09-12 [cnbc          ] Oracle's Larry Ellison adopts trading plan to sell up to $7.5 billion worth of stock
+2026-09-12 [cnbc          ] Russia, Trump and a battle over welfare loom over Sweden’s election
+2026-09-12 [cnbc          ] Stocks stumble on inflation fears, but 2 of our names give us reasons to stay bullish
+2026-09-12 [cnbc          ] Tehran won’t surrender to the U.S., Iranian President Pezeshkian says, as India's Modi urges dialogue and peace
+2026-09-12 [cnbc          ] Trump sees Iran war ending soon after midterm elections, predicts oil prices will then fall sharply
+2026-09-12 [cnbc          ] Trump's America-first world is pushing other powers to hedge their bets
+2026-09-12 [cnbc          ] Why data centers could be the next big market for catastrophe bonds
+2026-09-12 [coindesk      ] Anthropic CEO calls for AI race to slow down citing safety. Musk and OpenAI's Altman agrees
+2026-09-12 [coindesk      ] Bitcoin Suisse plans to cut up to half its Swiss jobs as it shifts work abroad
+2026-09-12 [coindesk      ] Bitcoin activity, passports exposed after Revolut falls for fake government request
+2026-09-12 [coindesk      ] Ditching bonds for bitcoin: How crypto can tackle the AI-heavy portfolio dilemma
+2026-09-12 [coindesk      ] Nigel Farage’s Reform UK lands $97 million donations from two crypto billionaires in 24 hours
+2026-09-12 [coindesk      ] OpenAI IPO won't happen this year, says Sam Altman
+2026-09-12 [coindesk      ] Ripple stablecoin chief sees $13 trillion corporate treasury opportunity for RLUSD
+2026-09-12 [coindesk      ] Staked ether should be seen as the benchmark of the decentralized economy
+2026-09-12 [cointelegraph ] Farage’s Reform UK gets $97M from two crypto billionaires
+2026-09-12 [cointelegraph ] Here’s what happened in crypto today
+2026-09-12 [cointelegraph ] North Korea using foreign talent to help infiltrate US companies: Report
+2026-09-12 [cointelegraph ] Nvidia considers $10B investment in potential record Anthropic IPO: Reuters
+2026-09-12 [cryptoslate   ] Bitcoin’s $80,000 ceiling looks fragile after stocks shrugged off near-5% Treasury yields
+2026-09-12 [cryptoslate   ] Revolut tricked into handing hackers the passports and Bitcoin histories of wealthy customers
+2026-09-12 [cryptoslate   ] Stablecoins make sending money easy until someone needs to spend it
+2026-09-12 [cryptoslate   ] Thailand’s stablecoin proposal would block transfers to other people’s wallets
+2026-09-12 [cryptoslate   ] The biggest vulnerability in your Bitcoin wallet might be the shipping label
+2026-09-12 [cryptoslate   ] The challenge for AI agents is deciding who pays for automated errors
+2026-09-12 [cryptoslate   ] The dilution trap where Bitcoin holdings rise while shareholder value stalls
+2026-09-12 [cryptoslate   ] Why Bitcoin initially held its gain as rate traders put September hike odds at 85%
+2026-09-12 [cryptoslate   ] XRP Ledger just quietly activated critical foundation for its upcoming new lending protocol
+2026-09-12 [cryptoslate   ] XRP’s 30% monthly rebound meets a $4.6 million liquidity trial inside XRPL’s $1.1 billion stablecoin boom
+2026-09-12 [digitimes     ] AI server boom reshuffles MLCC supply, opening a rare expansion window for Taiwan makers
+2026-09-12 [digitimes     ] Analysis: Speed built Colossus, yet redundancy may decide whether SpaceX can scale it
+2026-09-12 [digitimes     ] Apple foldable plans drive new demand for Japanese smartphone parts makers
+2026-09-12 [digitimes     ] Commentary: Apple sends off Cook with a foldable flourish, but Ternus's trial is still ahead
+2026-09-12 [digitimes     ] Europe buys time in the LEO race as Eutelsat extends OneWeb toward the IRIS&sup2; era
+2026-09-12 [digitimes     ] Exclusive: ASUS xHIS aims to become digital backbone for AI-ready healthcare
+2026-09-12 [digitimes     ] Murata targets mass production of its AI power substrate next year
+2026-09-12 [digitimes     ] Pegatron's AI server engine starts to outweigh notebook drag, with Apple adding lift
+2026-09-12 [digitimes     ] Renault sets 2-year car development quality line
+2026-09-12 [digitimes     ] Rethinking defense perimeters, supply chain resilience in the AI era
+2026-09-12 [digitimes     ] Taiwan sees AI-era power upgrade openings in France
+2026-09-12 [ecb           ] Christine Lagarde: Europe seen from Normandy
+2026-09-12 [ecb           ] Christine Lagarde: Interview with Ouest-France
+2026-09-12 [economictimes ] 10-year bond yield crosses 7% as RBI trims auction bids
+2026-09-12 [economictimes ] 5 world market themes for the week ahead
+2026-09-12 [economictimes ] BSE volumes ease after sharp rebound; CAS remains in focus: Nuvama
+2026-09-12 [economictimes ] Bitcoin trades at $77,000 mark as profit-taking weighs on market; September FOMC meeting to act as next catalyst
+2026-09-12 [economictimes ] Bitcoin vs Ethereum: Which crypto asset could deliver better returns in the next 12 months?
+2026-09-12 [economictimes ] Concurrent Gainers: 9 smallcap stocks gain for 5 days in a row
+2026-09-12 [economictimes ] Dalal Street Week Ahead: Weak technical setup to keep bulls under pressure
+2026-09-12 [economictimes ] De-dollarisation and its impact on commodities and global trade
+2026-09-12 [economictimes ] Demat 2.0 explained: Why it matters for bond market investors
+2026-09-12 [economictimes ] Explained: What Sebi’s proposed CAS changes mean for expiry-day trading and settlement
+2026-09-12 [economictimes ] F&amp;O Talk: Nifty has slipped below its crucial support, says Sudeep Shah; picks 5 stocks for next week
+2026-09-12 [economictimes ] Global funds sour on India stocks as some cut allocation to zero
+2026-09-12 [economictimes ] Goldman Sachs’ India Portfolio; 10 stocks rally up to 130% in CY26
+2026-09-12 [economictimes ] HDFC Bank submits two candidates to RBI for next CEO
+2026-09-12 [economictimes ] Indian rupee weakens to 95.55 amid rising crude oil prices and Strait of Hormuz tensions
+2026-09-12 [economictimes ] Jefferies picks 5 financial stocks with upside of up to 25%. How many do you have?
+2026-09-12 [economictimes ] NSE IPO set to open for public on September 17; price band at Rs 1,700-1,785
+2026-09-12 [economictimes ] NSE IPO: Market dominance vs regulatory risks; what investors should know from the RHP
+2026-09-12 [economictimes ] Oversold markets may stage near-term rebound, say analysts
+2026-09-12 [economictimes ] PMS Tracker: East Green, Atlas Integrated Finance, Hem Securities, 7 others deliver up to 14.7% returns in August
+2026-09-12 [economictimes ] Rs 24,600 crore IPO dhamaka: NSE, Hero Motors to lead 11 public offers next week
+2026-09-12 [economictimes ] Sebi proposes new CAS framework, two options for expiry-day settlement
+2026-09-12 [economictimes ] US consumer prices accelerate in August, push Fed closer to rate hike
+2026-09-12 [economictimes ] US stocks today: US stocks end higher as strong inflation data cements rate-hike bets
+2026-09-12 [economictimes ] Valuation question! Why did NSE cut its IPO size and price below unlisted market levels?
+2026-09-12 [economictimes ] Wall St Week Ahead: Investors brace for possible rate hike at uncertain Fed meeting
+2026-09-12 [economictimes ] Will US 10-year bond yield crossing 5% really hurt markets? Yes Securities says fears overblown
+2026-09-12 [economist     ] Wanted: new business, finance and economics interns
+2026-09-12 [eetimes       ] Inside Architect Labs’ Two-Week Chip Design
+2026-09-12 [euronews      ] 'Woman Unknown' wins Golden Lion award at the 83rd Venice Film Festival while 'Naza' wins special jury prize
+2026-09-12 [euronews      ] 3D-printed food: from niche technology to a potential future
+2026-09-12 [euronews      ] AfD's Ulrich Siegmund's comments on arms and 'remigration' spark fiece criticism
+2026-09-12 [euronews      ] Anaconda on the Danube: giant constrictor snake discovered in Bavaria
+2026-09-12 [euronews      ] Anthropic CEO Dario Amodei calls on AI companies to slow down development amid superintelligence risks
+2026-09-12 [euronews      ] At least 11 killed in Russian attacks on Ukraine as Kyiv strikes Russia's 'shadow fleet'
+2026-09-12 [euronews      ] Capgemini sells US unit criticised over ICE contract
+2026-09-12 [euronews      ] Diesel in Portugal hits record high, Spain introduces new discount
+2026-09-12 [euronews      ] Drone attack on Leipzig: clues apparently point to Russian intelligence service
+2026-09-12 [euronews      ] Drones from Iraq attack and set pipeline on fire in Saudi Arabia
+2026-09-12 [euronews      ] Dublin braces itself for Trump visit to talk trade, golf and Gaza
+2026-09-12 [euronews      ] From roughing it to Arctic luxury: Two sisters and three countries in two weeks
+2026-09-12 [euronews      ] German police bodycam captures dramatic arrest of suspected power saboteur
+2026-09-12 [euronews      ] Houthis seize key Yemeni island in Bab el-Mandeb, taking control of the strait
+2026-09-12 [euronews      ] How the ECB rate hike will affect mortgage borrowers
+2026-09-12 [euronews      ] Jimek: Polish hip-hop is one of the best in Europe, and I won't even apologize for saying that
+2026-09-12 [euronews      ] Judo Returns to Hungary for Exciting Grand Slam Action
+2026-09-12 [euronews      ] Latest news bulletin | September 12th, 2026 – Evening
+2026-09-12 [euronews      ] Latest news bulletin | September 12th, 2026 – Midday
+2026-09-12 [euronews      ] Latest news bulletin | September 12th, 2026 – Morning
+2026-09-12 [euronews      ] Moment teen is rescued after three days adrift in frigid waters
+2026-09-12 [euronews      ] Passenger train derails in northern France injuring at least 44 people including one seriously
+2026-09-12 [euronews      ] Trump says he'd like to see Ireland 'reunified' as he meets Taoiseach Martin in two-day official visit
+2026-09-12 [euronews      ] Welcome to Riga and the Baltic military-industrial complex
+2026-09-12 [euronews      ] ‘Recovery becomes self-propelling’: Five positive tipping points that can save the world
+2026-09-12 [fool          ] $10,000 in Tesla When It Joined the S&P 500 Would Be About $15,700 Today. An Index Fund Would Have Done Better.
+2026-09-12 [fool          ] 1 Magnificent Growth Stock Down 55% to Buy Right Now, According to Wall Street
+2026-09-12 [fool          ] 3 Reasons I Think Cathie Wood Is Buying Robinhood Stock Again
+2026-09-12 [fool          ] 3 Reasons SpaceX Stock Could Crash in Q4 -- and 1 Reason It Won't
+2026-09-12 [fool          ] Adobe: After Lifting Guidance, Is the Beaten-Down Stock Ready to Break Out?
+2026-09-12 [fool          ] AtriCure CTO Sells 3,657 Shares
+2026-09-12 [fool          ] Berkshire Hathaway Has Paid Exactly 1 Dividend Since 1965. Here's Where the Cash Goes Instead.
+2026-09-12 [fool          ] Better AI Chip Stock: Broadcom vs. Nvidia
+2026-09-12 [fool          ] BigBear.ai vs. D-Wave Quantum: Which Technology Stock Is a Better Buy in 2026?
+2026-09-12 [fool          ] BigBear.ai vs. IonQ: Weighing Whether to Invest in the Artificial Intelligence Company or the Quantum Computing Giant
+2026-09-12 [fool          ] Broadcom vs. Micron Technology: Which Technology Stock Is a Better Buy in 2026?
+2026-09-12 [fool          ] Dell Booked More AI Server Orders in 3 Months Than It Recorded in Total Revenue
+2026-09-12 [fool          ] Down 30% This Year, Is It Finally Time to Buy SoFi Stock?
+2026-09-12 [fool          ] Elon Musk Needs Tesla to Reach a $8.5 Trillion Market Cap to Cash In. Here's How Tesla Can Reach That Valuation.
+2026-09-12 [fool          ] Firefly Aerospace vs. Joby Aviation: Which Industrials Stock Is a Better Buy in 2026?
+2026-09-12 [fool          ] Ford Motor vs. General Motors: Which Automotive Stock Is a Better Buy in 2026?
+2026-09-12 [fool          ] Futures Traders Just Dramatically Repriced the Chances of a Fed Hike Next Week
+2026-09-12 [fool          ] GameStop Billionaire Ryan Cohen Buys 1 Million Shares for $20 Million. What This Large Purchase Means for GME
+2026-09-12 [fool          ] Google's Historic 396 MW Clean Energy Deal Just Changed the Game for 1 AI Power Play
+2026-09-12 [fool          ] Grab's 2026 Outlook: Scaling Its Business to Build on Profitable Growth
+2026-09-12 [fool          ] How Concerned Should Income Investors Be About Pfizer's Dividend?
+2026-09-12 [fool          ] Investing in the Vanguard S&P 500 ETF (VOO)? Beware of This 1 Sneaky Risk.
+2026-09-12 [fool          ] Is Nu Holdings Stock a Buy, Sell, or Hold With Shares 20% Below Their 52-Week High?
+2026-09-12 [fool          ] Is NuScale Power a Millionaire Maker?
+2026-09-12 [fool          ] Is Toast Stock a Buy After a Record 9,500-Restaurant Quarter?
+2026-09-12 [fool          ] Joby Aviation Could Deliver 10x Returns for Patient Investors
+2026-09-12 [fool          ] LPL Financial Group Managing Director Sells 308 Shares for $110,100
+2026-09-12 [fool          ] Not Nvidia. Not Micron. This Dirt Cheap “Magnificent Seven” Stock Could Be the Biggest Winner of the Trillion-Dollar AI Race – Here’s the Case.
+2026-09-12 [fool          ] Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call
+2026-09-12 [fool          ] Oracle's AI Chips Ran 97.9% Utilized Last Quarter. For Nvidia, That Is What a Shortage Looks Like.
+2026-09-12 [fool          ] Portfolio Diversification Is the Simplest Way to Lower Risk. Here's How I Build Mine.
+2026-09-12 [fool          ] Predicting the Value of a $10,000 Bet on SpaceX by 2030
+2026-09-12 [fool          ] Realty Income Has a New Revenue Stream, and It's Growing Fast
+2026-09-12 [fool          ] RingCentral Chief Accounting Officer Sells 4,568 Shares
+2026-09-12 [fool          ] The AI Infrastructure Stock That Could Make Investors Millionaires Is Hiding in Plain Sight, and Wall Street Isn’t Paying Attention
+2026-09-12 [fool          ] This Artificial Intelligence Stock Is Down 71% and Could Be a Screaming Buy
+2026-09-12 [fool          ] Tilray Trades Below $5 With Record Fiscal Revenue on the Books. What's Holding the Stock Back?
+2026-09-12 [fool          ] WisdomTree COO Lilien Jarrett Sells 30,000 Shares for $737,000
+2026-09-12 [fool          ] Worried About RMDs in Retirement? 3 Key Moves to Lower the Hassle Factors.
+2026-09-12 [forbes        ] AEW Collision Results (Sept, 12, 2026) For Andy Williams Tribute Show
+2026-09-12 [forbes        ] AVP Beach Volleyball Champions Brasher And Cruz Aim For LA28 Olympics
+2026-09-12 [forbes        ] Billionaire Anthropic CEO Urges Competitors To Slow Down AI Development
+2026-09-12 [forbes        ] Good And Bad News About The ‘Pluribus’ Season 2 Release Date
+2026-09-12 [forbes        ] Hot Summers, Water Supply And Frivolous AI Use On Social Media
+2026-09-12 [forbes        ] How Alexander Zverev Consulted Andy Roddick Before The Best Year Of His Career
+2026-09-12 [forbes        ] How Local Communities Can Get The Most Out Of The Data Center Boom
+2026-09-12 [forbes        ] How ‘Terminator 2’ Predicted Our AI Anxiety 35 Years Ago
+2026-09-12 [forbes        ] Jazz Chisholm Jr.’s Headfirst Slide Cost The Yankees $1M In Value
+2026-09-12 [forbes        ] Malone Lam Convicted Of Masterminding  $245 Million Crypto Crime Ring
+2026-09-12 [forbes        ] NFL 2026 Week 1 DFS: DraftKings Main Slate GPP And Cash Games
+2026-09-12 [forbes        ] NYT Pips Answers For Sunday, September 13
+2026-09-12 [forbes        ] NYT ‘Connections’ #1190 Hints And Answers For Sunday, September 13
+2026-09-12 [forbes        ] Netflix Cancels Yet Another Popular Show After 2 Seasons
+2026-09-12 [forbes        ] New World No. 1 Elena Rybakina Halts Aryna Sabalenka 3-Peat Bid At U.S. Open
+2026-09-12 [forbes        ] Noche UFC Live Results, Scorecards, Highlights And Reactions
+2026-09-12 [forbes        ] Noche UFC Results, Bonus Winners, Highlights And Reactions
+2026-09-12 [forbes        ] OpenAI Isn’t Going Public This Year, Sam Altman Says
+2026-09-12 [forbes        ] Ryan Garcia Vs. Conor Benn Results — Here Are The Scorecards And Biggest Highlights
+2026-09-12 [forbes        ] Starting Grid For The 2026 F1 Spanish Grand Prix At Madring
+2026-09-12 [forbes        ] Today’s Wordle #1912: Hints, Clues And Answer For Sunday September 13
+2026-09-12 [forbes        ] Trump Says He'd 'Love' To See Unified Ireland
+2026-09-12 [forbes        ] USA Escapes Spain, Will Face France For FIBA World Cup Gold
+2026-09-12 [forbes        ] What To Watch This Weekend: New Shows And Movies To Stream On Netflix, Hulu, Prime Video, Apple TV And More
+2026-09-12 [fortune       ] Former CIA official found with $40 million in gold bars for ‘work-related expenses’ reaches tentative plea deal
+2026-09-12 [fortune       ] Mortgage lending standards are so tight that homebuyers must have ‘pristine’ credit histories, study says, as sales head for 31-year low
+2026-09-12 [fortune       ] The trade deficit with Canada that’s upset Trump so much is due to crude the U.S. buys at a discount for the Midwest. ‘It’s the only oil they can use’
+2026-09-12 [fortune       ] Trump’s childhood home sells for $1.9 million after prior owner bought it for $835,000 last year, when it was a mold-ridden den of feral cats
+2026-09-12 [fortune       ] U.S. diesel prices are now 60% higher than they were before the Iran war, with one Trump voter paying twice as much to fuel his farm equipment
+2026-09-12 [ft            ] Rivals Altman and Musk rally behind Dario Amodei’s call for an AI slowdown
+2026-09-12 [google_en     ] 70% of Newly Listed Stocks Trade Below IPO Price in Korea - Seoul Economic Daily
+2026-09-12 [google_en     ] 8 killed in Russian strikes on Ukraine as Putin warns Europe against sending troops - AP News
+2026-09-12 [google_en     ] AI company bosses call for 'slow down' in development - RTE.ie
+2026-09-12 [google_en     ] AI company says it blocked misuse of its technology that could have supported biological weapons - WDBJ7
+2026-09-12 [google_en     ] Albuquerque bans crypto ATMs after scams cost New Mexicans millions - KOAT
+2026-09-12 [google_en     ] Anthropic C.E.O. Dario Amodei Calls for A.I. Slowdown - The New York Times
+2026-09-12 [google_en     ] Anthropic CEO calls on AI firms to slow down pace of developement - Euronews.com
+2026-09-12 [google_en     ] Anthropic CEO urges AI companies to slow model development amid fears over misuse - Reuters
+2026-09-12 [google_en     ] Anthropic CEO urges AI companies to slow model development amid fears over misuse - Yahoo! Finance Canada
+2026-09-12 [google_en     ] Anthropic Targets $2 Trillion Valuation as 2026 US IPO Proceeds Hit Record, Yet New Stocks Lag Market - TradingKey
+2026-09-12 [google_en     ] Anthropic boss Dario Amodei calls for AI development to slow down - BBC
+2026-09-12 [google_en     ] Anthropic boss calls for AI slowdown, Altman and Musk agree - France 24
+2026-09-12 [google_en     ] BC linebacker taken Bodie Kahoun taken off by ambulance in 2nd quarter - AP News
+2026-09-12 [google_en     ] BOJ set to raise interest rate to 1.25% next week - The Japan Times
+2026-09-12 [google_en     ] Bitcoin Suisse plans to cut up to half its Swiss jobs as it shifts work abroad - CoinDesk
+2026-09-12 [google_en     ] Bitcoin’s Biggest 24 Hours of 2026? AI Models Predict BTC Price After CLARITY and Fed Decisions - Yahoo Finance
+2026-09-12 [google_en     ] Can XRP Flip Bitcoin? - 24/7 Wall St.
+2026-09-12 [google_en     ] Canadian boycott of US products pushes grocers to adapt, explore new supply sources - Reuters
+2026-09-12 [google_en     ] Could Buying This Cryptocurrency Make You Rich? - Yahoo Finance
+2026-09-12 [google_en     ] Crypto billionaires give $97 million to Reform UK, fueling concerns about money in politics - AP News
+2026-09-12 [google_en     ] DOJ went after protesters for felony assault, but juries, judges were unconvinced, AP analysis finds - AP News
+2026-09-12 [google_en     ] Ditching bonds for bitcoin: How crypto can tackle the AI-heavy portfolio dilemma - CoinDesk
+2026-09-12 [google_en     ] ETH Vs. BTC: Ethereum Volume Growth Runs 7x Bitcoin's In A Day - Stocktwits
+2026-09-12 [google_en     ] Ethereum ETFs Took In $216 Million on Friday. Bitcoin’s Lost Money for a Fourth Day and XRP’s Took Zero - Yahoo Finance
+2026-09-12 [google_en     ] Federal court rejects Trump order keeping Michigan coal plant open - AP News
+2026-09-12 [google_en     ] Fire at ammunition depot in Bulgaria raises fears of neglect or sabotage - AP News
+2026-09-12 [google_en     ] For the US news industry, a tough summer draws to a close with McClatchy chain’s cuts - AP News
+2026-09-12 [google_en     ] Ford to recall about 223,500 US vehicles over fuel tank issues - Reuters
+2026-09-12 [google_en     ] Former CIA official found with gold bars reaches tentative plea deal after charge of salary theft - AP News
+2026-09-12 [google_en     ] GOP aims to pass crypto oversight bill vs. Dem hurdles - Washington Times
+2026-09-12 [google_en     ] Hidden crypto farm in Mexican mountains puts spotlight on cartel funding - Reuters
+2026-09-12 [google_en     ] How Low Can Bitcoin Go? - 24/7 Wall St.
+2026-09-12 [google_en     ] If a Stock Market Crash Is Coming, History Says This 1 Move Protects Investors Every Single Time - Yahoo Finance
+2026-09-12 [google_en     ] India's Modi and China's Xi push business links, border peace as ties revive - Reuters
+2026-09-12 [google_en     ] Inside the Discussions at AI Companies Over a Superintelligence Doomsday - The New York Times
+2026-09-12 [google_en     ] Iran and UAE back joint BRICS statement urging restraint in war - Reuters
+2026-09-12 [google_en     ] Iraq says Saudi pipeline attack originated from its territory, and other Mideast news - AP News
+2026-09-12 [google_en     ] Is the yen carry trade starting to unravel as Japan’s currency strengthens? - South China Morning Post
+2026-09-12 [google_en     ] Kingdom seeks to attract AI companies with computing capacity, capital, market access - アラブニュース
+2026-09-12 [google_en     ] Malone Lam Convicted Of Masterminding $245 Million Crypto Crime Ring - Forbes
+2026-09-12 [google_en     ] Michigan bounces back and beats No. 11 Oklahoma 17-10 after an INT late in game sets up go-ahead TD - AP News
+2026-09-12 [google_en     ] Michigan shows its resilience in 17-10 win over No. 11 Oklahoma after getting lucky break in opener - AP News
+2026-09-12 [google_en     ] Minnesota churches roiled by legal battle over ICE surveillance and right to protest - AP News
+2026-09-12 [google_en     ] NSE IPO: No more India's biggest! From DRHP to RHP | Price, size to stake sale - Top 5 changes to know for investors - tradingview.com
+2026-09-12 [google_en     ] OpenAI's Altman won't do IPO this year, calls AI extinction risk 'unacceptable' - Reuters
+2026-09-12 [google_en     ] People fleeing Iran-backed rebels’ advance in Yemen describe a ‘hysterical panic’ - AP News
+2026-09-12 [google_en     ] Photos show President Trump’s visit to Ireland that combines work and pleasure - AP News
+2026-09-12 [google_en     ] Police say more arrests coming in death of Mississippi woman found hanging from tree - AP News
+2026-09-12 [google_en     ] President Donald Trump’s childhood home sells for $2 million - AP News
+2026-09-12 [google_en     ] Prison riot and fire in a northern Syrian town kills at least 7 - AP News
+2026-09-12 [google_en     ] RBI Rejects Tata Sons' Bid to Dodge Listing Rules, Forcing It Toward an IPO - Startup Fortune
+2026-09-12 [google_en     ] Romania sets Guinness record with miles-long table, raises funds for pediatric psychiatry hospital - AP News
+2026-09-12 [google_en     ] Samsung SDS Builds 10-Company Robot Alliance for Physical AI - Seoul Economic Daily
+2026-09-12 [google_en     ] Saudi Arabia has few options as it faces mounting threats from Iran and its allies - AP News
+2026-09-12 [google_en     ] South Korea arms itself to protect chip secrets from foreign spies - Financial Times
+2026-09-12 [google_en     ] The CEO of Anthropic said Saturday the artificial-intelligence industry should slow its fast-moving development to give safety measures time to catch 
+2026-09-12 [google_en     ] The evolution of BRICS and its challenges today - Reuters
+2026-09-12 [google_en     ] Trump says Iran probably responsible for attack on Saudi pipeline - Reuters
+2026-09-12 [google_en     ] Trump touches a nerve while in Ireland by saying reunification would be ‘fantastic’ - AP News
+2026-09-12 [google_en     ] Two Crypto Billionaires Give Reform UK a Combined £72 Million in Under 48 Hours - Northeast Times
+2026-09-12 [google_en     ] U.K.’s Reform Party Rakes In Record $97 Million Donations From Crypto World - WSJ
+2026-09-12 [google_en     ] US House Panel To Vote On Crypto Tax Rules That Could Reshape Bitcoin Mining And Trading - Stocktwits
+2026-09-12 [google_en     ] USD/JPY weekly outlook: Fed, BOJ and the energy wildcard - stonex.com
+2026-09-12 [google_en     ] Uganda buries onetime ‘boy king’ whose death has sparked a succession battle - AP News
+2026-09-12 [google_en     ] Ukrainians embed with US forces during drills in Germany to teach the latest in drone warfare - AP News
+2026-09-12 [google_en     ] What a Fed rate hike actually means for the U.S. economy and inflation - nny360.com
+2026-09-12 [google_en     ] When Is the NSE IPO Coming, and How Does the IPO Process Work? - BBN Times
+2026-09-12 [google_en     ] Where have all the Atlantic hurricanes gone? El Nino might bring record slow storm season - AP News
+2026-09-12 [google_en     ] Which Bitcoin Wallets Are at Risk From Quantum Computers? 6.9 Million BTC Have Exposed Keys - 24/7 Wall St.
+2026-09-12 [google_en     ] Why Canada? America’s northern neighbor seems an unlikely target for a trade war - AP News
+2026-09-12 [google_en     ] Why Is Bitcoin Dropping Today? - 24/7 Wall St.
+2026-09-12 [google_en     ] Why Is Bitcoin Stuck Below $80,000? - 24/7 Wall St.
+2026-09-12 [google_en     ] Why Is Bitcoin Stuck Below $80,000? - Yahoo Finance
+2026-09-12 [google_en     ] Why Is XRP Dropping Today? - 24/7 Wall St.
+2026-09-12 [google_en     ] Why Is XRP Dropping Today? - Yahoo Finance
+2026-09-12 [google_en     ] Why It’s Difficult for Tech Companies to Rein In A.I. - The New York Times
+2026-09-12 [google_en     ] Why The Fed's Inflation Control Directly Challenges The Stock Market Narrative - Seeking Alpha
+2026-09-12 [google_en     ] Zcash Is Leaving Bitcoin In The Dust As ZEC Surges To 9-Year High With Miners Cashing In - Yahoo Finance
+2026-09-12 [guardian      ] AI may be denting computer science graduates’ job prospects, UK data shows
+2026-09-12 [guardian      ] Burial of King Oyo takes place in Uganda as news anchor prepares for throne
+2026-09-12 [guardian      ] Can chatbots feel – or even dream? Meet the man leading the fight for AI rights
+2026-09-12 [guardian      ] Christopher Harborne matches £36m Reform donation of Ben Delo
+2026-09-12 [guardian      ] Death toll from Philippines ferry fire rises to 35, as officials warn toll will grow
+2026-09-12 [guardian      ] Deepfakes are wrecking influencers’ credibility, one fake ad at a time
+2026-09-12 [guardian      ] Do not call her a racist: anti-Pauline Hanson strategists tell campaigners character attacks won’t work in Victoria
+2026-09-12 [guardian      ] Donald Trump says he would ‘love’ to see united Ireland
+2026-09-12 [guardian      ] Donations of £72m make Reform’s prospects both rosier and riskier
+2026-09-12 [guardian      ] Extended reality takes visitors from the ruins of West Bank to 17th-century Amsterdam at Venice Immersive
+2026-09-12 [guardian      ] Firewall compromised: has Friedrich Merz blown ‘democracy’s last shot’?
+2026-09-12 [guardian      ] IDF soldier filmed shooting Palestinian in leg amid West Bank settler standoff
+2026-09-12 [guardian      ] Iran’s Houthi allies capture strategic island on vital oil shipping route
+2026-09-12 [guardian      ] London Underground workers exposed to asbestos without protective masks, documents reveal
+2026-09-12 [guardian      ] Naomi Klein: ‘Extreme wealth has a deranging effect. It turns you into a supremacist’
+2026-09-12 [guardian      ] Nashville airport board unanimously approves name change to honor Dolly Parton
+2026-09-12 [guardian      ] Nearly 50,000 Yemeni civilians flee as Houthis advance along Red Sea coast
+2026-09-12 [guardian      ] Number of UK anti-migrant vigilante groups surges in last 18 months
+2026-09-12 [guardian      ] OpenAI IPO will not happen in 2026 amid AI safety fears, Sam Altman says
+2026-09-12 [guardian      ] Portsmouth experiences second weekend of anti-immigration protests
+2026-09-12 [guardian      ] Saudi Arabia shuts down key oil pipeline, blaming drones from Iraq
+2026-09-12 [guardian      ] Six Nigerians extradited to US over $6m online romance scam
+2026-09-12 [guardian      ] Sweden’s extremely close election could see far right enter government
+2026-09-12 [guardian      ] Thousands of ebikes seized by London councils as anger rises over blocked paths
+2026-09-12 [guardian      ] Trump says he would ‘love’ to see unified Ireland and ‘it may as well happen now’ as he visits Dublin – as it happened
+2026-09-12 [guardian      ] We know how to prevent black lung, so why are workers still dying?
+2026-09-12 [guardian      ] What can halt Fifa’s authoritarian turn under Infantino? Change from the outside | Jules Boykoff
+2026-09-12 [guardian      ] Xi Jinping gets red carpet at Brics summit amid thaw in India-China relations
+2026-09-12 [guardian      ] ‘Costing billions’: is the pensions triple lock a lifeline or simply unaffordable?
+2026-09-12 [guardian      ] ‘Immature playground boasting’: Mathematicians uneasy at OpenAI’s latest scalp
+2026-09-12 [guardian      ] ‘Small price to pay’: the young homeowners welcoming falling house prices even as it hurts them
+2026-09-12 [guardian      ] ‘We can see into the other room’: insurers face surge in subsidence claims
+2026-09-12 [guardian      ] ‘We must slow the pace’: CEO of Anthropic calls for an AI slowdown
+2026-09-12 [japantimes    ] Actor and narrator Reo Morimoto dies at 83
+2026-09-12 [japantimes    ] Apple’s foldable iPhone poses a $1,999 question: Who is it for?
+2026-09-12 [japantimes    ] At Dallas convention, some loyalists question Trump-centric midterms strategy
+2026-09-12 [japantimes    ] BOJ set to raise interest rate to 1.25% next week
+2026-09-12 [japantimes    ] Behind the killer robots of Ukraine’s new warfare ‘revolution’
+2026-09-12 [japantimes    ] China threat erodes Japanese anger over U.S. bases ahead of vote
+2026-09-12 [japantimes    ] China to raise visa fees sevenfold for Japanese visitors
+2026-09-12 [japantimes    ] Chubu Electric chairman Satoru Katsuno may step down over data fraud
+2026-09-12 [japantimes    ] Diving into Japan’s art scene, one fair at a time
+2026-09-12 [japantimes    ] Former Sega president recalls being ‘impressed’ with Nvidia’s Huang
+2026-09-12 [japantimes    ] How a billion-dollar sanctions dodge kept Chinese goods flowing to Iran
+2026-09-12 [japantimes    ] How to make the ‘downgraded’ Seishun 18 ticket work for you
+2026-09-12 [japantimes    ] Japan adopts measures to stamp out invasive longhorn beetle
+2026-09-12 [japantimes    ] Japan designates 18 regions as green transformation strategy areas
+2026-09-12 [japantimes    ] Justice Ministry to test GPS tracking of sex offenders on parole
+2026-09-12 [japantimes    ] North Korea fires off ‘multiple’ missiles, a day after trilateral exercises end
+2026-09-12 [japantimes    ] Pakistan faces pressure to pick a side as Saudi tensions with Houthis escalate
+2026-09-12 [japantimes    ] The demonic highs of ‘Onimusha’ make up for jarring lows
+2026-09-12 [japantimes    ] Trump envoys arrive in Kyiv in new push to end Russia’s war
+2026-09-12 [marketwatch   ] Elon Musk backs Anthropic’s call to slow down AI progress before rogue bots take over the entire internet
+2026-09-12 [marketwatch   ] I want to pay for every customer at my late husband’s favorite restaurant on his birthday. Could this backfire?
+2026-09-12 [marketwatch   ] My 87-year-old mother wants to pay for my brother’s kids’ education. I don’t have children. How is that fair?
+2026-09-12 [marketwatch   ] Why OpenAI’s Sam Altman says an IPO isn’t in the cards this year
+2026-09-12 [marketwatch   ] ‘I still don’t have my MRI’: My health insurer canceled my plan without warning. Is that legal?
+2026-09-12 [marketwatch   ] ‘I’m the executor’: My two siblings and I inherited an IRA. Can we just cash it out?
+2026-09-12 [nasdaq        ] Alcoa Sees Aluminum Deficit, Strong Demand and Tariff Upside at Jefferies Conference
+2026-09-12 [nasdaq        ] Cocoa Prices Fall Back After Earlier Gains on Ghana’s Proposal for Higher Farmer
+2026-09-12 [nasdaq        ] Corning Sees $20B Run Rate Early as Verizon Deal Fuels Data-Center Growth
+2026-09-12 [nasdaq        ] Cotton Falling, Despite USDA Production Cut
+2026-09-12 [nasdaq        ] Dollar Gains Ground as CPI Report Produces Higher Odds for a Fed Rate Hike
+2026-09-12 [nasdaq        ] Is Kodak having a &quot;Kodak moment?&quot; 2 watchlist stocks.
+2026-09-12 [nasdaq        ] Kraft Heinz Sees Early Turnaround Gains as $700M Brand Bet Builds Momentum
+2026-09-12 [nasdaq        ] LPL Financial Group Managing Director Sells 308 Shares for $110,100
+2026-09-12 [nasdaq        ] Piper Sandler Initiates Coverage of Fidelity National Information Services with Neutral Rating
+2026-09-12 [nasdaq        ] Portfolio Diversification Is the Simplest Way to Lower Risk. Here's How I Build Mine.
+2026-09-12 [nyt           ] After the I.P.O., a Billion-Dollar Bill for Employee Paydays
+2026-09-12 [nyt           ] Elevated Inflation Keeps Pressure on Fed to Raise Rates
+2026-09-12 [nyt           ] How The Times Covers ‘60 Minutes’ and Other Journalists
+2026-09-12 [nyt           ] How to Lure the Spendy and the Thrifty? Bring On the ‘Barbell.’
+2026-09-12 [nyt           ] India Wants to Buy Fewer Chinese Imports, but Keeps Needing More
+2026-09-12 [nyt           ] Inflation Complicates Trump’s Midterms Pitch to Voters
+2026-09-12 [nyt           ] Risks for Clicks: Why Online Influencers Push Shock Content
+2026-09-12 [nyt           ] Saudi Oil Exports Face Heightened Threats After Attacks on Pipeline
+2026-09-12 [nyt           ] Want to Entice New Residents? Offer Cash, for a Start.
+2026-09-12 [oilprice      ] Iran’s Security Crackdown Runs Into Resistance From Within
+2026-09-12 [oilprice      ] Oil Industry Braces for Years-Long Iran War
+2026-09-12 [oilprice      ] Stolen Electricity is Powering Illegal Crypto Farms Across the Globe
+2026-09-12 [oilprice      ] The Race to Solve Nuclear Energy’s Biggest Problem
+2026-09-12 [oilprice      ] Why More Homes Are Switching From Gas to Heat Pumps
+2026-09-12 [politico      ] EU-Parlament öffnet sich für härtere China-Politik
+2026-09-12 [politico      ] Farage’s Reform UK gets two £36M donations from crypto billionaires
+2026-09-12 [politico      ] OpenAI reveals another rogue AI attack
+2026-09-12 [politico      ] Portugal wants EU cash to pay for firefighting goats
+2026-09-12 [politico      ] Trump says he would ‘love’ to see a united Ireland
+2026-09-12 [politico      ] Will Lagarde bite the apple? ECB President leaves everyone guessing in Normandy
+2026-09-12 [prnewswire    ] A Civilian Legend Reimagined: Jeep® Brand Introduces 2027 Jeep Wrangler JL-2A
+2026-09-12 [prnewswire    ] A Green Beret's Humanitarian Mission to Remove Ukraine's Landmines Now Streaming on Prime Video in the U.S. and UK
+2026-09-12 [prnewswire    ] Agog-Supported Works Win Two of Three Immersive Prizes at the 83rd Venice International Film Festival
+2026-09-12 [prnewswire    ] Ajman Department of Tourism, Culture &amp; Media Showcases Emirate's Tourism Offerings at Arabian Travel Market 2026
+2026-09-12 [prnewswire    ] Allstream Energy Partners Nominated in Multiple Categories for Fast Company's Best Workplaces for Innovators
+2026-09-12 [prnewswire    ] CBE's 233 MW Kamoa Project Comes Online with AIKO ABC Modules
+2026-09-12 [prnewswire    ] Endodontist Expert Dr. Christopher Joubert Explains What Endodontic Care Is and How It Protects Natural Teeth in HelloNation
+2026-09-12 [prnewswire    ] GAC AION UT Wins Best Exterior Design at the 2026 Torino Automotive Design Award
+2026-09-12 [prnewswire    ] HIMS Investors Have Opportunity to Lead Hims &amp; Hers Health, Inc. Securities Fraud Lawsuit
+2026-09-12 [prnewswire    ] HVAC Expert Darrin Monks Explains How Dry Air Impacts Indoor Air Quality and Health in Colorado Homes in HelloNation
+2026-09-12 [prnewswire    ] Larry Ellison Cancels His Plan to Sell Oracle Stock
+2026-09-12 [prnewswire    ] Pizza Experts Kelly and Brian Glynn Explain How Pizza Brings People Together in HelloNation
+2026-09-12 [prnewswire    ] PureHealth Research Highlights Targeted Nutritional Support for Digestive Comfort With Acid Reflux Supplements
+2026-09-12 [prnewswire    ] QBTS Investor Reminder: Kessler Topaz Meltzer &amp; Check, LLP Encourages QBTS Investors with Losses to Contact the Firm
+2026-09-12 [prnewswire    ] The Simply Good Foods Company (SMPL) Class Action Lawsuit Seeks Recovery for Investors; October 13, 2026, Deadline - Contact Kessler Topaz Meltzer &am
+2026-09-12 [prnewswire    ] USPS Salutes the U.S. Coast Guard Academy's 150 Years
+2026-09-12 [scmp          ] 39 pupils and staff fall ill after eating school lunches in Sha Tin
+2026-09-12 [scmp          ] A symbol of harmony: Chinese scientists discover earliest dragon-phoenix pairing in ancient tomb
+2026-09-12 [scmp          ] A year after lawmakers veto equality bill, LGBTQ Hongkongers still hope for change
+2026-09-12 [scmp          ] Anthropic boss Amodei calls for AI slowdown, Altman and Musk agree
+2026-09-12 [scmp          ] Bodies from Philippine ferry arrive at port after fire killed at least 76
+2026-09-12 [scmp          ] Brics members find common ground on AI, trade and alternative payment expansion
+2026-09-12 [scmp          ] Bulgaria probes explosion at weapon storage site
+2026-09-12 [scmp          ] Celine Dion makes long-awaited return to stage in Paris
+2026-09-12 [scmp          ] China urges US to ‘stop all spying’ or face retaliation, slams ‘gangster logic’
+2026-09-12 [scmp          ] Elderly couple found dead in Ma On Shan flat after foul odour reported
+2026-09-12 [scmp          ] Farage’s Reform UK gets second record £36 million donation in 48 hours
+2026-09-12 [scmp          ] French police probe if sabotage derailed train and injured 44
+2026-09-12 [scmp          ] Hong Kong Police College becomes first government unit to roll out degree course
+2026-09-12 [scmp          ] Hong Kong is lagging in the AI race – can it raise its game, and how?
+2026-09-12 [scmp          ] Hong Kong to table cooling-off period bill for beauty, fitness deals by mid-2027
+2026-09-12 [scmp          ] Hong Kong’s contemporary artists deserve a bigger stage in its museums
+2026-09-12 [scmp          ] Hong Kong’s ethnic minority groups can play key role in belt and road, summit hears
+2026-09-12 [scmp          ] Houthis hit Saudi base amid renewed fighting with Yemen government forces
+2026-09-12 [scmp          ] Iran, UAE leaders discuss de-escalation as oil supply worries spike
+2026-09-12 [scmp          ] J.D. Vance group courted Brazil’s Flavio Bolsonaro over anti-China rare earth deal: report
+2026-09-12 [scmp          ] No ‘red line’ for approving assemblies but security threats remain: police chief
+2026-09-12 [scmp          ] Police freeze HK$30 million in bank account of man who refused to share Mark Six prize
+2026-09-12 [scmp          ] Probe launched after body of mainland Chinese woman found in sea off Lamma
+2026-09-12 [scmp          ] Quality concerns prompt further tests on concrete used in 3 public housing blocks
+2026-09-12 [scmp          ] Rescue operation launched after boat begins to sink at Hung Hom
+2026-09-12 [scmp          ] Senior civil servant asked to resign over defective lifts at Queen Mary Hospital
+2026-09-12 [scmp          ] State funeral for Hong Kong’s first chief executive Tung Chee-hwa set for September 20
+2026-09-12 [scmp          ] Tung Chee-hwa had a clear vision for Hong Kong
+2026-09-12 [scmp          ] US-China decoupling could benefit other countries, China trade war game suggests
+2026-09-12 [scmp          ] Under Trump’s shadow, Brics takes step towards de-dollarisation
+2026-09-12 [scmp          ] Unvaccinated children, elderly face much higher risk of major flu complications: official
+2026-09-12 [scmp          ] Why PLA’s laser-equipped Type 19 vehicle could matter in a Taiwan conflict
+2026-09-12 [scmp          ] Will Malaysia’s Umno pull the plug on coalition partner PH?
+2026-09-12 [scmp          ] Xi tells Modi China and India bear ‘significant responsibilities’ as Global South powers
+2026-09-12 [scmp          ] ‘Woman Unknown’ wins Gold Lion at Venice Film Festival
+2026-09-12 [seekingalpha  ] ASA: Change Of Mandate For This CEF
+2026-09-12 [seekingalpha  ] Allient Inc. (ALNT) Presents at Lake Street 10th Annual Best Ideas Growth Conference - Slideshow
+2026-09-12 [seekingalpha  ] Altria Group's Recent Puffs Aren't Enough For An Upgrade
+2026-09-12 [seekingalpha  ] CBRE, BXP among real estate losers; Host Hotels & Resorts, Fermi in gainers
+2026-09-12 [seekingalpha  ] Fortum Oyj (FOJCY) Shareholder/Analyst Call - Slideshow
+2026-09-12 [seekingalpha  ] IBEX Limited 2026 Q4 - Results - Earnings Call Presentation
+2026-09-12 [seekingalpha  ] IRSA Inversiones y Representaciones Sociedad Anónima 2026 Q4 - Results - Earnings Call Presentation
+2026-09-12 [seekingalpha  ] IWP: Quality Issues, Unconvincing Returns, A Hold At Best
+2026-09-12 [seekingalpha  ] Insider trades: Nvidia, Tesla, Uber among notable names
+2026-09-12 [seekingalpha  ] Keurig Dr Pepper: Beverage Momentum And JDE Peet's Synergies Support A Buy
+2026-09-12 [seekingalpha  ] Key deals this week: META, ADI, BSP, AAPL, and more
+2026-09-12 [seekingalpha  ] Labcorp Holdings Inc. (LH) Analyst/Investor Day - Slideshow
+2026-09-12 [seekingalpha  ] Loblaw Companies Limited (L:CA) Analyst/Investor Day - Slideshow
+2026-09-12 [seekingalpha  ] MSA Safety Incorporated (MSA) Presents at Jefferies Global Industrials Conference 2026 - Slideshow
+2026-09-12 [seekingalpha  ] McDonald's: At 52-Week Lows, But I'm Still Not Interested
+2026-09-12 [seekingalpha  ] McDonald's: Take A Step Back As Comps Slow And Rivals Gain (Downgrade)
+2026-09-12 [seekingalpha  ] Millrose Properties: The Market Is Missing The Real Growth Story
+2026-09-12 [seekingalpha  ] Miraial Co., Ltd. 2027 Q2 - Results - Earnings Call Presentation
+2026-09-12 [seekingalpha  ] Murphy Oil: FCF Focus Makes A Difference Through Better Offshore Results
+2026-09-12 [seekingalpha  ] Nebius And Palantir: Implications Of The New Partnership
+2026-09-12 [seekingalpha  ] Oil tanker rates reach record highs on surging risks to Middle East shipping
+2026-09-12 [seekingalpha  ] Onward Medical N.V. 2026 Q2 - Results - Earnings Call Presentation
+2026-09-12 [seekingalpha  ] Packaging Corporation of America (PKG) Presents at Jefferies Global Industrials Conference 2026 - Slideshow
+2026-09-12 [seekingalpha  ] Power Corporation of Canada (POW:CA) Presents at Scotiabank's 27th Annual Financials Summit - Slideshow
+2026-09-12 [seekingalpha  ] SA Asks: How divided will the FOMC vote be next week on raising rates?
+2026-09-12 [seekingalpha  ] SA Asks: What are the pros and cons of allowing 23-hour US equities trading?
+2026-09-12 [seekingalpha  ] Sam Altman says OpenAI IPO not happening in 2026
+2026-09-12 [seekingalpha  ] Sonoco Products Company (SON) Presents at Jefferies Global Industrials Conference 2026 - Slideshow
+2026-09-12 [seekingalpha  ] Sonoco Products Company (SON) Presents at UBS Global Materials Conference 2026 - Slideshow
+2026-09-12 [seekingalpha  ] THG Plc 2026 Q2 - Results - Earnings Call Presentation
+2026-09-12 [seekingalpha  ] The 1-Minute Market Report, September 12,2026
+2026-09-12 [seekingalpha  ] Why EM Bonds Have Outperformed Treasuries - And The Structural Case Behind It
+2026-09-12 [seekingalpha  ] Why The Fed's Inflation Control Directly Challenges The Stock Market Narrative
+2026-09-12 [skynews       ] Celine Dion in tears during comeback concert after health battle
+2026-09-12 [skynews       ] Eagle holds first talks with Thames Water chiefs amid bailout crisis
+2026-09-12 [skynews       ] Trump calls for Irish reunification - and claims 'it will happen eventually'
+2026-09-12 [skynews       ] Woman, 54, gives birth after using embryo frozen for 22 years
+2026-09-12 [straitstimes  ] DBS wants to be ‘Asian bank for Asians’ rather than global bank: CEO Tan Su Shan
+2026-09-12 [straitstimes  ] S&P 500 ends higher as strong inflation data cements rate hike bets
+2026-09-12 [straitstimes  ] US derivatives regulator clears faster payouts for tipster awards under $6.3 million
+2026-09-12 [techcrunch    ] Anthropic CEO outlines plan to slow AI development
+2026-09-12 [techcrunch    ] Automattic confirms Mullenweg has returned as CEO after attempted ouster by board
+2026-09-12 [techcrunch    ] OpenAI’s Sam Altman says it would be ‘ill-advised’ to go public in 2026
+2026-09-12 [techcrunch    ] Revolut confirms customer data breach through fake government requests
+2026-09-12 [techcrunch    ] Tesla says it will finally unveil the second generation Roadster on October 1
+2026-09-12 [theregister   ] Dell's 52-inch enormo-monitor is a tsunami of impractical fun
+2026-09-12 [theregister   ] Nvidia's Groq acquihire is on the DOJ's radar, but it's already too late
+2026-09-12 [theregister   ] The aircraft might not be flying, but the certificate has gone on vacation
+2026-09-12 [thestreet     ] Amazon's $110 steel storage shed with an extra-wide door is at its lowest price in 30 days
+2026-09-12 [thestreet     ] Amazon's $130 farmhouse TV stand and cabinet has built-in lights
+2026-09-12 [thestreet     ] Amazon's $140 2-seat patio swing glider comes with comfy cushions
+2026-09-12 [thestreet     ] Amazon's $70 smartwatch with built-in Alexa and 24/7 health monitoring is 43% off
+2026-09-12 [thestreet     ] Analyst sets jaw-dropping Nvidia price target
+2026-09-12 [thestreet     ] Bill Ackman's playbook outpaced the S&P for two decades
+2026-09-12 [thestreet     ] Cathie Wood sells $28.7 million of megacap tech stock
+2026-09-12 [thestreet     ] China just launched a $19,170 electric vehicle
+2026-09-12 [thestreet     ] Comcast CFO warns of a rising threat as internet customers depart
+2026-09-12 [thestreet     ] Fed rate-hike odds surge as Warsh faces inflation-weary markets
+2026-09-12 [thestreet     ] Fidelity maps how 401(k) rollovers go wrong
+2026-09-12 [thestreet     ] Groceries Are Bleeding You Dry — How to Stack Coupons Like a Pro
+2026-09-12 [thestreet     ] Ikea closes another key store after barely a year
+2026-09-12 [thestreet     ] Jewelry chain closes 53 stores after shutting down 2 brands
+2026-09-12 [thestreet     ] Jim Cramer sends strong message to stock market investors
+2026-09-12 [thestreet     ] Louis Navellier is buying 3 headline-making stocks, including Google
+2026-09-12 [thestreet     ] Major pizza chain franchisee closes stores, no bankruptcy filed
+2026-09-12 [thestreet     ] Marshalls-style discount furniture chain closing most stores
+2026-09-12 [thestreet     ] Middle East, Ukraine just dealt another blow to your wallet
+2026-09-12 [thestreet     ] Morgan Stanley delivers blunt message to America’s pet owners
+2026-09-12 [thestreet     ] Morgan Stanley revamps Oracle stock price target
+2026-09-12 [thestreet     ] Morningstar’s gold vs. 5-star rating the crucial difference
+2026-09-12 [thestreet     ] Musk sent governments a message about the robot economy
+2026-09-12 [thestreet     ] Nvidia takes new role as AI’s $5 trillion bill comes due
+2026-09-12 [thestreet     ] Pepsi has a convenience-store problem that's not Coca-Cola
+2026-09-12 [thestreet     ] Popular steakhouse chain adds new deals as beef prices rise
+2026-09-12 [thestreet     ] SCHD ETF quietly beats rival VYM in total returns
+2026-09-12 [thestreet     ] Sports league’s future uncertain in Chapter 11 bankruptcy filing
+2026-09-12 [thestreet     ] The North Face has a versatile thermal quarter-zip pullover on sale for $69 at REI
+2026-09-12 [thestreet     ] Walgreens retreats as CVS quietly takes over suburban pharmacies
+2026-09-12 [thestreet     ] Walmart has a 'vintage' $69 3-tier side table with scalloped legs that's 46% off
+2026-09-12 [thestreet     ] Walmart's $500 15.6-Inch laptop with an integrated fingerprint reader is on sale for 42% off
+2026-09-12 [thestreet     ] Walmart's 3-piece patio set with rocking chairs provides comfort for just $70
+2026-09-12 [thestreet     ] Walmart's lightweight, heavy-duty 4-tier storage shelf is $40 and holds 400 pounds
+2026-09-12 [thestreet     ] Warren Buffett keeps turning to the same ETF for a reason
+2026-09-12 [thestreet     ] Zillow reports crucial housing market shift for buyers
+2026-09-12 [tomshardware  ] Apple's A20 Pro shatters Geekbench 7 single-core record — 2nm chip beats desktop Intel Core i9 and AMD Ryzen 9 by up to 32%
+2026-09-12 [tomshardware  ] Engineer turns simulated fly brain into a crypto day trader, posts downloadable sim to GitHub — 166,700 virtual neurons read candlestick charts for do
+2026-09-12 [tomshardware  ] IKEA releases new Skyrim mod that adds gloriously mundane Kallax shelving unit as your newest companion — free collab provides a drab flatpack answer 
+2026-09-12 [tomshardware  ] Iran and Houthi rebels used Anthropic's Claude AI to target US warships and build hypersonic missiles — Houthi rebels also used the bot to code ballis
+2026-09-12 [tomshardware  ] Iran could potentially reverse-engineer captured US underwater drone — several Iranian embassies mock US over capture, Navy claims lost Anduril vehicl
+2026-09-12 [tomshardware  ] Kioxia Exceria Pro G2 2TB SSD Review — Speed built to last
+2026-09-12 [tomshardware  ] Lucky PC scavenger discovers 12 RTX 3070 GPUs from the crypto mining era — cards survived years of basement storage with only minor signs of wear
+2026-09-12 [tomshardware  ] This week on Tom's Hardware Premium: September 12, 2026 — Benchmarking Qwen 3.8, the splintered compute economy and AI breakthroughs
+2026-09-12 [tomshardware  ] US Customs supervisor busted for stealing Core i7 CPUs, RAM, and hard drives from Homeland Security PCs, damage estimated at $105,800 — stolen tech sw
+2026-09-12 [tomshardware  ] We tested unofficial DLSS Multi Frame Generation support on RTX 40-series GPUs — new mod brings RTX 50-series exclusive feature to older cards, and it
+2026-09-12 [tomshardware  ] Wiki documents at least 44 instances in which Sony says you own your games as digital games ownership lawsuit progresses — project is direct assault o
+2026-09-12 [wsj           ] A Dead Father, Reincarnated With AI: Is This How We Will Remember Loved Ones Now?
+2026-09-12 [wsj           ] AI Fears Leap From Silicon Valley Into Mainstream America
+2026-09-12 [wsj           ] AI Fears Leap From Silicon Valley Into Mainstream America
+2026-09-12 [wsj           ] AI Is Powerful Enough to Crack Our Hardest Math Problems—and Kill Us All
+2026-09-12 [wsj           ] America’s Great AI Freakout Has Begun
+2026-09-12 [wsj           ] China’s Economic Troubles Reach the Mushroom Hunters of Shangri-La
+2026-09-12 [wsj           ] For most Americans, oil-fueled inflation shows up most quickly in their gas tanks. The big question is whether fuel prices will eventually start incre
+2026-09-12 [wsj           ] Heart Disease, a Historic Strength for Big Pharma, Becomes a Weakness
+2026-09-12 [wsj           ] How Energy Is Driving Inflation—and How It’s Not
+2026-09-12 [wsj           ] How Energy Is Driving Inflation—and How It’s Not
+2026-09-12 [wsj           ] I Wanted to Be a Better Human. So I Turned to AI.
+2026-09-12 [wsj           ] J&J Is in Talks to Sell Its Hips-and-Knees Business to Apollo for $20 Billion
+2026-09-12 [wsj           ] Larry Ellison Scraps Plan to Sell Up to $7.5 Billion Worth of Oracle Stock
+2026-09-12 [wsj           ] Larry Ellison Scraps Plan to Sell Up to $7.5 Billion Worth of Oracle Stock
+2026-09-12 [wsj           ] Latin American Allies Are Going All In on Trump’s Drug War
+2026-09-12 [wsj           ] News Quiz for September 12, 2026
+2026-09-12 [wsj           ] The 24 New Rules for Succeeding at Work
+2026-09-12 [wsj           ] The New Rules to Survive and Thrive at Work
+2026-09-12 [wsj           ] The Woman Fixing a Microsoft Mess With Brutal Honesty
+2026-09-12 [wsj           ] This Spanish Island Wants to Ditch Drunk British Tourists for Rich American Ones
+2026-09-12 [wsj           ] U.K.’s Reform Party Rakes In Record $97 Million Donations From Crypto World
+2026-09-12 [wsj           ] U.S. Links Chinese Satellite Imagery to Iranian Strike That Killed Three Troops
+2026-09-12 [wsj           ] Why Apple Needed to Reboot Its Health App
+2026-09-12 [wsj           ] Why Weil Gotshal’s Highest-Paid Partner Jumped to Cravath, Shocking Big Law
+2026-09-12 [wsj           ] Why Weil Gotshal’s Highest-Paid Partner Jumped to Cravath, Shocking Big Law
+2026-09-12 [yahoo_finance ] $10,000 in Tesla When It Joined the S&P 500 Would Be About $15,700 Today. An Index Fund Would Have Done Better.
+2026-09-12 [yahoo_finance ] $2.3 Billion in Daily Profits: Why Betting Against the Magnificent 7 Keeps Failing
+2026-09-12 [yahoo_finance ] 1 Cash-Producing Stock to Consider Right Now and 2 We Avoid
+2026-09-12 [yahoo_finance ] 1 Momentum  Stock for Long-Term Investors and 2 We Turn Down
+2026-09-12 [yahoo_finance ] 3 Forgotten AI Stocks That Should Rebound From Their Corrections
+2026-09-12 [yahoo_finance ] 3 High-Yield Dividend Stocks Worth Loading Up On This Month
+2026-09-12 [yahoo_finance ] 3 Unpopular Stocks with Open Questions
+2026-09-12 [yahoo_finance ] 3 Ways to Invest in Anthropic Pre-IPO
+2026-09-12 [yahoo_finance ] 300 Million People Will Delegate Shopping to AI Agents by 2030 – Teen Adoption Runs Nearly Double the Adult Rate
+2026-09-12 [yahoo_finance ] 4 Vanguard Funds With Rock-Bottom Fees That Do Most of the Work for You
+2026-09-12 [yahoo_finance ] 5 Dividend Powerhouses Yielding Above 5% That Wall Street Still Backs
+2026-09-12 [yahoo_finance ] A flawed system and one man’s hubris cost Meta shareholders $17 billion
+2026-09-12 [yahoo_finance ] AMD Just Raised the Top of the Company's 2030 Market to $3 Trillion
+2026-09-12 [yahoo_finance ] AMD’s CFO, Jean Hu, Just Announced Fantastic News for Investors
+2026-09-12 [yahoo_finance ] Adobe: After Lifting Guidance, Is the Beaten-Down Stock Ready to Break Out?
+2026-09-12 [yahoo_finance ] Advanced Micro Devices, Inc. (AMD)’s Halo Station Could Strengthen Its AI Position, but Near-Term Revenue Impact May Be Limited
+2026-09-12 [yahoo_finance ] Agentic commerce: Is Payments the winner this time?
+2026-09-12 [yahoo_finance ] Amazon Price Prediction: The Stock’s Path Toward $300 Looks Clearer
+2026-09-12 [yahoo_finance ] Anthropic’s Prisoner’s Dilemma: Dario Amodei Hits the Brakes on AI While Begging Everyone Else to Do the Same
+2026-09-12 [yahoo_finance ] Apple Health Chief Knows the Health App Needs Work
+2026-09-12 [yahoo_finance ] Apple and Taiwan Semiconductor Manufacturing Just Announced a Cutting-Edge Chip. 1 Stock Offers Far Greater Upside.
+2026-09-12 [yahoo_finance ] Apple's AI vision is tailored for the moment of AI panic
+2026-09-12 [yahoo_finance ] Apple, Taiwan Semi Lead Five Stocks Near Buy Points
+2026-09-12 [yahoo_finance ] Barclays Raises 2026 S&P 500 Target to 7,950 After Second-Quarter Earnings
+2026-09-12 [yahoo_finance ] Berkshire Hathaway Has Paid Exactly 1 Dividend Since 1965. Here's Where the Cash Goes Instead.
+2026-09-12 [yahoo_finance ] Better AI Chip Stock: Broadcom vs. Nvidia
+2026-09-12 [yahoo_finance ] Billionaire Stanley Druckenmiller Dumped Broadcom, Intel, and Micron for This Chip Stock. Here's Why.
+2026-09-12 [yahoo_finance ] Broadcom vs. Micron Technology: Which Technology Stock Is a Better Buy in 2026?
+2026-09-12 [yahoo_finance ] Broadcom's AI Chip Revenue Grew 221% Last Quarter. A $1,000 Investment a Year Ago Would Be Worth This Much Today.
+2026-09-12 [yahoo_finance ] CP Group leader tells of modernizing Boca’s Innovation Campus: ‘It became a place’
+2026-09-12 [yahoo_finance ] Chevron Already Committed $7 Billion to Venezuela. Trump Says Exxon Is Next. Here's the Big Difference Between the 2.
+2026-09-12 [yahoo_finance ] Cramer Asked Who Was Buying Gigantic Bloom Energy Calls. A Pelosi Filing Named Two of the Same Stocks Weeks Earlier.
+2026-09-12 [yahoo_finance ] David Tepper makes surprising double bet on AI's biggest bottleneck
+2026-09-12 [yahoo_finance ] Dear Bloom Energy Stock Fans, Mark Your Calendars for September 21
+2026-09-12 [yahoo_finance ] Dear Nike Stock Fans, Mark Your Calendars for September 21
+2026-09-12 [yahoo_finance ] Dow Jones Futures: Fed Rate Hike Seen As Oil, Yields Pressure Stocks; Apple, Moderna Are New Buys
+2026-09-12 [yahoo_finance ] Down 30% This Year, Is It Finally Time to Buy SoFi Stock?
+2026-09-12 [yahoo_finance ] Eli Lilly’s (LLY) GLP-1 Growth Made It a Core “Running Back” Stock for Jim Cramer
+2026-09-12 [yahoo_finance ] Elon Musk Needs Tesla to Reach a $8.5 Trillion Market Cap to Cash In. Here's How Tesla Can Reach That Valuation.
+2026-09-12 [yahoo_finance ] Elon Musk Says ‘Enormous, Free Fusion Reactor in the Sky’ Will Supply 100% of Energy Needs
+2026-09-12 [yahoo_finance ] Exxon's 2030 Targets Call for $35 Billion More in Cash Flow. Here's the Milestone That Tells You It's on Track By 2028.
+2026-09-12 [yahoo_finance ] Foxconn Just Delivered a Major Bullish Signal for Nvidia Stock
+2026-09-12 [yahoo_finance ] From LeBron James to Sydney Sweeney: Prediction Markets Launch NFL Ad Blitz
+2026-09-12 [yahoo_finance ] Goldman Sachs Is Bullish. Here Are 3 Reasons AFRM Stock Could Climb 69%.
+2026-09-12 [yahoo_finance ] Google Just Dropped a Bombshell on AI Spending — Alphabet’s $200 Billion AI Bet Is Starting to Pay Off Big
+2026-09-12 [yahoo_finance ] Google's Historic 396 MW Clean Energy Deal Just Changed the Game for 1 AI Power Play
+2026-09-12 [yahoo_finance ] How Much Do You Really Need Invested in Dividend Stocks to Replace a $25,000 Income?
+2026-09-12 [yahoo_finance ] IGLB vs LQD: Which Corporate Bond ETF Fits Your Portfolio?
+2026-09-12 [yahoo_finance ] IPG Photonics, Intel, Marvell Technology, Semtech, and Penguin Solutions Shares Are Soaring, What You Need To Know
+2026-09-12 [yahoo_finance ] If a Stock Market Crash Is Coming, History Says This 1 Move Protects Investors Every Single Time
+2026-09-12 [yahoo_finance ] Investing in the Vanguard S&P 500 ETF (VOO)? Beware of This 1 Sneaky Risk.
+2026-09-12 [yahoo_finance ] Is Ingersoll Rand Stock Underperforming the S&P 500?
+2026-09-12 [yahoo_finance ] Is Micron Stock the Next Nvidia? The Answer May Shock Investors.
+2026-09-12 [yahoo_finance ] Is NuScale Power a Millionaire Maker?
+2026-09-12 [yahoo_finance ] J.P. Morgan Closes $1.1B US Industrial Net Lease Fund
+2026-09-12 [yahoo_finance ] J.P. Morgan revamps Lithium Americas stock price target
+2026-09-12 [yahoo_finance ] JPMorgan Says Rising Bond Yields Unlikely to Derail Equities as Earnings Momentum Continues
+2026-09-12 [yahoo_finance ] Jim Cramer Couldn’t Blame Anyone Who Held These Two Elon Musk Stocks
+2026-09-12 [yahoo_finance ] Jim Cramer Discussed Taking The Long View For Chevron Corporation (NYSE:CVX)
+2026-09-12 [yahoo_finance ] Jim Cramer Flips the Script: Why Older Investors Should Ditch Growth Stocks for 30-Year Treasuries
+2026-09-12 [yahoo_finance ] Jim Cramer Highlights Affirm (AFRM) and Its Strong Merchant Network
+2026-09-12 [yahoo_finance ] Jim Cramer Names Amazon (AMZN) a “Sleep-at-Night Growth Stock”
+2026-09-12 [yahoo_finance ] Jim Cramer Provided Live Commentary For This AI Stock’s Post Earnings Share Price Movement
+2026-09-12 [yahoo_finance ] Jim Cramer Wondered Whether Microsoft Corporation (NASDAQ:MSFT) Isn’t “That” Dependent On AI
+2026-09-12 [yahoo_finance ] Jim Cramer on Why Marvell (MRVL) Plunged
+2026-09-12 [yahoo_finance ] Longevity Entrepreneur Peter Diamandis Says He’s Not Trying to Live Longer Because He’s Afraid of Dying — He’s Just Not Done Being ‘Curious’
+2026-09-12 [yahoo_finance ] Mark Zuckerberg’s Meta bet that AI would shrink its management ranks. Now it’s quietly rebuilding them
+2026-09-12 [yahoo_finance ] Meet Wall Street’s 3 Safest High-Yield Dividend Stocks
+2026-09-12 [yahoo_finance ] Meta May Overtake Google Search in Ad Revenue This Year, Bernstein Says
+2026-09-12 [yahoo_finance ] Meta’s $18 Billion Settlement Could Be the Green Light for a New AI Push
+2026-09-12 [yahoo_finance ] Michael Burry Is Staying Short Nvidia, Palantir, and Tesla, Warning of a Possible "1987-Type Fall" for AI Stocks. Should Investors Take the Bet Seriou
+2026-09-12 [yahoo_finance ] Microsoft Stock Is Flat So Far in 2026. Is a Rally Coming to End the Year?
+2026-09-12 [yahoo_finance ] Not Nvidia. Not Micron. This Dirt Cheap “Magnificent Seven” Stock Could Be the Biggest Winner of the Trillion-Dollar AI Race – Here’s the Case.
+2026-09-12 [yahoo_finance ] Nvidia (NVDA)’s 2 GW Australia AI Push Could Deepen Its Infrastructure Advantage
+2026-09-12 [yahoo_finance ] Nvidia takes new role as AI’s $5 trillion bill comes due
+2026-09-12 [yahoo_finance ] Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call
+2026-09-12 [yahoo_finance ] Palantir (PLTR)’s CEO Bets his Own Money on Ukraine’s Ousted Tech-Warfare Architect
+2026-09-12 [yahoo_finance ] Palantir Stock Remains Attractive Even After a 50% Rally in August
+2026-09-12 [yahoo_finance ] Palantir and Nvidia Are Building a Sovereign AI Stack. Who Captures More of the Economics?
+2026-09-12 [yahoo_finance ] Palantir's Growth Has Kept Accelerating, but Can the Rally Continue?
+2026-09-12 [yahoo_finance ] Predicting the Value of a $10,000 Bet on SpaceX by 2030
+2026-09-12 [yahoo_finance ] Prediction: Nvidia Will Overtake Apple in Stock Buybacks and Dividends Under New Apple CEO John Ternus
+2026-09-12 [yahoo_finance ] Prediction: Owning 100 Shares of Amazon Stock Will Turn $25,000 Into $50,000 by 2030
+2026-09-12 [yahoo_finance ] Prediction: This Tech Giant Could Be Worth Twice as Much by 2030
+2026-09-12 [yahoo_finance ] Qorvo, Qualcomm, Texas Instruments, Vishay Intertechnology, and Impinj Stocks Trade Up, What You Need To Know
+2026-09-12 [yahoo_finance ] Qualcomm Lost Apple’s Modem Business. Amazon Just Offered a $60 Billion Escape Route.
+2026-09-12 [yahoo_finance ] Should You Buy Alphabet Stock Right Now?
+2026-09-12 [yahoo_finance ] Sirius XM CEO Highlights Cash Flow Growth, New Sports Plans and Ad Expansion at Conference
+2026-09-12 [yahoo_finance ] Some Dividend Growth ETFs Are Beating the Broad Market -- Is It Sustainable?
+2026-09-12 [yahoo_finance ] Tesla (TSLA)’s China Growth Streak Hits Double Digits, But Barely
+2026-09-12 [yahoo_finance ] The $760 Billion AI Risk That Nobody Is Talking About. But Should.
+2026-09-12 [yahoo_finance ] The AI Infrastructure Stock That Could Make Investors Millionaires Is Hiding in Plain Sight, and Wall Street Isn’t Paying Attention
+2026-09-12 [yahoo_finance ] The Boring Stock That Delivered 127% Returns While Proving Slow and Steady Loses the Race
+2026-09-12 [yahoo_finance ] The Exit Path for AI Labs Is Bifurcating Again: $80B in Acquisitions vs. a Stalled IPO Pipeline
+2026-09-12 [yahoo_finance ] Tim Cook warns of US crisis: ‘I’ve never seen anything like it’ and Musk agrees. Shockproof your hard cash today
+2026-09-12 [yahoo_finance ] Veteran analyst resets Palantir price target for rest of 2026
+2026-09-12 [yahoo_finance ] Want in on Anthropic Before the IPO? Buy These 8 Stocks
+2026-09-12 [yahoo_finance ] Where Will Micron Be in 10 Years?
+2026-09-12 [yahoo_finance ] Where Will SoFi Stock Be in 5 Years?
+2026-09-12 [yahoo_finance ] Why AMD Stock Forecast Has Room to Run
+2026-09-12 [yahoo_finance ] Why Cathie Wood Is Selling Google and Buying More Meta Platforms Stock
+2026-09-12 [yahoo_finance ] Why Grab Stock Sank This Week
+2026-09-12 [yahoo_finance ] Why Intel Stock Surged After Trump Promised $5,000 to Every American
+2026-09-12 [yahoo_finance ] Why Power Integrations (POWI) Stock Is Trading Up Today
+2026-09-12 [yahoo_finance ] Why stocks haven't tanked despite higher bond yields: Chart of the Day
+2026-09-12 [yahoo_finance ] Zscaler Conference: AI Agents, Agentic SOC Fuel Zero-Trust Growth Ambitions
+2026-09-12 [yahoo_finance ] ‘The Oil of the Next 50 Years’ — Trump Touts AI Data Centers Delivering Wealth and Investment to Communities
+2026-09-12 [zerohedge     ] "Riyadh In Difficult Position": Saudis Shutter Critical East-West Pipeline After Drone Attacks
+2026-09-12 [zerohedge     ] "Shoulda, Coulda, Woulda": Hillary Clinton Gives Flippant Answer When Pressed On Patriot Act Support
+2026-09-12 [zerohedge     ] 'I Have To Sit With That': Gayle King's Brain Divides By Zero After Holdout Clancy Juror Revealed As Black Man
+2026-09-12 [zerohedge     ] 'Pace The Frontier': Amodei, Altman & Musk Team Up Against The AI Singularity While China Goes Full Send
+2026-09-12 [zerohedge     ] Beijing Threatens To Cancel Trump-Xi Summit If US Approves New Arms Sales To Taiwan
+2026-09-12 [zerohedge     ] Bill Maher Delivers A Brutal 9/11 Reality Check To The Left
+2026-09-12 [zerohedge     ] China's 70% EV Target Deals Another Blow To Oil Demand
+2026-09-12 [zerohedge     ] DHS Proposes Quickly Removing Visa Holders After Job Loss
+2026-09-12 [zerohedge     ] Gen Z Has No Idea What 9/11 Is
+2026-09-12 [zerohedge     ] Left-Wing Media Doxxes And Attacks Black "Rogue" Lindsay Clancy Juror
+2026-09-12 [zerohedge     ] No Secretary Bessent, We Aren't Magically Growing Our Way Out Of Debt
+2026-09-12 [zerohedge     ] President Xi Urges BRICS To Stand On "Right Side Of History", Calls For Gulf Peace
+2026-09-12 [zerohedge     ] Sweden Discovers That Deporting Immigrant Gangsters Reduces Crime...
+2026-09-12 [zerohedge     ] This Time Is Different? Earnings & Price Break 90-Year Trends
+2026-09-12 [zerohedge     ] Trump & Hegseth Try To Tie Iran To 9/11 At Pentagon Ceremony
+2026-09-12 [zerohedge     ] Trump: Houthis 'Don't Want' US In Yemen - So They're Letting Most Red Sea Shipping Through
+2026-09-12 [zerohedge     ] Tylenol Use In Pregnancy May Reduce Daughters' Fertility, Study Finds
+2026-09-12 [zerohedge     ] UK Government Reserves Two-Thirds Of Elite Jobs By Race; Leaked Doc Exposes
+2026-09-12 [zerohedge     ] Watch: 9/11 Widow Goes Off Script, Blasts Saudi Arabia For Complicity During Ground Zero Ceremony
+2026-09-12 [zerohedge     ] What Critics Keep Getting Wrong About Capitalism
+2026-09-13 [aljazeera     ] 1,400 Yemenis flee to Djibouti within 24 hours
+2026-09-13 [aljazeera     ] Houthi projectile wounds two, damages mosque in Jazan region, Saudi says
+2026-09-13 [aljazeera     ] Iran war live: Saudi Arabia and Houthis trade strikes over Bab al-Mandeb
+2026-09-13 [aljazeera     ] Iran’s Pezeshkian: ‘We are not at war with Saudi Arabia’
+2026-09-13 [aljazeera     ] Iraq seizes drone-launching platform used for targeting Saudi oil pipeline
+2026-09-13 [aljazeera     ] One dead, more than 30 missing after Vanuatu ferry sinks, PM’s office says
+2026-09-13 [aljazeera     ] Trump says he would ‘love to see’ a united Ireland during Irish visit
+2026-09-13 [aljazeera     ] Why Spain’s new Sahrawi citizenship law matters to Morocco
+2026-09-13 [aljazeera     ] Wildfire rages on Croatia’s Dalmatian Coast island of Brac
+2026-09-13 [aljazeera     ] Yemen’s Houthis seize strategic Mayun Island in Red Sea
+2026-09-13 [aljazeera     ] ‘We started to plummet’: Turbulence rocks Turkish Airlines flight
+2026-09-13 [bbc           ] They lost their jobs after posting about Charlie Kirk, but some have no regrets
+2026-09-13 [bloomberg     ] Korea Tests Global Investor Appetite With Longer Trading Hours
+2026-09-13 [chosun        ] BRICS現地通貨決済拡大も単一通貨は否定
+2026-09-13 [chosun        ] インドネシア客船が連絡途絶243人乗せ救助急行
+2026-09-13 [chosun        ] カナダがEU準加盟級接近を推進
+2026-09-13 [chosun        ] ロッテ免税店明洞本店にVALENTINOとDUVETICA出店しファッション強化
+2026-09-13 [chosun        ] 金融圏が中小零細に秋夕資金103兆ウォン供給 決済28日に延長
+2026-09-13 [chosun        ] 韓国投資証券がデータセンター共同調達提案
+2026-09-13 [cna           ] Hyundai Motor to roll out in-house driver-assist system in 2029
+2026-09-13 [cna           ] Larry Ellison cancels plan to sell Oracle stock worth up to $7.5 billion
+2026-09-13 [cna           ] OpenAI's Altman won't do IPO this year, calls AI extinction risk 'unacceptable'
+2026-09-13 [cna           ] Revolut confirms sensitive customer data breach, falling for fake government requests
+2026-09-13 [cna           ] Speculators turn net long on yen for first time since February
+2026-09-13 [digitimes     ] AI server exports to US slow; electronics parts jump 1.5 times in August
+2026-09-13 [digitimes     ] AI server tracker: Taiwan optics race beyond 1.6T
+2026-09-13 [digitimes     ] AI, 5G upgrades lift Taiwan's top three telecoms in August
+2026-09-13 [digitimes     ] China auto exports hold above 1 million as new energy shipments surge
+2026-09-13 [digitimes     ] China's robot champions can run; now they have to prove they can earn
+2026-09-13 [digitimes     ] Column: What is SLAM? The first step in Physical AI
+2026-09-13 [digitimes     ] Delays trim CAEC August sales, but UPS demand outlook stays firm
+2026-09-13 [digitimes     ] HannStar to halve panel output as layoffs and a management exit fuel closure talk
+2026-09-13 [economictimes ] 'This is the test': All eyes on US Fed to tackle high inflation
+2026-09-13 [economictimes ] 11 penny stocks rose up to 156% in just 6 months. Do you own any?
+2026-09-13 [economictimes ] Larry Ellison cancels plan to sell Oracle stock worth up to $7.5 billion
+2026-09-13 [economictimes ] Weekly Market Outlook: Can Nifty find its footing as crude, Fed policy drive markets?
+2026-09-13 [euronews      ] Europe dominates ranking of the world’s most beautiful cycling routes – these are rides to try
+2026-09-13 [euronews      ] From tiny houses to skis: This Swedish company is finding creative uses for retired wind turbines
+2026-09-13 [euronews      ] Latest news bulletin | September 13th, 2026 – Morning
+2026-09-13 [fool          ] C3.ai vs. UiPath: What Revenue Trends Between These Artificial Intelligence Companies Tell Investors
+2026-09-13 [forbes        ] Conor Benn's Rival Slams Him On X After Highlight-Reel TKO Loss
+2026-09-13 [ft            ] As Europe’s memory fades, radicalism is returning
+2026-09-13 [ft            ] Benchmarking and bonuses: why Singapore pays its politicians like bankers
+2026-09-13 [ft            ] Boom-era PE funds will fall short on promises, executives warn
+2026-09-13 [ft            ] Musk’s secretive backer builds $40bn SpaceX stake
+2026-09-13 [ft            ] Paris and Beirut push to extend UN peacekeepers’ mission in Lebanon
+2026-09-13 [ft            ] The anti-AI portfolio: fountain pens, Warhammer and film cameras
+2026-09-13 [ft            ] The perils of headphones in the office
+2026-09-13 [google_en     ] Alaska drops voter misconduct cases against American Samoans who checked 'US citizen' box - AP News
+2026-09-13 [google_en     ] Anthropic CEO Dario Amodei Urges Slowing AI Development as Altman and Musk Agree - DongA Science
+2026-09-13 [google_en     ] BigBear.ai vs. IonQ: Weighing Whether to Invest in the Artificial Intelligence Company or the Quantum Computing Giant - fool.com
+2026-09-13 [google_en     ] C3.ai vs. UiPath: What Revenue Trends Between These Artificial Intelligence Companies Tell Investors - fool.com
+2026-09-13 [google_en     ] Deputies respond to trespasser reported at ex-Vice President Kamala Harris’ Malibu home - AP News
+2026-09-13 [google_en     ] Dow Jones Futures: Fed Rate Hike Seen As Oil, Yields Pressure Stocks; Apple, Moderna Are New Buys - Investor's Business Daily
+2026-09-13 [google_en     ] Elena Rybakina beats Aryna Sabalenka to win the US Open title and punctuate her rise to No. 1 - AP News
+2026-09-13 [google_en     ] Firm Inflation Reading Pushes Fed Closer to a Rate Increase - WSJ
+2026-09-13 [google_en     ] Long-Term Treasury Yields Spike, 1- to 7-Year Yields Explode, Mortgage Rates Hit 7.12%, Bond Market Gets Spooked - Wolf Street
+2026-09-13 [google_en     ] No. 4 Texas stuns No. 1 Ohio State 24-23 after erasing 20-point 4th-quarter deficit - AP News
+2026-09-13 [google_en     ] Top AI leaders unite to warn the technology is advancing too fast - The Washington Post
+2026-09-13 [google_en     ] Yen Speculators Flip to Net Long for First Time in Seven Months; Dollar-Yen Surges to 152 Level - finance.biggo.com
+2026-09-13 [guardian      ] Albanese hits back at Pauline Hanson’s ‘nastiness’ after criticism of his mother’s use of public housing
+2026-09-13 [guardian      ] Burnham must understand Wales is ‘not a region in England’, says first minister
+2026-09-13 [guardian      ] First H5 bird flu death of endangered Australian sea lion recorded amid fears for small population
+2026-09-13 [guardian      ] Houthis claim attack on Saudi base as fighting flares with Yemeni forces
+2026-09-13 [guardian      ] Indonesian rescue crews searching for 140 people after ferry hit bad weather
+2026-09-13 [guardian      ] Live episode: how AI is reshaping our minds – podcast
+2026-09-13 [guardian      ] NSW to put strict caps on screen time in classrooms while pushing for ‘pen and paper’ learning
+2026-09-13 [guardian      ] News live: first case of bird flu in endangered Australian sea lion confirmed; WA police hunting for two men after Perth shooting
+2026-09-13 [guardian      ] One dead and more than 30 missing after ferry sinks off Vanuatu coast in rough seas
+2026-09-13 [guardian      ] The battle to save the dying heart of rural France: the village bistro
+2026-09-13 [guardian      ] UK government to offer clearer guidance on student loans after repayment row
+2026-09-13 [japantimes    ] All eyes on Warsh as rate-hike fever spreads across G7 central banks
+2026-09-13 [japantimes    ] Amodei, Altman call for slowing AI model development
+2026-09-13 [japantimes    ] Despite population decline, Rishiri Island’s kombu harvest goes on
+2026-09-13 [japantimes    ] Farage’s Reform UK raises record £72 million in 24 hours — from two crypto billionaires
+2026-09-13 [japantimes    ] Houthi advance in Yemen puts U.S. in a new bind
+2026-09-13 [japantimes    ] Japan has few cards to play one month after Putin’s isle visit
+2026-09-13 [japantimes    ] Japan’s homegrown peppers can pack an unsuspecting punch
+2026-09-13 [japantimes    ] Mbappe scores brace as Real Madrid get 4-1 victory over Rayo Vallecano
+2026-09-13 [japantimes    ] Modi forges BRICS consensus in shadow of worsening Iran war
+2026-09-13 [japantimes    ] Ruthless Rybakina dethrones Sabalenka to capture first U.S. Open crown
+2026-09-13 [japantimes    ] Saudis shut down oil pipeline as Houthis tighten grip on Red Sea shipping
+2026-09-13 [nasdaq        ] 3 Reasons SpaceX Stock Could Crash in Q4 -- and 1 Reason It Won't
+2026-09-13 [nasdaq        ] AtriCure CTO Sells 3,657 Shares
+2026-09-13 [nasdaq        ] BigBear.ai vs. IonQ: Weighing Whether to Invest in the Artificial Intelligence Company or the Quantum Computing Giant
+2026-09-13 [nasdaq        ] C3.ai vs. UiPath: What Revenue Trends Between These Artificial Intelligence Companies Tell Investors
+2026-09-13 [nasdaq        ] Cattle Rally into the Weekend
+2026-09-13 [nasdaq        ] Corn Fades Lower into Fridays Close Despite USDA Yield Cut
+2026-09-13 [nasdaq        ] Cotton Face Friday Weakness, Despite USDA Production Cut
+2026-09-13 [nasdaq        ] Dell Booked More AI Server Orders in 3 Months Than It Recorded in Total Revenue
+2026-09-13 [nasdaq        ] Futures Traders Just Dramatically Repriced the Chances of a Fed Hike Next Week
+2026-09-13 [nasdaq        ] Grab's 2026 Outlook: Scaling Its Business to Build on Profitable Growth
+2026-09-13 [nasdaq        ] Hogs Face Friday Pressure as Cash and Cutout Weaken
+2026-09-13 [nasdaq        ] Is Nu Holdings Stock a Buy, Sell, or Hold With Shares 20% Below Their 52-Week High?
+2026-09-13 [nasdaq        ] Joby Aviation Could Deliver 10x Returns for Patient Investors
+2026-09-13 [nasdaq        ] Oracle's AI Chips Ran 97.9% Utilized Last Quarter. For Nvidia, That Is What a Shortage Looks Like.
+2026-09-13 [nasdaq        ] Oracle's Larry Ellison Cancels $7.5 Bln Stock Sale Plan
+2026-09-13 [nasdaq        ] Realty Income Has a New Revenue Stream, and It's Growing Fast
+2026-09-13 [nasdaq        ] Soybeans Face Friday Pressure as USDA Increases Production
+2026-09-13 [nasdaq        ] Stocks Shake Off CPI Report and Rally on Lower Oil Prices
+2026-09-13 [nasdaq        ] Tilray Trades Below $5 With Record Fiscal Revenue on the Books. What's Holding the Stock Back?
+2026-09-13 [nasdaq        ] Wheat Faces Friday Weakness, as USDA Hikes World Wheat Stocks
+2026-09-13 [nasdaq        ] Wheat Posting Friday Losses, as USDA Hikes World Carryout
+2026-09-13 [politico      ] How to watch Sweden’s election like a pro
+2026-09-13 [prnewswire    ] BRICS countries rally to counter shocks of power politics, unilateralism: China Daily editorial
+2026-09-13 [prnewswire    ] El «Boo Bash Fall Festival» se estrenará en California el 18 de septiembre, con un huerto de calabazas inmersivo de más de 100.000 pies cuadrados en E
+2026-09-13 [prnewswire    ] Hyundai Motor Group Accelerates Autonomous Driving Innovation with AI-Powered Data Flywheel
+2026-09-13 [prnewswire    ] Red Bank Catholic High School and Conscientia Health Open New Wellness Room, Marking Expanded Commitment to Student Mental and Physical Health
+2026-09-13 [scmp          ] As Asia rapidly ages, who cares for the carers when they grow old?
+2026-09-13 [scmp          ] China bets on early port and power deals in Sudan to secure post-war economic edge
+2026-09-13 [scmp          ] China influencer exposed over fake US$150,000 flood gift; Red Cross finds only 15-cent offers
+2026-09-13 [scmp          ] China’s anti-corruption law is going global. What does it mean for overseas firms?
+2026-09-13 [scmp          ] Denisovan fossils in China reveal an ancient ‘hunting paradise’
+2026-09-13 [scmp          ] France apologises for criticising US’ human rights record after backlash
+2026-09-13 [scmp          ] HKIS paid substantial amount to US church co-founder to end ‘bad marriage’: source
+2026-09-13 [scmp          ] Hong Kong mourns Mao Zedong’s death in 1976 –  SCMP archive
+2026-09-13 [scmp          ] How to solve Hong Kong’s triple whammy: ageing population, baby dearth and job losses?
+2026-09-13 [scmp          ] India-Pakistan water row deepens after Hague court ruling
+2026-09-13 [scmp          ] Mainland Chinese HKUST student loses HK$1 million to scammer posing as official
+2026-09-13 [scmp          ] Missing Indonesian passenger ship found, 103 people rescued
+2026-09-13 [scmp          ] Shun US goods, buy local: Canadians ‘mad with America’ reshape grocery shelves
+2026-09-13 [scmp          ] The US and China are racing to build ‘self-improving AI’. Here’s what’s at stake
+2026-09-13 [scmp          ] Warming cities can’t afford to sacrifice their urban parks
+2026-09-13 [seekingalpha  ] Crestmont P/E And Market Valuation: August 2026
+2026-09-13 [seekingalpha  ] Market Valuation: Is The Market Still Overvalued?
+2026-09-13 [seekingalpha  ] Politics And The Markets 09/13/26
+2026-09-13 [seekingalpha  ] Week Ahead: BOJ And Fed May Pay Heavy Price If They Disappoint The Market
+2026-09-13 [semafor       ] How the AI apocalypse story escaped containment
+2026-09-13 [skynews       ] Search for 140 people missing from Indonesian passenger ship
+2026-09-13 [straitstimes  ] All eyes on Warsh as rate-hike fever spreads across G-7 central banks
+2026-09-13 [straitstimes  ] Can’t bear to downsize your home? Think of it as rightsizing
+2026-09-13 [straitstimes  ] He turned a home-based baking business into a thriving enterprise
+2026-09-13 [straitstimes  ] Singapore’s great mall makeover: Will investors reap the rewards?
+2026-09-13 [thestreet     ] Amazon is selling a 2-in-1 laptop and tablet for $60 that comes with a 5-piece accessories bundle
+2026-09-13 [thestreet     ] Another healthy restaurant chain has closed most of its locations
+2026-09-13 [thestreet     ] Social Security recipients may see a handy pay raise in 2027
+2026-09-13 [thestreet     ] Walmart is selling farmhouse storage cabinets that can help you get organized, starting at $60
+2026-09-13 [tomshardware  ] Build a high-end AMD gaming PC for less — Ryzen 7 9800X3D bundle includes an X870E motherboard, 32GB DDR5, AIO cooler and a game for $1,109.99
+2026-09-13 [wsj           ] A U.S. Scholar Was Invited to China. Then He Vanished.
+2026-09-13 [wsj           ] Biggest AI Rivals Agree They Need to Slow It Down
+2026-09-13 [wsj           ] Mark Carney’s Audacious Bid to Make Canada an ‘Associate Member’ of the EU
+2026-09-13 [wsj           ] Tesla Is Reclaiming the U.S. EV Market as Legacy Automakers Retreat
+2026-09-13 [yahoo_finance ] 3 Reasons SpaceX Stock Could Crash in Q4 -- and 1 Reason It Won't
+2026-09-13 [yahoo_finance ] DeepSeek Cut Its KV-Cache HBM Need 75% and SSD Need 87.5%. Micron and Sandisk Investors Should Pay Attention
+2026-09-13 [yahoo_finance ] Dell Booked More AI Server Orders in 3 Months Than It Recorded in Total Revenue
+2026-09-13 [yahoo_finance ] Forget the S&P 500: 3 Unloved Parts of the Market Are Winning in 2026 and These Vanguard ETFs Own Them Cheap
+2026-09-13 [yahoo_finance ] Futures Traders Just Dramatically Repriced the Chances of a Fed Hike Next Week
+2026-09-13 [yahoo_finance ] Hyundai Motor Group Accelerates Autonomous Driving Innovation with AI-Powered Data Flywheel
+2026-09-13 [yahoo_finance ] If It Delivers Profit, Boeing (BA)’s Defense Franchise Can Buffer Its Commercial Recovery
+2026-09-13 [yahoo_finance ] Is Nu Holdings Stock a Buy, Sell, or Hold With Shares 20% Below Their 52-Week High?
+2026-09-13 [yahoo_finance ] Joby Aviation Could Deliver 10x Returns for Patient Investors
+2026-09-13 [yahoo_finance ] Louis Navellier is buying 3 headline-making stocks, including Google
+2026-09-13 [yahoo_finance ] MP Materials Nears NdPr Target, Eyes GM Magnet Deliveries by Year-End
+2026-09-13 [yahoo_finance ] Oracle's AI Chips Ran 97.9% Utilized Last Quarter. For Nvidia, That Is What a Shortage Looks Like.
+2026-09-13 [yahoo_finance ] Realty Income Has a New Revenue Stream, and It's Growing Fast
+2026-09-13 [zerohedge     ] Florida's Attorney General Sues Netflix For Allegedly Harvesting, Selling Children's Data
+2026-09-13 [zerohedge     ] How Romania Came To Host A Post-9/11 CIA Black Site & Got US Cash Bonanza
+2026-09-13 [zerohedge     ] Making The World Great One Nation At A Time
+2026-09-13 [zerohedge     ] US Limits Its Air Defense Coverage For Tankers Sailing Through Hormuz: Report
+2026-09-13 [zerohedge     ] West Virginia Joins Nuclear Campus Race With Waste Storage In Focus

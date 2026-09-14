@@ -1,0 +1,38 @@
+[macro_us] fredapi not installed — using requests REST fallback. `pip install fredapi` 하면 더 빠름.
+[macro_us] us_10y (DGS10): 249 obs
+[macro_us] us_2y (DGS2): 249 obs
+[macro_us] us_30y (DGS30) failed: FRED API 502 for DGS30: <html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+</body>
+</html>
+
+[macro_us] us_5y (DGS5): 249 obs
+[macro_us] fed_funds (DFF): 364 obs
+[macro_us] cpi (CPIAUCSL): 12 obs
+[macro_us] core_cpi (CPILFESL) failed: FRED API 502 for CPILFESL: <html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+</body>
+</html>
+
+[macro_us] unemployment (UNRATE): 12 obs
+[macro_us] vix (VIXCLS): 257 obs
+[macro_us] dxy (DTWEXBGS): 248 obs
+[macro_us] real_10y (DFII10): 249 obs
+[macro_us] m2 (M2SL): 12 obs
+[macro_us] hy_oas (BAMLH0A0HYM2): 263 obs
+[macro_us] ig_oas (BAMLC0A0CM): 263 obs
+[macro_us] breakeven_10y (T10YIE): 250 obs
+[macro_us] nfci (NFCI) failed: FRED API 502 for NFCI: <html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+</body>
+</html>
+
+[macro_us] rrp (RRPONTSYD): 249 obs
+[macro_us] fed_assets (WALCL): 52 obs
+[macro_us] sofr (SOFR): 249 obs

@@ -1,0 +1,26 @@
+(via NEWS API @ https://impolite-coherent-props.ngrok-free.dev)
+🔎 FTS [최근 1일/해외만/AND] MATCH: ("AI slowdown")
+   매칭 33건 (BM25 관련도순 상위 15)
+====================================================================================================
+  Mon, 14 Se [yahoo_finance] [본문] Dow Jones Futures: Techs Tumble As Anthropic Leads Call For AI Slowdown; Fed Meeting Ahead
+        …  … Techs Tumble As Anthropic Leads Call For 《AI Slowdown》; Fed Meeting Ahead … 
+  Mon, 14 Se [yahoo_finance] [본문] Dow Jones Futures Fall, Techs Tumble As Anthropic Leads Call For AI Slowdown; Fed Meeting Ahead
+        … Dow Jones Futures Fall, Techs Tumble As Anthropic Leads Call For 《AI》 … 
+  Sun, 13 Se [          wsj] [제목만] Opinion | The Great AI Slowdown?
+  Mon, 14 Se [    google_en] [제목만] Trump resists AI slowdown as the political tide turns - The Washington Post
+  Sat, 12 Se [    google_en] [제목만] Anthropic boss calls for AI slowdown, Altman and Musk agree - France 24
+  Sat, 12 Se [    google_en] [제목만] ‘We must slow the pace’: CEO of Anthropic calls for an AI slowdown - The Guardian
+  Mon, 14 Se [    google_en] [제목만] What Anthropic CEO Dario Amodei Argued in His Call for AI Slowdown - The New York Times
+  Sun, 13 Se [           ft] [제목만] Trump rejects calls from tech bosses for AI slowdown
+  Sun, 13 Se [          wsj] [제목만] Anthropic’s Amodei Calls for AI Slowdown
+  Mon, 14 Se [    google_en] [제목만] Dow Jones Futures Fall, Techs Tumble As Anthropic Leads Call For AI Slowdown; Fed Meeting Ahead - Investor's Business Daily
+  Thu, 10 Se [cointelegraph] [제목만] Metaplanet equity backlash, SE Asia crypto funding doubles: Asia Express
+        … Crypto’s biggest week ever? Swarm fears prompt 《AI slowdown》: Hodler’s … 
+  Fri, 11 Se [cointelegraph] [제목만] Bitcoin ETF outflows accelerate as investors pull $449M in three days
+        … Crypto’s biggest week ever? Swarm fears prompt 《AI slowdown》: Hodler’s … 
+  Fri, 11 Se [cointelegraph] [제목만] Blockstream rejects ransom as Liquid hackers hold nearly 600 BTC
+        … Crypto’s biggest week ever? Swarm fears prompt 《AI slowdown》: Hodler’s … 
+  Fri, 11 Se [cointelegraph] [제목만] Metaplanet cuts Series 10 stock pool by 41%, plans Hong Kong subsidiary
+        … Crypto’s biggest week ever? Swarm fears prompt 《AI slowdown》: Hodler’s … 
+  Fri, 11 Se [cointelegraph] [제목만] Bitcoin buyers wary of July sub-$58K floor amid onchain data ‘anomaly’
+        … Crypto’s biggest week ever? Swarm fears prompt 《AI slowdown》: Hodler’s … 

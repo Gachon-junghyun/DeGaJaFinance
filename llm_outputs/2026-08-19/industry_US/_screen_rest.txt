@@ -1,0 +1,82 @@
+############ SECTOR=Industrials ############
+스캔: sector='Industrials' 50종 (광기 보유 0종 교차표시) ...
+가격 확보 50/50종
+
+# US 셋업 스크리너 — 2026-08-19  (sector='Industrials', 50 모수, 바구니별 ≤8, 섹터캡 해제(단일섹터))
+# ⚠️ raw 후보(턴 미확정) — CHART_READ·STRUCTURE GATE·기업분석이 다운스트림에서 거른다. 매수신호 아님.
+
+## A. 리더 눌림목 (leader pullback) — 추세상단·rsi<45·50DMA근접  (4)
+  TICKER    RSI  px/200  ~50DMA  ~52wL  flags  sector
+  PCAR     37.9     +9%     +2%   +39%  🆕신규        Industrials
+  GWW      42.5    +15%     -1%   +44%  🆕신규        Industrials
+  DAL      41.0    +17%     -3%   +53%  🆕신규        Industrials
+  UAL      43.0    +10%     -4%   +39%  🆕신규        Industrials
+
+## B. 디레이트 스냅백 (de-rate snapback) — 추세하단·px/200≤-12%·rsi 30~52  (0)
+  (없음)
+
+## C. 워시아웃 옥탄 (washout) — rsi<28·52주저점 근접  (0)
+  (없음)
+
+→ 🆕 신규 발굴(기존 9개·보유 밖): 4종 — PCAR GWW DAL UAL
+→ 이 티커들을 snapshot_universe.py argv 에 넣어 헌트 후보로 승격(CHART_READ→기업분석).
+############ SECTOR=Materials ############
+스캔: sector='Materials' 12종 (광기 보유 0종 교차표시) ...
+가격 확보 12/12종
+
+# US 셋업 스크리너 — 2026-08-19  (sector='Materials', 12 모수, 바구니별 ≤8, 섹터캡 해제(단일섹터))
+# ⚠️ raw 후보(턴 미확정) — CHART_READ·STRUCTURE GATE·기업분석이 다운스트림에서 거른다. 매수신호 아님.
+
+## A. 리더 눌림목 (leader pullback) — 추세상단·rsi<45·50DMA근접  (1)
+  TICKER    RSI  px/200  ~50DMA  ~52wL  flags  sector
+  CTVA     28.9     +4%     -3%   +30%  🆕신규        Materials
+
+## B. 디레이트 스냅백 (de-rate snapback) — 추세하단·px/200≤-12%·rsi 30~52  (1)
+  TICKER    RSI  px/200  ~50DMA  ~52wL  flags  sector
+  CRH      48.6    -15%     -8%    +2%  🆕신규        Materials
+
+## C. 워시아웃 옥탄 (washout) — rsi<28·52주저점 근접  (0)
+  (없음)
+
+→ 🆕 신규 발굴(기존 9개·보유 밖): 2종 — CTVA CRH
+→ 이 티커들을 snapshot_universe.py argv 에 넣어 헌트 후보로 승격(CHART_READ→기업분석).
+############ SECTOR=Communication Services ############
+스캔: sector='Communication Services' 13종 (광기 보유 0종 교차표시) ...
+가격 확보 12/13종
+
+# US 셋업 스크리너 — 2026-08-19  (sector='Communication Services', 13 모수, 바구니별 ≤8, 섹터캡 해제(단일섹터))
+# ⚠️ raw 후보(턴 미확정) — CHART_READ·STRUCTURE GATE·기업분석이 다운스트림에서 거른다. 매수신호 아님.
+
+## A. 리더 눌림목 (leader pullback) — 추세상단·rsi<45·50DMA근접  (0)
+  (없음)
+
+## B. 디레이트 스냅백 (de-rate snapback) — 추세하단·px/200≤-12%·rsi 30~52  (0)
+  (없음)
+
+## C. 워시아웃 옥탄 (washout) — rsi<28·52주저점 근접  (0)
+  (없음)
+
+→ 🆕 신규 발굴(기존 9개·보유 밖): 0종 — 없음
+→ 이 티커들을 snapshot_universe.py argv 에 넣어 헌트 후보로 승격(CHART_READ→기업분석).
+############ SECTOR=Consumer Staples ############
+스캔: sector='Consumer Staples' 19종 (광기 보유 0종 교차표시) ...
+가격 확보 19/19종
+
+# US 셋업 스크리너 — 2026-08-19  (sector='Consumer Staples', 19 모수, 바구니별 ≤8, 섹터캡 해제(단일섹터))
+# ⚠️ raw 후보(턴 미확정) — CHART_READ·STRUCTURE GATE·기업분석이 다운스트림에서 거른다. 매수신호 아님.
+
+## A. 리더 눌림목 (leader pullback) — 추세상단·rsi<45·50DMA근접  (3)
+  TICKER    RSI  px/200  ~50DMA  ~52wL  flags  sector
+  CCEP     38.3    +12%     +3%   +26%  🆕신규        Consumer Staples
+  SYY      41.9     +5%     +1%   +20%  🆕신규        Consumer Staples
+  PM       44.7    +10%     +2%   +31%  🆕신규        Consumer Staples
+
+## B. 디레이트 스냅백 (de-rate snapback) — 추세하단·px/200≤-12%·rsi 30~52  (0)
+  (없음)
+
+## C. 워시아웃 옥탄 (washout) — rsi<28·52주저점 근접  (1)
+  TICKER    RSI  px/200  ~50DMA  ~52wL  flags  sector
+  MNST      7.7    -41%    -46%    +4%  🆕신규        Consumer Staples
+
+→ 🆕 신규 발굴(기존 9개·보유 밖): 4종 — CCEP SYY PM MNST
+→ 이 티커들을 snapshot_universe.py argv 에 넣어 헌트 후보로 승격(CHART_READ→기업분석).

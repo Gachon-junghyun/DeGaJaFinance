@@ -1,0 +1,527 @@
+========= 20260914800145
+[rcp=20260914800145 dcm=11577688 status=200 len=2065]
+.xforms * { font-family: 돋움체;}
+.xforms_title * { font-size: 13pt; padding : 0 0 10 0;}
+.xforms table {
+ font-size: 10px;
+ padding:0px;
+ border-collapse:collapse;
+ color: #3D3D3D;
+}
+.xforms td {
+ padding-left:0px;
+ padding-top:0px;
+ border-collapse:collapse;
+ line-height:22px;
+ color: #3D3D3D;
+ /*text-align:right;*/
+ vertical-align:middle;
+ border: 1px solid #7f7f7f;
+}
+.xforms span {
+ /*display: inline-block;*/
+ padding-left:3px;
+ padding-right: 1px;
+ line-height:22px;
+ padding-top:0px;
+ padding-bottom:0px;
+ text-align:left;
+ vertical-align:middle;
+ border: 0px solid #DBDBDB;
+}
+.xforms.img{
+ border : 0px;
+}
+.xforms a:link {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms a:active {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms a:visited {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms A:hover {
+ color:008BE3;
+ text-decoration: none;
+}
+.xforms_input{
+ border: 0px solid #DBDBDB;
+ padding-left:3px;
+ padding-right: 1px;
+ height:22px;
+ padding-top:0px;
+ padding-bottom:0px;
+ text-align:left;
+}
+ 씨케이솔루션/기타 경영사항(자율공시)(종속회사의 주요경영사항)/(2026.09.14)기타 경영사항(자율공시)(종속회사의 주요경영사항) 
+ 기타 경영사항(자율공시)(종속회사의 주요경영사항) 
+ 종속회사인 
+ CK AMERICA,INC 
+ 의 주요경영사항 신고 
+ 1. 제목 
+ SPE LFP ESS 365Ah 계약 체결 
+ 2. 주요내용 
+ 당사의 해외종속회사인 CK AMERICA,INC는 2026년 9월 11일 StarPlus Energy LLC와 SPE LFP ESS 365Ah계약을 체결하였습니다. 
+ 1. 계약상대: StarPlus Energy LLC 2. 계약금액(원): 약 57,141,140,000 3. 최근매출액(원): 291,009,514,864 4. 매출액대비(%): 약 19.64 5. 계약기간: 2026-09-11 ~ 2027-12-31 6. 판매ㆍ공급지역: 미국 
+ 3. 결정(확인)일자 
+ 2026-09-11 
+ 4. 기타 투자판단과 관련한 중요사항 
+ 1) 상기 2. 주요내용의 계약금액은 USD 42,700,000을 계약일인 2026년 09월 11일 서울외국환중개 최초고시매매기준율(USD/KRW 1,338.20)을 적용하여 환산한 금액입니다. 2) 상기 2.주요내용의 '최근매출액'은 2025년도말 연결재무제표 기준입니다. 3) 상기2. 주요내용의 계약금액은 부가세 제외 금액입니다. 4) 공사기간, 계약금액은 공사진행 과정상 변동될 수 있습니다. 
+ ※ 관련공시 
+ - 
+ [종속회사에 관한 사항] 
+ 종속회사명 
+ CK AMERICA,INC 
+ 영문 
+ CK AMERICA,INC 
+ - 대표자 
+ 류호철 
+ - 주요사업 
+ DR/CR/특수설비 설계 및 시공 
+ - 주요종속회사 여부 
+ 해당 
+ 종속회사의 자산총액(원) 
+ 23,490,362,602 
+ 지배회사의 연결 자산총액(원) 
+ 211,303,631,821 
+ 지배회사의 연결 자산총액 대비(%) 
+ 11.12
+========= 20260831800133
+[rcp=20260831800133 dcm=11559313 status=200 len=2717]
+.xforms * { font-family: 돋움체;}
+.xforms_title * { font-size: 13pt; padding : 0 0 10 0;}
+.xforms table {
+ font-size: 10px;
+ padding:0px;
+ border-collapse:collapse;
+ color: #3D3D3D;
+}
+.xforms td {
+ padding-left:0px;
+ padding-top:0px;
+ border-collapse:collapse;
+ line-height:22px;
+ color: #3D3D3D;
+ /*text-align:right;*/
+ vertical-align:middle;
+ border: 1px solid #7f7f7f;
+}
+.xforms span {
+ /*display: inline-block;*/
+ padding-left:3px;
+ padding-right: 1px;
+ line-height:22px;
+ padding-top:0px;
+ padding-bottom:0px;
+ text-align:left;
+ vertical-align:middle;
+ border: 0px solid #DBDBDB;
+}
+.xforms.img{
+ border : 0px;
+}
+.xforms a:link {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms a:active {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms a:visited {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms A:hover {
+ color:008BE3;
+ text-decoration: none;
+}
+.xforms_input{
+ border: 0px solid #DBDBDB;
+ padding-left:3px;
+ padding-right: 1px;
+ height:22px;
+ padding-top:0px;
+ padding-bottom:0px;
+ text-align:left;
+}
+ 씨케이솔루션/단일판매ㆍ공급계약체결/(2026.08.31)단일판매ㆍ공급계약체결 
+ 정정신고(보고) 
+ 정정일자 
+ 2026-08-31 
+ 1. 정정관련 공시서류 
+ 단일판매ㆍ공급계약 체결 
+ 2. 정정관련 공시서류제출일 
+ 2026-06-29 
+ 3. 정정사유 
+ 계약금액 및 계약기간 변경, 프로젝트 종료에 따른 보고 
+ 4. 정정사항 
+ 정정항목 
+ 정정전 
+ 정정후 
+ 2. 계약내역 -계약금액(원) 
+ 24,886,499,008 
+ 7,554,276,091 
+ 2.계약내역 -매출액대비(%) 
+ 8.41 
+ 2.55 
+ 5.계약기간 -종료일 
+ - 
+ 2026-08-31 
+ 9. 기타 투자판단과 관련한 중요사항 
+ 1) 상기 계약내역 중 확정 계약 금액은 USD 16,906,589.00이며, 계약일인 2025년 11월 24일 서울외국환중개 최초고시 매매기준율(USD/KRW 1,472.00)을 적용하여 환산한 금액입니다. 2) 계약내역의 최근매출액은 2024년도말 연결재무제표 기준입니다. 3) 공사기간, 계약금액은 공사진행 과정상 변동될 수 있습니다. 4)해당계약의 주체는 CK AMERICA,INC이고, 해당 기업은 당사 (주)씨케이솔루션의 종속기업입니다. 
+ 1) 상기 계약내역 중 확정 계약 금액은 USD 5,131,981.04이며, 계약일인 2025년 11월 24일 서울외국환중개 최초고시 매매기준율(USD/KRW 1,472.00)을 적용하여 환산한 금액입니다. 2) 계약내역의 최근매출액은 2024년도말 연결재무제표 기준입니다. 3)해당계약의 주체는 CK AMERICA,INC이고, 해당 기업은 당사 (주)씨케이솔루션의 종속기업입니다. 
+ - 
+ 단일판매ㆍ공급계약 체결 
+ 1. 판매ㆍ공급계약 구분 
+ 공사수주 
+ - 체결계약명 
+ L-H Battery Ohio Project_BP3-2 UT Hook-up Mechanical Work 
+ 2. 계약내역 
+ 계약금액(원) 
+ 7,554,276,091 
+ 최근매출액(원) 
+ 295,772,527,163 
+ 매출액대비(%) 
+ 2.55 
+ 대규모법인여부 
+ 미해당 
+ 3. 계약상대 
+ L-H Battery Company, Inc. 
+ - 회사와의 관계 
+ - 
+ 4. 판매ㆍ공급지역 
+ 미국 
+ 5. 계약기간 
+ 시작일 
+ 2025-11-24 
+ 종료일 
+ 2026-08-31 
+ 6. 주요 계약조건 
+ 계약금ㆍ선급금 유무 
+ 유 
+ 대금지급 조건 등 
+ 본 계약은 진행률에 따라 대금지급 예정 
+ 7. 계약(수주)일자 
+ 2025-11-24 
+ 8. 공시유보 관련내용 
+ 유보사유 
+ - 
+ 유보기한 
+ - 
+ 9. 기타 투자판단과 관련한 중요사항 
+ 1) 상기 계약내역 중 확정 계약 금액은 USD 5,131,891.04이며, 계약일인 2025년 11월 24일 서울외국환중개 최초고시 매매기준율(USD/KRW 1,472.00)을 적용하여 환산한 금액입니다. 2) 계약내역의 최근매출액은 2024년도말 연결재무제표 기준입니다. 3)해당계약의 주체는 CK AMERICA,INC이고, 해당 기업은 당사 (주)씨케이솔루션의 종속기업입니다. 
+ ※ 관련공시 
+ 2025-11-25 단일판매ㆍ공급계약체결 2026-06-29 단일판매ㆍ공급계약체결
+========= 20260902800207
+[rcp=20260902800207 dcm=11563949 status=200 len=1571]
+.xforms * { font-family: 돋움체;}
+.xforms_title * { font-size: 13pt; padding : 0 0 10 0;}
+.xforms table {
+ font-size: 10px;
+ padding:0px;
+ border-collapse:collapse;
+ color: #3D3D3D;
+}
+.xforms td {
+ padding-left:0px;
+ padding-top:0px;
+ border-collapse:collapse;
+ line-height:22px;
+ color: #3D3D3D;
+ /*text-align:right;*/
+ vertical-align:middle;
+ border: 1px solid #7f7f7f;
+}
+.xforms span {
+ /*display: inline-block;*/
+ padding-left:3px;
+ padding-right: 1px;
+ line-height:22px;
+ padding-top:0px;
+ padding-bottom:0px;
+ text-align:left;
+ vertical-align:middle;
+ border: 0px solid #DBDBDB;
+}
+.xforms.img{
+ border : 0px;
+}
+.xforms a:link {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms a:active {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms a:visited {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms A:hover {
+ color:008BE3;
+ text-decoration: none;
+}
+.xforms_input{
+ border: 0px solid #DBDBDB;
+ padding-left:3px;
+ padding-right: 1px;
+ height:22px;
+ padding-top:0px;
+ padding-bottom:0px;
+ text-align:left;
+}
+ DKME/소송 등의 제기ㆍ신청(경영권 분쟁 소송)/(2026.09.02)소송 등의 제기ㆍ신청(경영권 분쟁 소송) 
+ 소송 등의 제기ㆍ신청(경영권 분쟁 소송) 
+ 1. 사건의 명칭 
+ 임시지위를 구하는 가처분 즉시항고 
+ 사건번호 
+ 2026카합1009 
+ 2. 원고(신청인) 
+ 김○○ 
+ 3. 청구내용 
+ 채권자 : 김○○ 채무자 : 1. 디케이엠이 주식회사 
+ 2. 백○○ 
+ 3. 김○○ [항고취지] 원 결정을 취소하고 다시 상당한 재판을 구합니다. 
+ 4. 관할법원 
+ 울산지방법원 
+ 5. 향후대책 
+ 당사는 법적 절차에 따라 대응할 예정입니다. 
+ 6. 제기ㆍ신청일자 
+ 2026-09-01 
+ 7. 확인일자 
+ 2026-09-02 
+ 8. 기타 투자판단과 관련한 중요사항 
+ - 상기 '7. 확인일자'는 당사가 소송대리인으로부터 해당 항고장을 수령하여 확인한 일자입니다. 
+ ※관련공시 
+ 2026-08-20 소송등의판결ㆍ결정
+========= 20260828800365
+[rcp=20260828800365 dcm=11557204 status=200 len=1773]
+.xforms * { font-family: 돋움체;}
+.xforms_title * { font-size: 13pt; padding : 0 0 10 0;}
+.xforms table {
+ font-size: 10px;
+ padding:0px;
+ border-collapse:collapse;
+ color: #3D3D3D;
+}
+.xforms td {
+ padding-left:0px;
+ padding-top:0px;
+ border-collapse:collapse;
+ line-height:22px;
+ color: #3D3D3D;
+ /*text-align:right;*/
+ vertical-align:middle;
+ border: 1px solid #7f7f7f;
+}
+.xforms span {
+ /*display: inline-block;*/
+ padding-left:3px;
+ padding-right: 1px;
+ line-height:22px;
+ padding-top:0px;
+ padding-bottom:0px;
+ text-align:left;
+ vertical-align:middle;
+ border: 0px solid #DBDBDB;
+}
+.xforms.img{
+ border : 0px;
+}
+.xforms a:link {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms a:active {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms a:visited {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms A:hover {
+ color:008BE3;
+ text-decoration: none;
+}
+.xforms_input{
+ border: 0px solid #DBDBDB;
+ padding-left:3px;
+ padding-right: 1px;
+ height:22px;
+ padding-top:0px;
+ padding-bottom:0px;
+ text-align:left;
+}
+ 한화엔진/단일판매ㆍ공급계약체결/(2026.08.28)단일판매ㆍ공급계약체결 
+ 단일판매ㆍ공급계약 체결 
+ 1. 판매ㆍ공급계약 구분 
+ 기타 판매ㆍ공급계약 
+ - 체결계약명 
+ 선박용 엔진 
+ 2. 계약내역 
+ 계약금액(원) 
+ 128,936,583,600 
+ 최근매출액(원) 
+ 1,371,057,336,146 
+ 매출액대비(%) 
+ 9.4 
+ 대규모법인여부 
+ 미해당 
+ 3. 계약상대 
+ 한화오션(주) 
+ - 회사와의 관계 
+ 계열회사 
+ 4. 판매ㆍ공급지역 
+ 국내 
+ 5. 계약기간 
+ 시작일 
+ 2026-08-28 
+ 종료일 
+ 2029-10-08 
+ 6. 주요 계약조건 
+ 계약금ㆍ선급금 유무 
+ 유 
+ 대금지급 조건 등 
+ 선수금 20%, 잔금 80% 
+ 7. 계약(수주)일자 
+ 2026-08-28 
+ 8. 공시유보 관련내용 
+ 유보사유 
+ - 
+ 유보기한 
+ - 
+ 9. 기타 투자판단과 관련한 중요사항 
+ 1. 상기 계약은 한화오션(주)이 건조 예정인 선박에 엔진을 공급하는 계약임 2. 상기 2항의 최근매출액은 2025년말 연결재무제표 기준임 3. 상기 2항의 계약금액은 계약체결일의 매매기준환율 (1,380.30원/USD)을 적용하여 계산한 금액임 4. 상기 5항의 계약기간은 선박 건조일정의 진행상황에 따라 변동될 수 있음 
+ ※ 관련공시 
+ -
+========= 20260901800761
+[rcp=20260901800761 dcm=11563256 status=200 len=2631]
+.xforms * { font-family: 돋움체;}
+.xforms_title * { font-size: 13pt; padding : 0 0 10 0;}
+.xforms table {
+ font-size: 10px;
+ padding:0px;
+ border-collapse:collapse;
+ color: #3D3D3D;
+}
+.xforms td {
+ padding-left:0px;
+ padding-top:0px;
+ border-collapse:collapse;
+ line-height:22px;
+ color: #3D3D3D;
+ /*text-align:right;*/
+ vertical-align:middle;
+ border: 1px solid #7f7f7f;
+}
+.xforms span {
+ /*display: inline-block;*/
+ padding-left:3px;
+ padding-right: 1px;
+ line-height:22px;
+ padding-top:0px;
+ padding-bottom:0px;
+ text-align:left;
+ vertical-align:middle;
+ border: 0px solid #DBDBDB;
+}
+.xforms.img{
+ border : 0px;
+}
+.xforms a:link {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms a:active {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms a:visited {
+ color: #194866;
+ text-decoration: none;
+}
+.xforms A:hover {
+ color:008BE3;
+ text-decoration: none;
+}
+.xforms_input{
+ border: 0px solid #DBDBDB;
+ padding-left:3px;
+ padding-right: 1px;
+ height:22px;
+ padding-top:0px;
+ padding-bottom:0px;
+ text-align:left;
+}
+ 두산에너빌리티/단일판매ㆍ공급계약체결/(2026.09.01)단일판매ㆍ공급계약체결 
+ 정정신고(보고) 
+ 정정일자 
+ 2026-09-01 
+ 1. 정정관련 공시서류 
+ 단일판매ㆍ공급계약 체결 
+ 2. 정정관련 공시서류제출일 
+ 2026-09-01 
+ 3. 정정사유 
+ 계약기간 종료일 변경 
+ 4. 정정사항 
+ 정정항목 
+ 정정전 
+ 정정후 
+ 계약기간 종료일 
+ - 
+ 2027-03-31 
+ 9. 기타 투자판단과 관련한 중요사항 
+ - 상기 5항의 계약기간 중 시작일은 납기 기산일임 . 납기 기산일 : NTP(Notice to Proceed) 발급 예상일 . 납기 종료일 : 미정 - 현재 발주처와 변경계약 협의 중이며 계약기간 종료일이 변경될 예정임. 이에 따라, 계약기간 종료일을 미정으로 정정하며, 변경계약 확정 이후 확정된 종료일로 정정하여 공시 예정임. 
+ - 상기 5항의 계약기간 중 시작일은 납기 기산일임. - 상기 5항의 계약기간 중 종료일은 변경계약에 따른 당사 추가 역무 종료일임. . 납기 기산일 : NTP(Notice to Proceed) 발급 예상일 . 추가 역무 종료일 : 2027-03-31 
+ - 
+ 단일판매ㆍ공급계약 체결 
+ 1. 판매ㆍ공급계약 구분 
+ 공사수주 
+ - 체결계약명 
+ Jafurah Cogeneration Plant Project 
+ 2. 계약내역 
+ 계약금액(원) 
+ 536,466,320,000 
+ 최근매출액(원) 
+ 11,283,610,608,993 
+ 매출액대비(%) 
+ 4.75 
+ 대규모법인여부 
+ 해당 
+ 3. 계약상대 
+ 한국전력공사 
+ - 회사와의 관계 
+ - 
+ 4. 판매ㆍ공급지역 
+ 사우디 아라비아 동부 Al Hofuf 지역 동쪽 65km 
+ 5. 계약기간 
+ 시작일 
+ 2022-11-30 
+ 종료일 
+ 2027-03-31 
+ 6. 주요 계약조건 
+ 계약금ㆍ선급금 유무 
+ 유 
+ 대금지급 조건 등 
+ 공사 진행에 따라 청구 및 지급 
+ 7. 계약(수주)일자 
+ 2022-09-22 
+ 8. 공시유보 관련내용 
+ 유보사유 
+ - 
+ 유보기한 
+ - 
+ 9. 기타 투자판단과 관련한 중요사항 
+ - 상기 2항의 계약금액은 발주처와 당사간의 계약 금액이며 계약일(2022.09.22) 최초 고시 매매기준 환율(1,393.60원/USD)을 적용함 
+ . 외화 계약금액 : USD 384,950,000 - 상기 2항의 최근매출액(원)은 2021년 연결손익계산서의 매출액임 - 상기 5항의 계약기간 중 시작일은 납기 기산일임. - 상기 5항의 계약기간 중 종료일은 변경계약에 따른 당사 추가 역무 종료일임. 
+ . 납기 기산일 : NTP(Notice to Proceed) 발급 예상일 
+ . 추가 역무 종료일 : 2027-03-31 - 상기의 계약금액 및 계약기간은 향후 사업진행과정에서 변경될 수 있음 - 본 계약은 발주처가 추진중인 금융조달(PJT Financing) 완료를 전제로 유효함. 
+ ※ 관련공시 
+ 2022-09-23 단일판매ㆍ공급계약체결 2025-10-15 단일판매ㆍ공급계약체결

@@ -32,6 +32,12 @@ The prompts form 5 families (desk flows); each flow is a **chain of L1 parts (st
 
 **Meta 3 layers** (the reorganization axes): `PROTOCOL (design SPEC)` → `runtime canon (KR·US language-pure)` → `stages/ (on-disk execution chain, each = one L1)`.
 
+### WEB_ERRAND — the cross-desk browser unit (repo-native, ported from the agent repo's `/errand`, 2026-08-29)
+
+| Layer | Unit | Role |
+|---|---|---|
+| L2 | [web_errand](L2_modules/web_errand.md) | Any stage that needs what the modules cannot give (login-walled page, filing exhibit, exchange screen). **Map first**: `module_webctl find` → `access=api` means a module already owns it, so no browser. One errand = one `run` batch (`goto(url, until)`, never `sleep`); read-only by default, write steps refused without an explicit human `--allow-write`; captcha/429/login wall = retreat, not an obstacle |
+
 ### HANDOVER — the cross-desk stage 0 (repo-native, no mvp ancestor)
 
 | Layer | Unit | Role |
@@ -101,22 +107,140 @@ action_bracket · drift — all born from the 2026-07-14 postmortem).
 
 ---
 
-## 2. Company (company_analysis US/KR/PROTOCOL)
+## 2. Company (company_research) — **BUILT 2026-08-21**
 
-Purpose: dissect ONE name the industry desk picked, trader's lens → a **"do we bet"** trading verdict.
-Input: one 🟢LIVE BET_SHEET name + THESIS_SEED + HORIZON. Output: `{date}/company_{ticker}/COMPANY_ANALYSIS.md`.
+Purpose: dissect ONE name, trader's lens → a **"do we bet"** verdict written into a scored ledger.
+Input: a ticker (+ optional THESIS_SEED · HORIZON). Output root `llm_outputs/{date}/company_{ticker}/`.
+**BUILT** as `protocols/company_research.md` (10 L1 blocks, compile-verified) — market-parameterized
+(`--market us|kr`), no mirrored per-market file (P3). Run stage-by-stage via
+`run_protocol.py company_research --target <TKR>`.
 
-| L1 | Phase | KR | US |
-|---|---|---|---|
-| **1** | Business model | `module_business --include-ir --include-dart` + domestic search | `module_business_us --full` + foreign search |
-| **2** | Earnings quality | `module_disclosure` + DART fnlttSinglAcntAll | `module_fundamentals_us` + SEC XBRL CompanyFacts |
-| **3** | Valuation/catalyst | `module_valuation --peers` (+ global-peer WebSearch) | `module_fundamentals_us` + yfinance multiples |
-| **4** | Technical setup | `module_chart` + **chart-analysis 11 branches** · `module_flow .KS --bench ^KS11` | `module_chart` + SMA200/MACD/ATR · `module_flow --bench SPY --positioning` |
-| verify | | `module_math_check` + adversarial self-review | same |
+| # | L1 stage | Content · calls |
+|---|---|---|
+| 0 | PULSE ☆opt-lead | same-day tape sanity if the name is moving hard today |
+| 1 | HANDOVER | carry + reject/missed ledgers + book position (the inputs gate G8 needs) |
+| 2 | FORENSIC_PACK | datapack frozen before reasoning — deepdive · money_trail · news · filing_diff · **segment_pnl** |
+| 3 | SELF_SCORE | grade the prior run's observation points (skip on first research) |
+| 4 | **DRIVER_TEST** ★new | segments → drivers (**roll-guarded**) → **which frame the tape prices it as**. Gates D1 coverage · D2 roll integrity · D3 frame attribution |
+| 5 | MONEY_FORENSIC | is the profit cash · insider/treasury · 말vs행동 괴리표 |
+| 6 | SET_DIFF | ①already-priced vs ②measured → alpha_delta / risk_unseen |
+| 7 | FALSIFY | strongest bear case first → reject/uphold with A/B evidence |
+| 8 | **BET_VERDICT** ★new | ENTER·ADD·HOLD·TRIM·EXIT·PASS + **exactly one** ledger row + dated observation points |
+| 9 | SIZE ☆opt *(reused)* | share count from the risk model |
 
-**Gates**: above-SMA200 gate · MACD/flow confirmation (no OBV-alone) · catalyst mandatory (else
-value-trap discard) · upside/|downside| ≥ 1.5 · opinion-anchoring block · double verification.
-**PROTOCOL = master SPEC; US/KR = runtime stamps.**
+**Gates**: G1 above-SMA200 · G2 confirmation (no OBV-alone; C-grade may never carry) · G3 catalyst
+mandatory (else value trap) · G4 upside/|downside| ≥ 1.5 vs a **written** stop · G5 opinion-anchoring
+block · **G6 frame gate** (a leg the peer set shares is sector beta, not name evidence) ·
+**G7 consensus-exceeded** (price > consensus TP ⇒ "cheap forward P/E" needs the next-year EPS direction
+on the same line) · **G8 position conflict** (held in the book *and* unresolved in the reject ledger ⇒
+resolve it in the file before any verdict).
+
+**Measured origin (2026-08-21, PSX).** A full module pass on Phillips 66 made four mechanical errors,
+none from missing data, all from starting at the sector label: modeled a **5-segment** company off one
+spread (Refining = **61.6%** of pre-tax income); read a **4.6σ** one-day driver drop as a margin collapse
+when leg decomposition showed a **RBOB Sep→Oct spec roll** (roll-adjusted: **−1.0% at the 92.8th
+percentile**, not −12.5%); wrote a **+18.8%/20d** move as name alpha when VLO/MPC/DINO did the same
+(corr **+0.90/+0.87/+0.77**); and quoted **+53% YoY** revenue as growth across a **50%→100%
+consolidation** of WRB. The same run found the desk holding PSX at **+21.3%** while an **unresolved
+2026-08-02 rejection** sat in the ledger — its own `--revives-if` had **not** fired (`days21-60 > 0` ✅,
+`FINRA short-vol z < 0` ❌ at **+0.98 rising**). ⇒ 3 new L3 (segment_pnl · driver_link · peer_pricing) +
+2 new L1 (driver_test · bet_verdict); the rest is reuse.
+
+**Removed from the legacy spec** (3): the **11-branch chart matrix + M1–M4** (§5 below — superseded by
+L2 indicators' measured A/B/C grade table, which grades OBV, a whole branch of it, as corroborant-only);
+the **trading_engine·alert_bot execution tail** (not in this repo; the intent-card path is `미러링`'s);
+and the standalone **valuation/catalyst phase** (it re-printed upstream tables — README §Core forbids).
+
+🚨 **Known instrument defect surfaced by this build**: `scripts/reject_ledger.py score` prices every row
+off `prices_kr_*.pkl` against a KR benchmark. The ledger is **201 rows, 100 of them US**, and those 100
+score `채점불가` **silently** — the PSX rejection was worth **+18.63pp** vs SPY and is in no class average.
+BET_VERDICT states this in-file when `--market us`. Fix = a US cache/benchmark path in
+`reject_ledger.py::_prices`/`_bench_universe` (`sector_flow --market us` already writes the cache).
+
+---
+
+## 2c. 기업분석 (기업분석) — repo-native, **BUILT 2026-08-28**
+
+**한 줄**: 같은 한 종목을 `company_research` 와 **다른 질문**으로 본다 — 저쪽은 「베팅할까」(원장 한 줄),
+이쪽은 **「이 회사가 무엇이고, 얼마가 적정하고, 지금 사야 하나」**. 끝나는 자리가 다르다:
+**목표주가 한 개 + 매수·보유·손절·재매수 실행표 + 날짜 박힌 전환신호**, 그리고 산출물이
+데스크용 `.md` 가 아니라 **사람이 읽는 Word/PDF** 다. 무거워서 매일 돌리는 물건이 아니다.
+`protocols/기업분석.md` (13 L1, compile-verified) · `run_protocol.py 기업분석 --target <코드>`.
+
+| # | L1 stage | Content · calls |
+|---|---|---|
+| 0 | PULSE ☆opt-lead | 오늘 세게 움직이면 시세 온전성부터 |
+| 1 | HANDOVER | 지난 판단 · 양쪽 원장 · 보유 포지션 |
+| 2 | FORENSIC_PACK | 결정론 팩. 🔴 **KR 반기·분기는 `thstrm_add_amount`(누계)로 읽는다** — 아래 결함 |
+| 3 | **PRIMARY_SOURCE** ★new | 브라우저로 **직접** 뜬다: 컨센 **추이** · 회사 IR PDF(부문 수주·잔고·가이던스) · 공시 **본문** |
+| 4 | SELF_SCORE | 지난 관측점 채점 |
+| 5 | **VALUE_CHAIN** ★new | 사슬 위치 · 제품과 **세어지는 해자** · 수주→매출→**현금** 시차 · 수요 근거를 「일어난 일/계획」으로 갈라 적기 |
+| 6 | DRIVER_TEST | 세그먼트 → 드라이버 → 시장이 쓰는 프레임 (D1·D2·D3) |
+| 7 | MONEY_FORENSIC | 이익이 현금인가 · 내부자·자사주 · 말vs행동 |
+| 8 | SET_DIFF | 이미 값에 든 것 vs 내가 잰 것 |
+| 9 | **VALUATION** ★new | **holdco_split → implied_expectation → target_bridge** → 목표주가 1개 + 전환신호표 |
+| 10 | FALSIFY | 곰의 주장 최대 강도 → 항목별 기각/유지 |
+| 11 | BET_VERDICT | 판정 + 원장 1행 + 관측점 (G1~G8 그대로) |
+| 12 | **PUBLISH_REPORT** ★new | `.docx`/`.pdf` 조판 → **파일이 사람 손에 닿아야 끝난다** |
+
+**새 L3 4개**: `holdco_split`(연결을 지분율로 쪼개 **가치와 이익** 양쪽에서 본체 몫을 남긴다) ·
+`estimate_revision`(컨센이 깎이는 중인가 + 과거 적중률) · `implied_expectation`(가격→가정 역산) ·
+`target_bridge`(가정→가격, 배수 사다리 + 시나리오 현재가치 → 목표주가).
+
+🔴 **§2 의 「standalone valuation phase 는 제거됐다」와 모순이 아니다 — 제거 사유가 「상류 표를 다시
+찍는다」였고, 이 VALUATION 은 상류에 «없는» 숫자를 만든다.** 그 사유를 버린 게 아니라 **조건을 만족시킨** 것이다:
+상류 어디에도 목표주가가 없고, 없는 동안 데스크는 **G4(손익비)를 증권사 컨센 목표가로** 계산하고 있었다.
+
+**Measured origin (2026-08-28, 034020 두산에너빌리티).** 결정론 팩만으로 갔으면 「선행 PER 177배인
+원전주」에서 멈췄을 실행이 네 군데서 뒤집혔다.
+① **holdco_split** — 2026E 지배순이익 3,193억 중 **2,713억(85%)이 두산밥캣(북미 소형 건설기계) 지분 몫**.
+원전 본체는 연 1,000억. **그 177배는 굴착기 이익을 분모에 섞은 값**이었다.
+② **estimate_revision** — 1년 새 영업이익 컨센 **-21%**, EPS 컨센 **-38%** 깎이는 동안 주가 **+36.1%**.
+**이익이 아니라 배수가 올렸다** — 현재값만 보면 안 보인다.
+③ **implied_expectation** — 본체 52.55조가 참이려면 본체 이익 **9~21배**, 매출 **3~4배**,
+마진 **3.7%→12~15%**. EV/수주잔고 **2.15배**(업종 0.3~0.8배).
+④ **target_bridge** — 사다리에 현재가를 올리자 본체 EV/EBITDA **74.5배**,
+**글로벌 최고가 GE Vernova(62.7배)보다 19% 비쌈**. 채택 목표 **55,000원(-37.6%)**, 그리고 컨센 목표
+129,000원 = **2028E EPS 기준 PER 103배** — 밸류에이션이 아니라 모멘텀 목표였다.
+⇒ **순서가 곧 안전장치다**: holdco_split 이 분모를 고치지 않았으면 ③④는 틀린 수를 정교하게 계산했을 것이다.
+
+🚨 **이 빌드가 드러낸 계기 결함**: `module_fundamentals_kr` 이 DART 반기·분기 손익에서
+**3개월 칸(`thstrm_amount`)**을 읽는데 현금흐름표는 **누계**라, 「OCF/영업이익」이 기간 어긋난 채 나온다
+(034020 2026 반기 — **보고값 -2.82 / 실제 -1.62**, 매출 4.72조 / 실제 8.99조). **예외가 안 나고
+그럴듯한 숫자가 나온다.** 고칠 자리 `module_fundamentals_kr/_dart_fin.py:173,192`.
+FORENSIC_PACK 이 그 함정을 in-file 로 들고 있으며, 그 L1 을 공유하는 `company_research`·`real_alpha_kr`
+도 함께 재컴파일했다.
+
+---
+
+## 2b. Company batch (company_batch) — repo-native, **BUILT 2026-08-21**
+
+**한 줄**: `company_research` 를 **N기업(기본 10) 병렬 서브에이전트**로 돌려 **한 척도 점수판**을 만들고,
+그 점수판을 **탑다운 런(industry_us)이 먹는다** — 세션에서 새로 파지 않고 **테제 확인만** 하도록.
+
+| # | L1 stage | Content · calls |
+|---|---|---|
+| 1 | BATCH_SELECT | 6개 출처 우선순위(보유무리포트 > reject due > missed due > 🟢LIVE > shortlist > 지정) + **신선도 게이트로 걸러내기**. 수확은 남긴 이름이 아니라 **거른 이름**; skip 목록은 개수와 함께 발행 |
+| 2 | BATCH_FANOUT | N 서브에이전트 **한 메시지 병렬**. 각 브리프 = 컴파일된 정본 경로 + 티커/시장 형식표 + **mandate** + 출력계약. 범위 FORENSIC_PACK→BET_VERDICT |
+| 3 | BATCH_SCORE | `company_score.py rank/axes` → `REPORT/COMPANY_SCOREBOARD.md` + `out/ic/axes/` + `report_tags update` |
+
+**환산 척도** (`scripts/company_score.py`, 가중치 단일원본): `gate_integrity 30 · evidence_grade 25 ·
+driver_quality 20 · frame_integrity 10 · reward_risk 15`, **실제로 잰 축으로만 재정규화**.
+결측은 0 이 아니라 분모에서 빠진다 — 결측을 0 으로 세면 «못 잰 것»이 «나쁜 것»이 되고, 그건
+`flow_score` 가 전 종목을 **+0.305** 부풀린 그 함정이다(2026-08-10).
+
+🚨 **점수는 미검증이다.** 가중치는 사람이 골랐고 수익과의 관계는 측정된 적 없다 ⇒ `axes` 가 이를
+`company_score` 축으로 `ic_ledger` 에 넣어 **몇 달에 걸쳐 부호를 받는다**(`n_eff<4` 판정불가, 설계대로).
+그 전까지 **트리아지 순서**이고 사이징 근거가 아니다. **점수 = 리서치 품질 / 평결 = 행동** —
+점수 높은 `PASS` 는 «잘 조사해서 안 산다»는 성공이다.
+
+**탑다운 급식 (존재 이유)**: `industry_us` L1 BET 에 **테제 확인 게이트**를 배선했다. 점수판 행이 있는
+후보는 **인용으로 확인**하고 델타만 쓴다. 다시 파는 건 5개 시험 중 하나가 깨질 때뿐 —
+나이 >10정산세션 · 관측점 도래 · 실적/8-K 발생 · 롤조정 드라이버 백분위 밴드 이탈 · 이번 런 수급 불일치.
+**확인된 이름의 BET 섹션은 짧아야 한다**; 길면 확인이 실패했거나 상류를 다시 찍는 것이다.
+
+스킬 래퍼: `company-batch` (`~/.claude/skills/company-batch/SKILL.md`).
+⚠ **새 크론 없음** — 사람이 부르거나 기존 발사기가 부른다(CLAUDE.md 규약).
 
 ---
 

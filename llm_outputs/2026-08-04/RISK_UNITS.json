@@ -1,0 +1,301 @@
+{
+  "date": "2026-08-04",
+  "bench": "SPY",
+  "threshold": 0.55,
+  "min_corr_implied": 0.45,
+  "n_days_aligned": 498,
+  "n_days_intersection_full": 748,
+  "trimmed_by_days_arg": 249,
+  "window": [
+    "2024-08-08",
+    "2026-08-04"
+  ],
+  "missing": [],
+  "calendar_loss": {
+    "AMT": 0,
+    "CBRE": 0,
+    "CCI": 0,
+    "DLR": 0,
+    "EQIX": 0,
+    "IRM": 0,
+    "O": 0,
+    "PLD": 0,
+    "PSA": 0,
+    "SPG": 0,
+    "SPY": 0,
+    "VTR": 0,
+    "WELL": 0
+  },
+  "gap_days_median": 1.0,
+  "gap_days_max": 4.0,
+  "gaps_over_4d": 0,
+  "betas_vs_bench": {
+    "AMT": -0.071,
+    "CBRE": 0.915,
+    "CCI": 0.056,
+    "DLR": 0.762,
+    "EQIX": 0.646,
+    "IRM": 0.96,
+    "O": 0.115,
+    "PLD": 0.747,
+    "PSA": 0.405,
+    "SPG": 0.723,
+    "VTR": 0.137,
+    "WELL": 0.208
+  },
+  "ari_half_vs_half": 0.3239,
+  "within_group_corr": 0.5995,
+  "between_group_corr": 0.2956,
+  "max_residual_corr": 0.8245,
+  "threshold_sweep": [
+    {
+      "threshold": 0.4,
+      "min_corr_implied": 0.6,
+      "n_units": 8,
+      "within": 0.7193
+    },
+    {
+      "threshold": 0.5,
+      "min_corr_implied": 0.5,
+      "n_units": 5,
+      "within": 0.5995
+    },
+    {
+      "threshold": 0.55,
+      "min_corr_implied": 0.45,
+      "n_units": 5,
+      "within": 0.5995
+    },
+    {
+      "threshold": 0.6,
+      "min_corr_implied": 0.4,
+      "n_units": 5,
+      "within": 0.5995
+    },
+    {
+      "threshold": 0.65,
+      "min_corr_implied": 0.35,
+      "n_units": 3,
+      "within": 0.4638
+    },
+    {
+      "threshold": 0.7,
+      "min_corr_implied": 0.3,
+      "n_units": 3,
+      "within": 0.4638
+    },
+    {
+      "threshold": 0.75,
+      "min_corr_implied": 0.25,
+      "n_units": 2,
+      "within": 0.4225
+    },
+    {
+      "threshold": 0.8,
+      "min_corr_implied": 0.2,
+      "n_units": 1,
+      "within": 0.3462
+    },
+    {
+      "threshold": 0.85,
+      "min_corr_implied": 0.15,
+      "n_units": 1,
+      "within": 0.3462
+    }
+  ],
+  "residual_corr": {
+    "AMT": {
+      "AMT": 1.0,
+      "CBRE": 0.214,
+      "CCI": 0.825,
+      "DLR": 0.239,
+      "EQIX": 0.295,
+      "IRM": 0.356,
+      "O": 0.506,
+      "PLD": 0.337,
+      "PSA": 0.541,
+      "SPG": 0.241,
+      "VTR": 0.3,
+      "WELL": 0.313
+    },
+    "CBRE": {
+      "AMT": 0.214,
+      "CBRE": 1.0,
+      "CCI": 0.204,
+      "DLR": 0.172,
+      "EQIX": 0.133,
+      "IRM": 0.169,
+      "O": 0.225,
+      "PLD": 0.379,
+      "PSA": 0.35,
+      "SPG": 0.38,
+      "VTR": 0.186,
+      "WELL": 0.162
+    },
+    "CCI": {
+      "AMT": 0.825,
+      "CBRE": 0.204,
+      "CCI": 1.0,
+      "DLR": 0.216,
+      "EQIX": 0.232,
+      "IRM": 0.307,
+      "O": 0.484,
+      "PLD": 0.301,
+      "PSA": 0.513,
+      "SPG": 0.226,
+      "VTR": 0.291,
+      "WELL": 0.319
+    },
+    "DLR": {
+      "AMT": 0.239,
+      "CBRE": 0.172,
+      "CCI": 0.216,
+      "DLR": 1.0,
+      "EQIX": 0.639,
+      "IRM": 0.607,
+      "O": 0.208,
+      "PLD": 0.211,
+      "PSA": 0.244,
+      "SPG": 0.219,
+      "VTR": 0.21,
+      "WELL": 0.25
+    },
+    "EQIX": {
+      "AMT": 0.295,
+      "CBRE": 0.133,
+      "CCI": 0.232,
+      "DLR": 0.639,
+      "EQIX": 1.0,
+      "IRM": 0.53,
+      "O": 0.21,
+      "PLD": 0.254,
+      "PSA": 0.258,
+      "SPG": 0.203,
+      "VTR": 0.194,
+      "WELL": 0.232
+    },
+    "IRM": {
+      "AMT": 0.356,
+      "CBRE": 0.169,
+      "CCI": 0.307,
+      "DLR": 0.607,
+      "EQIX": 0.53,
+      "IRM": 1.0,
+      "O": 0.293,
+      "PLD": 0.251,
+      "PSA": 0.336,
+      "SPG": 0.251,
+      "VTR": 0.161,
+      "WELL": 0.27
+    },
+    "O": {
+      "AMT": 0.506,
+      "CBRE": 0.225,
+      "CCI": 0.484,
+      "DLR": 0.208,
+      "EQIX": 0.21,
+      "IRM": 0.293,
+      "O": 1.0,
+      "PLD": 0.539,
+      "PSA": 0.626,
+      "SPG": 0.48,
+      "VTR": 0.544,
+      "WELL": 0.561
+    },
+    "PLD": {
+      "AMT": 0.337,
+      "CBRE": 0.379,
+      "CCI": 0.301,
+      "DLR": 0.211,
+      "EQIX": 0.254,
+      "IRM": 0.251,
+      "O": 0.539,
+      "PLD": 1.0,
+      "PSA": 0.522,
+      "SPG": 0.538,
+      "VTR": 0.36,
+      "WELL": 0.402
+    },
+    "PSA": {
+      "AMT": 0.541,
+      "CBRE": 0.35,
+      "CCI": 0.513,
+      "DLR": 0.244,
+      "EQIX": 0.258,
+      "IRM": 0.336,
+      "O": 0.626,
+      "PLD": 0.522,
+      "PSA": 1.0,
+      "SPG": 0.469,
+      "VTR": 0.348,
+      "WELL": 0.412
+    },
+    "SPG": {
+      "AMT": 0.241,
+      "CBRE": 0.38,
+      "CCI": 0.226,
+      "DLR": 0.219,
+      "EQIX": 0.203,
+      "IRM": 0.251,
+      "O": 0.48,
+      "PLD": 0.538,
+      "PSA": 0.469,
+      "SPG": 1.0,
+      "VTR": 0.398,
+      "WELL": 0.42
+    },
+    "VTR": {
+      "AMT": 0.3,
+      "CBRE": 0.186,
+      "CCI": 0.291,
+      "DLR": 0.21,
+      "EQIX": 0.194,
+      "IRM": 0.161,
+      "O": 0.544,
+      "PLD": 0.36,
+      "PSA": 0.348,
+      "SPG": 0.398,
+      "VTR": 1.0,
+      "WELL": 0.788
+    },
+    "WELL": {
+      "AMT": 0.313,
+      "CBRE": 0.162,
+      "CCI": 0.319,
+      "DLR": 0.25,
+      "EQIX": 0.232,
+      "IRM": 0.27,
+      "O": 0.561,
+      "PLD": 0.402,
+      "PSA": 0.412,
+      "SPG": 0.42,
+      "VTR": 0.788,
+      "WELL": 1.0
+    }
+  },
+  "units": {
+    "0": [
+      "AMT",
+      "CCI",
+      "O",
+      "PSA"
+    ],
+    "1": [
+      "DLR",
+      "EQIX",
+      "IRM"
+    ],
+    "2": [
+      "PLD",
+      "SPG"
+    ],
+    "3": [
+      "VTR",
+      "WELL"
+    ],
+    "4": [
+      "CBRE"
+    ]
+  },
+  "book_theme_labels": {}
+}

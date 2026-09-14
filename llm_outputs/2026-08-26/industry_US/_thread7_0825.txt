@@ -1,0 +1,405 @@
+
+# 사건 궤적 — 2026-08-19 → 2026-08-25 (7일) [해외만]
+  08-19 826건 · 08-20 827건 · 08-21 771건 · 08-22 288건 · 08-23 323건 · 08-24 779건 · 08-25 757건
+  일별 사건 4,571 → 스레드 3,481 (다일 589 — 살아있는 261 · 원데이 2892, 그중 오늘 신규 481)
+
+  [BUILDING ] 7일 · 매체 23→9→11→24→20→21→29 · 총 370건
+     08-19 [ 48건/23매체] Trump pauses tariffs on Canada after last-minute deal
+     08-20 [ 19건/9매체] US Set to Cut Tariffs on Canada Metals, Autos in Trade D
+     08-21 [ 19건/11매체] Canada, U.S. inch closer to trade deal ahead of Trump's 
+     08-22 [ 62건/24매체] Canada announces retaliatory tariffs on U.S. goods after
+     08-23 [ 39건/20매체] Canada’s Carney refuses to take Trump’s ‘bait’, confront
+     08-24 [103건/21매체] The U.S. is unlikely to win its ‘dumb trade war’ with Ca
+     08-25 [ 80건/29매체] Canada set to announce retaliatory tariffs against US
+
+  [BUILDING ] 6일 · 매체 16→10→7→13→12→18 · 총 260건
+     08-19 [ 45건/16매체] AI agents create new problem for enterprise software
+     08-20 [ 46건/10매체] AI is becoming a financial engineering business
+     08-21 [ 36건/7매체] Neoclouds Shine in AI Build Out
+     08-22 [ 32건/13매체] What about the ethical challenges facing major AI develo
+     08-24 [ 48건/12매체] SEA.AI and Anschütz to Fuse Machine Vision into Autonomi
+     08-25 [ 53건/18매체] Government urges AI firms to disclose learning data
+
+  [BUILDING ] 7일 · 매체 6→13→14→6→8→12→15 · 총 143건
+     08-19 [  8건/6매체] Putin’s Visit to Disputed Island Exacerbates Japan-Russi
+     08-20 [ 36건/13매체] Ukraine: Several killed in fresh Russian strikes on Kyiv
+     08-21 [ 37건/14매체] Russia’s missile tests around disputed islands anger Jap
+     08-22 [ 17건/6매체] Ukraine: Russia steps up attacks as German Foreign Minis
+     08-23 [  8건/8매체] Could Russia's growing fuel crisis help end the Ukraine 
+     08-24 [ 17건/12매체] Putin Allows Russia to Take Over Poorly Protected Infras
+     08-25 [ 20건/15매체] Takaichi pledges to continue sanctions on Russia over it
+
+  [BUILDING ] 6일 · 매체 6→4→8→4→6→15 · 총 123건
+     08-19 [ 17건/6매체] Tim Cook's Final Earnings Call as Apple CEO Came the Sam
+     08-20 [ 15건/4매체] Apple’s New CEO Could Shake Up Its Spending Strategy to 
+     08-21 [ 23건/8매체] Apple Reportedly Shifts Focus To AI And Smart Glasses Wi
+     08-22 [ 11건/4매체] Apple vs. Meta Platforms: Which "Magnificent Seven" Gian
+     08-24 [ 18건/6매체] Apple (AAPL) Cuts 200 Jobs In Siri And Vision Pro To Ref
+     08-25 [ 39건/15매체] Apple unveils new Mac mini, Mac Studio computers
+
+  [BUILDING ] 7일 · 매체 7→12→13→4→3→9→14 · 총 292건
+     08-19 [ 41건/7매체] Will Bitcoin Get Back to $100,000 in 2026? It Could All 
+     08-20 [ 50건/12매체] Bitcoin rockets past $71,000 as regulatory hopes ignite 
+     08-21 [ 68건/13매체] Bitcoin, Crypto-Related Stocks Extend Rally - Yahoo Fina
+     08-22 [  6건/4매체] How a Treasury buyback tweak helped bitcoin surge 25% to
+     08-23 [  9건/3매체] Bitcoin’s Hidden Tax Problem: How Inflation Could Inflat
+     08-24 [ 58건/9매체] BlackRock Says the Long-Term Investment Thesis for Bitco
+     08-25 [ 60건/14매체] Bitcoin Crosses $80,000 For The First Time Since May Ami
+
+  [BUILDING ] 7일 · 매체 11→10→11→5→4→9→12 · 총 447건
+     08-19 [107건/11매체] Noteworthy ETF Inflows: AVEM, BABA, NTES, ASX
+     08-20 [ 87건/10매체] Noteworthy ETF Inflows: QQQI, FTNT, ARM, ADP
+     08-21 [ 72건/11매체] Is a Financial Sector ETF a Better Buy Than Picking the 
+     08-22 [ 43건/5매체] Which Consumer Staples ETF Is a Better Buy: Invesco's RS
+     08-23 [ 18건/4매체] VIG, VYM, and VYMI: Which Vanguard Dividend ETF Is Right
+     08-24 [ 52건/9매체] FNCL vs. FTXO: Which Financial Sector ETF Is the Better 
+     08-25 [ 68건/12매체] SPYM, SKHN: Big ETF Inflows
+
+  [BUILDING ] 2일 · 매체 2→10 · 총 30건
+     08-24 [  2건/2매체] Pre-Market Earnings Report for August 25, 2026 :  BMO, B
+     08-25 [ 28건/10매체] Stock Market News for Aug 25, 2026
+
+  [BUILDING ] 2일 · 매체 4→9 · 총 18건
+     08-24 [  6건/4매체] US lifts Syria's terror designation after 47 years - Al-
+     08-25 [ 12건/9매체] US removes Syria from state sponsors of terrorism list
+
+  [BUILDING ] 6일 · 매체 8→7→4→6→8→8 · 총 124건
+     08-19 [ 33건/8매체] Cerebras Unveils CS-4, OpenAI and AMD Partnerships to Ac
+     08-20 [ 33건/7매체] Delta expands AI automation push into robotics, semicond
+     08-21 [ 10건/4매체] Chinese robots pivot to AI models as Unitree, UBTECH shi
+     08-23 [ 10건/6매체] CHAT vs. FTEC: Is Concentrated AI Exposure or Broad Tech
+     08-24 [ 14건/8매체] SpaceXAI Adopts NVIDIA Vera CPU to Accelerate Agentic AI
+     08-25 [ 24건/8매체] Cisco Expands Secure AI Factory With NVIDIA
+
+  [BUILDING ] 2일 · 매체 5→8 · 총 15건
+     08-24 [  6건/5매체] Iran threatens 45 tankers with fines, confiscation as Ho
+     08-25 [  9건/8매체] Iran, Oman Push Talks for ‘Interim’ Reopening of Hormuz 
+
+  [BUILDING ] 5일 · 매체 5→3→4→4→7 · 총 61건
+     08-19 [ 16건/5매체] Is SpaceX a Millionaire-Maker Stock?
+     08-20 [  8건/3매체] SpaceX stock slips as 319 million new shares come to mar
+     08-23 [  4건/4매체] Huge News for SpaceX Stock Investors!
+     08-24 [ 10건/4매체] Analyst to SpaceX Investors: You're Valuing SpaceX Like 
+     08-25 [ 23건/7매체] Prediction: SpaceX's Power Needs Will Turn It Into Oklo'
+
+  [BUILDING ] 5일 · 매체 5→4→4→4→7 · 총 50건
+     08-19 [ 16건/5매체] 3 High-Yielding Dividend Stocks That Have Doubled Their 
+     08-20 [  6건/4매체] 3 Growth Stocks to Buy With $5,000 Right Now
+     08-21 [  4건/4매체] All It Takes Is $5,000 Invested in Each of These 3 High-
+     08-24 [ 11건/4매체] 5 High-Yield Dividend Stocks for Retirement Income
+     08-25 [ 13건/7매체] If You'd Invested $5,000 in the S&P 500 Ahead of the Dot
+
+  [BUILDING ] 4일 · 매체 3→2→6→7 · 총 28건
+     08-20 [  4건/3매체] Trump calls his new FDA pick ‘Dr. Heidi.’ Patty Murray c
+     08-21 [  3건/2매체] Implantica receives FDA approval for RefluxStop® - Openi
+     08-24 [ 14건/6매체] Labcorp to Offer First FDA-Cleared Blood Test to Detect 
+     08-25 [  7건/7매체] FDA Approves J&J's IMAAVY For Warm Autoimmune Hemolytic 
+
+  [BUILDING ] 4일 · 매체 3→2→5→7 · 총 26건
+     08-20 [  7건/3매체] My family of 5 traded our large home for a one-bedroom a
+     08-21 [  3건/2매체] “We’re Still Renting”: Couple Says Family Gatherings Hav
+     08-24 [  5건/5매체] Dream of owning a home is slipping away for young Americ
+     08-25 [ 11건/7매체] HELOC, refinance or home equity loan: What’s the best wa
+
+  [BUILDING ] 7일 · 매체 2→5→5→5→2→4→6 · 총 40건
+     08-19 [  3건/2매체] Water conflict around the German capital
+     08-20 [  6건/5매체] Germany news: Powerful storms damage homes, leave 1 dead
+     08-21 [  7건/5매체] Germany plans a €12B missile program to deter Putin
+     08-22 [  8건/5매체] Germany news: Friedrich Merz to visit area struck by fir
+     08-23 [  3건/2매체] Germany’s Far Right Has a New Enemy: The 100-Year-Old Ba
+     08-24 [  4건/4매체] Germany’s establishment has a plan to contain the far ri
+     08-25 [  9건/6매체] Third drone, explosives found at Germany’s Leipzig airpo
+
+  [BUILDING ] 7일 · 매체 4→6→2→4→2→2→6 · 총 38건
+     08-19 [  6건/4매체] Janelle Monae, Sterling K. Brown: 'Is God Is' elevates B
+     08-20 [  8건/6매체] US charges woman with Isis-inspired plot to blow up New 
+     08-21 [  3건/2매체] Woman Charged In ISIS-Inspired Plot To Bomb NY State Cap
+     08-22 [  6건/4매체] Elderly woman couldn’t take over late son’s HDB flat due
+     08-23 [  2건/2매체] The ‘ordinary’ woman accused of assassinating a Russian 
+     08-24 [  3건/2매체] Hong Kong woman arrested for allegedly wearing seditious
+     08-25 [ 10건/6매체] Woman wanted in connection with husband’s death found de
+
+  [BUILDING ] 3일 · 매체 4→3→6 · 총 25건
+     08-20 [  6건/4매체] Micron's $50 Billion AI Buildout Is Transforming Boise
+     08-24 [  3건/3매체] PDD Holdings: 50%+ Of Market Cap Is Cash
+     08-25 [ 16건/6매체] This Stock Grew About 500% in the Past 5 Years. And No, 
+
+  [BUILDING ] 6일 · 매체 2→5→4→4→3→5 · 총 76건
+     08-19 [  8건/2매체] Stock Market: Will S&P 500 Open Up or Down Today?
+     08-20 [  9건/5매체] Stock Market: Will S&P 500 Open Up or Down Today?
+     08-21 [ 20건/4매체] Stock Market: Will S&P 500 Open Up or Down Today?
+     08-22 [  9건/4매체] The S&P 500 Is Near an All-Time High. Here's What Histor
+     08-24 [  5건/3매체] S&P 500 Annual Earnings, Revenue Growth Slows From Last 
+     08-25 [ 25건/5매체] S&P 500, Nasdaq, Dow Futures Mixed As Nvidia Earnings, F
+
+  [BUILDING ] 5일 · 매체 5→3→4→3→5 · 총 40건
+     08-19 [ 16건/5매체] IDEAYA Biosciences Announces Clinical Collaboration with
+     08-20 [  6건/3매체] IntraGel Therapeutics and UroGen Pharma Sign Strategic C
+     08-21 [  7건/4매체] Leads Biolabs' Opamtistomig (PD-L1/4-1BB Bispecific Anti
+     08-24 [  5건/3매체] Precision BioSciences Doses First Patient In Phase 1/2 O
+     08-25 [  6건/5매체] Ivonescimab Plus Chemotherapy Demonstrates Significant O
+
+  [BUILDING ] 4일 · 매체 2→4→5→5 · 총 34건
+     08-20 [  6건/2매체] Stocks That Explain Today’s Market - Barron's
+     08-23 [  9건/4매체] Nervous About the Stock Market? History Has Encouraging 
+     08-24 [  8건/5매체] The Stock Market Just Did Something for the 2nd Time in 
+     08-25 [ 11건/5매체] Historically Speaking, the Stock Market Has Arguably Nev
+
+  ── 살아있는 나머지 241개 (한 줄씩) ──
+   [BUILD]        4→4→5 Six months into Iran war, almost half of global oil fl
+   [BUILD]          3→5 Dollar struggles for traction as markets weigh Iran sa
+   [BUILD]          3→5 Global Bond Markets Stabilize as Investors Mull U.S. B
+   [BUILD]          4→5 Popular Indian Fund Cuts Ticket Size for Overseas Inve
+   [BUILD]          4→5 US: Trump administration plans to revoke up to 200,000
+   [BUILD]          3→5 Pakistani, Iranian officials meet amid stalled talks w
+   [BUILD]          3→5 ‘Children were in pieces’: memories still raw 6 months
+   [BUILD]          2→5 SEC reportedly subpoenas Wall Street banks over AI hed
+   [BUILD]    3→3→2→3→4 Hot Chips 2026: Intel dives deep on Crescent Island AI
+   [BUILD]      2→2→3→4 Canada: Investment risk and USMCA reliability – Societ
+   [BUILD]        2→3→4 Bitcoin and ethereum prices today, Tuesday, August 25,
+   [BUILD]        3→3→4 My old job had a pension and they offered me to cash o
+   [BUILD]        3→2→4 Jeffries vows to hold Trump "cartel" accountable after
+   [BUILD]          4→4 Should You Buy Marvell Technology Stock Before Aug. 27
+   [BUILD]          3→4 EXCLUSIVE: France wants to limit Ukraine's non-Europea
+   [BUILD]          4→4 Manga-inspired theme park to be built near Paris
+   [BUILD]          3→4 Alabama Probe Opens New Regulatory Front Over Containi
+   [BUILD]          2→4 IBM unveils dual-architecture mainframe chip to run Ar
+   [BUILD] 3→3→3→3→3→3→3 What Every 65-Year-Old Should Know About Social Securi
+   [BUILD]    3→3→2→3→3 3 Large-Cap Stocks on Our Buy List
+   [BUILD]    2→2→2→2→3 US tariff threat upends copper surplus as prices test 
+   [BUILD]    3→3→3→2→3 Dow Jones Futures: S&P 500, Nasdaq Rise On Treasury Mo
+   [BUILD]      3→2→3→3 Best Lawyers in America Names 45 Wilentz, Goldman &amp
+   [BUILD]          3→3 Taiwan Charges Nine in Connection With Smuggling of AI
+   [BUILD]          2→3 Speculators hike net-long positions in Brent
+   [BUILD]          3→3 Guardant Health loses patent judgment; ordered to pay 
+   [BUILD]          2→3 London and Paris landmarks light up for Ukraine’s Inde
+   [BUILD]          2→3 European TTF Gas Holds Above 68 Euros on Winter Supply
+   [BUILD]          2→3 Will New USPS Rule Impact Your Ballot In November? Wha
+   [BUILD]    2→2→2→2→2 The Zacks Analyst Blog Highlights NVDA, LYTE, LAZR and
+   [BUILD]      2→2→2→2 Brazil Coffee Harvest Pressures Weigh on Coffee Prices
+   [BUILD]        2→2→2 HNI Corporation: Workplace Recovery And Steelcase Syne
+   [BUILD]          2→2 Boeing Wins $131B F-15 Contract From US Air Force — BA
+   [BUILD]          2→2 Drake Extends His Historic Lead With Yet Another No. 1
+   [BUILD]          2→2 British Pound holds near Feb. 11 highs vs weak USD as 
+   [BUILD]          2→2 Wall Street drifts ahead of a big week that could swin
+   [BUILD]          2→2 Cosmos Launches Six Pre-Built Power BI Report Packs fo
+   [BUILD]          2→2 Kyoto University builds transistor that survives 600C 
+   [BUILD]          2→2 India crushes cockroach dissent as ‘Fix Schools’ campa
+   [BUILD]          2→2 Term Finance loses estimated $8.5M in vault governance
+   [BUILD]          2→2 Saudi Aramco signs agreements worth over $3.7 billion 
+   [REIGN]   18→7→8→2→7 'Many' Fed officials think higher rates will be needed
+   [REIGN]     14→2→2→2 New Strong Sell Stocks for August 19th
+   [REIGN]       3→3→14 China angered over U.S. sanctions against Iran
+   [REIGN]     9→11→5→4 Will Trump and Kim Jong Un Meet? Why US Is Seeking to 
+   [REIGN]    9→3→8→6→4 ICC slams US decision to sanction the court’s presiden
+   [REIGN]    6→4→8→2→5 Paredes banned 10 games as FIFA suspends 3 Argentina p
+   [REIGN]      8→5→4→5 AMD Stock Investors Need to See This
+   [REIGN]      8→5→5→4 Spirit Flight Attendants Fight Google’s Data Bid for A
+   [REIGN]        8→3→2 Dev uses Claude AI to create native macOS driver for '
+   [REIGN]        7→4→5 Ocean heat waves threaten to supercharge storm season 
+   [REIGN]        7→4→2 NASA estimates the size of the hole SpaceX made in the
+   [REIGN]          2→7 US consumer confidence falls in August, Conference Boa
+   [REIGN]          7→2 FBI seizes former Rep. Eric Swalwell's electronic devi
+   [REIGN]      4→5→3→6 QumulusAI Reports Second Quarter 2026 Results
+   [REIGN]      6→6→2→6 New foreign work pass track, tax exemption perks to st
+   [REIGN]        6→4→3 Gold Holds Near $4,500 as US Treasury Buyback Sends Yi
+   [REIGN]        6→5→2 US CFTC seeks comment on compute derivatives as AI dem
+   [REIGN]        6→3→6 Nvidia H200 chips reach China as imports remain limite
+   [REIGN]          6→6 SLB Prepares to Restart 15 Oil Rigs in Venezuela
+   [REIGN]          6→3 I worked at OpenAI. Here’s how tech companies can prep
+   [REIGN]          3→6 Why Super Micro Computer Rallied Today
+   [REIGN]          6→2 Treasury's recent moves in the bond and currency marke
+   [REIGN]          6→2 Europe AI data centres seek cheaper, quicker energy an
+   [REIGN]        5→3→5 Sugar Prices Rally as India Cuts Sugar Import Duties
+   [REIGN]        5→3→2 Nike Just Hit a 12-Year Low. Does History Say Now Is t
+   [REIGN]        5→4→3 Peru: Strong earthquake shakes southern Andes
+   [REIGN]        5→3→2 Asian stocks tumble as chip rout, bond yields hammer S
+   [REIGN]        4→5→3 India bond yield curve flattens on central bank unpred
+   [REIGN]          3→5 If I Could Tell Every S&P 500 Investor Just 1 Thing Ab
+   [REIGN]          4→5 Nvidia faces growth test as Rubin debut meets AI finan
+   [REIGN]          4→5 Instagram head Adam Mosseri to testify at Meta child s
+   [REIGN]          5→3 The Treasury Market’s Coveted Status as a Safe Haven I
+   [REIGN]          5→3 Applied Digital vs. TeraWulf: Which AI Data Center Sto
+   [REIGN]          4→5 Trump tries to pull Darline Graham to victory in South
+   [REIGN]          5→4 AI Prefers AI-Generated Content So Game Those Ubiquito
+   [REIGN]          5→2 Nigeria Eyes $50 Billion Offshore Oil and Gas Investme
+   [REIGN]          2→5 TAYD's Fiscal 2026 Earnings Decline Y/Y on Structural 
+   [REIGN]    3→3→4→3→3 Taiwan Stock Market May Head South Again On Friday
+   [REIGN]      2→4→2→3 Quantum X Swings to Earnings in Q2 on Lower Financial 
+   [REIGN]        2→3→4 3 Reasons TNDM is Risky and 1 Stock to Buy Instead
+   [REIGN]        2→4→3 World Robot Conference 2026: Zoomlion präsentiert indu
+   [REIGN]        4→3→2 Saylor's Strategy Treasury Back To Breakeven As Crypto
+   [REIGN]        4→3→2 The teen entrepreneur transforming farm management
+   [REIGN]        4→2→4 Kennedy Center tells court it won’t try to restore Tru
+   [REIGN]        3→4→2 Serena Williams teams up with Carlos Alcaraz in US Ope
+   [REIGN]          2→4 Is Oklo the Next Great AI Story -- Or Just Nuclear Hyp
+   [REIGN]          4→4 Prediction: Nvidia Will Be a $6 Trillion Company Befor
+   [REIGN]          3→4 These 2 Artificial Intelligence (AI) Stocks Could Soar
+   [REIGN]          3→4 3 Top Artificial Intelligence (AI) Stocks to Buy Befor
+   [REIGN]          4→3 2 Reasons to Buy Warren Buffett's Favorite Artificial 
+   [REIGN]          4→2 US Equity Futures Fall Pre-Bell as US Threatens Iran's
+   [REIGN]          3→4 2 Tech Stocks I'd Load Up on Today and 1 I'd Avoid Unt
+   [REIGN]          4→3 Treasury Details Rules for Trump Account Investments
+   [REIGN]          4→2 Bitcoin Tops $75,000 For The First Time Since May As C
+   [REIGN]          4→4 1 Quantum Computing Stock That Looks Like a Screaming 
+   [REIGN]          4→4 Omnicell President Sells 6,753 Shares
+   [REIGN]          4→3 Hyperscalers Will Spend $750 Billion on AI This Year. 
+   [REIGN]          2→4 TSMC’s HBM-Packaging Yield Issues Help Intel, Analysts
+   [REIGN]          4→4 American consumers are delivering a retail reality che
+   [REIGN]          3→4 US Treasury’s Scott Bessent ‘making mistake’ interferi
+   [REIGN]          2→4 Salesforce Is Still Undervalued Despite a 28% Gain Ove
+   [REIGN]          2→4 OpenAI's IPO Won't Likely Happen Until 2027. Here's Wh
+   [REIGN]          2→4 Exclusive: Climate group presses Dems to seize on data
+   [REIGN]          4→2 Lowe's gives muted outlook as it sees 'pressure' in ho
+   [REIGN]          4→2 Dubai Police Initiatives Drive $176.4 Million in Socia
+   [REIGN]          4→2 The Push To Bring Back Recess Time In Public Schools
+   [REIGN]          3→4 Woolworths’ Ooshies craze causes Coles sales slump wit
+   [REIGN]          2→4 Hyundai Motor's union reaches tentative wage deal, ave
+   [REIGN]          2→4 SoundHound's Powerful No-Screen AI Opportunity Faces a
+   [REIGN]      2→3→2→2 SU GROUP HOLDINGS LIMITED REGAINS COMPLIANCE WITH NASD
+   [REIGN]      2→2→3→2 Applied Energetics Stock Declines as Q2 Loss Widens Y/
+   [REIGN]        2→2→3 SoFi vs. Sezzle: Which Fintech Stock Is the Better Buy
+   [REIGN]        3→3→2 Best Value Stocks
+   [REIGN]        3→3→3 Democratic socialist unexpectedly wins Florida primary
+   [REIGN]        3→2→2 Hong Kong considering euthanising large dog after fata
+   [REIGN]        3→2→2 Here’s The Exact Time ‘Fortnite’ Chapter 7, Season 3 E
+   [REIGN]          3→3 Prediction: Micron Stock Could Go Parabolic After Aug.
+   [REIGN]          3→3 The Metals Company Is Riding the Critical Metals Boom.
+   [REIGN]          2→3 One Wall Street measure of market fragility just hit i
+   [REIGN]          2→3 These Are the 3 Largest Investors in SpaceX Stock
+   [REIGN]          2→3 OppFi to Participate in September 2026 Conferences
+   [REIGN]          2→3 Christie's International Real Estate Launches In Abu D
+   [REIGN]          3→3 Move over bears. Fat Marmot Week puts a spotlight on t
+   [REIGN]          2→3 Bausch + Lomb Corporation (BLCO) Discusses Results and
+   [REIGN]          3→3 GEE Group Posts Q3 Earnings Due to Higher Direct-Hire 
+   [REIGN]          3→3 Will Prime Minister Andy Burnham move the UK closer to
+   [REIGN]          3→3 Ethiopia Sells $500 Million in Latest Bid to Support C
+   [REIGN]          2→3 OLIN and HUNTSMAN Shareholders Approve Transformative 
+   [REIGN]          3→3 Can't hold more than 10 tonnes for 15 days: Govt impos
+   [REIGN]          2→3 CHRW Plunges 30% in the Past Month as Freight Risks Te
+   [REIGN]          3→3 America faces an affordability crisis like the one fro
+   [REIGN]          3→2 Canada Retail Sales Slip After Rising a Sixth Straight
+   [REIGN]          2→3 Mexico Bonds Trade Like Junk After $130 Billion Bailou
+   [REIGN]          3→2 Gold Jumps 3% as Bessent's Treasury Steps Into Bond Ro
+   [REIGN]          3→3 RBA’s Hauser: Will have to raise rates again if inflat
+   [REIGN]          3→3 Chinese coaches help women heal from narcissists; spot
+   [REIGN]          3→3 Herc Holdings Inc. Announces Election of Erik Olsson t
+   [REIGN]          3→2 End-Market Strength & Data Center Demand Drive Texas I
+   [REIGN]          3→3 Europe Scrambles For Innovation And Defense As US Deco
+   [REIGN]          2→3 EXCLUSIVE: India investigates fragrance giants over pr
+   [REIGN]          2→3 Crocs Steps Out of the Discount Bin
+   [REIGN]          2→3 What Does the Pizza Hut Sale Mean for Yum! Brands (YUM
+   [REIGN]          3→2 Tottenham agrees to $166M deal for Manchester City's S
+   [REIGN]          3→2 Nexo launches regulated crypto-backed credit in Austra
+   [REIGN]          2→3 Nikkei Falls 0.8%, Dragged by Electronics Stocks
+   [REIGN]          2→3 Omdia, первое полугодие 2026 года: Hisense выходит на 
+   [REIGN]          3→2 Borr Drilling Director Tor Olav Troim Buys 500,000 Sha
+   [REIGN]          2→3 The Family Bank: Parents Are Lending Their Kids Mortga
+   [REIGN]        2→2→2 Australian Market Maintains Early Losses In Mid-market
+   [REIGN]          2→2 Sunshine Pictures IPO GMP Indicates 21% Listing Gain A
+   [REIGN]          2→2 Charts: Taiwan's materials suppliers split: wafer gian
+   [REIGN]          2→2 Is Vanguard Explorer Fund Investor (VEXPX) a Strong Mu
+   [REIGN]          2→2 LIVE: Elche vs Barcelona – La Liga
+   [REIGN]          2→2 Veteran fund manager rethinks Intel stock target
+   [REIGN]          2→2 Registration Opens for 2026 Women in Supply Chain Foru
+   [REIGN]          2→2 India's Manipal Health sees adjusted quarterly profit 
+   [REIGN]          2→2 Wednesday Sector Leaders: Precious Metals, General Con
+   [REIGN]          2→2 The Nasdaq Is Back—No Thanks to Chip Stocks
+   [REIGN]          2→2 Wedbush Says Marvell Just Changed Its AI Story
+   [REIGN]          2→2 Grayscale’s Zcash ETF filing proposes a 2.5% fee and a
+   [REIGN]          2→2 Chinese national charged with voter fraud during 2024 
+   [REIGN]          2→2 Surging Earnings Estimates Signal Upside for Sprout So
+   [REIGN]          2→2 Equities: Chip-led selloff under stagflation pressure 
+   [REIGN]          2→2 Geopolitical Tensions Push French Stocks Lower For 8th
+   [REIGN]          2→2 Ceuta Cops Claim Invaders Are Dragging Girls Into Moun
+   [REIGN]          2→2 Citi resets Marvell stock price target ahead of earnin
+   [REIGN]          2→2 What's bogging down the data center trade has nothing 
+   [FADIN] 17→21→13→4→8→16→15 Oil rises to 3-week high as Iran war impasse fuels Mid
+   [FADIN] 18→19→4→5→6→6→6 US debt tops $40 trillion threshold
+   [FADIN] 6→9→6→6→17→10 US threatens toughest sanctions yet against Iran: What
+   [FADIN] 6→17→2→3→3→6 Trump vows ‘economic warfare’ on countries helping Ira
+   [FADIN]   17→6→2→2→5 Chinese Robot-Maker Unitree Soars 629% in Shanghai Deb
+   [FADIN]       4→16→2 Shein seeks up to $1.77B in Hong Kong IPO at $27B valu
+   [FADIN] 15→8→7→6→5→8→8 Amazon to expand drone service to nearly 500 cities af
+   [FADIN]   14→10→10→2 U.S., South Korea scale back joint military drills aft
+   [FADIN] 5→5→6→4→3→13→11 This Nvidia earnings fact will frustrate you
+   [FADIN] 13→6→6→6→3→5→4 Israeli army orders criminal investigation into killin
+   [FADIN] 5→5→11→2→9→6 Gold Reaches Highest Price In Three Months As Dollar W
+   [FADIN] 11→2→3→9→6→3 Ukraine’s ousted defence minister calls for elections 
+   [FADIN]       7→11→6 Global Market: Alibaba shares slide after $10.2 billio
+   [FADIN]       3→10→7 Supreme Court Sides With Trump for Now on Mail Ballot 
+   [FADIN] 3→3→9→3→4→6→3 Guatemala says it received nearly 2,300 US-deported Me
+   [FADIN]  6→9→2→5→3→4 Iran’s president calls to end war with US from ‘positi
+   [FADIN]    9→7→5→5→3 Stocks up, bond yields down in final hour as markets r
+   [FADIN] 8→5→5→4→5→7→4 THCH (THCH) Q2 2026 Earnings Call Transcript
+   [FADIN]    7→8→3→5→3 Dollar at three-month low as Treasury moves to soothe 
+   [FADIN]    3→8→4→4→2 Why Is Tesla Stock Up Today?
+   [FADIN]    7→5→8→3→3 SEC charges former Bank of America investment banker w
+   [FADIN]        5→8→2 Ukraine news: UK PM Burnham arrives in Kyiv to show su
+   [FADIN]    6→7→6→5→2 Stock market today: Dow, S&P 500, Nasdaq futures stead
+   [FADIN]      4→7→4→2 Chinese humanoid robots smash human records in 100m sp
+   [FADIN]        5→7→2 California Attorney General Cancels Paramount Meeting,
+   [FADIN]          7→3 Exxon Eyes Shell’s $8 Billion U.S. Chemicals Business
+   [FADIN]          7→4 Washington Post Ordered to Rehire Columnist Karen Atti
+   [FADIN] 6→4→6→4→4→4→5 Satya Nadella Said Microsoft's Own AI Chips Are Drivin
+   [FADIN]  4→5→3→6→2→3 IPO Fever Heats Up for OpenAI and Anthropic
+   [FADIN]  4→4→5→6→3→5 Institutional Investors Are Buying Hyperliquid Strateg
+   [FADIN]  4→5→5→4→6→5 Netflix reportedly considers opening its app to other 
+   [FADIN]    4→4→6→6→2 China slams EU foreign subsidies rules, links them to 
+   [FADIN]      2→6→6→2 AMD Falls as Nvidia's Earnings Test Looms Over AI Chip
+   [FADIN]      5→6→3→4 If a Stock Market Crash Is Coming, Warren Buffett's Pl
+   [FADIN]      3→6→6→4 Kevin Warsh to Make First Jackson Hole Speech as Fed C
+   [FADIN]      2→3→6→4 Outfront Media: This 4.4%-Yielding REIT Is Now In Grow
+   [FADIN]      6→4→2→2 Why SK Hynix Stock Is Beating Memory Rivals Today
+   [FADIN]        3→6→3 Coinbase Debuts Tokenized Stocks On Base Network
+   [FADIN]        2→6→2 Gold prices today, Monday, August 24, 2026: 'Gold to s
+   [FADIN]        5→6→2 YMTC files for $4.9 billion IPO on Shanghai Stock Exch
+   [FADIN]          6→3 Trump administration plans to revoke visas of foreigne
+   [FADIN]    4→5→5→2→3 Michael Bogdan Scholarship for Healthcare Opens 2027 A
+   [FADIN]    5→2→4→3→2 Analysis:Investors set sights on Swiss franc for popul
+   [FADIN]      4→4→5→4 Stock market today: S&P 500, Nasdaq slip as tech stock
+   [FADIN]      5→2→4→2 Chinese AI chips fall short on coding, forcing firms t
+   [FADIN]      3→5→3→3 Micron vs. Sandisk: Which AI Memory Stock Should You O
+   [FADIN]      5→5→2→4 Is Western Digital Stock an Undervalued AI Stock to Bu
+   [FADIN]        5→3→3 2 Midstream Dividend Stocks Actually Worth the Yield R
+   [FADIN]        5→3→2 Gas Land Expands Advanced Nitrogen Engineering for Glo
+   [FADIN]          5→2 Trump bought shares in Elon Musk's SpaceX in June, fin
+   [FADIN]  3→2→2→2→4→3 Jungbunzlauer améliore son score EcoVadis et se mainti
+   [FADIN]  4→4→3→3→3→2 Jim Cramer drops stunning take on the economy
+   [FADIN]    4→2→2→2→2 Republic Services Stock Outlook: Is Wall Street Bullis
+   [FADIN]      4→3→2→3 Moderna, Merck, SK Hynix, Micron, Target, Estée Lauder
+   [FADIN]      3→4→2→2 DZ Bank Tells Clients To Sell SpaceX. Sees Stock Falli
+   [FADIN]        4→2→2 MRVI Crosses Above Average Analyst Target
+   [FADIN]        3→4→2 CoreWeave CFO Nitin Agrawal Sells 10,062 Shares for $9
+   [FADIN]        4→3→3 UK Retail Sales Drop for the First Time in Three Month
+   [FADIN]        2→4→3 Full flow FCNR deposits could hit $100 billion, beat e
+   [FADIN]        2→4→2 U.S. Unveils ‘Economic D-Day’ Against Iran
+   [FADIN]          4→3 Nvidia Reports Earnings on Aug. 26. Here Are 3 Other A
+   [FADIN]          4→3 Why Sandisk Stock Dropped This Morning
+   [FADIN]          4→2 Stock Market Today: Tech Stocks Under Pressure
+   [FADIN]          4→2 Local Business Group Sues Over Mamdani’s Plan to Open 
+   [FADIN]    3→2→2→3→2 Make the Most of Your Retirement with These Top-Ranked
+   [FADIN]    3→3→3→2→2 Sensex Today | Nifty 50 | Stock Market LIVE Updates: G
+   [FADIN]      3→3→2→2 India Gold price today: Gold falls, according to FXStr
+   [FADIN]        2→3→2 Stock Market Today: Dow, S&P 500 and Nasdaq set to fal
+   [FADIN]        2→3→2 MongoDB Q2 Earnings Preview: It Will Take A Very Stron
+   [FADIN]        3→2→2 Jumpy bond markets make it clear: Trump risks driving 
+   [FADIN]          3→2 Shein's stock market listing will not mask sustainabil
+   [FADIN]          3→2 Wells Fargo strongly resets Marvell stock target befor
+   [FADIN]          3→2 “You Ought to Be Ashamed of Yourself, Lady”: Dave Rams
+
+  ── 끊긴 스레드(ENDED) 328개 — 정점 큰 10개만, 나머진 분모 ──
+   [08-19~08-24]   20→5→2→5 피크20매체 Moderna’s cancer-vaccine breakthrough drives bro
+   [08-19~08-22]   5→19→3→2 피크19매체 Walmart shares tumble as sales growth slows to s
+   [08-19~08-20]       14→5 피크14매체 US treasury doubles debt buyback to steady bond 
+   [08-21~08-24]     13→7→2 피크13매체 Sweden: Several wounded in school sword attack
+   [08-19~08-20]       11→2 피크11매체 UAE Cuts Economic Ties With Iran
+   [08-21~08-24]       11→6 피크11매체 Tesla recalls 3 million cars as part of China-wi
+   [08-21~08-22]       11→2 피크11매체 Panama Canal to reduce shipping over El Nino-fue
+   [08-21~08-24]     10→6→2 피크10매체 TikTok to pay US$400 million settlement in US ch
+   [08-20~08-24]     10→3→2 피크10매체 China Sentences Evergrande Founder to Life in Pr
+   [08-20~08-21]       4→10 피크10매체 Stock Market News for Aug 21, 2026
+
+  ⚠ 태그는 매체수 곡선의 모양이지 중요도·방향이 아니다 — 근거를 읽어야 안다(P4).
+  ⚠ 윈도우 끝이 휴일/저물량이면 FADING 이 과대해진다 — 위 per-day 분모 먼저.
+  ⚠ 원데이 2892개(오늘 신규 481)는 하루 뷰(brief)가 담당.

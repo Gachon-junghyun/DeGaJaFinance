@@ -1,0 +1,20 @@
+[info] shortlist 7 — us_flow FINRA short z-score …
+
+[saved] C:\Users\fivep\DeGaJaFinance\llm_outputs\2026-08-20\industry_US\US_LIVE_SHORTLIST.json
+# US LIVE SHORTLIST — wide sweep→filter→us_flow FINRA short  (asof 2026-08-19)
+filter: mcap≥$10.0B · tag 🟢가속 · flow desc top15 → 7 names
+⚠️ US엔 투자자별(외국인/기관) 피드 없음 → 숏압력(FINRA z) proxy. crowded-short=턴조건 스퀴즈연료(단독 매수 아님).
+
+TICKER name                  flow  news   OBV  RS20 shortZ  verdict
+MRK    Merck & Co.          +0.82  1.10 +0.48  16.5  -1.00  ✅저숏/숏커버 (청정 상승)
+TGT    Target Corporation   +0.82   n/a +0.30  12.4  -0.60  ✅저숏/숏커버 (청정 상승)
+KKR    KKR & Co.            +0.78   n/a +0.18  12.7  -0.14  △정상숏
+LLY    Lilly (Eli)          +0.47  1.20 +0.12   7.2  +0.50  △정상숏
+MRVL   Marvell Technology   +0.38  1.35 +0.10   9.6  +1.59  ⚡crowded-short (스퀴즈연료·턴조건)
+MA     Mastercard           +0.35  1.28 +0.12   4.9  -0.23  △정상숏
+WMT    Walmart              +0.21  1.34 +0.09   1.6  +2.39  ⚡crowded-short (스퀴즈연료·턴조건)
+
+★ 청정 상승 (🟢 AND 저숏/숏커버): Merck & Co.(MRK), Target Corporation(TGT)
+⚡ crowded-short 스퀴즈연료(턴조건): MRVL, WMT
+
+해석: 저숏/숏커버=상방 청정 · crowded-short=턴 확인 시 스퀴즈연료(단독 매수 X) · US는 '누가 사나' 실측 부재(KR KIS 대비 약점).

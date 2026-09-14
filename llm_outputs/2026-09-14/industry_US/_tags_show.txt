@@ -1,0 +1,448 @@
+# REPORT 인수인계 (HANDOFF)
+
+_갱신: 2026-09-13T09:13:22 · 리포트 85건 · 종목 311 · 섹터 12_
+
+> 다운스트림은 매번 재검색하지 말고 이 표를 읽어라. 각 항목은 '어느 리포트가 무슨 평결로 이 종목/섹터를 다뤘나'의 인수인계다. 원문은 REPORT/ 해당 경로.
+
+## 종목별
+
+| 종목 | 리포트 수 | 평결 | 최근 리포트 |
+|---|---|---|---|
+| NVDA (Nvidia) | 36 | CONFIRMED FADING FRESH GO LIVE | `industry_KR/preflight/PREFLIGHT.md` |
+| MPC (Marathon Petroleum) | 31 | CONFIRMED ECHO FADING FRESH GO | `industry_US/CYCLE_EXPOSURE.md` |
+| PSX (Phillips 66) | 30 | CONFIRMED ECHO FADING FRESH GO | `industry_KR/HANDOVER.md` |
+| AVGO (Broadcom) | 28 | CONFIRMED ECHO FADING FRESH GO | `industry_US/preflight/PREFLIGHT.md` |
+| ANET (Arista Networks) | 27 | CONFIRMED FADING FRESH GO LIVE | `industry_KR/preflight/PREFLIGHT.md` |
+| HPE (Hewlett Packard Enterprise) | 21 | CONFIRMED ECHO FADING FRESH GO | `industry_US/preflight/PREFLIGHT.md` |
+| EW (Edwards Lifesciences) | 21 | BROKEN CONFIRMED ECHO FADING FRESH | `industry_KR/EVENT_ALPHA.md` |
+| ETN (Eaton Corporation) | 18 | CONFIRMED FADING FRESH GO LIVE | `industry_US/preflight/PREFLIGHT.md` |
+| MU (Micron Technology) | 18 | CONFIRMED ECHO FADING FRESH GO | `industry_US/SECTOR_DEEP_IT.md` |
+| 316140 우리금융지주 | 15 | CONFIRMED ECHO FADING FRESH GO | `industry_KR/preflight/PREFLIGHT.md` |
+| 028050 삼성E&A | 15 | CONFIRMED ECHO FADING FRESH GO | `industry_KR/preflight/PREFLIGHT.md` |
+| RTX (RTX Corporation) | 15 | CONFIRMED FADING FRESH GO LIVE | `industry_US/CYCLE_EXPOSURE.md` |
+| VLO (Valero Energy) | 14 | CONFIRMED ECHO FADING FRESH GO | `industry_KR/HANDOVER.md` |
+| NDAQ (Nasdaq, Inc.) | 14 | CONFIRMED FRESH GO LIVE REAL | `industry_US/ACTION_TICKETS.md` |
+| CL (Colgate-Palmolive) | 13 | CONFIRMED ECHO FADING FRESH GO | `industry_US/ACTION_TICKETS.md` |
+| EA (Electronic Arts) | 13 | CONFIRMED FADING FRESH GO LIVE | `industry_US/preflight/PREFLIGHT.md` |
+| KMI (Kinder Morgan) | 13 | CONFIRMED FRESH GO PARTIAL RESOLVED | `industry_KR/SECTOR_DEEP_UTIL.md` |
+| XOM (ExxonMobil) | 13 | CONFIRMED FADING FRESH GO LIVE | `industry_KR/HANDOVER.md` |
+| GM (General Motors) | 12 | BROKEN CONFIRMED ECHO FADING FRESH | `industry_KR/BET_SHEET.md` |
+| NEM (Newmont) | 12 | CONFIRMED ECHO FADING FRESH GO | `industry_US/SECTOR_DEEP_MATR.md` |
+| LIN (Linde plc) | 12 | CONFIRMED FADING FRESH GO LIVE | `preflight/industry_US/PREFLIGHT.md` |
+| NUE (Nucor) | 11 | CONFIRMED ECHO FADING FRESH GO | `industry_US/preflight/PREFLIGHT.md` |
+| MRVL (Marvell Technology) | 10 | CONFIRMED FRESH GO LIVE PARTIAL | `industry_US/BET_SHEET.md` |
+| DELL (Dell Technologies) | 10 | CONFIRMED FADING FRESH GO LIVE | `industry_US/SWEEP_READ.md` |
+| AMZN (Amazon) | 10 | CONFIRMED FADING FRESH GO LIVE | `industry_US/preflight/PREFLIGHT.md` |
+| 005930 삼성전자 | 10 | CONFIRMED ECHO FADING FRESH GO | `industry_KR/preflight/PREFLIGHT.md` |
+| AMD (Advanced Micro Devices) | 9 | CONFIRMED FRESH GO LIVE PARTIAL | `industry_KR/HANDOVER.md` |
+| QCOM (Qualcomm) | 9 | CONFIRMED FADING FRESH GO LIVE | `industry_US/ACTION_TICKETS.md` |
+| 000660 SK하이닉스 | 9 | CONFIRMED ECHO FADING FRESH GO | `industry_KR/preflight/PREFLIGHT.md` |
+| LITE (Lumentum) | 9 | CONFIRMED FRESH GO LIVE PARTIAL | `industry_KR/HANDOVER.md` |
+| COHR (Coherent Corp.) | 9 | CONFIRMED FADING FRESH GO LIVE | `industry_US/SECTOR_DEEP_IT.md` |
+| VST (Vistra Corp.) | 9 | FRESH GO 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_UTIL.md` |
+| 036460 한국가스공사 | 8 | CONFIRMED ECHO FADING FRESH GO | `industry_KR/BET_SHEET.md` |
+| BAC (Bank of America) | 8 | CONFIRMED FADING FRESH GO LIVE | `industry_US/SECTOR_DEEP_FIN.md` |
+| CVX (Chevron Corporation) | 8 | CONFIRMED GO LIVE PARTIAL RESOLVED | `industry_KR/HANDOVER.md` |
+| GOOGL (Alphabet Inc. (Class A)) | 7 | CONFIRMED FRESH GO LIVE PARTIAL | `industry_US/SWEEP_READ.md` |
+| WMT (Walmart) | 7 | FRESH GO LIVE REAL 🔴 | `industry_US/preflight/PREFLIGHT.md` |
+| LLY (Lilly (Eli)) | 7 | BROKEN CONFIRMED FADING FRESH GO | `industry_US/SECTOR_ROTATION.md` |
+| COP (ConocoPhillips) | 7 | CONFIRMED ECHO FADING FRESH GO | `industry_KR/HANDOVER.md` |
+| 052690 한전기술 | 6 | CONFIRMED ECHO FADING FRESH GO | `industry_KR/BET_SHEET.md` |
+| 051600 한전KPS | 6 | CONFIRMED ECHO FADING FRESH LIVE | `industry_KR/BET_SHEET.md` |
+| META (Meta Platforms) | 6 | CONFIRMED FRESH GO LIVE PARTIAL | `industry_US/SWEEP_READ.md` |
+| BSX (Boston Scientific) | 6 | BROKEN ECHO FADING FRESH GO | `industry_US/BLINDSPOT_PREMORTEM.md` |
+| SLB (Schlumberger) | 6 | CONFIRMED ECHO FRESH GO LIVE | `industry_KR/HANDOVER.md` |
+| 047040 대우건설 | 6 | CONFIRMED ECHO FADING GO REAL | `industry_KR/EVENT_ALPHA.md` |
+| 034020 두산에너빌리티 | 5 | CONFIRMED ECHO FADING FRESH LIVE | `industry_KR/BET_SHEET.md` |
+| JPM (JPMorgan Chase) | 5 | CONFIRMED FRESH GO LIVE REAL | `industry_US/SECTOR_DEEP_FIN.md` |
+| GEV (GE Vernova) | 5 | CONFIRMED FADING FRESH GO 🔴 | `industry_US/EVENT_ALPHA.md` |
+| MSFT (Microsoft) | 5 | CONFIRMED FRESH GO LIVE PARTIAL | `company_NVDA/COMPANY_ANALYSIS.md` |
+| WMB (Williams Companies) | 5 | CONFIRMED FRESH GO LIVE PARTIAL | `industry_US/SWEEP_READ.md` |
+| 005490 POSCO홀딩스 | 5 | CONFIRMED FADING GO REAL RESOLVED | `industry_KR/SECTOR_ROTATION.md` |
+| 042700 한미반도체 | 5 | FADING GO WAIT 🔴 🟡 | `industry_KR/preflight/PREFLIGHT.md` |
+| FCX (Freeport-McMoRan) | 5 | CONFIRMED FADING FRESH GO LIVE | `industry_US/EVENT_ALPHA.md` |
+| CTVA (Corteva) | 5 | CONFIRMED FADING FRESH GO LIVE | `industry_KR/HANDOVER.md` |
+| GOOG (Alphabet Inc. (Class C)) | 5 | CONFIRMED FRESH GO LIVE PARTIAL | `industry_US/SWEEP_READ.md` |
+| 000720 현대건설 | 5 | CONFIRMED ECHO FADING GO RESOLVED | `industry_KR/SECTOR_DEEP_INDU.md` |
+| SNDK (Sandisk) | 5 | CONFIRMED FRESH GO LIVE REAL | `industry_US/2026-08-14/SECTOR_DEEP_COMM.md` |
+| WDC (Western Digital) | 5 | CONFIRMED FRESH GO LIVE REAL | `industry_US/2026-08-14/SECTOR_DEEP_COMM.md` |
+| 375500 DL이앤씨 | 4 | CONFIRMED ECHO FADING FRESH LIVE | `industry_KR/preflight/PREFLIGHT.md` |
+| 015760 한국전력 | 4 | CONFIRMED ECHO FADING FRESH LIVE | `industry_KR/BET_SHEET.md` |
+| 088350 한화생명 | 4 | CONFIRMED ECHO FRESH LIVE PARTIAL | `industry_KR/SWEEP_READ.md` |
+| DVN (Devon Energy) | 4 | CONFIRMED FRESH GO LIVE PARTIAL | `industry_US/ACTION_TICKETS.md` |
+| GLW (Corning Inc.) | 4 | CONFIRMED FADING FRESH GO LIVE | `industry_US/BET_SHEET.md` |
+| AMGN (Amgen) | 4 | GO LIVE REAL 🔴 🟡 | `industry_US/ACTION_TICKETS.md` |
+| VRT (Vertiv) | 4 | CONFIRMED FRESH GO LIVE 🔴 | `industry_US/SECTOR_DEEP_IT.md` |
+| GD (General Dynamics) | 4 | CONFIRMED FRESH GO PARTIAL 🔴 | `industry_US/SECTOR_DEEP_INDU.md` |
+| LHX (L3Harris) | 4 | CONFIRMED FRESH GO PARTIAL 🔴 | `industry_US/SECTOR_DEEP_INDU.md` |
+| NOC (Northrop Grumman) | 4 | CONFIRMED FRESH GO PARTIAL 🔴 | `industry_US/SECTOR_DEEP_INDU.md` |
+| LMT (Lockheed Martin) | 4 | CONFIRMED FRESH GO PARTIAL 🔴 | `industry_US/SECTOR_DEEP_INDU.md` |
+| ASML (ASML Holding) | 4 | CONFIRMED FADING GO LIVE 🔴 | `industry_KR/EVENT_ALPHA.md` |
+| NEE (NextEra Energy) | 4 | CONFIRMED FADING GO LIVE 🔴 | `industry_US/SECTOR_ROTATION.md` |
+| 096770 SK이노베이션 | 4 | CONFIRMED ECHO FADING FRESH GO | `industry_KR/EVENT_ALPHA.md` |
+| 010950 S-Oil | 4 | CONFIRMED ECHO FADING FRESH LIVE | `industry_KR/EVENT_ALPHA.md` |
+| STLD (Steel Dynamics) | 4 | CONFIRMED FADING FRESH GO PARTIAL | `industry_US/EVENT_ALPHA.md` |
+| EOG (EOG Resources) | 4 | CONFIRMED GO REAL 🔴 🟡 | `industry_US/ACTION_TICKETS.md` |
+| 012510 더존비즈온 | 4 | GO LIVE WAIT 🔴 🟡 | `industry_KR/preflight/PREFLIGHT.md` |
+| 057050 현대홈쇼핑 | 4 | GO LIVE WAIT 🔴 🟡 | `industry_KR/preflight/PREFLIGHT.md` |
+| VZ (Verizon) | 4 | CONFIRMED FRESH GO LIVE REAL | `industry_US/SECTOR_DEEP_COMM.md` |
+| TMUS (T-Mobile US) | 4 | CONFIRMED ECHO FRESH GO LIVE | `industry_US/SECTOR_DEEP_COMM.md` |
+| CMCSA (Comcast) | 4 | CONFIRMED FRESH GO LIVE REAL | `industry_US/SECTOR_DEEP_COMM.md` |
+| ABT (Abbott Laboratories) | 4 | BROKEN ECHO FADING FRESH GO | `industry_US/2026-08-13/ACTION_TICKETS.md` |
+| BDX (Becton Dickinson) | 4 | BROKEN ECHO FADING FRESH GO | `industry_US/2026-08-13/ACTION_TICKETS.md` |
+| KKR (KKR & Co.) | 4 | CONFIRMED FADING FRESH GO LIVE | `industry_US/2026-08-14/SWEEP_READ.md` |
+| AAPL (Apple Inc.) | 4 | CONFIRMED FRESH GO LIVE PARTIAL | `preflight/industry_US/PREFLIGHT.md` |
+| CSCO (Cisco) | 4 | CONFIRMED FRESH GO LIVE REAL | `industry_US/2026-08-14/SWEEP_READ.md` |
+| 012630 HDC | 3 | CONFIRMED ECHO FADING FRESH LIVE | `industry_KR/preflight/PREFLIGHT.md` |
+| 005830 DB손해보험 | 3 | CONFIRMED ECHO FRESH LIVE PARTIAL | `industry_KR/SECTOR_DEEP_INS.md` |
+| 086790 하나금융지주 | 3 | CONFIRMED ECHO FRESH GO LIVE | `preflight/industry_KR/PREFLIGHT.md` |
+| 105560 KB금융 | 3 | FRESH GO LIVE WAIT 🔴 | `preflight/industry_KR/PREFLIGHT.md` |
+| 000370 한화손해보험 | 3 | CONFIRMED ECHO FRESH LIVE PARTIAL | `industry_KR/SECTOR_DEEP_INS.md` |
+| 001450 현대해상 | 3 | CONFIRMED ECHO FRESH LIVE PARTIAL | `industry_KR/SECTOR_DEEP_INS.md` |
+| SYK (Stryker Corporation) | 3 | FADING GO LIVE REAL 🔴 | `industry_US/BLINDSPOT_PREMORTEM.md` |
+| ORCL (Oracle Corporation) | 3 | FRESH GO LIVE REAL 🔴 | `industry_US/MACRO_REPORT.md` |
+| TRV (Travelers Companies (The)) | 3 | CONFIRMED FADING FRESH GO REAL | `industry_US/EVENT_ALPHA.md` |
+| DE (Deere & Company) | 3 | FRESH GO 🔴 🟢 | `industry_US/SECTOR_DEEP_INDU.md` |
+| HWM (Howmet Aerospace) | 3 | FRESH GO 🔴 🟢 | `industry_US/SECTOR_DEEP_INDU.md` |
+| AMAT (Applied Materials) | 3 | FRESH GO LIVE REAL 🔴 | `industry_US/2026-08-13/SECTOR_ROTATION.md` |
+| LRCX (Lam Research) | 3 | FRESH GO LIVE REAL 🔴 | `industry_US/2026-08-13/SECTOR_ROTATION.md` |
+| KLAC (KLA Corporation) | 3 | FRESH GO LIVE REAL 🔴 | `industry_US/2026-08-13/SECTOR_ROTATION.md` |
+| CEG (Constellation Energy) | 3 | CONFIRMED FADING FRESH GO LIVE | `industry_US/SECTOR_DEEP_UTIL.md` |
+| 010130 고려아연 | 3 | FADING GO REAL 🔴 🟡 | `industry_KR/MACRO_REPORT.md` |
+| 079550 LIG디펜스앤에어로스페이스 | 3 | GO REAL RESOLVED WAIT 🔴 | `industry_KR/HANDOVER.md` |
+| CIEN (Ciena) | 3 | CONFIRMED FADING GO LIVE 🔴 | `industry_US/EVENT_ALPHA.md` |
+| FANG (Diamondback Energy) | 3 | CONFIRMED GO REAL 🔴 🟡 | `industry_US/HANDOVER.md` |
+| 001060 JW중외제약 | 3 | GO REAL RESOLVED WAIT 🔴 | `industry_KR/HANDOVER.md` |
+| OXY (Occidental Petroleum) | 3 | CONFIRMED PARTIAL RESOLVED 🔴 🟡 | `industry_US/SECTOR_DEEP_ENRG.md` |
+| 009150 삼성전기 | 3 | CONFIRMED FADING GO RESOLVED WAIT | `industry_KR/EVENT_ALPHA.md` |
+| BX (Blackstone Inc.) | 3 | CONFIRMED FADING FRESH GO LIVE | `industry_US/2026-08-14/SECTOR_DEEP_FIN.md` |
+| GE (GE Aerospace) | 3 | CONFIRMED FRESH GO PARTIAL 🔴 | `industry_US/SECTOR_DEEP_DEFENSE.md` |
+| PH (Parker Hannifin) | 3 | CONFIRMED GO LIVE PARTIAL RESOLVED | `industry_US/2026-08-14/SECTOR_DEEP_INDU.md` |
+| 082740 한화엔진 | 2 | CONFIRMED ECHO FADING FRESH LIVE | `industry_KR/BET_SHEET.md` |
+| 443060 HD현대마린솔루션 | 2 | CONFIRMED ECHO FADING FRESH LIVE | `industry_KR/preflight/PREFLIGHT.md` |
+| 000990 DB하이텍 | 2 | CONFIRMED ECHO FADING FRESH LIVE | `industry_KR/preflight/PREFLIGHT.md` |
+| 005090 SGC에너지 | 2 | CONFIRMED ECHO FADING FRESH LIVE | `industry_KR/BET_SHEET.md` |
+| 055550 신한지주 | 2 | CONFIRMED ECHO FRESH LIVE PARTIAL | `industry_KR/SECTOR_DEEP_FIN.md` |
+| 000540 흥국화재 | 2 | FRESH LIVE 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INS.md` |
+| CRM (Salesforce) | 2 | GO LIVE RESOLVED WAIT 🔴 | `industry_KR/HANDOVER.md` |
+| UNH (UnitedHealth Group) | 2 | BROKEN FRESH GO REAL 🔴 | `industry_US/MACRO_REPORT.md` |
+| HCA (HCA Healthcare) | 2 | BROKEN FRESH GO REAL 🔴 | `industry_US/MACRO_REPORT.md` |
+| ELV (Elevance Health) | 2 | BROKEN FRESH GO REAL 🔴 | `industry_US/MACRO_REPORT.md` |
+| SPGI (S&P Global) | 2 | CONFIRMED FRESH REAL 🔴 🟡 | `industry_US/SECTOR_DEEP_FIN.md` |
+| FITB (Fifth Third Bancorp) | 2 | CONFIRMED FRESH REAL 🔴 🟡 | `industry_US/SECTOR_DEEP_FIN.md` |
+| HOOD (Robinhood Markets) | 2 | FRESH GO LIVE REAL 🔴 | `industry_US/SWEEP_READ.md` |
+| WFC (Wells Fargo) | 2 | CONFIRMED FRESH REAL 🔴 🟡 | `industry_US/SECTOR_DEEP_FIN.md` |
+| PWR (Quanta Services) | 2 | FRESH GO 🔴 🟢 | `industry_US/SECTOR_DEEP_INDU.md` |
+| EMR (Emerson Electric) | 2 | CONFIRMED FRESH GO PARTIAL 🔴 | `industry_US/SECTOR_DEEP_INDU.md` |
+| DUK (Duke Energy) | 2 | FADING FRESH GO LIVE 🔴 | `industry_US/SECTOR_DEEP_UTIL.md` |
+| OKE (Oneok) | 2 | FRESH 🔴 🟡 🟢 | `industry_US/SECTOR_DEEP_UTIL.md` |
+| 005380 현대차 | 2 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_DISC.md` |
+| 000270 기아 | 2 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_DISC.md` |
+| 103140 풍산 | 2 | FRESH 🔴 🟡 🟢 | `industry_US/SECTOR_DEEP_STPL.md` |
+| DAL (Delta Air Lines) | 2 | CONFIRMED PARTIAL RESOLVED 🔴 🟢 | `industry_US/ACTION_TICKETS.md` |
+| UAL (United Airlines Holdings) | 2 | CONFIRMED PARTIAL RESOLVED 🔴 🟢 | `industry_US/ACTION_TICKETS.md` |
+| REGN (Regeneron Pharmaceuticals) | 2 | FADING GO RESOLVED 🔴 🟢 | `industry_US/ACTION_TICKETS.md` |
+| MSTR (MicroStrategy) | 2 | GO REAL RESOLVED WAIT 🔴 | `industry_KR/HANDOVER.md` |
+| 006220 제주은행 | 2 | GO REAL RESOLVED WAIT 🔴 | `industry_KR/HANDOVER.md` |
+| 373220 LG에너지솔루션 | 2 | GO REAL RESOLVED WAIT 🔴 | `industry_KR/HANDOVER.md` |
+| 192820 코스맥스 | 2 | CONFIRMED GO REAL 🔴 🟡 | `industry_US/HANDOVER.md` |
+| 001820 삼화콘덴서공업 | 2 | GO REAL RESOLVED WAIT 🔴 | `industry_KR/HANDOVER.md` |
+| 028670 팬오션 | 2 | CONFIRMED FADING GO REAL 🔴 | `industry_KR/EVENT_ALPHA.md` |
+| BKR (Baker Hughes) | 2 | CONFIRMED ECHO GO RESOLVED 🔴 | `industry_US/SECTOR_DEEP_ENRG.md` |
+| DASH (DoorDash) | 2 | RESOLVED WAIT 🔴 🟡 🟢 | `industry_KR/HANDOVER.md` |
+| 128940 한미약품 | 2 | 🔴 🟢 | `company_128940/COMPANY_ANALYSIS.md` |
+| MDT (Medtronic) | 2 | BROKEN FADING FRESH REAL 🔴 | `industry_US/SECTOR_DEEP_HLTH.md` |
+| 035420 NAVER | 2 | GO WAIT 🔴 🟡 🟢 | `preflight/industry_KR/PREFLIGHT.md` |
+| CBRE (CBRE Group) | 2 | FRESH GO 🔴 🟡 🟢 | `industry_US/SECTOR_DEEP_RE.md` |
+| DIS (Walt Disney Company (The)) | 2 | CONFIRMED FADING FRESH GO LIVE | `industry_US/SECTOR_DEEP_COMM.md` |
+| AEP (American Electric Power) | 2 | FADING GO LIVE 🔴 🟡 | `industry_US/2026-08-14/HANDOVER.md` |
+| 051900 LG생활건강 | 2 | CONFIRMED FADING 🔴 🟡 🟢 | `theme_beauty_device/KPMG_BEAUTY_DEVICE_20260819.md` |
+| 090430 아모레퍼시픽 | 2 | CONFIRMED FADING 🔴 🟡 🟢 | `theme_beauty_device/KPMG_BEAUTY_DEVICE_20260819.md` |
+| 002790 아모레퍼시픽홀딩스 | 2 | CONFIRMED FADING 🔴 🟡 🟢 | `theme_beauty_device/KPMG_BEAUTY_DEVICE_20260819.md` |
+| ABNB (Airbnb) | 2 | LIVE 🔴 🟡 🟢 | `industry_US/SECTOR_DEEP_DISC.md` |
+| HD (Home Depot (The)) | 2 | LIVE 🔴 🟡 🟢 | `industry_US/SECTOR_DEEP_DISC.md` |
+| SHW (Sherwin-Williams) | 2 | CONFIRMED FRESH GO PARTIAL 🔴 | `industry_US/SECTOR_DEEP_MATR.md` |
+| MLM (Martin Marietta Materials) | 2 | CONFIRMED FRESH GO PARTIAL 🔴 | `industry_US/SECTOR_DEEP_MATR.md` |
+| APD (Air Products) | 2 | CONFIRMED FRESH GO PARTIAL 🔴 | `industry_US/SECTOR_DEEP_MATR.md` |
+| VMC (Vulcan Materials Company) | 2 | CONFIRMED FRESH GO PARTIAL 🔴 | `industry_US/SECTOR_DEEP_MATR.md` |
+| CRH (CRH plc) | 2 | CONFIRMED FRESH GO PARTIAL 🔴 | `industry_US/SECTOR_DEEP_MATR.md` |
+| ECL (Ecolab) | 2 | CONFIRMED FRESH GO PARTIAL 🔴 | `industry_US/SECTOR_DEEP_MATR.md` |
+| ISRG (Intuitive Surgical) | 2 | BROKEN FADING FRESH GO REAL | `industry_US/2026-08-13/ACTION_TICKETS.md` |
+| BMY (Bristol Myers Squibb) | 2 | ECHO FADING FRESH GO LIVE | `industry_US/2026-08-13/ACTION_TICKETS.md` |
+| TMO (Thermo Fisher Scientific) | 2 | BROKEN FADING FRESH GO REAL | `industry_US/2026-08-13/ACTION_TICKETS.md` |
+| WAT (Waters Corporation) | 2 | BROKEN FADING FRESH GO REAL | `industry_US/2026-08-13/ACTION_TICKETS.md` |
+| STX (Seagate Technology) | 2 | ECHO FADING FRESH GO LIVE | `industry_US/2026-08-13/SECTOR_DEEP_IT.md` |
+| ADM (Archer Daniels Midland) | 2 | CONFIRMED FADING FRESH GO LIVE | `industry_US/SECTOR_DEEP_STPL.md` |
+| AXON (Axon Enterprise) | 2 | CONFIRMED FRESH GO PARTIAL 🔴 | `industry_US/SECTOR_DEEP_DEFENSE.md` |
+| BA (Boeing) | 2 | FRESH 🔴 | `industry_US/SECTOR_DEEP_DEFENSE.md` |
+| TGT (Target Corporation) | 2 | FRESH LIVE 🔴 🟡 🟢 | `industry_US/SECTOR_DEEP_STPL.md` |
+| 006360 GS건설 | 2 | CONFIRMED ECHO FRESH LIVE PARTIAL | `industry_KR/ALPHA_TAGS.md` |
+| 000150 두산 | 1 | CONFIRMED ECHO FADING FRESH LIVE | `industry_KR/BET_SHEET.md` |
+| 175330 JB금융지주 | 1 | FRESH LIVE 🟢 | `industry_KR/SECTOR_DEEP_FIN.md` |
+| 006800 미래에셋증권 | 1 | FRESH LIVE 🟢 | `industry_KR/SECTOR_DEEP_FIN.md` |
+| 016360 삼성증권 | 1 | FRESH LIVE 🟢 | `industry_KR/SECTOR_DEEP_FIN.md` |
+| ADBE (Adobe Inc.) | 1 | GO REAL 🔴 🟢 | `industry_US/MACRO_REPORT.md` |
+| HUM (Humana) | 1 | GO REAL 🔴 🟢 | `industry_US/MACRO_REPORT.md` |
+| HBAN (Huntington Bancshares) | 1 | FRESH REAL 🔴 🟡 🟢 | `industry_US/SECTOR_DEEP_FIN.md` |
+| AON (Aon plc) | 1 | FRESH REAL 🔴 🟡 🟢 | `industry_US/SECTOR_DEEP_FIN.md` |
+| HIG (Hartford (The)) | 1 | FRESH REAL 🔴 🟡 🟢 | `industry_US/SECTOR_DEEP_FIN.md` |
+| PGR (Progressive Corporation) | 1 | FRESH REAL 🔴 🟡 🟢 | `industry_US/SECTOR_DEEP_FIN.md` |
+| COIN (Coinbase) | 1 | FRESH REAL 🔴 🟡 🟢 | `industry_US/SECTOR_DEEP_FIN.md` |
+| FIX (Comfort Systems USA) | 1 | FRESH GO 🔴 🟢 | `industry_US/SECTOR_DEEP_INDU.md` |
+| EME (Emcor) | 1 | FRESH GO 🔴 🟢 | `industry_US/SECTOR_DEEP_INDU.md` |
+| RSG (Republic Services) | 1 | FRESH GO 🔴 🟢 | `industry_US/SECTOR_DEEP_INDU.md` |
+| ARM (Arm Holdings) | 1 | GO LIVE 🟡 | `industry_US/SECTOR_DEEP_SEMI.md` |
+| PG (Procter & Gamble) | 1 | FRESH 🔴 🟡 🟢 | `industry_US/SECTOR_DEEP_UTIL.md` |
+| 064350 현대로템 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_DISC.md` |
+| 012450 한화에어로스페이스 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_DISC.md` |
+| 047810 한국항공우주 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_DISC.md` |
+| 272210 한화시스템 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_DISC.md` |
+| 012330 현대모비스 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_DISC.md` |
+| 329180 HD현대중공업 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_DISC.md` |
+| 010140 삼성중공업 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_DISC.md` |
+| 042660 한화오션 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_DISC.md` |
+| 005850 에스엘 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_DISC.md` |
+| 204320 HL만도 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_DISC.md` |
+| 439260 대한조선 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_DISC.md` |
+| 007660 이수페타시스 | 1 | FADING 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_IT.md` |
+| VRTX (Vertex Pharmaceuticals) | 1 | 🟢 | `industry_US/ACTION_TICKETS.md` |
+| GILD (Gilead Sciences) | 1 | 🟢 | `industry_US/ACTION_TICKETS.md` |
+| 015860 일진홀딩스 | 1 | GO REAL 🔴 🟡 🟢 | `industry_US/HANDOVER.md` |
+| 066570 LG전자 | 1 | CONFIRMED FADING 🔴 🟡 🟢 | `industry_KR/EVENT_ALPHA.md` |
+| 103590 일진전기 | 1 | RESOLVED WAIT 🔴 🟡 🟢 | `industry_KR/HANDOVER.md` |
+| 008930 한미사이언스 | 1 | 🟢 | `industry_KR/SECTOR_DEEP_HLTH.md` |
+| 249420 일동제약 | 1 | 🟢 | `industry_KR/SECTOR_DEEP_HLTH.md` |
+| 019170 신풍제약 | 1 | 🟢 | `industry_KR/SECTOR_DEEP_HLTH.md` |
+| 002210 동성제약 | 1 | 🟢 | `industry_KR/SECTOR_DEEP_HLTH.md` |
+| 002720 국제약품 | 1 | 🟢 | `industry_KR/SECTOR_DEEP_HLTH.md` |
+| 000230 일동홀딩스 | 1 | 🟢 | `industry_KR/SECTOR_DEEP_HLTH.md` |
+| 028260 삼성물산 | 1 | LIVE 🔴 🟡 🟢 | `industry_KR/SWEEP_READ.md` |
+| IDXX (Idexx Laboratories) | 1 | FADING REAL 🔴 🟢 | `industry_US/SECTOR_DEEP_HLTH.md` |
+| 307950 현대오토에버 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_COMM.md` |
+| 018260 삼성에스디에스 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_COMM.md` |
+| 064400 LG씨엔에스 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_COMM.md` |
+| 181710 NHN | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_COMM.md` |
+| 035720 카카오 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_COMM.md` |
+| 286940 롯데이노베이트 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_COMM.md` |
+| 035510 신세계I&C | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_COMM.md` |
+| 020120 키다리스튜디오 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_COMM.md` |
+| 007120 미래아이앤지 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_COMM.md` |
+| 259960 크래프톤 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_COMM.md` |
+| 036570 엔씨소프트 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_COMM.md` |
+| 251270 넷마블 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_COMM.md` |
+| 241560 두산밥캣 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INDU.md` |
+| 267270 HD건설기계 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INDU.md` |
+| 100840 SNT에너지 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INDU.md` |
+| 079900 전진건설로봇 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INDU.md` |
+| 015590 DKME | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INDU.md` |
+| 011700 한신기계공업 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INDU.md` |
+| 480370 씨케이솔루션 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INDU.md` |
+| 077970 STX엔진 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INDU.md` |
+| 071970 HD현대마린엔진 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INDU.md` |
+| 484870 엠앤씨솔루션 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INDU.md` |
+| DLR (Digital Realty) | 1 | FRESH 🔴 🟢 | `industry_US/SECTOR_DEEP_RE.md` |
+| CCI (Crown Castle) | 1 | FRESH 🔴 🟢 | `industry_US/SECTOR_DEEP_RE.md` |
+| EQIX (Equinix) | 1 | FRESH 🔴 🟢 | `industry_US/SECTOR_DEEP_RE.md` |
+| IRM (Iron Mountain) | 1 | FRESH 🔴 🟢 | `industry_US/SECTOR_DEEP_RE.md` |
+| SPG (Simon Property Group) | 1 | FRESH 🔴 🟢 | `industry_US/SECTOR_DEEP_RE.md` |
+| PSA (Public Storage) | 1 | FRESH 🔴 🟢 | `industry_US/SECTOR_DEEP_RE.md` |
+| VTR (Ventas) | 1 | FRESH 🔴 🟢 | `industry_US/SECTOR_DEEP_RE.md` |
+| AMT (American Tower) | 1 | FRESH 🔴 🟢 | `industry_US/SECTOR_DEEP_RE.md` |
+| PLD (Prologis) | 1 | FRESH 🔴 🟢 | `industry_US/SECTOR_DEEP_RE.md` |
+| WBD (Warner Bros. Discovery) | 1 | CONFIRMED FRESH GO 🔴 🟢 | `industry_US/SECTOR_DEEP_COMM.md` |
+| TTWO (Take-Two Interactive) | 1 | CONFIRMED FRESH GO 🔴 🟢 | `industry_US/SECTOR_DEEP_COMM.md` |
+| NFLX (Netflix) | 1 | CONFIRMED FRESH GO 🔴 🟢 | `industry_US/SECTOR_DEEP_COMM.md` |
+| LYV (Live Nation Entertainment) | 1 | CONFIRMED FRESH GO 🔴 🟢 | `industry_US/SECTOR_DEEP_COMM.md` |
+| 161890 한국콜마 | 1 | CONFIRMED 🟡 🟢 | `industry_KR/SECTOR_DEEP_STPL.md` |
+| 071320 지역난방공사 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_UTIL.md` |
+| 004690 삼천리 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_UTIL.md` |
+| 017390 서울도시가스 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_UTIL.md` |
+| 117580 대성에너지 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_UTIL.md` |
+| 003480 한진중공업홀딩스 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_UTIL.md` |
+| 034590 인천도시가스 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_UTIL.md` |
+| 267290 경동도시가스 | 1 | 🟡 🟢 | `industry_KR/SECTOR_DEEP_UTIL.md` |
+| 004020 현대제철 | 1 | — | `industry_KR/SECTOR_DEEP_MATR.md` |
+| 100090 SK오션플랜트 | 1 | — | `industry_KR/SECTOR_DEEP_MATR.md` |
+| 008970 KBI동양철관 | 1 | — | `industry_KR/SECTOR_DEEP_MATR.md` |
+| 071090 하이스틸 | 1 | — | `industry_KR/SECTOR_DEEP_MATR.md` |
+| 092790 넥스틸 | 1 | — | `industry_KR/SECTOR_DEEP_MATR.md` |
+| NKE (Nike, Inc.) | 1 | 🔴 🟢 | `industry_US/SECTOR_DEEP_DISC.md` |
+| DHI (D. R. Horton) | 1 | 🔴 🟢 | `industry_US/SECTOR_DEEP_DISC.md` |
+| CVNA (Carvana) | 1 | 🔴 🟢 | `industry_US/SECTOR_DEEP_DISC.md` |
+| MELI (Mercado Libre) | 1 | 🔴 🟢 | `industry_US/SECTOR_DEEP_DISC.md` |
+| PDD (PDD Holdings) | 1 | 🔴 🟢 | `industry_US/SECTOR_DEEP_DISC.md` |
+| EBAY (eBay Inc.) | 1 | 🔴 🟢 | `industry_US/SECTOR_DEEP_DISC.md` |
+| GRMN (Garmin) | 1 | 🔴 🟢 | `industry_US/SECTOR_DEEP_DISC.md` |
+| TJX (TJX Companies) | 1 | 🔴 🟢 | `industry_US/SECTOR_DEEP_DISC.md` |
+| ROST (Ross Stores) | 1 | 🔴 🟢 | `industry_US/SECTOR_DEEP_DISC.md` |
+| XYZ (Block, Inc.) | 1 | CONFIRMED 🔴 🟡 🟢 | `industry_US/SECTOR_DEEP_MATR.md` |
+| APO (Apollo Global Management) | 1 | FADING GO LIVE 🔴 🟢 | `industry_US/2026-08-13/BLINDSPOT_PREMORTEM.md` |
+| MRK (Merck & Co.) | 1 | CONFIRMED FRESH GO LIVE 🔴 | `industry_US/2026-08-13/HANDOVER.md` |
+| PANW (Palo Alto Networks) | 1 | CONFIRMED FRESH GO LIVE 🔴 | `industry_US/2026-08-13/HANDOVER.md` |
+| UPS (United Parcel Service) | 1 | CONFIRMED PARTIAL RESOLVED 🔴 🟢 | `industry_US/2026-08-13/SECTOR_DEEP_ENRG.md` |
+| FDX (FedEx) | 1 | CONFIRMED PARTIAL RESOLVED 🔴 🟢 | `industry_US/2026-08-13/SECTOR_DEEP_ENRG.md` |
+| DHR (Danaher Corporation) | 1 | BROKEN FRESH REAL 🔴 🟡 | `industry_US/2026-08-13/SECTOR_DEEP_HLTH.md` |
+| CI (Cigna) | 1 | BROKEN FRESH REAL 🔴 🟡 | `industry_US/2026-08-13/SECTOR_DEEP_HLTH.md` |
+| HON (Honeywell) | 1 | CONFIRMED GO PARTIAL 🔴 🟢 | `industry_US/2026-08-13/SECTOR_DEEP_INDU.md` |
+| UNP (Union Pacific Corporation) | 1 | CONFIRMED GO PARTIAL 🔴 🟢 | `industry_US/2026-08-13/SECTOR_DEEP_INDU.md` |
+| INTC (Intel) | 1 | CONFIRMED GO PARTIAL 🔴 🟢 | `industry_US/2026-08-13/SECTOR_DEEP_INDU.md` |
+| PRU (Prudential Financial) | 1 | FRESH LIVE REAL 🔴 🟢 | `industry_US/2026-08-13/SECTOR_ROTATION.md` |
+| XEL (Xcel Energy) | 1 | FADING GO LIVE 🔴 🟢 | `industry_US/2026-08-14/HANDOVER.md` |
+| IBM (IBM) | 1 | CONFIRMED FADING FRESH LIVE REAL | `industry_US/2026-08-14/MACRO_REPORT.md` |
+| TRGP (Targa Resources) | 1 | — | `industry_US/2026-08-14/SECTOR_DEEP_ENRG.md` |
+| AXP (American Express) | 1 | CONFIRMED FRESH 🔴 🟢 | `industry_US/2026-08-14/SECTOR_DEEP_FIN.md` |
+| CME (CME Group) | 1 | CONFIRMED FRESH 🔴 🟢 | `industry_US/2026-08-14/SECTOR_DEEP_FIN.md` |
+| MSCI (MSCI Inc.) | 1 | CONFIRMED FRESH 🔴 🟢 | `industry_US/2026-08-14/SECTOR_DEEP_FIN.md` |
+| BLK (BlackRock) | 1 | CONFIRMED FRESH 🔴 🟢 | `industry_US/2026-08-14/SECTOR_DEEP_FIN.md` |
+| USB (U.S. Bancorp) | 1 | CONFIRMED FRESH 🔴 🟢 | `industry_US/2026-08-14/SECTOR_DEEP_FIN.md` |
+| PNC (PNC Financial Services) | 1 | CONFIRMED FRESH 🔴 🟢 | `industry_US/2026-08-14/SECTOR_DEEP_FIN.md` |
+| TFC (Truist Financial) | 1 | CONFIRMED FRESH 🔴 🟢 | `industry_US/2026-08-14/SECTOR_DEEP_FIN.md` |
+| 352820 하이브 | 1 | ECHO FADING 🔴 🟡 🟢 | `company_035760/COMPANY_ANALYSIS.md` |
+| MNST (Monster Beverage) | 1 | FRESH 🔴 🟢 | `industry_US/SECTOR_DEEP_STPL.md` |
+| SYY (Sysco) | 1 | FRESH 🔴 🟢 | `industry_US/SECTOR_DEEP_STPL.md` |
+| 278470 에이피알 | 1 | FADING 🔴 🟡 🟢 | `theme_beauty_device/KPMG_BEAUTY_DEVICE_20260819.md` |
+| 483650 달바글로벌 | 1 | FADING 🔴 🟡 🟢 | `theme_beauty_device/KPMG_BEAUTY_DEVICE_20260819.md` |
+| 284740 쿠쿠홈시스 | 1 | FADING 🔴 🟡 🟢 | `theme_beauty_device/KPMG_BEAUTY_DEVICE_20260819.md` |
+| PLTR (Palantir Technologies) | 1 | ECHO GO RESOLVED | `COMPANY_SCOREBOARD.md` |
+| TRI (Thomson Reuters) | 1 | ECHO GO RESOLVED | `COMPANY_SCOREBOARD.md` |
+| APH (Amphenol) | 1 | ECHO GO RESOLVED | `COMPANY_SCOREBOARD.md` |
+| 011200 HMM | 1 | ECHO GO RESOLVED | `COMPANY_SCOREBOARD.md` |
+| 073240 금호타이어 | 1 | ECHO GO RESOLVED | `COMPANY_SCOREBOARD.md` |
+| 300720 한일시멘트 | 1 | CONFIRMED ECHO FRESH LIVE PARTIAL | `industry_KR/ALPHA_TAGS.md` |
+| 006400 삼성SDI | 1 | CONFIRMED ECHO FRESH LIVE PARTIAL | `industry_KR/ALPHA_TAGS.md` |
+| 066970 엘앤에프 | 1 | CONFIRMED ECHO FRESH LIVE PARTIAL | `industry_KR/ALPHA_TAGS.md` |
+| TDG (TransDigm Group) | 1 | FRESH 🔴 | `industry_US/SECTOR_DEEP_DEFENSE.md` |
+| 032830 삼성생명 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INS.md` |
+| 000810 삼성화재 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INS.md` |
+| 031210 서울보증보험 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INS.md` |
+| 003690 코리안리 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INS.md` |
+| 085620 미래에셋생명 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INS.md` |
+| 082640 동양생명 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INS.md` |
+| 000400 롯데손해보험 | 1 | 🔴 🟡 🟢 | `industry_KR/SECTOR_DEEP_INS.md` |
+
+## 섹터별
+
+- **IT** (47건): `industry_KR/BET_SHEET.md`, `industry_KR/SECTOR_DEEP_FIN.md`, `industry_US/BET_SHEET.md`, `industry_US/BLINDSPOT_PREMORTEM.md`, `industry_US/MACRO_REPORT.md`, `industry_US/SECTOR_DEEP_FIN.md`
+- **INDU** (31건): `industry_KR/BET_SHEET.md`, `industry_US/BLINDSPOT_PREMORTEM.md`, `industry_US/MACRO_REPORT.md`, `industry_US/SECTOR_DEEP_INDU.md`, `industry_US/SECTOR_ROTATION.md`, `industry_KR/SECTOR_ROTATION.md`
+- **UTIL** (31건): `industry_KR/BET_SHEET.md`, `industry_US/BLINDSPOT_PREMORTEM.md`, `industry_US/MACRO_REPORT.md`, `industry_US/SECTOR_DEEP_FIN.md`, `industry_US/SECTOR_DEEP_UTIL.md`, `industry_US/SECTOR_ROTATION.md`
+- **ENRG** (31건): `industry_US/BET_SHEET.md`, `industry_US/BLINDSPOT_PREMORTEM.md`, `industry_US/SECTOR_DEEP_FIN.md`, `industry_US/SECTOR_ROTATION.md`, `industry_KR/SECTOR_ROTATION.md`, `industry_US/SECTOR_DEEP_ENRG.md`
+- **FIN** (26건): `industry_KR/SECTOR_DEEP_FIN.md`, `industry_US/BET_SHEET.md`, `industry_US/BLINDSPOT_PREMORTEM.md`, `industry_US/SECTOR_DEEP_FIN.md`, `industry_US/SECTOR_ROTATION.md`, `industry_KR/SECTOR_ROTATION.md`
+- **STPL** (24건): `industry_US/BLINDSPOT_PREMORTEM.md`, `industry_US/MACRO_REPORT.md`, `industry_US/SECTOR_DEEP_FIN.md`, `industry_US/SECTOR_ROTATION.md`, `industry_US/HANDOVER.md`, `industry_US/SWEEP_READ.md`
+- **HLTH** (23건): `industry_US/BET_SHEET.md`, `industry_US/BLINDSPOT_PREMORTEM.md`, `industry_US/MACRO_REPORT.md`, `industry_US/SECTOR_DEEP_FIN.md`, `industry_US/SECTOR_ROTATION.md`, `industry_US/ACTION_TICKETS.md`
+- **COMM** (19건): `industry_US/BET_SHEET.md`, `industry_US/MACRO_REPORT.md`, `industry_US/SECTOR_ROTATION.md`, `industry_KR/SECTOR_ROTATION.md`, `industry_US/EVENT_ALPHA.md`, `industry_US/HANDOVER.md`
+- **MATR** (18건): `industry_US/MACRO_REPORT.md`, `industry_US/SECTOR_ROTATION.md`, `industry_KR/SECTOR_ROTATION.md`, `industry_US/HANDOVER.md`, `industry_KR/HANDOVER.md`, `industry_KR/SECTOR_DEEP_MATR.md`
+- **DISC** (15건): `industry_US/SECTOR_ROTATION.md`, `industry_US/SECTOR_DEEP_HLTH.md`, `industry_US/SECTOR_DEEP_DISC.md`, `industry_US/2026-08-13/BET_SHEET.md`, `industry_US/2026-08-13/BLINDSPOT_PREMORTEM.md`, `industry_US/2026-08-13/HANDOVER.md`
+- **HEALTH** (4건): `industry_US/2026-08-13/ACTION_TICKETS.md`, `industry_US/2026-08-13/BET_SHEET.md`, `industry_US/2026-08-13/BLINDSPOT_PREMORTEM.md`, `industry_US/2026-08-13/SECTOR_DEEP_HLTH.md`
+- **DEF** (2건): `industry_US/2026-08-13/BET_SHEET.md`, `industry_US/2026-08-13/SECTOR_DEEP_INDU.md`
+
+## 리포트 목록 (데스크별)
+
+### 2026-08-13
+- `industry_US/2026-08-13/ACTION_TICKETS.md` — BRACKET::A_cool — NVDA  (BUY) · BRACKET::B_hot  ★asym-hedge — MPC  (BUY)
+- `industry_US/2026-08-13/BET_SHEET.md` — BET_SHEET — industry_US · 2026-08-13 · Stage 9/11 (L1·BET) · ═══ §B · ALPHA — freshness gate (Stage 10/11, appended 2026-08-13 23:35 KST) ═══
+- `industry_US/2026-08-13/BLINDSPOT_PREMORTEM.md` — LEG 1 · HEALTH CARE — med-tech / life-science tools → ★ PROMOTE-TO-DEEP · LEG 2 · FINANCIALS — alternative asset managers → WITHIN-RUN-WATCH
+- `industry_US/2026-08-13/CYCLE_EXPOSURE.md` — CYCLE_EXPOSURE — 2026-08-13  (dominant cycles ↔ REAL KIS book) · Verdict
+- `industry_US/2026-08-13/EVENT_ALPHA.md` — EVENT_ALPHA — industry_US · 2026-08-13 · Stage 5/11 (L1·EVENT_ALPHA) · Card 1 — ★★★ REFINING CAPACITY IS BEING DESTROYED, and it is not a Hormuz story
+- `industry_US/2026-08-13/HANDOVER.md` — HANDOVER — industry_US · 2026-08-13 (Thu KST) · Stage 2/11 (L1·HANDOVER) · 0. Run clock — and the one fact that reorders this whole run
+- `industry_US/2026-08-13/MACRO_REPORT.md` — MACRO_REPORT — industry_US · 2026-08-13 · Stage 3/11 (L1·MACRO) · B-1 · FINRA short pressure on the 08-12 settled session — a hedging signature
+- `industry_US/2026-08-13/SECTOR_DEEP_ENRG.md` — SECTOR_DEEP_ENRG — Energy (OW− held) · 2026-08-13 · CONTINUOUS track ⇒ DELTA-LED · 1 · THE DELTA — what is new, what confirmed, what cracked
+- `industry_US/2026-08-13/SECTOR_DEEP_HLTH.md` — SECTOR DEEP — HEALTH CARE (HLTH) · 2026-08-13 · does not support the conclusion Lens 2 drew from it.
+- `industry_US/2026-08-13/SECTOR_DEEP_INDU.md` — SECTOR_DEEP_INDU — Industrials (OW−, held) · 2026-08-13 · CONTINUOUS ⇒ DELTA-LED · 1 · The delta — the sector went nowhere and its two halves went opposite ways
+- `industry_US/2026-08-13/SECTOR_DEEP_IT.md` — SECTOR_DEEP_IT — industry_US · 2026-08-13 · Rotating slot 2 · FULL FRESH MAP · 6a · The count is wrong on Card 4's own table
+- `industry_US/2026-08-13/SECTOR_DEEP_MATR.md` — SECTOR_DEEP_MATR — Materials · 2026-08-13 (Thu) · all prices SETTLED 2026-08-12 · 0a. Verdict, in one line
+- `industry_US/2026-08-13/SECTOR_ROTATION.md` — SECTOR_ROTATION — industry_US · 2026-08-13 · Stage 6/11 (L1·ROTATION) · 2a · Why this delta is legal and the one that failed last run is not
+- `industry_US/2026-08-13/SWEEP_READ.md` — SWEEP_READ — industry_US · 2026-08-13 · Stage 4/11 (L1·SWEEP)
+
+### 2026-08-14
+- `industry_US/2026-08-14/ACTION_TICKETS.md` — ACTION_TICKETS — 2026-08-14 · written by industry_US stage 10 (L1·ALPHA)
+- `industry_US/2026-08-14/BET_SHEET.md` — BET_SHEET — industry_US · 2026-08-14 · Stage 9/11 (L1·BET) · A-§A · Numbers
+- `industry_US/2026-08-14/BLINDSPOT_PREMORTEM.md` — 1b · The memory-supplier leg, which the IT promotion does NOT actually contain · 1c · What Lens 1 declines to promote, with the reason
+- `industry_US/2026-08-14/CYCLE_EXPOSURE.md` — CYCLE_EXPOSURE — 2026-08-14  (dominant cycles ↔ REAL KIS book) · Verdict
+- `industry_US/2026-08-14/EVENT_ALPHA.md` — EVENT_ALPHA — industry_US · 2026-08-14 · Stage 5/11 (L1·EVENT_ALPHA) · Card 3 — ★★★ The crack has a NAMED physical cause and it is still firing
+- `industry_US/2026-08-14/HANDOVER.md` — HANDOVER — industry_US · 2026-08-14 · Stage 2/11 (L1·HANDOVER) · 0. Run clock — and the one thing it settles
+- `industry_US/2026-08-14/MACRO_REPORT.md` — MACRO_REPORT — industry_US · 2026-08-14 · Stage 3/11 (L1·MACRO) · A-3 · The labour leg, which cuts the same way as the long end
+- `industry_US/2026-08-14/SECTOR_DEEP_COMM.md` — 0 · ⛔ R56 resolved FIRST, because it contaminates every number below · 1 · ★★★ The finding: the COMM underweight is not a sector call
+- `industry_US/2026-08-14/SECTOR_DEEP_ENRG.md` — 1 · The mandate, answered first · 2 · Delta since the 2026-08-13 deep — what actually changed
+- `industry_US/2026-08-14/SECTOR_DEEP_FIN.md` — 1 · The mandate — M40's reversal LOCATED, and it is not where the demote implied · 1b · ★★ And the breadth premium did not disappear — it MOVED
+- `industry_US/2026-08-14/SECTOR_DEEP_INDU.md` — SECTOR_DEEP_INDU — Industrials (OW−) · 2026-08-14 · CONTINUOUS track ⇒ DELTA-led · 2 · Delta since the 2026-08-13 deep
+- `industry_US/2026-08-14/SECTOR_ROTATION.md` — SECTOR_ROTATION — industry_US · 2026-08-14 · Stage 6/11 (L1·ROTATION) · 2a · Why the IT promotion is legal, and why it is only ONE notch
+- `industry_US/2026-08-14/SWEEP_READ.md` — SWEEP_READ — industry_US · 2026-08-14 · Stage 4/11 (L1·SWEEP) · 0 · Instrument health line, read BEFORE the numbers
+
+### company_000720
+- `company_000720/REPORT.md` — 현대건설 (000720) — 컴퍼니 리서치 · 0. 세 줄 요약
+
+### company_035760
+- `company_035760/COMPANY_ANALYSIS.md` — COMPANY ANALYSIS — 035760 (CJ ENM, KOSDAQ) · 0. 한 장 요약
+
+### company_128940
+- `company_128940/COMPANY_ANALYSIS.md` — 한미약품 (128940) — COMPANY_RESEARCH 평결 · 평결: 🔴 PASS (신규 진입 없음 · 보유 0)
+
+### company_AVGO
+- `company_AVGO/COMPANY_ANALYSIS.md` — COMPANY ANALYSIS — AVGO (Broadcom Inc.) · SEED-NUMBER AUDIT (load-bearing figures) — do first
+
+### company_NVDA
+- `company_NVDA/COMPANY_ANALYSIS.md` — COMPANY ANALYSIS — NVDA (NVIDIA Corporation) · 2026-09-03 · 이 런이 찾은 것
+
+### industry_KR
+- `industry_KR/ALPHA_TAGS.md` — ALPHA_TAGS — industry_kr · 2026-09-02 (수) · Stage 9/9 (L1·ALPHA) · 🚨 0 · 이 게이트가 서기 전에 — F1 의 0 이 시장인지 계기인지 먼저 물었다
+- `industry_KR/BET_SHEET.md` — BET_SHEET — industry_kr · 2026-09-13 (일) · Stage 8/9 (L1·BET) · A-1 · 숫자 (배수 없음 — §0-a)
+- `industry_KR/EVENT_ALPHA.md` — EVENT_ALPHA — industry_kr · 2026-09-13 (일) · Stage 5/9 (L1·EVENT_ALPHA) · 0 · 선택 로그 — 다일 스레드 383(살아있는 46) → 8 선택 → 38 미선택(세었다, 조용히 자르지 않았다)
+- `industry_KR/HANDOVER.md` — HANDOVER — industry_kr · 2026-09-13 (일) · Stage 2/9 (L1·HANDOVER) · 0 · 계기 건강 상속 — 숫자를 믿기 전에
+- `industry_KR/MACRO_REPORT.md` — MACRO_REPORT — industry_kr · 2026-09-13 (일) · Stage 3/9 (L1·MACRO) · A-2 · 크레딧 — 인상 리프라이싱 + 유가 100달러를 지나도 안 움직였다
+- `industry_KR/PREFLIGHT.md` — PREFLIGHT — 2026-09-02 (수) · industry_kr (--market kr) · 게이트 요약표
+- `industry_KR/PULSE.md` — PULSE — "지금 무슨 일?" · 2026-08-18 (화) 10:35~10:38 KST · 0. 🚨 계기 먼저 — 뉴스축 프로브 통과 (10:35:47)
+- `industry_KR/SECTOR_DEEP_COMM.md` — 0 · ROTATION 이 준 맨데이트에 대한 한 줄 답 · 1 · ⛔ 맨데이트 반박 먼저 — 이 칸을 로테이팅으로 만든 숫자는 검정을 통과하지 못한다
+- `industry_KR/SECTOR_DEEP_CONS.md` — SECTOR_DEEP_CONS — 건설 / INDU 하위축 · industry_kr · 2026-09-09 (수) · Stage 7/9 · 0 · mandate 에 대한 한 줄 답 — 둘 다 아니다. 「한 섹터」가 아니라 서로 반대인 두 회사다
+- `industry_KR/SECTOR_DEEP_DISC.md` — 0 · ★★★ 이 파일이 먼저 말해야 하는 것 — 섹터 라벨이 세 개의 산업을 한 칸에 넣었다 · 1 · ★★★ 흐름 — 「누가 사나」가 이 섹터에서 건설과 정확히 반대다
+- `industry_KR/SECTOR_DEEP_ENRG.md` — SECTOR_DEEP_ENRG — 에너지 / 정유 · industry_kr · 2026-09-02 (수) · Stage 7/9 (L1·DEEP) · 연속트랙 (09-01 로테이팅 커버 이후 2런 연속) ⇒ 델타를 먼저 쓴다. 구조 지도는 어제 파일을 참조로 승계.
+- `industry_KR/SECTOR_DEEP_FIN.md` — 1-a · 그룹내 응집도 · 1-b · 🚨 그룹간 교차 — 핵심 결과
+- `industry_KR/SECTOR_DEEP_HLTH.md` — 0 · ROTATION 이 준 맨데이트에 대한 한 줄 답 — 그리고 그 답이 슬롯의 근거 하나를 죽인다 · 1 · ⛔ 맨데이트 반박 먼저 — 이 칸을 보드 1위로 만든 숫자의 정체
+- `industry_KR/SECTOR_DEEP_INDU.md` — 1 · 흐름 — 🟢 7 을 시총과 KIS 두 손으로 분해한다 · 1-a · 🟢 7 종 분해 [measured]
+- `industry_KR/SECTOR_DEEP_INS.md` — 🚨 세 가지가 한꺼번에 나온다 · ✅ EXIT CHECK
+- `industry_KR/SECTOR_DEEP_IT.md` — SECTOR_DEEP_IT — IT / 전기·전자 · industry_kr · 2026-09-09 (수) · Stage 7/9 · 0 · 오늘의 델타 세 줄
+- `industry_KR/SECTOR_DEEP_MATR.md` — 0 · 🚨 맨데이트에 대한 한 줄 답 — 아니다. 그리고 그 「아니다」가 ROTATION 의 슬롯 배정 근거를 무너뜨린다. · 0-b · 🚨 이 런이 앞 스테이지에서 쓴 문장 두 개를 무너뜨린다 — 지우지 않고 적는다 (D48)
+- `industry_KR/SECTOR_DEEP_STPL.md` — SECTOR_DEEP_STPL — 필수소비재 / 화장품 체인 · 2026-08-16 · industry_kr · 로테이션 트랙 (직전 커버 2026-08-12 = 4런 전, N+ 5칸 중 최장) ⇒ 전면 신규 맵.
+- `industry_KR/SECTOR_DEEP_UTIL.md` — 3-a 한국전력(015760) [measured, DART 20260814002198·20260812800565] · 3-c 지역난방공사(071320) [measured, DART 20260810800081·20260826800336]
+- `industry_KR/SECTOR_ROTATION.md` — SECTOR_ROTATION — industry_kr · 2026-09-13 (일) · Stage 6/9 (L1·ROTATION) · DEEP_LOG 2026-09-13:
+- `industry_KR/SWEEP_READ.md` — SWEEP_READ — industry_kr · 2026-09-13 (일) · Stage 4/9 (L1·SWEEP) · 0 · 🚨 계기 건강 줄 — §scoring 먼저
+- `preflight/industry_KR/PREFLIGHT.md` — PREFLIGHT — 2026-09-09 (수) · industry_kr (--market kr) · 게이트 요약
+
+### industry_US
+- `industry_US/ACTION_TICKETS.md` — BRACKET::A_cool  ★asym-hedge — NVDA  (BUY) · BRACKET::B_hot — XLE  (BUY)
+- `industry_US/BET_SHEET.md` — BET_SHEET — industry_US · 2026-09-12 (Sat) · Stage 9 / L1·BET · 0 · Gates read before anything was derived
+- `industry_US/BLINDSPOT_PREMORTEM.md` — BLINDSPOT_PREMORTEM — industry_US · 2026-09-12 (Sat) · Stage 7 / L1·PREMORTEM · 0 · The binaries this stage must bracket (CATALYST_WATCH.json, --days 10, 22:12)
+- `industry_US/BOOK_THESIS.md` — BOOK_THESIS — 실 KIS 계좌 테제·비중 관리 · 2026-08-24 (월) 00:1x KST · ⚠ 그러나 캡이 통과하는 이유의 절반은 현금이다 — 그리고 라벨 뷰는 다른 답을 낸다
+- `industry_US/CYCLE_EXPOSURE.md` — CYCLE_EXPOSURE — 2026-09-12  (dominant cycles ↔ REAL KIS book) · Verdict
+- `industry_US/EVENT_ALPHA.md` — EVENT_ALPHA — industry_US · 2026-09-12 (Sat) · Stage 5 / L1·EVENT_ALPHA · 1 · Forward cards (8)
+- `industry_US/HANDOVER.md` — HANDOVER — industry_US · 2026-09-12 (Sat) · Stage 2 / L1·HANDOVER · 0 · The one-line state of this run
+- `industry_US/MACRO_REPORT.md` — MACRO_REPORT — industry_US · 2026-09-12 (Sat) · Stage 3 / L1·MACRO · A-1 · Rates: hikes are priced, the curve bear-flattened, and the front end led
+- `industry_US/PREFLIGHT_US.md` — PREFLIGHT — 2026-08-24 · industry_us (--market us) · ② The sweep again produced no new information — third consecutive identical file
+- `industry_US/PULSE.md` — PULSE — "지금 무슨 일?" · 2026-08-04 19:55 ET / 2026-08-05 08:55 KST · 1 · Price sweep — the book, ranked by the day's move
+- `industry_US/SECTOR_DEEP_COMM.md` — 0 · Mandate from ROTATION — one question · ★ 1 · The answer, and it is an INSTRUMENT DEFECT, not a sector fact
+- `industry_US/SECTOR_DEEP_CONSUMER.md` — SECTOR_DEEP_CONSUMER — industry_US · 2026-08-16 · 5th slot, PREMORTEM-PROMOTED
+- `industry_US/SECTOR_DEEP_DEFENSE.md` — ✅ EXIT CHECK — DEEP-DEFENSE · 📋 Stage run log — open decisions resolved without a human
+- `industry_US/SECTOR_DEEP_DISC.md` — ABNB — exc60 +35.42, exc20 +17.89, RS20 +19.9, OBV +0.269 매집
+- `industry_US/SECTOR_DEEP_ENRG.md` — SECTOR_DEEP_ENRG — Energy · industry_US · 2026-09-12 (Sat) · Stage 8 / L1·DEEP · 0 · Mandate (ROTATION §3, verbatim)
+- `industry_US/SECTOR_DEEP_FIN.md` — 0 · Mandate — one question · 2 · Flow — the sector splits, and the split is NOT banks-vs-non-banks
+- `industry_US/SECTOR_DEEP_HLTH.md` — 0 · Mandate from ROTATION — one question · 2 · The mechanism that follows, stated as a testable claim
+- `industry_US/SECTOR_DEEP_INDU.md` — 0 · Mandate — one question · ★ 1 · The answer — MIS-LOCATED, and it is measurable in two directions at once
+- `industry_US/SECTOR_DEEP_IT.md` — 2 · The LAG-vs-DISTRIBUTION test — 19 AI-hardware/optics names · 5 · Primary-source check (U3) — the filings' own terms, not the press
+- `industry_US/SECTOR_DEEP_MATR.md` — 0 · Mandate from ROTATION — one question · ★ 1 · The DELTA — and it answers the mandate
+- `industry_US/SECTOR_DEEP_RE.md` — SECTOR_DEEP_RE — industry_US · 2026-08-26 · ROTATING TRACK (R1) — FULL FRESH MAP · The binding constraint — and it is NOT rates
+- `industry_US/SECTOR_DEEP_SEMI.md` — SECTOR_DEEP_SEMI — AI-compute / semiconductors epicenter · 2026-07-15 (Wed)
+- `industry_US/SECTOR_DEEP_STPL.md` — 
+- `industry_US/SECTOR_DEEP_UTIL.md` — ★ PROMOTED BY PREMORTEM (Lens 1a) — ROTATING TRACK ⇒ FULL FRESH MAP · 2 · Why the carried breadth number was wrong (the promotion's basis, verified)
+- `industry_US/SECTOR_ROTATION.md` — SECTOR_ROTATION — industry_US · 2026-09-12 (Sat) · Stage 6 / L1·ROTATION · 🚨 Instrument state governing every number below
+- `industry_US/SWEEP_READ.md` — SWEEP_READ — industry_US · 2026-09-12 (Sat) · Stage 4 / L1·SWEEP · 0 · Instrument health line, read BEFORE the numbers
+- `preflight/industry_US/PREFLIGHT.md` — PREFLIGHT — 2026-09-08 (Tue) · industry_US (--market us) · Gate summary
+
+### preflight
+- `industry_KR/preflight/PREFLIGHT.md` — PREFLIGHT — 2026-09-13 (일) · industry_kr (--market kr) · 게이트 요약
+- `industry_US/preflight/PREFLIGHT.md` — PREFLIGHT — 2026-09-12 (Sat) · industry_US (--market us) · Gate summary
+
+### root
+- `COMPANY_SCOREBOARD.md` — COMPANY_SCOREBOARD — 2026-08-21 (금) · company_batch run 1 · 🚨 이 점수를 읽는 두 규칙 — 어기면 두 축을 뭉갠 것이다
+
+### theme_beauty_device
+- `theme_beauty_device/KPMG_BEAUTY_DEVICE_20260819.md` — 뷰티 디바이스 — 삼정KPMG 리포트 계기 대조 · 2026-08-19 · 0 · 한 줄 결론
+

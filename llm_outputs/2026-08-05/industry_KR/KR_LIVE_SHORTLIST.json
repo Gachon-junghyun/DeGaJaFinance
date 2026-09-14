@@ -1,0 +1,197 @@
+{
+  "asof": "2026-08-05",
+  "filter": {
+    "floor_jo": 1.0,
+    "tags": [
+      "🟢가속"
+    ],
+    "top": 15,
+    "days": 20
+  },
+  "shortlist": [
+    {
+      "ticker": "051900.KS",
+      "name": "LG생활건강",
+      "sector": "화학",
+      "mcap_h": null,
+      "flow_score": 1.0,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.212,
+      "rs20": 31.9,
+      "rs60": 18.5,
+      "vol_surge": 2.4,
+      "investor": {
+        "foreign_20": 185193,
+        "inst_20": 207374,
+        "indiv_20": -383440,
+        "foreign_5": 110994,
+        "inst_5": 114233,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "073240.KS",
+      "name": "금호타이어",
+      "sector": "화학",
+      "mcap_h": null,
+      "flow_score": 1.0,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.364,
+      "rs20": 32.5,
+      "rs60": 41.1,
+      "vol_surge": 1.66,
+      "investor": {
+        "foreign_20": 4145609,
+        "inst_20": -2717810,
+        "indiv_20": -964988,
+        "foreign_5": 3058331,
+        "inst_5": -1124614,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "078930.KS",
+      "name": "GS",
+      "sector": "금융",
+      "mcap_h": null,
+      "flow_score": 0.9,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.236,
+      "rs20": 44.2,
+      "rs60": 39.2,
+      "vol_surge": 1.42,
+      "investor": {
+        "foreign_20": -525377,
+        "inst_20": 1268526,
+        "indiv_20": -769948,
+        "foreign_5": -123889,
+        "inst_5": 256861,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "006360.KS",
+      "name": "GS건설",
+      "sector": "건설",
+      "mcap_h": null,
+      "flow_score": 0.861,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.197,
+      "rs20": 18.5,
+      "rs60": -5.0,
+      "vol_surge": 1.35,
+      "investor": {
+        "foreign_20": -577777,
+        "inst_20": 2939897,
+        "indiv_20": -2359360,
+        "foreign_5": -438870,
+        "inst_5": 1463368,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "475150.KS",
+      "name": "SK이터닉스",
+      "sector": "건설",
+      "mcap_h": null,
+      "flow_score": 0.806,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.486,
+      "rs20": 58.5,
+      "rs60": 29.8,
+      "vol_surge": 1.25,
+      "investor": {
+        "foreign_20": 1398314,
+        "inst_20": 1601255,
+        "indiv_20": -3067519,
+        "foreign_5": -1488968,
+        "inst_5": 914683,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "010950.KS",
+      "name": "S-Oil",
+      "sector": "화학",
+      "mcap_h": null,
+      "flow_score": 0.671,
+      "tag": "🟢가속",
+      "velocity": 1.41,
+      "obv_norm": 0.278,
+      "rs20": 18.7,
+      "rs60": 21.7,
+      "vol_surge": 0.81,
+      "investor": {
+        "foreign_20": -62006,
+        "inst_20": 1425803,
+        "indiv_20": -1427525,
+        "foreign_5": -156785,
+        "inst_5": 50848,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "096770.KS",
+      "name": "SK이노베이션",
+      "sector": "화학",
+      "mcap_h": null,
+      "flow_score": 0.554,
+      "tag": "🟢가속",
+      "velocity": 4.29,
+      "obv_norm": -0.019,
+      "rs20": 26.9,
+      "rs60": -4.2,
+      "vol_surge": 1.2,
+      "investor": {
+        "foreign_20": -131189,
+        "inst_20": 3573877,
+        "indiv_20": -2362157,
+        "foreign_5": -268101,
+        "inst_5": 1529,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    }
+  ],
+  "live": [
+    "051900.KS",
+    "073240.KS",
+    "078930.KS",
+    "006360.KS",
+    "475150.KS",
+    "010950.KS",
+    "096770.KS"
+  ]
+}

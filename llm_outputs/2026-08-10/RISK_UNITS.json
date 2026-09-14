@@ -1,0 +1,262 @@
+{
+  "date": "2026-08-10",
+  "bench": "SPY",
+  "threshold": 0.65,
+  "min_corr_implied": 0.35,
+  "n_days_aligned": 749,
+  "n_days_intersection_full": 1059,
+  "trimmed_by_days_arg": 309,
+  "window": [
+    "2023-06-02",
+    "2026-08-07"
+  ],
+  "missing": [],
+  "calendar_loss": {
+    "009150.KS": 65,
+    "096770.KS": 65,
+    "AVGO": 66,
+    "KMI": 66,
+    "LNG": 66,
+    "MA": 66,
+    "NVDA": 66,
+    "RTX": 66,
+    "SPY": 66,
+    "TSM": 66,
+    "VST": 66
+  },
+  "gap_days_median": 1.0,
+  "gap_days_max": 8.0,
+  "gaps_over_4d": 8,
+  "betas_vs_bench": {
+    "009150.KS": 0.355,
+    "096770.KS": 0.108,
+    "AVGO": 1.969,
+    "KMI": 0.428,
+    "LNG": 0.302,
+    "MA": 0.661,
+    "NVDA": 1.99,
+    "RTX": 0.441,
+    "TSM": 1.629,
+    "VST": 1.683
+  },
+  "ari_half_vs_half": 1.0,
+  "within_group_corr": 0.4389,
+  "between_group_corr": -0.0115,
+  "max_residual_corr": 0.5894,
+  "threshold_sweep": [
+    {
+      "threshold": 0.4,
+      "min_corr_implied": 0.6,
+      "n_units": 10,
+      "within": null
+    },
+    {
+      "threshold": 0.5,
+      "min_corr_implied": 0.5,
+      "n_units": 9,
+      "within": 0.5894
+    },
+    {
+      "threshold": 0.55,
+      "min_corr_implied": 0.45,
+      "n_units": 9,
+      "within": 0.5894
+    },
+    {
+      "threshold": 0.6,
+      "min_corr_implied": 0.4,
+      "n_units": 8,
+      "within": 0.5052
+    },
+    {
+      "threshold": 0.65,
+      "min_corr_implied": 0.35,
+      "n_units": 7,
+      "within": 0.4389
+    },
+    {
+      "threshold": 0.7,
+      "min_corr_implied": 0.3,
+      "n_units": 7,
+      "within": 0.4389
+    },
+    {
+      "threshold": 0.75,
+      "min_corr_implied": 0.25,
+      "n_units": 6,
+      "within": 0.4017
+    },
+    {
+      "threshold": 0.8,
+      "min_corr_implied": 0.2,
+      "n_units": 6,
+      "within": 0.4017
+    },
+    {
+      "threshold": 0.85,
+      "min_corr_implied": 0.15,
+      "n_units": 5,
+      "within": 0.3258
+    }
+  ],
+  "residual_corr": {
+    "009150": {
+      "009150": 1.0,
+      "096770": 0.253,
+      "AVGO": 0.034,
+      "KMI": -0.118,
+      "LNG": -0.107,
+      "MA": -0.1,
+      "NVDA": -0.002,
+      "RTX": 0.0,
+      "TSM": 0.063,
+      "VST": 0.03
+    },
+    "096770": {
+      "009150": 0.253,
+      "096770": 1.0,
+      "AVGO": -0.01,
+      "KMI": -0.037,
+      "LNG": 0.01,
+      "MA": 0.021,
+      "NVDA": 0.018,
+      "RTX": -0.004,
+      "TSM": -0.012,
+      "VST": -0.034
+    },
+    "AVGO": {
+      "009150": 0.034,
+      "096770": -0.01,
+      "AVGO": 1.0,
+      "KMI": -0.118,
+      "LNG": -0.066,
+      "MA": -0.251,
+      "NVDA": 0.367,
+      "RTX": -0.115,
+      "TSM": 0.421,
+      "VST": 0.189
+    },
+    "KMI": {
+      "009150": -0.118,
+      "096770": -0.037,
+      "AVGO": -0.118,
+      "KMI": 1.0,
+      "LNG": 0.589,
+      "MA": 0.038,
+      "NVDA": -0.077,
+      "RTX": 0.15,
+      "TSM": -0.139,
+      "VST": 0.178
+    },
+    "LNG": {
+      "009150": -0.107,
+      "096770": 0.01,
+      "AVGO": -0.066,
+      "KMI": 0.589,
+      "LNG": 1.0,
+      "MA": 0.088,
+      "NVDA": -0.065,
+      "RTX": 0.141,
+      "TSM": -0.093,
+      "VST": 0.162
+    },
+    "MA": {
+      "009150": -0.1,
+      "096770": 0.021,
+      "AVGO": -0.251,
+      "KMI": 0.038,
+      "LNG": 0.088,
+      "MA": 1.0,
+      "NVDA": -0.266,
+      "RTX": 0.118,
+      "TSM": -0.318,
+      "VST": -0.192
+    },
+    "NVDA": {
+      "009150": -0.002,
+      "096770": 0.018,
+      "AVGO": 0.367,
+      "KMI": -0.077,
+      "LNG": -0.065,
+      "MA": -0.266,
+      "NVDA": 1.0,
+      "RTX": -0.175,
+      "TSM": 0.378,
+      "VST": 0.202
+    },
+    "RTX": {
+      "009150": 0.0,
+      "096770": -0.004,
+      "AVGO": -0.115,
+      "KMI": 0.15,
+      "LNG": 0.141,
+      "MA": 0.118,
+      "NVDA": -0.175,
+      "RTX": 1.0,
+      "TSM": -0.137,
+      "VST": 0.06
+    },
+    "TSM": {
+      "009150": 0.063,
+      "096770": -0.012,
+      "AVGO": 0.421,
+      "KMI": -0.139,
+      "LNG": -0.093,
+      "MA": -0.318,
+      "NVDA": 0.378,
+      "RTX": -0.137,
+      "TSM": 1.0,
+      "VST": 0.206
+    },
+    "VST": {
+      "009150": 0.03,
+      "096770": -0.034,
+      "AVGO": 0.189,
+      "KMI": 0.178,
+      "LNG": 0.162,
+      "MA": -0.192,
+      "NVDA": 0.202,
+      "RTX": 0.06,
+      "TSM": 0.206,
+      "VST": 1.0
+    }
+  },
+  "units": {
+    "0": [
+      "AVGO",
+      "NVDA",
+      "TSM"
+    ],
+    "1": [
+      "KMI",
+      "LNG"
+    ],
+    "2": [
+      "009150"
+    ],
+    "3": [
+      "096770"
+    ],
+    "4": [
+      "MA"
+    ],
+    "5": [
+      "RTX"
+    ],
+    "6": [
+      "VST"
+    ]
+  },
+  "book_theme_labels": {
+    "AVGO": "AI-compute-EPICENTER",
+    "NVDA": "AI-compute-EPICENTER",
+    "TSM": "AI-compute-EPICENTER",
+    "KMI": "energy-fuel/AI-power",
+    "LNG": "energy-fuel/AI-power",
+    "VST": "AI-power-IPP",
+    "RTX": "defense-missile",
+    "MA": "payments/FIN",
+    "009150": "IT-substrate/MLCC",
+    "096770": "energy-refining"
+  }
+}

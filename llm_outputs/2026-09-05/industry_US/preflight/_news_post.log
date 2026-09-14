@@ -1,0 +1,10 @@
+NVIDIA :: 뉴스 API 접속 실패(https://impolite-coherent-props.ngrok-free.dev/exec): URLError(FileNotFoundError(2, 'No such file or directory')) — 서버 PC 수집기/방화벽/DEGAJA_NEWS_API 확인. (비우면 로컬 DB 폴백)
+Tesla :: 뉴스 API 접속 실패(https://impolite-coherent-props.ngrok-free.dev/exec): URLError(FileNotFoundError(2, 'No such file or directory')) — 서버 PC 수집기/방화벽/DEGAJA_NEWS_API 확인. (비우면 로컬 DB 폴백)
+Apple :: 뉴스 API 접속 실패(https://impolite-coherent-props.ngrok-free.dev/exec): URLError(FileNotFoundError(2, 'No such file or directory')) — 서버 PC 수집기/방화벽/DEGAJA_NEWS_API 확인. (비우면 로컬 DB 폴백)
+Microsoft :: 뉴스 API 접속 실패(https://impolite-coherent-props.ngrok-free.dev/exec): URLError(FileNotFoundError(2, 'No such file or directory')) — 서버 PC 수집기/방화벽/DEGAJA_NEWS_API 확인. (비우면 로컬 DB 폴백)
+try1 t+0s :: 뉴스 API 접속 실패(https://impolite-coherent-props.ngrok-free.dev/exec): URLError(FileNotFoundError(2, 'No such file or direct
+try2 t+20s :: 뉴스 API 접속 실패(https://impolite-coherent-props.ngrok-free.dev/exec): URLError(FileNotFoundError(2, 'No such file or direct
+try3 t+40s :: 뉴스 API 접속 실패(https://impolite-coherent-props.ngrok-free.dev/exec): URLError(FileNotFoundError(2, 'No such file or direct
+try4 t+60s :: 4102
+try5 t+80s :: 4102
+try6 t+100s :: 4102

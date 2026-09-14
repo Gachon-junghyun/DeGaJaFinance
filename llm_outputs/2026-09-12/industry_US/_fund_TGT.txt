@@ -1,0 +1,82 @@
+[TGT] fetching yfinance...
+[TGT] fetching SEC XBRL...
+[TGT] yfinance<->XBRL 교차 검증: 4/4 분기 5% 이내 일치
+DONE: TGT
+# TGT 펀더멘털 (Target Corporation)
+업데이트: 2026-09-12 | Sector: Consumer Defensive / Discount Stores
+
+## 가격 & 시총
+- 주가: $155.83 (52w high $170.75 / low $83.44)
+- 시가총액: $71B
+- Beta: 0.99
+- Dividend yield: 2.98%
+
+## 밸류에이션
+| 지표 | 값 |
+|---|---|
+| Trailing P/E | 16.15 |
+| Forward P/E | 16.33 |
+| PEG | 1.96 |
+| Price/Sales | 0.66 |
+| Price/Book | 3.97 |
+| Trailing EPS | $9.65 |
+| Forward EPS | $9.54 |
+
+## 애널리스트 컨센서스
+- 목표주가: $125.00 (low) / **$162.76 (mean)** / $200.00 (high) | median $160.50
+- 현재가 대비 상승 여력: +4.5% (mean 기준)
+- 추천 (최근 30일):
+  - Strong Buy: 2
+  - Buy: 10
+  - Hold: 22
+  - Sell: 0
+  - Strong Sell: 4
+
+## 추정치 모멘텀 (컨센서스가 움직이는 방향)
+
+| 기간 | 현재 | 7일전 | 30일전 | 60일전 | 90일전 | 90일 변화 |
+|---|---|---|---|---|---|---|
+| 당분기 | 2.05 | 2.05 | 1.92 | 1.90 | 1.90 | **+7.7%** |
+| 다음분기 | 2.67 | 2.67 | 2.56 | 2.54 | 2.54 | **+5.1%** |
+| 당해년 | 10.24 | 10.23 | 8.43 | 8.35 | 8.34 | **+22.8%** |
+| 내년 | 9.54 | 9.53 | 9.00 | 8.92 | 8.90 | **+7.2%** |
+
+**리비전 브레드스 (상향 : 하향)**
+- 당분기: 7일 28↑ / 2↓ · 30일 28↑ / 2↓
+- 다음분기: 7일 29↑ / 1↓ · 30일 29↑ / 1↓
+- 당해년: 7일 33↑ / 0↓ · 30일 33↑ / 0↓
+- 내년: 7일 33↑ / 0↓ · 30일 33↑ / 0↓
+
+> ⚠ 밸류에이션 표와 **같이** 읽어라. forward P/E 가 낮은데 추정치가 가파르게 상향 중이면 '싸다'가 아니라 **분모가 정점을 향해 달리는 중**일 수 있다 (peak-margin / low-multiple trap). 추정치 방향은 컨센서스의 **모멘텀**이지 사실이 아니다 — 사이클이 꺾이면 가격보다 먼저 꺾인다.
+
+## 분기 매출 (yfinance 5분기)
+| 분기 (end) | 매출 ($B) | yoy |
+|---|---|---|
+| 2026-07-31 | 26.54 | +5.27% |
+| 2026-04-30 | 25.44 | — |
+| 2026-01-31 | 30.45 | — |
+| 2025-10-31 | 25.27 | — |
+| 2025-07-31 | 25.21 | — |
+
+## 분기 매출 — SEC XBRL 교차 검증
+| 분기 (end, yfinance 기준) | yfinance ($B) | XBRL ($B) | 차이 |
+|---|---|---|---|
+| 2026-07-31 | 26.54 | 26.54 | +0.0% |
+| 2026-04-30 | 25.44 | 25.44 | +0.0% |
+| 2026-01-31 | 30.45 | — | (xbrl 없음 — Q4 가능성) |
+| 2025-10-31 | 25.27 | 25.27 | +0.0% |
+| 2025-07-31 | 25.21 | 25.21 | +0.0% |
+| 2025-05-03 | — | 23.85 | (yf 없음) |
+| 2024-11-02 | — | 25.67 | (yf 없음) |
+| 2024-08-03 | — | 25.45 | (yf 없음) |
+
+## 다음 이벤트
+- 다음 실적 발표: 2026-11-18
+
+## 사업 요약 (yfinance longBusinessSummary, ~500자)
+Target Corporation operates as a general merchandise retailer in the United States. It offers apparel for women, men, young adults, kids, toddlers, and babies, as well as jewelry, accessories, and shoes; and beauty products, such as skin and bath care, cosmetics, hair care, oral care, deodorant, and shaving products. The company also provides food and beverage products comprising dry and perishable grocery, including snacks, candy, beverages, deli, bakery, meat, produce, and food service; ...
+
+## 데이터 source
+- yfinance (Yahoo Finance) — Ticker.info / analyst_price_targets / recommendations / quarterly_income_stmt / calendar
+- SEC XBRL CompanyFacts — data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json (us-gaap:Revenues, RevenueFromContractWithCustomerExcludingAssessedTax)
+

@@ -1,0 +1,20 @@
+[macro_us] fredapi not installed — using requests REST fallback. `pip install fredapi` 하면 더 빠름.
+[macro_us] fed_funds (DFF): 397 obs
+[macro_us] us_10y (DGS10): 273 obs
+[macro_us] us_2y (DGS2): 273 obs
+[macro_us] us_5y (DGS5): 273 obs
+[macro_us] us_30y (DGS30): 273 obs
+[macro_us] real_10y (DFII10): 273 obs
+[macro_us] core_cpi (CPILFESL): 12 obs
+[macro_us] cpi (CPIAUCSL): 12 obs
+[macro_us] unemployment (UNRATE): 12 obs
+[macro_us] dxy (DTWEXBGS): 269 obs
+[macro_us] vix (VIXCLS): 281 obs
+[macro_us] m2 (M2SL): 13 obs
+[macro_us] hy_oas (BAMLH0A0HYM2): 287 obs
+[macro_us] ig_oas (BAMLC0A0CM): 287 obs
+[macro_us] breakeven_10y (T10YIE): 274 obs
+[macro_us] nfci (NFCI): 56 obs
+[macro_us] rrp (RRPONTSYD): 273 obs
+[macro_us] sofr (SOFR): 273 obs
+[macro_us] fed_assets (WALCL): 57 obs

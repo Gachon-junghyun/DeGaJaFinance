@@ -1,0 +1,57 @@
+[NVDA] 13 filings total, 2 8-K (fetching bodies)
+DONE: 13 filings
+# NVDA EDGAR 공시 (NVIDIA CORP)  
+CIK: 0001045810 | 최근 20일
+
+## 요약
+- 총 필링 수: **13**
+- Form 별: 4=6, 8-K=2, 144=2, 3=1, N-PX=1, 10-Q=1
+- 카테고리 별: 내부자 거래 (Form 4 / 13G)=6, 기타=5, 분기보고서 (10-Q)=1, 실적 발표 (Item 2.02)=1
+
+## 카테고리별 상세
+
+### 수주/계약/M&A
+_해당 기간 공시 없음._
+
+### 실적 발표 (Item 2.02) (1건)
+| 일자 | Form | 카테고리/Item | 요약 | 원문 |
+|---|---|---|---|---|
+| 2026-08-26 | 8-K | Item 2.02 - Results of Operations and Financial Condition (실적 발표) [+9.01] | Item 2.02 Results of Operations and Financial Condition. On August 26, 2026, ... | [link](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/nvda-20260826.htm) |
+
+### 가이던스/IR (Item 7.01)
+_해당 기간 공시 없음._
+
+### 증권발행·증자·채무 (424B*/FWP/S-3 · Item 3.02/2.03)
+_해당 기간 공시 없음._
+
+### 경영진 변경 (Item 5.02 등)
+_해당 기간 공시 없음._
+
+### 연차보고서 (10-K)
+_해당 기간 공시 없음._
+
+### 분기보고서 (10-Q) (1건)
+| 일자 | Form | 카테고리/Item | 요약 | 원문 |
+|---|---|---|---|---|
+| 2026-08-26 | 10-Q | Quarterly Report (10-Q) | — | [link](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm) |
+
+### 내부자 거래 (Form 4 / 13G) (6건)
+| 일자 | Form | 카테고리/Item | 요약 | 원문 |
+|---|---|---|---|---|
+| 2026-09-11 | 4 | Insider Transaction (Form 4) | — | [link](https://www.sec.gov/Archives/edgar/data/1045810/000215218826000005/xslF345X06/wk-form4_1789160684.xml) |
+| 2026-09-08 | 4 | Insider Transaction (Form 4) | — | [link](https://www.sec.gov/Archives/edgar/data/1045810/000119903926000014/xslF345X06/wk-form4_1788901755.xml) |
+| 2026-09-04 | 4 | Insider Transaction (Form 4) | — | [link](https://www.sec.gov/Archives/edgar/data/1045810/000119764726000009/xslF345X06/wk-form4_1788555631.xml) |
+| 2026-09-02 | 4 | Insider Transaction (Form 4) | — | [link](https://www.sec.gov/Archives/edgar/data/1045810/000119903926000012/xslF345X06/wk-form4_1788387031.xml) |
+| 2026-09-02 | 4 | Insider Transaction (Form 4) | — | [link](https://www.sec.gov/Archives/edgar/data/1045810/000169684126000010/xslF345X06/wk-form4_1788386836.xml) |
+| 2026-08-24 | 4 | Insider Transaction (Form 4) | — | [link](https://www.sec.gov/Archives/edgar/data/1045810/000134784226000015/xslF345X06/wk-form4_1787607122.xml) |
+
+### 기타 (5건)
+| 일자 | Form | 카테고리/Item | 요약 | 원문 |
+|---|---|---|---|---|
+| 2026-09-03 | 3 | 3 | — | [link](https://www.sec.gov/Archives/edgar/data/1045810/000215218826000003/xslF345X06/wk-form3_1788468666.xml) |
+| 2026-09-03 | 8-K | Item 8.01 - Other Events [+9.01] | Item 8.01. Other Events. On September 2, 2026, NVIDIA Corporation (“NVIDIA”) ... | [link](https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm) |
+| 2026-09-02 | 144 | 144 | — | [link](https://www.sec.gov/Archives/edgar/data/1045810/000162828026060177/xsl144X01/primary_doc.xml) |
+| 2026-08-31 | N-PX | N-PX | — | [link](https://www.sec.gov/Archives/edgar/data/1045810/000110465926103913/xslN-PX_X01/primary_doc.xml) |
+| 2026-08-31 | 144 | 144 | — | [link](https://www.sec.gov/Archives/edgar/data/1045810/000192109426000969/xsl144X01/primary_doc.xml) |
+
+

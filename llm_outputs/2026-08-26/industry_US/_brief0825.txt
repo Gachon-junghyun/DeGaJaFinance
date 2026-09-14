@@ -1,0 +1,356 @@
+
+# 뉴스 브리핑 — 2026-08-25 [해외만]
+  기사 4,663건 → 사건 757개 → 시장 757개 (비시장 0개)
+
+  ══ 머리 (5개 매체 이상) — 89개. 오늘의 뉴스 ══
+
+  [ 80건/29매체 분산0.89] Canada set to announce retaliatory tariffs against US
+      └ [11건/6매체] In U.S.-Canada trade war, Trump says they are ‘the worst’ 
+      └ [10건/10매체] Trump considering renaming Lake Ontario to 'Lake America' 
+      └ [6건/5매체] US-Canada Trade War Escalates
+      └ [4건/2매체] Canada’s Carney Matches Trump Tariffs With 50% Tax on US S
+      └ [3건/3매체] How Canada could hit back to hurt the US economy - and Tru
+      └ [3건/3매체] What The New Section 338 Tariffs Mean For The U.S. And Can
+      └ … 외 6개 (--json 에 전부)
+
+  [ 34건/18매체 분산0.93] Government urges AI firms to disclose learning data
+      └ [3건/3매체] AI agents are changing how companies choose which AI model
+      └ [2건/2매체] Key AI survey takeaways for the tech industry - RSM US LLP
+      └ [2건/2매체] Your brain on AI
+      └ [2건/2매체] To cram more AI skills onto LinkedIn profiles, more job se
+      └ [2건/2매체] ‘No One Works Here’ urges firms to replace human bottlenec
+
+  [ 48건/15매체 분산0.88] Oil prices steady as investors weigh impact of expanded US s
+      └ [5건/4매체] The Commodities Feed: Oil shrugs off Bessent’s ‘D-day’ pla
+      └ [4건/3매체] Euro zone yields dip from multi-year highs as oil falls on
+      └ [3건/3매체] Oil Prices Fall as Iran Negotiation Hopes Return
+      └ [3건/2매체] Global market: Eurozone bond yields steady as oil prices e
+      └ [3건/2매체] Crude Oil Prices Sharply Lower as Middle East Hostilities 
+      └ [2건/2매체] World shares mostly gain and oil prices slip as the US rai
+      └ … 외 3개 (--json 에 전부)
+
+  [ 39건/15매체 분산0.81] Apple unveils new Mac mini, Mac Studio computers
+      └ [2건/2매체] There’s a New Mac Mini and Mac Studio. Good Luck Getting Y
+
+  [ 20건/15매체 분산0.96] Takaichi pledges to continue sanctions on Russia over its wa
+      └ [2건/2매체] Russia to extend diesel export ban through September, sour
+      └ [2건/2매체] Swedish military seeks to take over Russian-owned estate n
+      └ [2건/2매체] Russia mobilisation fears grow amid reports of intimidatin
+      └ [2건/2매체] Ukraine Hits Another Russian Refinery as Fuel Crunch Worse
+
+  [ 60건/14매체 분산0.64] Bitcoin Crosses $80,000 For The First Time Since May Amid Cr
+      └ [5건/3매체] Option Traders Bet On Bitcoin’s Price Topping $82,000 - Ya
+      └ [2건/2매체] U.S. Expands Iran Sanctions as Bitcoin Breaks $80,000 and 
+
+  [ 23건/14매체 분산0.87] China angered over U.S. sanctions against Iran
+      └ [5건/5매체] Bessent’s ‘D-Day’ sanctions against Iran would deepen tens
+      └ [2건/2매체] Without China’s Cooperation, Iran Will Not Face An Economi
+      └ [2건/2매체] Can Trump Isolate Iran Without Triggering a Clash With Chi
+
+  [ 62건/12매체 분산0.73] SPYM, SKHN: Big ETF Inflows
+      └ [15건/3매체] Should You Invest in the Vanguard Total World Stock ETF? H
+      └ [12건/3매체] These 3 Tech ETFs Can Beat the S&P 500 This Year
+      └ [3건/3매체] Japanese bond ETFs attract a record $1.5 billion in net in
+      └ [3건/3매체] For Investors in Their 30s, Here's 1 Glorious Growth ETF t
+      └ [2건/2매체] 3 Covered Call ETFs Paying Up to 14% by Selling the Market
+      └ [2건/2매체] Bitcoin ETFs add $338M as six-day inflow streak hits $2.26
+      └ … 외 1개 (--json 에 전부)
+
+  [ 45건/11매체 분산0.76] This Is the Most Important Number To Watch in Nvidia Earning
+      └ [8건/4매체] History Says Nvidia Is Likely To Fall on Wednesday. Here's
+      └ [5건/4매체] Forget Nvidia. This ETF Could Be the Next Big Winner From 
+      └ [5건/2매체] Zacks Investment Ideas feature highlights: Nvidia
+      └ [4건/2매체] Nvidia Has Become a Banker to the AI Boom, Putting It on D
+      └ [3건/2매체] Nvidia just sent a huge signal to investors ahead of earni
+      └ [3건/2매체] Louis Navellier has blunt message on Nvidia’s reign before
+
+  [ 30건/11매체 분산0.87] Dolly Parton, Country Music Icon And Philanthropist, Dies At
+      └ [2건/2매체] Dolly Parton Gave Away Millions Before She Died
+      └ [2건/2매체] Dolly Parton tributes include Dionne Warwick, Kacey Musgra
+      └ [2건/2매체] Dolly Parton, in her own words: The country icon’s intervi
+
+  [ 29건/11매체 분산0.88] Stock Market Today, Aug. 25: Dick's Sporting Goods Crashes A
+      └ [7건/4매체] Stock Market Today, Aug. 25: Dick's Sporting Goods Crashes
+      └ [4건/4매체] Why Dicks Sporting Goods Stock Crashed Today
+      └ [2건/2매체] Dick's Sporting cuts forecasts as weak sneaker demand trip
+      └ [2건/2매체] "Going Through Some Pain": Dick's Smashed Most On Record A
+
+  [ 24건/11매체 분산0.87] U.S. Stocks Rise as Oil, Inflation Fears Retreat
+      └ [4건/3매체] 2 Dividend Stocks Compounding Quietly While Oil Headlines 
+      └ [3건/3매체] 3 Energy Stocks Positioned to Benefit From Iraq's Oil Ambi
+      └ [3건/3매체] The Nasdaq Floats as Oil Sinks and Memory Stocks Recover
+      └ [2건/2매체] Oil market bearish for crude, bullish for products, says T
+      └ [2건/2매체] U.S. Stocks Rise as Oil, Inflation Fears Retreat
+
+  [ 15건/11매체 분산0.95] SpaceX to build Starship rocket complex in Louisiana
+      └ [2건/2매체] SpaceX Rockets Are Coming to Coastal Louisiana, and Locals
+
+  [ 28건/10매체 분산0.90] Stock Market News for Aug 25, 2026
+      └ [8건/3매체] Best Value Stocks to Buy for August 25th
+      └ [2건/2매체] WWE Raw Results, Winners And Grades On August 24, 2026
+      └ [2건/2매체] Bill Gates owns $25 billion in blue-chip S&P 500 stock
+
+  [ 22건/10매체 분산0.86] Can new US sanctions cripple Iran's shadow economy?
+      └ [3건/2매체] Xi Signals Defiance as US Threatens Sanctions for Iran Sup
+      └ [2건/2매체] Iran War: Bessent Sanctions Plan Threatens US-China Tensio
+      └ [2건/2매체] What to Know About US Threats on Iran and Its Partners
+      └ [2건/2매체] Iran Threatens Retaliation as U.S. Widens Sanctions
+
+  [ 10건/10매체 분산1.00] CIA director Ratcliffe arrives in Moscow on secret visit, US
+      └ [2건/2매체] CIA Chief Ratcliffe in Russia for Surprise Meetings, CBS R
+
+  [ 12건/9매체 분산0.92] US removes Syria from state sponsors of terrorism list
+      └ [3건/3매체] Syria’s Kurds dissolve military force and integrate fighte
+
+  [ 11건/9매체 분산0.98] Stanley Druckenmiller leads doubters who think Bessent's bon
+      └ [3건/2매체] Druckenmiller, Bessent’s Early Mentor, Calls Bond Buys a M
+      └ [2건/2매체] He once mentored Scott Bessent. Now Stanley Druckenmiller 
+      └ [2건/2매체] Stanley Druckenmiller leads doubters who think Bessent's b
+
+  [ 17건/8매체 분산0.89] Zohran Mamdani Is Turning His Fire on Amazon
+      └ [3건/2매체] Zohran Mamdani Is Turning His Fire on Amazon
+
+  [ 16건/8매체 분산0.89] Cisco Expands Secure AI Factory With NVIDIA
+      └ [3건/2매체] NVIDIA Announces Jetson Orin Nano 2 Robotics Computer to R
+      └ [2건/2매체] AGNTCon + MCPCon Japan to Convene Builders Advancing Produ
+
+  [  9건/8매체 분산0.98] German broker Scalable opens investment platform to major AI
+      └ [2건/2매체] Goldman's engineers have a new challenge: turning AI agent
+
+  [  9건/8매체 분산0.98] Iran, Oman Push Talks for ‘Interim’ Reopening of Hormuz Stra
+      └ [2건/2매체] New Tanker Strike in Hormuz as Iran Vows Retaliation for U
+
+  [ 29건/7매체 분산0.55] Fed May Need to Tighten Soon Without Progress on Inflation, 
+      └ [5건/2매체] US rates need to rise soon absent evidence of ongoing drop
+      └ [4건/4매체] What the Fed's Latest Warning to Wall Street Could Mean fo
+      └ [2건/2매체] The Fed doesn’t know who’s financing the $3 trillion AI bo
+
+  [ 14건/7매체 분산0.75] Prediction: SpaceX's Power Needs Will Turn It Into Oklo's Bi
+      └ [3건/3매체] Prediction: SpaceX's Power Needs Will Turn It Into Oklo's 
+
+  [ 13건/7매체 분산0.89] If You'd Invested $5,000 in the S&P 500 Ahead of the Dot-Com
+      └ [2건/2매체] Gold Gains; Potential to Rise to $5,000 Intact
+
+  [ 11건/7매체 분산0.97] HELOC, refinance or home equity loan: What’s the best way to
+      └ [2건/2매체] Here’s where it takes new homeowners almost 40 to 50 years
+      └ [2건/2매체] ‘It’s the ultimate regifting’: My mom gave me a house. Sho
+
+  [ 11건/7매체 분산0.95] Germany's economy defies downbeat expectations
+
+  [ 10건/7매체 분산0.90] US consumer confidence falls in August, Conference Board say
+
+  [  9건/7매체 분산0.97] A tornado tears through a village in southern France, injuri
+
+  [  9건/7매체 분산0.97] U.S. Supreme Court hands a win to Trump over mail-in ballot 
+      └ [2건/2매체] Zambia closes courts, preventing election challenge
+
+  [  7건/7매체 분산1.00] Australia bans AI-generated music from its official charts
+
+  [  7건/7매체 분산1.00] FDA Approves J&J's IMAAVY For Warm Autoimmune Hemolytic Anem
+
+  [ 21건/6매체 분산0.88] QumulusAI Reports Second Quarter 2026 Results
+      └ [3건/2매체] Intuit Inc. Q4 2026 Earnings: Live Updates from $INTU Earn
+
+  [ 13건/6매체 분산0.79] Alibaba Is Selling $10.2 Billion of Stock to Fund AI. Alphab
+      └ [3건/2매체] Berkshire Hathaway Bought $10 Billion of Alphabet Straight
+
+  [ 12건/6매체 분산0.88] This Stock Grew About 500% in the Past 5 Years. And No, It's
+      └ [2건/2매체] Stablecoin card spending forecast to hit $50 billion a yea
+      └ [2건/2매체] Insider Sells 5,200 Shares, After Stock Falls 42% in a Yea
+
+  [ 10건/6매체 분산0.95] Gold pauses near three-month high after sharp rally
+      └ [3건/2매체] Gold hits highest level in three months as traders worry a
+
+  [ 10건/6매체 분산0.95] Woman wanted in connection with husband’s death found dead, 
+
+  [  9건/6매체 분산0.94] Third drone, explosives found at Germany’s Leipzig airport
+
+  [  8건/6매체 분산0.93] Oklo's CEO Says Used Nuclear Fuel in the U.S. Is Worth More 
+      └ [2건/2매체] Equinor Eyes Major Oil Discovery Offshore Namibia
+
+  [  8건/6매체 분산0.93] Anthropic Expected to Tell Investors It Sees Over $30 Trilli
+
+  [  8건/6매체 분산0.97] Bessent’s $40 trillion debt answer puts Fed rate hike in foc
+
+  [  7건/6매체 분산0.98] Nvidia employee charged with smuggling advanced chips into C
+
+  [  7건/6매체 분산0.98] Netanyahu says Iran tried to kill one of his sons
+
+  [  7건/6매체 분산0.98] Why Super Micro Computer Rallied Today
+
+  [  7건/6매체 분산0.98] OnlyFans owner received $700mn in dividends before his death
+
+  [  6건/6매체 분산1.00] Japan’s only high speed trader Dharmacapital moves to Singap
+
+  [  6건/6매체 분산1.00] Who does Iran trade with and what could Trump's 'economic D-
+
+  [  6건/6매체 분산1.00] Judge rejects Ghislaine Maxwell’s bid to overturn conviction
+
+  [ 23건/5매체 분산0.56] AMD Stock Gets a ‘Strong Buy’ Upgrade: Why It Could Outperfo
+      └ [4건/2매체] Why Nvidia rival AMD may see a 40% rip in its stock
+      └ [3건/3매체] This Hedge Fund Just Sold Nvidia and Bought AMD Stock. Whi
+
+  [ 20건/5매체 분산0.75] S&P 500, Nasdaq, Dow Futures Mixed As Nvidia Earnings, Fed S
+      └ [4건/2매체] S&P 500, Nasdaq, Dow Futures Mixed As Nvidia Earnings, Fed
+      └ [3건/3매체] Stock Market Today (Aug. 25, 2026): S&P 500 futures climb 
+      └ [3건/2매체] Stock market today: S&P 500, Nasdaq futures recover in cou
+      └ [2건/2매체] Stock Market: Will S&P 500 Open Up or Down Today?
+
+  [ 13건/5매체 분산0.96] If I Could Tell Every S&P 500 Investor Just 1 Thing About th
+      └ [3건/3매체] If I Could Tell All Investors 1 Thing About Buying at Reco
+
+  [ 11건/5매체 분산0.91] Historically Speaking, the Stock Market Has Arguably Never B
+      └ [3건/2매체] The World’s Craziest Stock Market Has Turned Into a Fright
+      └ [2건/2매체] 5 Things to Know Before the Stock Market Opens on Tuesday
+
+  [ 10건/5매체 분산0.84] Tell us: do you think AI has made Google search better or wo
+      └ [2건/2매체] Here's How AI Is Impacting America's Mental Health Crisis
+
+  [  9건/5매체 분산0.91] Microsoft's AI Rally Has Room To Run
+
+  [  9건/5매체 분산0.95] SpaceX Is Building a $16.8 Billion Chip Fab in Texas. Is Thi
+      └ [3건/3매체] What $1,088 Invested in SpaceX Could Be Worth by 2030
+
+  [  9건/5매체 분산0.95] Why Aug. 26 Is a Big Day for the Stock Market
+      └ [3건/3매체] CrowdStrike's Next Earnings Report on Aug. 26 Could Send t
+
+  [  8건/5매체 분산0.93] Dollar struggles for traction as markets weigh Iran sanction
+
+  [  8건/5매체 분산0.86] TechDigital Labs Introduces Unified Marketing and Technology
+      └ [2건/2매체] Anjuna Security Brings Confidential Computing Platform to 
+
+  [  8건/5매체 분산0.97] Nvidia shares set for $280 billion price swing after earning
+
+  [  8건/5매체 분산0.97] NSE IPO coming soon: Should investors buy unlisted shares no
+
+  [  8건/5매체 분산0.86] Nvidia faces growth test as Rubin debut meets AI financing s
+
+  [  7건/5매체 분산0.96] Trump Devises New $100,000 H-1B Visa Fee
+
+  [  7건/5매체 분산0.96] China robot maker Unitree’s post-listing slump sparks bubble
+
+  [  7건/5매체 분산0.92] Nvidia stock is on a 7-day losing streak ahead of its big ea
+
+  [  7건/5매체 분산0.96] New Home Sale Prices Continue To Fall
+
+  [  7건/5매체 분산0.92] Instagram head Adam Mosseri to testify at Meta child social 
+
+  [  6건/5매체 분산0.97] Ivonescimab Plus Chemotherapy Demonstrates Significant Overa
+
+  [  6건/5매체 분산0.97] Global Bond Markets Stabilize as Investors Mull U.S. Buyback
+
+  [  6건/5매체 분산0.97] Popular Indian Fund Cuts Ticket Size for Overseas Investment
+
+  [  6건/5매체 분산0.97] Pakistani, Iranian officials meet amid stalled talks with U.
+
+  [  6건/5매체 분산0.97] Shortage of engineers creates opportunities to advance in Uk
+
+  [  6건/5매체 분산0.97] Indonesian Muslims brave choking smoke to pray for rain as c
+
+  [  6건/5매체 분산0.97] Sugar Prices Retreat as India May Import Less Sugar Than Ant
+
+  [  6건/5매체 분산0.97] Lego sales reach record levels thanks to Pokémon and World C
+
+  [  6건/5매체 분산0.97] Trees ‘giving up’: Climate change hammers historic English g
+
+  [  6건/5매체 분산0.97] Blue Jays Lose Unique Veteran Talent To National League Afte
+
+  [  6건/5매체 분산0.97] Netflix Stock Is Down Big-Time. Is This Finally a Buying Opp
+
+  [  6건/5매체 분산0.97] Brazil fines TikTok $30m for child data privacy violations
+
+  [  5건/5매체 분산1.00] SEC reportedly subpoenas Wall Street banks over AI hedge fun
+
+  [  5건/5매체 분산1.00] Six months into Iran war, almost half of global oil flows fr
+
+  [  5건/5매체 분산1.00] US: Trump administration plans to revoke up to 200,000 visas
+
+  [  5건/5매체 분산1.00] China's electrification means oil sector has likely peaked
+
+  [  5건/5매체 분산1.00] ‘Children were in pieces’: memories still raw 6 months after
+
+  [  5건/5매체 분산1.00] TAYD's Fiscal 2026 Earnings Decline Y/Y on Structural Sales 
+
+  [  5건/5매체 분산1.00] Trump tries to pull Darline Graham to victory in South Carol
+
+  [  5건/5매체 분산1.00] The data center era that's reshaping America
+
+  [  5건/5매체 분산1.00] United Airlines Flaunts Its Global Lead And Its New Airbus A
+
+  [  5건/5매체 분산1.00] Uber launches live video streaming for teen accounts
+
+  [  5건/5매체 분산1.00] Two unvaccinated people die of measles in Pennsylvania
+
+  ══ 몸통 (2~4개 매체) — 668개 ══
+   [119건/4매체] XP (XP) Q2 2026 Earnings Call Transcript
+       └ [5건/2매체] The Marzetti Company Q4 2026 Earnings Call Summary
+       └ [4건/3매체] ReNew Energy (RNW) Q1 2027 Earnings Call Transcript
+       └ [3건/3매체] Qualcomm Is Poised for a Breakout in 2027
+       └ [2건/2매체] Kraft Heinz Q2 Earnings Beat as 2026 Organic Sales Outlook
+   [ 13건/4매체] 3 Reasons TNDM is Risky and 1 Stock to Buy Instead
+       └ [2건/2매체] Block Stock Is Up Just 3% This Past Year. Here's What to K
+   [ 13건/4매체] Is Oklo the Next Great AI Story -- Or Just Nuclear Hype?
+       └ [3건/3매체] This 61-Year-Old Tech Stock Silently Became an AI Supersta
+       └ [2건/2매체] Oklo Isn't Exactly an AI Stock. Here's Why I Love It Anywa
+   [ 11건/4매체] 3 Top Artificial Intelligence (AI) Stocks to Buy Before 2027 A
+       └ [3건/3매체] Prediction: This Stock Will Outperform the "Magnificent Se
+   [ 11건/4매체] Hot Chips 2026: Intel dives deep on Crescent Island AI acceler
+   [ 10건/4매체] Prediction: TSMC Stock Will Soar After Aug. 26 Thanks to Nvidi
+       └ [3건/2매체] Nvidia Notches Longest Losing Streak Since 2022. Tomorrow’
+   [  9건/4매체] Jackson Hole 2026: When and what are investors expecting from 
+   [  8건/4매체] Executive Sells $1.4 Million Worth of Travel Stock, Following 
+       └ [2건/2매체] REYN Jumps 18.4% in 3 Months as Pricing and Productivity G
+   [  8건/4매체] Walmart Just Reported Earnings. Here's Whether the Dividend St
+       └ [3건/3매체] Walmart Just Reported Earnings. Here's Whether the Dividen
+   [  8건/4매체] Bitcoin and ethereum prices today, Tuesday, August 25, 2026: H
+       └ [3건/2매체] Bitcoin and ethereum prices today, Tuesday, August 25, 202
+   [  7건/4매체] 1 Popular Cryptocurrency to Buy Before It Surges by 920%, Acco
+   [  7건/4매체] Iranians queue for petrol as US blockade bites
+   [  7건/4매체] Prediction: Marvell Technology Stock Could Go Parabolic After 
+   [  7건/4매체] Stock market today: Dow, S&P 500, Nasdaq hold steady as US-Can
+   [  7건/4매체] 2 Tech Stocks I'd Load Up on Today and 1 I'd Avoid Until Furth
+   [  6건/4매체] How Israel’s Netanyahu weaponises religion in his war rhetoric
+   [  6건/4매체] Bitcoin's Correlation With Gold Is Suddenly on the Upswing. Ar
+   [  6건/4매체] OpenAI's IPO Won't Likely Happen Until 2027. Here's Why That's
+   [  6건/4매체] Target Pulls Offensive Halloween Costume After Backlash
+   [  6건/4매체] My old job had a pension and they offered me to cash out for $
+   [  6건/4매체] Block's Chief Legal Officer Reported a Disposition While the C
+   [  6건/4매체] I'm a Canadian who fell in love with an American. Moving to th
+   [  6건/4매체] EXCLUSIVE: France wants to limit Ukraine's non-European procur
+   [  6건/4매체] Boeing Just Sold 3 Businesses in 1 Week. Here's What It Says A
+   [  6건/4매체] Nvidia Could Grow Revenue 97% and Still Disappoint Wall Street
+   [  6건/4매체] The Dark SaaSpocalypse Cloud We Could See Through
+   [  6건/4매체] Google expands Gemini AI platform for law firms, lawyers
+   [  6건/4매체] These 2 Artificial Intelligence (AI) Stocks Could Soar by 66% 
+   [  6건/4매체] Teradyne CEO Gregory Smith Sells 4,000 Shares for $1.7 Million
+   [  5건/4매체] Japan's debt-servicing costs seen at record in next fiscal yea
+   … 외 638개 (--json 에 전부)
+
+  ══ 꼬리 (2매체) — 0개. 세기만 하고 표본만 ══
+
+  ══ 1매체 — 15개 / 전체 622개 ══
+     단독보도라 매체수로는 못 걸러진다 — 환율·금리·채권 1차 재료가 여기 산다
+     무작위 [bloomberg ] How the World Adapted to the Strait of Hormuz Crisis
+     무작위 [bloomberg ] Tsingshan May Triple Output at its Zimbabwe Steel Plant
+     무작위 [prnewswire] 1911 Gold Reports High-Grade Intercepts from the SAM W Tar
+     무작위 [prnewswire] More than 25 national and international partners join Conn
+     무작위 [theregiste] CISA slaps its tightest three-day patching deadline on per
+     무작위 [scmp      ] Debate star and physicist Guo Yanliang leaves a top Europe
+     무작위 [economicti] Closing Auction System braces for its first monthly expiry
+     무작위 [wsj       ] Opinion | The Metals Lobby’s Big Steal
+     무작위 [yahoo_fina] Nvidia (NVDA) Q2 Earnings Report Preview: What To Look For
+     무작위 [semafor   ] Concerns brew about Argentina's two-track economy
+     무작위 [yahoo_fina] Snowflake Stock Fans Should Prepare for September 2 as AI 
+     무작위 [prnewswire] Incredible Supply &amp; Logistics Awarded NASA SEWP VI Pri
+     무작위 [bloomberg ] Burnham Says UK Supports Ukraine in 'Every Possible Way'
+     무작위 [yahoo_fina] Nvidia Customers Face a 15% Price Hike | Google Is Spendin
+     무작위 [seekingalp] eGain Corporation Q4 Preview: All In On AI To Push It Forw
+
+  ══ 비시장 경계선 (nb>-3.0) — 0개 / 전체 0개 ══
+     0 에 가까울수록 분류기가 덜 확신한 것 = 오분류 후보
+
+  ⚠ 꼬리 0개는 자른 게 아니라 표본만 보여준 것 — 진짜가 섞여 있을 수 있다.
+  ⚠ 비시장 0개는 nb≤-3.0 라 안 보여준다 — 분류기 오분류 10~14%(LOSO).
+  ⚠ 1매체 중 622개는 **점수가 없다**(분류기는 한글 전용) — 낮은 게 아니라 못 잰 것. 무작위 15개만 보여준다.
+  └ = 사건 안에 묻혀 있던 별개 사건 200개(임계 0.65 가 삼킨 것).
+  ⚠ 판정 아님 — 호재/악재는 리드를 읽어야 안다.

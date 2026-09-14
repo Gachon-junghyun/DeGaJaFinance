@@ -1,0 +1,179 @@
+{
+  "ticker": "STT",
+  "company_name": "State Street Corporation",
+  "sector": "Financial Services",
+  "industry": "Asset Management",
+  "price": 193.4,
+  "market_cap": 53127319552,
+  "trailing_pe": 17.069725,
+  "forward_pe": 12.630402,
+  "peg_ratio": 0.72,
+  "price_to_sales": 3.536399,
+  "price_to_book": 2.222784,
+  "trailing_eps": 11.33,
+  "forward_eps": 15.31226,
+  "fifty_two_week_high": 195.93,
+  "fifty_two_week_low": 104.64,
+  "target_low": 150.0,
+  "target_mean": 199.5,
+  "target_high": 215.0,
+  "target_median": 200.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 2,
+      "buy": 7,
+      "hold": 6,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 2,
+      "buy": 7,
+      "hold": 6,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 2,
+      "buy": 7,
+      "hold": 6,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 2,
+      "buy": 7,
+      "hold": 6,
+      "sell": 1,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      4048000000.0
+    ],
+    [
+      "2026-03-31",
+      3796000000.0
+    ],
+    [
+      "2025-12-31",
+      3667000000.0
+    ],
+    [
+      "2025-09-30",
+      3545000000.0
+    ],
+    [
+      "2025-06-30",
+      3469000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      4048000000.0
+    ],
+    [
+      "2026-03-31",
+      3796000000.0
+    ],
+    [
+      "2025-09-30",
+      3545000000.0
+    ],
+    [
+      "2025-06-30",
+      3448000000.0
+    ],
+    [
+      "2025-03-31",
+      3284000000.0
+    ],
+    [
+      "2024-09-30",
+      3259000000.0
+    ],
+    [
+      "2024-06-30",
+      3191000000.0
+    ],
+    [
+      "2024-03-31",
+      3138000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 3.6415,
+      "7daysAgo": 3.63787,
+      "30daysAgo": 3.63787,
+      "60daysAgo": 3.47591,
+      "90daysAgo": 3.27159
+    },
+    {
+      "period": "+1q",
+      "current": 3.58194,
+      "7daysAgo": 3.57994,
+      "30daysAgo": 3.57994,
+      "60daysAgo": 3.45991,
+      "90daysAgo": 3.22463
+    },
+    {
+      "period": "0y",
+      "current": 13.69808,
+      "7daysAgo": 13.69424,
+      "30daysAgo": 13.69424,
+      "60daysAgo": 13.03506,
+      "90daysAgo": 12.47968
+    },
+    {
+      "period": "+1y",
+      "current": 15.31226,
+      "7daysAgo": 15.30297,
+      "30daysAgo": 15.30297,
+      "60daysAgo": 14.50003,
+      "90daysAgo": 13.81503
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 1.0,
+      "upLast30days": 10.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 1.0,
+      "upLast30days": 9.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 1.0,
+      "upLast30days": 13.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 1.0,
+      "upLast30days": 14.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    }
+  ],
+  "business_summary": "State Street Corporation provides various financial products and services to institutional investors. It offers custody, accounting, and fund administration services for traditional and alternative assets, as well as multi-asset class investments; recordkeeping, client reporting, and investment book of record, transaction management, loans, cash, derivatives, and collateral services; investor services operations outsourcing; performance, risk, and compliance analytics; financial data management to support institutional investors; foreign exchange, brokerage, and other trading services; securities finance, such as prime services products; and deposit and short-term investment facilities. The company also provides the State Street Alpha platform that combines portfolio management, trading and execution, analytics and compliance tools, and advanced data aggregation and integration with other industry platforms and providers; front-office technology that automates and simplifies the institutional investment process comprising portfolio management and risk analytics, trading, and post-trade settlement with integrated compliance and managed data; investment management solutions; and portfolio management, trading compliance, and manager/sponsor communication. In addition, it offers investment management solutions, such as strategies across equity, fixed income, cash, multi-asset, and alternatives; and ETFs, custom indexed, managed funds, and mandates. The company provides its products and services to mutual funds, collective investment funds and other investment pools, corporate and public retirement plans, insurance companies, wealth managers, investment managers, foundations, and endowments. The company was founded in 1792 and is headquartered in Boston, Massachusetts.",
+  "next_earnings_date": "2026-10-14",
+  "beta": 1.418,
+  "dividend_yield": 1.9
+}

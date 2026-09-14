@@ -1,0 +1,179 @@
+{
+  "ticker": "PWR",
+  "company_name": "Quanta Services, Inc.",
+  "sector": "Industrials",
+  "industry": "Engineering & Construction",
+  "price": 605.03,
+  "market_cap": 90962264064,
+  "trailing_pe": 69.2254,
+  "forward_pe": 30.80397,
+  "peg_ratio": 1.71,
+  "price_to_sales": 2.7643785,
+  "price_to_book": 9.433548,
+  "trailing_eps": 8.74,
+  "forward_eps": 19.6413,
+  "fifty_two_week_high": 788.75,
+  "fifty_two_week_low": 363.01,
+  "target_low": 410.0,
+  "target_mean": 770.0421,
+  "target_high": 976.0,
+  "target_median": 800.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 0,
+      "buy": 23,
+      "hold": 6,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 0,
+      "buy": 22,
+      "hold": 7,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 1,
+      "buy": 21,
+      "hold": 7,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 1,
+      "buy": 21,
+      "hold": 7,
+      "sell": 0,
+      "strongSell": 1
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      9556997000.0
+    ],
+    [
+      "2026-03-31",
+      7874787000.0
+    ],
+    [
+      "2025-12-31",
+      7841948000.0
+    ],
+    [
+      "2025-09-30",
+      7631408000.0
+    ],
+    [
+      "2025-06-30",
+      6773007000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      9556997000.0
+    ],
+    [
+      "2026-03-31",
+      7874787000.0
+    ],
+    [
+      "2025-09-30",
+      7631408000.0
+    ],
+    [
+      "2025-06-30",
+      6773007000.0
+    ],
+    [
+      "2025-03-31",
+      6233334000.0
+    ],
+    [
+      "2024-12-31",
+      6553422000.0
+    ],
+    [
+      "2024-09-30",
+      6493167000.0
+    ],
+    [
+      "2024-06-30",
+      5594387000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 5.01966,
+      "7daysAgo": 5.01966,
+      "30daysAgo": 4.24225,
+      "60daysAgo": 4.23987,
+      "90daysAgo": 4.23892
+    },
+    {
+      "period": "+1q",
+      "current": 4.77992,
+      "7daysAgo": 4.77992,
+      "30daysAgo": 3.78312,
+      "60daysAgo": 3.80821,
+      "90daysAgo": 3.80678
+    },
+    {
+      "period": "0y",
+      "current": 16.72777,
+      "7daysAgo": 16.72777,
+      "30daysAgo": 14.0218,
+      "60daysAgo": 14.0118,
+      "90daysAgo": 14.00888
+    },
+    {
+      "period": "+1y",
+      "current": 19.6413,
+      "7daysAgo": 19.6413,
+      "30daysAgo": 16.4936,
+      "60daysAgo": 16.46026,
+      "90daysAgo": 16.44346
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 16.0,
+      "upLast30days": 16.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 15.0,
+      "upLast30days": 16.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 20.0,
+      "upLast30days": 20.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 6.0,
+      "upLast30days": 21.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    }
+  ],
+  "business_summary": "Quanta Services, Inc. offers infrastructure solutions for the electric and gas utility, power generation, load center, manufacturing, communications, pipeline, and energy industries. The company's Electric Infrastructure Solutions segment engages in the design, procurement, construction, upgrade, repair, and maintenance of electric power transmission and distribution infrastructure and substation facilities; installation, maintenance, and upgrade of electric power infrastructure projects; installation of smart grid technologies on electric power networks; and design, installation, maintenance, and repair of commercial and industrial wirings. This segment offers aviation; emergency aerial firefighting services; emergency restoration; and other engineering and technical services; design and construction solutions to wireline and wireless communications, cable multi-system operators, technology companies, and other customers; engineering, procurement, new construction, and repair and maintenance services for renewable generation facilities; and training for electric workers, as well as training for the gas distribution and communications industries. Its Underground Utility and Infrastructure Solutions segment is involved in the transportation, distribution, storage, development, and processing of natural gas, oil, and other products, as well as owns and operates large load centers. This segment also engages in the design, engineering, procurement, construction, upgrade, and repair and maintenance services for natural gas systems; pipeline protection, integrity testing, rehabilitation, and replacement services; and catalyst replacement, high-pressure and critical-path turnaround, instrumentation and electrical, piping, fabrication, and storage tank services. The company was formerly known as Fabal Construction, Inc. and changed its name to Quanta Services, Inc. in November 1997. The company was incorporated in 1997 and is headquartered in Houston, Texas.",
+  "next_earnings_date": "2026-10-29",
+  "beta": 1.219,
+  "dividend_yield": 0.07
+}

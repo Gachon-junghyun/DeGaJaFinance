@@ -2382,3 +2382,2649 @@ exactly the remedy that row asked for.
 | Group | Trigger | Measured failure |
 |---|---|---|
 | **D** | **⚠ You are about to compare a news-body number to a filing.** Ask **first** whether the number exists in the filing at all — then grade the two cases separately. | Measured 2026-08-17 on `S51-KR`. For the same event, the **denominator** (010950 2Q26 refining OP) reproduced from a news body to **0.0041%** against two primaries; the **numerator** (재고관련이익) **appears 0 times in the entire 3,977,008-character filing**, and the nearest filed line (재고자산평가손실 343,126, 102× the prior year) has the **opposite sign and a different meaning**. ⇒ **"News bodies are unreliable" is the wrong generalisation and would have thrown away an exact number.** The staged 2026-08-03 rule ("when a filing exists for the same event, the filing decides the magnitude — measured at 9.3× on KDDX") assumes a filing exists; **this is the branch where it does not**, and the honest output is an evidence grade, not a correction. |
+
+---
+
+## Dig list — appended 2026-08-17 by the `industry_US` run
+
+⚠ **ID note (D76 collision class, greps at WRITE time)**: `grep -oh "D2[7-8][0-9]"` across
+`handoff/*.md` returned a highest un-suffixed **`D278`** (allocated by the 08-16 US run) and a highest
+suffixed **`D274-KR`** (this morning's KR run) ⇒ this run takes **`D279`–`D282`**. The 08-16 run logged
+a collision caused by trusting a single grep pattern; that lesson is applied rather than restated.
+
+| ID | Dig | Owner |
+|---|---|---|
+| **D279** | ★★★ **A story that never left cannot burst, so the desk's two independent freshness instruments fail TOGETHER on exactly the events that matter most.** Measured on the day a **D-0 geopolitical binary** fired: `theme_age` returned ⚪ECHO on **19 of 19** probes (`ceasefire` **0.81×**, `tanker` **0.68×**, `Hormuz` 1.17×, and four more vocabulary variants all <1.4×) **and** `burst` — which uses **no fixed vocabulary at all** — surfaced **zero** Iran/Hormuz/oil tokens. This is **stronger than the KR desk's vocabulary-locking finding**, because vocabulary-locking cannot explain a vocabulary-free instrument's silence. **Mechanism, read from the tool's own header: `burst` scores `field=title` against a 30-day baseline**, so a term present continuously for weeks has no baseline to exceed. **Positive-form remedy: give `burst` a second baseline window (e.g. 3-day vs 30-day) and score the SHORT window's z, so a re-acceleration inside a standing story can fire; and print the age cap explicitly rather than as ">=90".** 🚫 **Standing constraint until fixed: no stage may use a low `theme_age` or an absent `burst` token as evidence that a risk has receded** | **scripts owner** · **PREFLIGHT** (keep reporting it) |
+| **D280** | ★★ **Three of four macro instruments returned a full identity and no artifact said so — `P68` reproduced on a WEEKDAY, which its own registered window did not anticipate.** Measured: **299/299 identical `flow_score`** (4th consecutive run), **COT identical instrument-by-instrument** (3rd run), and — new this run — **`[FRED]` identical across all 14 series with zero new observations AND zero revisions**, on a live pull with **no cache in `module_macro_us`**. `history.json` was overwritten at key `2026-08-14` for the **third** time. Downstream key-indexed consumers (`ic_ledger`, `axis_inflection`, `reject_ledger`) cannot distinguish one observation from four. **Positive-form remedy: stamp `n_new_sessions_since_prior_run` into `SECTOR_FLOW_US.json §scoring`, and stamp a per-series `asof` age into the `[FRED]` artifact, so a consumer can weight a replay as zero and a stale series as stale.** ⚠ `dxy` was **10 days stale** this run and only a manual read caught it | **scripts owner** · **human** (whether the desk should run at all on a 4th replay day) |
+| **D281** | ★ **The rejection ledger's twelve reason classes have no cell for "OBV dispersing" — the desk's single most common measured rejection ground.** Measured today: `EVENT_ALPHA` filed `HD` as a DEAD cell on **both** axes (story fading × 🔴 OBV 분배, RS20 −3.9, news velocity 1.67× = attention up while money leaves) and `reject_ledger add --cls A.OBV분배` **exited 1** — the enum is `{A.flow미도착, B.모멘텀only, C.차트붕괴, D.약한손, E.상관가드, F.테마소멸, G.섹터중립, H.밸류소진, I.테제반증, J.사이즈미미, K.본문반증, L.vehicle없음}`. The row was written as `D.약한손`, the nearest admissible label, **which mis-files the reason and therefore corrupts the per-class scoring the ledger exists to produce**. **Positive-form remedy: add an `M.OBV분배` class and re-tag prior rows only going forward (append-only — do not launder past judgments).** | **scripts owner** |
+| **D282** | ★★★ **DRIFT watches the news corpus for a story change when what it needs to watch is its own registered thresholds.** Measured today: `drift_watch` answered at 23:07:18 KST and returned a **clean burst list** over a **0.5h** window (against the stage's own +3–6h specification) — while, in the **37 minutes** of live trading that had elapsed since the report was completed, **two of this run's four newly registered brackets had already moved ~75% of the way to a branch**: `LHX` ≈ **−3.00pp** vs `S97`'s −4.0pp threshold, and `EW{COHR,LITE}` ≈ **+3.75pp** vs `S96`'s +5.0pp. **A term-burst instrument reading a lagging news corpus for 30 minutes had no chance of seeing either.** **Positive-form remedy: have DRIFT re-price the run's OWN registered observables against the live tape and report the distance-to-branch for each, alongside the burst check — the burst answers "did the story change", and the desk also needs "did the price already move on my brackets".** ⚠ Any such reading must carry the **partial-bar** warning; it detects staleness, it never settles a row | **scripts owner** · **DRIFT** |
+
+### Three rule triggers this run adds to Part A, in trigger form
+
+| Group | Trigger | Measured failure |
+|---|---|---|
+| **D** | **⚠ You are about to read a low `theme_age` or an empty `burst` as "the risk receded".** Check first whether the story is **old and continuous** rather than absent — a term present for 30 days has no baseline to exceed. | Measured 2026-08-17 on the day a **60-day US–Iran ceasefire expired** with Hormuz traffic at zero: `ceasefire` read **0.81×**, `tanker` **0.68×**, and a **vocabulary-free** burst check surfaced **zero** related tokens. Both instruments were **working** (19/19 probes answered). ⇒ **The silence was structural, not evidential.** |
+| **C** | **⚠ You are about to cite a flow TAG (🟢/🟡/🔴) or anything derived from it (`breadth`, a shortlist, a "new green").** State which axes produced it, and re-derive it on the admissible axes first. | Measured 2026-08-17, twice in one run: (i) `Financials` and `Communication Services` `breadth` moved with **299/299 `flow_score` identical**, because `NFLX`/`MA` velocity crossed the 1.2 gate on price inputs identical to the digit — and the **live shortlist swapped one name for the other**; (ii) **this run's own stages called `TGT` 🟢가속** from a standalone probe that got velocity **2.38×**, while the settled sweep tags it **🟡중립** with `velocity: None`. **Same code, same closes, one extra input.** |
+| **W** | **⚠ You are about to write "N names confirm it".** Check whether the N moves are **date-clustered on one driver** before counting them as N observations. | Measured 2026-08-17: `MPC` **+3.10z**, `PSX` **+3.15z**, `VLO` **+2.96z** — individually each clears an "exceptional" bar, and **all three landed in the same five sessions on the same named driver** ⇒ **n≈1, not n=3.** The desk holds two of the three, and a cycle-GAP flag was open on exactly that node the same day. |
+
+## Part C — dig items added by the 2026-08-18 `industry_kr` run
+
+> ⚠ **ID 정정 기록**: 이 런의 `MACRO_REPORT §H` 초안이 *「기존 최고 D272-KR」* 로 잘못 grep 해
+> `D273-KR~D275-KR` 을 주장했다. **실제 최고는 `D274-KR`**(08-17 런이 D262-KR…D274-KR 사용, 위 2362행).
+> ⇒ **이 런의 범위는 `D275-KR ~ D277-KR`.** 지우지 않고 정정 사실을 남긴다(D48).
+
+| ID | dig | 근거 | 소유 |
+|---|---|---|---|
+| **D275-KR** | **7버킷 term set 이 코드·데이터 어느 파일에도 없다** ⇒ 서사 배율의 **런 간 Δ 가 원리적으로 검증 불가**. 오늘 금융 버킷 1.07× 와 어제 0.52× 를 비교할 방법이 없다 — term set 이 다르고 그 set 이 기록돼 있지 않기 때문 | 실측: 정유·전력·반도체·부동산·바이오 5칸은 d30 이 ±6% 안이라 비교 가능했고, **조선방산·금융 2칸은 2글자 term 때문에 재구성해야 했다**(M704) | scripts owner |
+| **D276-KR** | **`brief` 가 `embed sync` 없이 「기사 0건」을 조용히 돌려준다** — 파이프 실패와 무기사가 구분되지 않는다. **G1 과 같은 클래스, 다른 도구** | 실측 2026-08-18 09:52 `brief --scope domestic --body 2` → **기사 0건 / 사건 0개**. `embed status` 커서가 **2026-08-17T23:10** 에 멈춤. `embed sync`(3,177건) 뒤 같은 명령이 **585건**. **「0건」을 조용한 날로 읽었으면 그날 매크로 전체가 허구가 될 뻔했다** | scripts owner |
+| **D277-KR** | **비시장 분류기에 매체수 게이트가 없다** — 「트럼프 "김정은, 북미대화 요청에 응답했다"」가 **16건/5매체**인데 `nb −2.9` 로 **비시장**에 놓였다 | 매체수 5 이상인 사건이 비시장으로 분류되면 **오분류 우선 후보**로 승격하는 규칙이 없다. 오늘 경계선 27건 중 20건은 아예 표시되지 않았다(nb≤−3.0) | scripts owner |
+
+### 🚩 이번 런이 발견한 **원장 문법 결함** — dig 가 아니라 사람 승인 항목
+
+**`missed_ledger.py resolve --outcome` 의 선택지가 `entered / reaffirmed / expired` 셋뿐이고,
+스크립트 자신의 용례가 `--outcome entered --note "…신규 진입"` = **실제 진입**이다.**
+그런데 `industry_kr` 은 9 스테이지 어디에도 **주문·체결·사이징이 없다**(P4).
+⇒ **「진입조건이 발화했지만 이 데스크가 매매하지 않는 경우」를 적을 칸이 원장에 없다.**
+2026-08-18 에 **4행(316140 · VLO · EQIX · HPE)** 이 정확히 그 상태가 됐고, 셋 중 어느 값도 참이 아니라
+**원장 상태를 바꾸지 않고 `HANDOVER.md §4-B` 에 이름으로 남겼다.**
+**제안: `condition_fired` 결과값 추가**(조건 발화 · 이 데스크는 매매 안 함). **코드 변경이므로 사람 승인(P5).**
+⚠ **이 결함은 08-17 이 발견한 「부활조건이 우리 유니버스 파일에 막혀 영원히 발화 불가」(319400·484810·QQQ)와 대칭**이다 —
+**양쪽 다 시장이 아니라 원장 문법이 만든 결함**이고, 둘을 합치면 **이 원장은 발화도 미발화도 정직하게 기록하지 못하는 구간을 갖는다.**
+
+### ⚠ 이 런이 재현한 기존 dig (신규 아님, 지우지 않고 나른다)
+- **`D273-KR`**(08-17 등록, `✅진짜손` 이 반대 주체를 상계) — **오늘 009830 한화솔루션에서 재현**: 외국인 **−400만주** / 기관 **+489만주** 인데 라벨은 `✅진짜손`.
+- **`D274-KR`**(08-17 등록, `theme_age` 에 색인 선택자 없음) — **오늘도 그대로**: `화장품 ODM ⚪ECHO 1.65×(총 34건)` · `장기금리 ⚪ECHO 0.81×` 는 **기본 색인 판정**이고 KR 색인으로 교차검증할 수단이 없다.
+- **`D62`**(「기관」 집계가 외국인·연기금 반대 주체를 상계) · **`D10`**(본문 보일러플레이트, 서버 콘솔+사람 승인 필요) · **`D9`**(KRX 라벨 — 오늘 **화학 버킷이 정유·화장품·타이어·배터리소재·태양광·방산지주 6산업**을 한 칸에 넣은 것으로 재현).
+
+## Part C dig items added by the 2026-08-19 `industry_kr` run (**D278-KR – D286-KR**)
+
+> ⚠ **ID 3-grep(WRITE 시점)**: `RESEARCH.md` 최고 **D277-KR** · `STANDING_VIEW*/SCENARIOS*` 최고 **D277-KR** ⇒ **D278-KR 부터.**
+> **전부 코드 변경 또는 사람 승인 항목(P5) — 이 런은 아무것도 고치지 않았다.**
+
+| ID | dig | 왜 지금인가 (전부 오늘 실측) |
+|---|---|---|
+| **D278-KR** | 🚨🚨 **`missed_ledger` 에 `condition_fired` 결과값 추가** | **08-18 런이 예고한 「2번째 침묵 통과」가 오늘 실현됐다** — VLO·EQIX 가 `D+1` 로 떴는데 `entered`/`reaffirmed`/`expired` 어느 것도 진실이 아니다(이 데스크는 매매하지 않는다). VLO 는 진입조건이 **발화**했다(RS60 **+41.87** > +15 ∧ windfall 수단 전수 스캔 실질 0건). **원장이 2일 연속 거짓이고, 고치지 않으면 내일 3번째로 뜬다** |
+| **D279-KR** | 🚨 **부활/진입조건 등록 시 「그 조건을 잴 계기가 이 이름을 덮는가」 프리체크** | **EMR·AME 의 부활조건 1번째 다리가 `data/estimates/*.json` 의 120종목 밖이라 영구 발화 불가**(실측 `ABSENT`). 2번째 다리는 이미 발화했다(seg 21-60 초과 **+1.33·+5.48**). **08-18 의 「유니버스 파일에 막혀 발화 불가」(319400·484810·QQQ)와 같은 병의 2번째 장기** — 원장이 자기 계기의 커버리지를 모른 채 조건을 쓴다 |
+| **D280-KR** | **`ic_ledger log` 게이트에 「Δ 기준선 정합」 추가** | 08-18 이 물은 것은 「정착봉 게이트」였는데 **오늘은 그것만으로 부족함이 드러났다** — 봉은 정착(0.977)인데 **Δ 기준선이 08-12 로 미끄러졌다**(M724). 오늘 적립했다면 오염된 관측이 원장에 **영구히** 들어갔을 것이다(소급 삭제 불가). 이 런은 그래서 `log` 를 부르지 않았다 |
+| **D281-KR** | 🚨 **버킷 term 표의 2글자 한국어를 3글자+ 로 교체** | **7런째 재현.** 오늘 실측 6/6 이 정확히 0 — 조선 **0**/조선업 **44** · 방산 **0**/방위산업 **43** · 철강 **0**/철강업 **6** · 화학 **0**/석유화학 **65** · 정유 **0**/정유사 **13** · 환율 **0**/환율은 **112**. 버킷 배율 **②환율 13→123(9.5×)** · **⑦산업재 50→422(8.4×)**. **M-75 가 6런 기록했는데 term 표는 그대로다 — 기록이 아니라 수리가 필요하다** |
+| **D282-KR** | 🚨 **`module_KIS --futboard` 에 정규장/체결시각 가드** | 08:50 개장 전 조회가 **등락 −5.00% · 베이시스 −5.5%** 라는 그럴듯한 값을 냈고, **베이시스는 stale 이론가가 만든 허상**(09:24 정규장 −0.27%)이었다. 출력에 **체결시각·정규장 여부 필드가 없어** 사람이 구분할 수 없다. ★ **PREFLIGHT G7 이 `--help` 로 살아 있다고 판정한 도구가 값으로는 틀렸다 — 도구 생사 ≠ 값 정합** |
+| **D283-KR** | **`SMR`·`소형모듈원자로`·`원자력` 을 고정 버킷 term 표에 환류** | `blindspot` 신흥어에서 발굴 → 7일 **500건**(소형모듈원자로 44 · 원자력 77)인데 **내 7버킷 어디에도 안 걸렸다.** 그리고 그 테마가 **08-18 초과 +3.55pp 낸 종목(096770)을 직접 지명**한다(SK이노·테라파워 나트륨 SMR "실행 단계로 확대") ⇒ **고정셋 밖 500건이 태이프를 설명하는 두 번째 재료였다** |
+| **D284-KR** | **장중 헤드라인 ↔ 정착 종가 부호 불일치 자동 대조** | **005930 이 장중 +2.73% → 정착 −2.19% 로 부호가 뒤집혔는데** 언론은 장중 기준으로 **「삼성전자·SK하이닉스 동반 상승세」[40건/5매체]** 를 인쇄했다. 데스크가 그 서사를 그대로 물려받는 경로가 열려 있다 |
+| **D285-KR** | 🚨 **`sector_flow.py` 의 `asof` 정의 — 벤치가 아니라 종목 봉 기준으로, 또는 불일치 시 저장 거부** | **오늘 히스토리에 복구 불가 오염을 만들었다**(M725: `history_kr.json['2026-08-14']` 807/807 파괴). 원인은 `sector_flow.py:509` 가 `asof = bslice.index[-1]` 로 **벤치의 마지막 봉**을 쓰는데 벤치에 08-18 봉이 없었던 것. **키 개수만 보면 무손실로 보인다** — G6 이 경고하는 「파일 개수로 보면 정상처럼 보이는 함정」(D16)과 같은 형태 |
+| **D286-KR** | 🚩 **브래킷의 관측면이 주장의 하중과 일치하는지 확인하는 절차** · **+ `first-claim` 이 등급 강등으로 소멸하는 경로** | ① 오늘 `M-79` 의 안티시그널 ②를 **베이시스**에 걸었는데 하중을 진 주장은 **등락률**에 있었다 ⇒ **안티시그널이 미발화한 채 명제의 절반이 틀릴 수 있었다.** ② 08-18 DEEP_LOG 의 `first-claim = STPL` 이 **MACRO 가 STPL 을 N 으로 판정하면서 로테이팅 규칙(OW 한정)에 걸려 이행 불가**가 됐고, **`S63-KR`(08-20 만기)이 아무 스테이지의 책임도 아닌 상태로 떨어졌다** |
+
+### 그리고 오늘 새로 측정된, 이미 알려진 dig 의 갱신
+
+- **`theme_age` 의 FRESH 조건을 기업명과 사건 테마에 다르게 적용해야 한다** — 🟢LIVE 가 KR 에서 **19런 연속 0** 인 것은
+  시장 관측이 아니라 **게이트 설계**다. FRESH = 「나이 ≤14일 ∧ 가속 ≥2×」인데 **상장사 이름은 90일 넘게 뉴스에 없을 수가 없다**
+  (오늘 5개 테마 전부 나이 **≥90**). **현대해상은 가속 2.86× 로 두 번째 조건은 넘겼는데 첫 번째에서 막혔다.**
+  ⇒ **F1 카운트를 「시장에 아무것도 없다」로 읽으면 안 된다.** 사건 테마(예: `SMR` 500건)에는 이 게이트가 정상 작동한다.
+- **보험용 대체 분모가 없다** — `margin_history 088350`·`001450` 실측 **"총이익률 시계열 없음"**(보험사는 매출/매출원가 계정 부재).
+  K-ICS 비율·CSM·합산비율은 **`module_disclosure` 원문에는 있으나 결정론 도구가 없다** ⇒ **보험 칸의 밸류 축은 두 다리 모두 0.**
+- **스윕에 「최근 5세션 거래량 합 = 0 이면 채점 제외」 가드 부재** — M729(082640 동양생명).
+- **캐리 예산 5.69× · 7런 연속 악화**(KR 런이 읽어야 하는 총량 **1,422.7 KB** vs 예산 250 KB). 오늘 HANDOVER 는
+  **1.4MB 를 다 읽지 못하고 §1·§4·§5·§6 과 최근 런 블록만 표적 발췌했다.** **「읽었다」의 실질이 매 런 얇아지고 있다.**
+  압축(`--apply`)은 파일 재작성이라 **08-05 0바이트 사고와 같은 클래스** ⇒ 백업 절차를 사람이 정해야 한다(P5).
+  ✅ **이 런은 append 전에 4개 파일을 `.bak_0819kr` 로 백업했다.**
+
+
+## Part C — rules and digs added by the 2026-08-19 `industry_US` run (BET · ALPHA · DRIFT completion)
+
+> The `industry_US` run of 2026-08-19 stalled after DEEP and was resumed to completion. Its earlier
+> stages registered `R80`–`R82`, `C11`, `D287`–`D293` (staged in `STANDING_VIEW.md`). This block adds
+> what the last three stages measured. **Rules are written in trigger form** — a prose rule does not
+> fire while you work.
+
+### New binding rules (trigger form)
+
+| # | The moment you write… | …check this | Measured failure it closes |
+|---|---|---|---|
+| **T22** | **"the book"** · **"the name the desk holds"** · **"our position in X"** | **Name the unit in the same sentence** — `module_paper_book` (11 US names) or `module_KIS.fetch_overseas_balance()` (12). They differ by five: paper-only `MET` `NDAQ`, real-only `LITE` `T` `COHR`. | `D288`. And `M737`: `SECTOR_DEEP_COMM §3` wrote *"`T` is 9.59% of invested"* — **9.59% is `RTX`; `T` is 9.74%** — an adjacent-row read that no gate would have caught, on a number the whole section's argument sat on. |
+| **T23** | **a term-burst / drift flag** (*"`bankruptcy` spiked 4.7×"*) | **(a) body-read every match, (b) cite `HY OAS` or `NFCI` in the same paragraph.** A word count is not a regime. | This run's DRIFT: **5 items at 4.7×** decomposed over all **39** day-1 foreign matches to **exactly 1** genuine new US distress datapoint (freight, outside every DEEP sector); the rest were foreign idiosyncratic filings, **one** story carried by 4 outlets, legacy estates, a *"`bankruptcy`-remote SPV"* structuring term, and risk-factor boilerplate. Meanwhile `HY OAS` **2.75** sat **12bp off its 365-day low** and **11bp tighter over 90 days**, `NFCI` **−0.559** within 1.2bp of the year's loosest. **Same shape as the 2026-07-21 narrative-only credit stack.** |
+| **T24** | **a theme is "quiet" · "fading" · "cooled"** | **Print the denominator next to the tag.** Under `n≈15` the tag is not a reading, and it can never contradict a price series. | This run: `distillate crack` printed **🔴FADING on n=4** while its underlying driver — the distillate crack itself — ran **88.41 → 101.96 $/bbl over 20 sessions in which `BZ=F` returned +0.011%**. Two more rows were equally thin: `telecom fiber` **n=2**, `steel tariffs` n=14. |
+| **T25** | **a rejection on portfolio-structure grounds** (`G.섹터중립`, `E.상관가드`) | **Re-print the class's own ledger score first, and write it next to the rejection.** | `reject_ledger.py score` at n=96: `G.섹터중립` **+13.9pp (n=2)** where **positive = the rejection cost us**, and `E.상관가드` **−8.5pp (n=4)** — i.e. the two structural classes point opposite ways and the one used most this run is the costly one. ★ The ledger's headline asymmetry also **replicated at 4× the sample**: loss sum **+423.1pp** vs gain sum **−196.5pp = 2.15×** (n=96), against **2.2× at n=24** on 2026-07-23. **Rejection is not a symmetric act, and that is now measured twice.** |
+
+### Digs (full text in `STANDING_VIEW.md`, this run's completion block)
+
+| ID | Dig | One line |
+|---|---|---|
+| **D294** | `action_bracket.py` must not report *"no dated binary in window"* when it has just named one | `branch_map.json → axes.earnings` holds placeholder prose, `_first_clean()` rejects it, the ticket list empties, and the empty-list message fires **under a header naming the binary**. A single-name earnings binary can never produce a ticket. |
+| **D295** | A bracket settling beyond the nearest readable option chain has no straddle-derived threshold, and nothing forces it to get one | `S103` (`NVDA` 08-26) is hand-set at ±5.0pp because the readable chain expired 08-21. `S100` fixed exactly this **inside** its window; there is no rule making a beyond-window row come back for its own implied move. |
+
+### ★ What this run's last three stages did NOT find — stated so the absence is legible
+
+- **No cycle GAP.** `CYCLE_EXPOSURE` ✅ on all rank≤2 cycles; **no core-starter was owed and none was written.**
+- **No binary ≤48h.** Nearest dated binary is **D-7** (`NVDA` 08-26); the protocol's *"any binary ≤48h ⇒
+  bracket both ways"* rule **did not trigger**. The empty `ACTION_TICKETS.md` body is **not** a skipped
+  obligation — and the addendum says so, because an empty file cannot distinguish the two by itself.
+- **No 🟢LIVE, for the 9th consecutive US run** — and this time with the mechanism corrected (`R83`).
+- **No proposition amended by DRIFT.** The one flag was body-read to nothing and the credit axis refused
+  it. ⚠ **The DRIFT window was 1.6h, not the protocol's 3–6h** (the run finished late), so the eight
+  non-flagged term sets are a **short-window** absence and are not claimed as an overnight all-clear.
+
+
+---
+
+## Part C dig items added by the 2026-08-20 `industry_kr` run (**D287-KR – D294-KR**)
+
+> ⚠ **ID 3-grep(WRITE 시점)**: `RESEARCH.md`·`STANDING_VIEW*`·`SCENARIOS*` 현행 최고 **D286-KR** ⇒ **D287-KR 부터.**
+> ⚠ **쓰기 방식**: `'a'` 모드 append.
+
+| # | dig | 근거 (전부 이 런의 실측) |
+|---|---|---|
+| **D287-KR** | **`AX` 를 고정 7버킷 term 표에 환류** | `blindspot --scope domestic` 신흥어 **465회**(고정셋 밖) · `theme_age AX` **🟡ACCELERATING 2.64× · 7d평균 52.9 · 총 2,030건**. 같은 산업의 `HBM` 은 **0.38× 🔴FADING (2,610건)**. ⇒ **AI 인프라 층이 식는 동안 AI 적용 층이 뜨는데 고정셋은 인프라 층만 본다.** 「층 이동」을 못 보는 구조 |
+| **D288-KR** | 🚨 **`catalyst_calendar` 가 (a) 이미 날짜가 알려진 정기 매크로 릴리스를 안 싣고 (b) 만료된 무날짜 binary 를 못 뺀다** | (a) 간밤 **7월 FOMC 회의록**(오늘 사건축 머리 #3, **24건/5매체**, 6일 BUILDING 스레드 122건)이 캘린더에 **0건** — `D18` 9번째 재현. (b) 같은 캘린더가 **「Iran 'Strait of Hormuz open' statement · undated 🔀binary」**를 여전히 들고 있는데, **그 브래킷(`S57-KR`)은 오늘 `EXPIRED-미도래` 로 종료됐다.** ⇒ **넣지도 빼지도 못한다** |
+| **D289-KR** | **「세션 거래량 형태」를 하락 진단의 1급 축으로 승격 + 그 추정량의 기준선을 상시 출력** | 오늘 −5.80% 세션의 거래량비 중앙값 **0.740** 이 「분배 vs 무반응」을 갈랐다. **그런데 이 데스크에는 그 추정량의 기준선을 아는 줄이 없어서 헤드라인이 `1.0` 과 비교해 틀렸다**(`R85`). 실측 기준선 **57세션 평균 0.744 · sd 0.183 · p85 0.920**. `vol_surge` 는 종목별 게이트일 뿐 **세션 형태를 안 잰다** ⇒ **새 줄이 필요하다** |
+| **D290-KR** | 🚨🚨 **`vol_surge` IC 가 Bonferroni 를 통과했는데 `sector_flow` 🟢 게이트는 그 축을 양(+)으로 가중한다** | h=1 **t(NW) −3.30 · n_eff 27.0 · 평균IC −0.0479**, h=5 **−3.14 · n_eff 4.4** — **두 지평 모두 |t|>2.8.** 그리고 오늘 그 게이트가 **건설 12종을 후보에서 탈락**시켰다(`M741`: 매집∧RS 양(+) 14/26 중 🟢 2). ⚠ **레짐 라벨 필요**(측정창 = 8월 변동장). **수리는 사람 승인 항목(P5)** — 이 런은 뒤집지 않고 매 인용에 병기했다 |
+| **D291-KR** | **`^KS11` 결측 세션의 대체 벤치 승격 규칙** | 08-19 종가가 **지수 피드에 없어** 뉴스 인쇄값(6,471.17)을 08-18 종가(6,869.83)와의 차분(−398.66)으로 확증해야 했다. **2런 연속**이고, 그 결과 **`^KS11` 기준 초과는 계산 자체가 불가능**했다. `069500.KS` 를 KR 기본 벤치로 승격할지는 **사람 결정** |
+| **D292-KR** | 🚨 **스윕에 「최근 N세션 거래량 합 = 0 이면 채점 제외」 가드가 없다 (2런 연속)** | `082640 동양생명` — 오늘도 **`vol_surge 0.00`** 인데 `flow_score +0.112 · rs20 +2.7 · rs60 +14.9 · 🟡중립` 이 산출됐다(원인: 우리금융의 2026-08-11 포괄적 주식교환 완료, `M729`). **보험 12종 버킷의 8.3%가 거래되지 않는 종목이다.** ⇒ **그리고 그 이름의 거부원장 부활조건(「외국인 20d 양전 ∧ RS60>0」)은 거래가 없어 영구 발화 불가** — `D279-KR` 클래스의 3번째 표본 |
+| **D293-KR** | 🚨🚨🚨 **`kr_live_shortlist` 가 KR 데스크의 유일한 A급 축을 파이프라인 맨 끝에 붙인다** | `module_flow/_synthesize.flow_tag(p, vel, inv=, sh=)` 는 KIS 실측이 `smart_buy` 면 **`green += 1` ∧ `has_conviction = True`** 로 덮어쓰는데, **`scripts/sector_flow.py:224` 는 `flow_read.flow_tag(p, vel)` 로 불러 `inv`·`sh` 를 안 넘긴다.** ⇒ **스윕 🟡 / 라이브 🟢 가 같은 이름에서 갈린다**(실측: 010950 · 375500). 그리고 **`kr_live_shortlist` 는 그 🟢 로 먼저 거른 뒤에야 KIS 를 조회한다.** ★ **오늘 BET 의 1순위 후보(375500 DL이앤씨)가 스윕만 봤으면 안 보였다.** 프로토콜이 "KR's edge axis" 라 부르는 축이 **선별 후에 붙는다** |
+| **D294-KR** | **`theme_age` 의 나이 축은 term 의 *종류*에 지배된다 — 회사명은 태어나지 않는다** | `R83`(08-19 US)이 *"나이 표시가 `">=90"` 로 캡된다"* 는 메커니즘을 **부분 반증**하고 원인을 **「연언 미충족」**으로 재작성했다. **오늘 KR 측정이 그 연언의 첫 항을 채운다**: 회사명 term **6/6 이 `>=90`**(현대해상·한화생명·현대건설·한화에어로·DB손보·DL이앤씨) vs 사건·개념 term 은 **`무역협상` 80 · `철강업` 72 · `정제마진` 59**. ⇒ **🟢FRESH(나이 ≤14d)를 이름 단위에 겨눈 것이 F1 이 19런 연속 0인 이유다.** ⚠ **반증 조건**: 회사명 term 하나라도 나이 < 90 으로 돌아오면 이 추가분은 틀렸다(`R83` 본체는 영향 없음) |
+
+### 기존 dig 의 오늘 재현 (새 번호 안 붙임 — 카운트만 올린다)
+- **`D273-KR`**(`✅진짜손` 라벨이 반대 주체를 상계) — **오늘 두 섹터에서 동시 재현, 통산 6번째**:
+  보험 5종 중 4종(088350 외 +923만 vs 기 −35만 · 005830 외 −48.2만 vs 기 +59.6만 · 085620 · 032830) ·
+  건설 4종 중 3종(000720 · 006360 · 047040). **두 다리가 같은 방향인 이름은 각 섹터에 정확히 하나씩**(001450 · 375500).
+- **`D276-KR`**(`brief` 가 `embed sync` 없이 「기사 0건」을 조용히 반환) — **2번째 재현.**
+  08:21~08:23 API 5연속 실패 구간에 `embed sync` 가 죽었고, 그 상태의 `brief --date 2026-08-20` 이
+  **기사 0 · 사건 0** 을 예외 없이 반환했다. 재동기(3,680건) 후 **477건**. **오늘은 KR 매크로 전체가 허구가 될 뻔한 자리다.**
+- **`D281-KR`**(2글자 한국어 term) — **8런째.** 오늘은 **버킷 term 을 전부 3글자+ 로 구성해 회피**했다.
+  ⚠ **회피는 수리가 아니다** — term 표 자체는 그대로이고 다음 런이 또 피해야 한다.
+- **`D282-KR`**(`--futboard` 정규장 가드) — 오늘은 **사전 차단**했다: 08:38 조회가 **등락 0.00% · 거래량 0** 이라
+  베이시스를 아예 읽지 않고 **미결제약정(근월 40,804 = 94.4% 집중)만 맥락으로** 인용했다.
+- **`D286-KR`**(first-claim 이 등급 강등으로 소멸) — **2런 연속 재현, 승격.**
+  `S63-KR` 이 **오늘 만기인데 어느 DEEP 도 보지 않았다** — MACRO 가 STPL 을 N 으로 판정 ⇒ 로테이팅(OW 한정) +
+  Neutral 패딩 금지에 걸림. **HANDOVER 가 D−0 사전관측(+24.2pp)을 남겨 겨우 흔적을 만들었다.**
+- **`D279-KR`**(조건 등록 시 「계기가 이 이름을 덮는가」 프리체크) — **오늘 실제로 원장 판정을 만들었다**:
+  EMR·AME 의 부활조건 1번째 다리가 `data/estimates` 120종목 밖이라 **영구 발화 불가**여서 `reaffirmed` 처리됐다.
+  **3번째 표본은 `082640 동양생명`**(거래정지라 조건 발화 불가, `D292-KR`).
+
+### 이 런의 방법론 관측 (규칙 후보 — 아직 트리거로 승격하지 않음)
+- ★ **「기준선을 뺐는가」는 숫자를 쓸 때가 아니라 *비유를 쓸 때* 가장 위험하다.**
+  오늘 `0.740` 은 숫자로는 정확했고, **「26% 적다」·「매수 호가 소멸」이라는 비유가 기준선 미차감에서 나왔다**(`R85`).
+  ⇒ 규칙 후보: **비유를 쓰기 직전에 그 비유가 어떤 기준선을 암묵적으로 가정하는지 한 줄로 적어라.**
+- ★ **정정은 새 오류를 만든다.** `R85` 를 고치면서 **세션간 σ 를 개별 종목 비율에 적용하는 단위 오류**를 만들었고
+  다음 계산에서 잡았다(`M739`). ⇒ 규칙 후보: **정정 문단은 원문과 같은 강도로 검산한다.**
+- ★ **「N=2 × OW=2」는 로테이션 규칙의 자유도가 0 이라는 뜻이다.** 오늘 두 DEEP 슬롯이 **모두 직전 런과 같은 섹터**였고,
+  로테이팅은 `recency-starved` 를 선언할 수밖에 없었다. ⇒ **DEEP 예산 N 과 OW 판정 개수는 독립이 아니다.**
+
+
+---
+
+## Added by the 2026-08-20 `industry_US` run — Part C dig items (**D296 – D298**)
+
+> ⚠ **ID 3-grep at WRITE time**: `D296` `D297` `D298` returned **0 hits** in `RESEARCH.md`,
+> `STANDING_VIEW*.md`, `SCENARIOS*.md`. Highest existing **`D295`** (US, 08-19) / **`D294-KR`**.
+
+| ID | Dig | One line |
+|---|---|---|
+| **`D296`** | 🚨🚨 **A repair row must not inherit the anti-signal clause that voided the row it repairs.** `P73` self-voided at registration on its own *"Warsh testimony"* clause. **`S102` was registered on 08-19 explicitly as its repair — and copied the clause forward, including *"or a Treasury refunding announcement inside the window."*** On **2026-08-19, inside that window**, Treasury announced a **doubling of long-dated buyback operations** and the tape moved on it by name. ⇒ **the repair is VOID for the same class of reason as the original.** ★ **The general form: when a row voids on a clause, its successor must state why THAT clause will not fire again — or change it.** Nothing enforces this |
+| **`D297`** | 🚨 **Dual-class listings defeat the `top1_flips_sign` guard.** `Communication Services` reports `top1 = GOOGL, top1_w = 38.3%`; **`GOOG` is a separate row in the same bucket at the same 38.3%**, so **the Alphabet complex is 76.6% of the sector and the guard reports exactly half of it.** Measured consequence today: **none** — `wflow` −0.262, ex-`GOOGL` −0.296, **ex-BOTH classes −0.288**, no sign flip either way. **But the guard's premise (*"remove the largest name and see if the sign survives"*) cannot be executed on a dual-class issuer, because the largest COMPANY is two rows.** Scope: a name-collision scan over all 299 scored names returns **exactly one** such pair in `us_top300` |
+| **`D298`** | ⚠ **A state variable embedded in a prose thesis line has nothing that re-evaluates it.** `R87`: the refiner kill-clause carried *"(one has fired)"* as a parenthetical counter inside `§3a` prose. **The counter reset two weeks ago and no instrument noticed** — the sweep does not read `§3a`, and `§3a` is rewritten only by the desk that touches the name. ★ **General form: any carried claim containing a COUNT or a STATE ("one of two has fired", "3rd consecutive", "not yet triggered") needs either a re-computation each run or an explicit `asof` on the counter itself.** ⚠ **This run carries at least four more of the same shape** — *"18th consecutive run"* (`S8`), *"9th replication"* (`M144`), *"10th consecutive"* (`R81`), *"unmeasurable for an 8th run"* (`EA`) — **and every one of them is currently maintained by hand** |
+
+
+---
+
+## Part C dig items added by the 2026-08-21 `industry_kr` run (**D299-KR - D303-KR**)
+
+> **ID 3-grep at WRITE time** across `RESEARCH.md`, `STANDING_VIEW*.md`, `SCENARIOS*.md`,
+> `llm_outputs/2026-08-21/**`, `REPORT/industry_KR/**`: `D299-KR`-`D303-KR` returned **0 hits**.
+> Highest existing **D294-KR** (KR) / **D298** (US). Written with `'a'` mode (the 2026-08-05 truncation incident).
+
+| # | dig | evidence (all measured this run) |
+|---|---|---|
+| **D299-KR** | **A ledger revival condition that says "flow tag turns green" without naming the tool is two different conditions.** | 047040 대우건설's stored condition reads *flow 태그 녹색전환하며 KIS 외국인 20d 양(+)*. This run measured **`sector_flow` = 🟡 and `module_flow` = 🟢 on the same name, same session.** Today the second leg failed cleanly so the verdict did not hinge on it — **but on the day it does, the same row scores both ways depending on which instrument is opened.** ⇒ `reject_ledger`/`missed_ledger` conditions that reference a flow tag must name the entry point. This generalises `D298`'s form (state embedded in prose with nothing re-computing it) to **conditions embedded in ambiguous instrument names** |
+| **D300-KR** | **A bracket whose anti-signal fires almost surely is a bracket designed to void — and nothing checks for that at registration.** | `S98` voided today on *"an FOMC-dated communication or a CPI/PPI print inside the window"*. An 8-calendar-day US window essentially always contains one. ⚠ Worse: the mechanism the clause assumes was **already refuted by the same desk** — `S102`'s own pre-registration regression (120 settled sessions, Brent-controlled) puts the four legs at **+0.0049 / −0.0072 / +0.0224 / +0.0185 pp per bp of d10y**, i.e. **no measurable rate beta**. ⇒ registration should require a **hit-probability sanity line** on the anti-signal, the same way `D93` already requires a baseline on the threshold. Related to `D296` (a repair row inheriting the clause that voided its predecessor) but distinct: this is about **base rate**, that one is about **inheritance** |
+| **D301-KR** | **The KRX 「전기·전자」 label mixes at least six drivers, and one `eqflow` number is being asked to judge all of them.** | 66 names contain memory (005930·000660), batteries (373220·006400·003670·066970), grid equipment (267260·010120·298040), sets (066570), components (009150·011070) and fuel cells (336260). rs60 spread **inside the top 20 alone = 52.5pp** (009150 +21.4 vs 001440 −31.1) — **larger than the sector's own move.** ⇒ Lens B5 says the label is the wrong unit; **nothing in the pipeline enforces that when the sector verdict is computed.** Same class as the 「화학」 finding this run (its 4 largest greens are 2 cosmetics ODM + 1 tyre + 1 actual petrochemical) |
+| **D302-KR** | **A promotion rule keyed to absolute `eqflow` promotes everything on a rebound session.** | Today the whole universe shifted: `wflow` **−0.289 -> +0.064**, red **155 -> 65**, and **26 of 28 sectors printed a positive `eqflow`.** ROTATION had to relativise by hand (rank + breadth + green:red). **There is no line that forces it** — a run that skipped that judgement would have promoted the board. ⇒ the sector verdict needs a **cross-sectional** input (rank / z within the session), not a level |
+| **D303-KR** | **000660 filed 「파생상품거래손실발생」 on 2026-08-14 and it appears in no desk artifact.** | Filed the same day as the half-year report, five days before the 40tn buyback that took the whole narrative. `fts search 하이닉스 파생상품 --days 10` returns **10 articles, none about it** (2026-08-21 09:0x). **Amount `unknown` (C3)** — the disclosure body was not parsed this run. ⇒ this is a **derivative loss at a name the book's largest sector thesis rests on**, discovered only because DEEP listed the filing categories rather than searching for a keyword. **General form: category-listing a filer's DART output surfaces things keyword search cannot, because you have to already suspect a keyword** |
+
+### Existing digs replicated today (no new ID — the count goes up)
+- **`D293-KR`** (the sweep applies the A-grade axis after the filter) — **measured at sector scale for the first time, in both directions**: construction **5/5** sweep-🟡 vs `module_flow`-🟢; electronics **3** sweep-🟡 that are A-grade **🔴** and **2** sweep-🟢 that are A-grade **🟡**. **Ten names in one run.** The one-line fix (`flow_read.flow_tag(p, vel)` -> pass `inv`/`sh`) reverses the breadth verdict on a sector that has held a DEEP slot **8 consecutive runs**. Human-approval item.
+- **`D273-KR`** (a 진짜손 label offsetting a foreign exit against an institution bid) — **8th replication and the largest sample**: shortlist labels **12/15** real-hands; both legs actually agree on **6/15**. Cleanest case 047040: **−329.9 vs +330.2**.
+- **`D290-KR`** (`vol_surge` IC significantly negative while the green gate rewards it) — strengthened: **h=1 t(NW) −3.92 at n_eff 33.0**, h=5 **−3.26** — both clear Bonferroni **|t|>2.8** (yesterday −3.30 / −3.14). **And the second concrete cost is measured**: it is the `vol_surge` leg that keeps construction's green count at 1 of 26 while **19 of 26 are OBV-accumulating**. Regime label required (the window contains 08-19 **−6.3%** and 08-20 **+6.3%**). Gate change stays a human item (P5).
+- **`D288-KR`** (`catalyst_calendar` can neither add nor remove) — **3rd consecutive run, and today both directions printed**. Could not add: **「美 재무, 24일 대이란 최고강도 제재 발표 예고」** appeared in the event axis **with its date** and the calendar carries 0. Could not remove: the undated Hormuz binary is still listed though `S57-KR` closed 08-20. **And no domestic KR catalyst of any kind appears** — that is not an omission, it is **unwired**.
+- **`D281-KR`** (2-character Korean terms are unmatchable in the trigram index) — **9th run, and this time it bit inside a stage**: `fts search 이란 제재 --days 2` returned **0** while the same event sat in the day's brief at **21 articles / 5 outlets**. Avoided by substituting 3+ character terms. **Avoidance is not repair.**
+- **`D294-KR`** (company/concept terms never register as young, so `🟢FRESH` cannot fire) — **confirmed across 38 terms today: only 3 have an age below 90 days** (`무역협상` 81 · `철강업` 73 · `전장부품` 70) **and none is near the 14-day gate.** ⇒ **F1 = 19 consecutive runs of zero 🟢LIVE**, and for the first time the desk can say the zero is **arithmetic and not the instrument**: the falsification probe ran **1168 (08:17) -> 277 1-day (08:28) -> 1191 (09:30)** and `embed sync` pulled 3,924 articles to cursor `2026-08-21T08:22`.
+- **`D291-KR`** (`^KS11` missing-session benchmark) — **3rd consecutive run.** The index feed now trails the stock feed by a stable **one session** (yesterday it was the 08-19 bar that was missing; today the 08-19 bar exists and 08-20 does not). ⇒ **the defect is a lag, not a dropout**, which is a cheaper thing to fix. Promoting `069500.KS` to the KR default bench remains a human call.
+- **`module_industry_map` seed failure** — `module_industry_map 건설` returned a pool where **every corp scores hit=1**, so the top 30 is alphabetical by ticker (동화약품 · 경방 · 하이트진로 · 유한양행). The L2 that DEEP is instructed to call **does not work on this seed**; the IT DEEP skipped the call on that evidence. Logged here rather than as a new ID because it is the same class as the previously recorded `module_industry_map` emptiness, now with a **different failure mode** (over-matching rather than under-matching).
+
+### Method observations from this run (rule candidates — not promoted to triggers yet)
+- **A gate is a conjunction, so a dead leg deletes a sector silently.** Construction's 🟢 count of 1/26 was read as "no money here" for 8 runs. It is `vol_surge` failing 24 of 26 while OBV accumulates in 19. ⇒ candidate rule: **when a composite tag reads near-zero across a whole bucket, decompose the conjunction before reading the zero.**
+- **Point a load-bearing frame at the position it was never aimed at.** The protocol already says this; today it paid. The US desk's take-or-pay finding, aimed at KR memory for the first time, returned **the opposite answer** and that answer is more useful than a confirmation would have been.
+- **"Who bought it" is a different question from "did it go up", and the desk only reliably asks the second.** 000660 rose 12.73% on a session where none of the three displayed investor categories was a net buyer. Nothing in the pipeline asks that question automatically; it was asked because a DEEP question demanded it.
+
+
+---
+
+## Part C dig items added by the 2026-08-21 `industry_US` run (**D304 – D306**)
+
+> ⚠ **ID 3-grep at WRITE time** across `RESEARCH.md`, `STANDING_VIEW*.md`, `SCENARIOS*.md`,
+> `llm_outputs/` and `REPORT/`: `D304` `D305` `D306` returned **0 files**. Highest existing **`D298`**
+> (US) / **`D303-KR`** (KR) — **numbers taken beyond BOTH so the suffixed and unsuffixed series cannot
+> collide** (the `D76` class). Written with `'a'` mode (the 2026-08-05 truncation incident).
+
+| ID | Dig | Evidence (all measured this run) |
+|---|---|---|
+| **`D304`** | 🚨 **`us_setup_screener.py` has no settled-bar guard — it scans a LIVE partial bar and prints values that read as settled.** | Run at **23:3x KST = 10:3x ET with the US session open**, it scanned **299/300** names and returned `GOOG` **RSI 18.1**, `GOOGL` **22.9**, `TJX` 19.9, `APP` 21.6 — while `GOOGL` was **up 0.58% intraday** on the same tick. **Nothing in the header, the output or the saved JSON says the bar is unsettled**, so a downstream reader cannot distinguish it from a settled scan. This run declared the output unusable (`BET_SHEET §I-2`) **by hand**; the next one may not. **Positive-form remedy: stamp `bar_settled: true/false` and the terminal bar's date into the screener's header and its JSON, and refuse to write a `🆕신규` promotion list when the bar is unsettled.** Same class as `D74` (intraday sweep contamination) but on a different tool |
+| **`D305`** | ⚠ **`module_fundamentals_us` returns a WRONG company name for at least one universe ticker, while its numbers are right.** | `module_fundamentals_us AXON` prints **`# AXON 펀더멘털 (Axovant Sciences Ltd. Common Shares)`** against `Sector: Industrials / Aerospace & Defense`, price **$616.58**, market cap **$50B** — i.e. **Axon Enterprise's data under Axovant Sciences' name**, from the provider's `longName` field. This run used the numbers and did not trust the name, **and said so in the ledger row it filed** — but a stage that quoted the name in prose would have published a different company. **Positive-form remedy: cross-check `longName` against `us_top300.csv:name` and emit a `⚠ NAME MISMATCH` line when they disagree.** `D5` class (cross-provider), first instance on the *identity* field rather than a value field |
+| **`D306`** | 🚨 **A ledger revival condition written on a CUMULATIVE excess can be satisfied by exhaustion geometry, and nothing checks for that.** | This run's own HANDOVER **revived `PLTR`** on its registered condition *"RS60 vs `SPY` turns positive"* — measured **+25.75 ✅**. PREMORTEM Lens 3 then measured that **146.4% of that +25.75 is the last 20 sessions and days 21–60 are −11.95**, i.e. the condition is met by a 20-day event with a losing base under it (`M149`/`M779`). **The revival stands as scored** — the ledger settles the frozen condition and re-reading it afterwards would convert a rule into a judgment (`L3`) — **but the condition CLASS is defective.** **Positive-form remedy: a cumulative-excess bar in a `--revives-if` or `--enters-if` must carry a decomposition floor** (e.g. *"rs60 > 0 **AND** the days-21-to-60 component also positive"*), the same way `D93` already requires a baseline beside a threshold. ⚠ **Scope**: a scan of the two ledgers' open conditions shows this shape in **`T`**, **`PLTR`**, **`SLB`** and **`BKR`** — four of the nine rows `due` this run |
+
+### Existing digs replicated today (no new ID — the count goes up)
+- **`D294`** (`action_bracket` reports "no dated binary" under a header naming one) — **3rd consecutive
+  run, verbatim**, and today it compounded: the window's **D-0** binary was absent from
+  `catalyst_calendar` entirely, so the tool could not have emitted a ticket even with a working
+  `earnings` axis. **Two instruments failed in series on the week's most dated event.**
+- **`D295`** (a bracket settling beyond the readable option chain has no straddle-derived threshold) —
+  **UNMET for a 2nd run and now it is ALPHA's own failure**: `S103`'s `NVDA` bands are still hand-set
+  at ±5.0pp, the 08-21 chain has **rolled**, and this stage's nine `--positioning` pulls all returned
+  **D0** expiries, i.e. the *old* chain on its last day.
+- **`D282`** (DRIFT watches the news corpus when it needs to watch its own registered thresholds) —
+  **3rd run**: the window was **0.7h against a 3–6h spec**, and **the burst z-scores did not surface the
+  largest state fact in their own window** (four outlets describing the Strait of Hormuz as **closed**,
+  `M784`). It was found by body-reading the one real burst term.
+- **`D297`** (dual-class listings defeat the `top1_flips_sign` guard) — reproduces unfixed:
+  `GOOG` is a second **38.3%** row in the same bucket, so the Alphabet complex is **76.6%** of
+  Communication Services while `top1_w` reports half of it. **No verdict moved either way today.**
+- **`D298`** (a state variable in prose with nothing that re-computes it) — **third instance in two
+  runs**: `NUE`'s *"the sheet's only 🔴 FINRA axis (z +1.99)"* inverted to **−2.33** (`M771`). The
+  refiner kill counter was **re-computed rather than carried** this run precisely because of it.
+- **`D250`/`M731`** (`cycle_registry.json` has no row for the optical/interconnect cycle) — and this
+  run added a second layer: **the cycle's only BUILDING thread could not be body-read** (a `digitimes`
+  **paywall stub**), so a held cycle now has **neither a registry row nor a readable narrative**.
+- **`D18`/`D288-KR`** (`catalyst_calendar` can neither add a known date nor remove an expired row) —
+  **the most expensive instance recorded**: it missed **Warsh's Jackson Hole debut at D-0**. ★ The
+  positive half is recorded too: **it DID add `FRO` 08-31**, its first new dated row in three runs.
+- **`M144`/`D270`** (the 🟢 gate is a volume gate) — **10th measurement**: 92 names pass
+  `OBV 매집 ∧ rs20>0`, **7 are 🟢, 85 blocked and 100% of them on `vol_surge` alone**; 18 clear
+  `vol_surge ≥1.2` and **14 of those are 🟡/🔴**.
+- **`R81`/`D290`** (`flow_tag` does not take the run-level axis set) — **11th measurement**: **3 of the
+  7 greens are velocity-derived** (`MRVL` 0.77 · `MA` 0.87 · `CVX` 0.94) ⇒ **admissible green count 4**,
+  and `US_LIVE_SHORTLIST` is tag-filtered so **3 of its 7 rows are inadmissible**.
+- **`M152`** (28 `us_top300` tickers are silently unindexable by the handoff ledger) — **first instance
+  landing on a HELD name**: `MET` and `T` both return `0` from `module_report_tags ticker`, and both
+  zeros mean **`unindexable`, not `uncovered`**. **2 of the 11 book names cannot be reconciled by that
+  instrument at all, by construction.**
+- **`D300-KR`** (a bracket whose anti-signal fires almost surely is designed to void) — **handed back
+  to this desk as owner and APPLIED**: all four rows registered today (`S108`–`S111`) carry an explicit
+  **base-rate check on the anti-signal** at registration, and `S108` states in writing that Warsh's own
+  speech is deliberately **not** an anti-signal because it is the event.
+
+### Method observations from this run (rule candidates — not promoted to triggers yet)
+- ★ **A `[본문]` tag means a body was SCRAPED, not that a readable body exists.** The optical thread's
+  only source came back as 20 lines of subscription furniture around a two-sentence lede. **A
+  body-read must check that what returned is prose, not chrome** — the same class as the `--lede`
+  page-furniture defect on the KR feed, on a different feed.
+- ★ **When two stages of one run disagree, route the disagreement to a DEEP rather than resolving it
+  in the second stage.** MACRO promoted MATR and RE; SWEEP contradicted both on flow; ROTATION
+  **declined to revert inside the same run** and made each contradiction its sector's #1 DEEP question.
+  **Both DEEPs then resolved them on evidence neither earlier stage had** (a metals-vs-construction
+  split; a three-unit REIT split with a non-REIT at the top). **Intra-run thrash produces a verdict;
+  routing produces a measurement.**
+- ★ **Ask what a bracket's branches CAN say before the settle, not after.** `S99` is about to fire
+  branch A and the joint-loading test says branch A's *label* is wrong. Writing that down **before**
+  the settle cost one regression and removed a sizing error; writing it after would have been
+  indistinguishable from rationalising.
+
+
+---
+
+## Part C dig items added by the 2026-08-22 `industry_kr` run (**D304-KR ~ D308-KR**)
+
+> **ID 3-grep(WRITE 시점)** — `RESEARCH.md` · `STANDING_VIEW*.md` · `SCENARIOS*.md` ·
+> `llm_outputs/2026-08-22/**` · `REPORT/industry_KR/**` 에서 `D304-KR`~`D308-KR` **0 hit**.
+> 현행 최고 **D303-KR**(KR) / **D306**(US). `'a'` 모드 append.
+
+| # | dig | 이 런이 측정한 증거 |
+|---|---|---|
+| **D304-KR** | ★★★ **미결정에도 가격표가 붙는다 — `D291-KR` 의 값이 오늘 실측됐다.** | `D291-KR` 은 08-21 에 *"결함은 지연이지 드롭아웃이 아니라 고치기 싼 문제"* 로 닫혔고 **승격이 3런 연속 미뤄졌다.** 오늘 `^KS11` 의 **2026-08-21 행에 `Close`=NaN 만 들어와**(OHLV 는 정상 = **부분행**) `ret(bench_close,·)` 를 통해 **전 종목 rs20/rs60 이 NaN** 이 되고 **826종목이 드롭 → `scored=0`**. 세 가지 질의형태(`6mo`/`start-end`/`5d`) 전부 같은 `NaN` 이고 **`fast_info.lastPrice` 는 6,912.95 로 존재**한다. 같은 날 **`069500.KS` 는 정착봉 보유 · 1개월 결측 0** 이며 **이미 이 데스크의 공식 KR 벤치**다. ⇒ **일반형: 「고치기 싸다」는 판단은 결함의 *형태*에 대한 것이지 *비용*에 대한 것이 아니다. 미결정 항목은 값이 실현될 때까지 값이 0 인 것처럼 보인다.** (사람 승인: `scripts/sector_flow.py` 벤치 한 줄) |
+| **D305-KR** | ★★★ **안티시그널·부활조건에 「지평」이 안 적히면 같은 데이터가 두 답을 준다.** | `M-86` 안티시그널 ③ 은 *"010950·096770 의 `069500` 대비 초과가 둘 다 음전"* 이었다. 오늘 실측하니 **당일(08-21)은 둘 다 음**(−2.706 / −2.528pp)인데 **5세션 누적은 −2.384 / +0.021pp 로 갈린다** ⇒ **채점 불가(AMBIGUOUS)**. `D299-KR`(도구명 미기재)의 **지평판(horizon) 자매**다. ⇒ **등록 시 「어느 창에서 재는가」를 임계와 같은 줄에 적는다.** ★ **이 런은 스스로 고쳤다** — `M-90` ③ 은 *"5세션 누적 초과"* 로 지평을 명시해 등록했다. ⚠ **같은 병의 세 번째 얼굴**: `S100`(US) 에서 **`TGT` +8.499% / `WMT` −9.983%** 가 등가중으로 **−0.516pp** 가 됐다 — **바스켓 브래킷은 「다리 간 분산의 사전 임계」도 같이 등록해야 한다** |
+| **D306-KR** | ★★★ **유니버스에 KOSDAQ 이 0개이고, 고치는 파일이 19일째 미승격이다.** | `kr_all.csv` **832행 전부 KOSPI**. 그래서 이번 주 최대 공시 재료 — 반도체 장비 4사 수주잔고 **1.77~2.42배**(원익IPS 2,982→6,346억 · 테스 972→2,069억 · 주성 885→2,144억 · 파크 636→1,125억) — 가 **스윕·숏리스트·섹터 어디에도 나타날 수 없다.** `kr_all_v2_candidate.csv`(2026-08-03)는 **KOSPI 374 + KOSDAQ 237** 이고 **4종 전부 포함**한다. ⚠ **단순 교체가 아니다: KOSDAQ 237 을 얻고 KOSPI 458 을 잃는다**(832→374) ⇒ **사람 판단이 필요한 진짜 트레이드오프.** ⇒ SWEEP 의 「보유를 태그할 수 있어야 한다」 불변식을 **「우리 최대 테제가 지나가는 층을 태그할 수 있어야 한다」**로 확장한다 |
+| **D307-KR** | ★★ **국내 주주환원 보도는 반드시 `주요사항보고서` 원문과 대조한다 — 오늘 7.3배 갈렸다.** | 보도 **「역대 최대 110조원 규모 주주환원 시행」**(zdnet 속보) / **「올해 주주환원 90~110조 재원 예상, 3분기 30조 배당」**(einfomax) · 2일간 국내 **217건** · 스레드 08-21 **42건/8매체**. DART 1차: **`자기주식취득결정` 53,285,968주 · 15.00조원 · 목적 「임직원 주식보상」**, 같은 30일 창 **`주식소각결정` 0건**. 회사 자신은 **「2027년 1월말 나머지 규모·시행방안 발표」**. 대조군 000660 은 08-19 에 **취득 + 소각을 함께** 냈다. ⇒ **금액이 7.3배 다르고, 「소각/비소각」이라는 성격도 다르다.** ⇒ **`C2`(양쪽 절반) 의 KR 특화형으로 등록한다**: 「주주환원」 보도를 인용할 때는 **(a) 확정 공시 금액 (b) 취득 목적(소각/보상) (c) 미정 부분의 결정 예정일** 세 칸을 함께 적는다 |
+| **D308-KR** | ★★ **`breadth`(폭) 지표가 부호가 뒤집힌 축 하나에 지배되고, `--help` 는 도구 생사의 나쁜 대리변수다.** | (a) **폭**: 건설 breadth **0.000 → 0.423**(서지 다리 제거), 축별 통과율 **OBV 0.58 · rs20 0.58 · 서지 0.04**. 보드 전체 서지 통과율이 **0.04(건설) ~ 0.50(보험) = 12배** ⇒ **현행 breadth 는 「매집의 폭」보다 「거래량 스파이크의 유무」를 잰다.** 그리고 그 축은 오늘 **h=1 t −3.86 / h=5 t −3.38 로 두 지평 Bonferroni 통과, 부호 음(−)**. ⚠ **반례도 측정**(031210: 서지 2.80 인데 OBV 분산이라 중립) — **순수 서지 기계는 아니다.** (b) **`--help`**: 오늘 `scripts/sector_flow.py --help` 는 **exit 0 인데 산출 0건**, `module_news_data --help` 는 **exit 0 인데 데이터 경로가 스윕 중 죽었고**, `scripts/margin_history.py --help` 는 **exit 1 인데 기능은 정상**이다. **3런 연속 양방향으로 갈렸다** ⇒ **G7 은 `--help` 가 아니라 「최소 산출 스모크」를 재야 한다** |
+
+### 기존 dig 의 오늘 재현 (새 번호 안 붙임 — 카운트만 올린다)
+- **`D291-KR`** — **4런 연속이고 오늘 처음 치명적이었다.** `D304-KR` 이 그 비용을 측정한 항목이다.
+- **`D290-KR`**(`vol_surge` IC 가 유의하게 음인데 녹색 게이트가 그것에 보상) — **강화됨**: h=1 t **−3.86**(n_eff 34.0) · h=5 **−3.38**(n_eff 5.4), **어제(−3.92/−3.26)에 이어 두 지평 연속 통과.** ⇒ **「Bonferroni 통과 전에는 게이트를 뒤집지 않는다」는 유보 사유가 소진됐다.** 게이트 변경은 사람 결정(P5).
+- **`D293-KR`**(A급 축이 필터 뒤에 적용된다) — **10번째 재현, 오늘은 건설 안에서**: 006360 · 073240 · 009830 **3종이 `module_flow` 녹색 vs 스윕조건 중립.** 원시 축 9/9 일치이므로 차이는 오직 `inv`/`sh` 인자다.
+- **`D273-KR`**(진짜손 라벨이 핸드오프를 상쇄로 덮는다) — **9번째 재현**: 숏리스트 14종 중 **두 다리 양은 5종**(그중 192820 은 외국인 +0.1만 = 사실상 0 ⇒ 실질 4종), 핸드오프 4 · 개인 흡수 4.
+- **`D288-KR`**(catalyst_calendar 가 더하지도 빼지도 못한다) — **4런 연속, 오늘도 양방향**: **08-24 대이란 제재(D−2)** 를 못 싣고, **정산된 Hormuz undated 행**을 못 지웠다. **국내 촉매는 여전히 0건 = 미배선.**
+- **`D281-KR`**(2글자 한글 텀은 trigram 색인에서 구조적으로 0) — **10런째.** 전부 3글자+ 대체어로 우회. **회피지 수리가 아니다.**
+- **`D294-KR`**(회사·개념 텀은 어릴 수 없어 🟢FRESH 가 못 뜬다) — **오늘 12텀 측정에서 나이 14일 미만 0개**(최연소 `해운업` 71일, 나머지 ≥90). ⇒ **F1 = 19런 연속 0 이고, 오늘 그것이 계기가 아니라 산술임을 프로브(1,340)로 확정했다.**
+- **`D286-KR`**(`S63-KR` 이 정산됐는데 DEEP 문서가 없다) — **4런 연속.** ★ **오늘은 처리 방식을 바꿨다**: 섹터 슬롯 대신 **EVENT_ALPHA 카드 7 → BET §D 로 이름 단위 인계**(192820 · 161890). **dig 는 유지한다.**
+- **`module_industry_map` 과다매칭** — **2런 연속.** `원자력 발전` 시드에서 **전 corp 가 hit=2** 로 동점이라 상위 30이 티커 알파벳순(삼양홀딩스·두산·DL·현대건설…). 08-21 의 `건설` 시드와 같은 형태. **밸류체인은 수작업 추론으로 만들었다.**
+- **`D303-KR`**(000660 파생상품거래손실 공시가 어느 산출물에도 없다) — **2런 연속 미개봉.** 이번에도 못 열었다.
+
+### 이 런의 방법 관측 (규칙 후보 — 아직 트리거로 승격하지 않음)
+- ★★ **계기가 죽었을 때 「재구성」은 정당할 수 있다 — 단 세 조건을 문서화할 때만.** 오늘 스윕을 재구성했고, 정당화한 것은
+  **(i) 수식을 문자 그대로 재현했다**(`price_axes`·`flow_tag`), **(ii) 교차검증을 통과했다**(`module_flow` 직접호출 9개 이름과 원시 축 **9/9 일치**, 채점 종목수 **806** 으로 직전 두 런과 동일),
+  **(iii) 무엇이 빠졌는지 먼저 적었다**(A급 축 없음, 뉴스축 없음, 코드 미수정) 이다. ⇒ 후보 규칙: **재구성은 「같은 수식 · 교차검증 · 결손 명시」 셋을 문서에 적을 때만 「방향」으로 쓸 수 있고, 등급 변경 근거로는 못 쓴다.**
+- ★★ **「비어 있음」을 관측으로 읽기 전에 그 칸을 만든 임계를 찾아라.** 오늘 같은 형태가 **두 축에서 독립 재현**됐다 —
+  흐름 게이트(서지 1.2)가 건설 breadth 를 0 으로 만들고, 공시 임계(약 4,500억)가 028050 의 신규 수주를 0 으로 만든다. **둘 다 「돈이 없다/수주가 없다」로 8~9런 읽혔다.**
+- ★ **한 프레임을 그것이 겨냥된 적 없는 자리에 대라 — 오늘도 값이 나왔다.** 다중비교(Bonferroni)는 이 데스크에서 **IC 원장 전용**이었다. **섹터 breadth 에 처음 대보니 유일한 유의 섹터가 사라졌다**(`M793`).
+- ★ **자기 계기를 자기가 죽이는 경우가 있다.** 뉴스 파이프의 9런 연속 실패가 **서버 정전이 아니라 우리 스윕의 부하**였음이 3구간 측정으로 드러났다(스윕 전 6/6 · 중 0/3 · 후 4/4, `curl` 000→**401**). ⇒ **「외부가 죽었다」로 닫기 전에 「우리가 그 창에 뭘 하고 있었나」를 본다.**
+
+
+### ⚠ `D306-KR` 정정 — **런 종료 후 append. 위 문장은 지우지 않는다(D48)**
+
+**`D306-KR` 은 「고치는 파일이 19일째 미승격이다」라고 적었고, 그 함의는 「방치」였다. 그 함의가 틀렸다.**
+세션 메모리(`project_kr_universe_flow_discovery`)의 「남은 v1.1」 항목이 **`KOSDAQ 제외(유저 판정)`** 로 닫혀 있다 —
+**KOSDAQ 배제는 누락이 아니라 사람이 이미 내린 결정이고, `kr_all_v2_candidate.csv` 의 미승격은 그 결정과 정합한다.**
+
+⇒ **`D306-KR` 에서 살아남는 부분과 죽는 부분을 나눠 적는다:**
+- ❌ **죽는 부분**: *"고쳐야 하는데 19일째 안 고쳤다"* — **이것은 철회한다.** 결정은 이미 났다.
+- ✅ **살아남는 부분, 그리고 이것이 원래보다 더 유용하다**: **그 결정에 오늘 처음 가격표가 붙었다.**
+  2026 상반기말 수주잔고가 **1.77~2.42배** 로 늘어난 4종(원익IPS · 테스 · 주성엔지니어링 · 파크시스템스)이
+  **전부 배제 범위 안에 있고**, 그중 **036930 주성엔지니어링은 `module_flow` 직접조회에서 녹색가속 · 외국인·기관 두 다리 양(+60.6 / +2.3만) · 숏 4.38%float covering** 이다.
+  ⇒ **dig 를 「승격하라」에서 「이 결정의 비용을 매 런 계량하라」로 다시 쓴다.**
+  **미스 원장의 `N.유니버스부재` 두 행(240810 · 036930)이 바로 그 계량 장치다** — `missed_ledger score` 가 시간이 지나면
+  **「KOSDAQ 배제가 얼마를 놓쳤나」를 숫자로 돌려준다.** 배제를 뒤집자는 것이 아니라, **뒤집을지 말지를 사람이 숫자로 판단할 수 있게 하는 것**이다.
+
+★ **일반형(오늘 배운 것)**: **「고쳐지지 않은 것」과 「고치지 않기로 한 것」은 리포 안에서 같은 모양으로 보인다.**
+파일이 후보로 남아 있는 상태는 두 경우 모두 동일하다. ⇒ **dig 를 올리기 전에 「이게 이미 결정된 사항인가」를 확인한다.**
+오늘 이 런은 그 확인을 **dig 를 쓴 뒤에** 했다 — 순서가 틀렸고, 그 사실을 여기 남긴다.
+
+
+---
+
+## Part C dig items added by the 2026-08-22 `industry_US` run (**D307 – D316**)
+
+> ⚠ **ID 3-grep at WRITE time** across `RESEARCH.md`, `STANDING_VIEW*.md`, `SCENARIOS*.md`,
+> `llm_outputs/` and `REPORT/`: `D307`–`D316` returned **0 files**. Highest existing **`D306`** (US) /
+> **`D308-KR`** (KR) — numbers taken beyond **BOTH** so the suffixed and unsuffixed series cannot
+> collide (the `D76` class). Written with **`'a'` mode** (the 2026-08-05 truncation incident).
+> **Every remedy is stated in POSITIVE form** — "do Y", never "don't do X".
+
+| ID | Dig | Evidence (all measured this run) |
+|---|---|---|
+| **`D307`** | ⚠ **The same provider returns different settled closes for the same session hours apart, and nothing flags it.** | `BZ=F` **2026-08-21** settled close: **93.870** (sibling KR desk, ~09:3x KST) vs **94.390** (this desk, 22:2x KST) — **0.52 / 0.55% apart**, same ticker, same provider, same settled session, with no trading between the pulls. **Both sit above `S95`/`P69`'s 93.00 bar so no verdict moved — this time.** **Positive-form remedy: record the PULL TIMESTAMP beside any settled price used to score a bracket**, so a later run can distinguish a provider revision from a genuine disagreement. `D5` class, first instance on a continuous futures contract |
+| **`D308`** | 🚨 **A node-vs-name bracket written on a RAW excess forces its anti-signal to arbitrate something the anti-signal cannot see.** | `S90`'s clause (*"`DLR`-specific acquisition or guidance event ⇒ name event, not node read"*) had to be adjudicated **by hand** because a **424B7 resale registration + 8-K** landed on 08-19 inside the window while the price move was **provably a node move**: `DLR` −3.393 with `EQIX` −1.963 and `IRM` −4.357, against `XLRE` +0.948 / `AMT` +1.493 / `PLD` +1.914 / `WELL` +2.939. **Positive-form remedy: write a node-vs-name observable as the name's excess vs its OWN sub-node peer basket** — a shared move then cancels and only idiosyncratic moves reach the branches, so the anti-signal has nothing left to arbitrate |
+| **`D309`** | 🚨 **A bracket on a FRED daily series settles on a PUBLICATION, not on a market close — and a weekend desk can never read a Friday-dated one.** | **`S102` has slipped two consecutive runs for the same reason**: its observable is *"`[FRED]`, the first close covering 2026-08-21"*, and FRED's `DGS2`/`DGS10`/`DGS30` end at **2026-08-20** on **three independent pulls across 14 hours** (two by the KR desk, one by this one). FRED does not publish on weekends. **Positive-form remedy: date a FRED-observable bracket to the first BUSINESS DAY after the release and state the release lag at registration**, the way `D93` already requires a baseline beside a threshold |
+| **`D310`** | 🚨 **A pre-registered kill-threshold was met in the market that cannot act on it, and is unmeasured in the market that can.** | `vol_surge` cleared its written Bonferroni condition today — **h=1 t(NW) −3.86 (`n_eff` 34.0, mean IC −0.0454), h=5 −3.38 (`n_eff` 5.4, −0.0555)**, same sign, both past `\|t\|>2.8`, both `n_eff ≥ 4` — in an `ic_ledger` that is **`market=kr`, 729 rows**. `W1` forbids importing it, and **the US desk has no IC accrual of its own**, so the US 🟢 gate keeps weighting `vol_surge` **positively** with no measurement either way — while **88 of 94 accumulating-and-outperforming names are blocked on that axis alone** (`M807`). **Positive-form remedy: run `axis_inflection` on the US universe and accrue `ic_ledger` for `market=us`** — the axis files already exist; what is missing is the US arm in the pipeline |
+| **`D311`** | 🚨 **A news-based override of the calendar can be a FALSE POSITIVE, and nothing in the harness checks that direction.** | The 08-21 run read a **Week-Ahead headline** as a D-0 event, declared *"the calendar missed a Fed-chair speech at D-0"*, and **overwrote a HANDOVER sentence that was correct** (`R93`). Every guard this desk owns points the other way — at events the calendar *omits*. **Positive-form remedy: require an explicit DATE STRING from a BODY before promoting a news item to a dated catalyst, and record the sentence it came from beside the date.** Today's resolution came from exactly that: `economictimes` 08-22, *"the August 27 to August 29 event in Jackson Hole"* |
+| **`D312` (upgraded)** | 🚨 **`thread`'s BUILDING / FADING / ENDED tag is invalid whenever the window ends on a low-volume day — and the weekend is the common case.** | Window-end **2026-08-22 = 134 events vs 743–825 on weekdays (18%)**, and **every market-moving thread of the week landed in `ENDED`/`FADING`** — Hormuz (peak **21 outlets**, total **269**), the $40tn debt/buyback thread (peak **19**), dollar/gold (peak 8), Nvidia–OpenAI (peak 15) — while `BUILDING` was led by *"If You Invested $1000 in Howmet a Decade Ago"* and *"Passive Income: How Much Would You Need to Invest in Real Estate."* **Positive-form remedies (two): (1) normalise each day's outlet count by that day's event denominator before tagging, and print the window-end denominator on the tag line; (2) exclude evergreen title patterns** (`If You (Had )?Invested` · `How Much Would You` · `Prediction:` · `Where Will … in 20\d\d` · `Better Buy` · `Best … Stocks`) **from the trajectory ranking** — that filter alone removed 4 of 20 alive threads today |
+| **`D313`** | 🚨 **`brief`'s market/non-market classifier is Korean-only, so on the FOREIGN feed it scores nothing below the multi-outlet tiers — and the summary line reads like full coverage.** | Measured 2026-08-21 foreign brief: **4,421 articles → 743 events**, headline line *"743 market / 0 non-market"*, but **634 of 743 events (85.3%) are UNSCORED** (the tool's own footnote: *"1매체 중 634개는 점수가 없다(분류기는 한글 전용) — 낮은 게 아니라 못 잰 것"*), `excluded_nonmarket` **0 of 0**, tail **0**. **Positive-form remedy: print the SCORED fraction on the summary line** (e.g. `scored 109/743`) so the denominator and the *scored* denominator are never confused |
+| **`D314`** | 🚨 **A physically dated, 11-outlet trade-route event has no exposure surface on this desk at all.** | *"Panama Canal to reduce shipping over El Niño-fuelled drought"* (**11 outlets, dispersion 1.00**, 08-21) maps to tanker/dry-bulk names (`STNG` `FRO` `INSW` `DHT` `TNK`), **none of which is in `us_top300`** — and `FRO` already sits on `CATALYST_WATCH` (08-28) and in `S109` **while carrying no flow reading**. `M45`'s class made structural. **Positive-form remedy: add the shipping/tanker complex to `build_us_universe.py`'s `--include` list** — the same mechanism that closed the `TSM`/`LNG` hole on 2026-08-10 |
+| **`D315`** | 🚨 **`module_flow --positioning` selects the NEAREST option expiry, not the first expiry that COVERS the event — so the desk's own straddle rule is unreachable exactly when it matters.** | `NVDA --positioning` → **예상변동 ±1.6%, 만기 2026-08-24, D2**, for an **08-26** earnings print. The same call on `NEM` and `MSTR` returned **만기 2026-08-28**, so an 08-28 chain exists and `NVDA` simply has an 08-24 weekly. **This is the mechanism behind `D295` being unmet for three consecutive runs and behind `M47`/`M785`'s "all nine straddles expire D0".** **Positive-form remedy: add `--after DATE` to `--positioning`, select the first expiry ≥ that date, and print the chosen expiry and its `D±n` on the same line as the implied move** |
+| **`D316`** | 🚨 **`drift_watch`'s kill-switch term set contains no trade or tariff term, so a 15-outlet trade-war escalation is invisible to it by construction — and it DISPLAYS the report's own anti-signals without searching them.** | 2026-08-22: `drift_watch` returned **`✅ 킬스위치 버스트 없음`** counting `blockade 2 · rate hike 3 · invasion 1 · downgrade 1`, on the day whose largest cluster was **24 articles / 15 outlets**: *"US imposes 50 percent tariffs on $20bn in Canadian goods after talks fail"* / *"Canada says it will match US tariffs 'dollar for dollar'"* (`M808`). **The tool printed the report's anti-signal lines for human comparison — and two of them name tariff-class events — yet it does not search them.** **Positive-form remedy: seed the kill-switch term set FROM the anti-signal clauses of the report being watched** (it already parses them), and add `tariff` · `trade war` · `retaliation` · `export control` · `sanction` to the standing set |
+
+### Existing digs replicated today (no new ID — the count goes up)
+- **`D294`** (`action_bracket` reports "no dated binary" under a header naming one) — **4th
+  consecutive run, verbatim**: it printed *"Nearest binary: NVDA earnings (D-4, axis=earnings) —
+  both-sides armed below"* and *"No tickets — no cycle GAP and no dated binary in window"* in
+  consecutive lines, and emitted **ZERO tickets on a window holding THREE binaries**.
+  `ACTION_TICKETS.md` was hand-built; raw output preserved at `industry_US/_action_bracket_raw.md`.
+- **`D295`** — UNMET for a **3rd** run, **but converted from a lapse into a diagnosed tool defect**
+  (`D315`). `S103`'s bands stay hand-set and are **not** re-frozen (`D242`); `S113` is the repair.
+- **`D282`** (DRIFT watches the news corpus when it needs to watch its own registered thresholds) —
+  **4th run**: window **0.6h against a 3–6h spec**, and the burst counts again failed to surface the
+  window's largest state fact. **Three-for-three now**: 08-21 missed *"the Strait of Hormuz described
+  as CLOSED by four outlets"* (`M784`); today missed a 15-outlet trade-war re-escalation. **Both were
+  found by a hand `brief --date <today>` — that manual cross-check is the step that has caught the
+  finding both times it mattered.**
+- **`D297`** (dual-class listings defeat the `top1_flips_sign` guard) — reproduces unfixed: `GOOG` is
+  a second **38.3%** row, so the Alphabet complex is **76.6%** of Communication Services while
+  `top1_w` reports half. **Cost nothing this run because COMM did not move.**
+- **`D298`/`R87`** (a state variable in prose with nothing that re-computes it) — **third instance in
+  three runs**, and this time it inverted the other way: the 08-21 defense short-pressure "group turn"
+  (`NOC` +2.43 · `LMT` +1.76 · `LHX` +1.35) read **`LHX` −2.99 🟢 / `RTX` −2.15 🟢** today, a **4.34 z
+  swing on `LHX` in one session** (`M804`). **It was re-computed rather than carried.**
+- **`D304`** (`us_setup_screener` has no settled-bar guard) — **3rd run, unchanged**: it stamped its
+  header **2026-08-22** while the terminal bar is **2026-08-21** and emitted no `bar_settled` field.
+  ⚠ **Harmless today only because the US market did not open** — the bar it scanned genuinely was
+  settled. **On a weekday the same output would be unusable and would look identical.**
+- **`D305`** (`module_fundamentals_us` returns a wrong company NAME with right numbers) — reproduces
+  on `AXON` (`Axovant Sciences`), the sector's single best `rs60` (+58.4). **The name was not quoted
+  from that tool anywhere in this run's output.**
+- **`D250`/`M731`** (`cycle_registry.json` has no optical/interconnect row) — **10th run**, and the
+  cost is now visible: `S86` and `S96` both settled **branch B** in the same week `Fabrinet` guided
+  *"AI optical demand fueling years of growth"* (5 outlets, 08-21). **Exposure there is unmeasurable,
+  not zero.**
+- **`D300-KR`** (a bracket whose anti-signal fires almost surely is designed to void) — **measured a
+  THIRD time in six days**: `S91` and `S93` both VOIDed today on the same class (`S98` on 08-21).
+  **Every clause registered by this run is keyed to a magnitude or a specific dated action.**
+- **`M144`/`D270`** (the 🟢 gate is a volume gate) — **12th measurement and the cleanest**: 94 names
+  pass `OBV 매집 ∧ rs20>0 vs SPY`, **6 are 🟢, 88 blocked and 100% of them on `vol_surge` alone**;
+  22 clear `vol_surge ≥1.2` and **16 of those are 🟡/🔴**.
+- **`R81`/`D290`** (`flow_tag` does not take the run-level axis set) — ★ **NOTHING to replicate for
+  the first time in the series**: all 299 velocities `null` ⇒ **0 of 6 greens velocity-derived**, and
+  the **admissible green count equalled the printed green count (6 = 6)**. **The rule is not retired —
+  it re-binds on the next partial-coverage run**, which is every other run.
+- **`M68`** (`theme-age` splits multi-word terms and measures only the last token) — **4 of 7 terms
+  collapsed today**: `Jackson Hole`→`Jackson`, `data center`→`center` (**n 28,413**),
+  `debt crisis`→`crisis`, `short covering`→`short`. **None of the four is quoted anywhere.**
+- **`D18`/`D288-KR`** (`catalyst_calendar` can neither add a known date nor remove an expired row) —
+  **still carries zero rows for Jackson Hole 08-27→08-29.** ⚠ **The gap is real; the 08-21 run's
+  DATING of it was not** (`R93`).
+- **`M152`** (28 `us_top300` tickers are silently unindexable by the handoff ledger) — `MET` and `T`
+  remain unindexable, so **2 of the 11 book names cannot be reconciled by `module_report_tags` at
+  all**, by construction. `MET` got its first DEEP look in ~7 runs this run because of it.
+
+### Method observations from this run (rule candidates — not promoted to triggers yet)
+- ★★ **A weekend run is not a degraded weekday run — it is a different instrument.** It cannot score
+  FRED rows (`D309`) and gets no fresh session; but it is the **only** configuration that can separate
+  a clock effect from a method effect (`C11` resolved after three runs carried), it carries **zero
+  partial-bar risk** (`D304` moot), and its `brief` is small enough to read whole. **Ask what a
+  weekend run is uniquely able to measure, rather than treating it as a weekday run with less data.**
+- ★★ **Check that the EVENT is inside the bracket's window with the same rigour spent on the
+  anti-signal.** `S108` base-rate-checked its anti-signal carefully (*"July PCE on 08-28 — OUTSIDE the
+  window"*) and **never applied the same test to its own event**, which turned out to be six days
+  outside it (`R93`).
+- ★★ **A zero-coverage instrument can be cleaner than a partial-coverage one.** Uniform missingness is
+  a scale; selective missingness is a bias (`M795`).
+- ★ **When the audit step finds the error in the gate step, that dependency ran in the productive
+  direction.** This run's PREFLIGHT over-reached and a `missed_ledger` row (`CBRE`) forced the source
+  read that narrowed it. **A run reporting zero self-refutations usually means its controls were not
+  adversarial.**
+- ★ **After a clean `drift_watch`, read the day's `brief` by hand anyway.** Three-for-three, the
+  manual pass is what caught the finding (`D316`, `D282`).
+
+
+---
+
+## Part C dig items added by the 2026-08-23 `industry_kr` run (**D317-KR ~ D321-KR**)
+
+> ⚠ **ID 3-grep(WRITE 시점)** — `RESEARCH.md` · `STANDING_VIEW*.md` · `SCENARIOS*.md` · `llm_outputs/2026-08-23/**` · `REPORT/**`
+> 에서 `D317`~`D321` 및 `D317-KR`~`D321-KR` **전부 0 hit**.
+> 현행 최고 **`D316`(US, 08-22)** / **`D308-KR`(KR, 08-22)** ⇒ **양쪽 시리즈를 모두 넘겨 317 부터 잡는다**(`D76` 충돌 클래스 방지).
+> ⚠ **쓰기 방식**: `'a'` 모드 append. **모든 처방은 긍정형** — "X 하지 마라"가 아니라 "Y 하라".
+
+| ID | dig | 이 런이 측정한 증거 |
+|---|---|---|
+| **`D317-KR`** | ★★★ **dig 를 올리기 전에 §6 에서 「방금 해소되어 나간 항목」을 확인한다.** | 이 런의 `SECTOR_DEEP_INDU §3-c` 가 두 OBV 구현의 부호 불일치를 **「이 런이 새로 잡은 계기 불일치」**로 적고 dig 후보로 올렸다. **어제(08-22) US 런이 이미 `C11` 로 해소해 §6 에서 내보낸 항목이고, 그 블록은 이 런이 HANDOVER 에서 읽은 스파인 안에 있었다**(`M796`: 스윕 = **레벨**(누적 OBV, `[-1]−[-21]`, ÷vol20, ±0.08) / `module_chart` = **변화율**(rolling20, `[-1]−[-10]`, ÷자기 레인지, ±0.15) ⇒ **방법이지 모순이 아니다**). ⇒ **이 런은 §5(회수 원장)는 읽었는데 §6 에서 빠져나간 항목은 확인하지 않았다.** ⚠ **`D306-KR`(08-22: *"dig 를 올리기 전에 이게 이미 결정된 사항인가 확인한다"*)과 2런 연속 같은 형태다.** ⇒ **긍정형 처방: HANDOVER 체크리스트에 「§6 에서 이번 주에 해소되어 나간 항목」을 §5 와 같은 비중으로 읽는 줄을 넣는다.** ★ **그리고 해소를 알고 나면 관측이 더 유용해진다** — 「레벨 양(+) ∧ 변화율 음(−)」은 **「매집 중이나 매집 속도가 꺾인다」**는 정보이고, **028050 이 정확히 그 형태다**(누적 +0.368 = 보드 상위, 20일 기울기 −17%) |
+| **`D318-KR`** | ★★★ **`top1_flips_sign` 는 「시총 1위」만 검사한다 — 부호·크기를 만드는 이름은 「기여도 1위」다.** | 금속(n=59, 총시총 81.3조) 기여도 분해: **010130 고려아연 21.37조(26.3%) × flow +0.883 = +0.2321 = `wflow` +0.2784 의 83.4%.** 고려아연을 빼면 `wflow` = **+0.0628 = 4.4배 축소.** **그런데 `top1` 은 005490 POSCO홀딩스(30.1%, flow +0.106)** 이고, 그것을 빼면 `ex-top1` 이 **+0.353 으로 오히려 올라가므로** 도구는 **「플리퍼 아님」**을 준다. ⇒ **가드가 검사하는 이름과 부호를 만드는 이름이 금속에서는 시총 1위와 2위로 갈린다.** ⇒ **긍정형 처방: `SECTOR_FLOW.json` 의 섹터 행에 `contrib1`(=`abs(mcap×flow)` 최대 이름) · `contrib1_share` · `wflow_ex_contrib1` 세 칸을 추가하고, ROTATION 은 `top1` 과 `contrib1` **둘 다** 검사한 뒤 승강한다.** (사람 승인: `scripts/sector_flow.py` 집계부) ⚠ **오늘 이 결함은 결론을 바꾸지 않았다** — ROTATION 이 다른 근거(이항검정 보정 후 p 1.000)로 이미 승격을 기각했다. **그러나 그것은 운이지 가드가 아니다** |
+| **`D319-KR`** | ★★ **`--futboard` 는 주말에 정지 화면을 돌려주면서 그 사실을 말하지 않는다.** | 오늘 `module_KIS --futboard` 출력이 **08-22 실행값과 문자 그대로 동일**하다 — 미니F 202609 **1,099.78 · 이론가 1,097.98 · 거래량 147,631 · 미결제 41,634**, 그리고 결정적으로 **`잔존일 21` 이 이틀 연속 같다.** **잔존일수는 캘린더 기반이라 주말에도 감소해야 한다** ⇒ **이 API 는 마지막 거래일(08-21) 스냅샷을 캐시처럼 되돌려준다.** ⇒ **「미결제가 쌓였다/풀렸다」류 서술을 주말 런이 쓰면 그것은 이틀 전 관측을 오늘 관측으로 세는 것이다.** ⇒ **긍정형 처방: 선물판을 인용할 때 「스냅샷 거래일자」를 같은 줄에 적고, `잔존일수`가 직전 런과 같으면 「정지」로 표시한 뒤 문맥으로만 쓴다.** ⚠ **`D16`(파일 개수를 일수로 세기)·`G6`(계측 적립 ETA) 와 같은 클래스** — **정지한 계기가 정지를 말하지 않는다** |
+| **`D320-KR`** | ★★★ **국내 통화정책 캘린더가 미배선인데, 이번 창의 최대 국내 바이너리가 바로 그것이다.** | `catalyst_calendar --days 10`(2026-08-23) 국내 항목 **0건**. 같은 창의 국내 코퍼스에는 **한국은행 금통위**가 있다 — 「증권사 **7곳 중 5곳**, 한은 **다음주** '기준금리 **연속인상**' 전망」(yonhap 08-21) · 「기준금리 전망 '혼조'…'7·8월 연속 인상' vs '숨 고르기'」(yonhap 08-23, 5건/3매체). **그리고 이 데스크는 그 날짜조차 모른다** ⇒ `[blank]`(추측 금지 규칙 이행). 부수 확인: `기준금리` 배율이 **0.67 → 0.95 → 1.00×** 로 **3런 연속 상승**(총 1,958건). ⇒ **`D288-KR` 5런 연속이고 오늘이 가장 비싼 날이다** — 캘린더의 국내 커버리지가 0인 상태에서 **국내 할인율을 정하는 회의가 창 안에 있다.** ⇒ **긍정형 처방: 한국은행이 연초에 공표하는 「통화정책방향 결정회의」 연간 일정을 상수 테이블로 등록하고 `catalyst_calendar` 가 KR 런에서 그것을 읽는다.** (사람 승인: `scripts/catalyst_calendar.py` 데이터 소스 추가) |
+| **`D321-KR`** | ★★★ **20일 누적 순매수 라벨은 방향 진술이 아니라 창 요약이다 — 오늘 4종에서 동시에 부호가 뒤집혔다.** | 앞반 10세션(07-24~08-06) → 뒤반 10세션(08-07~08-21), 외/기 만주: **005930 (−1,171.9/−643.7) → (+883.5/+351.3)** · **000660 (−392.9/+55.2) → (+96.5/−14.5)** · **006360 (−191.9/+229.8) → (+126.2/+189.4)** · 반대 방향으로 **316140 기 +264.1 → +5.4** · **028050 기 +159.5 → +13.9**. ⇒ **회수 `R94`·`R95` 두 건이 전부 이 형태다.** **`D273-KR`(합이 두 다리를 덮는다)의 시간축 자매** — 그 dig 는 「외국인 vs 기관」을 가르라 했고, 이것은 **「앞반 vs 뒤반」을 가르라**고 한다. ⇒ **긍정형 처방: `kr_live_shortlist` 와 §3b 행이 20일 누적 옆에 「뒤반 10세션」 열을 같이 출력하고, 하위 스테이지는 두 열이 부호가 다르면 그 사실을 문장에 적는다.** ⚠ **부활·킬 조건은 사후에 바꾸지 않는다** — 006360 의 원 조건은 20일 누적 부호였고 **그 기준으로는 오늘도 미발화**다. **분할은 다음 판정의 입력이지 이번 판정의 재해석이 아니다** |
+
+### 기존 dig 의 오늘 재현 (새 번호 안 붙임 — 카운트만 올린다)
+- **`D291-KR` / `D304-KR`**(`^KS11` 부분행 오염 · 미결정에도 가격표가 붙는다) — 🚨 **오늘 값이 스스로 채워졌다**(`Close` 6,912.95, 코드 변경 0줄) ⇒ `scored` **806** 복귀. **그러나 닫히지 않았다** — **고쳐진 것이 아니라 채워진 것**이고, 어제 측정된 비용(런 1회 전량)은 취소되지 않았다. **5런 만의 G0 첫 PASS.**
+- **`D293-KR`**(A급 축이 필터 뒤에 붙는다) — **11번째 재현**: 006360 · 375500 · 009830 이 스윕 🟡 vs `module_flow` 🟢. 원시 축은 같고 차이는 `inv`/`sh` 인자뿐.
+- **`D273-KR`**(진짜손 라벨이 핸드오프를 상쇄로 덮는다) — **10번째 재현**: 숏리스트 15종 중 라벨 `✅진짜손` **11**, **두 다리 양은 5**(192820 은 외국인 +0.4만 = 사실상 0 ⇒ 실질 5).
+- **`D281-KR`**(2글자 한글 텀은 trigram 색인에서 구조적으로 0) — **11런째.** `이란`·`제재`·`관세`·`유가`·`분할` 전부 3글자+ 대체어(`경제제재`·`보복관세`·`국제유가`·`인적분할`)로 우회. **회피지 수리가 아니다.**
+- **`D288-KR`**(catalyst_calendar 가 더하지도 빼지도 못한다) — **5런 연속, 오늘도 양방향**: **08-24 대이란 제재 · 08-28 워시 잭슨홀 기조연설 · 한은 금통위** 셋 다 미탑재이고, **정산된 `Hormuz open statement` undated 행은 21런째 안 지워진다.** ★ **단 오늘은 `R93` 이후의 규칙을 지켰다** — 「캘린더가 놓쳤다」를 쓰기 전에 **본문 날짜 문자열을 먼저 읽었고 세 건 다 확인됐다.**
+- **`D294-KR`**(회사·개념 텀은 어릴 수 없어 🟢FRESH 가 못 뜬다) — **오늘 22텀 측정에서 나이 14일 미만 0개**(최연소 `자사주소각` **48일**, 그다음 `바이백` 65 · `경영권분쟁` 69 · `최고가격` 71 · `철강업` 75 · `보복관세` 82, 나머지 16개 ≥90). ⇒ **F1 = 20런 연속 0 이고, 오늘도 반증 프로브(삼성전자 d7 **1,369** · 22텀이 0.00×~42.86× 로 분화)로 그것이 산술임을 확정했다.**
+- **`D305-KR`**(안티시그널·부활조건에 지평을 적어라) — ★ **오늘 효과를 냈다**: `M-90` ③ 이 어제 「5세션 누적」으로 지평을 명시해 등록됐고, 그 덕에 오늘 **「같은 봉이므로 미도래」**라고 명확히 말할 수 있었다. 지평이 없었으면 또 `AMBIGUOUS` 였다.
+- **`D306-KR` 정정판**(고쳐지지 않은 것 vs 고치지 않기로 한 것) — ⚠ **오늘 `D317-KR` 로 2런 연속 재현.**
+- **`D307`**(같은 정착봉을 시각 다르게 뽑으면 값이 다르다) — ★ **재현이자 해소**: `BZ=F` 2026-08-21 정착이 어제 아침 **93.870**, 어제 밤 US 데스크 **94.390**, **오늘 재조회 94.390** ⇒ **이른 조회가 미수정본을 본다**는 형태로 좁혀졌다. **두 값 모두 `S95`/`P69` 의 93.00 위라 평결은 안 움직였다 — 이번에는.**
+- **`D309`**(FRED 는 주말에 게시하지 않는다) — **`S102` 에 대한 4번째 독립 조회에서도 08-20 고정.** 추론이 아니라 **4회 재현된 관측**.
+- **`D74`**(장중 오염) — **오늘 `COMPANY_SCOREBOARD` 에서 재현**: 행이 028050 의 08-21 을 **−5.2%** 로 적었으나 **정착은 −6.035%**(48,050 → 45,150). **행을 덮어쓰지 않고 `BET_SHEET §1-c` 에 정정을 붙였다.** ⇒ **긍정형 처방(D74 에 흡수): 스코어보드 행의 가격 레그에 「정착/장중」 라벨을 같은 줄에 적는다.**
+- **`module_industry_map` 과다매칭** — **3런 연속.** `아연` 시드에서 **유유제약·종근당홀딩스**(비타민 아연)가 hit=1 상위, `철강` 시드에서 **전 corp 가 hit=1 동점** → 티커 알파벳순, `아연 제련 비철금속` 3어 시드는 **corp pool 0건**. **밸류체인은 수작업 추론으로 만들었고 그 사실을 파일에 적었다.**
+- **`D303-KR`**(000660 파생상품거래손실 공시 미개봉) — 🚨 **3런 연속 미개봉.** HANDOVER 가 오늘의 dig 1순위로 올렸는데 **DEEP 슬롯이 INDU/MATR 로 갔고 000660 은 어느 슬롯에도 없었다.** ⇒ **다음 런은 이것을 슬롯 배정 전에 처리하거나, 왜 못 하는지 구조적 사유를 적어야 한다**(3번째 이월은 「신중」이 아니라 소멸이다).
+
+### 이 런의 방법 관측 (규칙 후보 — 아직 트리거로 승격하지 않음)
+- ★★★ **「창을 가르면 부호가 뒤집히는가」를 20일짜리 모든 누적 지표에 대보라.** 오늘 4종에서 동시에 걸렸고 **회수 2건이 전부 그 형태**였다. 후보 규칙: **누적 지표를 방향 진술로 쓰기 전에 반드시 반으로 갈라 두 반쪽의 부호를 확인한다. 두 반쪽의 부호가 다르면 누적값은 「요약」이지 「방향」이 아니다.**
+- ★★★ **회사 이름과 매출 구성이 다르면 매출 구성이 이긴다.** 「고려아연」의 FY2025 매출 **51.5%가 금+은**이고 **증가분의 93.9%가 그 둘**이다. 후보 규칙: **섹터 라벨의 최대 기여자에 대해서는 사업보고서 「주요 제품」 표를 반드시 열고, 라벨과 매출 구성이 어긋나면 라벨을 쓰지 않는다.** ⚠ 오늘 이 확인이 `EVENT_ALPHA` 카드 1(캐나다 철강 관세)의 노출 매핑을 반쪽으로 만들었다.
+- ★★ **채점 0건을 정보로 만들려면 「전수 확인했다」가 같이 적혀야 한다.** *"오늘 정산할 게 없었다"* 와 *"오늘 정산 대상을 확인하지 않았다"* 는 **같은 모양으로 보인다.** ⇒ 이 런은 스파인 로그에 **KR 브래킷 전수 정산일 표**를 붙였다. 후보 규칙: **채점 0인 런은 전수 표를 붙인다.**
+- ★★ **정지한 계기는 정지를 말하지 않는다 — 「변하지 않는 필드」를 찾아라.** 오늘 `--futboard` 는 값이 같아서가 아니라 **`잔존일수`가 감소하지 않아서** 정지로 판명됐다. 후보 규칙: **캐시 가능성이 있는 API 는 「시간이 지나면 반드시 변해야 하는 필드」를 하나 정해 놓고 그것부터 본다.**
+- ★ **자기 계기의 해소 이력을 모르면 같은 발견을 두 번 한다.** `D317-KR` 이 그 사례이고, **`D306-KR` 과 2런 연속**이다. 후보 규칙: **HANDOVER 가 §6 에서 「나간 항목」을 §5(들어온 항목)와 같은 비중으로 읽는다.**
+
+
+---
+
+## Part C dig items added by the 2026-08-23 `industry_US` run (**`D322` ~ `D329`**)
+
+> ⚠ **ID 3-grep at WRITE time** across `handoff/*.md`, `llm_outputs/**`, `REPORT/**`: `D322`–`D329`
+> returned **0 hits** in BOTH the suffixed and unsuffixed series.
+> 🚨 **The first attempt COLLIDED and that is recorded rather than silently renumbered.** This run
+> first drafted its HANDOVER digs as `D318`/`D319`; the post-write grep found **`D318-KR`** and
+> **`D319-KR`** already in this file, written by the `industry_kr` run **the same morning (~14 hours
+> earlier)** as part of a `D317-KR`–`D321-KR` block whose own note says it grepped `D317`–`D321`
+> unsuffixed and found 0 hits — **true when it was written.** ⇒ **The reservation is not atomic and
+> neither desk can see the other's pending write. Two desks reserving the same integer on one day,
+> one suffixed and one not, is exactly the `D76` collision class the ID rule exists to prevent.**
+> Numbers were taken beyond **both** series.
+
+| ID | Dig | Evidence (measured this run) |
+|---|---|---|
+| **`D322`** | 🚨 **A partial-coverage tag layer is biased OUTWARD, not upward — so no one-directional correction can repair it, and four persisted files carry the defect uncorrected.** | Two sweeps on one identical price frame, **both persisted** (the 08-22 run persisted only one, which is why its conclusion was unfalsifiable for a day): **all 299 `flow_score`s and all 11 sector `wflow`s identical; 6 tags differ — `MRVL`/`MA`/`CVX` 🟢→🟡, `MS`/`JPM` 🔴→🟡, `WMT` 🟡→🔴 — three up, three down, five of six AWAY from neutral.** Run 1 carried one extra 🔴 as well as three extra 🟢 (72 vs 71). The 08-22 remedy ("discount the greens") would have left `JPM` and `MS` mis-tagged. **Persisted `vel_coverage`: 08-18 16.72% · 08-19 17.06% · 08-20 16.39% · 08-21 16.72% · 08-22 0.0% · 08-23 0.0%.** **Positive-form remedy: derive `breadth`/`green`/`red` from the score column, which never sees `vel` — or pass the run-level axis set into `flow_tag` so the tag layer and the score layer share one axis count.** See also `R96` |
+| **`D323`** | 🚨 **The instrument meant to answer "does this desk have selection skill" gains zero information on 2 of every 7 days, and its own ETA line does not say so.** | `exposure_rule.py show` prints *"the aim is to raise n by 1 every day; at n≈20 you may ask about the sign"* — but **n has been 11 for three calendar days** (ledger 38 rows, last row **2026-08-21**) because accrual is keyed to **sessions** while the sentence is written in **calendar days**. Same failure shape as **`D16`** (the snapshot daemon counted files as days and reported *"35 more days"* against a true 108). **Positive-form remedy: state the ETA in CALENDAR days using the trading-day ratio** — n=11 → n≈20 is **~12 calendar days, not 9** |
+| **`D324`** | 🚨🚨 **`module_news_data fts search` MANUFACTURES ZEROS: it wraps the entire user string in double quotes, so a bare boolean becomes a phrase search and returns 0 silently.** | Isolated with a control, this run: `Micron AND CXMT` → **0** · `"Micron" AND "CXMT"` → **27** · `Micron` alone → **562**. The output line shows the cause verbatim: `MATCH: ("Micron AND CXMT")`. **It fired FOUR times inside a single stage** (`Micron AND CXMT`, `Anthropic AND OpenAI AND IPO` → **108** when quoted, `Canada AND tariffs AND lumber` → **36**, `Broadcom AND Google` → **126** as `"Broadcom" AND "Marvell"`) and would have produced four fabricated silences — **one of them on a HELD name (`AVGO`), on the day its customer dual-sourced to a competitor.** This is the **`M68`** class that the MACRO EXIT CHECK already names. **Positive-form remedy: quote each term individually at the call site, and have the CLI reject an unquoted multi-token expression containing `AND`/`OR`/`NOT` rather than silently phrase-matching it** |
+| **`D325`** | 🚨 **`breadth` in `SECTOR_FLOW.json` has never measured breadth — it is the 🟢 rate, and 🟢 is gated on `vol_surge`.** | Source, verbatim, `scripts/sector_flow.py:342`: `"breadth": round(greens / len(names), 2)`. **The six sectors printing `breadth 0.000` span true participation (`OBV 매집 ∧ rs20>0`)/n from 66.7% to 0.0%**: COMM **66.7%** (8/12, the board's highest) · DISC **39.3%** (11/28) · ENRG **37.5%** (6/16) · RE 16.7% · INDU 16.0% · **UTIL 0.0%** (0/15, the only sector where the two agree). ⚠ **This run's own ROTATION and SWEEP quoted it wrongly before DEEP-HLTH read the source.** **Positive-form remedy: publish `participation` = (`OBV 매집` ∧ `rs20>0`)/n as a separate field, and rename `breadth` to `green_rate` so the name states what it counts** |
+| **`D326`** | 🚨 **A FRED monthly series has a hole, and a positional YoY silently overstates inflation.** | `CPIAUCSL`, `CPILFESL` and `UNRATE` are **missing `2025-10-01`** (the series jumps 2025-09-01 → 2025-11-01). A positional `obs[-13]` YoY returns **+3.54% headline / +2.79% core**; the **date-matched** values are **+3.30% / +2.47%** — **0.24pp and 0.32pp too high, in the hawkish direction.** Caught only because the prior run's report carried the correct figures and the two disagreed. **Positive-form remedy: match the DATE 12 months back; if that month is absent, state the gap and name the substitute base on the same line as the figure** |
+| **`D327`** | ⚠ **A COT long/short LABEL crosses zero while the statistic it is computed from does not.** | `us_flow.py --cot` prints **🟢 크라우디드-롱 (crowded long)** for the S&P 500 e-mini on a net-spec of **−10,560, which is net SHORT**. The percentile (84th) is computed on the level's own 1-year range, and if that range is entirely negative then "84th percentile" means **"least short of the year"**, not "long". A reader taking the label at face value inverts the position. **`D3` class (signed vs unsigned).** **Positive-form remedy: print the net level beside the percentile, and suppress the long/short label whenever the 1-year range does not straddle zero** |
+| **`D328`** | ⚠ **Two narrative instruments fail on the same event in two different ways — and both failures are quantifiable.** | (a) **`theme-age` velocity is uninformative on a large base**: `tariff` read **⚪ECHO 1.11×** on a **9,712-article** 90-day base on the day its cluster ran **60 articles / 24 outlets**, the day's largest by 3×. (b) **Weekend window-ends make every FADING/ENDED label unreadable**: per-day counts **08-21 766 → 08-22 280 → 08-23 142** (34% and 17% of a weekday), and the tariff thread was labelled FADING on a curve of **11 → 24 → 11**; the same artifact labelled this run's own headline story (`NVDA` price hikes) FADING at 7→2 while a direct query found **8 outlets with the latest on 08-23**. Combined with **`D316`** (no trade term in the `drift_watch` kill-switch set), **the desk has THREE independent ways to miss one event.** **Positive-form remedy: print the outlet-count cluster beside the velocity ratio whenever the 90-day base exceeds ~2,000, and have `thread` print the per-day denominator ratio beside each label and suppress FADING when the terminal day is below ~50% of the window median** |
+| **`D329`** | 🚨 **`cycle_registry.json` cannot distinguish "sells the accelerator" from "co-designs someone else's", and the two moved 35pp apart.** | The book files `NVDA`, `ANET` and `AVGO` under one theme string (`AI-compute-EPICENTER`) and `cycle_exposure.py` reports them as **one cycle at 16.52%**. **`risk_units` at `--days` 250/500/750 puts `NVDA` as a SINGLETON in all three windows and NEVER groups it with `AVGO`** (`ANET`+`AVGO` merge at 500d and 750d) — one of only two `G4`-robust groupings this desk owns. Measured spreads: `AVGO`↔`MRVL` rs60 **32.0pp**, `AVGO`↔`ANET` **34.9pp**. ⇒ **`label_split_across_units` — the theme cap is currently TOO TIGHT on this book.** **Positive-form remedy: add a custom-silicon / merchant-ASIC row to `cycle_registry.json` and split the book's theme label accordingly** (human approval; the optical/interconnect row of `D250`/`M731` is still missing too) |
+
+### Method observations from this run (rule candidates — not promoted to triggers)
+- ★ **An audit that can only convict its instrument is not an audit.** This run's calendar audit
+  **exonerated** `catalyst_calendar` on `NVDA` 08-26 (against `yfinance`'s 08-27, using two news bodies)
+  and **convicted** it on `MRVL` 08-27 and Jackson Hole. `R93` was filed four days earlier because the
+  desk convicted a calendar that was right — the audit is credible now only because it was capable of
+  clearing it.
+- ★ **"Nothing was due" and "nobody checked" look identical in an output.** The exhaustive settle table
+  (adopted from the KR desk's 08-23 log) is the only device that separates them. **A run scoring zero
+  scenarios should be required to print it**, and this run printed it in both `HANDOVER §2-a` and the
+  spine's scoring log.
+- ★ **A one-directional correction to a two-directional bias is worse than no correction** — it converts
+  a symmetric error into an asymmetric one (`R96`).
+- ★★ **A weekend run is a different instrument, not a degraded one — and this run measured what it is
+  good FOR.** It cannot score FRED rows (`D309`, 5 replications), gains no exposure-ledger observation
+  (`D323`), and its sweep is a byte-identical repeat. **But three of this run's four largest findings
+  came from things that do not need a new bar**: a 10-Q read (`M831`/`M833`), a controlled two-run
+  instrument experiment (`R96`), and an option-chain read (`D295` discharged). **The desk's last three
+  genuine instrument findings all came from closed sessions.**
+- ★ **A retraction that is never independently re-confirmed is just a second assertion.** `R93` was
+  re-verified today from **body** co-mentions (22 hits on "August 27", 20 on "August 29") rather than
+  re-quoted. **`D311`'s remedy is cheap and should be run on every retraction that killed a date.**
+
+---
+
+## Part C dig items added by the 2026-08-24 `industry_kr` run (**D330-KR ~ D335-KR**)
+
+> ⚠ **ID 3-grep(WRITE 시점)** — `RESEARCH.md` · `STANDING_VIEW*.md` · `SCENARIOS*.md` · `llm_outputs/**` · `REPORT/**`
+> 에서 `D330`~`D335` 및 `D330-KR`~`D335-KR` **전부 0 hit**.
+> 현행 최고 **`D329`(US, 08-23)** / **`D321-KR`(KR, 08-23)** ⇒ **양쪽 시리즈를 모두 넘겨 330 부터 잡는다**(`D76` 충돌 클래스 방지).
+> ⚠ **쓰기 방식**: `'a'` 모드 append. **모든 처방은 긍정형** — "X 하지 마라"가 아니라 "Y 하라".
+
+| ID | dig | 이 런이 측정한 증거 |
+|---|---|---|
+| **`D330-KR`** | 🚨🚨 **HANDOVER 는 `REPORT/COMPANY_SCOREBOARD.md` 를 목록이 아니라 본문으로 연다.** | 오늘 `HANDOVER §★③` · `MACRO §D-4` · `EVENT_ALPHA 카드 1` 이 000660 의 08-14 파생손실 공시를 **이 런의 최초 발견**으로 적었다(`D303-KR` 4런 만에 종료). **`BET §0-a` 가 스코어보드를 여는 순간 반증됐다** — `company_batch`(08-21)의 000660 행이 이미 읽었고 **더 깊었다**(Clean-Up Call 2026-05 · 잔여 73주 · 주석24 3중 교차 · 거래상대방 `unknown` 명시 · *"3.98조짜리 항목에 뉴스축 0건"*). **HANDOVER 는 `module_report_tags show` 로 그 파일의 존재를 봤고 열지 않았다.** ⇒ **회수 `R97`.** ⚠ **`D306-KR`(08-22)·`D317-KR`(08-23)과 3런 연속 같은 클래스**이고, 이번엔 「§6 에서 나간 항목」이 아니라 **「`REPORT/` 에 있는 완성 파일」**이다. ⇒ **긍정형 처방: `carryover.md` §2(기계 원장 교차조회)에 「`REPORT/COMPANY_SCOREBOARD.md` 가 존재하면 본문을 읽고, 오늘 후보와 겹치는 행을 `HANDOVER.md` 에 인용한다」 한 줄을 넣는다.** ★ **부수 이득이 즉시 있었다** — 같은 파일이 `EVENT_ALPHA` 카드 1 의 크기도 정정했다(자사주 순효과 **−0.88%**, −3.30% 아님) |
+| **`D331-KR`** | 🚨🚨 **KR trigram 색인에서 불리언 연산자 `AND`/`OR` 가 결과를 0으로 만든다 — 그리고 `--scope foreign` 에서는 작동한다.** | 컨트롤 분리(`--days 4 --scope domestic`): `"엔비디아"` **169건** · `"메모리"` **227건** · **`"엔비디아" AND "메모리"` 0건** · `"엔비디아" AND "서버"` **0건** · `엔비디아 AND 메모리` 0 · `엔비디아 OR 메모리` 0 · `엔비디아 메모리`(맨 토큰) 0(=`D324`) · ✅ **`"엔비디아" "메모리"`(인용 병치, 연산자 없음) 42건.** **같은 도구·같은 런의 `--scope foreign` 에서는 `AND` 가 정상**: `"compensation" AND "Iran"` **52** · `"reopen" AND "Hormuz"` **164** · `"lift" AND "blockade"` **50**. ⇒ **`D324` 의 처방(「각 텀을 개별 인용부호로 감싸라」)은 US 색인에서만 유효하고 KR 색인에서는 새 위조 0을 만든다.** **즉시 비용 실측**: `"자사주" "소각"` **128건**인데 단일텀 `자사주소각` 은 **총 1건 · 0.00× 🔴** ⇒ **MACRO §D-2 ③ 의 「소각 서사는 뉴스에 없고 공시에만 있다」가 같은 런에서 반증**됐고, 그 병치 검색이 **08-20 KOSPI +5.89% 의 원인까지 특정**했다(`M848`). ⇒ **긍정형 처방: KR 본문 교차검색은 `"A" "B"` 인용 병치 형태로 표준화하고, CLI 가 `--scope domestic` 에서 `AND`/`OR` 토큰을 만나면 병치형으로 자동 재작성하거나 거부한다.** (사람 승인: `module_news_data` 검색 질의 빌더) |
+| **`D332-KR`** | ★★★ **`sector_flow.py` 에 `participation` 필드를 신설하고 `breadth` 를 `green_rate` 로 개명한다** *(= `D325` 의 KR 이식)* | 소스 직독: `scripts/sector_flow.py:342` = `"breadth": round(greens / len(names), 2)` · `module_flow/_synthesize.py:16` = 🟢 는 **`vol_surge >= 1.2`** 를 지난다. **806종 전수 재집계: 진짜 참여율(`OBV 매집` ∧ `rs20>0`) 36.35%(293종) vs `breadth` 9.93%(80종) = 괴리 +26.4pp.** 순위 이동: **건설 0.0% → 42.3%(공동꼴찌 → 7위/24)** · **제약 2.1% → 45.8%(22위 → 5위)** · 종이목재 5.9% → 41.2%(18위 → 9위). **두 지표가 합의하는 칸은 넷뿐**(보험 66.7/33.3 · 전기가스 50.0/30.0 · 운송창고 8.3/4.2 · 전기전자 18.2/1.5). ⇒ **`R91`(「건설에는 돈이 없다」, 08-22 회수)의 회수 사유가 계기 결함으로 특정됐다.** ⚠ **문지기가 `ic_ledger`(KR) 가 두 지평 Bonferroni 로 부호 **음(−)**을 잡은 축(`vol_surge` h=1 t −3.86/n_eff 34.0 · h=5 −3.38/n_eff 5.4)이라는 것이 이 결함의 무게다.** ⇒ **긍정형 처방: 집계부에 `participation` 을 추가 출력하고 `breadth` 를 `green_rate` 로 개명해 이름이 세는 것을 말하게 한다.** (사람 승인) ★ **동시에 `C15` 로 §6 에 등록** — 대체품의 두 축도 약하다(`obv_norm` h=5 t −2.08 Bonferroni 미통과 · `rs20` h=5 −1.49 구분 불가) |
+| **`D333-KR`** | ★★ **`module_macro_us` 가 시리즈마다 「마지막 관측일」을 출력하고, 파생 계산은 공통 최신일로 내린다.** | 오늘 두 경로 독립 조회(모듈 + FRED CSV 직접): **`T10YIE` 2.34 와 `RRPONTSYD` 0.200 은 08-21 이 있고, `DGS2`·`DGS10`·`DGS30`·`DFII10`·`BAMLH0A0HYM2`·`BAMLC0A0CM`·`VIXCLS`·`DFF` 는 08-20 이 마지막**이다(월요일 관측). ⇒ **`D309`(「FRED 는 주말에 게시 안 한다」)는 반증이 아니라 좁혀졌다 — 시리즈별 게시 래그이고 H.15 계열이 `T10YIE` 보다 최소 1영업일 늦다.** 🚨 **그리고 그 래그가 계산식 하나를 조용히 깬다**: `real_10y + breakeven = 명목` 을 `DFII10`(08-20) 2.35 + `T10YIE`(08-21) 2.34 = 4.69 로 쓰면 `DGS10`(08-20) 4.69 와 **우연히 맞는다**(08-20·08-21 breakeven 이 둘 다 2.34). ⇒ **긍정형 처방: ① 각 시리즈의 `last_obs_date` 를 출력에 싣는다 ② 두 시리즈를 합/차로 쓰는 계산은 **공통 최신일**로 내리고 그 날짜를 결과와 같은 줄에 적는다 ③ 브래킷 등록 시 그 시리즈의 관측 래그를 관측면에 함께 적는다**(`S102` 가 6런째 미도래인 진짜 사유) |
+| **`D334-KR`** | ★★ **KR 런의 `brief` 는 `--singles-nb 5` 를 기본으로 쓴다.** | 오늘 1매체 층 **178건 중 24건(13.5%)만 표시**됐고(`nb ≤ 10.0` 컷), **그 층에 오늘의 1위 재료가 있었다** — **nb 22.5 「삼성ㆍSK, AI 호황 과실 나눈다…역대급 주주환원」**(같은 날 DART 000660 자사주 3건과 같은 대상) · **nb 14.7 「美·獨 경쟁사 수주는 급증하는데… 성장세 한풀 꺾인 K-방산」**(같은 날 몸통의 「한화, 美 방산 자회사 4150억 투입」과 정면 충돌) · nb 19.2 「은행들 최고 年 12% 적금」(NIM 역풍 후보). **총 미열람 최소 181건**(1매체 154 + 비시장 18 + 하위사건 5). ⇒ **긍정형 처방: `--singles-nb 5` 를 KR 기본값으로 하고, 그래도 남는 미열람 수를 리포트에 숫자로 적는다.** ⚠ **오늘 이 런은 그 154건을 못 본 채로 MACRO 를 썼다** |
+| **`D335-KR`** | ★ **`thread` 가 상위 N개만 출력하는 사실을 출력에 적고, KR 런은 `brief` 몸통과 교차한다.** | 오늘 `thread --days 7 --scope domestic` 이 **「살아있는 34」**라 적고 **상위 11개만 출력**했다 ⇒ **23개는 이 런이 보지 못했다.** 🚨 **그리고 그 사각에 오늘 최대 서사 중 하나가 있었다** — **캐리다 50% 관세·보복 스레드는 `thread` 상위에 없고 `brief` 몸통에 11건/3매체로 있었다**(`무역협상` 49.78×, 보드 1위 배율). ⇒ **두 도구가 같은 날 다르게 랭크한다.** ⇒ **긍정형 처방: ① `thread` 가 「출력 N / 살아있는 M」을 헤더에 적는다 ② EVENT_ALPHA 의 스레드 선정은 `thread` 상위 ∪ `brief` 몸통 상위를 합집합으로 받는다.** ⚠ **`D328`(주말 분모가 FADING 라벨을 못 읽게 한다)의 오늘자 재현도 같이 기록**: 일별 분모 08-24 **62건 = 창 중앙값 406의 15%**(09시 실행) ⇒ **오늘 모든 `FADING`/`ENDED` 라벨을 판독 불가로 처리했고, 라벨로 배제도 채택도 하지 않았다** |
+
+### 기존 dig 의 오늘 재현 (새 번호 안 붙임 — 카운트만 올린다)
+- **`D303-KR`** — ✅ **닫힘.** 000660 파생손실 공시 본문 실독. ⚠ **단, 「이 런이 처음 열었다」는 부분은 `R97` 로 회수됐다**(`D330-KR`).
+- **`D324`**(fts 가 위조 0을 만든다) — **KR 에서 재현되고 형태가 다르다** ⇒ 새 번호 `D331-KR`. **그리고 이 런이 직접 밟았다**(UAL 노트에 정정 append).
+- **`D325`**(`breadth` 는 폭이 아니다) — **KR 이식 확정** ⇒ `D332-KR`. **괴리가 US(66.7~0.0% 스팬)보다 크다.**
+- **`D309`**(FRED 주말 미게시) — **정정** ⇒ `D333-KR`. **5회 관측은 주말이라 구분 불가였고 월요일 1회가 구분했다.**
+- **`D281-KR`**(2글자 한글 텀은 trigram 에서 구조적 0) — **12런째.** 오늘도 45텀 전부 3글자+ 로 우회. **`원자력발전` 7일 0건은 6글자라 아티팩트가 아니지만, 국내 표기가 `원전`(2글자)이라 「부재」로 읽을 권한은 없다.**
+- **`D288-KR`**(catalyst_calendar 가 더하지도 빼지도 못한다) — **6런 연속, 오늘도 양방향**: **08-24 미 대이란 제재(D−0) · ~08-27 금통위 · 08-28 워시 잭슨홀** 셋 다 미탑재이고, **정산된 `Hormuz open statement` undated 행은 22런째 안 지워진다.** ★ **그러나 `R93` 이후 규칙은 지켰다** — 「캘린더가 놓쳤다」를 쓰기 전에 본문 날짜 문자열을 먼저 읽었고 셋 다 확인했다(잭슨홀 08-28 은 오늘 **4매체**로 확증, 어제는 1매체).
+- **`D293-KR`**(A급 축이 필터 뒤에 붙는다) — **12번째 재현 상태로 캐리.** ⚠ **오늘은 `vel=None` 이라 두 계기의 차이가 `inv`/`sh` 로 순수 분리되는 가장 깨끗한 조건이었는데, DEEP 슬롯이 INDU/COMM 으로 가서 측정하지 못했다.**
+- **`D273-KR`**(진짜손 라벨이 두 다리를 합으로 덮는다) — **11번째 재현**: 숏리스트 14종 중 라벨 `✅진짜손` **10**, **두 다리 양은 5**(192820 외국인 +1만 ≈ 0 ⇒ 실질 **4**). **최대 괴리는 078930 GS**(외 −142만 vs 기 +170만, 합 +28만이라 ✅ 가 붙는다).
+- **`D318-KR`**(`top1_flips_sign` 가 시총 1위만 검사한다) — **재현, 미해소.** 금속은 **플리퍼가 아닌데**(top1 POSCO 30.1%, ex-top1 +0.353 > wflow +0.278) **부호의 83.4%가 시총 2위 010130 에서 나온다.**
+- **`D319-KR`**(`--futboard` 정지 화면) — ✅ **처방이 하루 만에 효과.** 잔존일 **21(이틀 정지) → 18(오늘)** 로 3일 감소 ⇒ 살아 있는 스냅샷 확인. **미결제 Δ 는 비교 상대가 정지 화면이라 인용하지 않았다.**
+- **`D320-KR`**(국내 통화정책 캘린더 미배선) — **재현, 그리고 오늘이 가장 비싼 날이었다.** 금통위가 **창 안(~08-27)** 인데 캘린더 국내 항목 **0건**. 날짜는 **`[blank]` → `~08-27 [websearch 추정 · 1차출처 미확증]`** 로만 좁혔다.
+- **`D321-KR`**(20일 누적은 방향이 아니라 창 요약) — **이행됨**: 006360 부활조건을 **원 기준(20일 누적 부호)으로만** 판정하고 사후 변경하지 않았다.
+- **`D306-KR`**(KOSDAQ 배제는 사람 결정, 비용만 계량) — **오늘 비용이 두 번 나왔다**: EVENT_ALPHA 카드 2 의 전공정 장비층(240810·036930)과 DEEP COMM 의 IT 서비스 지도가 **둘 다 구조적으로 반쪽**이다.
+- **`D291-KR` / `D304-KR`**(`^KS11` 부분행 오염) — 🚨 **닫히지 않았다는 새 증거.** **같은 `asof 2026-08-18` 을 08-18 런과 08-20 런이 건설 참여 12 vs 14 로 다르게 냈다**(`M850`). ⇒ **±2종은 계기 오차로 본다.**
+- **`D74`**(장중 오염) — **오늘 네 번 걸렸다**: `module_chart 028050` 기울기 −34%(09:3x, 미완성 봉 포함) · `--futboard` 09:0x · `KRW=X`·`BZ=F` 미정착 · 라이브 시세 전부. **전건 `[미정착]` 태그로 운반했고, 028050 관측점은 정착봉으로만 채점했다.**
+- **`module_industry_map` 과다매칭** — **4런 연속.** 두 DEEP 파일 모두 **밸류체인을 수작업 추론으로 만들고 그 사실을 파일에 적었다.** `chain-hop` 은 KR 미지원 ⇒ **미명명 수혜자 발굴 0건.**
+
+### 이 런의 방법 관측 (규칙 후보 — 아직 트리거로 승격하지 않음)
+- ★★★ **「처방이 옮겨오면 그 처방도 시장을 건넌다는 것을 검정하라.」** 오늘 `D324` 의 처방(개별 인용부호)을 KR 에 그대로 적용했더니 **새 위조 0**이 나왔다(`D331-KR`). 후보 규칙: **다른 시장 데스크의 계기 처방을 승계할 때, 그 처방 자체를 이 시장의 컨트롤로 한 번 돌린 뒤 쓴다.** 오늘 컨트롤 8개(단일텀 2 · 연산자형 4 · 병치형 1 · 맨토큰 1)가 그 검정이었다.
+- ★★★ **「지표를 갈아탈 때, 새 지표의 축이 원장에서 어디에 있는지 먼저 보라.」** `breadth` → `participation` 교체는 **부호가 음으로 유의한 축을 빼고 「구분 불가」 축 둘로 갈아타는 것**일 수 있다(`C15`). 후보 규칙: **대체 지표를 제안할 때 그 구성 축의 `ic_ledger` 셀(`n_eff`·`t`·`필요n`)을 같은 줄에 적는다.** 오늘 ROTATION 이 승격을 기각한 근거가 정확히 이것이다.
+- ★★ **「누적/집계 지표는 수준이 아니라 명단으로 인용하라.」** 건설 participation 은 4창에서 **11~19**로 흔들렸지만 **9종이 내내 통과**했고(안정성 0.429), **이탈 트리거는 `rs20` −0.4pp** 였다. 후보 규칙: **비율 지표를 인용할 때 그 비율을 만든 이름의 교집합을 같이 적는다 — 비율은 흔들리고 명단은 덜 흔들린다.**
+- ★★ **「정산일이 오늘인 행은 장중 런의 채점 대상이 아니라 인계 대상이다.」** 오늘 `S74`(뉴스 관측면, 08-24 종료 미도래)와 011200 스코어보드 08-24 관측점(`BZ=F` 08-24 정착 필요)이 **같은 이유로 미도래**였다. 후보 규칙: **관측면이 「그 날의 종료」에 걸린 행은 다음 런이 채점하고, 장중 값으로 채점하지 않는다.**
+- ★ **「테제가 이미 컨센서스인가」는 라이브 조회 한 번으로 🟢 를 🟡 로 내린다.** 오늘 ALPHA 가 보험 2종에 대해 그 질문을 던져 **한국경제 08-19 「3개월 새 30% 뛰었다」 · 현대해상 3개월 +28.7% · `손해보험` 1.89× ⚪ECHO** 를 받았다. 후보 규칙: **🟢 후보마다 「이 테제가 지난 3개월 매체에 이미 있었나」를 한 번 묻는다** — 이 데스크의 라이브 조회는 최근 여러 런에서 생략돼 왔다.
+- ★ **「원장 클래스가 없으면 지어내지 말고 기록하라.」** 047040 은 내용상 「펀더멘털 훼손」인데 원장 12클래스에 그 칸이 없어 `I.테제반증` 으로 적재하고 **그 사실을 `why` 에 적었다.** 후보 규칙: **클래스 미스매치는 조용히 근사하지 말고 `why` 첫 줄에 적는다** — 나중에 클래스 표를 고칠 근거가 그것뿐이다.
+
+
+---
+
+## Part C dig items added by the 2026-08-24 `industry_US` run (**`D336` ~ `D346`**)
+
+> ⚠ **Write mode append-only** (`D165` pre-commitment). Nothing above this line was read into memory
+> and rewritten.
+> ⚠ **ID 3-grep at WRITE time** across `handoff/*.md` · `llm_outputs/**` · `REPORT/**`:
+> `D336`–`D346` **0 hit** in all three trees. Current highest **`D335-KR`** (2026-08-24 `industry_kr`)
+> / **`D329`** (2026-08-23 `industry_US`) ⇒ the US series resumes at **336**, past both.
+> ⚠ **Language: English** — the US desk's documented practice.
+
+| # | Finding | Positive-form remedy |
+|---|---|---|
+| **`D336`** | 🚨🚨 **`ic_ledger.py` defaults `--market kr` on ALL THREE subcommands, and `carryover.md` §3e prints the commands WITHOUT the flag — so a US desk that follows the protocol literally is handed the KR ledger, with only a header line to notice it by.** Measured cost: the 2026-08-23 `industry_US` run concluded *"the US desk has **no equivalent measurement** and therefore no verdict"* while **220 US rows sat in the same file**, and reported *"729 rows, `market=kr`"* when 729 was the whole file (509 kr + 220 us). ⇒ **`R98`.** The KR number it deferred to has **the opposite sign** (`M854`) | **① Make `--market` a REQUIRED argument on `log`/`score`/`show` (no default). ② `carryover.md` §3e writes `--market {us\|kr}` into all three command lines. ③ Print `rows(market) / rows(file)` in the header so a mismatch is arithmetic, not typographic** (human approval: CLI signature) |
+| **`D337`** | 🚨 **`R97`'s remedy is scoped to one filename, and the same failure class recurred ONE RUN LATER on a different object.** `D330-KR` prescribed *"open `COMPANY_SCOREBOARD.md`'s body."* Today the `industry_US` desk **re-derived `D333-KR`** — written 12 hours earlier by the sibling desk **inside a file HANDOVER is already required to read** — and was one step from filing it as new. The class is not "that report"; it is **"a finding published since the last run, in the shared spine, by the other market"** | **Add to `carryover.md` §1: before writing any finding, `grep` the spine's newest block (the tail append of `STANDING_VIEW.md` and of `RESEARCH.md` Part C) for the object being claimed, and cite it as a REPRODUCTION if it is there.** A one-line mechanical check on a file already open |
+| **`D338`** | ★★★ **`S74` settled `FIRED-C` while its own registered anti-signal (a) fired — the Strait has channels the desk's frames do not cover.** Measured: Iran granted transit permits to **some Iraqi tankers** on **repeated Iraqi diplomatic requests** (IRNA via Reuters 08-22, ≥3 outlet bodies), **with neither IRGC-named condition mentioned anywhere in the chain**, while its NSC secretary simultaneously threatened *"not a single drop of oil"* (`M857`). **And DRIFT then found a FOURTH channel the same night**: China + Jordan jointly called for the Strait's reopening (Xi–King Abdullah, `scmp` 08-24 21:48 HKT, `M883`) — China buys **~80%** of Iran's shipped oil | **Register a successor bracket at PREMORTEM keyed to the EXCEPTION channel** — observable: *counterparty-specific transit permits granted or revoked, ≥2 outlet bodies*, branches on **widening** (more counterparties ⇒ de-facto reopening with no condition met) vs **revocation**. ⚠ **And escalate `S8`**: it is the only remaining general-fleet Hormuz bracket and it has been undated for **23 runs** (human, P5) |
+| **`D339`** | 🚨 **On the US desk `brief`'s single-outlet layer is ENTIRELY UNSCORED — the classifier is Korean-only — so `--singles-nb` has nothing to threshold and the tool shows a RANDOM 15 of 280.** Measured 2026-08-24: **265 of 280 single-outlet foreign events unseen (94.6%)**, and even the random 15 held two macro items on the run's two live axes (*"US vows 'economic D-Day'"*, *"What's Pushing Long-Term Bond Yields Higher?"*) (`M864`). ⚠ **`D334-KR`'s remedy (lower `--singles-nb` to 5) CANNOT work here** — the `D331-KR` class again: a KR instrument prescription that does not cross the market | **① Rank the US single-outlet layer by an available ENGLISH signal instead of `nb` — outlet tier, or title-embedding distance to the day's head clusters — and show the top N by that. ② Until then, have `brief` print `shown / total / UNSCORED` explicitly on the US path so the 94.6% is a number in the report. ③ Every "quiet bucket" claim on this desk carries the unseen count** |
+| **`D340`** | ★★★ **`theme-age`'s velocity ratio is a function of TERM WIDTH, and the effect is larger than the signal it is meant to detect.** Three same-event pairs, one session (`M861`): `tariff` ⚪1.14× (base **9,876**) vs **`Canada tariff` 🟡9.86×** (69) = **8.7×**; `sanctions` ⚪1.32× (3,600) vs **`economic D-Day` 🟢FRESH age 4** (141); `Warsh` ⚪0.85× (3,628) vs **`Jackson Hole` 🟡14.9×** (296) = **17.5×**. `D328(a)` prescribed reporting the outlet cluster beside the ratio — **treatment, not repair.** ★ **The rule PAID TWICE more in the same run**: `drug pricing` 🟡2.12× (163) falsified this run's own *"Health Care has zero narrative coverage"* (`M882`), and `server prices` 🟡6.79× (34) surfaced the IT mechanism `memory prices` ⚪0.72× (927) hid. ★ **And it produced a genuine NEGATIVE, which is what makes it a rule rather than a ratchet**: `refining margin` ⚪0.82× on a readable base of 256 | **When the 90-day base exceeds ~2,000, do NOT read the ratio — narrow the term until the base falls inside the usable band and read it there. Band measured 2026-08-24: ~60–2,000 articles** (below ~50 it degenerates into a count — `Iraqi tankers` returned base 3 at age 2). **Print the base-width band on the tool's own output line, and keep broad terms in the table as CATEGORY labels that are never read as ratios** |
+| **`D341`** | 🚨🚨 **The desk cannot flow-tag the names its own discovery layer surfaces.** `AA`/`X`/`WY` (the Canada-tariff epicentre — this run's **#1** object by `brief` ranking), `LYB`/`DOW` (the named US counterparties in Shell's **$8bn** chemicals sale, found only by the blind-spot pass at `CHEMICALS` z **13.2**), and `BABA` (the **$10.2bn** HK placement issuer) are **all outside `us_top300`** ⇒ **THREE of eight EVENT_ALPHA cards carry no flow-tagged principal** (`M868`). Also still outside: the tanker set `FRO`/`STNG`/`DHT`/`TNK`, and **`S109` is armed on `FRO`.** This is the 2026-08-10 `TSM`/`LNG` invariant extended one step: not *"what it holds"* but **"what it finds"** | **Rebuild with `--include AA,X,WY,LYB,DOW,BABA,FRO,STNG,DHT,TNK` — the builder already supports the union. ★ And add a standing step to EVENT_ALPHA: run the membership check BEFORE writing cards, so an untaggable principal is DECLARED rather than quietly replaced by a taggable neighbour.** Also fixes the **40-day** staleness that currently decides news-bucket membership (`M856`) |
+| **`D342`** | ★★ **The desk's two trade-war brackets both settle ELEVEN DAYS BEFORE the tariffs they measure take effect.** `P92` and `P93` close **2026-08-28**; **Canada's retaliation begins 2026-09-08** (`aljazeera` 08-23 body, named effective date; list names **steel, dairy, appliances, agricultural** — `dw` 08-22) (`M869`). They can measure the **announcement**, never the **implementation** | **Registered `S123` today to span 09-08 (Industrials).** ⚠ **The Staples/agricultural leg remains UNBRACKETED** — `ADM` is that sector's left-edge name and its second 🔴. **And add to the registration checklist: when a bracket's object has a named effective date, compare the settle date to it and WRITE THE GAP INTO THE ROW** |
+| **`D343`** | ⚠ **Date-clustered brackets are ONE observation, not N.** **2026-08-28 currently carries SEVEN pre-registered rows** (`P67` `P81` `P85`–`P89` `S116`) plus July PCE plus `FRO` earnings. If they resolve together the desk reads **seven confirmations from n ≈ 1** (`B3`). Measured consequence today: `S121` was drafted for July PCE, **graded, and DROPPED** for exactly this reason, with its ID consumed unused | **Print a per-settle-date row count at registration; when a date exceeds ~3 rows, require the new row to NAME which existing row it is not redundant with.** `S118` and `S120` each do this in their registrations; `S121` was dropped by it |
+| **`D344`** | 🚨 **A LEGISLATED CEILING on the exact variable the ENRG OW is long, disclosed by the issuer, and absent from every desk file.** MPC FY2025 10-K Item 1A, verbatim: *"If California or other jurisdictions (i) **establish a maximum refining margin and impose a financial penalty for profits above such maximum refining margin**, (ii) impose restrictions on turnaround and maintenance activities or (iii) require that petroleum refiners maintain a minimum inventory of transportation fuels…"* — California **Senate Bill No. 2** (`M875`). Found on the run that finally opened Item 1A after **two runs** of carrying it as an obligation | **Add a `regulated-margin-cap` row to the ENRG DEEP's KPI table and track SB 2 rulemaking as a dated observable.** ★ **And generalize**: when a thesis is long a margin, **grep the issuer's Item 1A for a statutory cap on that margin** before sizing the thesis — the desk had run the take-or-pay frame on 21 files and had never run the *ceiling* frame on any |
+| **`D345`** | ⚠ **`D316` is REFINED, not merely reproduced: the `drift_watch` kill-switch set DOES contain a trade term, and the term is too narrow to fire.** Measured 2026-08-24: `new tariff` logged **1** article on the day whose #1 event by `brief` ranking was US–Canada trade-talk collapse at **38 articles / 20 outlets**. The day's actual headlines (*"Canada announces **retaliatory tariffs**"*, *"US imposes 50 percent tariffs on $20bn"*) do not contain the phrase. ★ **Same failure mode as `D340`, in a THIRD instrument** — after `theme-age` and `brief`, `drift_watch` too | **Widen the trade slot to a term SET — `retaliatory tariff` · `trade talks` · `tariff deal` · `trade war` — and have `drift_watch` print each term's article count beside its multiple, so a term that never fires is visible as a term that never fires rather than as calm** |
+| **`D346`** | ⚠ **A kill-switch term fired at 3.6× with a 0-of-3 body hit rate, and the desk's own report was the only thing that caught it.** `[invasion]` burst on *"Roche and Eli Lilly Win FDA Clearance for Alzheimer's Blood Test"*, *"Equinor and Aker BP Make New North Sea Gas Discovery"* and a Scottish-football broadcast-piracy story — matching **"invasive"/"non-invasive"** and a Russia-adjacent sports item (`M884`). **A kill-switch set that cries wolf is one the desk stops reading**, which is the failure mode that makes the whole monitor worthless | **Require whole-word matching on kill-switch terms (`\binvasion\b`, not substring), and have `drift_watch` mark any burst whose body-read hit rate is 0 as a PRECISION FAILURE in its own output**, so the false-positive rate accrues as a number instead of as an impression |
+
+### ⚠ Reproduced this run without new numbers (counts incremented, no new dig)
+
+- **`D294`** — `action_bracket.py` printed *"Nearest binary: NVDA earnings (D-2) — both-sides armed
+  below"* and, **three lines later**, *"No tickets — no cycle GAP and no dated binary in window"*, on a
+  window holding **five** calendar binaries plus **three** the calendar misses. **6th reproduction.**
+  `ACTION_TICKETS.md` hand-built for a 2nd consecutive run.
+- **`D297`** — 5th run unfixed, **and load-bearing for the first time**: `top1_flips_sign = false` on
+  COMM while removing **both** Alphabet classes flips `wflow` **+0.108 → −0.193** (`M877`).
+  ⇒ **a demonstrated FALSE NEGATIVE on a live sector.** Positive-form remedy:
+  **group the top-1 test by ISSUER (a `share_class_group` column keyed on CIK), not by ticker row.**
+- **`D315`** — 5th run, **worst instance yet**: `module_flow NVDA --positioning` returned
+  **`±1.3% (expiry 2026-08-24, D0) → complacent, little fuel`** two days before an 08-26 print, when
+  the 08-28 chain reads **±6.13%** — **4.7× too small, with a confident wrong adjective, on a 🔀binary
+  held in both books** (`M873`). ⚠ The same call on `MRVL` picked correctly (08-28, D4) ⇒ **silent and
+  intermittent**, which is worse than consistent.
+- **`D325`** — the `breadth`-is-not-breadth defect, **now measured on the US board for the first
+  time**: `green_rate` **2.01%** vs `participation` **31.44%** = **+29.4pp**, LARGER than the KR
+  desk's +26.4pp, and it inverts COMM from joint-last to **rank 1** (`M865`).
+- **`D327`** — 3rd run, and worse than a label problem: the S&P 500 COT row prints **🟢 crowded-long**
+  on a net spec of **−10,560** (net SHORT) **while also carrying the board's largest weekly swing
+  (−21,840)**. A reader taking the label at face value inverts both the level and the change.
+- **`D328(b)`** — weekend denominators make every FADING/ENDED label unreadable: **08-22 288 · 08-23
+  303 · 08-24 336** against a weekday median ~824 = **35 / 37 / 41%**. **No thread was selected or
+  excluded by a label this run.**
+- **`D333-KR`** — **reproduced on the US side by two independent code paths** (module + direct FRED
+  API), extending the series list: `DGS2`/`DGS10`/`DGS30`/`DFII10`/`DTB3` all end **08-20** while
+  `T10YIE` and `SOFR` carry **08-21** (`M858`). ★ **This is a REPRODUCTION, not a discovery** — the
+  `industry_kr` desk filed it at ~10:00 KST the same day, and this desk nearly claimed it (`D337`).
+- **`D335-KR`** — `thread`'s top-N hides the day's largest object, **2nd consecutive day on the SAME
+  object**: the Canada tariff thread sits outside the top-20, one-lined, tagged **FADING**, on a curve
+  reading **19→23→9→11→24→20→14** while `brief` ranks it **#1 at 38 articles / 20 outlets** (`M862`).
+- **`D250`/`M731`** — `cycle_registry.json` still has **no optical/interconnect row**, 4th run ⇒
+  `LITE`/`COHR`/`CIEN` exposure is **unmeasurable, not zero**. PREMORTEM Lens 4 used it to downgrade
+  `cycle_exposure`'s ✅ to **⚠ UNDER-DETERMINED**.
+- **`D329`** — the `AI-compute-EPICENTER` label spans **2–3 measured risk units** at `--days`
+  250/500/750; `label_split_across_units`; theme cap **too tight** (human call).
+
+---
+
+## Part C 추가 — dig 등록, 2026-08-25 `industry_kr` (append-only)
+
+> ⚠ **ID 3-grep at WRITE time**(`handoff/*.md` · `llm_outputs/**` · `REPORT/**`):
+> `D347`~`D351` **handoff 0 hit · REPORT 0 hit**; `llm_outputs` 히트는 **오늘 이 런의 파일뿐**.
+> ⚠ **처방은 전부 긍정형으로 쓴다**(금지문은 무시되고 긍정문은 실행된다).
+
+| id | 무엇이 문제인가 (측정) | **긍정형 처방** | 승인 |
+|---|---|---|---|
+| **`D347-KR`** | **퍼지 날짜 행은 날짜 정렬 열거표에서 투명해진다.** `S27` 의 정산일이 `~2026-08 late` 라서 **08-22·08-23·08-24 세 런의 「KR ARMED 전수표」에 한 번도 나타나지 않았고**, 관측면은 **08-21 에 인쇄**됐는데 **3런 뒤에야 채점**됐다 | **전수표에 「날짜 미파싱 행」 칸을 강제한다** — 0건이어도 칸을 남긴다. `SCENARIOS.md` 의 MASTER INDEX 에서 `date` 필드가 `YYYY-MM-DD` 로 파싱되지 않는 모든 행을 그 칸에 넣는다 | 자동(문서 규약) |
+| **`D348-KR`** | **연속 트랙 슬롯의 KPI 가 「후보 생성」으로 암묵 설정돼 있는데, 12런 실측 산출물은 「진입 0 · 거부 7 · 미스 6」이다.** 그리고 **그 거부 7건 평균 초과 −4.1pp 는 원장 전체(+2.8pp, n=122)보다 6.9pp 낫다** ⇒ **슬롯은 알파 생성기가 아니라 필터로서 작동하고 있다** | **연속 트랙 슬롯의 KPI 를 「거부 정확도」로 재정의하고, `reject_ledger score` 의 섹터별 평균 초과를 매 런 `DEEP_LOG` 에 병기한다.** ⚠ 규칙 변경 자체는 사람 항목 | **사람** |
+| **`D349-KR`** | **`catalyst_calendar` 에 KR 행이 0개이고, 오늘 D−2 에 08-27 금통위가 있었다**(`D320-KR` 재현). **그런데 결정론적 소스가 존재한다** — `einfomax` 가 매주 **[이번주 한국은행 및 금융위·금감원 일정]** 을 기사로 내고, 그 본문 하나에 **09:00 본회의 · 11:10 간담회 · 13:30 경제전망 · 17:00 통안증권**까지 **시각 단위로** 들어 있다 | **그 주간 일정표를 KR 캘린더 피드로 배선한다** — `catalyst_calendar` 가 `fts search "이번주 한국은행"` 으로 최신 1건을 잡아 `▲HH:MM` 라인을 파싱해 국내 🔀binary 로 등록 | **사람**(코드 변경) |
+| **`D350-KR`** | **한 개념에 여러 표면형이 있고 고정 텀 표가 그중 하나를 임의로 고른다.** 오늘 두 사례: `자사주소각` **1건 0.00×** vs `"자사주 소각"` **275건 9.36×**(275배) · `소비심리` **446건 0.19× 🔴** vs `소비자심리지수` **77건 3.63× 🟡**(같은 날 머리층 5매체 사건). ⚠ 공백 변형 대조 4텀은 전부 붙여쓰기 우세라 **체계적이지 않고 그래서 6런을 살아남았다** | **텀 표에 「변형 총건수」 칸을 추가하고, `배율 0.00× ∧ 총건수 ≤ 5` 를 자동으로 「표기 의심」 플래그로 만든다.** 그리고 **45텀 전수에 대해 공백·어미 변형 대조를 1회 실행해 결과를 텀 표에 고정한다** | **사람**(1회 감사 + 코드) |
+| **`D351-KR`** | **개장 후 `module_flow` 는 미완봉을 마지막 봉으로 쓴다.** 오늘 `EVENT_ALPHA` 의 17개 이름이 그렇게 계산됐고, **08-24 정착 컷으로 재계산하니 6칸의 부호가 뒤집혔다**(KSS해운 RS20 +8.9→−0.2 등). ⚠ **OBV 상태는 17종 중 1종만 바뀌었다** — 오염은 **RS 축에 집중**된다 | **KRX/US 장중에는 「정착일 컷을 명시한 재계산」을 쓴다** — `module_flow` 에 `--asof YYYY-MM-DD` 를 추가하고, 데스크 스테이지는 개장 후 실행 시 그 인자를 **필수**로 넘긴다 | **사람**(코드 변경) |
+
+### 이월 dig — 상태 갱신
+
+| id | 상태 | 오늘 |
+|---|---|---|
+| **`D330-KR`** (완성 파일 본문 미개봉) | 🚨 **연속 재현** | 오늘은 대상이 `REPORT/COMPANY_SCOREBOARD.md` 가 아니라 **직전 런의 `SECTOR_ROTATION.md` 계측 경고 블록**이었다 ⇒ **`R100` 의 신규성 과다주장**을 낳았다. **처방을 `D347-KR` 과 묶어 「HANDOVER 필수 상속 목록에 직전 런 ROTATION 계측 경고 추가」로 확장** |
+| **`D293-KR`** (A급 축이 필터 뒤에 붙는다) | **12번째 재현, 미측정** | `sector_flow.py:224` 가 `flow_tag(p, vel)` 로 부르며 `inv`/`sh` 미전달. **오늘도 안 쟀다** |
+| **`D318-KR`** (`contrib1` 칸) | 미이행 | 금속 부호의 83.4%가 시총 2위 010130 — **플리퍼 가드가 못 잡는 형태** |
+| **`D291-KR`** (`^KS11` 벤치 승격) | 🚨 **5런 연속 사람 대기 · 오늘 3번째 고장 형태** | 08-21 지연 → 08-22 부분행 NaN → **08-25 행 결측 + 타 경로 값 존재.** **앞의 둘은 시끄럽게 죽었고 오늘 것은 조용히 성공한 척했다** ⇒ 가장 비싼 형태 |
+| **000660 자사주 3건 본문 실독** | **2런 연속 이월** | 오늘 뉴스가 **40조**를 두 번 인쇄(einfomax 관련기사 제목 2건) ⇒ **파서값과 뉴스가 일치.** 남은 것은 1차 본문뿐 |
+| **`M-102`**(000660 파생손실 밸류 다리) | **3런 연속 미채점** | **다음 런이 안 하면 소멸로 기록한다** |
+| **375500 · 003230 밸류 다리** | 🚫 **소멸 처리** | **4런 연속 미이행 ⇒ 오늘 목록에서 내렸다.** 다시 필요하면 새로 등록한다 |
+| **`module_industry_map` 과다매칭** | **4런 연속** | 오늘 HLTH 밸류체인 맵은 **수작업 추론**이고 파일에 그 사실을 적었다 |
+| **`margin_history --help` exit=1** | **6런 연속** | 기능 정상(042700 · 128940 · 028670 · 004370 · 011200 전부 11기 실출력). **인용 시 「`--help` 죽음 + 실출력 확인」 병기 이행** |
+
+### ⚠ 이 런이 남기는 방법론 한 줄 (트리거 형태)
+
+**「배율 0.00× 를 봤을 때, 그것을 부재로 적기 전에 같은 개념의 다른 표면형을 한 번 더 물었는가?」**
+— 측정된 실패: `자사주소각` 이 **6런 × 0.00×** 로 실렸고 그 위에 명제(`M-100` 관측 ②)가 세워졌으며,
+정답은 **공백 하나 건너 275건**에 있었다. **부재 주장은 이 데스크에서 가장 약한 종류의 주장이다.**
+
+
+---
+
+## Part C dig items added by the 2026-08-25 `industry_US` run (**`D352` ~ `D357`**)
+
+> ⚠ **Write mode append-only** (`D165` pre-commitment). Nothing above this line was read into memory
+> and rewritten.
+> ⚠ **ID 3-grep at WRITE time** across `handoff/*.md` · `llm_outputs/**` · `REPORT/**`:
+> `D352`–`D357` **0 hit outside this run's own files**. Current highest **`D351`**
+> (2026-08-25 `industry_kr`, this morning).
+> ⚠ **Language: English** — the US desk's documented practice.
+
+| # | Finding | Positive-form remedy |
+|---|---|---|
+| **`D352`** | ⚠ **The desk's registered refiner kill has a 35.5% unconditional base rate.** Measured on the trailing 252 sessions, **two consecutive negative 5-session crack rates occur on 35.5% of days** (`M916`). The condition has been used as a regime marker — `P80` (08-20) recorded it "resetting" as though a reset were informative — **without anyone measuring how often it fires by chance.** A one-in-three trigger is a weak discriminator wearing a threshold's clothes | **Compute and print the UNCONDITIONAL base rate beside every registered kill/trigger condition, exactly as `D93` already requires a baseline beside a threshold.** A condition that fires one day in three must be LABELLED one at registration. ★ **Applied immediately: `P96` carries the 35.5% on its own face** |
+| **`D353`** | 🚨 **`D315` "self-corrected" and it is NOT fixed — the calendar moved past it.** On 08-24 `module_flow NVDA --positioning` returned **±1.3% (expiry 2026-08-24, D0)** two days before the print — 4.7× too small, with a confident wrong adjective, on a 🔀binary held in both books. **Today the identical call returns ±6.1% (expiry 2026-08-28, D3), correct** (`M920`). **Nothing in the code changed; the bad expiry expired.** A defect that heals itself on a calendar roll will re-appear on the next same-day expiry — **and the desk will by then have logged a "fix"** | **① Have `--positioning` REFUSE to quote an expiry with `D ≤ 1` when a scheduled earnings date sits beyond it, and print `D±n` next to whatever adjective it chooses. ② Until then, every implied-move citation carries its expiry date on the same line** (done throughout this run's MACRO, PREMORTEM, BET and ALPHA). ⚠ **Do not close `D315` on today's correct output** |
+| **`D354`** | ★★ **The blind-spot pass found the epicenter's product name a day before its print, and the term table has no row for it.** `RUBIN` entered `burst` at **z 8.4 / 8 articles / 5 outlets / 75% market relevance**, alongside new-word **`HBM`** (3 outlets) and **`CPUS`** (3/3, 100% market), corroborated by bodies on Rubin's debut, the SpaceX Vera Rubin NVL72 deal and Intel's Diamond Rapids server-CPU push (`M919`). **The desk's bucket table carries macro terms and theme terms and NO product-generation terms at all — and a chip cycle turns on product names** | **Add a PRODUCT-GENERATION slot to the living term table (`Rubin`, `HBM`, `Diamond Rapids`, `agentic` seeded this run) and let `burst`'s new-word section feed it automatically.** ⚠ All four are currently **below `D340`'s readable base band**, so they are registered as **terms to ACCRUE, not ratios to read** |
+| **`D355`** | 🚨🚨 **The sweep includes an UNSETTLED pre-market bar, and it depresses the desk's only positively-measured axis.** Measured 2026-08-25 at 09:1x ET: the 08-25 bar in `prices_2026-08-25.pkl` carries **median 3.18% of the prior session's volume (mean 4.08%, p90 7.44%, and ZERO of 300 names above 50%)**. Against the last settled snapshot, universe `vol_surge` falls **median 0.820 → 0.670 (−18.3%)**, mean 0.866 → 0.716, and the count clearing **`vol_surge ≥ 1.2` drops 22 → 12 (−45%)**. **`vol_surge` h=1 is the ONLY US IC cell with a Bonferroni-passing POSITIVE sign** (`IC +0.0398`, `t(NW) +3.40`, `n_eff 34.0`, `M854`). **This desk runs pre-market EVERY day**, so the depression is systematic, not incidental — and **`n_axes` continuity (gate G2) cannot detect it, because the axis COUNT is unchanged.** Measured consequence this run: all three refiners and both AI-network names blocked from 🟢 by `vol_surge` alone | **① Have `sector_flow` DROP any terminal bar whose volume is below a stated fraction (e.g. 20%) of its trailing-20 median, and print `terminal_bar` + `dropped_partial: true/false` into `§scoring`. ② Add `terminal_bar` to the `scoring` block so a snapshot-to-snapshot Δ can check BAR REGIME, not just axis count — G2 currently checks only the latter. ③ Until then, every `vol_surge`-derived statement on a pre-market run carries "stub-bar depressed"** (done throughout this run). ⚠ Human approval: scoring-path change (P5) |
+| **`D356`** | ⚠ **An anti-signal that names a specific INSTRUMENT while fearing a general MECHANISM will be litigated at every settle.** `S102`'s VOID clause named *"a **Treasury refunding announcement**"*; the event that occurred was a **buyback-programme doubling** (239 articles read; **no outlet describes a refunding**). The letter says no-void and the owner ruled no-void — **but the mechanism the clause plainly feared was "an exogenous Treasury intervention in the long end", and a buyback doubling IS one.** Two desks spent parts of three runs on the ambiguity (the 08-22 US run flagged VOID-recommended; the 08-25 KR run scored the row and deferred the disposition; this run ruled) | **Write the anti-signal as MECHANISM first, INSTRUMENTS as examples**: *"an exogenous Treasury/Fed intervention in the long end — e.g. a quarterly refunding announcement, a buyback-schedule change, or an intermeeting policy action"*. A clause phrased that way is decidable in one reading. ★ **And record the counter-argument at the RULING, not only the ruling** — done in `HANDOVER §2b` |
+| **`D357`** | 🚨🚨 **The 2026-08-05 `STANDING_VIEW.md` truncation incident REPRODUCED inside this run, and the handoff files survived by staging luck rather than by design.** A helper script opened a file in `'w'` mode and raised **`UnicodeEncodeError: surrogates not allowed`** mid-serialisation; **the file went to 0 bytes** — the identical mechanism that took `handoff/STANDING_VIEW.md` to 0 bytes on 2026-08-05 and forced rows `R27`–`R45` to be RECONSTRUCTED rather than recovered. **The only reason no carry file was lost today is that this run happened to stage its text in a scratchpad first.** The `D165` append-only pre-commitment governs *mode*, and mode was not the failure — **serialisation was** | **① NEVER serialise directly onto a carry file: write to a temp path, verify the byte count is ≥ the original, then `os.replace()`. ② Open every carry-file write with `encoding='utf-8', errors='surrogatepass'` (or sanitise surrogates before writing) so an emoji escape cannot abort mid-stream. ③ Take a `.bak_<date><market>` snapshot BEFORE any writeback** — this run took `handoff/.STANDING_VIEW.bak_0825us` and `.STANDING_VIEW_US.bak_0825us` before appending, and that step should be mandatory rather than discretionary. ⚠ Human approval: it touches the writeback path (P5) |
+
+### ⚠ Reproduced this run without new numbers (counts incremented, no new dig)
+
+- **`D294`** — **7th reproduction.** `action_bracket.py` printed *"**Nearest binary:** NVDA earnings
+  (D-1, axis=earnings) — both-sides armed below"* and, four lines later, *"No tickets — no cycle GAP
+  and no dated binary in window."* on a window holding **eight** binaries. `ACTION_TICKETS.md`
+  hand-built for a **3rd** consecutive run, **DRY-RUN share counts deliberately omitted** under the
+  analytical-only mandate.
+- **`D333-KR`** — **7th reproduction**, and **designed OUT rather than logged again**: `DGS*` end
+  **2026-08-21** while `T10YIE` carries **2026-08-24**. **`P97`'s settle clause requires a JOINT
+  observation date**, which is the defect that left `S102` unsettled for five runs.
+- **`D339`** — **worse**: single-outlet layer **385 of 400 unseen = 96.25%** (08-24: 94.6%), still a
+  random 15 because the classifier is Korean-only.
+- **`D340`** — **paid in BOTH directions in one run**: it forced `server prices` (base 38) and
+  `Strait of Hormuz` (8,127) out of the readable set — **and produced `R101`, the first retraction a
+  `D`-rule has ever extracted from its own author's citation** — while licensing `AI capex`
+  (base 1,176, ⚪0.62×), the run's most load-bearing narrative reading.
+- **`D341`** — unchanged. `OKLO` `AA` `X` `WY` `LYB` `DOW` `FRO` `SMCI` `NRG` all outside
+  `us_top300`; **`S109` remains armed on a name this desk cannot flow-tag**, and EVENT_ALPHA Card 4's
+  principal (`OKLO`, **−5.70% on the day**) is untaggable.
+- **`D343`** — **08-28 now carries NINE rows.** Both PREMORTEM registrations deliberately avoided it
+  (`S124` → 08-31, `S126` → 09-04), each naming its non-redundancy; July PCE was **declined as a
+  bracket target with the reason stated**.
+- **`D345`** — reproduced: `new tariff` logged **2** articles on the day the Canada retaliation cluster
+  ran at **25 articles / 16 outlets**; the trade slot's term is too narrow to fire and **reads as calm**.
+- **`D346`** — **reproduced at +24h, SAME term, unimplemented**: `[invasion]` fired at **3.8× with 0 of
+  3 bodies on topic** (a Ukraine wind-farm loan, an Israeli cancer-research grant, a Putin retrospective
+  — matching **"invasive"** and a Russia-adjacent item). **A kill-switch set that cries wolf is one the
+  desk stops reading.** Count now **2**.
+- **`D297`** — **6th run unfixed**, and COMM was treated as a flipper bucket **regardless of its
+  `false` flag** (Alphabet complex **76.6%** of a 12-name bucket across two ticker rows). **No `wflow`
+  claim was made on COMM at any cut this run.**
+- **`D250`/`M731`** — **11th run**: no optical/interconnect row in `cycle_registry.json`, on the day
+  `COHR −20.37` and `LITE −13.13` are the board's worst 5-session names and the largest single
+  contributors to `P79` entering branch B. `cycle_exposure`'s ✅ downgraded to **⚠ UNDER-DETERMINED**.
+- **`D329`/G4** — **G4 FAILED again**: `--days` 250 → **11 units**, 500 → **10**, 750 → **10**, with
+  *different groupings* (at 250d the book reads as four independent AI-complex risks; at 500/750d as
+  two). Every concentration statement this run carries its `--days`.
+- **`D327`** — **4th run**: the S&P 500 COT row printed **🟢 crowded-long on a net spec of −10,560**,
+  which is net SHORT, while carrying the board's largest weekly swing (**−21,840**). **Label unused.**
+- **`D328(b)`** — **CLEARED**: 08-24's denominator recovered to **765 = 93% of the weekday median**.
+  Today's 369 is a **partial day** (run at 09:1x ET), not a trough, and is labelled one.
+- **`D316`/`D336`** — `ic_ledger` was run correctly as `--market us` this run (405 rows / 33 run-dates);
+  the required-flag remedy is still unimplemented (human approval, CLI signature).
+- **`D76`** — **the collision class fired and was PREVENTED**: `R99` and `R100` were both already
+  allocated by this morning's `industry_kr` run, and **the write-time 3-grep caught it before the
+  append**. The retraction was filed as **`R101`**.
+
+---
+
+## Part C · DIG LIST — appended 2026-08-26 by the `industry_kr` run
+
+> ⚠ **Write-time 3-grep**: `D358` **0 hits**, `D359` **0 hits**; highest before this append `D357`.
+> ⚠ **One collision was caught and corrected at write time**: the new open contradiction was drafted
+> as `C16`, which an earlier run already owns; it was filed as **`C17`**. **`D76`'s collision class
+> fired and was prevented for a 2nd time.** *(Recording the near-miss, not just the fix.)*
+
+### 🆕 `D358-KR` — **Yesterday's authority table is the most dangerous thing a run inherits, and nothing in the pipeline flags an inversion**
+
+**Measured 2026-08-26 — three inversions in one day, all of them in `PREFLIGHT`'s own output:**
+
+| Claim carried on 08-25 | Truth on 08-26 |
+|---|---|
+| *"Built-in `Δ` banned — sign wrong in 21 of 28 sectors, 331/806 names"* | **`Δ` verified correct on all 806 names** — sign mismatch **0**, mean \|gap\| **0.0000** |
+| *"`rs20` overstated by **+2.24pp**; never call `0 < rs20 < +2.2` an outperformer"* | **`rs20` understated by 0.96pp; `rs60` overstated by 0.78pp** — **the danger band is exactly inverted** |
+| *"`vol_surge` clears Bonferroni on **both** horizons"* | **h=5 fell to −2.33 and no longer clears**; h=1 still does |
+
+**Why it happens**: `PREFLIGHT` re-measures every gate daily and writes a fresh authority table, but
+**downstream prose is written by copying yesterday's phrasing**, and an authority table has no field
+that says *"this cell reversed."*
+**Prescription (positive form, cost ≈ one column)**: **`PREFLIGHT` carries a `vs-어제` column that
+marks every gate whose verdict changed, and the "what this run may not claim" list is rendered as a
+DIFF against the previous run's list.** Then an inversion is impossible to copy past.
+
+### 🆕 `D359-KR` — **The freshness gate fires on n=1, in both directions, and `F1`'s 18-run zero rests on it**
+
+**Measured 2026-08-26 (`theme-age --scope domestic`):**
+
+| Term | Age | Accel | Total | Verdict | Failure mode |
+|---|---:|---:|---:|---|---|
+| `자동차관세` | **1** | — | **1** | 🚨 **🟢FRESH** | **false positive** — one article produces the golden-zone verdict |
+| `원전수출` | 13 | 0.0× | **1** | 🔴FADING | **false negative** — the `자사주소각` compound-term class (registered 08-25) |
+| `주택경기` | 63 | 0.0× | 4 | 🔴FADING | same class |
+| `데이터센터전력` | — | — | **0** | ⚫SILENT | same class |
+
+⇒ **`F1` ("🟢LIVE has fired 0 times in 18 consecutive runs") is contaminated in BOTH directions.**
+The 08-25 run found only the false-negative half; **the false-positive half is new and worse**,
+because it can *manufacture* a golden-zone theme out of a single headline.
+**Prescription (positive form)**: **`theme-age` reports its base count beside every verdict, and any
+consumer applies a minimum usable base — this run used ≥100 articles.** Under that filter the
+youngest usable KR theme is **`바이백` at age 68 (860 articles)**; nothing is near the 14-day gate.
+⇒ **`F1`'s zero survives the filter, and this run is the first that can say so with the pipe
+verified alive mid-stage** (삼성전자 d7 **1,465 @ 08:17 → 1,478 @ 09:32**).
+
+### 🆕 `D360-KR` — **The desk cannot read DART "기타 주요사항" bodies, and that is why four separate digs have not closed**
+
+**Measured 2026-08-26 on `000720` 현대건설**: `module_disclosure 000720 --days 30` lists 20 filings and
+reports `[detail] 1건 본문 파싱 완료` — **the 기타 주요사항 category (13 of the 20) is listed but never
+parsed.** The primary route also fails: the DART viewer URL
+(`dsaf001/main.do?rcpNo=20260824800602`) returns a **frameset shell** with the report title and a KRX
+jurisdiction notice and **no filing text at all**.
+🚨 **This is the common cause of four carried digs**: 현대건설's clarification filings (**08-11 and a
+SECOND one on 08-24 that no prior run had noticed**), and 000660's two 조회공시요구 rows. **They were
+recorded as "deferred" for four runs; they are actually "no tool path".**
+⚠ **The distinction matters**: a deferred dig is a discipline problem, an unreachable one is a build
+item. **Prescription**: a DART body-fetch path for the 기타 주요사항 category (human approval — new
+network route), **or** an explicit `unreachable` flag in `module_disclosure` output so the dig list
+stops re-queueing it as if effort were the blocker.
+
+### 🆕 `D361-KR` — **A single value chain is split across three or more KRX sector labels, so sector-level instruments structurally cannot see it** *(the dig face of `C17`)*
+
+**Measured twice, independently, in one run:**
+- **Nuclear chain** — 한전기술 **일반서비스** · 두산에너빌리티 **기계·장비** · 현대건설·한전KPS **건설** ·
+  두산퓨얼셀 **전기·전자**. All four moved together on 08-25 (Δ +1.868 / +0.618 / +0.494 / +0.475 / +0.695)
+  and **no sector aggregate shows the move**.
+- **Defence chain** — 한화에어로·현대로템·한국항공우주 **운송장비·부품** · LIG디펜스앤에어로 **금속** ·
+  한화시스템 **전기·전자**.
+- **And the containing bucket is itself three industries**: 운송장비·부품 (n=58) splits into
+  autos+parts (`eqflow` **+0.413**), shipbuilding (**−0.357**), defence/aero (+0.100) — a sub-industry
+  `wflow` spread of **0.690 against a sector move of 0.036 (19×)**.
+⚠ **This is NOT the `top1_flips_sign` problem** — each bucket's sign can be perfectly well-behaved.
+**The chain is simply not a bucket.**
+**Prescription**: a hand-maintained chain ledger *outside* the KRX labels. 🚫 **Not
+`module_industry_map`** — that module has over-matched for 5 consecutive runs.
+
+### Carried, with today's status
+
+- **`D347-KR`** — the "unparsed-date rows" column is **kept and reported as 0** in the KR ARMED roster.
+  **Working as prescribed.**
+- **`D320-KR`** — `catalyst_calendar --days 5` returned **zero domestic rows for a 4th consecutive run**,
+  and this time **on the eve of a BOK MPC**. The source is already in hand: `einfomax`'s weekly schedule
+  article (08-24) carries **09:00 meeting / 11:10 presser / 13:30 outlook / 17:00 MSB plan** in one body.
+- **`D293-KR`** — **13th reproduction**, unfixed. `sector_flow.py:224` calls `flow_tag(p, vel)` without
+  `inv`/`sh`, so **KR's only A-grade axis is applied after the filter that removes names.**
+- **`D291-KR`** — benchmark-index lag **2nd consecutive run** (`^KS11` terminal bar 08-24 vs names 08-25);
+  the ETF substitute (`069500.KS`) works and the code swap remains a human item, **6 runs pending**.
+- **`D318-KR`** — a `contrib1` column is still absent; today 금속 carried board-top `wflow` while its
+  breadth failed the same binomial test that killed its 08-23 promotion.
+- 🗑️ **`M-102` RETIRED AS EXTINCT** (000660 derivative-loss account location). **5 consecutive unmet runs**;
+  the 08-25 run pre-committed *"if the next run does not do it, record it as extinct."* **It did not, and
+  this is the record.** Re-register from scratch if it is wanted again.
+- ⚠ **The 45-term whitespace-variant audit (registered 08-25 as dig 1) is UNEXECUTED for a 2nd run.**
+  Only `"자사주 소각"` was re-measured (**285 articles · 6.11×**, still above its 2.0× anti-signal).
+  **Next run is its 3rd deferral — one short of the same extinction rule that just retired `M-102`.**
+- 🆕 **Registered by `SECTOR_DEEP_INDU §9` and self-applied the same run**: **`BET_SHEET §B` now carries a
+  `src=` tag per candidate** (`DEEP_INDU` / `DEEP_DISC` / `SWEEP` / `EVENT_ALPHA`). The 3-run-old question
+  *"how many DEEP observations did BET actually use?"* was found to be **unmeasurable, not unexecuted** —
+  BET_SHEET had no provenance field. **From the next run it is one `grep`.**
+- 🆕 **`module_math_check` and `module_valuation` disagree on what "Peer 중앙값" means** — the valuation
+  module excludes the subject, the checker medians every data row above the label. **Measured today: 5
+  false failures on correct numbers.** This run relabelled its rows (*"피어 중앙값 (대상 X 제외 · N종)"*)
+  and both tools then passed. **A convention should be picked (human), not worked around per file.**
+
+---
+
+## Part C dig items added by the 2026-08-26 `industry_US` run (**`D362` – `D369`**)
+
+> ⚠ **Append-only write** (`D165`); text staged in a scratchpad first (`D357` — the 2026-08-05
+> truncation mechanism is still live and this run does not rely on staging luck).
+> ⚠ **ID 3-grep at WRITE time** across `handoff/*.md` · `llm_outputs/**` · `REPORT/**`:
+> `D362`–`D369` → **0 hits outside this run's own files.** Current highest before this append:
+> **`D361-KR`** (2026-08-26 `industry_kr`, this morning).
+> 🚨 **The same grep caught a collision**: `M927`–`M934` were already allocated by that KR run, so
+> this desk's measured rows start at **`M935`**. **`D76`'s class fired and was PREVENTED, 3rd time in 3 days.**
+> ⚠ **Language: English** — the US desk's documented practice.
+
+| # | Finding | Positive-form remedy |
+|---|---|---|
+| **`D362`** | 🚨 **A bucket term can DECELERATE while its own event ACCELERATES, and the desk reads the term.** `theme-age "Canada tariff"` fell **10.99× → 5.10×** (base 94) on the **same day** its `thread` built **21 → 29 outlets / 80 articles** and became the day's **#1** head cluster. `D345` logged this class on a *falling* event; **this is the first measurement on a RISING one**, which is strictly more dangerous because a decelerating term **reads as CALM** on a sector the desk is underweight | **Validate every bucket term against its own `thread` outlet curve once per run, and flag-and-widen on the spot any term whose accel moves OPPOSITE to its thread.** Seeded this run: `Section 338`, `retaliatory tariffs`. Cost ≈ one `thread` cross-reference the stage already runs |
+| **`D363`** | ⚠ **`D340`'s base band gates WIDTH but not PRECISION, so a term can be in-band for the wrong reason.** `Rubin` returns base **1,374 — comfortably inside the ~60–2,000 band** — while the object the desk means (`NVDA`'s Rubin platform) measured **8 articles / 5 outlets** in the same 24 hours. The token also matches the Vera Rubin Observatory and personal names. **A band that only counts will license a homonym** | **Every term entering the living table carries a one-time precision check at entry (body-read `n=3`) plus its market-relevance %, exactly as `burst` already prints.** A term that fails is registered with its disambiguating phrase (`Rubin platform`, `Rubin NVL72`), never the bare token |
+| **`D364`** | 🚨🚨 **A `burst` z computed on a PARTIAL-DAY denominator is systematically overstated, and this desk runs pre-market every day.** `RUBIN` read **z 8.4 (08-25, denominator 2,102, run at 09:1x ET)** and **z 3.3 (08-26, denominator 4,973, complete day)** on the **identical 8 articles / 5 outlets / 75% market relevance** — **a 61% fall in the statistic with zero change in the data** (`M943`). `D354` was built on the 8.4 ⇒ **`R104`** | **`burst` prints its denominator as a % of that weekday's trailing-4-week median and REFUSES to emit z below ~60%**, or emits it labelled `PARTIAL-DAY`. **Sibling of `D355`** — same root cause: the desk runs before the day is finished and its instruments do not know that |
+| **`D365`** | ⚠ **A bracket anchored on an event DATE must verify that date from a primary source at registration.** `S108` froze its window around *"Warsh's Jackson Hole **D-0, 2026-08-21**"*; **`R93` (08-22) established the speech is 08-27~29** ⇒ **the window contained no event.** The owner ruled **NO VOID** (the letter of the clause, `D242`, and consistency with the `S102` ruling 24 hours earlier) and re-labelled it `LOW-INFORMATION-BY-CONSTRUCTION`. **It is the SECOND row in four days litigated at settle over what its clause meant** (`S102` → `D356`) | **`PREMORTEM` prints the event date AND the source it was taken from beside every frozen window, and the `D93` baseline table gains an `event_in_window` boolean.** A row whose boolean is false is scored but auto-tagged non-informative, rather than argued about after the fact. Cost ≈ one line per registration |
+| **`D366`** | 🚨🚨 ★★★ **The news axis is CAPPED, not dropping — and the desk carried the wrong diagnosis for six runs while holding the evidence.** The 51 velocity-measured names are `us_top300` **ranks 1–51, CONTIGUOUS, and byte-identical to 08-25's set (51 of 51)** (`M947`). **A stochastic tunnel drop cannot produce a contiguous rank prefix, and cannot produce the identical set twice.** ⇒ **`vel_coverage` will read 17.06% every run until the cap changes**, and because the cap is a **rank prefix of a 42-day-old cap file, G1 and G5 are the SAME defect.** ⚠ **The 08-25 run's own `M856` recorded the contiguity while its own PREFLIGHT wrote the burst-load diagnosis in the same run** — two halves of one run contradicting each other with nothing reconciling them ⇒ **`R103`** | **① The sweep prints its news-query budget and the selection rule beside `vel_coverage`** (e.g. `51/299 — top-51 by mcap, cap=51`), so a cap can never again be read as a failure. **② PREFLIGHT's G1 tests the CAP hypothesis directly**: if the measured set is a contiguous rank prefix two runs running, G1 reports `CAPPED` rather than `pipe uncertain`. **③ Human item**: raise or remove the cap, or make the 51 a rotating sample so coverage is representative rather than mega-cap-selective |
+| **`D367`** | 🚨 **Precursor-form threads are selected BEFORE the direction body-read, so a thread-linker artifact gets FIRST pick of eight slots.** *"US tariff threat upends copper surplus"* presented as **`BUILDING` 2→2→2→2→3, 35 articles** — the textbook early shape the protocol tells the stage to prioritise — and its timeline is **four days of `fxstreet` FX price-forecast boilerplate with one Reuters article appended.** **6 of 10 precursor candidates this run were of this class.** The failure is **asymmetric because it DISPLACES a real card** | **Give the precursor filter a title-coherence pre-check before selection: require that ≥2 of the thread's timeline titles share the final title's subject, or that the thread's `nb` score clears the boilerplate band.** A 4-day curve of identical-template titles from a single source is detectable without reading a body. Cost ≈ one string comparison per candidate |
+| **`D368`** | 🚨 **A futures continuous-contract roll can manufacture a percentile-extreme reading in a registered KPI, and nothing in the pipeline flags it.** `RB=F` fell **3.2529 → 2.9495 = −9.34% (a 30.3-cent gap)** in one session while `HO=F` moved −3.0% and `CL=F` −1.0%; **the `RB=F` leg alone contributes ≈89% of the ~9.5-point 3-2-1 crack fall** that this run's own MACRO printed as a live *"−9.821 = the 2.0th percentile"* (`M958`). The signature is a **September→October RBOB roll** (summer→winter RVP spec), not a repricing. ⚠ `RB=F` also carries the **duplicated volume field** (`29,842` on both 08-24 and 08-25) that `M926`/`M940` found on `BZ=F`/`CL=F` | **Any crack/spread calculation prints each leg's one-session % change beside the composite, and flags the composite when a single leg contributes >70% of the move.** A 30-cent gap in one leg against 1–3% in the others is machine-detectable. **⚠ And the desk should read a roll-adjusted product series** (or check `Volume`/`Open Interest` continuity) before quoting any product-crack percentile |
+| **`D369`** | 🚨 **The tag-ledger extractor manufactured a verdict this run explicitly refused to issue.** After `module_report_tags update`, **`HOOD` and `COIN` read `평결 CONFIRMED FRESH GO LIVE`** — sourced from prose inside `BET_SHEET.md`, **whose every freshness row reads `UNMEASURED (G1 FAIL)`** and whose ALPHA section states in bold that **no verdict was issued because G1 failed.** The extractor matched the words `FRESH`, `LIVE`, `GO` and `CONFIRMED` wherever they appear, including inside a paragraph explaining why they do **not** apply. ⇒ **a downstream desk querying the ledger first — which the handoff rules instruct it to do — would inherit a verdict the source report denies** | **① The extractor reads tags only from a designated tag column/section, not from free prose** (`BET_SHEET §B`'s Freshness column is already structured for exactly this). **② `UNMEASURED` is added as a first-class tag value that SUPPRESSES any other freshness tag found in the same file.** ⚠ **Until fixed, treat every 🟢LIVE/FRESH in `REPORT/HANDOFF.md` as unverified** and read the source report's own tag column |
+
+### ⚠ Reproduced this run without new numbers (counts incremented, no new dig)
+
+- **`D355` — 2nd run, and WORSE.** The 08-26 bar carries **median 2.48% of the prior session's volume**
+  (mean 3.73%, p90 6.75%, **0 of 299 above 50%**) against 08-25's 3.18%. ⇒ **6 greens, breadth 0.00 in
+  8 of 11 sectors, and the single `new_green` (`KLAC`, `vol_surge` 0.56) were all DECLINED as
+  unreadable rather than cited** — the remedy `D355` asked for, applied by hand one run after filing.
+- **`D333` — 8th reproduction.** `DGS*`/`DFII10` end 08-24 · `T10YIE` 08-25 · `DTWEXBGS` 08-21 ·
+  `NFCI` 08-21 ⇒ last joint rate date **08-24**, and **`P77` cannot be read before 08-27**.
+- **`D339` — worse again**: **607 of 622 single-outlet events unseen = 97.6%** (08-25: 94.6%/96.25%),
+  still a random 15 because the classifier is Korean-only. **Total displayed 120 of 757 = 15.9%.**
+- **`D340` — paid in both directions again**: it kept `Strait of Hormuz` (8,224) out as label-only
+  while licensing `AI capex` (1,189), `HBM` (1,336) and `memory prices` (970) — the three rows
+  carrying this run's most load-bearing narrative reading. **And `D363` above is the first case where
+  the band ADMITTED a term it should have excluded.**
+- **`D327` — 5th run**: the S&P 500 COT row prints **🟢 crowded-long on a net spec of −10,560** (net
+  SHORT) while carrying the board's largest weekly swing (−21,840). **Label unused; number used.**
+- **`D297` — 8th run**: `GOOGL`+`GOOG` ≈ **76.6%** of a 12-name Comm Svcs bucket with
+  `top1_flips_sign: false`. **No `wflow` claim made on COMM at any cut**, flag notwithstanding.
+- **`D352`** — the base rate was **re-measured, not inherited**: **36.1%** today vs 35.5% on 08-25.
+  **The two agree, and the condition FIRED this run**, so the disclosure is now load-bearing rather
+  than precautionary. **`P100` carries it inside its own registration table.**
+- **`D341`** — `OKLO` (in today's head layer at 14 art / 7 outlets), `LYB`, `DOW`, **`FRO` (prints
+  08-28 with `S109` armed)**, `X`, `AA` all remain outside `us_top300`.
+- **`D343` — 08-28 now carries NINE rows** and 08-27 carries eight. **All five registrations this run
+  deliberately avoided both dates** (`P100` → 09-01, `P101` → 09-04, `P102` → 09-09, `S127` → 09-08,
+  `S128` → 09-09), each naming its non-redundancy.
+- **`D294` — 8th reproduction.** `action_bracket` printed *"**Nearest binary:** NVDA earnings (D-0)"*
+  and, four lines later, *"No tickets — no dated binary in window"*, on a window holding six.
+  `ACTION_TICKETS.md` **hand-built for a 4th consecutive run**, DRY-RUN share counts omitted.
+- **`D353`** — **reproduced on a HELD name 7 days later, exactly as its own text predicted** (`AVGO`
+  ±1.3% at a D0 expiry for a 09-02 print, `M948`). Remedy unimplemented; **`S127` states the
+  consequence at registration instead of hiding it.**
+- **`D250`/`M731` — 12th run**: no optical/interconnect row in `cycle_registry.json`, on a run where
+  `COHR` and `LITE` sit in `S128`'s reversal basket. **`cycle_exposure`'s ✅ downgraded to
+  ⚠ UNDER-DETERMINED** and handed to ALPHA, so no epicenter-starter was emitted either way.
+- **`D358-KR`** — **executed the morning it was registered.** PREFLIGHT now carries a `vs-yesterday`
+  DIFF column and it **caught two sentences that were true on 08-25 and false today.** 🚨 **And the
+  defect fired a third time inside this run on a non-PREFLIGHT object** — MACRO §E inherited
+  `MATR N+` from the run-before-last (ROTATION §0 corrected it), and the crack-kill counter and
+  `P96`'s branch were each nearly carried forward one session stale.
+- **`D329`/G4** — **G4 FAILED again**: `--days` 250 → **11 units**, 500 → **10**, 750 → **10**, with
+  different groupings. **Every concentration statement this run carries its `--days`.**
+- **`D76`** — the collision class fired and was **PREVENTED for a 3rd time in 3 days**.
+
+---
+
+## Part C · DIG LIST — appended 2026-08-27 by the `industry_kr` run
+
+> ⚠ **Append-only** (`D165`), staged in a scratchpad first (`D357`).
+> ⚠ **ID 3-grep at WRITE time**, excluding this run's own files: **`D370`–`D378` → 0 hits.**
+> Current highest before this append: **`D369`** (2026-08-26 `industry_US`).
+
+| # | Finding | Positive-form remedy |
+|---|---|---|
+| **`D370-KR`** | 🚨🚨🚨 **This desk's edge axis has been mislabelled the whole time. `module_KIS --investor N` returns 10 rows regardless of `N`** — measured `--investor 5` → **5 rows**, `--investor 20` → **10**, `--investor 60` → **10** — while the header prints **"(20영업일 누적)"** and **"(30영업일 누적)"**. The settled count is **9 sessions**. `_investor.py`'s `out[-days:]` only bites below 10, the module docstring claims *"최근 약 30영업일"*, and **`net_summary()` already computes the true count as `days` but the renderer never prints it.** ⇒ **every "KIS 20d" number this desk has cited — DEEP real-hands verdicts, BET §C, and a large share of ledger revival conditions written as "20d 외국인 순매수" — is a 9-session number.** ✅ **What survives**: the defect is a **constant**, so signs and changes remain valid (today's `007070` +15.6만 → +20.4만 comparison holds because both were 9-session). **What dies is every claim about the window's length.** | **① The renderer prints `net_summary()['days']` — the measured row count — in the header instead of the requested `N`.** ② **Every ledger condition and DEEP sentence says "N sessions (measured)", never "20d".** ✅ **Applied by hand this run**: all KIS figures in `HANDOVER §3`, `BET §C`, both `SECTOR_DEEP` files and `ALPHA` are labelled **9 sessions**. ③ **Human item**: if a true 20-session window is wanted, the KIS endpoint has to be paged or replaced — the current one does not carry it |
+| **`D371-KR`** | ⚠ **The KR news axis has never been tested against the CAP hypothesis that `R103` proved on the US side.** `R103` (2026-08-26) killed the burst-load diagnosis for US after measuring that the 51 velocity-covered names were a **contiguous `us_top300` rank prefix, byte-identical across two runs**. **KR carries the same diagnosis and has never run that test** — `vel_coverage` has sat at **6.05~6.17% for 14 runs** (51/826 today), which is suspiciously stable for a stochastic drop. ⚠ **But KR also has evidence US does not**: the connection is actively **refused and then restored** (`curl` **000/exit35 → 401**, four probe points today), which a rank cap cannot produce. ⇒ **the two hypotheses may both be true — a cap that sets the ceiling and a throttle that sets the timing** | **Test the cap directly: sort the KR names carrying a non-null `velocity` by `kr_all.csv` rank and check whether they form a contiguous prefix, on two consecutive runs.** The test costs one pass over the existing JSON and needs **no new sweep** (which G1 forbids). If contiguous twice, PREFLIGHT G1 reports **`CAPPED`** for KR too and stops calling it a pipe death |
+| **`D372-KR`** | 🚨 **Three ledger rows now carry a revival condition whose observable is a DESK ACTION, so no market outcome can ever settle them.** `051900` (*"a 4Phase report is generated ∧ …"*) and `COP` (*"…∧ a measured link … **is written**"*) were both `reaffirmed` today for exactly that reason; `GRMN` was flagged as this class on 2026-08-14 (`D239-KR`). **13 days, three instances, zero remediation.** (Registered as open contradiction **`C19`** — the rows also record real opportunity cost, so deletion is not obviously right) | **`reject_ledger add` / `missed_ledger add` reject any `--revives-if`/`--enters-if` whose only verbs are desk verbs** (생성·작성·커버·재커버·DEEP 슬롯 획득) **unless a market-side conjunct is present.** A one-line check at write time. ⚠ **Do not silently rewrite the three existing rows** — re-register them with market-side conditions and record the swap, so the opportunity-cost history stays readable |
+| **`D373-KR`** | 🚨🚨 **This desk runs before the day is finished and THREE news instruments do not know it.** Measured today: `brief` **586 articles vs the prior full day's 3,329 = 17.6%** (events 88 vs 530); `burst` denominator **≈628**; and **all 12 of `thread`'s FADING tags fade only on that partial last day** (캐나다관세 105→11 · 반도체 47→4 · 호르무즈 17→3 · 전기료 24→4). **Consequence, not hypothesis**: the day's largest domestic binary — **the MPC, `fts` d1 = 109 articles** — produced **zero events** in `brief`, at any `--singles-nb`. **This is the KR twin of `D355`/`D364`, now on a third instrument class.** | **① `brief` and `burst` print their denominator as a % of the prior settled day and label the output `PARTIAL-DAY` below ~60%.** ② **`thread` withholds the FADING tag when the last day's denominator is below that bar** (BUILDING is safe — a partial day *understates* it). ✅ **Applied by hand this run**: every FADING tag was voided in `EVENT_ALPHA §0` and `MACRO §B-3`, and BUILDING was read as conservative |
+| **`D374-KR`** | ⚠ **The same event reads 5× differently depending on which word the desk happens to type.** `통화정책` **🟡ACCELERATING 4.97× (n=749)** vs `기준금리` **⚪ECHO 1.02× (n=1,951)** — both are the 08-27 MPC. **Yesterday's `M-110` saw only the second and concluded *"the multiple cannot capture this shift"*, which was a statement about vocabulary, not about the market.** (The KR instance of `D362`, first measured on the US side 08-26) | **Every bucket carries at least two terms and both multiples are printed side by side. When they diverge by ≥1.5×, that divergence is itself recorded, and the lower one may not be used to say "quiet".** ✅ Applied this run in `MACRO §D-2` |
+| **`D375-KR`** | 🚨 **The blind-spot pass's #1 emerging token was a corporate action, and the sweep scored it as demand.** `SKIET` — **22 titles / 67 articles in 2 days**, absent from every fixed term set — is **SK이노베이션's absorption merger of SKIET** (announced 08-25, 5 outlets). The sweep gave `361610` **flow 1.000 · `vol_surge` 4.25 · OBV +0.758**, and **99% of the foreign net-buy (+106.4만 of +107.5만) landed in a single session**, while the acquirer `096770` printed **외 −100.6만 · 기 −67.1만 · 개 +167.7만** the same day and fell ~10% intraday | **Any name in the top decile of `vol_surge` gets a one-line corporate-action check (DART 주요사항 / a single news query) before it may be called demand; until it passes, it carries a `[corporate-action?]` stamp.** ✅ Applied this run: `361610` was tagged **🔴RESOLVED**, filed to `reject_ledger`, and barred by name in `SWEEP_READ §5`, `EVENT_ALPHA` card 3 and `BET §D` |
+| **`D376-KR`** | 🚨 **The shortlist's verdict column asserts something its own arithmetic does not.** `KR_LIVE_SHORTLIST` prints **"✅진짜손(외국인/기관 순매수)"**, and **8 of today's 11 ✅ names have NEGATIVE foreign net-buy** (고려아연 −11만 · 카카오페이 −30만 · 한미약품 −24만 · 한미사이언스 −30만 · **현대건설 −74만** · 코스맥스 −4만 · DN오토모티브 −1만 · 풍산 −7만). **The actual discriminator is the RETAIL sign** — all four ❌ names have retail *buying* and all eleven ✅ names have retail selling. ⇒ **downstream stages reading this column as "foreigners bought" are reading a claim the data does not make** | **Rename the verdict to what it measures — "개인 순매도(약한손 부재)" — and print the three legs' signs beside it so the reader can see which one fired.** ✅ **Verified the same run**: `DEEP_INDU §3` re-measured `000720`, the largest ✅ name, and found foreign negative on the window **and** on the +7.50% day itself |
+| **`D377-KR`** | ⚠ **An instrument's state changes inside a single run and the run's own preflight does not know it.** `PREFLIGHT` G0 recorded *"stocks' last bar = 08-26"* at 08:2x, **pre-open**. By 09:39 yfinance carried a **live 2026-08-27 bar**, and `SECTOR_DEEP_INDU`'s draft read those live values as settled closes (047040 19,710 vs the settled 19,100). Same class hit `module_chart --read` at 10:0x, where the OBV 20-day slope now includes a partial-volume bar | **Any stage running after 09:00 KST re-states the terminal settled bar at the top of its own file rather than inheriting PREFLIGHT's**, and price pulls print the index date instead of a hard-coded label. ✅ Applied by hand this run (`SECTOR_DEEP_INDU §11`); ★ **and the correction produced the run's key evidence** — the settled 19,100 matched `yonhap`'s figure exactly, which is what made the 6/6 article-to-price check possible |
+| **`D378-KR`** | 🚨🚨🚨 **The scoring clip converts a benchmark bias into a manufactured breadth reading, and the Δ column cannot represent a saturated name at all.** `flow_score = mean(clip(obv/0.16), clip(rs20/8.0), clip((vsg−1)/0.6))` has **no return term** and each axis is bounded at ±1. With today's measured **+12.80pp `rs20` bias**, **408 of 806 names (50.6%) sit at the `rs20` ceiling; 279 of those (68.4%) would not, and 156 would be NEGATIVE.** Removing only the measured bias flips the board: **🟢 295 → 198** and mean flow **+0.0694 → −0.0711**, against the file's **+0.1915**. Separately, **34 names sit at `flow_score` exactly 1.000, where Δ can only be ≤0** — `010130` 고려아연 (26.29% of the 금속 bucket) printed **Δ 0.000 on a −3.85% day** | **① The sweep prints, beside `scoring`, the share of names saturated on each axis; above ~30% on any axis the run is stamped `SATURATED` and level/breadth statements are withheld.** ② **Names at the `flow_score` bound carry an explicit `Δ-CAPPED` flag** so a structural zero is never read as "no change". ③ **Human item**: either widen the `rs20` divisor or align the benchmark by date (the root cause is G0). ⚠ **This finding is this run's own first computation and has NOT been independently reproduced — the next run must recompute before relying on it** |
+
+### 이월 dig — 오늘의 상태 갱신
+
+- **`D333-KR` — 9번째 재현.** 합동 rate 관측일이 08-24 → **08-25** 로 하루 전진했고, 그래도 **`P77` 은 못 읽는다**(`DGS30` 08-26 봉 부재). `T10Y2Y` 만 08-26 을 갖고 있다.
+- **`D358-KR` — 4번째 발화, 이번엔 스테이지 간에서.** `MACRO §G` 가 `IT` 를 `N` 으로 적었는데 **어제 ROTATION 의 판정은 `N−`** 였다. **`ROTATION §0` 이 잡아 기준선을 복원**했고 MACRO 문장은 그대로 뒀다. US 데스크가 08-26 에 잡은 `MATR N+` 상속과 같은 클래스.
+- **`D359-KR` — 필터가 오늘은 반대 방향으로 물었다.** `base ≥ 100` 이 **세션을 실제로 움직인 테마(`재건사업`, base 18)를 배제**했다 ⇒ **`C20`** 으로 등록. **필터의 실패가 아니라 필터가 막으려던 것의 다른 얼굴**이다.
+- **`D360-KR` — 6번째 재현, 이번엔 실제로 시도했다.** `dsaf001/main.do` 는 **35,013바이트 프레임셋 셸**에 `viewDoc(...)` 파라미터 **0개**, `report/viewer.do` 는 **0바이트**, `loadReport.ajax`·`documentTree.json` 은 DART 오류 페이지(4.4KB). ⇒ **「미이행」이 아니라 「도구 경로 부재」로 확정.** 🚨 그리고 그 과정에서 **아무 런도 몰랐던 `000720` 08-26 신규 자율공시**(rcpNo 20260826800636)를 목록에서 발견했다.
+- **`D361-KR`/`C17` — 오늘 양방향으로 측정됐다**(원전 체인 4칸 분산 + 방산회사가 금속 칸 19.83% 점유). `STANDING_VIEW §6` 참조.
+- **`D368`(US) — KR 재현.** RBOB 롤이 3-2-1 크랙을 10.5pt 끌어내렸고 `P80` 의 B 다리를 127계약으로 발화시킬 뻔했다.
+- **`D369`(US) — KR 대규모 재현.** `module_report_tags update` 후 **오늘 KR 파일 소스 58행 중 39행(67.2%)이 `LIVE`/`FRESH`/`GO`** 인데 **ALPHA 는 🟢LIVE 0건**을 냈다. 그중 **`052690`(태그 보류·거부원장)·`361610`(🔴드롭)·`079550`(미측정)**, 그리고 **5종이 `PREFLIGHT.md` 소스로 `GO`** — **자기 머리글에 「종목 판정 없음(P4)」이라 적힌 파일이다.** ⇒ **US 의 처방(지정된 태그 열만 읽기 · `UNMEASURED` 를 1급 값으로)이 KR 에도 그대로 필요하다.**
+- **`D256-KR` — 5런째** 미독(고려아연 TC/RC). 오늘 미스원장에서 「구리 1차 재료」 조건으로 재확정됐는데, **DART 매출 구성상 구리는 4.4%**(은 33.0 + 금 18.5 = 51.5% 귀금속)라 **조건이 겨눈 축의 적합성 자체가 열려 있다.**
+- **`D239-KR` — `D372-KR` 로 승계**(3번째 인스턴스에서 클래스로 승격).
+- **`D293-KR` — 14번째 재현**, 무변경 캐리.
+
+---
+
+## Part C · DIG LIST — appended 2026-08-27 by the `industry_US` run (append-only)
+
+> ⚠ **Append-only** (`D165`), staged in a scratchpad first (`D357`), file opened in `'a'` mode.
+> ⚠ **ID 3-grep at WRITE time** across `handoff/*.md` · `llm_outputs/**` · `REPORT/**`, excluding this
+> run's own files: **`D379`–`D387` → 0 hits.** Current highest before this append: **`D378-KR`**
+> (2026-08-27 `industry_kr`). **`D76`'s collision class checked, 5th consecutive day.**
+> ⚠ **Language: English** — this desk's documented practice.
+
+| # | Finding | Positive-form remedy |
+|---|---|---|
+| **`D379`** | 🚨 **The `vs-yesterday` DIFF column reads a frozen artifact, so a diagnosis retracted late in run N is invisible in run N+1 — the remedy for one blind spot created another.** Measured today: PREFLIGHT G1 re-derived and re-announced the news-axis cap finding as **"★ New this run"**, and called the burst-load diagnosis *"the wrong shape"* — but **`R103` had retracted that diagnosis 24 hours earlier**, and this morning's KR run cites `R103` by name. The DIFF column (`D358-KR`, added 08-26) compares only against **yesterday's `PREFLIGHT.md`, which is frozen at the moment it was written** and still contains the pre-retraction sentence. The retraction lives in `STANDING_VIEW.md §5`, which PREFLIGHT does not read — correctly, since it runs before HANDOVER | **PREFLIGHT greps `handoff/STANDING_VIEW.md §5` for the `R`-id of any claim it is about to repeat from yesterday's file, and prints `[RETRACTED r=<Rnn>]` beside that DIFF row.** A grep, not a read — one pass, no ordering change. ✅ **Applied by hand this run**: a correction block is appended under `PREFLIGHT.md`'s own heading, gate verdicts untouched, G1's original text left standing (`D48`) |
+| **`D380`** | ⚠ **A margin-threshold bracket was registered without naming its accounting basis, and with a tolerance finer than its likely source.** `P90` leg 2 reads *"the reported quarter's gross margin does not exceed the prior quarter's by more than **50bp**"* — but the row never says **GAAP or non-GAAP**, and the press quotes GM to 0.1pp while the two bases differ by percentage points. **It was scoreable today only because both legs clear by a wide margin** (+10bp against a 50bp tolerance; −100bp on leg 1). A closer print would have been unscoreable — `S8`'s failure mode arriving through a different door | **Every accounting-metric bracket names its basis (GAAP / non-GAAP / company-adjusted) and its source-document class in the registration table, and sets its tolerance no finer than that source's published precision.** ✅ Applied to this run's own reading: both bases are stated wherever `P90` is cited |
+| **`D381`** | 🚨🚨 **The desk counted down for six days to a print it had already published.** `catalyst_calendar` shows `D-1 2026-08-28 July PCE 🔀binary [bea~est]`; `P86` says *"released 2026-08-28"*; the **08-26 `MACRO_REPORT` wrote "July PCE 08-28" three times** — on the morning it printed, **after** the 08:30 ET release, **with the print sitting in that same run's own `brief` head layer at 14 outlets**. The `~` flag (pattern-estimate, not official-source-confirmed) did exactly its job and **three consecutive stages read past it** ⇒ `R106` | **① `catalyst_calendar` verifies every `~`-flagged macro row against the news index before printing it, and prints `[ALREADY PRINTED d=<date>]` instead of a `D-n` countdown when the index carries the release.** ② **Any stage citing a `~` row states the flag inline.** ✅ Applied by hand this run: `MACRO §G` marks the PCE row `ALREADY PRINTED`, PREMORTEM **dropped it from the binary inventory with the information-content reason**, and `ACTION_TICKETS` was hand-rebuilt |
+| **`D382`** | ⚠ **Duplicated futures volume, silent.** The **2026-08-26** yfinance futures volume row is **byte-identical to 08-25 on all three legs** — `CL=F` **282,408**, `HO=F` **20,491**, `RB=F` **28,601**, twice. Daily volume does not repeat to the unit across two sessions ⇒ the provider is carrying the prior day's volume forward. The **closes** differ (82.36 → 82.23), so the price series is not obviously duplicated | **Any volume-derived reading on a futures bar first checks that the bar's volume differs from the prior bar's; identical values are stamped `VOLUME-STALE` and the reading is withheld.** ✅ Applied this run: **no volume-derived futures claim was made**, and the crack decomposition uses closes only |
+| **`D383`** | 🚨 **"C is the favourite" is a claim this desk keeps making and its own scoreboard keeps refuting.** Parsed the MASTER scoring log for every row carrying a verdict (latest per ID, **69 distinct rows**): **`FIRED-A` 19 · `FIRED-B` 18 · `FIRED-C` 21 · `VOID` 8 · `EXPIRED` 3.** Excluding voids and expiries, **the tails fire 37 of 58 = 63.8%**, while a typical registration discloses C at **35–80%**. Two live readings: **(a)** the `D93` baselines are computed on trailing windows less volatile than the realised regime, so ±1σ bands are effectively ±0.6σ; **(b)** the regime genuinely is more volatile than its own trailing 252 | **Every `D93` baseline additionally reports the realised A/B/C frequency of this desk's own scored rows to date, beside its modelled probabilities, so a systematic band/regime mismatch is visible at registration rather than at the 70th row.** ⚠ **Method limit stated (`C3`)**: this is a regex extraction over a markdown log and pools US- and KR-owned rows — admissible because it is a claim about **registration practice**, which is shared, not about a market (`W1`) |
+| **`D384`** | ⚠ **A verdict and the number offered to reverse it must share a horizon.** ROTATION declined to restore `STPL N− → N` on a **5.3pp red-rate improvement and one rank**; the DEEP slot then showed why it could not have: the **flow** instrument is reporting a **20-day** state (**9 of 9 nodes negative on `exc20`**, range −4.37 to −15.04) while the **price `exc5`** that refused the verdict is a **5-day bounce** (**15 of 19 names positive**). **They were never comparable**, and the delta stage had no way to see that from the two aggregates alone | **A ROTATION delta names the horizon of the number carrying it, and a counter-number on a different horizon is recorded as a horizon split rather than as a contradiction.** ✅ Applied this run in `SECTOR_ROTATION §2` (attempt #5) and `SECTOR_DEEP_STPL §9` |
+| **`D385`** | 🚨🚨 **The screener's bucket membership is decided by a formula/threshold mismatch, and the mismatch is large enough to change membership on 44% of candidates.** `us_setup_screener` gates on **RSI < 45 / 30–52 / < 28** (the **Wilder** convention) while the repo's single RSI source (`module_chart/_indicators.py:46`) computes **Cutler's RSI** (simple rolling mean). Measured on all 18 candidates: **mean gap −12.4 points, max −24.5 (`ITW` 20.3 vs 44.8)**; **8 of 18 fall outside their bucket under Wilder**, including the **held** name **`RTX` (31.4 vs 46.9 against a <45 gate)**, `AMZN` (30.4 vs 48.0), `HON`, `CCL`, `HD`, `WM`, `SYY`, `CL`. **`TJX` printed 4.8**, which a Wilder RSI essentially cannot reach on a liquid large-cap. ⚠ **Not the stub bar** — dropping the 08-27 pre-market bar moves RSI only 0.1–7.0 points. ⇒ registered as open contradiction **`C21`** because **neither side is wrong**: Cutler's is a legitimate variant and `module_chart` is the declared single source (P1) | **Print the RSI variant name beside every RSI value the screener emits** (`RSI(Cutler,14)`), so a threshold written against another convention is visible at the point of use. 🚫 **The fix itself — switch the source to Wilder, or recalibrate 28/45/30–52 — is a HUMAN call**, because it changes every historical bucket. ✅ Applied this run: **no screener bucket membership was used as evidence**, and all 8 failing names are marked `✗bucket-fails-Wilder` in `BET_SHEET §0-a` |
+| **`D386`** | 🚨🚨 **`D294` mutated from omission to COMMISSION.** Its previous nine reproductions were the script naming a binary and then reporting there were none. **Today it emitted two fully-formed tickets — names, share counts, notional, stops — conditioned on `July PCE (D-1)`, an event that printed 08-26** (`BRACKET::A_cool — NVDA … IF July PCE (D-1) prints toward cool`; `BRACKET::B_hot — MPC …`). **A silently empty ticket file is a gap; a confidently wrong one is worse**, because it is the artifact a downstream desk is most likely to act on. Root cause traced: the script's nearest-binary selection reads `CATALYST_WATCH.json` and **does not check the `~` estimate flag** (`D381`) | **`action_bracket` refuses to arm any binary whose `CATALYST_WATCH` row is `~`-flagged until the flag is resolved, and prints the refusal with the row's date.** ✅ Applied by hand this run: the script's two tickets are **declared void inside the rebuilt `ACTION_TICKETS.md §0`**, with the diagnosis and the note that **its chosen NAMES were reasonable — only the condition was dead** |
+| **`D387`** | 🚨 **`D369` reproduced on this desk's own files, same day, exactly as predicted.** After `module_report_tags update`, **`NVDA` `MPC` `AVGO` `PSX` `ANET` `MRVL` `LITE` `VLO` `LIN` `AMZN`** all carry **`CONFIRMED ECHO FADING FRESH GO`** (several with **`LIVE`**), sourced from `CYCLE_EXPOSURE.md`, `ACTION_TICKETS.md`, `SWEEP_READ.md` and `MACRO_REPORT.md` — **files whose every freshness row reads `UNMEASURED (G1 FAIL)` and where ALPHA issued 🟢LIVE = 0.** Three specifics make it worse than a false positive: **`AVGO` is tagged `GO`** while PREMORTEM tagged it **EXHAUSTED**; **`MRVL` and `LITE` are tagged `GO` from `ACTION_TICKETS.md`, a file that explicitly enters neither**; and **`EW` is tagged `BROKEN` from `MACRO_REPORT.md`, which never discusses `EW`.** ⇒ the extractor is reading **English prose vocabulary as verdict tokens** | **The extractor reads only a designated tag column/line (e.g. a `FRESHNESS:` or `VERDICT:` field), never free prose, and treats `UNMEASURED` as a first-class value rather than an absence.** ⚠ **Until then, a downstream desk reading `REPORT/HANDOFF.md` should treat every US tag from 2026-08-26 onward as UNVERIFIED** — this is the **US prescription the KR desk asked for this morning**, now with its own reproduction attached |
+
+### Carried digs — status this run
+
+- **`D355`/`D364` — 3rd consecutive run, and it is the top of this desk's list.** The sweep ran on a
+  pre-market stub: **median volume 4.65% of the prior session, 2 of 300 names above 50%** (08-26: 2.48%,
+  0 of 299). It is also the direct cause of **seven rows being unsettleable** at their own settle date
+  and of the **+0.7h DRIFT window**. **Candidate question: is any of this desk's output improved by
+  running pre-market at all?**
+- **`R103`/`D366` + G5 — G1 and G5 are ONE defect, and the cap reproduced a 4th time** inside this run's
+  own sweep: 50 covered names = `us_top300` **ranks 1–50, contiguous**. The rank prefix comes from a
+  **43-day-old** cap file, so rebuilding `us_top300.csv` moves **both** gates. **Human-approval item.**
+- **`D333` — 10th reproduction, and it has now blocked `P77` twice.** `DGS30` ends **08-25 at 5.17**,
+  which sits **1bp inside branch A** — stated, not scored.
+- **`D353` — 9th reproduction**, on a held name again: `AVGO` **±2.8% at a D1 expiry for a 09-02 print**.
+  `S127` and `S130` both declined to take thresholds from it, which is the remedy working at the
+  registration layer while the tool stays unfixed.
+- **`D250`/`M731` — 13th run** with **no optical/interconnect row in `cycle_registry.json`**, on a board
+  where `MRVL` reports tonight and `MRVL`/`LITE`/`COHR` all print the same RS20-positive /
+  RS60-negative / OBV-매집 shape, and where the cleanest pure-play (`FN`) is **outside `us_top300`**
+  (`D341`). **A cycle with no registry row can never produce a GAP flag.** `COHR`/`LITE` filed to the
+  missed ledger so the cost is scored.
+- **`D297` — 9th run**: `GOOGL`+`GOOG` ≈ 76.6% of a 12-name Comm Svcs bucket while `top1_flips_sign`
+  prints **false**. **No `wflow` claim made on COMM at any cut**, and ROTATION declined it **by rule**.
+- **`D342` — half-closed after 3 runs.** The **agricultural** leg of the 09-08 Canadian retaliation is
+  **now bracketed** (`S129`, `ADM`, settles 09-09). 🚨 **The industrial leg is NOT** — `S123` settles
+  **09-12, four days after the effective date.**
+- **`D341`** — `FN`, `PLAB`, `JAZZ`, `FRO`, `OKLO`, `LYB`, `DOW`, `X`, `AA` remain outside `us_top300`;
+  **`FN` is the optical cycle's cleanest pure-play and `FRO` prints 08-28 with `S109` armed.**
+- **`D343` — the 08-28 cluster is smaller than it looked**, because its PCE leg already resolved
+  (`R106`). **All five registrations this run deliberately avoided 08-28** (`P103`/`P104` → 09-02,
+  `P105` → 09-09, `S129` → 09-09, `S130` → 09-10), each naming its non-redundancy.
+- **`D358-KR` — did NOT fire this run.** MACRO §0 restated the standing verdict line and it matched the
+  08-26 ROTATION output exactly. **First clean inheritance in three runs across the two desks.**
+- **`D367` — reproduced with a count.** The precursor-first selection rule hands **first pick** to wire
+  boilerplate: the board's **largest multi-day thread by article count (142 articles) is a
+  securities-class-action wire chain in perfect precursor form**, and **6 of the top 10 precursor
+  candidates were of that class** (`M990`). Excluded by class and counted, not dropped.
+- **`D329`/G4 — FAILED again**: `--days` 250 → **11 units**, 500 → **10**, 750 → **10**, different
+  groupings. **Every concentration statement this run carries its `--days`.**
+- **`D16`** — honoured: **`F1`'s counter was NOT incremented**, because `theme_age` was never run.
+- **`D10`** — open code defect (news-body boilerplate); needs **human approval + a server console**
+  (FTS writes are server-only, P6). Carried, not re-discovered.
+- **`D371-KR`** — the KR cap test proposed off `R103`. **Not this desk's to run** (`W1`); noted so the
+  US side does not duplicate it.
+
+
+---
+
+# ═══ Part C — open digs, appended by `industry_kr` 2026-08-28 ═══
+
+> ID 3-grep at WRITE time: `D388`–`D393` **0 hits**. Highest before this append: **`D387`** (US 08-27).
+> Written in **trigger form** (a prose rule does not fire while you work).
+
+## New this run — 6 digs
+
+- **`D388-KR` — a bracket whose observable is a BASKET must enumerate the basket.**
+  **Trigger**: *you are about to register a row whose observable is "the equal-weight X basket".*
+  **Do**: list the tickers in the row, **or** name the file + date that fixes membership.
+  **Measured failure**: `S119` (registered 08-24 by US PREMORTEM, settle 08-27) reached this desk
+  **past-dated and unscoreable** — the row says *"equal-weight Energy basket's 3-session excess vs SPY"*
+  and never says which names. Reconstructing it would have made the SCORER choose the observable (`C5`).
+  **Cost**: one bracket on the desk's largest live macro tilt, unsettled.
+
+- **`D389-KR` — status lives in the master scoring log, never in a heading.**
+  **Trigger**: *you are building the "what is due today" table.*
+  **Do**: read `SCENARIOS.md`'s master scoring log. **Do not grep headings for `ARMED`.**
+  **Measured**: `SCENARIOS_KR.md` has **38 headings containing `ARMED`** against **14** genuinely
+  unsettled KR rows — scored rows keep the token (`S10`, `S17`, `S38`, `S50-KR`), only two were
+  rewritten (`S27`, `S51-KR`). A heading grep **double-counts by 24**.
+
+- **`D390-KR` — before the open, `--futboard`'s 괴리율 is not a basis.**
+  **Trigger**: *you are quoting KOSPI200 futures basis from a pre-open run.*
+  **Do**: report it as **"overnight futures return"** only; read basis after the cash index updates.
+  **Measured 2026-08-28 08:2x**: near contract **−1.54%** and 괴리율 **−1.53%** agree to the decimal,
+  because the theoretical price is computed off a **cash index that has not moved yet**. ⇒ **the two
+  figures are ONE observation, and counting them twice manufactures a second signal.**
+
+- **`D391-KR` — KR catalysts do not come from `catalyst_calendar`; build them by hand.**
+  **Trigger**: *you are writing a KR desk catalyst section.*
+  **Do**: build it from `brief --date {previous complete day}` + the manual carry table, and
+  **verify any `~`-flagged calendar row against the news before copying it**.
+  **Measured**: the calendar has carried **zero KR rows for 6 consecutive runs** — including the run
+  whose window contained this market's largest macro binary (the 08-27 MPC decision) — while
+  simultaneously printing **`D-0 2026-08-28 July PCE`**, an event that **printed on 08-26** (`R106`).
+  **It is silent where it matters and confident where it is wrong.**
+
+- **`D392-KR` — bucket vocabulary must chase the event's NEW name, every run.**
+  **Trigger**: *you have just run `blindspot`.*
+  **Do**: take the token-0 emergent terms, find the ones that **no existing bucket vocabulary would
+  catch**, body-read at least two, and **add them to the bucket set in the same run**.
+  **Measured 2026-08-28**: `AIDC` appears **11×** in the blind pool and returns **395 domestic articles
+  over 3 days** (SKT spinning off SK브로드밴드 into "SK호라이즌", 3조원 raised, a tax-credit obstacle
+  already printed) — and the 전력·원전 bucket's four terms (전력수요·원자력·전기요금·재생에너지) catch
+  **zero** of it, making that bucket read as **−34% deceleration**. `CPTPP` (32 articles, government
+  opened accession debate with the agriculture ministry opposed) is the same shape in the tariff bucket.
+  **Both were added this run.**
+
+- **`D393-KR` — read the master scoring log's LAST RUN BLOCK before writing HANDOVER §2.**
+  **Trigger**: *you are about to write "handed to the owner" or "not yet scored" about a sibling desk's row.*
+  **Do**: open the tail of `SCENARIOS.md`'s scoring log first. If the sibling desk ran inside the last
+  24 hours, a row you believe you are handing forward **may already be settled**.
+  **Measured 2026-08-28**: this run's HANDOVER §2-d wrote *"`P90` … handed to the owner, **2nd consecutive
+  run**"*. `P90` had been scored **`FIRED-A`** by the `industry_US` run of 08-27 the previous night, and
+  **the writeback pass — not the HANDOVER stage — found it.** ⚠ The same run **did** read §5 (the retracted
+  ledger) tail-first and correctly caught `R103` and `R106`; **the gap is specific to the scoring log.**
+
+## Status updates on carried digs
+
+- **`D371-KR`** — ✅ **CLOSED.** The KR cap test ran: 51 covered names = **contiguous ranks 1–51, gap
+  distribution `[1]`, 775 consecutive failures, zero mid-sweep recovery** (`M998`). This is the **5th**
+  reproduction of `R103`'s signature (US logged the 4th on 08-27, `M987`). **What remains is NOT this
+  dig** — it is the unmeasured split between *"our burst breaks the tunnel"* and *"the edge refuses after
+  ~102 requests"*; **both produce a contiguous prefix**, and choosing between them without a measurement
+  would violate `C5`. Human item.
+- **`D379`** (PREFLIGHT's DIFF column compares against yesterday's FROZEN `PREFLIGHT.md`, so a diagnosis
+  retracted late in run N is invisible in run N+1) — 🚨 **2nd reproduction, one day after registration, in
+  this repo.** This run's PREFLIGHT wrote the `R103` reproduction up as *"the run's biggest discovery"*.
+  **Prescription, unchanged and still unapplied**: PREFLIGHT reads `STANDING_VIEW.md §5` **before** it
+  builds its vs-yesterday column. Retractions happen late in a run; PREFLIGHT runs early in the next one.
+- **`D374-KR`** (the same event reads 5× differently depending on the term) — ★ **first quantitative
+  observation of its own shape**: the gap between `통화정책` and `기준금리` was **4.9×** the day *before*
+  the MPC decision (4.97× vs 1.02×) and **1.31×** the day after (2.28× vs 2.99×). ⇒ **term divergence is
+  largest BEFORE the event prints and collapses when it does.** The rule (measure ≥2 terms per bucket,
+  never call "quiet" off the lower one) stands unchanged.
+- **`D370-KR` / `M959`** (`module_KIS --investor` returns 10 rows — 9 settled sessions — regardless of the
+  argument, while the header prints "20/30영업일 누적") — **2nd consecutive reproduction.** Every KIS figure
+  in the 08-28 run is labelled **9 sessions**. Ledger revival conditions written as "20d" mean 9 sessions.
+- **`D333`** (FRED long-end bars publish late) — **released for `P77` after blocking it twice**, and the
+  release landed on **exactly the branch line** (5.18 vs ≤5.18). The dig stays open: the delay is what turned
+  a 20bp-wide bracket into a rounding-digit decision.
+- **`D360-KR`** (DART "기타 주요사항" bodies unread) — **carried, and it bit today**: `SECTOR_DEEP_FIN`'s
+  bottleneck finding (bank bond mark-to-market beating record interest income) rests on **6 news outlets**,
+  not on `316140`'s 08-14 semi-annual report, which was listed and **not opened**.
+- **`D10`** (news-body boilerplate; needs human approval + a server console, P6) — carried untouched.
+- **`D9`** (measured-unit vs book-label mismatch: block or warn?) — carried. Its **sector face reproduced**:
+  the KRX 금융 bucket's top-1 is **SK스퀘어 (154.66조, a semiconductor holdco)**, so "financials" numbers are
+  not banks' numbers; this run counted the **10 bank holdcos by hand** rather than using the bucket.
+
+# ═══ Part C — open digs, appended by `industry_kr` 2026-08-29 ═══
+
+> ID 3-grep at WRITE time: `D394-KR`–`D399-KR` **0 hits** outside this run's own output files.
+> Highest before this append: **`D393-KR`** (KR) / `D396` (US, separate namespace).
+> Written in **trigger form** (a prose rule does not fire while you work).
+
+## New this run — 6 digs
+
+- **`D394-KR` — a settle date must be a trading day. Check the weekday when you register it.**
+  **Trigger**: *you are writing a settle date into a pre-registered bracket.*
+  **Do**: confirm the weekday and that the named market is open; if it can land on a weekend or
+  holiday, write the **"first settled close on/after"** clause explicitly.
+  **Measured 2026-08-29**: `S103` was registered to settle **2026-08-29, a Saturday**. Its
+  `on/after` clause saved it (it now settles 08-31), but without that clause the row would have had
+  **no observable at all**. **Cost avoided by one sentence in the registration.**
+
+- **`D395-KR` — for a Yahoo-sourced KR series, "the row exists" and "the value exists" are different
+  facts. Count the last row's NaNs before you read any number off it.**
+  **Trigger**: *you are about to read `sector_flow` / `module_flow` / `module_chart` output for KR.*
+  **Do**: print **last-row Close-NaN count / total columns** first. **Volume can be alive while OHLC
+  is dead**, so a row-count check passes and tells you nothing.
+  **Measured 2026-08-29**: 08-28 Close NaN **831/833** with Volume NaN only **35**; the previous row
+  was 3/833. `sector_flow` returned `scored=0`, `module_chart` crashed on every KR ticker, and
+  **no tool said "no data"**.
+  **Prescription when it fires**: **truncate the phantom row and score the previous settled bar with
+  the native bench.** Do **not** reach for the 2026-08-22 fix (swap the bench to `069500.KS`) — that
+  day only the bench had died; when the *names* are dead a bench swap changes nothing.
+
+- **`D396-KR` — a revival/entry condition names a hand. Ask whether that hand is the one that
+  actually buys this name.**
+  **Trigger**: *you are writing `--revives-if` or `--enters-if`.*
+  **Do**: check the named actor against the name's own KIS investor split before you commit the
+  condition.
+  **Measured 2026-08-29**: `066970`'s condition demanded **foreign** net-buy; over the same window
+  foreign was **−149.6만**, institutions **+164.5만**, and the price ran **+22.9%**. The condition
+  **cannot fire on an institution-led move**, which is the modal move on a board the desk itself
+  records as *"13 of 15 candidates institution-only"*. Registered as contradiction **`C22`**;
+  changing the condition at scoring time would be `C5`, so it is a human item.
+
+- **`D397-KR` — the day's biggest event may not be a thread. Cross-check the selection list against
+  the fts axis before you fix it.**
+  **Trigger**: *you are finalising EVENT_ALPHA's thread selection.*
+  **Do**: take the core terms of MACRO's largest event, run `fts search --days 3 --count`, and if the
+  count ranks with your selected threads **but the event is not in the alive list, build a card for it
+  anyway** and record the detection gap.
+  **Measured 2026-08-29**: `반도체` AND `관세` returned **119 domestic articles / 3 days** — the named
+  cause of a **−1.79%** index session — and appeared as **no independent thread among the 29 alive**
+  (absorbed into the pre-existing semiconductor threads). **Without this rule the run's second card
+  would not exist.**
+
+- **`D398-KR` — run `module_report_tags ticker` before you write the word "discovery".**
+  **Trigger**: *you are about to label something "the run's biggest finding" / "new".*
+  **Do**: query the tag ledger on **three** of the candidate's tickers. If a prior run's file carries
+  the same claim, **relabel to "inherited + what is new", and say what is new in one line.**
+  **Measured 2026-08-29**: MACRO called the US semiconductor tariff the run's biggest discovery;
+  `module_report_tags ticker 047040` returned the **08-28 EVENT_ALPHA card 1** with substantially the
+  same title. ⇒ **`D379`, third reproduction.** ★ **Note this is NOT the `D379` prescription already
+  on file** — that one says PREFLIGHT should read `§5` first, and **this claim was never in `§5`**;
+  it was in yesterday's EVENT_ALPHA. **A retraction ledger does not cover un-retracted prior findings.**
+
+- **`D399-KR` — do not read `theme_age`'s AGE axis as event novelty. Recurring events are permanently old.**
+  **Trigger**: *you are about to write "no FRESH theme exists" or another `LIVE = 0` line.*
+  **Do**: report **acceleration separately from age**, and **query the run's actual largest event term
+  directly** rather than only the standing set.
+  **Measured 2026-08-29**: **all 14 themes queried returned `age >= 90`** — a FRESH gate requiring
+  `age <= 14d` therefore cannot fire on this board **by construction**, which is the whole of an
+  18-run "zero". Acceleration disagreed with the "quiet" reading entirely: **잭슨홀 33.47x**,
+  **AIDC 8.09x**, against the standing set's maximum **기준금리 3.81x** — an **8.8x** gap produced by
+  vocabulary choice. ⚠ Also measured: **a compound token can be silent while its parts are loud** —
+  `반도체관세` returns **base 0 / SILENT** while `반도체` AND `관세` returns **119**.
+
+## Status updates on carried digs
+
+- **`D371-KR`** — ✅ **CLOSED COMPLETELY.** The remaining split is measured, not chosen: a bare client
+  with no sweep running is cut at a **contiguous prefix of 11**, not ~102, and recovers **~93s** after
+  the burst stops (`M1027`). ⇒ **the "fixed request quota" arm is refuted**; a rate-dependent sticky
+  ban survives. **What is now a human item is the transport itself**, since 826 names at ~11 per
+  90-second window is ≈1.9 hours.
+- **`D370-KR` / `M959`** — 🚨 **consequential half RETRACTED as `R109`.** The 10-row cap is a display
+  limit; `--investor N`'s cumulative line honours N (`M1028`).
+- **`D379`** — 🚨 **3rd reproduction, and the prescription on file would not have caught it** (see
+  `D398-KR`). The existing prescription (PREFLIGHT reads `§5` first) remains **unimplemented** for a
+  3rd run **and is now known to be insufficient** — the duplicated claim lived in a prior run's
+  EVENT_ALPHA, not in the retraction ledger.
+- **`D347-KR`** — held: fuzzy-dated rows enumerated by name this run (`S3` · `S4` · `S8`). **`S8` is
+  unscoreable for a 30th run.**
+- **`D360-KR`** (DART "기타 주요사항" bodies unread) — **carried, and it bit twice**: every
+  `module_disclosure` detail pass returned **0 parsed bodies**, so (i) construction order *values* are
+  `unknown` (only counts: `047040` 13 / `375500` 11 / `028050` 6 / `000720` 4 in 60 days) and
+  (ii) `005930`'s contract form is still `unknown` while `000660`'s was answered 8 days ago.
+- **`D391-KR`** — held and honoured: KR catalysts were built from `brief --date 2026-08-28` plus the
+  manual carry table, **not** from `catalyst_calendar`, which again carried **zero KR rows**.
+- **`D392-KR`** — reproduced **at maximum strength**: the 전력·원전 bucket's four terms return **21**
+  on the same day `AIDC` alone returns **245** — **11.7x**, up from 6.2x on 08-28. Two terms added
+  this run (`AX` 184 articles/3d; and the tariff pair, **as `반도체` + `관세`, not as a compound**).
+- **`D393-KR`** — honoured: `SCENARIOS.md`'s scoring log tail was read before writing anything about a
+  sibling desk's row, which is how `S103`'s weekend settle date was caught rather than mis-reported as
+  "handed forward".
+
+
+## Part C — dig list, rows appended 2026-08-30 by the `industry_US` run
+
+> Positive form, per the desk's own rule: a dig is written as **what to do**, not as what went wrong.
+
+| id | dig (positive form) | why it exists — the measured failure |
+|---|---|---|
+| **`D411`** | *G1's news-liveness probe reports a **same-day** count, not only a 7-day count.* ⚠ **Superseded within the same run by `D418`** — a same-day `fts` count is a **remote** call and would have looked healthy. Kept in the list so the superseded prescription is visible next to its replacement | a 7-day count is dominated by its populated days and cannot see an empty tail |
+| **`D418`** | ★ *G1 compares the **client mirror's cursor** (`embed status`) against the **remote index's** newest article date, and the run does not read `brief`/`thread` until that gap is closed.* | `M1104`: the mirror was **38 hours** stale, and **every probe this run ran queried the healthy side** — four separate liveness checks all passed while `brief` returned 3 articles for a day that held 1,676 |
+| **`D412`** | *The next run logs, for 20 sampled names, `(rank, base_article_count, velocity_returned?)` and reports the correlation* | the sweep's velocity survivors are **not** a contiguous rank prefix (index 8…298, scattered) and **5/5 failed names answered on direct query** ⇒ neither `R103` nor its replacement describes the data; the survivors look selected by article volume |
+| **`D413`** | *A row whose threshold sits inside the **cross-provider spread** of its own observable says so at registration and states the tie-break rule* | `BZ=F` and FRED's `DCOILBRENTEU` were **2.53 apart on 2026-08-21** (94.39 vs **96.92**) — straddling `P107`'s branch-B line of 96.00. **One word in the registration ("`BZ=F`") is the entire difference between "neither leg touched" and "branch B fired"** |
+| **`D414`** | *A thread whose members' **subjects** differ while their **title syntax** matches is flagged before selection* | **two of eight** selected threads were format clusters wearing subject headlines (a `seekingalpha` guidance-recap template naming NVDA whose 08-28 member was Luxshare; a Zacks-style auto-title naming MU whose members were ACN/NEM/BlackBerry). Both would have produced cards naming a company the thread was not about |
+| **`D415`** | ★★ *A run states **which book** it is reading, and reconciles `module_paper_book` against the real KIS account before any exposure or coverage verdict* | `M1098`: the two books differ on **6 of 13** US names. `PREFLIGHT G5` passed 11/11 against the **paper** book while `cycle_exposure` audited the **real** account — and **`T`, ~13.6% of real invested capital, had no thesis, no cycle row and no flow tag in any artifact** |
+| **`D416`** | *AI-power/grid gets its own ranked cycle row with an epicenter tier, or the registry states explicitly that it is permanently subordinate to AI-compute* | it is listed only as **adjacent**, so **"0% core in AI-power" is not a statement this desk's instruments can make** |
+| **`D417`** | *A filing-read that **contradicts a recorded desk finding** names the filing's period and checks whether a later filing supersedes it, before the contradiction is reported as a discovery* | `R111`: the IT DEEP re-derived `MU`'s pre-change contracting regime from the **FY2025 10-K** and reported it as new — the very document `RESEARCH.md` names as superseded by the FY26Q3 10-Q |
+| **`D419`** | ★ *A subagent-registered instrument defect is **re-derived from the artifact the agent cited** before it is written to the ledger — agent findings enter as **claims**, not as measurements* | **three of five** DEEP agents produced a factual error of this class in one run (mislabelled denominator, superseded filing, **an invented defect that did not exist**). All three were catchable in one grep because each agent honestly cited its source |
+| **`D420`** | *A settle date **derived from** a catalyst date is re-checked against the **issuer's own** calendar before the row arms* | `module_fundamentals_us` and `yfinance` both put `AVGO`'s print at **09-03**; `catalyst_calendar` carries **09-02**, and **`S132` (ARMED) settles 09-03** on that basis ⇒ its observable may measure the session **before** the information. Same class as `R106` (July PCE), retracted eight days earlier |
+| **`D421`** | *The ticket generator's "nearest binary" line and its in-window test use the same window* | `action_bracket.py` printed *"Nearest binary: AVGO earnings (D-3) — both-sides armed below"* and *"No tickets — no dated binary in window"* **in the same output, for the second consecutive run** |
+| **`D422`** | *The drift check runs against **the later of (report completion − 24h, the last populated news day)**, not against completion alone* | `drift_watch` anchors its window to the report's completion stamp, so on a run finishing at 23:32 it watched **0.4h** and **excluded the entire session the report is about** — which is where `M1108` (the Venezuela state change, 9 outlets) actually sat |
+
+**Carried, unmet, with their run counts**: `D250` optical registry row — **15th run** ·
+`D295` — ✅ **CLOSED this run** (the straddle chain spanning the 09-02 print was read directly:
+`AVGO` 09-04 expiry, K=367.5, straddle 29.83, **implied ±8.09%**, OI 645c/354p, against a 6.21%
+5-session realised sigma) · `D333` `DTWEXBGS` lag — **12th reproduction and now 9 days, widening**,
+and the first run where the lag demonstrably hides a **direction** (five outlets reported a weekly
+dollar gain while the series sat near a yearly low) · `D394` — the standing-view writeback missed
+**three** consecutive US runs (08-27, 08-28, 08-29) while the scoring half landed; **this run verifies
+both targets separately** · `D395` — the `vol_surge` IC ledger is still **`market=kr`** (verified by
+`ic_ledger log` printing `총 1014행 · market=kr`), so no US gate change may be discussed (`W1`) ·
+`S8` — unscoreable for a **32nd** run, needs a human `VOID` or a date (P5).
+
+---
+
+# ═══ Part C · DIG LIST — appended 2026-08-31 by the `industry_kr` run (append-only) ═══
+
+> ⚠ **ID 3-grep at WRITE time** across `handoff/*.md` · `llm_outputs/2026-08-2*` · `REPORT/`:
+> `D400-KR`~`D402-KR` · `D423`~`D425` → **0 hits**. 직전 최고 `D399-KR` · `D422`.
+> 전부 **트리거 형식** — 산문 규칙은 일하는 중에 발화하지 않는다.
+
+## New this run — 6 digs
+
+- **`D400-KR` — 관측 시각은 기억이 아니라 파일 mtime 에서 복원한다.**
+  **트리거**: *리포트에 「+N분」·「먼저/나중」 같은 시간 순서를 적고 있다.*
+  **하라**: 산출 파일·로그의 **mtime 을 직접 찍어** 표를 세운다. **명령 실행 순서와 결과 도착 순서는 다르다**
+  (백그라운드·재시도가 섞이면 특히).
+  **실측 2026-08-31**: 이 런의 PREFLIGHT G1 이 프로브 4회를 「0/4 → 4/4 → 0/4 = **점멸**」로 적었으나,
+  `_sweep_json.log` mtime(**08:23:11**) 기준으로 복원하니 **0/4 → 0/4 → 4/4 → 2/2 = 단조 회복**이었다.
+  **틀린 결론(점멸)이 틀린 처방(「쿼리 직전마다 프로브」)까지 낳을 뻔했다.** 회수는 `R114`.
+
+- **`D401-KR` — 보유 종목의 날짜 박힌 자본구조 이벤트에는 브래킷을 붙여라. 안 붙이면 어떤 정산 표에도 안 잡힌다.**
+  **트리거**: *증자·상장·감자·분할·CB 만기처럼 날짜가 확정된 자본구조 이벤트를 발견했다.*
+  **하라**: `SCENARIOS_{시장}.md` 에 **관측면과 임계값이 있는 행**으로 등록한다.
+  **등록부(`STANDING_VIEW §3b`)의 산문 한 줄은 정산 표가 읽지 않는다.**
+  **실측 2026-08-31**: 보유 이름 `316140` 의 **신주 8,697,000주 추가상장이 오늘**인데
+  `SCENARIOS_KR.md` 의 `08-31` grep 은 **0건**이었고, `catalyst_calendar --days 5` 도 **0행**이었다.
+  ✅ **같은 런에서 `S69-KR` 로 이행 완료** — dig 를 내고 같은 런에서 닫았다.
+
+- **`D402-KR` — 정산일이 같아도 시장이 다르면 어느 데스크가 채점할 수 있는지가 다르다. 등록 시 「누가 언제」를 적어라.**
+  **트리거**: *`SCENARIOS` 행에 정산일을 쓰고 있고 관측면이 다른 시장의 종가다.*
+  **하라**: 정산일 옆에 **관측 가능해지는 KST 시각**을 적는다(US 종가 = 익일 새벽 KST).
+  **실측 2026-08-31**: US 소유 **`S92`·`S94`·`S103`·`S112`** 넷이 전부 **오늘 정산**인데, KR 데스크는
+  **아침 08:17~09:2x 에 돌아 넷 다 채점할 수 없었다.** **`D394-KR` 은 이 갈래를 못 덮는다** —
+  **날짜는 거래일이 맞고, 어긋난 것은 시간대다.**
+
+- **`D423` — 같은 티커라도 조회 창(`period`)을 바꾸면 「마지막 날짜」가 바뀐다. 인덱스 끝 날짜를 찍고 써라.**
+  **트리거**: *yfinance 계열로 지수·티커의 최신 종가를 읽으려 한다.*
+  **하라**: **시계열의 인덱스 끝 날짜를 먼저 출력**하고, 기대한 거래일과 다르면 **다른 창으로 재조회**한다.
+  **실측 2026-08-31**: `^KS200` 을 **7일 창**으로 부르면 **2026-08-28 = 1,065.70** 이 있고,
+  **3개월 창**으로 부르면 **시계열이 2026-07-16 에서 끝난다**(08-28 없음). **같은 티커, 같은 날, 두 답.**
+  ⚠ **이 결함이 선물 베이시스의 부호를 뒤집을 뻔했다**: `069500.KS`÷100 기준 **−3.80(백워데이션)** vs
+  `^KS200` 기준 **+2.30(콘탱고)**. **KIS 선물 이론가(1,066.81)가 심판을 봤다**(`M1109`).
+  ★ **일반형**: `D395-KR`(마지막 행 NaN 세기)의 형제 — **「값이 NaN 인가」 뿐 아니라 「행이 있는가」도 물어라.**
+
+- **`D424` — `top1_flips_sign=False` 는 「top1 이 부호의 주인」이라는 뜻이 아니다. top1 자신의 부호를 따로 봐라.**
+  **트리거**: *ROTATION/DEEP 에서 플리퍼 가드를 통과한 버킷의 `wflow` 를 쓰려 한다.*
+  **하라**: **`top1` 자신의 `flow_score` 부호**를 확인한다. `flip=False` **이면서 top1 이 음수**이면
+  **버킷의 양(+)은 top1 이 아니라 2~n위가 만든 것**이고, **현행 가드는 그 경우를 잡지 못한다.**
+  **실측 2026-08-31**: 금속 `wflow` **+0.225** · `flip=False` · **ex-top1 +0.363(더 크다)** —
+  이유는 **top1 POSCO홀딩스의 flow 가 −0.094 이기 때문**이다. 양(+)을 만든 것은 **고려아연(+0.944)**.
+  ⇒ 가드는 통과했지만 「시총가중은 한 이름 이야기」라는 경고가 **반대 방향으로** 필요했다(`M1118`).
+
+- **`D425` — 2글자 한국어 텀은 `fts` 가 아니라 `theme-age` 로 센다.**
+  **트리거**: *검색어가 2글자 한국어이고 `fts search … --kr` 이 0 을 돌려줬다.*
+  **하라**: 같은 텀을 **`theme-age "<텀>" --scope domestic`** 으로 다시 물어라. base 가 0 이 아니면
+  **fts 의 0 은 trigram 아티팩트**이고, **그 base·accel 로 판정한다.**
+  **실측 2026-08-31**: `건설` fts **0** vs theme-age base **3,962 / accel 2.14x 🟡ACCELERATING** ·
+  `관세` **0 vs 5,826**(0.98x ⚪ECHO) · `방산` **0 vs 2,159**(0.93x ⚪ECHO) · `환율` vs **12,138** ·
+  `금리` vs **11,997**. **세 텀 모두 이 런의 판정에 직접 쓰이는 텀이었다.**
+  ★ **이것은 새 도구가 아니라 이미 있던 도구를 다른 텀에 겨눈 것이다** — 이 파일이 이미 담고 있는
+  *"한 섹터에서 하중을 지는 프레임을 다른 포지션에 겨눠라"* 의 **계기 버전**.
+
+## Status updates on carried digs
+- **`D379`** — 🚨 **4런째 미적용.** 처방(PREFLIGHT 가 `§5` 를 먼저 읽는다) 여전히 미배선.
+  다만 **`D398-KR` 처방(발견 라벨 전 `module_report_tags` 조회)은 이행했고 값을 했다** —
+  오늘의 RS 정렬 발견을 **`M1029`(08-29)의 형제로 강등**했다(초발 아님).
+- **`D395-KR`** — ⚠ **오늘은 발화하지 않았다**(마지막 행 Close NaN **4/833** = 평상시). **그러나 같은 클래스가
+  형태를 바꿔 벤치에서 나왔다**(행 자체가 없음) ⇒ **`D423` 이 그 확장이다.**
+- **`D371-KR`** — 종결 상태 유지. 오늘 재현으로 **쿨다운 길이가 상수가 아님**이 추가됐다(**~100초 → ~3분**, 표본 2).
+- **`D391-KR`** — 오늘도 구속됐다: `catalyst_calendar --days 5` 가 **KR 고유 행 0개**
+  (MSCI 리뷰만 STRUCTURAL). **`316140` 추가상장은 잡히지 않았다** ⇒ `D401-KR` 의 근거.
+- **`D392-KR`** — 고정셋에 **`주주배정`·`인적분할`·`MLCC`·`CXMT`·`추가상장`** 5개 추가. `CPTPP` 는 08-31 발화.
+- **`D360-KR`** — 운반, **오늘 두 번 물었다**: `316140` 신탁 집행 진도 `unknown` · `375500` 정정 공시 4건 금액 `unknown`.
+- **`D396-KR`/`C22`** — 운반. 오늘 원장 도래 0건이라 새 표본 없음.
+- **`D399-KR`** — **오늘 정면으로 확인됐다**: `theme_age` 의 `age` 축이 **조회한 11텀 전부 `>=90`** ⇒
+  **FRESH(≤14d) 게이트는 이 보드에서 산술적으로 발화 불가**(19런째 0). **가속만 따로 읽었다**
+  (잭슨홀 **13.33x** ≫ 건설 2.14x ≫ 금리 1.67x).
+- **`D397-KR`** — **2번째 재현이자 이행**: MACRO 최대 사건(`반도체`+`관세`, LIKE AND d7 **128**)이
+  **살아있는 27 스레드에 독립 스레드로 없었다** ⇒ 처방대로 **카드를 만들었다**(EVENT_ALPHA 카드 4).
+
+---
+
+# ═══ Part C · DIG LIST — appended 2026-08-31 by the `industry_US` run (append-only) ═══
+
+> ⚠ **ID 3-grep at WRITE time** across `handoff/*.md` · `REPORT/` · `llm_outputs/2026-08-2*/`:
+> `D426`–`D439` → **0 hits**. Highest existing `D425` (2026-08-31 KR).
+> Every dig is written in **positive form — what to do**, not what went wrong.
+
+## New this run — 14 digs
+
+- **`D426`** — ★★ *A scenario observing date **D**'s US close is registered to settle **D+1**, with the
+  KST hour at which it becomes observable written beside the date.*
+  **Measured**: this desk fires at **KST 22:09 = ET 09:09, pre-open**. **Seven rows**
+  (`S92`·`S94`·`S103`·`S104`·`S112`·`S124`·`S131`) all sat "due today" and **none could be read**,
+  including the run's own mandatory 48h bracket. US-side twin of `D402-KR`.
+
+- **`D427`** — *A row requiring **two** FRED series on the same date checks whether they publish
+  together, and names a fallback if one is derived from the other.*
+  **Measured**: `T10YIE` carries **08-28** while `DGS10` and `DFII10` — **the two series it is
+  computed from** — stop at 08-27. `S120` needs `DGS30` **and** `T10YIE` together and is blocked for a
+  2nd run by exactly this split.
+
+- **`D428`** — ★★ *Before a US gate is changed on an axis result, the run states which market's
+  `ic_ledger` produced it; a KR-only cell may be reported but may not move a US gate.*
+  **Measured**: **`vol_surge` h=1 cleared Bonferroni for the first time** (n 40, `n_eff` 40.0, mean IC
+  −0.0400, **t(NW) −3.32** vs the 2.8 bar) — the first axis result strong enough to act on — **and the
+  ledger is `market=kr`.** Escalates `D395` from a note to a **block**.
+
+- **`D429`** — *A ghost/void bar that survives **two** runs is recorded as a standing hole with a
+  patch-at-the-reader prescription, not carried a third time as a transient.*
+  **Measured**: the 08-28 `Close = NaN` survived a full weekend, **301/301**, and the second run's
+  honest response was still to **rebuild the same scratch patch from zero**.
+
+- **`D430`** — *A run reporting "0 scored" states, on the same line, how many rows were **not due** vs
+  **blocked** vs **unscoreable** — a bare zero cannot be told apart from a skip.*
+  **Measured**: two consecutive zero-scoring runs; today's composition is **7 / 5 / 1**, and that
+  breakdown is the informative part.
+
+- **`D431`** — *FRED staleness is checked **per series**, not per release.*
+  **Measured, one pull**: `SP500`/`NASDAQCOM`/`T10YIE` at **08-28**; the whole H.15 rate family,
+  `VIXCLS` and both OAS series at **08-27**; `DTWEXBGS` at **08-21 (10 days)**; `DCOILBRENTEU` at
+  **08-25 (6 days)**. **A row can be blocked indefinitely by whichever leg publishes slowest.**
+
+- **`D432`** — ★★ *A row whose observable is a **front-month futures contract** names the roll
+  convention at registration, or uses a roll-immune series (`DCOILBRENTEU`/`DCOILWTICO` spot).*
+  **Measured**: Brent−WTI moved **5.91 → 2.61 in one session** against a 60-day range of 2.40–8.50
+  while WTI rose on a military escalation ⇒ a **`BZ=F` front-month roll**. **`P107` and `P117` are
+  both keyed to `BZ=F`** and a −3.30 level shift is **~48% of `P117`'s lower band**. `D413`'s sibling:
+  that one was two providers disagreeing about one barrel; **this one is one provider's series meaning
+  a different barrel from one day to the next.**
+
+- **`D433`** — *When `brief`'s head layer ranks an event top-3 and no `thread` carries it with a rising
+  curve, check whether the linkage fragmented it before recording a `FADING`/`ENDED` verdict on that
+  subject.*
+  **Measured**: Iran/Hormuz was **#1 in `brief` (16 outlets / 28 articles of 344 events)** and tagged
+  **FADING** in `thread`, because the story split across 3+ threads.
+
+- **`D434`** — *A stage that specifies a **parallel fan-out** and is executed **serially** says so in
+  its own output and states what independence was lost.*
+  **Measured**: PREMORTEM's four lenses and DEEP's four sector files were written **in-context**, not
+  by subagents. The structure was preserved (four named adversarial lenses, each required to land on a
+  number contradicting the draft tilt); **what was lost is independence — four lenses run by one
+  author share one prior.**
+
+- **`D435`** — ★ *The DEEP selection rule is stated to be reachable by every sector, or the sectors it
+  structurally cannot reach are named with their recency gap each run.*
+  **Measured**: **Utilities is rank 11/11 on `eqflow` (−0.524) with the board's worst red-rate (66.7%)
+  and a 6-run recency gap — the longest on the board — and it is unreachable because UW sectors do not
+  take DEEP slots**, while slots go to sectors covered 0–1 runs ago. **2nd consecutive run.** ⇒ `C26`.
+
+- **`D436`** — ★★ *A held name's 90-day filing list is read for **corporate-action forms (425 / S-4 /
+  DEFM14A)**, not only for 8-K/10-Q.*
+  **Measured**: `ETN` filed **six Form 425s** (five on 2026-06-11, one 07-31) plus a Form 3 —
+  disclosing an **$11bn combination of Mobility Group with Dana Incorporated, completing Q1 2027** —
+  **while the four 8-K categories a desk normally reads (2.02 / 7.01 / 3.02 / 5.02) were all EMPTY.**
+  The deal was **eleven weeks old** and appeared in **zero** desk artifacts, on a name held in both
+  books and listed in the cycle registry.
+
+- **`D437`** — *A run citing a sector **Δ** attributes it the same way it attributes a **level**.*
+  **Measured**: `top1_flips_sign` is computed on `wflow` only. **Materials reads `False`** (level
+  +0.225 → ex-`LIN` +0.233, sign holds) **while `LIN` is 51.4% of the sector's Δ**, and `FCX`/`NEM` —
+  the names the prior run identified as "the signal" — **contributed negatively**. The guard is silent
+  on the axis being cited. The `D424` family, extended from level to change.
+
+- **`D438`** — *A screener whose loader drops NaN rows reports its own series' **last-bar date and gap
+  count**.*
+  **Measured**: `us_setup_screener.py:105` (`dropna(subset=["close"])`) **deletes the 08-28 void bar**
+  while the 13-month download **appends a live 08-31 bar**. `NUE` and `LLY` both see
+  **08-25 · 08-26 · 08-27 · 08-31**. **Dropping a void bar and appending a live bar cancel in the row
+  count and compound in the value** — worse than `C21`'s "computed to 08-27".
+
+- **`D439`** — ★ *A recovery path is validated on the **full n=24 set** before it is called a path — a
+  single liquid name will agree with almost anything.*
+  **Measured**: `fast_info.previousClose` matched the 5m proxy to **0.004%** on `SPY`. On the full set:
+  **mean 0.394%, max 3.208% (`XLU`), 17 of 24 above 0.05%.** ⇒ `R115`.
+
+## Status updates on carried digs
+
+- **`D250`** (optical registry row) — **16th run, and NARROWED for the first time**: `LITE` and `COHR`
+  **are** in `us_top300`, so this is a **`cycle_registry.json` gap, not a universe gap** — the fix is
+  **one registry row**, not a universe rebuild. ★ **And it is no longer only a dig**: **`S137`**
+  (registered this run, settles 09-09) measures the question directly, and **its branch B would CLOSE
+  the dig as not-a-gap.**
+- **`D333`** (`DTWEXBGS` lag) — **13th reproduction, now 10 days and still widening.** `P97` unreadable
+  again; `Dollar` ranked **459** in the blind-spot pass the same day.
+- **`D411`** (same-day news count) — ✅ **EXECUTED this run, and it changed the reading** (`M1139`):
+  the 7d/30d column called Hormuz "decaying" (0.90) while the same-day column read **1.30× its own
+  7-day average** and `Larak` printed **91 of 100 thirty-day articles in one day**. **Adopted
+  permanently.**
+- **`D418`** (mirror-cursor gate) — **partially executed**: cursor read **2026-08-31T08:03:31** (14 h
+  stale, set by the morning KR run) and **`embed sync` was run before any `brief`/`thread` call** —
+  the step `R110` says the 08-30 run skipped — pulling **5,363 received / 5,346 newly embedded**
+  (543,000 total, cursor now 2026-08-31T22:07:10). ⚠ **The gate's other half — comparing against the
+  remote index's newest article date — is still not automated.**
+- **`D419`** (re-derive a subagent's claim from its own artifact) — ✅ **applied inward this run**: the
+  author's own draft produced **two** claims that died on re-derivation (`R115`, `R116`), both appended
+  rather than edited away.
+- **`D420`** (`AVGO` 09-02 vs 09-03) — **still open, and `S132` is ARMED on the disputed date.**
+- **`D421`** (`action_bracket` window mismatch) — 🚨 **3rd consecutive reproduction**: the script printed
+  *"Nearest binary: AVGO earnings (D-2) — both-sides armed below"* **and** *"no dated binary in
+  window"* four lines apart, in one output.
+- **`D422`** (`drift_watch` anchor) — **binding again**: the watch window was **0.6h**, so the report's
+  own subject (the 08-30/31 escalation) sat **outside** it by construction. The 🚨 items it did catch
+  were body-read anyway.
+- **`D424`** (KR-registered today) — ✅ **applied to the US board on its first run and it caught a case
+  the flip guard cannot**: **Health Care does NOT flip yet `wflow` +0.021 vs ex-`LLY` +0.095** — the
+  top-1 **drags** a broader positive. Mirror case **Real Estate** (−0.338 → −0.415 without `WELL`: the
+  top-1 **holds it up**); **Consumer Staples** is the `LLY` shape again (−0.264 → −0.130 without `WMT`).
+- **`D415`** (two books) — **reproduced with fresh numbers**, now with the cash figure attached
+  (`M1130`): **53.0% cash on the real book vs 85.3% invested on the exposure ledger.** Human call.
+- **`D416`** (AI-power ranked cycle row) — **carried, and this run measured what the missing row hides**:
+  the AI-power block is **eight names across two GICS sectors, seven of them distributing**, and
+  **27.4% of Industrials' entire one-day deterioration**. *"0% exposure to AI-power"* remains a
+  sentence this desk's instruments cannot produce.
+- **`D394`** (standing-view writeback) — ✅ **both halves verified separately this run** (spine §5/§6 +
+  asof chain; `STANDING_VIEW_US.md` §2/§3a).
+- **`D395`** — **superseded by `D428`**: it is no longer "the ledger is still KR-only", it is "the
+  KR-only ledger is now blocking a result that has actually arrived".
+- **`D379`** (PREFLIGHT reads §5 first) — 🚨 **5th run unwired.**
+- **`D412`** (rank vs velocity-coverage correlation) — **unaddressed**; today's 8/8 direct probe is a
+  **3rd reproduction of the underlying fact** (the sweep's failures answer normally on direct query).
+- **`D413`** (threshold inside a cross-provider spread) — **carried, and its tie-break could not be run
+  today**: `P117` registered `DCOILBRENTEU` as the arbitrating leg and **that series is 6 days stale**.
+- **`S8`** — **33rd run unscoreable**; needs a human `VOID` or a date (P5).
+
+---
+
+## Part C dig list — appended by the 2026-09-01 `industry_kr` run
+
+### `D440-KR` — Re-measure the alignment-bias correction every run; never inherit yesterday's constant.
+**Fires when**: yesterday's report states *"axis X carries a +N pp bias / axis Y is unaffected"* and the
+same instrument defect is still live today.
+**Do**: re-run the full-universe census against today's cache. **How many sessions the legs are apart
+decides WHICH axis is contaminated**, not merely how much.
+**Measured 2026-09-01**: at a 1-session misalignment (08-31) the cost was `rs60` **+2.2pp** with `rs20`
+**unaffected** (median 0.0, 49.1% positive). At **2 sessions** (today) it is `rs20` **−4.16pp**
+(18.6% positive) and `rs60` **+1.63pp** — **the damaged axis swapped**. Reusing yesterday's constant
+would have applied **0.0** to the axis that had moved 4.16pp, i.e. **wrong in sign as well as size**
+(`R117`).
+
+### `D441-KR` — A tool that keys its history on `asof` overwrites yesterday's baseline when `asof` stalls.
+**Fires when**: a snapshot-writing tool reports the **same `asof` as the previous run**.
+**Do**: check whether the key already exists before writing; if it does, **do not overwrite — put the
+data vintage in the key**. Until that is fixed, **bar all Δ citations for the run**.
+**Measured 2026-09-01**: `history_kr.json` is keyed on `asof` (`sector_flow.py:287`). Yesterday's and
+today's runs **both carry `asof=08-27`**, so today clobbered yesterday's snapshot; only **89 of 806**
+`flow_score` values are identical between them. `prev_snapshot` (`:296`) then re-selected **08-26**, so
+the emitted Δ (**763/806 non-zero, median |Δ| 0.289**) is labelled a one-session move while actually
+spanning **08-26 data vs 08-31 data**. ⚠ Downstream of the bench stalling — **fixing it is a human item (P5)**.
+
+### `D442-KR` — When an axis the desk weights POSITIVELY clears multiple-comparison correction with a NEGATIVE IC, escalate to a human.
+**Fires when**: any `ic_ledger score` cell has `n_eff ≥ 4` **and** `|t(NW)| > 2.8`.
+**Do**: check the axis's **sign inside the scoring formula**. If it disagrees, **raise it as a human
+decision item — a stage does not flip its own gate (P5)**. Label the window's regime with it.
+**Measured 2026-09-01**: `vol_surge` at `h=1` reads **n=40 · n_eff=40.0 · mean IC −0.0400 · t(NW) −3.32**
+against the 21-test Bonferroni threshold **|t| > 2.8** — its first pass. `sector_flow` carries the axis as
+`clip((surge − 1.0)/0.6)`, i.e. **positive**, and it is one of only three axes alive on a run whose news
+axis is dead. Agrees independently with **`M224`**. ⚠ **Regime: the 40-observation window contains Jackson
+Hole, the July PCE print and the BOK hike — not generalized to normal tape.**
+
+### `D443-KR` — Make the branch partition exhaustive, and let one row name only one window.
+**Fires when**: you are writing a bracket/proposition and either (i) a branch contains an `AND`, or
+(ii) the row carries **both** a session-count phrase and an explicit date window.
+**Do**: (i) after adding a conjunction, add the branch for **"the conjunction broke"** — `S92` has its
+*"D = none of the above"*, and that is the shape. (ii) keep **one** window descriptor; delete the other.
+(iii) Additionally: **an anti-signal stated in relative terms may not adopt a branch whose premise is
+absolute.**
+**Measured 2026-09-01 — four instances in one run**:
+- **`S94`**: excess **+5.0505pp** (> +3pp) but `vol_surge` broke on both names (**0.88 / 0.78**) ⇒ A fails,
+  B (< −3pp) fails, C (±3pp) fails ⇒ **no branch covers the realized state**.
+- **`S103`**: *"5-session excess"* gives 08-24→08-31 = **+5.4309pp = branch A**; the explicit window
+  *"08-25 close → 08-29 close"* gives **+3.4794pp = branch C**. **One row, two answers.**
+- **`M-118`**: anti-signal ① is **relative** (*"both beat −1.0pp vs the index"*) and fired, but the branch
+  it instructs you to adopt has an **absolute** premise (*"the index falls broadly"*) that did not hold ⇒
+  the proposition died in **one session** (`R118`).
+- **`M-117`** (08-31): a raw article-count threshold that never counted the **market holidays inside its
+  own window**.
+
+### `D444-KR` — On a price-cycle node, take the margin percentile down to the quarterly series.
+**Fires when**: you are about to call a commodity/price-cycle name cheap or expensive using a **gross-margin
+percentile**, and the series you have is **annual**.
+**Do**: run `margin_history <code> --quarterly` alongside it and **check that both series say the same thing.**
+The fiscal year is slower than the cycle.
+**Measured 2026-09-01**: `096770` SK이노베이션 reads **FY2025 5.4% = the 18th percentile of 11 years (trough)**
+on the annual series and **2026Q2 15.6% = the all-time high** on the quarterly one. `010950` S-Oil reads
+FY2025 **3.0% (9th pct)** annually versus **2026Q1 16.2% → 2026Q2 10.4%** quarterly (median 6.8%).
+**The annual series ends 2025-12 and the crack expansion begins 2026Q1 — reading only the annual inverts
+the verdict.** The KR protocol delta requires a margin percentile with every "cheap" claim; **on a
+price-cycle node that percentile must be quarterly.**
+
+### Carried dig status — updated 2026-09-01
+- **`D379`** (PREFLIGHT reads §5 before it is written) — 🚨 **6th run unwired.** Self-declared again.
+- **`D395-KR`** — 🚩 **the proposed extension was exactly what was needed today and is still unwired.**
+  The "last-row NaN ratio" test did **not** fire (6/833 = normal), while the defect sat in **the index end
+  date** (the bench stopped at 08-27). Extend the trigger to *"last-row NaN ratio **AND** whether the
+  index end date equals the expected trading day"*.
+- **`D371-KR`** — closed status held; **cooldown sample now 3 and it is not a constant**: ~100s (08-30) →
+  ~3min (08-31) → **~68s (09-01)**. *"Wait N minutes"* still cannot be written.
+- **`D391-KR`** — **two reproductions today**: the September quadruple witching (**final trading date
+  2026-09-10, D-9**) is absent from `CATALYST_WATCH`'s STRUCTURAL bucket, and the **KR August trade
+  statistics released 2026-09-01** carry no row at all.
+- **`D398-KR`** — ✅ **executed and it paid**: the registry was queried before labelling today's G2 finding,
+  which demoted it to the third face of `M1029`/`M1110` and promoted **only** the `asof` label collision.
+- **`D400-KR`** — ✅ executed: the G1 probe table was built from JSON/log mtimes, not from recall.
+- **`D402-KR`** — ✅ **paid off from the other side today**: five US-owned rows settling on the previous US
+  close were scored by the KST-morning KR run (`M1148`).
+- **`D423`** — **downgraded from "unstable" to "unusable"**: `^KS200` now returns **one row** for
+  `period='7d'` and `'1mo'`, and `'3mo'` ends 2026-07-16. The KIS path replaces it (`M1151`).
+- **`D360-KR`** — carried and now **load-bearing**: `005930`/`000660` contract terms have never been read,
+  so no margin-reversion claim may be made in either direction (`C3`). Action:
+  `module_disclosure <code> --business-report`.
+- **`D9` (sector face)** — reproduced in ENRG: **`078930` GS, `010060` OCI홀딩스 and `267250` HD현대 are all
+  classified 금융** (holdcos), so the 화학 bucket's `eqflow` is computed **without one of the three refiners**.
+- **`S8`** — **32nd run unscoreable (KR count)**; needs a human `VOID` or a date (P5). **`S94` joins the same
+  class by a different route** — its branches are not exhaustive rather than its date being blank.
+
+
+---
+
+# Part C · dig list — appended by `industry_US`, 2026-09-01
+
+> Written in the **positive form** (what to do), not as a prohibition. Each carries the measurement
+> that produced it, so the next run can tell a rule from an opinion.
+
+## New this run
+
+| id | dig (positive form) | measured origin |
+|---|---|---|
+| **`D446`** | ★★★ *An axis computed over a rolling window states **how many bars of that window are actually present, per name**, beside its value.* | `M1162`: the OBV axis silently assigned **direction zero to the two most recent sessions** for **259 of 301** names — `np.sign(close.diff())` is NaN at both 08-28 and 08-31 when the prior close is missing — and **every one still printed a number**. Measured consequence: `obv_norm` shifted **0.065 mean / 0.404 max**, with a **29% label-flip rate** and **17% sign-flip rate** on the 42-name control |
+| **`D459`** | ★★★ *The one-name concentration guard is applied **per ISSUER, not per row** — dual-class and dual-listed tickers are collapsed before `top1_w` and `wflow_ex_top1` are computed.* | `M1206`: `GOOGL` 38.3% + `GOOG` 38.3% = **76.6% of Communication Services under two tickers**. The guard removes only the largest **row**, so `wflow` reads **−0.547 → ex-`GOOGL` −0.404** and prints `top1_flips_sign: False`, while **ex-both-classes it is +0.144** — a sign flip the instrument cannot see. Any dual-class issuer in `us_top300` defeats it the same way |
+| **`D460`** | ★★★ *When a composite score's sign is carried by a **single axis**, the run names that axis **and that axis's own measured IC sign** before the composite is used as evidence.* | `M1208`/`M1209`: IT's `eqflow` −0.014 = (OBV **+0.168** + RS20 **+0.142** + SURGE **−0.353**)/3, and the universe reads OBV +0.034 / RS20 −0.079 / **SURGE −0.326** with **median `vol_surge` 0.77**. The axis carrying the whole board's sign is the one `ic_ledger` scores **t(NW) −3.51, the only Bonferroni-passing cell**, with a **negative** sign |
+| **`D463`** | ★★★ *Before ALPHA issues a freshness tag, each candidate is checked against the ledger's **standing** rejections (`reject_ledger list`), not only against `due`.* `due` answers *"what is owed a re-check"*; it does **not** answer *"is this name currently rejected."* | `M1219`: this run tagged **`CRM`** and **`INTU`** 🟡PARTIAL while both carried standing 08-31 rejections revived only on **09-30**, and **neither revival condition was met**. `reject_ledger due` returned 0 rows **correctly** — and that silence read identically to "clear". Same failure shape as `F1` and `D16`: an instrument's zero read as evidence about the world instead of as a property of the question |
+| **`D447`** | ★★ *A recovery proxy is validated on **every input it feeds**, not only on the one that is easiest to check.* | `M1164`: the 5m proxy's **close** leg was validated on 08-31 and its **volume** leg was not — and volume is biased **−18.15% mean / −54.6% worst**, feeding an OBV axis. Measured through to that axis it costs **0.009 mean / 0.026 max** (0/42 label flips), i.e. **~7× less than the error it removes** — but that was **discovered, not known**, when the warrant was written. Paired with `R120` |
+| **`D445`** | ★★ *When a scenario's branch fires while a **dated public fact inside the same window contradicts the branch's own premise**, the run scores the branch as written **and** records the contradiction on the same line.* | `M1167`: `S92`-A is satisfied partly by the US demining **declaration** of 08-25, and *"IRGC says ship struck 2 sea mines after U.S. declared Hormuz cleared"* [upi, **08-31 — the settle date**] falsifies that declaration |
+| **`D450`** | ★★ *A row whose branch is a **conjunction** records, at scoring, **which legs passed** — a conjunctive `C` is not the same object as a both-legs-missed `C`.* | `P97`: the dollar leg **cleared B alone** (118.75 ≥ 118.60) and only `DGS10` (4.73 vs ≤4.65) held it at C — **a run reading one leg would have scored B**. `S94`: the price leg cleared A by 2pp and the `vol_surge` conjunct failed on **both** names |
+| **`D449`** | ★★ *A proposition whose **branch semantics** live only in a run report is re-stated in `SCENARIOS*.md` when it is carried, so scoring does not depend on locating a five-run-old MACRO file.* | Scoring `P86` and `P97` required opening `llm_outputs/2026-08-22/` and `2026-08-25/MACRO_REPORT.md`; the spine carried **only the thresholds**. **A threshold without its meaning can be scored but not interpreted** |
+| **`D448`** | ★ *A **partial** vendor backfill is logged as an **INHOMOGENEITY**, not as an improvement.* | 42 of 301 names now carry an official 08-28 bar and 259 do not ⇒ cross-sectional axes mix two data generations. **Uniform absence is more citable than partial presence** |
+| **`D451`** | ★ *A **no-information band** declared at registration is **re-stated at scoring**, so a later reader cannot mistake the `C` for evidence.* | `S103` scored C from bands the 08-23 run had already declared inside the implied move; without the restatement, *"+3.479pp, C"* reads like a measurement |
+| **`D452`** | ★ *A **single-source market figure** is checked against the series **before** it is allowed to support a direction, not after.* | `M1174`: the 08-31 brief's `single_source` tier carried *"30-year Treasury Yield Surges to **5.34%**"* [36Kr, 1 outlet]; `^TYX` settled **5.249** (08-31) and **5.262** (09-01). The retracted sentence pointed **opposite** to the report's spine — the long end was the **laggard** (`DGS30` +3bp vs `DGS2` +14bp) |
+| **`D453`** | ★★ *When an axis drops, the run states **which direction the drop biases the composite** — a dropped axis is not automatically a penalty or a bonus.* | `M1188`: with `vel = None` the 🟢 gate's ceiling falls to 3 of 4, so it silently becomes a **unanimity** requirement on three price axes — **the opposite direction to the 2026-08-09 defect, which inflated every score by +0.305.** The 6-green count is a **floor produced by a dead pipe**, not a level |
+| **`D454`** | ★★ *A **shortlist absence** is diagnosed against the underlying axis counts **before** it is cited as evidence.* | `M1187`/`M1189`: 8 of 11 sectors produced no shortlist name, but **88 names are OBV-accumulating and beating `SPY` over 20 sessions** and the whole difference is **0.2 of `vol_surge`**. The 2026-07-21 refiner artifact reproduced exactly — `MPC` ranks **9 of 299** and `PSX` **18 of 299** and both are tag-filtered |
+| **`D455`** | ★★ *When a filter is keyed on an axis whose own measured IC sign is negative, the run says so where the filter's output is used.* | The 🟢 gate is a `vol_surge` gate, and `vol_surge` h=1 reads **IC −0.0417, t(NW) −3.51, `n_eff` 41.0** — the only Bonferroni-passing cell in 21 tests. 🚫 **Not acted on** (`market=kr`, `W1`/`D428`), **registered so the next run does not re-discover it** |
+| **`D456`** | ★ *When a card's driver is real but the desk has **no clean vehicle** for it, the card is filed `STORY-ONLY` with `L.vehicle없음` named — not attached to a contaminated proxy.* | EVENT_ALPHA Card 3: the duration event is **global** (*"From the U.K. to Japan, bond yields are jumping as U.S. bonds tumble"* [marketwatch] · a UK **28-year high**), but every US sector proxy for it is the same proxy the desk already uses for "Fed hawkish" |
+| **`D457`** | ★ *A card whose function is to **falsify another card in the same run** is written as its own card, not as a caveat inside the one it attacks.* | EVENT_ALPHA Card 5 (Texas halts data-center power over *"ghost demand"*) is the falsifier for Card 4 and for `P123`-A, and the tape sides with it: **every measurable AI-power name is 🟡 or 🔴, none is 🟢** |
+| **`D458`** | ★ *An equal-weight basket bracket states, at settle time, whether its legs **diverged** — an EW basket of a diverging pair measures the average of two different stories.* | `M1195`: `S137` is `EW{LITE, COHR} − SMH` and its legs read `rs60` **+16.1 (rs20) / −4.5** vs **−35.5**, with `COHR`'s Δ **−0.805 = the worst in the 299-name universe.** **Row not re-banded** (`D242`); divergence disclosed |
+| **`D461`** | ★ *`theme_age` reports a **minimum base** alongside its verdict; a 🟢FRESH on **n < 25** is labelled `FRESH-but-thin` rather than entering the freshness gate.* | `M1216`: the two 🟢FRESH readings that demonstrate `F1` is arithmetic have bases of **3** (`ghost demand`) and **12** (`Kelvion`) — and `Kelvion` is a **deal name**, not a theme. A gate that can fire at n=3 can fire on noise |
+| **`D462`** | ★ *`drift_watch`'s `downgrade` term set excludes single-name **analyst-action roundups**, or the term is retired.* | The 09-01 DRIFT run's `downgrade` 🚨 (3.2×) body-read to *"Jim Cramer's top 10 things to watch"*, *"Robinhood upgraded, Uber initiated"* and *"4 Reasons Why SCHD May Be In Trouble"* — **no regime content** |
+
+## Carried, unmet, with run counts (updated 2026-09-01)
+- **`D250`** optical registry row — **17th run**, but ★ **now bracketed directly by `S137`** (09-09),
+  which does not need the registry.
+- **`D282`** DRIFT window vs its 3–6h spec — **6th run** (ran at **+0.6h**), and it still surfaced a
+  live challenge to `MACRO §A-1` (`M1218`).
+- **`D294`** `action_bracket` names the nearest binary and then prints "no dated binary in window" —
+  **6th reproduction**, on a window holding **three** binaries (`M1217`).
+- **`D304`** `us_setup_screener` on a live partial bar — **reproduced**; its 21 new names are recorded
+  as a list only and **none was ledgered**, with the reason stated.
+- **`D333`** `DTWEXBGS` publication lag — ✅ **CLOSED this run after 13 reproductions** (caught up
+  from 08-21 to 08-28), which is what made `P97` scoreable. ⚠ Closed **as a lag observation**, not as
+  a fix — the series can fall behind again.
+- **`D379`** PREFLIGHT reads §5 first — **6th run unwired**.
+- **`D395`/`D428`** the US desk has no `ic_ledger` of its own — ★ **now materially binding**:
+  `S94` fired `C` on a **`vol_surge` conjunct** while the desk's scoreboard says that axis's sign is
+  negative, and `W1` bars using the KR measurement to break the tie.
+- **`D411`/`D412`** news-axis instrumentation — **unaddressed**; today's **10/10** direct probe is a
+  4th reproduction of the underlying fact (the sweep's own 300-query burst rate-limits itself).
+- **`D415`** two books — **reproduced with fresh numbers** (§6 `C23`), still human-owned.
+- **`D416`** AI-power ranked registry row — ★ **now costing a live question**: `P123` and EVENT_ALPHA
+  Card 5 are a both-sided question about a cycle the registry cannot see.
+- **`D420`** `AVGO` 09-02 vs 09-03 — **still open**, and **`S138` was written to settle on the
+  observable rather than the date** so the dispute cannot block it.
+- **`D424`** — **two US cases this run** (Energy +0.302 vs ex-`XOM` +0.471; Comm. Services `wflow`
+  −0.547 vs `eqflow` −0.033), plus the mirror (Materials: `LIN` holds it **up**) and a **narrowing**
+  case (Health Care +0.069 vs +0.115, from +0.021 vs +0.095).
+- **`D426`** register a scenario observing date **D**'s US close to settle **D+1** — ✅ **its
+  prescription worked**: the seven rows it identified all scored this run.
+- **`D427`** a row requiring two FRED series on one date checks whether they publish together —
+  **reproduced** (`T10YIE` carries 08-31 while `DGS10`/`DFII10` stop at 08-28).
+- **`D429`** a ghost bar surviving two runs is a standing hole — ✅ **the call was right**; it froze at
+  08-28 rather than rolling.
+- **`D430`** a "0 scored" run states its composition — ✅ complied; this run's composition is
+  **11 scored / 3 directional / 8 C / 0 expired / 1 unscoreable**.
+- **`S8`** — **34th run unscoreable** (US count); needs a human `VOID` or a date (P5).
+
+
+## Part C addendum — digs registered by the 2026-09-02 `industry_kr` run (**D464-KR – D471-KR**)
+
+> IDs issued by `module_evidence next-id` (live scan of `handoff/*.md` · `REPORT/**` · `llm_outputs/**`),
+> not hand-grepped — highest existing **D463** at write time (`D76` collision class).
+> Rules are written in **trigger form** with the measured failure that produced them.
+
+### `D464-KR` — When you score a bracket, read whether someone already scored it, and say in writing whether you agree
+
+**Trigger**: *the master scoring log already contains a verdict for the id you are about to score, and
+that verdict is dated today or yesterday.*
+**Do**: quote the prior verdict, declare **agree / disagree in one line**, and if you disagree, name
+**which clause of the observable you read differently**. **Never overwrite the other desk's row** (P5).
+**Measured 2026-09-01**: the KR run (08:1x KST) and the US run (23:0x KST) both scored four rows and
+**two of the four conflict** — `S92` **`FIRED-D` vs `FIRED-A`**, `S94` **`UNSCOREABLE` vs `FIRED-C`` —
+with **neither block referencing the other**. Both stand in the log.
+**And the conflict was resolvable by measurement, which is the point**: re-queried on 09-02 with the
+scope the branch actually specified (`--scope foreign`) and a `strike` conjunct, the scored window
+contains two independent foreign outlets reporting a **dated kinetic US action inside the Strait on
+08-30** (euronews; dw). The disagreement was **query design, not judgment**.
+★ **Why this rule is worth its cost**: a desk whose track record rests on scoring needs scoring to be
+reproducible. A row that returns `A` to one scorer and `D` to another measured the scorer.
+
+### `D465-KR` — A bracket with an outlet-count threshold must freeze the query string beside the threshold
+
+**Trigger**: *a revival / entry condition contains "≥ N outlets".*
+**Do**: write the **exact query string** next to the condition at registration time, and re-use it verbatim.
+**Measured 2026-09-02**: the `TSLA` missed-ledger row required *"the robotics thread still prints ≥5
+outlets on ≥3 separate days."* The narrow form `Tesla robot` returns **3–4 distinct outlets** in its
+BM25 top-40; the thread-level form `Optimus humanoid` returns **9** (yahoo_finance, fool, nasdaq,
+businessinsider, techcrunch, prnewswire, guardian, fortune, forbes) across **4 separate days**.
+**Same condition, same day, opposite verdicts (`reaffirmed` vs `entered`) depending on the query form.**
+The thread-level form was adopted because the condition names the *thread*; the sensitivity was
+recorded in the resolution note rather than hidden. ⚠ Outlet counts here are measured on a **BM25
+top-40 slice**, not the full match set (`C3`) — say so.
+This is `D94` (vocabulary mismatch) in its ledger form.
+
+### `D466-KR` — An empty snapshot hides a good baseline: check the history key before believing a null delta
+
+**Trigger**: *`SECTOR_FLOW` returns `delta: null` for every name while the history file has prior snapshots.*
+**Do**: open the history keys directly and look for an **entry-count-zero snapshot** immediately before `asof`.
+**Measured 2026-09-02**: `history_kr.json` carries key `2026-08-28` with `_mode` = `"nonews"` and
+**zero entries** (residue of the 08-29 / 08-30 runs that scored 0 names). `prev_snapshot`
+(`sector_flow.py:296`) walks keys strictly earlier than `asof` and **returns the first one whose
+`_mode` matches** — so it stops at the empty snapshot and returns `{}`, hiding the intact **08-27**
+snapshot (806 entries) behind it. Result: **806 of 806 names had `delta: null`** and the Δ axis was
+unavailable for the second consecutive run, for a different reason than the day before (09-01 was an
+`asof` label collision). **The repair is a human-approval item; this stage measures and reports.**
+
+### `D467-KR` — The same condition can be filed twice on consecutive days; close both, record the duplication
+
+**Trigger**: *`due` lists the same ticker twice with adjacent dates.*
+**Do**: resolve both rows with the **same verdict** and note the duplication. **Never delete one** — the
+ledgers are append-only.
+**Measured 2026-09-02**: `REGN` appeared as **2026-08-19 and 2026-08-20** rows with a **character-identical
+entry condition**. ⚠ **And the same shape can be a strengthening rather than a duplicate**: `MA` also
+has 08-19 and 08-20 rows, but the second is **stricter** (`vol_surge ≥ 1.2 ∧ OBV 매집 ∧ rs20 > +10`
+against the first's `sector DEEP slot ∨ (vol_surge ≥ 1.2 ∧ rs20 > +5)`). **Duplication and
+strengthening look identical in the `due` listing** — read the conditions, not the dates.
+
+### `D468-KR` — A benchmark's missing bars move its window START, and that is a different, larger defect than end-point misalignment. Measure both
+
+**Trigger**: *the benchmark series has any missing recent session.*
+**Do**: in addition to the end-point alignment test (PREFLIGHT G0-b), **compute the benchmark's own
+N-session return against a complete-series proxy**, and **count what share of the universe sits at the
+`rs` clip bound (±8.0)**.
+**Measured 2026-09-02**: the end-point test gave `rs20` median bias **0.00 — "harmless."** The window-start
+test on the same data gave **`^KS11` 20-session window 2026-07-30 → 08-31 = +21.93%** against
+**`069500.KS` 08-03 → 09-01 = +8.86%** ⇒ **+13.07pp**, reproduced name-by-name on **8 of 10** names
+pulled through both instruments. `^KS11` is missing 08-28 and 09-01, so its window start rolls back
+two sessions **into the 07-31 +24% rebound**.
+🚨 **Consequence: 605 of 806 names (75.1%) sit pinned at the `rs20` clip floor of −1.0.** An axis that
+returns the same value for three quarters of the universe **cannot discriminate**, and it is one of
+only three axes in `flow_score`.
+★ **The general form, and it is the transferable part**: **PREFLIGHT's G0-b is blind to this by
+construction** — it truncates the *stock* series to the bench's end, holding the bench window fixed.
+A test that varies one leg cannot see a defect in the other. Registered as `R122`.
+
+### `D469-KR` — Run `module_disclosure` on a DEEP name BEFORE its price and its news
+
+**Trigger**: *a name enters a DEEP slot.*
+**Do**: run `module_disclosure <6-digit>` **first** and look for capital-structure events (merger,
+issuance, split, 주요사항) before reading flow or narrative.
+**Measured 2026-09-02**: `096770` SK이노베이션 filed **회사합병결정 on 2026-08-25** (rcpNo 20260825000424)
+and a **증권신고서(합병) issuing 169,052,788 shares on 08-26** (rcpNo 20260826000056) — it is absorbing
+**SKIET**, its separator/EV-materials subsidiary. **The 2026-09-01 DEEP on this exact name missed the
+event entirely**, and in the interval the stock fell **−11.0% on 08-26** with **foreign −100.6만주 /
+retail +161.9만주**. That drop and its recovery are what put the name back on today's shortlist:
+day by day the "+107만주 20-day foreign net-buy" is **one −100.6만 session followed by +103.4만 of
+buying it back**, i.e. **an event recovery, not a fresh oil-thesis entry** (`R123`).
+⚠ **And news search would not have caught it**: `fts search "SK이노베이션" "합병" --days 14` returns
+**0** (quoted-bigram artifact), while `fts search "SK이노베이션" --days 10 --scope domestic` returns 120
+with the merger in the top rows. **The filing is the reliable source; the search is not.**
+
+### `D470-KR` — Before promoting a sector on its top two names, check whether they are parent and subsidiary
+
+**Trigger**: *a sector promotion rests on that sector's #1 and #2 by `flow_score`.*
+**Do**: run `module_business` on the larger one and read the consolidated-segment list. If one owns the
+other, **count them as one unit**.
+**Measured 2026-09-02**: the 보험 bucket's top two are **`000370` 한화손해보험 (+1.000)** and
+**`088350` 한화생명 (+0.867)**, and `088350`'s 사업보고서 lists 한화손해보험 as a consolidated
+subsidiary under "[손해보험]" `[PRIMARY — DART]`. The subsidiary's FY2025 standalone net profit
+(**362.1bn KRW**) **exceeds the parent's standalone** (313.3bn) while its market cap is one fifth.
+⇒ `E.상관가드` at the sector level: the signal's top two slots are **one economic unit**.
+
+### `D471-KR` — The company scoreboard is consulted at BET, and that is too late for EVENT_ALPHA
+
+**Trigger**: *a stage before BET is about to hand a name forward as a candidate.*
+**Do**: query `REPORT/COMPANY_SCOREBOARD.md` (or `module_report_tags ticker <T>`) **at that stage**, not
+only at BET.
+**Measured 2026-09-02**: EVENT_ALPHA CARD 1 handed **`011200` HMM** forward as CONFIRMED-EARLY on the
+strength of its KIS actuals (foreign **+270.9만** / institutions **+197.7만**, the largest foreign
+net-buy of any name pulled that day) — reasoning that **the scoreboard had already refuted on 2026-08-21**:
+*"HMM's single driver is ton-mile plus the oil price attached to it, and HMM is **short** that axis"* —
+1H26 bunker purchases **+276.195bn KRW = 123% of the −223.862bn operating-profit decline**, driver
+coverage **47.3% (D1 FAIL)**, order backlog **100% bulk fixed-rate, zero container**.
+BET consulted the scoreboard, killed the exposure name, and the card's chain had to be corrected one
+stage later. ⚠ **A second, procedural error followed from the same ordering**: EVENT_ALPHA filed
+`011200` in the **missed** ledger when the name already carried a **rejection** row (`K.본문반증`,
+recheck 2026-11-09) — a name set aside with a stated reason is a rejection, not a miss. The machine
+guard only blocks identical **ticker × date**, so the different date let it through. **Both records
+were left standing (append-only) and a same-day rejection row was filed with the correct class.**
+
+
+# Part C · dig list — appended by `industry_US`, 2026-09-02
+
+> Written in the **positive form** (what to do), not as a prohibition. Each carries the measurement
+> that produced it, so the next run can tell a rule from an opinion.
+> IDs from `module_evidence next-id` (live scan of `handoff/*.md` · `llm_outputs/**` · `REPORT/**`).
+
+## New this run — 7 digs
+
+| id | dig (positive form) | measured origin |
+|---|---|---|
+| **`D473`** | ★★★ *A term-sweep table records the **exact CLI invocation** beside its counts, and a Δ is computed only against a prior run whose invocation is also recorded.* | `M1240`: `module_news_data/_fts.py:205` defaults `--mode and`, so an unquoted multi-word term is an **AND of separate argv** and a quoted one is a **single phrase**. Same day, same term: `Federal Reserve` **1,530 (phrase) / 1,718 (argv)**; `Treasury yield` **687 / 1,251**; `AI capex` **116 / 470**. The one-day Δ on `Treasury yield` reads **+12.1%** or **+104%** depending only on quoting. **The 09-01 report asserts argv in its EXIT CHECK while its numbers match phrase**, so its convention is not recoverable from the file and every cross-run Δ is ambiguous |
+| **`D474`** | ★★ *On `--scope foreign`, `brief`'s `single_source` tier is reported as **a random sample of n**, never as a recovery — and the coverage claim is `(multi-source events + shown singles) / clusters`, not `tail = 0`.* | `M1238`: the tier prints `scored 0 / scorable 0 / unscored 643` because the market/non-market classifier is **Korean-only**. 15 of 643 are shown **at random**. Honest coverage **845 of 1,473 clusters = 57.4%**, i.e. **628 clusters unseen with `tail = 0`**. The tier's own note ("FX and rates single-articles live here") is true on the KR runtime and **structurally false on this one** |
+| **`D475`** | ★ *A `thread` window ending on a partial collection day marks every window-end tag **provisional**, and an `ENDED` thread whose final observation is its **peak** is reported as an artifact rather than as a death.* | 09-02 carried **421** articles against 745–856 on full sessions (the run fires pre-open), and *"Two More Oil Tankers Are Attacked in the Strait"* was tagged **ENDED** on a curve of **3→2→12** |
+| **`D476`** | ★★ *A verdict change is made in the stage that owns verdicts; if an earlier stage makes one, the owning stage **re-derives it under its own discipline** and logs the boundary crossing rather than accepting or reverting on authority.* | MACRO §E printed **`MATR` as `N, contested`** when the inherited verdict was `OW`. ROTATION re-derived it (Δ −0.208 = 2nd-worst, `eqflow` −0.076 turned negative from +0.030, non-flipper with the top-1 **holding it up**: `LIN` 24.7%, +0.061 → ex-top1 +0.016) and **kept it** — but the change had already been published one stage early |
+| **`D477`** | ★★★ *A **dated sector cause** is body-read before it is used as evidence, **even when it appears in the HEAD tier**.* | `R126`/`M1255`: *"California Wildfire Legislation Postponed, Utility Stocks Bounce"* [6 outlets] was used by MACRO §B-2 and EVENT_ALPHA Card 4 as a positive. The bodies say the legislation was **announced** 08-31 and California utilities **plummeted** (`PG&E` −8% on 08-28; *"California Utility Stocks Plummet"*; *"utility stocks sink as California leaves investors exposed"*); the 09-01 item is the **rebound after a postponement**. `PCG` carries **`vol_surge` 3.18 — the universe's highest — with `rs20` −18.2**, a capitulation-and-bounce signature. ⇒ **`XLU`'s exc1 +1.47, one of the two numbers that promoted Utilities to a DEEP slot, is partly a legislative round-trip.** This is `D452` one layer out: there a single-source **figure**, here a **multi-outlet direction** |
+| **`D478`** | ★★★ *Before filing a `missed_ledger` row, read `reject_ledger **list**` — the machine guard is keyed on `ticker × date` and therefore **cannot see a standing rejection from an earlier date**.* | EVENT_ALPHA filed **`EOG` and `FANG`** as misses while both carried **08-31 rejections from this desk's own run**; `missed_ledger add` accepted them because the dates differ. ★ **The US analogue of `D471-KR`, which the sibling desk filed the same morning — the same boundary error on two desks on one day**, which means it is a tooling property, not an operator lapse |
+| **`D479`** | ★★ *A **zero** measured on one window is reported as a **window property** until it has repeated; a zero stated as an instrument property is a warrant the instrument has not earned.* | `R125`: the 09-01 PREFLIGHT published *"the repair injects 0 of 42 label flips"* and licensed a whole repaired sweep on it. Re-measured today with the window rolled one session: **1 of 42 label flips, 1 of 42 sign flips.** Same failure class as `R120` (a bound stated tighter than the instrument earns), on the flip-count leg instead of the error leg |
+
+## Carried, unmet, with run counts (updated 2026-09-02)
+- **`D294`** `action_bracket` names the nearest binary then prints "no dated binary in window" —
+  🚨 **7th reproduction**, this time on a window holding **five** binaries (`AVGO` D-0, NFP, PPI, CPI,
+  the undated Hormuz statement). PREMORTEM pre-committed the fallback and it was executed: **the
+  tickets were hand-written into an append-only ADDENDUM** to `ACTION_TICKETS.md`. Code fix = human (P5).
+- **`D282`** DRIFT window vs its 3–6h spec — 🚨 **7th reproduction** (ran at **+0.6h**). ★ It still
+  produced a real finding (`M1261`), and it also produced **3 artifacts of 4 bursts**, which is the
+  argument for the longer window rather than against the tool.
+- **`D462`** the `downgrade` term set excludes single-name analyst roundups — **2nd reproduction**:
+  *"Dell's Insane Numbers Terrified Me — In The Best Way Possible (Downgrade)"* (a bullish body),
+  *"Broadstone Net Lease (Rating Downgrade)"*, *"J.P. Morgan cuts NIO"*. **Zero regime content.**
+- **`D304`** `us_setup_screener` on a live/partial bar — **reproduced**; the run fired **pre-open**, so
+  its **11 new names** (`LLY` `EW` `ISRG` `SYK` · `HPE` `KEYS` `DELL` `IBM` · `ETR` `SO` `PCG`) are
+  recorded as a **list only** and **none was ledgered**.
+- **`D459`** collapse dual-class issuers before `top1_w` — **2nd reproduction and LARGER**: Alphabet
+  **76.6%** of Comm. Services under two tickers, `wflow` **−0.506 → +0.257 ex-both** = a swing of
+  **0.763** (from 0.691 on 09-01), while the instrument prints `top1_flips_sign: False`.
+- **`D463`** check **standing** rejections, not just `due`, before ALPHA tags — ✅ **its prescription
+  WORKED on first application.** `CRM` (rank-1 flow, `vol_surge` 2.00) and `MSTR` (7th by flow) were
+  **barred before tagging**; the 09-01 run had to **withdraw** the equivalent tags after issuing them.
+  **Zero withdrawals this run.**
+- **`D446`** a rolling-window axis states bars-present per name — **unmet**, and now materially
+  binding: the 08-28 hole is **permanent**, so the defect sits inside every 20-session window for
+  ~4 weeks rather than for a day.
+- **`D416`** the AI-power cycle has no registry row — **6th run**, and it now costs a computable GAP:
+  `cycle_exposure` prints ✅ while the book holds **7.5% (`ETN`, 🔴분산, Δ −0.633)** of a cycle the
+  registry cannot see. **PREMORTEM had to raise the flag by hand.**
+- **`D449`** a proposition's branch semantics are re-stated in `SCENARIOS*.md` when carried — ★
+  **exactly the failure that hid `P100`**: it was registered by the 2026-08-26 MACRO stage, **appears
+  nowhere in the master index or scoring log**, and was found and scored (`FIRED-A`, +21.963pp) only
+  because this run opened the old run file. **A proposition that lives only in a run report is a
+  proposition nobody will score.**
+- **`D451`** a no-information band is re-stated at scoring — ✅ applied: `S132`'s ±9.00pp is restated
+  as NO-INFORMATION in three places (MACRO, PREMORTEM, `SECTOR_DEEP_IT`) because `AVGO`'s implied move
+  re-measured at **±9.5%** today.
+- **`D461`** `theme_age` labels a 🟢FRESH on n < 25 as FRESH-but-thin — ✅ applied to `ghost demand`
+  (**n = 3**), which is also the only 🟢FRESH on the board **and a falsifier**.
+- **`D395`/`D428`** the US desk has no `ic_ledger` of its own — **binding again**: ROTATION declined
+  `IT N → UW` partly because it cannot score the `vol_surge` axis the demotion would rest on, and
+  `W1` bars importing the KR measurement.
+- **`D427`** a row needing two FRED series on one date checks whether they publish together —
+  **3rd reproduction**: `T10YIE` carries **09-01** while `DGS10`/`DFII10`/`DGS30`/`DGS2` stop at
+  **08-31**. `P125` was written to settle on the **joint** date because of it.
+- **`D426`** register a scenario observing date D's US close to settle D+1 — **3rd run as the binding
+  constraint**: `S109` is due **today** and its observable is **tonight's** close, so this desk cannot
+  score it. **Named as due-but-unreadable with a reference pre-settle, not skipped.**
+- **`D379`** PREFLIGHT reads §5 first — **7th run unwired**; done manually again (`HANDOVER §1`).
+- **`D411`/`D412`** news-axis instrumentation — ★ **upgraded from correlational to CONTROLLED**:
+  the same 7 names returned `None` at 1.5s and real velocities at 9s. The finding is no longer
+  "the sweep sees less than a direct probe"; it is **"request spacing alone flips the measurement."**
+- **`D415`** two books — reproduced a 4th time (§6 `C23`), still human-owned.
+- **`D420`** `AVGO` 09-02 vs 09-03 — **resolves tonight**; `S138` was written to settle on the
+  observable rather than the date so the dispute cannot block it.
+- **`D424`** — **two US cases this run and one CLOSURE**: `ENRG` (+0.505 vs ex-`XOM` +0.600) and
+  `MATR` (the mirror: `LIN` **holds it up**, +0.061 → +0.016); ✅ **`HLTH`'s case closed to ZERO**
+  (`wflow` +0.279 vs ex-`LLY` +0.279, from +0.069/+0.115 on 09-01).
+- **`D429`** a ghost bar surviving two runs is a standing hole — ✅ **the call was right and is now
+  strengthened**: zero backfill in 24h at T+5 makes it permanent, not merely standing.
+- **`D447`** validate a recovery proxy on every input it feeds — ✅ applied again (close **and**
+  volume legs both re-validated, and the volume leg's cost re-measured through to the axis).
+- **`D450`** a conjunctive branch records which legs passed — ✅ applied at `P125` (its KPI and its
+  level currently **disagree**, registered now rather than discovered at scoring).
+- **`D454`** a shortlist absence is diagnosed before it is cited — ✅ applied: **7 of 11 sectors
+  produced no shortlist name**, and the diagnosis is a filter artifact — **102 of 298 names are
+  OBV-accumulating AND beating `SPY` over 20 sessions**, only 19 clear `vol_surge` 1.0, only 6 earn 🟢,
+  and the near-miss band spans **all 11 sectors** including **`PSX` at 0.99 — a held name missing by
+  0.01**.
+- **`D9`** does a holdco mismatch **block** or only **warn** — half-closed, human call.
+- **`D10`** news-body boilerplate — open code defect, **server console required (P6)**, human item.
+- **`S8`** — **35th run unscoreable** (US count); needs a human `VOID` or a date (P5).
+
+---
+
+# ═══ Part C · DIG LIST — appended 2026-09-05 by the `industry_kr` run (append-only) ═══
+
+> IDs issued by `module_evidence next-id` (live scan of `handoff/*.md` · `REPORT/**` · `llm_outputs/**`).
+> 🚨 **This run first hand-picked `D485`–`D490` and they collided** — the 2026-09-03 KR run and the 2026-09-04 US run
+> had already issued them, and a `handoff/` grep could not see that because **neither run wrote its carry back**.
+> Renumbered to `D494`–`D499` before the run ended. **`D76` collision class, demonstrated live.** See `D501-KR`.
+> Rules are written in **trigger form** with the measured failure that produced them.
+
+## New this run — 11 digs
+
+### `D491-KR` — A two-character Korean term, or a run-together compound, returns 0 from the KR trigram index by construction. An event the event-axis saw at ≥5 outlets with a vocabulary count of 0 is a surface-form failure, not an absence
+
+**Trigger**: *a fixed-set bucket reads "quiet" while the day's brief carries a ≥5-outlet event in that bucket's subject.*
+**Do**: search for a working 3+ character surface form **before** writing "quiet"; if none is found, mark the bucket
+**"vocabulary axis cannot see this event"** and track it on outlet count instead.
+**Measured 2026-09-05**, the day's #1 and #2 events by outlet count:
+- **US semiconductor targeted tariffs (9 outlets, 31 articles)** — `반도체관세` **0** · `관세검토` **0** ·
+  `반도체관세부과` **0** · bucket ④'s seven terms summed to **53** ("quiet") — while **`표적관세` returns 89**, i.e. **1.68×
+  the whole bucket**.
+- **Blue House Hormuz deployment review (6 outlets, 27 articles)** — `파병` **0** (two characters) · `파병설` **1** ·
+  `파병론` **1** · `호르무즈파병` **0** · quoted juxtaposition of the two terms returns **521 = identical to `호르무즈` alone**,
+  proving the juxtaposition **does not act as AND**. ⇒ **this event has no working surface form at all.**
+★ Why the rule is worth its cost: **the same failure hit on two consecutive runs with two different words**
+(09-03's `CPTPP`, 09-05's `표적관세`), so it is not a missed word — it is that the bucket cannot follow events.
+
+### `D492-KR` — Do not declare an axis has MOVED on one day of vocabulary. Two consecutive readings, or it is a news event
+
+**Trigger**: *a term's d3 count exceeds its bucket's total and you are about to write "the axis moved."*
+**Do**: state it as a **candidate** with the two-reading condition attached, and **declare branch (b) "one-off news"
+as the registration-time favourite** unless the term already has a multi-day thread.
+**Measured 2026-09-05**: `CPTPP` d3 went **211 → 6 (0.028×)** in two days — from the 09-03 run's headline discovery
+(2.3× bucket ④) to **1/9 of that bucket** — firing `M-129`'s own anti-signal ① on its first reading.
+**What survives** (and it is the load-bearing half): the finding that **bucket ④ cannot see the trade axis** was
+independently reconfirmed the same day by `표적관세` 89. The *word* was a news event; the *defect* is structural.
+
+### `D493-KR` — To ask a KR rate-sensitivity question you need a KR rate series, and this repo does not have one
+
+**Trigger**: *you are about to regress KR names on an interest rate.*
+**Do**: check whether a 국고채 series exists in the repo. It does not — `module_macro_us` is FRED/US,
+`module_KIS` gives index futures but no bonds. **Using `DGS10` as the KR proxy triggers `W1` (cross-market transfer)
+and the result may not be carried as a KR conclusion.**
+**Measured 2026-09-05**: the DEEP-보험 mandate asked *"is this OW a rate position?"*; regressing 8 insurers' benchmark
+excess on `DGS10` daily changes over 120 sessions gave **max |t| = 1.81** against a Bonferroni threshold of **2.7**,
+with signs split 4 positive / 4 negative. **The honest verdict is "our instrument cannot answer", not "it is not a
+rate bet".** ⇒ **Data-source decision is a human item (P5).**
+
+### `D494-KR` — Stage output and ledger writeback are two different writes. When a run dies, the measurements survive and the ledger stays empty — so append each stage's ledger rows AT THAT STAGE
+
+**Trigger**: *a protocol writes its carry to `handoff/` only at run end.*
+**Do**: append scored rows, retractions and digs **as each stage produces them**, not in a terminal block.
+**Measured 2026-09-05**: three consecutive runs failed the writeback —
+**09-03 KR** (reached BET 8/9, no `ALPHA_TAGS.md`, no `handoff/` block), **09-04 KR** (died at stage 1, only an empty
+`preflight/` directory), **09-04 US** (reached HANDOVER, **scored eight brackets**, resolved 12 rejection and 20 missed
+rows — and **none of the eight verdicts is in the master log**).
+★ **The cost was immediate and measurable**: this run hand-picked `D485`–`D490`, numbers those unwritten runs had
+already issued, because a `handoff/` grep cannot see an unwritten run. **`D76` collision class.**
+⇒ Repair (splitting writeback into per-stage atomic appends) is a **human-approval item**; this rule records the mechanism.
+
+### `D495-KR` — Verify a settle date's weekday by computing it, not by asserting it
+
+**Trigger**: *a bracket's text says "confirmed: date X is a trading day."*
+**Do**: compute the weekday and the exchange calendar; paste the computation, not the claim.
+**Measured 2026-09-05**: `S69-KR`'s registration text reads *"`D394-KR` confirmed — 2026-09-05 is a Friday, a KRX
+trading day."* **2026-09-05 is a Saturday.** The scoring was unaffected only because the observable enumerated its
+five sessions by name. **A date check that is itself wrong is worse than no check** — it stops the next reader looking.
+
+### `D496-KR` — If a bracket's observable is looser than the narrative it was registered to test, that is a construction defect. Record it; never tighten the threshold at scoring time
+
+**Trigger**: *at scoring, the observable is satisfied by an event that does not instantiate the mechanism the row described.*
+**Do**: score on the registered observable (`D242`), then file the gap so the **next** version of the row is narrower.
+**Measured 2026-09-05**: `S67-KR` leg2 asked only *whether* `005930` filed a `자기주식취득결정`. It did — **for employee
+share compensation**, whereas the row's narrative was *"the peer followed ⇒ a capital-policy regime"* and the paired
+`000660` filing was explicitly *"for cancellation, to enhance shareholder value."* **Form fired; substance did not.**
+
+### `D497-KR` — A short-window sector-ETF excess bracket takes its band from measured dispersion, not from a round number
+
+**Trigger**: *you are registering an N-session excess bracket on an ETF with N ≤ 5.*
+**Do**: measure the estimator's own sd over ≥1 year first (`D93`), then set the band — the procedure the KR rows
+(`S64-KR`, `S68-KR`) already use.
+**Measured 2026-09-05**: `S126`, `S134`, `S139` all settled **`FIRED-C`** with realized excesses of **1.165 / 0.109 /
+1.042 pp** against bands of **±1.65 to ±2.00 pp** over 3–5 sessions. ⚠ **`C4`: n = 3** — this is "all three settled
+today did", not a claim about a desk's bands in general.
+
+### `D498-KR` — `sector_flow` used as a library needs FOUR market globals set, not three. Setting three silently reads the other market's ledger
+
+**Trigger**: *you import `scripts/sector_flow.py` instead of invoking its CLI.*
+**Do**: set `MKT`, `UNIVERSE`, `BENCH`, `COLS` **and `HISTORY`** (`main()` sets `HISTORY` separately at
+`sector_flow.py:464`; the module default is the US file).
+**Measured 2026-09-05**: this run's first re-scoring set three and read **`history.json` (US, 298 tickers)** as the
+prior snapshot for **KR** names. Fixing `HISTORY` moved `prev_snapshot` to **09-01 (805 entries)**. Nothing downstream
+had consumed the wrong value, and the first result was left in place with the correction appended (`D48`).
+
+### `D499-KR` — "The vendor does not have it" and "it does not exist" are different sentences. For a KR index close, the second source is `module_KIS --futopt`'s underlying-index field
+
+**Trigger**: *you are about to write that a KR index level is unavailable for a session.*
+**Do**: query `module_KIS --futopt <front-month code>` — its 기초지수 field carries **KOSPI 종합 and KOSPI200** for the
+settled session, and cross-check it against the day's brief head layer and against the previous close's arithmetic (`D5`).
+**Measured 2026-09-05**: PREFLIGHT wrote *"`^KS11` 09-04 does not exist"*; MACRO's positioning pull returned
+**6,687.21 (+1.64%)**, matching a 2-outlet domestic print and reconciling to **+1.637%** against the 09-03 close.
+★ This is **`R14`'s shape**, and the run had **quoted `R14` in its own HANDOVER** while carrying the same
+over-generalisation — **reading the retracted ledger and applying it are different acts** (`R127`).
+
+### `D500-KR` — A sector's `eqflow`/breadth is meaningless when its sub-node spread dwarfs it. Decompose before promoting or demoting
+
+**Trigger**: *you are about to move a sector verdict on a non-cap-weighted aggregate.*
+**Do**: split the bucket into 3–5 value-chain nodes and print each node's `eqflow`/breadth/≥₩1tn-green count. If the
+node spread exceeds the sector value by an order of magnitude, **the sector label is not the unit** (lens `B5`) and the
+verdict must be written at node level.
+**Measured 2026-09-05**: 전기·전자 (n=66) — nodes at `eqflow` **+0.654 / +0.065 / −0.188 / −0.209**, **spread 0.863**
+against the sector's **+0.012**; **all five ≥₩1tn greens sit in one node** and the semiconductor node's ≥₩1tn greens
+number **zero**. ★ Companion: **`top1_flips_sign = False` does not mean the bucket is one thing** — the insurance bucket
+is a non-flipper only because its 53.4% top name is the one member **uncorrelated with the rest** (residual 0.24–0.29).
+
+### `D501-KR` — Issue every ledger ID with `next-id`. Never hand-pick, and never grep only `handoff/`
+
+**Trigger**: *you are about to write a new `M`/`D`/`R`/`C` number.*
+**Do**: run `python -X utf8 -m module_evidence next-id <family> --count N` — it live-scans `handoff/` **plus `REPORT/`
+plus `llm_outputs/`**, which is the only scan that sees IDs issued by runs that never wrote back (`D494-KR`).
+**Measured 2026-09-05**: this run hand-picked `D485`–`D490`; all six were already in use by the 09-03 KR and 09-04 US
+runs. Caught before the carry was written and renumbered to `D494`–`D499`. **The hand-grep habit the repo already
+banned at WRITE time fails for exactly the runs that fail — which is when collisions are most likely.**
+
+## Status updates on carried digs
+
+- **`D466-KR`** (an empty snapshot hides a good baseline) — 🚨 **2nd instance, and this time it was PREDICTED**:
+  the 09-03 PREFLIGHT wrote *"a scored=0 run adjacent again will block at the same place"*, and today's run wrote a
+  **second empty snapshot (`2026-09-04`, 0 entries)** into `history_kr.json` beside the 08-28 one. **Tomorrow's KR run
+  will stop at it.** Repair remains a human item.
+- **`D440-KR`** (alignment bias is not inheritable) — **4th consecutive run it paid**, and today it **reversed sign**:
+  09-03's as-run was **−0.165 pessimistic**, today's variant A is **+0.188 optimistic**. Reusing yesterday's correction
+  would have mis-read `rs` by ~11pp and the score by ~0.35.
+- **`D442-KR`** (`vol_surge` gate sign) — **4 runs open**, and the case strengthened again: `ic_ledger` h=1 now
+  **n=45, IC −0.0414, t(NW) −3.61** (trend −3.32 → −3.52 → −3.61) against Bonferroni |t| > 2.8, while `sector_flow`
+  still weights the axis **positively**. ★ New this run: **that single axis produces most of the board's negative level**
+  (`M1271`) and it is **< 1.0 on 75.0% of names**, i.e. it is reading a market-wide volume lull.
+- **`D379`** (PREFLIGHT should read §5 first) — **8th run unwired**; done by hand again in HANDOVER §2.
+  ★ And this run shows the cost of *reading without applying*: §5's `R14` was quoted and its lesson still missed (`R127`).
+- **`D273-KR`** ("real hands" collapsing to "institutions bought") — **13th reproduction**, with one counter-example:
+  of 11 `✅진짜손` shortlist names, only **5** have both legs positive. ★ But the **defense/shipbuilding node inverts it** —
+  there **foreigners** bought 5 of 6 names while **institutions sold 5 of 6**.
+- **`D427`** (two FRED series on one date) — **4th reproduction**: `T10YIE` carries 09-04, `DGS2`/`DGS10`/`DFII10` stop
+  at 09-03, which is exactly why `P121`/`P114` could not be scored.
+- **`D391-KR`** (the futures board carries dates the calendar does not) — **2nd reproduction**: the KOSPI200
+  front-month final trading day **2026-09-10 (quad witching)** is D-7 while `CATALYST_WATCH.json`'s STRUCTURAL bucket
+  reads `(none in window)`.
+- **`M1158` / empty `module_industry_map`** — **2nd KR reproduction**: a Korean tanker-chain seed
+  (`유조선 해운 원유 운임`) returned **0 corp-pool rows and 0 clusters**. The value-chain map was hand-built and says so.
+- **`C25`** (two instruments disagree on OBV) — **narrowed rather than carried**: reproduced twice today
+  (`003670`, `052690`) and **both were settled by the A-grade KIS actuals**. The contradiction now applies only to
+  names without KIS coverage.
+- **`D463`** (check standing rejections before ALPHA tags) — ✅ applied: `377300` 카카오페이 cleared the flow gate and
+  was **barred before tagging** because it carries a standing rejection reaffirmed earlier the same run.
+- **`D9`** (does a holdco mismatch block or warn) · **`D10`** (news-body boilerplate, server console, P6) ·
+  **`S8`** (37th run unscoreable) — **human items, unchanged.**
+- **Standing execution constraint, 9th consecutive run**: DEEP's sectors ran **in-context and serially**, not as
+  parallel adversarial agent fan-outs. Declared, not hidden.
+
+
+---
+
+# Part C · dig list — appended by `industry_US`, 2026-09-05 (Sat)
+
+> IDs from `module_evidence next-id D` against a live scan of `handoff` + `REPORT` + `llm_outputs`
+> (the `D76` collision class). Highest existing at write time: `D518`.
+
+## New digs registered by this run — `D502` – `D519`
+
+| id | statement | measured origin |
+|---|---|---|
+| **`D502`** | *The sweep's news tunnel has a measured **recovery constant**: it trips at ~49 names / ~98 queries and returns after **~60 seconds of idle**. A fan-out is chunked **and** back-off-idled, not merely slowed.* | Identical probe **6/6 alive pre-sweep · 0/4 immediately post-sweep · ❌ t+20s · ❌ t+40s · ✅ t+60/+80/+100s** (3/3, identical count 4102). Sweep coverage = universe positions **0–48**, `None` at **49–299**, zero exceptions. **Upgrades `D489` from a cutoff observation to a repair spec.** |
+| **`D503`** | *A short-window (≤5 session) sector-ETF excess bracket takes its branch lines from the observable's own measured dispersion (`D93`), never from a round pp figure.* | `S126`/`S134`/`S139` all fired **C** on bands of ±1.65–2.00pp against realizations of **0.109 / 1.042 / 1.165pp** (`D497-KR`, n=3). A **width** defect, not a disclosure defect — all three disclosed C as favourite. **Applied immediately**: all six rows registered today take their lines from `D93`. |
+| **`D504`** | *A proposition registered inside a `MACRO_REPORT §D` and never written into `SCENARIOS.md`'s master index is unscoreable by any run except its author's next one — and that run is the one most likely to be interrupted.* | `P101` settled **09-04** and was reached today only because the 09-05 KR run named it; it sat **10 days** past settle. `P102`·`P126`·`P127`·`P128` are in the same state now, `P102` settling **09-09**. **Generalises `D449` from propositions to their settlement path.** |
+| **`D505`** | *A bracket's verdict and the phenomenon it was built to catch can be one session apart, and the desk records the near-miss rather than only the verdict.* | `S141` measured *"the `AVGO` print does not move the sector"* at **−0.662pp** on 09-03; **`SMH` printed +3.00pp excess on 09-04**, **1.7× branch A's line**, one bar outside the window. `D242` keeps the verdict; nothing currently keeps the near-miss. |
+| **`D506`** | *The `brief` recovery tiers are not symmetric across scopes: the `nb` classifier is Korean-only, so in `--scope foreign` the `single_source` tier is a **random sample** and `excluded_nonmarket` is **structurally empty**.* | 618 single-source clusters, `scored: 0 / scorable: 0 / unscored: 618`, all `nb: None`, **15 shown at random**; `excluded_nonmarket.count = 0`. A coverage claim written to the domestic spec **overstates** the foreign one — and this desk is foreign-only. Stated coverage today: **924 of 1,323 = 69.8%**, with **603 clusters visible only as a count**. |
+| **`D507`** | *`catalyst_calendar` does not carry US market holidays, so every N-session bracket written off its window is mis-dated.* | **2026-09-07 is Labor Day**; `--days 10` lists PPI (09-10) and CPI (09-11) and no holiday while calling its window *"trading-ish days"*. A 5-session bracket from the 09-04 close settles **09-14, not 09-11**. Same class as `D13`-STRUCTURAL. |
+| **`D508`** | *A `theme-age` reading and a `thread` tag can contradict each other, and the desk has been treating the tag as authoritative.* | `Hugging Face` reads **🟡ACCELERATING 3.11×** while its thread reads `ENDED`; the Oil/Iran thread reads `FADING` while its **weekday** outlet curve rises **13 → 21**. Both contradictions resolve toward the numeric instrument, and both were caused by the tag being computed on a curve whose last bar is a **weekend**. `R129` is this dig's first cost. |
+| **`D509`** | *A `chain-hop` candidate is not a candidate until one of its example articles has been opened and the ticker confirmed to mean the issuer.* | **`LIN`** ranked #1 on a rare-earth chain-hop and is **Lindian Resources' ASX ticker** in a PR Newswire release, **not Linde plc** (verified: `fts search Carester`). Third three-letter false positive in two runs after `AME` (6,159) and `HES` (6,364). |
+| **`D510`** | *`data/catalysts/structural_schedule.json` is human-maintained and has been empty for every run this desk has logged, while the news feed carries dated structural catalysts weekly — the feed should seed it.* | Three dated structural events in one day's foreign feed: **SpaceX share unlock 09-09** [6 outlets], an **S&P 500 inclusion already executed** (Bloom Energy, Illumina, Everpure) [5], and an **Anthropic IPO window** (mid-October, BUILDING 2→6). `CATALYST_WATCH.json`'s STRUCTURAL bucket reads *"none in window"*. |
+| **`D511`** | *A bracket's branch LABELS are written against a verdict that can change inside the bracket's own window, and nothing links the two.* | `S142` was registered 09-02 as *"the against-us branch of the **FIN UW** issued today"*; **ROTATION moved `FIN UW → N` on 09-05**, inside its window. Thresholds untouched (`D242`); **`S142-ANNEX`** registered so the 09-11 scorer does not read a confirmation as a contradiction. |
+| **`D512`** | *The desk's UW count over-states its diversification: `RE`, `STPL` and `UTIL` are one duration bet under three sector labels — and today's `STPL N→UW` added a fourth position to the same bet.* | All three carry breadth **0.00** and **zero greens**, against a rate complex at the **96th–99th percentile**; `S135` already brackets them as **one** object. The 2026-07-15 correlated-UW field note, reproduced. |
+| **`D513`** | *`CYCLE_EXPOSURE`'s GAP flag can only see cycles the registry contains, so a missing registry row reads as "no gap."* | The AI-power lane — four coherent names across **two** GICS sectors, with the book holding the **only distributing one** (`ETN` 🔴분산) — produced a ✅ **no-GAP** verdict. **`D416` upgraded from "no registry row" to "the absence is invisible to the flag."** |
+| **`D514`** | *The desk's own take-or-pay frame has never been pointed at the Midstream segment of a refiner it holds, and the number needed to point it is one filing read away.* | `MPC` is a three-segment company (Refining & Marketing / **Midstream** / Renewable Diesel) and MPLX is a fee-based structure of exactly the `KMI` type the desk trusts. `module_disclosure_us --days 365` returns **three 10-Qs**; **this run did not open the body**, so the Midstream share is `unknown` (`C3`) and is not estimated. The *"capability aimed at only one target"* failure class, verbatim. |
+| **`D515`** | *A contracted band is read as a **virtue** in midstream/power and as a **demand signal** in memory; it is the same structure and it cannot be both.* | The desk reads `KMI`'s RPO and `VST`'s PPA floor as stability, while reading the DRAM contract-price QoQ deceleration (**+90~95% → +58~63% → +13~18%**) as demand — when `MU`'s FY26Q3 10-Q says price renegotiates **inside a floor/ceiling band whose ceiling is pinned to a dated market price**. The reverse transfer has never been asked. |
+| **`D516`** | *The desk asserts a PPA-floor frame on `VST` from a carried sentence, not from a filing it has read; the contracted MW share has never been pulled.* | `module_disclosure_us --days 365` returns three 10-Qs each for `VST` and `CEG`; the module surfaces form/date only and **this run did not open the bodies**. `VST`/`CEG` contracted output and the `ETN` data-centre backlog are `unknown` (`C3`). |
+| **`D517`** | *The AI-power lane is the desk's most-discussed uncovered cycle and it has **no price series at all** — every reading of it is an equity-flow reading dressed as a fundamental one.* | Merchant power's price object is regional forward power and capacity-auction clearing prices; `module_macro_us` carries neither, and the desk's only reference is the carried `M367` sentence. The B1 second-derivative lens has nothing to grip and the file says so rather than substituting. |
+| **`D518`** | *`action_bracket` selects on date-proximity while PREMORTEM selects on information content, so the two will routinely disagree and nothing says which governs.* | `action_bracket` armed both sides of **Aug PPI** because it is the nearest binary; **PREMORTEM Lens 2 deliberately did not bracket PPI** on `B4` grounds (neither branch changes the conclusion). Both are right — an *execution ticket* and an *information bracket* are different objects. |
+| **`D519`** | *`drift_watch`'s burst multiple is computed on a term count that includes rows whose own dates are months old, so a burst must be body-read before it is sized.* | The `ceasefire` burst printed **8.3×**; of the 8 highest-BM25 matches in the 2-day window, **three are dated `Wed, 29 Apr`** and two are unrelated Gaza/Lebanon items. Same class as `D508` (a tag computed on a stale last bar). ★ **The noisy probe still surfaced a real gap** (`M1327`). |
+
+## Reproductions counted this run (not new — the count is the finding)
+
+- **`D459`** (collapse dual-class issuers before `top1_w`) — **11th measured reproduction**: Alphabet
+  **76.6%** of Comm. Services under two tickers, `top1_flips_sign` prints **False**, ex-both-classes
+  `wflow` **−0.389 → +0.272**, swing **0.661**. **COMM un-rankable for a 15th run.**
+- **`D427`** (two H.15 series on different dates) — **5th reproduction, measured twice on independent
+  pulls**: `T10YIE` carries **09-04**, `DGS2`/`DGS10`/`DGS5`/`DGS30`/`DFII10` stop at **09-03**.
+  Blocked `P121`·`P114`·`P125` for a 2nd consecutive run. ★ **`P125`'s construction WORKED** — its
+  observable names the *joint* date, so it is **unscoreable rather than mis-scoreable**.
+- **`D472`** (a scored row's header still reads `ARMED`) — **10 more rows joined the set today**
+  (9 folded in from the unwritten 09-04 run + `P101`).
+- **`D490`** (a run that writes `llm_outputs` without a `handoff/` writeback) — **this desk is the
+  offender**: 3 of its last 4 runs. ✅ **Closed for this run** — the writeback is executed, and the
+  PREMORTEM brackets were registered **inside the stage** rather than deferred.
+- **`D488`** (the earnings-date field is wrong) — **applied, and it corrected a carried date**:
+  `MU` FQ4 is **2026-09-30 16:00 ET** by `Ticker.earnings_dates`, against the carry's *"09-24"* and
+  `module_fundamentals_us`'s *"10-01"*. Three sources, three dates.
+- **`D10`** (news-body boilerplate) — ★ **first quantification on `chain-hop`**: `GOOGL` 16/95 ·
+  `GOOG` 16/95 · `META` 10/76 · `AMZN` 4/26 are the **top four** body co-mentions on a **diesel**
+  query. Still a human-approval / server-console item (P6).
+- **`D294`** (`action_bracket` names a binary then prints "none in window") — ✅ **DID NOT
+  REPRODUCE. First clean run in 8.** It named Aug PPI (D−5) and armed both sides. A defect's
+  non-reproduction is evidence and is logged as such.
+- **`D282`** (DRIFT at +0.6h vs its 3–6h spec) — **8th reproduction**: fired at **+0.7h**, so this
+  run's drift **null results carry little weight** and the file says so.
+- **`D379`** (PREFLIGHT reads §5 first) — **9th run unwired**; done manually again.
+- **`D463`** (check standing rejections, not just `due`, before ALPHA tags) — ✅ **applied**:
+  `MSTR`, `CRM`, `INTU`, `RTX`-thread, `VST` and `VLO` were all surfaced with their standing
+  rejections **before** tagging, and **none was overturned by this desk**.
+- **`D9`** (does a holdco mismatch block or warn) · **`S8`** (**38th** run unscoreable) — **human
+  items, unchanged.**
+- **Standing execution constraint**: **PREMORTEM's four lenses and DEEP's four sectors ran
+  IN-CONTEXT and serially, not as parallel adversarial agent fan-outs.** Declared in both files.
+
+
+---
+
+# Part C · dig list — appended by `industry_kr`, 2026-09-06 (Sun)
+
+> IDs from `module_evidence next-id D` against a live scan of `handoff` + `REPORT` + `llm_outputs`.
+> Highest existing at write time: **`D521`**.
+> 🚨 **This run hit the `D76` collision class for the second consecutive run.** Inside the stages it
+> hand-picked `D500-KR`·`D501-KR`·`D502-KR`·`D520-KR`·`D521-KR`; **`D500`–`D502` were already used by
+> yesterday's 09-05 US run** — and `D502` is *the very dig this run reproduced in KR*. Renumbered to
+> **`D522`–`D527`** before writeback and all five output files patched. The reason lives at `D527`.
+
+## New digs registered by this run — `D522` – `D527`
+
+| id | statement | measured origin |
+|---|---|---|
+| **`D522`** | *`scoring.n_axes` describes `flow_score` only. Either emit `flow_tag`'s effective axis count per name, or cut velocity out of `flow_tag` when `vel_axis=false` — one of the two, or a single run's axis count is not homogeneous.* | `module_flow/_synthesize.py:17,22,26` keeps eating velocity while `flow_score` drops it. Measured 🟢 rate: **58 velocity-bearing names 20.7% vs 746 without 8.3% = 2.5×**. Causally closed, not correlational: the diff between yesterday's variant-D rescore (velocity all `None`) and today's as-run is **exactly 11 tags**, **11/11 velocity-bearing**, **`flow_score` diff 0/804.** ★ It reached the sector ranking: 전기·전자 breadth **0.18 → 0.23**, the whole increase being three names at universe positions **0 · 3 · 20** — and it flipped a **held** name's tag (`316140` 🟡→🟢). |
+| **`D523`** | *A command whose job is to decide success/failure must not carry a tail that swallows that decision (`; echo $?`, `; date`). An instrument's life is confirmed on the artifact's size and content.* | This run's first sweep call passed `--json <path>` to a `store_true` flag ⇒ argparse **exit 2**, output **0 bytes**. The wrapper reported **exit 0** because the compound command ended in `date` — structurally incapable of returning anything else. **Had the log not been read, today would have repeated yesterday's "the sweep is empty" misread from a completely different cause.** |
+| **`D524`** | *The sweep's news coverage is not "names that have news" — it is a **prefix of the universe, hard-cut**. Therefore "this name is quiet" is structurally **unmeasured** for every name past the cut, and that cell stays blank (`C3`).* | KR measurement (n=804): the 58 names carrying `velocity` sit at `kr_all.csv` positions **0–57**, **zero gaps inside**, **zero past 58**. `W1` respected — yesterday's US `D502` (positions 0–48) was **not transferred**; the same measurement was re-run on KR data. **Structure identical (contiguous prefix · hard cut · zero exceptions), constant different (US 49 / KR 58).** The query count was not decomposed (`C3`). |
+| **`D525`** | *The `thread` axis can only see stories that repeat. A single-day 8-outlet event is structurally invisible to it, so EVENT_ALPHA cannot card the day's biggest story.* | 09-05's #1 event by outlet count — **현대제철 US steel mill groundbreaking [24 articles / 8 outlets]** — has **no multi-day thread**. Alive market threads: 7, none of them it. The event was caught by SWEEP's Δ axis instead. ⇒ **Every run should check whether the day's #1 event is a multi-day thread, and say so when it is not.** |
+| **`D526`** | *Before deviating from the DEEP-slot selection rule, check whether the deviation's own premise is **falsifiable inside that DEEP**. If it is, follow the rule and hand the hypothesis to the next run's mandate — do not spend a slot on it.* | ROTATION deviated from the rule (which named 보험) to give the rotating slot to MATR/금속, on the premise *"the only matrix×flow divergence this run measured is in 금속."* **DEEP-MATR refuted that premise with its own first measurement** (cross residual correlation **+0.3905 > within-steel +0.3834** ⇒ one unit, `R130`/`R131`), and a third measurement showed the rule's pick was the higher-information one (보험 60d excess **+16.9~+50.8pp** vs the metals node's **−1.8~+16.3pp**). ⇒ **The slot bought a closed hypothesis, which is a real output — but the rule would have bought more.** |
+| **`D527`** | *A KR vocabulary axis whose **head word is two characters** does not exist in the trigram index. Do not add more terms — swap the head word for a 4-character synonym (`환율` → `외환시장`).* ★ **And: provisional `-KR`-suffixed IDs chosen by hand re-use numbers another desk already spent. Mark them `provisional` inside the stage and issue with `next-id` at run end.** | Control pair in the same window (`--kr --days 3`): **`국채` = 0** (2 chars) vs **`국채금리` = 279** (4 chars) — same concept, same window. Also **`환율` 0 · `엔화` 0**, while the event axis printed three FX items that day. This is the **root cause of bucket ②'s 4-run failure**, which had been recorded as "the bucket structurally cannot see FX events" without a mechanism. Working surface form found: **`외환시장` 97 = 3.0× the bucket's current 2-term sum (32)**. ⇒ folded into bucket ② as its primary term. **Second half measured this run: `D500`–`D502` collided with the 09-05 US run's numbers (`D76` class, 2nd consecutive run).** |
+
+## Reproductions counted this run (not new — the count is the finding)
+
+- **`D502`** (news tunnel cuts at a universe prefix) — **first reproduction on a second market**, and it
+  was re-measured rather than transferred (`W1`). US 0–48 / KR 0–57. **The constant is not portable;
+  the structure is.**
+- **`D427`** (two H.15 series on different dates) — **6th reproduction, measured today on an independent
+  KR-side pull**: `T10YIE` carries **09-04 (2.35)**; `DGS2` 4.34 · `DGS10` 4.77 · `DGS5` · `DGS30` 5.25 ·
+  `DFII10` 2.42 all stop at **09-03**. Blocks `P121`·`P114`·`P125` for a **3rd** consecutive run.
+  ★ **And this run dated the block forward**: `D507` measured **2026-09-07 = Labor Day**, so H.15 does
+  not publish then ⇒ **the block holds through at least 2026-09-08**. Written so the next run cannot
+  wave it through as "same as yesterday".
+- **`D391-KR` / `D510`** (STRUCTURAL calendar empty) — **3rd reproduction**: the KOSPI200 quadruple
+  witching is **2026-09-10, D-4**, read off `module_KIS --futboard` (front-month `잔존일 7`), and
+  `CATALYST_WATCH.json`'s STRUCTURAL bucket still reads `(none in window)`. ⚠ **New sub-finding**: the
+  L2 auto-register threshold is `잔존일 ≤5` while the calendar window is 10 days — **the threshold and
+  the window disagree**, so this date can never be auto-caught at D-6..D-10.
+- **`D472`** (a scored row's header still reads `ARMED`) — **11th reproduction, and it actively
+  contaminated this stage**: a header-based scan flagged **19 KR + 99 US** past-dated rows as unscored.
+  Resolved by cross-checking the dated settle queue instead of headers.
+- **`D76`** (hand-picked IDs collide) — **2nd consecutive run.** See `D527`.
+- **`M1152`/`D-basis`** (KIS `베이시스` field does not reproduce from its own payload) — **3rd
+  reproduction**: field **0.60** vs hand-computed **+0.92** (futures 1,052.44 − KOSPI200 spot 1,051.52).
+  The 괴리율 field (+0.03%) does reproduce.
+- **`D273-KR`** (✅진짜손 becoming a synonym for "institutions bought") — reproduced on the battery node:
+  the board's **20-day excess ranks 1 · 2 · 4** (`066970` +45.80pp · `336260` +26.67 · `020150` +11.71,
+  bench `^KS11` +6.21%) are **all three `❌약한손`** (foreign −158 / −236 / −78만, retail absorbing).
+- **`D483-KR`** (`exposure_rule state` and `show` read different things) — reproduced: `state`'s
+  current-% cell is blank again (account query failed); 85.2% came from the `show` ledger.
+- **`D490`** (a run that writes `llm_outputs` without a `handoff/` writeback) — ✅ **closed for a second
+  consecutive KR run**; yesterday's KR run wrote back at 10:04/10:08 and last night's US run at
+  23:08–23:37. ⚠ **The instance is closed, the defect is not** — `D494-KR`'s prescription
+  (per-stage atomic writeback) is still unwired.
+
+
+---
+
+# ═══ Part C · DIG LIST — appended 2026-09-06 by the `industry_US` run ═══
+
+> Trigger form. Each entry is a **defect with a measured origin**, not an observation.
+> `D528`–`D544` were issued by `module_evidence next-id` (live scan of `handoff/` + `REPORT/` +
+> `llm_outputs/`), never hand-grepped — the `D76` collision class.
+
+| id | trigger | measured origin |
+|---|---|---|
+| **`D528`** | *A carry file large enough that a run cannot read it linearly must declare its READING METHOD at the head of the report — "read in full", "read by header index", "parsed mechanically" are three different claims.* | `handoff/` totals **3.6 MB**; `STANDING_VIEW.md` alone is **758 KB** and a 180-line slice returned **71 KB**. Declared at the head of `HANDOVER.md` this run |
+| **`D529`** | *A per-run writeback is FOUR independent writes, and the master scoring log is the one that gets dropped — because it is the only one requiring transcription of an EARLIER stage's output rather than an append of the current stage's.* | `M1352`: the 09-05 US run wrote `STANDING_VIEW.md`, `STANDING_VIEW_US.md` and `SCENARIOS_US.md`, plus a `SCENARIOS.md` **master index** block, and **no scoring-log block**. Repaired inside HANDOVER this run |
+| **`D530`** | *A sub-node split is checked against RESIDUAL CORRELATION before it is treated as two judgement units.* | The general form of `R130`/`R133`-KR (a steel-vs-nonferrous split dissolved at cross-node residual corr **+0.3905** > within-group **+0.3834**). ⚠ **Two live US splits are currently unchecked**: `M1316` (Utilities merchant vs regulated) and `M1314` (IT software vs hardware) |
+| **`D531`** | *An interim "tracking" line is written with a token no verdict scan will match — because it contains the row id and a branch name, so a later run's grep cannot distinguish "we looked at it on the way" from "we settled it."* | `M1355`: `S16` (07-29), `S24` (07-29), `S42` (08-12) went **39/39/25 days unscored and invisible**, all three with a **2026-07-30 tracking line** as their last state |
+| **`D532`** | *The catalyst calendar carries MARKET HOLIDAYS as first-class rows.* | Labor Day **2026-09-07** governs three blocked scenario rows and every window count in this run, and appears nowhere in `catalyst_calendar --days 12`; the desk learned it from a dig (`D507`) |
+| **`D533`** | *A binary falling on BOTH desks' calendars is bracketed by whichever desk has a PREMORTEM block, and the assignment is written down.* | **2026-09-10 carries US Aug PPI AND the KOSPI200 quadruple witching.** KR has no PREMORTEM block and said so (`M1349-KR`). ⚠ **This run recorded that a `--market us` desk cannot discharge it either** (`W1`) ⇒ **the dig stays OPEN and needs a human or a KR protocol change (P5)** |
+| **`D534`** | *A price LEVEL quoted inside a narrative sentence is re-pulled from the settled series before it is carried a second time; a direction that survives does not certify the number attached to it.* | `M1360`: *"WTI printed $96"* against a settled close of **$91.48** and a window high of **$93.14** — **no $96 on any bar**. The +9.7% direction survives; the level and the rate do not |
+| **`D535`** | *When the day's largest event on an OW sector is title-only across every outlet that carried it, the report records the SUBJECT and the ABSENCE of the mechanism, and names the venues tried.* ⚠ **Partly superseded by `D541` — see `R134`.** | The 13-outlet Venezuela "blindsided" cluster: Bloomberg `[no body]` ×2, Japan Times `[error]` |
+| **`D536`** | *`blindspot` has no window argument on this runtime*, so it answers "what is historically frequent outside the fixed set," never "what is new today." | It ran over **324,584 articles** (the full corpus) when a 7-day view was wanted |
+| **`D537`** | ★★★ *`flow_tag` reads an axis `flow_score` has DROPPED, and that axis is structurally available to only the largest 50 names — so the 🟢 label is systematically easier to earn the larger the company, and the leg only PROMOTES.* | `M1369`: `PG` flipped 🟡→🟢 on a **news-velocity change alone** between two runs reading the same settled session; **4 of 11 greens in the 16.7% velocity-eligible prefix (2.2× base) vs 14 of 92 reds (15.2%, at base)**. An independent US reproduction of `M1328-KR` |
+| **`D538`** | *A story whose daily cluster titles never repeat is INVISIBLE to the thread instrument regardless of size; term velocity and `theme-age` are the fallback and must be run independently.* | `Venezuela`: **487 hits / 7d, `theme-age` 2.95×** — and **no thread at all** in `thread --days 7` |
+| **`D539`** | *A universe refreshed on a weekly cadence and currently 53 days stale cannot admit a vehicle for any shock younger than the staleness — so "no vehicle" is partly a FILE-AGE result, not only a market fact.* | Rare earths (3rd run, `MP` not in `us_top300`) and gold (`GLD`), `M1299`'s structure |
+| **`D540`** | ★★ *The calendar's EARNINGS block fails silently (`yfinance unavailable`) while the same library, called directly, returns the dates — so an empty EARNINGS block must be treated as UNKNOWN, never as "none."* | `catalyst_calendar --days 12` printed *"(none in window / yfinance unavailable)"* while **`ORCL` and `ADBE` both report 2026-09-10 16:00 ET**, `ORCL` with an implied move of **±11.8%** |
+| **`D541`** | ★★★ *`fts search --full` / `--snippet` print stored article bodies and have never been invoked by this desk. Every prior "body unreadable" finding must be re-read as "no print path was tried."* | Documented in `pipeline/L3_functions/drill_detail.md` and `pipeline/L2_modules/news.md` — the exact L3 DEEP and EVENT_ALPHA are told to call for the direction body-read — with **ZERO invocations across six `industry_US` runs**, while `search` was **printing `body=9736자` in the same line the desk read as evidence of absence**. ★ A `README §4b` instance, and it produced a wrong dig (`D535`) inside this very run ⇒ **`R134`** |
+| **`D542`** | *`company_batch` has run ONCE, KR-only, so every US BET candidate for six runs has been re-derived from scratch with no verdict · stop · score · dated observation point to confirm against.* | `REPORT/COMPANY_SCOREBOARD.md` (2026-08-21) holds **5 rows, all KR**; `module_report_tags` shows `SLB`/`RTX` with report history but no scored row |
+| **`D543`** | ★★ *`theme-age`'s AGE leg measures the age of the WORD, not the age of the EVENT — so the 🟢FRESH gate cannot, by construction, mark a new event on an old proper noun as fresh.* | `M1378`: `Venezuela` scored **age ≥90 / accel 2.95×** — the **first** theme in 13 foreign measurements to clear the 2× leg (prior max 1.95×) — while **the deal driving it is 8 days old**. **A better explanation of 13 consecutive `F1` zeros than "no fresh themes exist," and a fixable defect rather than a market fact** |
+| **`D544`** | *Two desk instruments must not disagree on the FX rate inside one session.* | `action_bracket` used **fx 1360** while `module_paper_book status` read **fx 1380** on 2026-09-06 — a **1.5%** difference on every USD notional in `ACTION_TICKETS.md`. A `C23` sibling |
+
+### Reproductions counted this run (not new digs)
+
+`D427` **7th** (H.15 split publication, now with a **Labor Day floor**) · `D459` **12th** (dual-class
+issuers before `top1_w`; swing 0.661) · `D476` **3rd** (MACRO §E's wind read as a verdict) ·
+`D472` **counted for the first time — 63 `ARMED` blocks with a past settle date** · `D282` **9th**
+(DRIFT at +0.7h against a 3–6h spec) · `D379` **10th** (PREFLIGHT reads §5 first — done manually
+again) · `D463` **3rd** (`MSTR`'s standing rejection unexamined) · `D488`, `D494-KR`, `D504`
+(the last two **closed** this run for the rows in them) · `D509` (chain-hop ticker collisions, still
+present alongside its first valid candidate) · `D514`/`D516` **3rd** (no filing body opened for the
+refiners' contracted share or `CVX`'s committed capital) · `D74`/`D426` **stand down** (weekend, no
+partial bar) · `D506`/`D474` **13th** (two of three `brief` recovery tiers structurally unavailable
+on `--scope foreign`).
+
+### ★ The rule this run would add if it were adding one
+
+**Ask what a tool can already do before recording that it cannot.** Three of this run's findings —
+`D540` (the calendar's earnings block), `D541` (`--full`), `D543` (`theme-age`'s age leg) — are the
+same shape: **a capability or a defect that was visible in the tool's own output or its own
+documentation, and that the desk recorded around instead of reading.** `D541` is the sharpest,
+because the desk wrote `D535` (*"the body is unreadable"*) **in the same run** in which `search` was
+printing the body's length on screen.
+
+---
+
+# ═══ Part C · dig list — appended 2026-09-07 by the `industry_kr` run (append-only) ═══
+
+> 오늘의 발견 8건은 **모순이 아니라 결함**이다 — `C` 를 새로 열지 않고 여기 등록한다.
+> ID 는 `module_evidence next-id D` **라이브 스캔** 발급(현재 최고 D544). **손으로 고르지 않았다**(`D76` 충돌 클래스).
+
+| id | dig | 근거(측정) | 처방 |
+|---|---|---|---|
+| **`D545`** ★1위 | **뉴스축 절단 상수는 런마다 움직인다 — 「어느 이름이 4번째 축을 받는가」를 상속하지 마라.** 매 런 위치 범위를 다시 재고, **그 런의 보드에서 뉴스축이 하중을 지는 이름을 명시적으로 열거하라.** | velocity 보유 **53종 = 위치 0~52 연속, 예외 0**(어제 0~57/58종). 잘린 5종은 **정확히 경계 꼬리 53~57**, **신규 진입 0**(`M1382`). 반사실로 **9종의 색이 뉴스축 한 다리에 매달림**, 그중 **보유 `316140`**(`M1384`) | ⇒ **`D524` 의 구조 주장 유지 · 상수 주장 철회.** 스윕이 종목별 `vel_used` 를 내보내거나, 매 런 접두 범위를 PREFLIGHT 에 인쇄 |
+| **`D546`** ★2위 | **같은 정착세션을 두 번 채점하면 `flow_score` 는 동일하지만 `tag` 는 달라진다 ⇒ 태그는 결정론이 아니다.** `vel_axis=false` 일 때 `flow_tag` 에서도 velocity 를 끊거나, 종목별 실효 축 수를 내보내라. | `flow_score` **0/804 불일치** · `tag` **2/804**(`086280`·`272210`, 둘 다 vel 상실로 빨강 다리 소멸, 🔴→🟡). **시장이 상수인데 레이트리미터가 색을 바꿨다**(`M1383`) | **`D522` 의 두 번째·역부호 인스턴스.** 수리는 사람(P5) |
+| **`D547`** ★3위 | **KR 2글자 축의 작동 계기는 `fts` 가 아니라 `search`(LIKE) 다.** 프로토콜의 어휘 축은 **버킷별로 두 계기를 병행**해야 하고, **`fts` 단독 0 을 부재로 적으면 안 된다.** | 같은 단어 `환율`: **`fts` 7일 = 0** vs **`search` 2일 = 119건**(`M1385`). 4글자 대체어 `외환시장` 198 은 사건축 FX 스레드 **320건의 61.9%** 만 잡는다(`M1386`) | ⇒ **`R136` 회수**(「더 긴 텀」 처방). **명제 `M-135` 로 3런 추적** |
+| **`D548`** | **`module_industry_map` 은 다중어 시드에 조용히 0을 돌려주고, `corp pool top-30` 은 랭킹이 아니라 티커코드 오름차순 앞 30개다.** ⚠ **그리고 L2 `narrative_money` §B-3 가 지시하는 호출 형태(`"<thread terms>"`)가 바로 0을 내는 형태다.** | 다중어 4/4 = **0행**(`"액체냉각 데이터센터"` 등) vs 단일어 4/4 = **각 30행**(`M1406`). `냉각` 결과 **30행 전부 `hit=1`**, rank 1~30 = 000150→008730 이고 **008730 위는 관련도와 무관하게 잘린다**(`M1407`) | **노출 매핑 단계에서 발생하면 「이 테마에 노출된 한국 기업이 없다」로 오독된다.** L2 문서의 호출 예시를 단일어로 고치고, `top-30` 라벨을 「first-30 by code」로 정정 |
+| **`D549`** ★★ | **두-파일 시스템에 대해 한 파일만 읽고 결론내지 마라.** 확인은 **companion 파일과 도구 소스를 함께** 연 뒤에만 한다. | **오늘 이 런이 같은 클래스로 3번 틀렸다**: ① back-scan 이 요약 행을 판정으로 오독 ② 부정문(`"NOT EXPIRED"`·`"PENDING"`)을 판정으로 오독 ③ `reject_ledger.jsonl` 만 보고 「0 due 인데 미해소 행이 있다」고 결론 — **해소는 `_resolutions.jsonl` 에 별도 저장**되고 `due` 가 `resolved_keys` 로 배제한다 | **가장 값싼 처방: 판정 확인은 「테이블 첫 칸이 그 id 인 행」 + companion 파일 존재 확인.** 세 번 다 한 명령으로 반박됐다 |
+| **`D550`** | **`SCENARIOS_KR.md` 에 「자기 행 없는 판정」이 2건 있다 — 색인을 만들어라.** | `S28`(→`S22` 행 산문에 `FIRED-A`) · `S52-KR`(→**US 데스크가 쓴 줄**에 `미결`+`S64-KR` 재등록). **소실은 0이지만 기제는 US 3행을 39일 숨긴 것과 같다** | 마스터 로그에 **id 당 최소 1개의 자기 판정 행**을 강제 |
+| **`D551`** | **`verdict-grep` 은 판정을 확인하는 도구가 아니다** — 요약 행과 부정문이 긍정 판정으로 읽힌다. **확인은 「테이블 첫 칸이 그 id 인 행」으로만.** | back-scan 1·2차가 각각 **23/23 거짓 ✅**(§B-b). ⇒ **`D531` 은 US 파일의 특성이 아니라 grep 자체의 특성** | `D549` 의 특수형 — 스캔 스크립트를 만들 때 이 형태로 |
+| **`D552`** | **`top1_flips_sign` 은 n=1 섹터에서 계산되지 않아, 「한 이름이 섹터 부호를 만든다」의 가장 극단이 탐지를 빠져나간다.** | `외국증권`(n=1, wflow −0.721) · `인프라투용`(n=1, −0.910) 은 `top1_name`·`top1_w`·`wflow_ex_top1` **필드 자체가 없다**(`M1387`) | n=1 섹터를 **`single_name=true`** 로 명시 내보내고 ROTATION 이 섹터로 인용하지 못하게 |
+
+### 운반(미해소) — 런 카운트와 함께
+- **`D427`** 두 FRED 시리즈의 공동 발행일 — 🚨 **7번째 재현**(KR 독립 2번째). **`P121`·`P114`·`P125` 4런 연속 블록.**
+  ★ **어제의 「최소 09-08 까지」 예고가 오늘 09-07 다리에서 확인됐다** — 계기 사전공약이 맞은 드문 사례.
+- **`D391-KR`/`D510`/`D533`** STRUCTURAL 캘린더 공백 — 🚨 **4번째 재현.** ✅ **오늘 `S151-KR` 등록으로 KR 쪽은 닫혔다**
+  (도구는 여전히 못 본다 — **수리 아님**).
+- **`D543`**(어제 US 등록: `theme-age` 의 나이 다리는 단어의 나이를 잰다) — ★ **오늘 KR 독립 실측**:
+  가속 ≥2× 를 통과한 테마 **3개**(보험주 13.21× · 은행주 10.95× · HBM 2.87×)가 **전부 나이 다리에서만 막혔다**(`M1402`).
+  ⇒ **F1 의 20런 연속 0 은 「가속이 없어서」가 아니다.**
+- **`D541`/`R134`** `fts search --full` 미호출 — ✅ **오늘 KR 이 처음 실행했고 5스레드 중 2건의 방향이 뒤집혔다**
+  (제철소 = 관세 서사 반전 · HBM = 가격 긍정 다리). **인스턴스는 닫혔고 습관은 아직이다.**
+- **`D540`**(EARNINGS 블록의 침묵을 부재로 읽는 실패) — **KR 출력도 같은 문장** ⇒ 재현 +1.
+- **`D522`·`D524`** — 위 `D546`·`D545` 로 갱신.
+- **`D466-KR`** 빈 스냅샷이 좋은 기준선을 가린다 — **08-28 여전히 0건.**
+- **`D472`** 채점된 행의 헤더가 `ARMED` 로 남는다 — **12번째 재현**(back-scan 23행 중 19행이 헤더 `ARMED`).
+- **`D483-KR`·`D544`** `state`↔`show`↔`cycle_exposure`↔fx 불일치 — **`C23` 의 네 다리.**
+- **`D494-KR`** 스테이지별 원자 writeback — **처방 미배선.**
+- **`D504`/`D449`** MACRO 안에서만 사는 명제 — **`P128`·`P102`·`P126`·`P127` 원문 KR 미열람.**
+- **`D379`** PREFLIGHT 가 §5 를 먼저 읽게 하라 — **10런 미배선**(순서는 수동으로 지켰다).
+- **`D273-KR`** 「✅진짜손」이 실체보다 강하게 읽힌다 — ★ **오늘 가장 선명한 인스턴스**: `316140` 의 20d 누적이
+  **09-03 하루(+1,305.2만주 ≈4,522억)에 지배**되고 직전 세션은 반대 방향이다(`M1399`).
+- **`D463`** 두 원장이 같은 이름에 반대 답(`MSTR`, 4런) · **`D9`** 홀드코 · **`D10`** 뉴스 본문 보일러플레이트(P6) ·
+  **`S8`**(40런) · **ARMED(TIMEFOLIO_EXECUTE=1)** — **전부 사람 항목(P5).**
+
+
+---
+
+# ═══ Part C · dig list — appended 2026-09-07 by the `industry_US` run (append-only) ═══
+
+> IDs issued by `module_evidence next-id D` against a **live scan** of `handoff` + `REPORT` +
+> `llm_outputs` (highest existing at write time: **D552**, registered hours earlier by the KR run).
+> **Not hand-picked** — the `D76` collision class.
+
+## New digs registered by this run — `D553` – `D567`
+
+| id | dig (stated as an instruction, not a prohibition) | measured origin |
+|---|---|---|
+| **`D557`** ★★★ 1st | **Publish RAW term counts and inter-term dispersion; take the denominator from the SAME tool that produced the counts.** `fts search --days N --count` and `brief --date`'s `denominator.articles` count **different populations**. | `fts search company --days 1 --scope foreign --count` = **1,741** on a day whose `brief` denominator is **1,720** — a term matched more articles than the day contains. Corroborating: `inflation` per-slot increments **412·294·441·447·570·480·340** against per-day counts **1,720·1,521·1,740·4,719·5,380·5,813·5,465**; ratio decays monotonically 1,012 → 225 per thousand. **Retracts `M1364`'s share leg (`R139`) and supersedes `P141`'s diagnosis.** |
+| **`D561`** ★★★ 2nd | **Read the 🟢 tag's gate as rank-dependent, and cite `flow_score` + the RS axes instead.** `flow_tag` falls back on `velocity`, which exists only for universe ranks **1–52**, while `scoring.vel_axis` is **false**. | All **7** greens without a velocity carry `vol_surge` **1.21–1.47**; the 4 with one sit at ranks **8·34·35·48** and two are **below** the gate. Decisive pair: **`PG` (rank 34, flow +0.231, surge 0.89) 🟢** vs **`CEG` (rank 124, flow +0.644, surge 0.96) 🟡**. Mis-measured **three sectors** this run (UTIL, HLTH, STPL); in HLTH it excludes **nine** merit-passing names. Sharpens `D537` from "an artifact on one name" to a structural rule. |
+| **`D563`** ★★★ 3rd | **Build the universe from cycles as well as from index membership ∪ holdings** — otherwise a cycle the desk does not already own is a cycle it cannot measure. | On the day QatarEnergy's force majeure ran into November and Asia spot LNG hit a **2022 high**, **`LNG`·`CQP`·`NFE`·`GLNG`·`FLNG`·`VG`, every gas E&P and every tanker** were absent from `us_top300.csv`; so are `DINO`/`PBF`/`DK`, `HAL`/`FTI`, and **`TLN`/`NRG` — which sit inside `P127`'s basket, a LIVE row settling 09-10.** ⇒ a **scoring** exposure, not only a measurement one. |
+| **`D565`** ★★★ 4th | **State the window on every rate-of-change claim** — this desk's own commodity driver changes SIGN between windows. | Distillate crack at 09-04: 3-session **−$7.02 = 6.0th pctile** · 5-session **−$0.37 = 45.6th** · monthly **+8.6%** (2nd consecutive decline: 37.6 → 13.0 → 8.6) · quarterly **+40.5% = fastest of nine quarters** · level **95.6th**. `M1361` quoted the 3-session figure; **`P140` settles on the 5-session one.** |
+| **`D562`** | **Add foreign central-bank dates to `catalyst_calendar`, and until then read its output as US-only.** | `--days 10` names US PPI 09-10, US CPI 09-11, FOMC 09-16 and an undated Hormuz statement — and **omits the ECB decision on 2026-09-10**, body-confirmed as fully priced at 25bp to a 2.5% deposit rate. The US instance of `D391`/`D510`. |
+| **`D553`** | **Measure the news tunnel's recovery with ONE probe at a long offset, never with a poll.** | Recovery clock **0/5 through t+100s** at 20s spacing, where 09-05 and 09-06 both recovered at t+60s under the same polling; alive (2/2) after ~2 min of **probe-free** idleness. **Hypothesis: each failed probe resets the idle timer.** The controlled test (one probe at t+180s, no intermediate polling) belongs to `idle_probe`. |
+| **`D554`** | **Map `SECTOR_FLOW_US.json`'s `names` array through `us_top300.csv` `rank` before any positional analysis.** The array is **`flow_score`-sorted**. | On array index the velocity set looks scattered with gaps everywhere; on universe rank it is **exactly contiguous 1–52, zero gaps**. The 09-06 method got the right answer by coincidence (⇒ `R140`). |
+| **`D555`** | **Give every scenario a terminal date at registration; treat a missing one as a defect the parser must surface.** | `S9` was registered *"2026-07-29 (FOMC) **and running**"* with no end date ⇒ **invisible to both the settle queue and every date-based back-scan for 40 days.** Found only by a full parse. |
+| **`D556`** | **Register the retrieval path for a fundamental leg at the same time as the threshold.** A bracket with one price leg and one fundamental leg **degrades asymmetrically**. | `S14`'s RS leg scored cleanly at 32 days; its *cross-border volume* leg returned **0 hits** on `fts search "Mastercard cross-border" --days 60 --scope foreign`, and the only 07-30 print article in the pool speaks to purchase transactions and GDV — **not** the frozen observable. Widening it would be exactly what `D242` forbids. |
+| **`D558`** | **Compare two runs' term counts only at the same data maturity.** | The 09-06 run's own denominator for 09-06 was **557**; re-pulled today it is **1,521** (**2.7×**). 09-05: 1,665 → **1,740**. Normalising yesterday's counts against today's denominator inflates every term. |
+| **`D559`** | **Read `theme-age`'s zero-🟢FRESH streak as a gate-specification property until the age leg is changed.** | Across 22 themes: **3 clear ≥2× acceleration** (`bond selloff` **5.93×** on base 247 · `Venezuela` 2.47× · `Fed hike` 2.06×); **0 clear ≤14-day age** — **minimum age measured all run is 47**. The age leg measures the age of the **word**. Gives `D543` its US-native evidence and explains F1's 14-run zero without invoking the market. |
+| **`D560`** | **Read `catalyst_calendar`'s EARNINGS block as "cannot tell", never as "none".** | It prints *"(none in window / yfinance unavailable)"* while `ORCL` and `ADBE` both report **09-10 16:00 ET** inside the window. The US instance of `D540`. |
+| **`D564`** | **Attach a DEADLINE to every deferral.** ⚠ **Live commitment: the FOMC + SEP (2026-09-16) bracket must be registered by the 2026-09-11 run at the latest** — after the CPI prints, the pre-print information is in the base and the row loses what it exists to capture. | Deferred on 09-06 and again on 09-07, both times for a valid reason (a `D93` computed on a tape frozen at `asof 2026-09-04` for a third run, and no 09-11 COT). **A deferral with a date is a plan; a deferral without one is avoidance.** |
+| **`D566`** | **Take the dispersion-to-sector-move ratio as the unit-of-analysis test, and report it on every DEEP file.** | Same run, four sectors: **Utilities 1.157 / 0.050 ≈ 23×** · **IT 0.894 / 0.195 = 4.6×** · **Health Care 0.563 / 0.190 = 3.0×** · **Energy 0.371 / 0.562 = 0.66×**. Only Energy is below 1. ⇒ `IT N→UW` has now been declined **seven** times on seven different reasons because **there is no sector-level fact to attach a verdict to**. **A protocol change, human-owned (`P5`).** |
+| **`D567`** | **Seed `data/catalysts/structural_schedule.json` from the DRIFT feed** — the STRUCTURAL block's emptiness is a coverage gap, not a reporting gap. | This run found a dated, structural, OW-sector-relevant catalyst **in a DRIFT burst** that a 10-day catalyst pull three hours earlier could not surface: the **US-led coalition's mission in Iraq ends 2026-09-30**, and the withdrawal *"includes the removal of US air defence systems stationed in Erbil… critical to the interception of Iranian ballistic missiles and drones."* ⚠ Magnitude contested inside its own source (*"largely a formality… mostly symbolic"*). |
+
+## Reproductions counted this run (the count IS the finding)
+
+- **`D551`** (verdict-grep is not verdict confirmation) — ★★ **reproduced on an independent file,
+  desk and operator within 24 hours**, in a deliberate controlled comparison: proximity grep 84/87
+  vs first-cell-table 81/87 ⇒ **6 missed rows, not 3** (`M1411`).
+- **`D427`** (two H.15 series on different dates) — **8th reproduction**, and the 09-06 run's
+  **calendar-floor prediction held** (`M1412`). `P121`/`P114`/`P125` blocked a 5th run. ★ `P125`'s
+  joint-date construction keeps it **unscoreable rather than mis-scoreable** for a 3rd run.
+- **`D459`** (collapse dual-class issuers before `top1_w`) — **13th reproduction**: Alphabet **76.6%**
+  of Comm. Services under two tickers, per-ticker flag prints `False`, swing **0.661**. **COMM
+  un-rankable for a 17th run.**
+- **`D476`** (MACRO §E wind ≠ ROTATION verdict) — **4th consecutive reproduction, again by this
+  desk's own MACRO stage**: five of eleven §E labels differed from the standing set. The mechanical
+  fix (a standing-verdict column beside the wind) stays unbuilt.
+- **`D472`** (a scored row's header still reads `ARMED`) — **6 headers updated this run**
+  (`S19`·`S9`·`S41`·`S46`·`S14`·`S5`); residual **87 → 81** past-dated `ARMED` headers on this run's
+  denominator (which counts every header with any past date, a wider definition than 09-06's 47 —
+  **stated so the two numbers are not confused**).
+- **`D282`** (DRIFT fires at +0.6h against a 3–6h spec) — **9th reproduction**, and the addendum
+  states the consequence **before** its findings rather than after.
+- **`D537`** (the 🟢 tag reads a dropped axis) — superseded upward by **`D561`**.
+- **`D512`** (the underweights are one duration bet) — reproduced **and extended to a fourth leg with
+  its sign named**: `RE`/`STPL`/`UTIL` are short duration and **`FIN` is long it**; `S152` branch A
+  hits all four at once.
+- **`D343`** (do not pre-empt a live row) — **applied three times**: `MATR N→N−` declined for a 3rd
+  run because `P102` settles 09-09; `AVGO` **not dropped** the day before `S127` settles; the Iraq
+  catalyst **not bracketed** because its `D93` would sit on the frozen distribution.
+- **`D503`** (width without information) — **applied**: the `ORCL`/`ADBE` prints were **not**
+  bracketed because implied **±11.8%/±8.1%** sits outside any writable threshold (`D93` p85/p15 vs
+  `SMH` = +3.15/−3.66).
+- **`D506`** (the `nb` classifier is Korean-only) — reproduced: `scored 0 / unscored 365`, so the 15
+  single-source rows shown are a **random** sample of 365 and `excluded_nonmarket` is **structurally
+  empty (count 0)**.
+- **`D519`** (body-read a burst before sizing it) — **applied to all four** DRIFT bursts; three
+  resolved as term artifacts with the matching article named.
+- **`D10`** (news-body boilerplate) — new instance: `IEA refining capacity` reads **⚫SILENT (0 hits)**
+  as a term while the fact sits in bodies; and an embedded market-data widget inside an ECB article
+  was **read and deliberately not cited** as a price source.
+- **`D379`** (PREFLIGHT should read §5 first) — **11th run unwired**; order kept by hand again.
+- **`D9`** (holdco: block or warn) · **`D97`** (no CDS feed) · **`D463`/`C27`** (`MSTR`, 5th run) ·
+  **`D517`** (no merchant-power price series) · **`D533`** (KOSPI200 quad witching out of US scope,
+  2nd run) · **`S8`** (**41st** run unscoreable) · **ARMED `TIMEFOLIO_EXECUTE=1`** — **all human
+  items (`P5`), unchanged.**
+
+## ★ Digs CLOSED by this run — with the number that closed them
+
+- ✅ **`D514`** (*the take-or-pay frame has never been pointed at the Midstream segment of a refiner
+  this desk holds*) — **CLOSED, and the frame INVERTS.** `MPC`'s 10-K: the MPLX minimum-volume
+  commitments are **intercompany** (R&M → MPLX), so on a consolidated basis they are **not a floor**;
+  the filing says they *"will negatively impact segment adjusted EBITDA in periods when throughput or
+  sales are lower or refineries are idled."* ⇒ **no external contractual floor under `MPC`'s
+  consolidated margin** (`M1434`).
+- ✅ **`D516`** (*the PPA-floor frame on `VST` was asserted from a carried sentence; the contracted MW
+  share has never been pulled*) — **CLOSED with a number, and the number is small.** `VST`'s 10-K:
+  **1,200 MW of a ~44,000 MW fleet = ~2.7%**, **no revenue before Q4 2027**, full capacity **by
+  2032**. ★ **And the same filing carries a CEILING the desk had never carried**: ERCOT's
+  peaker-net-margin safeguard cuts the ASDC maximum to **$2,000/MWh** for the rest of the calendar
+  year above **3× CONE**, plus a PUCT Emergency Pricing Program (`M1435`).
+- ✅ **`D515`** (*a contracted band is read as a virtue in midstream/power and as a demand signal in
+  memory; it is the same structure and it cannot be both*) — **ANSWERED, three times in one run, and
+  the answer is a third thing**: it is neither automatically a virtue nor automatically a demand
+  signal — **it depends on the counterparty and on the coverage.** `MPC` **intercompany** (a fixed
+  cost) · `VST` **external but 2.7% and forward-dated** · `MU` **external, large and in force now**.
+  ⇒ the memory contract finding carries **more** weight relative to the other two, not less.
+
+## Standing execution constraint, declared
+
+**PREMORTEM's four lenses and DEEP's four sectors ran IN-CONTEXT and SERIALLY, not as parallel
+adversarial agent fan-outs.** Declared in both files. ⚠ Two lenses still moved the draft (Lens 1
+promoted two sectors and filled the DEEP budget 4/4 for the first time in five runs; Lens 3 inverted
+the carried momentum ranking), so the serial mode did not produce rubber-stamping on this run —
+**but that is one observation, not evidence the mode is equivalent.**
+
+## Part C — dig list appended by the 2026-09-08 `industry_kr` run
+
+| # | dig | 왜 (measured) | 소유 |
+|---|---|---|---|
+| **D568** ★★★ | **`module_flow/_price_flow.py` 가 종목과 벤치에 위치 인덱스(`iloc[-1]`)를 써서, 벤치 봉이 하루 늦은 날 보드 전체가 낙관 편향된다.** 처방: `close`·`bench_close` 를 **날짜 교집합으로 정렬**한 뒤 `ret` 호출. | 2026-09-08 실측: `^KS11` 83봉(09-04) vs 804종 84봉(09-07) ⇒ **`rs20` 중앙 +6.10pp · `rs60` +4.10pp 과대**, **태그 35/804(4.4%)가 낙관 방향으로 오류**, **🟢 65→40**, 유니버스 `wflow` **0.196→0.095**. ⚠ **09-05·09-06·09-07 세 런은 벤치와 개별주가 둘 다 09-04 에서 끝나 정렬돼 있어 결함이 관측 불가능했다** — 「어제와 같다」가 안정성의 증거가 아니라는 `S1` 의 가장 비싼 사례 | `module_flow` / 사람 |
+| **D569** ★★★ | **`scripts/sector_flow.py:509` 의 `asof` 가 벤치의 마지막 봉에서 나와, 지수가 늦은 날 파일 전체가 틀린 날짜로 서명되고 히스토리 키가 다른 세션 값으로 덮인다.** 처방: `asof` = **채점된 종목들의 마지막 봉 최빈값**. | 2026-09-08: `asof=2026-09-04` 인데 `005930.last=270,000`(09-07 종가). `history_kr.json` 의 **09-04 키가 4번째로 덮였고 이번엔 다른 세션 값**이다(`005930` = `[0.422, 🟡중립]`). ⇒ **09-07 세션은 히스토리에 자기 키가 없고 소급 복구되지 않는다.** 그리고 `prev_snapshot` 이 09-01 을 고르므로 인쇄된 `delta` 는 **4세션치인데 파일 라벨은 3세션치로 읽힌다** | `scripts/sector_flow` / 사람 |
+| **D570** ★★ | **오염된 축이 IC 원장에 영구 적립된다** — `scripts/ic_ledger.py:178` 이 `SECTOR_FLOW_KR.json` 을 읽으므로, `D568` 의 편향된 `rs20`·`rs60` 이 **09-07 자 신호 행**으로 들어갔다. 소급 정정 경로가 없다. | 2026-09-08 `ic_ledger log` = **15행 신규 적립**(KR 총 719행). 그 행들이 해소될 h=1/5/10 시점의 IC 가 흔들린다. ⚠ **`vol_surge` h=1 은 6런 연속 Bonferroni 통과(t −3.61, 부호 음)인데 `sector_flow` 의 🟢 게이트는 그것을 양으로 가중한다** — 오염이 그 위에 얹힌다 | `scripts/ic_ledger` / 사람 |
+| **D571** ★★★ | **`theme_age` 의 🟢FRESH 게이트는 두 다리를 동시에 충족시킬 수 없는 구조다** — 나이 다리(≤14일)를 통과하는 단어는 90일 기저가 없어 **가속 다리가 `-`(측정 불가)** 가 된다. 처방 후보: 게이트를 **「단어의 나이」에서 「사건의 나이(스레드 시작일)」**로 바꾼다 — `thread` 가 그 날짜를 이미 갖고 있다. | 2026-09-08: **21런 만에 처음 🟢FRESH 발화**(`표적관세`, 나이 **5일**, 7d 12.7, **가속 `-`**, 90d 총 89). ⇒ **20런의 0 과 오늘의 1 이 같은 기제의 양면**이고, 21번째의 1도 「두 다리 통과」가 아니라 **「한 다리 통과 + 한 다리 미측정」**이다. `D543`(나이 다리는 단어의 나이를 잰다)의 KR 독립 확증이자 강화 | `module_news_data` / 사람 |
+
+**운반(미해소) · 2026-09-08 KR 런 기준 카운트**: `D391-KR`/`D510` STRUCTURAL 캘린더 공백 **5번째 재현**
+(KOSPI200 동시만기 **09-10**, KIS 실측 최종거래일 20260910, `catalyst_calendar --days 5·10·14` 전부 미인지) ·
+`D540` EARNINGS 침묵을 부재로 읽는 실패 **재현** · `D472` 채점된 행의 헤더가 `ARMED` 로 남음 **12번째**
+(오늘 back-scan 22행 중 20행) · `D466-KR` 08-28 스냅샷 1건 **미해소** · `D483-KR`/`D544`/`C23` 세 책 + fx 불일치
+**9번째** · `D379` PREFLIGHT 가 §5 를 먼저 읽게 하는 배선 **11런 미배선**(순서는 수동 준수) ·
+`D273-KR`·`D10`·`D11`·`D17`·`ARMED(TIMEFOLIO_EXECUTE=1)` **전부 사람 항목(P5)**.
+🆕 **`handoff/` 읽기 예산 초과 — KR 런 2,694.9 KB vs 250 KB = 10.8배**, §2 행 평균 **0.51 KB**(규칙 ≤0.35).
+**압축은 사람 승인 항목이므로 보고만 한다.**
+
+
+---
+
+# ═══ Part C · dig list — appended 2026-09-08 by the `industry_US` run ═══
+
+> IDs from `module_evidence next-id D` (live scan; highest existing **D571**, registered this morning
+> by the KR run). Ordered by how much they would change if fixed.
+
+| id | dig (stated as a positive prescription) | evidence |
+|---|---|---|
+| **`D577`** ★★★ 1st | **Print the CLOCK beside every feed verdict, and filter every price computation to the last settled session explicitly.** A gate's verdict about a live feed is valid **only at the moment it was measured**. | This desk's run window **straddles the 09:30 ET open**: PREFLIGHT probed `yfinance` at **09:10 ET** and correctly found **no 2026-09-08 row**; MACRO pulled again at **09:5x ET** and got one (`SPY` 767.50 vs a settled 770.19; `LNG` 276.98 vs 292.00). Tools called after the open silently take an **incomplete bar as their last row**, with no error and no marker — and `action_bracket` sized its tickets on exactly that. |
+| **`D572`** ★★★ 2nd | **The settle queue must carry a "scoreable from" date = `settle + 1 run`, not `settle`.** | The `industry_US` runtime fires at **09:00 ET, before the US open**, so a row whose observable terminates on the close of date `D` is **structurally unscoreable by the run of `D`**. Five rows (`S127`·`S140`·`P122`·`P123`·`P128`) sat on today's cell and **none** could be scored. The same clock made `thread --days 7` return **0 living threads / 395 ENDED** off a zero-article terminal day. |
+| **`D578`** ★★★ 3rd | **Give `brief`'s market/non-market classifier a non-Korean path, or label the single-source tier UNSCORED on the US runtime.** | The classifier is **Korean-only**, so on the US desk **365 of 1,720 foreign articles (21.2%)** arrive as an **unranked random sample of 15** — and that tier is where FX/rates/bond primaries live. Measured today in a random 15: *"WTI struggles to hold above $90 despite material supply risk"* and *"Is the ECB headed for a third hike?"*, both macro primaries invisible to every other tier. |
+| **`D579`** ★★ | **State a sub-node's `n` on every sub-node claim** — and build the universe from economic coverage, not cap rank alone. | `us_top300.csv` holds **exactly two Regional Banks** (`HBAN` +0.042, `FITB` −0.640, a 0.68 spread), so *"regional banks are X"* is a statement about two companies. **Third distinct instance in one run** of the same class as `D563`: the gas/LNG chain absent, `TLN`/`NRG` absent from a **live** bracket's basket (`P127`, settles 09-10), regional banks reduced to n=2. |
+| **`D580`** ★★ | **Rank `drift_watch` candidates by burst × body-read hit-rate, or narrow the terms** (`credit default`, `rate cut expectations`). A raw multiple on an ambiguous token is a false-alarm generator. | Measured today at the 3× threshold: **3 of 5 bursts had no relation to their term's meaning**, and **the largest multiple was the emptiest** — `rate cut` **21.8×** = a Zacks *"September Equity Style Box Returns"* table · `default` **9.2×** = cybersecurity credential phishing · `downgrade` **5.3×** = a broker-call roundup. |
+| **`D573`** ★★ | **Register each bracket leg's PUBLICATION date, not only its observation date.** A bracket's legs can settle on different **calendars**. | `P122`-A pairs a `CL=F` close (settles at the 09-08 close) with a `[COT]` positioning read **for the same date that does not publish until ~09-11** ⇒ the row is **past-settle and unscoreable at the same time** without anything being broken. `D556`'s third form (after price-vs-fundamental in `S14` and price-vs-categorical in `S13`). |
+| **`D575`** ★★ | **Add a `condition-met-handed-up` outcome to `missed_ledger resolve`.** | `MSTR`'s entry condition **fired** on its first `due` appearance, and none of the three available outcomes is true: `entered` is a **book** action this desk does not take (`P4`/`P5`), `reaffirmed` would be a **false record**, `expired` is false. The row was named in `HANDOVER` instead — which is the sanctioned alternative but not a resolution. |
+| **`D574`** ★ | **Store the period END-DATE alongside every value in `data/estimates/`.** | The `+1y` field **rolls fiscal periods without a marker**: MSFT **19.38 → 23.08** between the 07-27 and 07-31 snapshots is a **period roll, not a revision**. Any multiple or revision series computed **across** a roll is fabricated, and nothing in the file says where the rolls are. Found while scoring `S13`. |
+| **`D576`** ★ | **Follow `D551`'s strict first-cell scan with a prose read — the rule finds candidates, not verdicts.** | It has a **false-positive rate as well as a false-negative one**: 12 rows flagged as never-scored, **11** had verdicts in prose or in master-index rows whose first cell is a date. Recorded so the next run does not treat the scanner's output as a finding. |
+
+### Digs this run WORKED ON (carry the method, not the conclusion)
+- **`D551` → `M1452`** — the back-scan was re-implemented from scratch and found a 4th row. ✅
+- **`D553`** — its own prescription was followed: **the recovery clock was NOT polled**, and the tunnel
+  was alive after ~5 min of probe-free idleness. Consistent with the idle-timer hypothesis; **one
+  observation at a different burst size, so not settled.**
+- **`D554`** — the news wall was computed through `us_top300.csv` `rank` **on the first attempt**.
+- **`D557`/`R139`** — no share-normalised term column was published; raw counts + dispersion only.
+- **`D564`** — ★ **DISCHARGED**: the FOMC+SEP 2026-09-16 bracket is registered as **`P148`**, three
+  days before its deadline and on the last clean pre-CPI opportunity.
+- **`D561`** — reproduced with the **identical `CEG`/`PG` pair**, and used to bar two sector deltas.
+- **`D563`** — converted from a complaint into a **scoreable object** (`P145`), and its named cases
+  confirmed (`LNG`/`GLNG`/`FLNG` and `TLN`/`NRG` all outside the universe).
+- **`D566`** — the dispersion/move ratio was computed for all four DEEP sectors: **ENRG 0.92× (the only
+  one below 1.0) · HLTH 5.72× · INDU 2.98× · FIN 50.9×**.
+
+### Digs carried UNWORKED, with their run count
+`D427` — **9th reproduction, and its cause is now retracted** (`R147`) ·
+`D459` — **14th** (Alphabet 76.6% invisible to the per-ticker flag) ·
+`D416` — the cycle registry still has **no AI-power row** ·
+`D533` — quad witching 09-18 unbracketed, **dropped BY DECISION on `B4`** this run rather than by omission ·
+`D562` — the ECB decision still absent from `catalyst_calendar` (**2nd run**) ·
+`D560` — the EARNINGS block still prints *"(none in window)"* while `ORCL` and `ADBE` both print 09-10 ·
+`D507` — no US market-holiday table, so every `--days` count is calendar days (**it bites today**, not yesterday) ·
+`D463`/`C27` — `MSTR`'s two opposite rejections, **6th run unexamined** ·
+`D379` — PREFLIGHT should read §5 first; **12th run unwired**, order kept by hand again.
+
+
+---
+
+# ═══ Part C · dig list — appended 2026-09-09 by the `industry_kr` run ═══
+
+> IDs from `module_evidence next-id D` (live scan; highest existing **D580**, registered 2026-09-08
+> by the US run) ⇒ **D581 – D586** allotted, **D587** taken at DEEP. Ordered by how much they would
+> change if fixed.
+
+| id | dig (stated as a positive prescription) | evidence (measured) | owner |
+|---|---|---|---|
+| **`D581`** ★★★ 1st | **Make `--investor N` return the window it was asked for, or rename the flag and every ledger phrase to "the last 9 settled sessions".** | `--investor 5` → 5 rows · **`20` → 10 · `60` → 10**; the 10th row is a same-day cell ⇒ **settled = 9** (08-27~09-08), while `--help` says *"영업일 수, 기본 20"*. ⇒ **Every pre-registered threshold this desk wrote as "KIS 20일 누적" has been graded on 9 sessions.** Two of today's six ledger resolutions carried magnitude thresholds (`+100만주`, `≤−50만주`) that are **not measurable as registered**; the thresholds were **not** re-scaled (`D496-KR`). | `module_KIS` / human |
+| **`D582`** ★★ | **Count a scenario as scored only from a table row whose cells contain a verdict token (`FIRED-[ABC]`/`EXPIRED`/`VOID`).** A registration index row is not a verdict. | This stage's **first** back-scan printed *"past-dated and unscored = 0"*; the next command refuted it — `S58-KR` (settling today) had matched the **master index row** at `SCENARIOS.md:495`. Corrected scanner returns **3** (`S28`, `S33`, `S58-KR`). This is `D576`'s mirror: the US run measured the **false-positive** side (12 flagged, 11 already scored); this is the **false-negative** side. | `pipeline` / desk |
+| **`D583`** ★★ | **Give exchange-filed disclosures (rcept `…800xxx`) a working body path.** The list works and the body does not. | `fetch_disclosure_detail_all` returned `None` for `20260904800642`, `20260821800524` and **`20260810800434` — the very filing `S58-KR` quotes**. The fallback (`dsaf001/main.do` → `dcmNo` → `report/viewer.do`) responds, but the page **declares `utf-8` while the bytes are not**, so the body decodes to mojibake. ⇒ **This desk has never read a KR 조회공시 답변 body through its own module**; registration quotes came from elsewhere. It also blocked confirming whether 현대건설's four "correction" order filings are the Matador 미확정 series (left `[inferred]`). | `module_disclosure` / human |
+| **`D584`** ★★ | **Give the exposure ledger a settled-bar re-accrual path.** A cumulative built from unsettled bars is not a close-based track record. | 09-08 ledger row prints bench **+0.027%** while the settled close was **−0.438%** — **0.47pp** into the cumulative. **All 50 rows carry `⚠미정착봉(장중·KIS실시간)`.** And 09-07·09-08 have **no invested-% at all** (`🚨timefolio조회실패:CDPError`) ⇒ **n frozen at 18 for a 3rd run**, cumulative stuck at **−9.79pp = cash −5.32 + selection −4.47**. | `scripts/exposure_rule` / human |
+| **`D585`** ★★ | **Add a MAGNITUDE leg to `top1_flips_sign`: flag when `abs(wflow_ex_top1) < 0.25 × abs(wflow)`.** Sign survival is a weaker test than the gate implies. | 전기·가스 `wflow` −0.224 → ex-top1 **−0.014 (−93.8%)**, 한국전력 **79.9%** of a 10-name bucket · 운송·창고 −0.190 → **−0.000 (−100%)**, HMM 35.6%. **Both PASS the current gate.** ⇒ 전기·가스 dropping off the flipper list after 5 consecutive runs is **the definition passing it**, not concentration easing. | `scripts/sector_flow` / human |
+| **`D586`** ★★★ | **Re-measure the bench-alignment bias every run instead of inheriting the previous run's correction constant** (operating rule until `D568` is fixed). | 09-08 run: `rs20` **+6.10pp overstated**. 09-09 run: **−0.70pp understated**, `rs60` −4.10pp. **The sign flipped in one session** because the bench missed a **+4.61%** day and then a **−0.58%** day. ⇒ **Applying yesterday's published "subtract 6.1pp" today would be wrong by ~6.8pp in the wrong direction.** Tag impact also collapsed: 35/804 (all optimistic) → **2/805 (both pessimistic)**. | `module_flow` / desk |
+| **`D587`** ★★ | **Decide which OBV implementation the desk cites, and stop citing OBV on names where the two disagree in sign.** | Same date, same name: 현대건설 `sector_flow obv_norm` **+0.314 「매집」** vs `module_chart --read` **「분배」, 20d slope −27%**; 대우건설 +0.507 매집 vs **「중립」 +13%**; control 005930 +0.272 매집 vs 「누적」 +40% (agree). ⇒ **`D6` said OBV is C-grade because it is a half-shadow of real flow; today it is stronger than that — the two implementations return opposite signs, and the disagreement is largest on the name today's promotion rested on.** | `module_flow` + `module_chart` / human |
+
+### Digs this run WORKED ON (carry the method, not the conclusion)
+- **`R143`'s replacement rule was executed, not just recorded** — *"measure the 🟢 names' share of sector
+  market cap"* was run across the board and produced **`M1461`**; it independently reproduced the same
+  answer on the same sector (보험 **3.9%**) and generalised it (전기·전자 **0.13%**, 건설 **55.5%**).
+- **`D571`** — reproduced on a **second** term: `동시만기` fired 🟢FRESH at **age 3 days, accel `-`,
+  90d total 2**. The gate's two legs remain near-mutually-exclusive; **no name was promoted on it.**
+- **`D391-KR`/`D510`** — worked rather than only counted: the missing dates were **found and dated**
+  (09-10 quad witching from `--futboard`; 09-10 ETF rebalancing from 3 outlets; **09-09 고려아연
+  임시주총**, surfaced in the `blindspot` random sample and absent from the calendar).
+- **`D48`/§4c** — fired **twice on this run's own output** and both were appended, not edited away:
+  (i) the scenario back-scan's false "0 unscored" (⇒ `D582`); (ii) **this run wrote "09-18 ETF
+  rebalancing" in MACRO §B-3/§E and ROTATION §3 and it is wrong — the date is 09-10**, corrected in
+  `SECTOR_DEEP_IT.md §1` and appended to both originals. The mechanism of the error is worth the row:
+  a single-outlet line carried **no date**, and the run **inferred one** by attaching it to the nearest
+  known rebalance (09-18 S&P) — a `C3` violation (an unknown column was filled rather than left blank).
+- **`D499-KR`** — used again: `^KS11` has no 09-08 bar; KOSPI 09-08 = **6,954.52** recovered from
+  `module_KIS --futopt` underlying index.
+
+### Digs carried UNWORKED, with their run count
+`D568`/`D569` — **2nd reproduction, both fired again today** (bench one session behind; `asof` signed
+by the bench, so `history_kr.json` gained a **09-07 key holding 09-08 values** and the 09-08 session
+has no key of its own) ·
+`D570` — **2nd** (today's `ic_ledger log` accrued **20 rows** built on alignment-biased `rs20`/`rs60`) ·
+`D575` — 🚨 **the pre-committed failure occurred**: `MSTR` carried a second consecutive HANDOVER
+without a `resolve`, exactly as the 09-08 run said would count as a fault. **Escalated to a human
+decision item** — `missed_ledger resolve` has no truthful outcome for *"the entry condition fired but
+this desk does not take book actions"*; add `condition-met-handed-up` ·
+`D571` — theme-age gate structure, **unfixed** · `D540` — EARNINGS block still `(none in window)` ·
+`D466-KR` — the 08-28 single-entry snapshot still cannot be told from "no baseline" ·
+`D472` — **13th** · `D379` — PREFLIGHT should read §5 first, **13th run unwired** (order kept by hand) ·
+`D273-KR`·`D10`·`D11`·`D17`·`ARMED(TIMEFOLIO_EXECUTE=1)` — **all human items (P5)**.
+🆕 **`handoff/` read budget: KR run inherits 2,873 KB against a 250 KB rule = 11.5×** (09-08: 10.8×).
+**It is growing, and this run added ~30 KB to it. Compaction is a human item; reported, not acted on.**
+
+### Standing execution constraint, declared
+**DEEP ran IN-CONTEXT, not as a parallel agent fan-out**, for both sectors. The protocol asks for
+fan-out; this session's higher-level rule bars agent invocation. **Precedent exists (2026-08-03/04
+runs recorded the same), and it is declared here rather than left to be inferred from the output.**
+
+
+---
+
+# Part C append — digs registered / worked / carried by the `industry_US` run of 2026-09-12 (Sat)
+
+> Append-only. IDs `D588`–`D592` issued by `module_evidence next-id` (live scan). Evidence in
+> `llm_outputs/2026-09-12/industry_US/` (HANDOVER addendum, MACRO §F/§5, BLINDSPOT_PREMORTEM §8, DEEP files).
+
+### Digs registered this run
+- **`D588`** ★★ — **A window registered as "N sessions" across a US market holiday has N−1 sessions and an
+  arguable base date; and a window can be registered on NON-TRADING dates outright.** Two instances today:
+  `S136` (`AMBIGUOUS`: A at +4.316 on a 09-01 base, C at +3.165 on a 09-02 base — Labor Day) and **`S123`
+  (registered "09-05 close → 09-12 close" — both Saturdays)**. Prescription: register every window as
+  `base close → terminal close` **dates, verified against the exchange calendar at registration**, never as
+  a session count; `catalyst_calendar` must carry NYSE holidays and weekends (`D507`). **All four rows
+  registered today comply** (09-11 → 09-18; 09-15 → 09-16).
+- **`D589`** ★★ — **The dated settle queue loses rows each time it is rewritten.** The 09-08 cell omitted 7
+  of 25 due rows still carried by the 09-06/09-07 cells and the registration headers; a header scan caught
+  them — and **still missed `S123`** (caught at the second invocation). Prescription: score from a scan of
+  `SCENARIOS_{US,KR}.md` headers + master-index rows; the queue is a cross-check only. **Today's queue
+  (SCENARIOS.md) was rebuilt from the registration files.**
+- **`D590`** — **`module_disclosure_us` labels every S-4 as M&A.** `AVGO`'s 09-10 S-4 is a registered notes
+  exchange offer (2022 private placement); the label would have VOIDed `S127`. Prescription: read the S-4
+  cover (`exchange offer` vs `merger`) before assigning the category, or label S-4 "M&A or exchange offer —
+  read body".
+- **`D591`** — **`missed_ledger` conditions may name fields no instrument emits** (`CTVA` 09-08: `z20`).
+  Prescription: the `due` printer flags any condition token outside the sweep/flow field vocabulary at
+  registration time.
+- **`D592`** ★★ — **`cycle_exposure.py` dropped a held registry epicenter (`AVGO`) from its rank-1 count**
+  (epi_names = `[NVDA, ANET]` while the registry lists `AVGO` and the book holds it) **and has no layer for
+  `HPE`/`DELL`**; the registry file is 57 days stale and knows neither the inference-silicon/optics fork nor
+  the AI-server layer. Prescription: assert `held ∩ registry_epicenter ⊆ epi_names` and print the diff on
+  every run; add the fork, the assembler layer, and a "hike cycle" macro entry to the registry; carry an
+  `unmeasurable` flag for out-of-universe epicenters (tankers) instead of a silent 0 (human items).
+
+### Digs worked this run
+- **`D48`/§4c** — fired **five times** on this run's own output, all appended not edited: (i) HANDOVER
+  claimed the scoring log was transcribed — it was not (written at run end; receipt = this block's sibling
+  in `SCENARIOS.md`); (ii) `S123` missed by the header scan, scored in the addendum; (iii) missed-ledger
+  resolves 19 not 20; (iv) MACRO §B-2 "cause unknown" → known 20 minutes later via a web read the MACRO
+  stage chose not to spend (`M1478`); (v) Lens 1's "Oppenheimer AI-Infrastructure conference 09-15" not
+  confirmed by DEEP-IT's own search, and Oracle capex was **maintained, not raised** (`ORCL` −1.7% that
+  day — the "Oracle guide caused the rip" link is `[unverified]`).
+- **`D577`** — moot today (Saturday, all prices settled); the PREFLIGHT clock note was still printed.
+- **`D563`** — `LNG` −4.7%, tankers +8–9% wk: the desk saw the moves only via direct `yfinance`; the
+  universe still cannot tag them. `P145` settles 09-14 on a direct pull.
+- **`D562`** — the calendar carried the Hormuz binary **undated**; DRIFT dated it **09-14** from a web read.
+  The calendar also lacks BoJ/ECB dates and printed EARNINGS "(none in window)" again (`D560`).
+- **`D343`** — four new rows checked for redundancy against the 09-14/09-17/09-18 cells; none duplicates.
+- **`D575`** — the pre-committed failure **occurred a second time** (`MSTR` MET for two HANDOVERs); five
+  MET rows have no truthful outcome. **Human item, escalated again.**
+
+### Digs carried UNWORKED, with their run count
+`D427` — H.15 split reproduces **post-lift** (`T10YIE` ahead of `DGS2` by a session; `P142` blocked; `R147`:
+no unblock forecast) · `D566` — IT dispersion 4.1× again; the sector-level fact was the sub-leg, DEEP scoped
+accordingly · `D459` — Alphabet issuer flip, **19th run** COMM unrankable · `D561`/`D11` — the 🟢 gate is
+OBV/surge-unlocked with velocity dead; every 🟢 this run read as 🟡-with-OBV · `D472` — **14th** ·
+`D379` — PREFLIGHT reads §5 first, **14th run unwired** · `D540`/`D560` — EARNINGS block empty ·
+`D507` — no US holiday table (bit twice today, `D588`) · `M1371` — US DEEP budget **sixth run below 4**
+(1/4 by rule + 1 promoted) — human item · `D10`·`D17`·`ARMED(TIMEFOLIO_EXECUTE=1)` — human items (P5).
+🚨 **`G1` — the news collector/API is DOWN (ngrok 404 for the whole run, 14:52 → 23:03; local DB 0 bytes;
+title derivative ends 09-08).** Not a dig this desk can execute (`P5`/`P6`) — **the server-side collector
+and tunnel need a human**; until then every US run is tape-first with `[WebSearch]` narrative.
+🆕 **`handoff/` read budget: 3.10 MB against 250 KB = 12.4×** (HANDOVER); this run added ~35 KB across the
+five files. Compaction is a human item; reported, not acted on.
+
+### Execution notes, declared
+- **PREMORTEM and DEEP ran as parallel subagent fan-outs** (4 lenses; 2 DEEP sectors) — the protocol's
+  design, available in this session. Each subagent's `[WebSearch]` facts are tagged in the files.
+- **Second invocation of the date**: the 14:52 run stopped after HANDOVER; this run (22:09→23:20) inherited
+  PREFLIGHT/HANDOVER/sweep byproducts as-is (append-only addenda) and wrote MACRO → DRIFT fresh. Both
+  invocations are visible in the file mtimes; nothing was clobbered.
+- **REPORT_DIR open decision** resolved as existing practice: finalized reports **copied** into
+  `REPORT/industry_US/` (13 files), then `module_report_tags update` (12 changed / 85).
+
+
+---
+
+## Part C 추가 — 2026-09-13 `industry_kr` 런이 등록한 dig (**D593 ~ D599**, IDs by `module_evidence next-id`)
+
+> Append-only. 긍정 지시문으로 적는다(`feedback_positive_framing`). 근거는 `llm_outputs/2026-09-13/industry_KR/`.
+
+| id | dig (긍정 지시) | 근거 (measured) | 소유 |
+|---|---|---|---|
+| **`D593`** ★★ | **미진입 조건의 「짝 이름」 다리는 그 이름 자신의 축 하나와 OR 로 묶어라.** | 001820 삼화콘덴서 조건이 009150 5세션 +3.0pp 를 요구 → 009150 −6.47pp 로 실패했는데 **001820 자신은 09-11 +18.8%·외 +17.2만·기 +13.4만·🟢 0.994**. 짝 다리가 이름의 점화를 가렸다(HANDOVER §3-a) | 등록 규칙 / 데스크 |
+| **`D594`** ★★ | **시나리오 백스캔의 판정 토큰은 마스터 표의 판정 칸(3열)에서만 세라.** | 09-09 `PENDING` 행의 **임계 칸** *"C ⇒ `AMBIGUOUS`"* 가 토큰 매치돼 `S58-KR` 이 「채점됨」으로 오탐. `D582` 3형(거짓양성→거짓음성→임계 문구 위장) | pipeline / 데스크 |
+| **`D595`** ★ | **같은 asof 로 다시 돈 스윕은 JSON 에 `reprint_of: <date>` 를 서명하라.** | 09-13 `SECTOR_FLOW_KR.json` = 09-12 파일과 **바이트 동일**(`cmp`, 364,461B); `history_kr.json` 같은 키 덮어씀; Δ·`new_green` 43 이 새 관측처럼 재인쇄(`M1487`) | `scripts/sector_flow` / 사람 |
+| **`D596`** ★★★ | **`module_valuation` 을 `stock.naver.com` 경로로 갈아타고, 리디렉트(3xx)·본문 0B 를 「미제공」이 아니라 「수집 실패」로 인쇄하라.** | `finance.naver.com/item/main.naver?code=…` → **HTTP 302 → stock.naver.com/domestic/stock/{code}/price**, 본문 0B. 모듈은 10종 전부 결측 10/10 을 *"네이버 종목페이지에 해당 항목이 없다(수집 실패가 아니라 미제공)"* 라 인쇄 — **그럴듯한 빈칸**(계기 결함 12개 클래스). 오늘 KR 배수 다리 0(`M1492`). G7 은 `--help` 만 보고 통과시켰다 | `module_valuation` / 사람 |
+| **`D597`** ★★ | **구조적 물량(리밸런스·만기) 브래킷은 관측면을 「물량이 지나가는 바로 그 상품」에 걸어라.** | `S154-KR` O1 은 `069500.KS`(KODEX200) 거래량이었는데, 실현된 1.3~1.8조 리밸런스는 **KRX 반도체 지수 ETF** 를 통해 갔다(`M1484`) ⇒ C 는 「물량이 없었다」가 아니라 「다른 파이프였다」. 등록 시 보도가 이름 붙인 ETF 를 관측면으로 | 등록 규칙 / 데스크 |
+| **`D598`** ★★ | **`module_disclosure` 본문 경로에 `dsaf001/main.do` 의 `viewDoc("rcp","dcm",…)` 파싱 + `report/viewer.do?…&dtd=HTML` + cp949(MS949) 디코드를 넣어라 — `dtd=dart3.xsd` 는 쓰지 마라.** | `dtd=dart3.xsd` 응답은 U+FFFD 로 깨진 UTF-8; `dtd=HTML` 은 `charset=MS949` 정상(`M1493`). 오늘 `S58-KR` 정산·DEEP 2편이 이 경로로 거래소 제출 공시(…800xxx) 12+건 읽음 ⇒ **`D583` 의 처방이 실측으로 확정** | `module_disclosure` / 사람 |
+| **`D599`** ★★ | **`kr_live_shortlist` 의 「✅진짜손」 판정을 (외국인+기관) 합산이 아니라 두 손 각각의 부호로 인쇄하라.** | 두산에너빌리티(외 **−400만**/기 +525만)·현대건설(외 −147/기 +223)이 ✅ 로 찍혔다. 15종 중 **외국인 단독 양은 3종**(가온전선·HDC·HD현대마린솔루션). `D2`(프록시 부호) 의 쇼트리스트 면 | `scripts/kr_live_shortlist` / 사람 |
+
+### 규칙 후보 — 스테이징(승격은 사람)
+- **RC-0913-1** *(from `M-141` (a), run 1/3)*: **「🟢 개수와 지수 수익률을 같은 문장에 넣지 않는다」** — 🟢 67 중 48(72%)이 1조 미만, 10% 미만 점유 섹터 12개, 등가중 flow −0.128 인 날 지수는 대형주 한 이름으로 움직였다(`M1485`). 런 2/3 에 (a) 확정 시 Part A **W** 그룹에 트리거로 승격.
+- **RC-0913-2** *(from `S154-KR`/`D597`)*: **「보도 물량은 실현 물량이 아니다 — 구조적 촉매의 임계는 실측 분포에서 잡는다」**(`D497-KR` 확장).
+
+### 이 런이 만진 dig
+- `D48`/§4c — **4회** 발화, 전부 append(HANDOVER §1-d · MACRO §G 1·2 · BET §0-d ROTATION→DEEP 뒤집힘).
+- `D575` — **KR 1호 발생**: `005490` 미진입 조건(rs20 > 0) 충족, 진실인 outcome 없음 → HANDOVER §3-a 명시, resolve 안 함. **사람 항목**(US `MSTR` 3런째와 같은 클래스).
+- `D583` — **처방 확정**(`D598`), 모듈 반영은 사람.
+- `D585` — 크기붕괴 2건(기계·장비·일반서비스) 그대로; ROTATION 은 `wflow` 를 근거에서 뺐다. **UTIL 은 2단 플리퍼**(ex-top1 의 80% 가 두 번째 top1, `M1490`) — 게이트에 「ex-top1 top1 share」 다리 추가 후보.
+- `D581` — 10행 상한 그대로(주말이라 플레이스홀더 없이 10정착세션). 모든 인용을 「10정착세션」으로 적었다.
+- `D343` — **1건 위반**: EVENT_ALPHA 가 쓴 `036460 M.숏리스트탈락`(09-19) 행은 09-02 `Q.확신부족`(09-16) 행과 조건이 겹친다. BET §D 에 자기 정정, 다음 HANDOVER 가 둘을 한 번에 처리.
+- `D391-KR`/`D510` — **8번째**(09-10 KR 동시만기 사후 확인, 캘린더 미등재).
+
+### 운반(미해소) — 런 카운트
+`D568`/`D569` 벤치 정렬(주말이 덮음 2일째, 월요일 재발 전제) · `D584` 노출 원장(투자비중 4런 공란) · `D586` · `D540` EARNINGS 침묵 · `D472` **15번째** · `D379` 14런 미배선 · `D570` · `D571` · `D10`·`D11`·`D17`·`ARMED(TIMEFOLIO_EXECUTE=1)` 사람 항목 · 🚨 **G1 서버측 사망 2일째(사람: 서버 콘솔·터널)** · 🆕 **`module_valuation` 사망(사람, `D596`)** · `handoff/` 읽기 예산 **2,787 KB vs 250 KB = 11.1×**(보고만).
+
+### 실행 방식 선언
+- **DEEP 2편은 병렬 서브에이전트 팬아웃**으로 실행(프로토콜 설계대로; 09-09 KR 런은 in-context 였다). 각 파일의 `[WebSearch]` 는 그 문장에 태그.
+- 열린 결정: REPORT 복사 = 기존 관행(`REPORT/industry_KR/` 덮어쓰기, 파일명 유지) · 뉴스 0 인 날의 EVENT_ALPHA = US 09-12 관행(제목+`[WebSearch]`, 본문 미독 카드는 BET 자격 조건부) · 034020 원장 3행 중 조건 충족한 09-08 행만 revived(나머지 2행 유지).
+
+
+
+---
+
+# Part C append — digs registered / worked / carried by the `industry_US` run of 2026-09-14 (Mon)
+
+> Append-only. IDs `D603`–`D607` issued by `module_evidence next-id` **after** the in-flight KR run had taken
+> `D600`–`D602` the same morning (collision avoided; HANDOVER §8 records the renumbering). Positive-instruction form.
+> Evidence in `llm_outputs/2026-09-14/industry_US/` (PREFLIGHT G1, HANDOVER §3b′/§8, MACRO §F-4, DRIFT addendum).
+
+### Digs registered this run
+- **`D603`** ★★★ — **Pass the axis-exclusion decision into the tag.** `flow_tag` consumes `velocity` even when
+  `score_all` has excluded the news axis (`vel_coverage` < 80%): the two guards disagree, and the *tag* column — the
+  one SWEEP/ROTATION/shortlist read as 🟢/🔴 — is the unguarded one. Measured: sweep #1 at 62.9% coverage kept
+  `flow_score` on 3 axes (no inflation) **and** promoted **33 names 🟡→🟢**, 12 🟡→🔴, 11 🔴→🟡, `new_green` 4 → 36, on
+  a tape with 0/299 score change. **Prescription: `flow_tag(p, vel if use_vel_axis else None, …)` (or null `vel`
+  per row before tagging) so one decision governs score and tag; print the tag delta against the prior same-asof
+  file whenever one exists.**
+- **`D604`** ★★ — **Emit velocity provenance per row.** `news_velocity` returns the same shape for a remote ratio and
+  a local-fallback presence count; a mid-sweep remote→local fallback is invisible in `SECTOR_FLOW_*.json` (139 rows
+  at exactly 4.29 = 30/7 were the only tell — `recent == base` because the local pool holds only 6 days).
+  **Prescription: add `velocity_src` (`remote` / `local` / `none`) and `velocity_base_n`; treat `recent == base`
+  with `base_days > recent_days` as `None` (pool truncated), never as a ratio.**
+- **`D605`** ★★ — **Add a `met` outcome to `missed_ledger`.** Nine condition-MET rows (`MSTR` 3rd surfacing, `LITE`
+  `DASH` `SLB` `COP` `XOM` `FANG` `VLO` `CTVA`) were closed `expired` with the MET fact in the note because no truthful
+  value exists (`D575`'s pre-committed failure, 3rd run). The `score` sub-command's `expired` class is now
+  contaminated by construction. **Prescription: outcome `met` (condition came true, handed up, no book action);
+  re-label the nine from their notes; have `due` print MET rows in their own section.**
+- **`D606`** ★ — **Add CME JPY (and EUR) to the COT contract map.** `us_flow --cot` carries no yen line; the desk's
+  only yen-positioning read on a week with a BoJ decision and a "speculators net long for the first time since
+  February" headline is a title. The CFTC file already carries the contracts.
+- **`D607`** ★★ — **Give `catalyst_calendar` a G4 central-bank table (Fed✓ · BoJ · ECB · BoE) from official
+  schedules.** `D562` reproduced on a week with two non-Fed binaries: `P153` had to be written with a `[blank]` BoJ
+  date; PREMORTEM Lens 2 dated it (Fri 09-18 JST) by `[WebSearch]` two stages later.
+
+### Digs worked this run
+- **`D48`/§4c** — fired in every stage and appended, not edited: PREFLIGHT (the "harmless 62.9%" first read),
+  HANDOVER §7 (4 items), MACRO F-3 (3), PREMORTEM §7 (3), DEEP-ENRG §9 (4, incl. `XOM` 07-01 8-K = Texas
+  redomiciliation mislabelled M&A — `D590` class, 2nd instance), DEEP-FIN §9 (2).
+- **`D589`** — **3rd reproduction, in the other direction**: the 09-12 cell (itself rebuilt to fix `D589`) lost
+  `P111` `P136` `S147` while adding `P143` `P145` `P146`. The writeback queue is now the **union of every cell** (13 rows
+  for 09-14). Prescription stands: score from the union of registration headers + all cells, never the newest cell.
+- **`D575`** — closed by disposition (`D605`); defect stays open as a human item.
+- **`D577`** — bit *productively*: three 4-of-5-session partials were demoted to bounds instead of scored.
+- **`D592`** — reproduced: `cycle_exposure` counts rank-1 at 17.23% without held `AVGO` (true ≈ 20.5%); no layer
+  for assemblers (`DELL`/`HPE`), optics, or the freight leg (`FRO`/`STNG`/`INSW`/`DHT` are in the registry but not in
+  the universe, so the check can never score them); the **G7-hike cycle has no entry while the book holds 9.4% of
+  it** (Lens 4). Registry edit = human.
+- **`D563`** — the freight leg became **scoreable** (`P152`) the way `P145` made LNG scoreable; `TNK`/`FRO` filed
+  `N.유니버스부재`.
+- **`D343`** — checked for all five new rows; an `AAPL`/iPhone row and a third FOMC row were declined.
+- **`D588`** — all five new windows are trading-day `base → terminal` dates.
+- **`project_news_api_self_dos`** class — the remote pipe died at minute 3 of a 300-name sweep run in parallel with
+  the KR sweep, and was alive 25 minutes after both finished (`M1509`). Recorded as a coincidence with a known
+  mechanism, not inferred as proven cause (`R148`: no cooldown constant).
+
+### Digs carried UNWORKED, with their run count
+`D427` — H.15 split reproduces (`P142` blocked; no unblock forecast, `R147`) · `D566` — IT dispersion, sector-level
+fact still the sub-leg · `D459` — Alphabet issuer flip, **20th run** COMM unrankable · `D561`/`D11` — 🟢 gate is
+OBV-and-surge-locked with velocity dead; Energy 11/16 OBV-accumulating names read 🟡 (filter artifact, diagnosed) ·
+`D472` — **16th** · `D379` — PREFLIGHT reads §5 first, **15th run unwired** · `D540`/`D560` — EARNINGS block empty
+again · `D507` — no US holiday table · `M1371` — US DEEP budget **8th run below 4** (2/4 today) — human item ·
+`D584` — exposure ledger invested % blank **5th row** · `D10`·`D17`·`ARMED(TIMEFOLIO_EXECUTE=1)` — human items (P5) ·
+`handoff/` read budget **3.98 MB vs 250 KB ≈ 16×** (7 files) — reported, not acted on.
+
+### Execution notes, declared
+- **PREMORTEM (4 lenses) and DEEP (ENRG, FIN) ran as parallel subagent fan-outs** per the protocol; each file
+  tags its `[WebSearch]` facts.
+- **Open decisions resolved by existing practice**: REPORT copy = finalized files **copied** into
+  `REPORT/industry_US/` (14 files) + `module_report_tags update` (12 changed / 85); EVENT_ALPHA on a dead-pipe day
+  = titles + a declared thread proxy, money-confirmed cards handed to BET conditionally (09-12 practice);
+  `handoff` writes appended after re-reading each file (the KR run in flight had not written by 14:5x).
+- **Instrument mode choice**: with the pipe half-alive, the load-bearing sweep was re-run `--no-news` (the mode
+  every run since 08-09 has used) and sweep #1 kept as evidence — not a repair, a measurable mode.
+
+
+## Part C 추가 — 2026-09-14 `industry_kr` 런이 등록한 dig (**D600 ~ D602** HANDOVER 발급 · **D608 ~ D611** 런 종료 발급; `D603`~`D607` 은 같은 날 `industry_US` 런 소유)
+
+> Append-only. 긍정 지시문으로 적는다(`feedback_positive_framing`). 근거는 `llm_outputs/2026-09-14/industry_KR/`. ⚠ 오늘 KR·US 두 런이 **동시에** 돌았다(13:16~) — ID 는 `next-id` 라이브 스캔으로 충돌 없이 갈렸다.
+
+| id | dig (긍정 지시) | 근거 (measured) | 소유 |
+|---|---|---|---|
+| **`D600`** ★★★ | **`sector_flow` 뉴스속도 축은 값이 상수로 수렴하면(분산 0) 그 런의 velocity 를 전부 None 으로 강등하고 로그에 「상수 결함」을 찍어라 — 그리고 `flow_tag` 는 `score_all` 이 축을 뺀 런에서 velocity 를 표로 세지 마라.** | 오늘 velocity 비-None **112종 전부 4.29**; 축은 드롭됐지만 `flow_tag` 가 velocity 를 넷째 표로 세어 **🟢 101 중 33 이 결함 상수 산물**(보험 7/7)(`M1510`). ROTATION 이 그 태그로 보험을 승격했다가 DEEP 이 뒤집었다. US 런의 `D603`/`D604` 와 같은 결함 — **한 수리로 둘 다 닫힌다** | `scripts/sector_flow` + `module_flow/_synthesize` / 사람 |
+| **`D601`** ★★ | **장 개장 중 실행된 스윕은 JSON 에 `bar_complete=false` + 실행시각을 서명하고, `history_kr.json` 에는 정착 봉만 쓰라.** | `asof=2026-09-14` 만 보면 정착으로 읽힘; 오늘 `history_kr.json` 에 09-14 장중 키가 들어갔다(종가 후 재실행 시 덮어씀). `D595` 의 짝 | `scripts/sector_flow` / 사람 |
+| **`D602`** ★★ | **마스터 스코어링 로그 전사는 「정산일 큐의 모든 id 가 표에 있는지」를 기계로 대조하라.** | US 09-12 26행 표에서 `S125`(09-11) 누락, 헤더 `ARMED` 그대로 — 오늘 KR 이 대신 채점(`FIRED-A`, `M1517`). `D589` 3형 | pipeline / 데스크 |
+| **`D608`** ★★ | **KRX 애프터마켓(16:00~20:00, 이번주 개시) 이후 「정착 종가」의 정의를 데스크가 한 곳에서 고정하라 — yfinance 15:30 종가인지 20:00 종가인지, 그리고 두 값이 다를 때 KIS `--investor` 종가 열과 어느 쪽이 맞는지.** | 09-13 sedaily·09-14 4건/3매체: 시간외 단일가 폐지, 실시간 거래 도입. 모든 브래킷 관측면·`history_kr`·KIS 창이 「정착 종가」에 걸려 있다 | `scripts/sector_flow`·`module_KIS` / 사람 |
+| **`D609`** ★ | **유니버스 빌더는 N세션 이상 거래량 0 인 종목(정지)을 채점에서 제외하고 그 사실을 인쇄하라.** | 동양생명 082640: 08-28 이후 가격 8,250 고정·거래량 0(캐시 11세션 NaN, KIS 20일 0.0만주)인데 오늘 🟢(결함 의존)로 잡혔고 보험 12종 EW 에 들어갔다(`SECTOR_DEEP_INS.md §0`). `S158-KR` 은 11종으로 등록 | `data/kr_universe/build_kr_universe` / 사람 |
+| **`D610`** ★★ | **원장 부활/진입 조건이 「계기 산출 태그」(🟢 점유·breadth·new_green)로 쓰여 있으면, 그 태그를 낸 런의 `scoring` 블록(축 수·velocity 상태)을 조건의 일부로 요구하라.** | 088350 한화생명 09-09 조건 「🟢 점유 ≥15% ∧ breadth ≥0.20」이 오늘 92.5%/0.58 로 **형태상 충족**됐으나 값은 결함 상수 산물(09-11 정착 0.0%/0.17). `D575`(진실 outcome 없음) 의 변종 — **계기 결함이 조건을 채운 경우**, resolve 안 함(`M1518`) | 등록 규칙 / 데스크 |
+| **`D611`** ★ | **KIS 두 손 인용은 창 길이(9정착세션 / 20일 헤더)를 숫자 옆에 항상 적어라 — 두 창의 부호가 다를 수 있다.** | 두산에너빌리티 외국인: 9세션 행 합 −146.4만 vs 20일 헤더 −385.8만(`M1489` 「−400만」의 출처, 2.6배) · HMM 기관: 20d +162.6 vs 9세션 **−49.5**(부호 반대). `D581` 의 인용 면 | 데스크 / `kr_live_shortlist` 인쇄 |
+
+### 규칙 후보 — 스테이징(승격은 사람)
+- **RC-0913-1**(「🟢 개수와 지수 수익률을 같은 문장에 넣지 않는다」) — **런 2/3 무효**: 오늘 🟢 101 자체가 결함 산물이라 관측으로 못 센다. 카운트 1/3 유지. 오히려 오늘이 규칙의 근거를 더 세게 만든다(🟢 개수는 계기 상태의 함수).
+- **RC-0914-1** *(from `M1510`/`S158-KR`)*: **「하락 세션에서 이긴 섹터의 판정은 태그가 아니라 벤치 상승일의 초과수익으로 낸다」** — 저베타 서명(벤치 상승일 2/2 패배·하락일 3/3 승리)을 분리하는 유일한 관측면. 런 2/3 에 `S158-KR` 결과와 함께 재검.
+
+### 이 런이 만진 dig
+- `D48`/§4c — **6회** 발화, 전부 append(PREFLIGHT·SWEEP_READ·ROTATION·MACRO·EVENT_ALPHA ADDENDUM + HANDOVER §1-e). 가장 큰 것: **ROTATION 의 보험 승격을 같은 런의 DEEP 이 반증** — 슬롯이 기능했다.
+- `D575` — `005490` **4런**(사람) · US `MSTR` 4런 · 변종 `D610` 신규.
+- `D589` — 3형 발생(`S125`), 처방 `D602`.
+- `D587` — 새 실례 2(한화엔진·DB손보: 차트 OBV 분배 vs 스윕 매집). OBV 근거 제외 유지.
+- `D583`/`D598` — 오늘도 cp949 우회로 본문 읽음(씨케이솔루션 ESS 자율공시 · SK이노 합병 목록); 모듈 반영은 사람.
+- `D581` — 오늘 플레이스홀더 1행(09-14). 인용 면 `D611` 신규.
+- `D391-KR`/`D510` — **9번째**(BOJ·한은 물가통계·인사청문회·애프터마켓 캘린더 미등재).
+- `D343` — 신규 위반 0(HMM 은 기존 4행 「두 방향」 상태를 사람 항목으로 명시, 새 행 안 씀).
+
+### 운반(미해소) — 런 카운트
+`D568`/`D569`(오늘 형태 = 미완 봉, `D601`) · `D584`(투자비중 5런 공란) · `D586` · `D540` EARNINGS 침묵 · `D472` **16번째** · `D379` 15런 미배선 · `D570` · `D571` · `D596`(valuation 사망 2일) · `D599` · `D10`·`D11`·`D17`·`ARMED(TIMEFOLIO_EXECUTE=1)` 사람 항목 · **G1: 서버 살아 있으나 스윕(오늘은 KR·US 동시) 부하에 끊김 — `--no-news` 분리 배치는 사람** · `handoff/` 읽기 예산 **2,811 KB vs 250 KB = 11.2×**(보고만).
+
+### 실행 방식 선언
+- **DEEP 2편은 병렬 서브에이전트 팬아웃**(프로토콜 설계대로). 각 파일의 `[WebSearch]`/`[unchecked]` 는 그 문장에 태그. DEEP ② 의 발견(velocity 결함 → 태그 오염)이 상류 4개 파일의 ADDENDUM 을 만들었다.
+- **장중 실행**: 스케줄이 13:16 에 발화 — 프로토콜의 「정착 종가」 전제와 어긋나는 시각. 모든 숫자에 「장중」을 붙였고 `ic_ledger log`·`exposure_rule log` 는 **의도적으로 실행하지 않았다**(원장 오염 방지). 종가 후 재확인 항목은 MACRO §H.
+- 열린 결정: REPORT 복사 = 기존 관행(덮어쓰기, 파일명 유지) · handoff 산문 = README 규칙대로 영어(KR 사실은 한국어) · `S158-KR` 임계 = DEEP 실측 분포(±3.0pp)로 등록, MACRO `M-144` 의 ±1.0pp 는 명제 문안에만 남김 · 동시 US 런의 `D603`/`D604` 와 겹치는 결함은 재등록하지 않고 `D600` 에서 참조.

@@ -1,0 +1,371 @@
+{
+  "date": "2026-08-05",
+  "bench": "SPY",
+  "threshold": 0.65,
+  "min_corr_implied": 0.35,
+  "n_days_aligned": 499,
+  "n_days_intersection_full": 701,
+  "trimmed_by_days_arg": 201,
+  "window": [
+    "2024-06-18",
+    "2026-08-03"
+  ],
+  "missing": [],
+  "calendar_loss": {
+    "009150.KS": 47,
+    "096770.KS": 47,
+    "AVGO": 49,
+    "KMI": 49,
+    "LNG": 49,
+    "MA": 49,
+    "NVDA": 49,
+    "RTX": 49,
+    "SPY": 49,
+    "TSM": 49,
+    "VST": 49
+  },
+  "gap_days_median": 1.0,
+  "gap_days_max": 8.0,
+  "gaps_over_4d": 5,
+  "betas_vs_bench": {
+    "009150.KS": 0.351,
+    "096770.KS": -0.037,
+    "AVGO": 1.969,
+    "KMI": 0.397,
+    "LNG": 0.289,
+    "MA": 0.646,
+    "NVDA": 1.967,
+    "RTX": 0.464,
+    "TSM": 1.638,
+    "VST": 1.891
+  },
+  "ari_half_vs_half": 0.5424,
+  "within_group_corr": 0.4509,
+  "between_group_corr": 0.0004,
+  "max_residual_corr": 0.6024,
+  "threshold_sweep": [
+    {
+      "threshold": 0.4,
+      "min_corr_implied": 0.6,
+      "n_units": 9,
+      "within": 0.6024
+    },
+    {
+      "threshold": 0.5,
+      "min_corr_implied": 0.5,
+      "n_units": 9,
+      "within": 0.6024
+    },
+    {
+      "threshold": 0.55,
+      "min_corr_implied": 0.45,
+      "n_units": 9,
+      "within": 0.6024
+    },
+    {
+      "threshold": 0.6,
+      "min_corr_implied": 0.4,
+      "n_units": 8,
+      "within": 0.5164
+    },
+    {
+      "threshold": 0.65,
+      "min_corr_implied": 0.35,
+      "n_units": 7,
+      "within": 0.4509
+    },
+    {
+      "threshold": 0.7,
+      "min_corr_implied": 0.3,
+      "n_units": 7,
+      "within": 0.4509
+    },
+    {
+      "threshold": 0.75,
+      "min_corr_implied": 0.25,
+      "n_units": 5,
+      "within": 0.3609
+    },
+    {
+      "threshold": 0.8,
+      "min_corr_implied": 0.2,
+      "n_units": 5,
+      "within": 0.3609
+    },
+    {
+      "threshold": 0.85,
+      "min_corr_implied": 0.15,
+      "n_units": 5,
+      "within": 0.3609
+    }
+  ],
+  "residual_corr": {
+    "009150": {
+      "009150": 1.0,
+      "096770": 0.265,
+      "AVGO": 0.052,
+      "KMI": -0.144,
+      "LNG": -0.127,
+      "MA": -0.132,
+      "NVDA": 0.006,
+      "RTX": -0.021,
+      "TSM": 0.099,
+      "VST": 0.048
+    },
+    "096770": {
+      "009150": 0.265,
+      "096770": 1.0,
+      "AVGO": 0.013,
+      "KMI": -0.072,
+      "LNG": -0.007,
+      "MA": 0.03,
+      "NVDA": 0.022,
+      "RTX": 0.004,
+      "TSM": -0.001,
+      "VST": -0.017
+    },
+    "AVGO": {
+      "009150": 0.052,
+      "096770": 0.013,
+      "AVGO": 1.0,
+      "KMI": -0.069,
+      "LNG": -0.019,
+      "MA": -0.305,
+      "NVDA": 0.358,
+      "RTX": -0.093,
+      "TSM": 0.43,
+      "VST": 0.266
+    },
+    "KMI": {
+      "009150": -0.144,
+      "096770": -0.072,
+      "AVGO": -0.069,
+      "KMI": 1.0,
+      "LNG": 0.602,
+      "MA": 0.052,
+      "NVDA": 0.053,
+      "RTX": 0.125,
+      "TSM": -0.12,
+      "VST": 0.211
+    },
+    "LNG": {
+      "009150": -0.127,
+      "096770": -0.007,
+      "AVGO": -0.019,
+      "KMI": 0.602,
+      "LNG": 1.0,
+      "MA": 0.103,
+      "NVDA": 0.017,
+      "RTX": 0.138,
+      "TSM": -0.1,
+      "VST": 0.206
+    },
+    "MA": {
+      "009150": -0.132,
+      "096770": 0.03,
+      "AVGO": -0.305,
+      "KMI": 0.052,
+      "LNG": 0.103,
+      "MA": 1.0,
+      "NVDA": -0.328,
+      "RTX": 0.136,
+      "TSM": -0.355,
+      "VST": -0.237
+    },
+    "NVDA": {
+      "009150": 0.006,
+      "096770": 0.022,
+      "AVGO": 0.358,
+      "KMI": 0.053,
+      "LNG": 0.017,
+      "MA": -0.328,
+      "NVDA": 1.0,
+      "RTX": -0.149,
+      "TSM": 0.413,
+      "VST": 0.281
+    },
+    "RTX": {
+      "009150": -0.021,
+      "096770": 0.004,
+      "AVGO": -0.093,
+      "KMI": 0.125,
+      "LNG": 0.138,
+      "MA": 0.136,
+      "NVDA": -0.149,
+      "RTX": 1.0,
+      "TSM": -0.136,
+      "VST": 0.053
+    },
+    "TSM": {
+      "009150": 0.099,
+      "096770": -0.001,
+      "AVGO": 0.43,
+      "KMI": -0.12,
+      "LNG": -0.1,
+      "MA": -0.355,
+      "NVDA": 0.413,
+      "RTX": -0.136,
+      "TSM": 1.0,
+      "VST": 0.272
+    },
+    "VST": {
+      "009150": 0.048,
+      "096770": -0.017,
+      "AVGO": 0.266,
+      "KMI": 0.211,
+      "LNG": 0.206,
+      "MA": -0.237,
+      "NVDA": 0.281,
+      "RTX": 0.053,
+      "TSM": 0.272,
+      "VST": 1.0
+    }
+  },
+  "units": {
+    "0": [
+      "AVGO",
+      "NVDA",
+      "TSM"
+    ],
+    "1": [
+      "KMI",
+      "LNG"
+    ],
+    "2": [
+      "009150"
+    ],
+    "3": [
+      "096770"
+    ],
+    "4": [
+      "MA"
+    ],
+    "5": [
+      "RTX"
+    ],
+    "6": [
+      "VST"
+    ]
+  },
+  "book_theme_labels": {
+    "AVGO": "AI-compute-EPICENTER",
+    "NVDA": "AI-compute-EPICENTER",
+    "TSM": "AI-compute-EPICENTER",
+    "KMI": "energy-fuel/AI-power",
+    "LNG": "energy-fuel/AI-power",
+    "VST": "AI-power-IPP",
+    "RTX": "defense-missile",
+    "MA": "payments/FIN",
+    "009150": "IT-substrate/MLCC",
+    "096770": "energy-refining"
+  },
+  "exposure": {
+    "px_asof": "2026-08-04",
+    "fx": 1426.1800537109375,
+    "fx_source": "USDKRW=X 2026-08-04",
+    "invested_krw": 9416756,
+    "cash_krw": 3559022,
+    "total_krw": 12975778,
+    "missing_price": [],
+    "by_unit": {
+      "U0": {
+        "pct": 11.42,
+        "krw": 1481494,
+        "names": [
+          "AVGO",
+          "NVDA",
+          "TSM"
+        ],
+        "themes": [
+          "AI-compute-EPICENTER"
+        ]
+      },
+      "U1": {
+        "pct": 20.17,
+        "krw": 2616883,
+        "names": [
+          "KMI",
+          "LNG"
+        ],
+        "themes": [
+          "energy-fuel/AI-power"
+        ]
+      },
+      "U6": {
+        "pct": 4.83,
+        "krw": 626635,
+        "names": [
+          "VST"
+        ],
+        "themes": [
+          "AI-power-IPP"
+        ]
+      },
+      "U5": {
+        "pct": 9.51,
+        "krw": 1233418,
+        "names": [
+          "RTX"
+        ],
+        "themes": [
+          "defense-missile"
+        ]
+      },
+      "U4": {
+        "pct": 12.56,
+        "krw": 1629325,
+        "names": [
+          "MA"
+        ],
+        "themes": [
+          "payments/FIN"
+        ]
+      },
+      "U2": {
+        "pct": 9.1,
+        "krw": 1181000,
+        "names": [
+          "009150"
+        ],
+        "themes": [
+          "IT-substrate/MLCC"
+        ]
+      },
+      "U3": {
+        "pct": 4.99,
+        "krw": 648000,
+        "names": [
+          "096770"
+        ],
+        "themes": [
+          "energy-refining"
+        ]
+      }
+    },
+    "by_theme": {
+      "AI-compute-EPICENTER": 11.42,
+      "energy-fuel/AI-power": 20.17,
+      "AI-power-IPP": 4.83,
+      "defense-missile": 9.51,
+      "payments/FIN": 12.56,
+      "IT-substrate/MLCC": 9.1,
+      "energy-refining": 4.99
+    },
+    "by_name": {
+      "AVGO": 4.54,
+      "NVDA": 2.3,
+      "TSM": 4.57,
+      "KMI": 11.69,
+      "LNG": 8.48,
+      "VST": 4.83,
+      "RTX": 9.51,
+      "MA": 12.56,
+      "009150": 9.1,
+      "096770": 4.99
+    },
+    "limits": {
+      "MAX_POS_PCT": 25.0,
+      "MAX_THEME_PCT": 40.0
+    }
+  }
+}

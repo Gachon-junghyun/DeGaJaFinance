@@ -1,0 +1,20 @@
+{
+  "window": {
+    "start": "2026-09-03",
+    "end": "2026-09-09",
+    "days": 7
+  },
+  "scope": "domestic",
+  "denominator": {
+    "day_events": 2674,
+    "threads": 2057,
+    "multiday": 383,
+    "alive": 46,
+    "oneday": 1674,
+    "oneday_new_today": 49
+  },
+  "bytes": 410807,
+  "approx_tokens": 287564
+}
+
+(스레드 전체 + 근거 → C:\Users\fivep\DeGaJaFinance\out\news_threads\2026-09-09_7d_domestic.json)

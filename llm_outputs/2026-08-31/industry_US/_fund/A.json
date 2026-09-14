@@ -1,0 +1,179 @@
+{
+  "ticker": "A",
+  "company_name": "Agilent Technologies, Inc.",
+  "sector": "Healthcare",
+  "industry": "Diagnostics & Research",
+  "price": 152.28,
+  "market_cap": 42937753600,
+  "trailing_pe": 29.976377,
+  "forward_pe": 22.563442,
+  "peg_ratio": 1.41,
+  "price_to_sales": 5.824437,
+  "price_to_book": 5.831578,
+  "trailing_eps": 5.08,
+  "forward_eps": 6.74897,
+  "fifty_two_week_high": 163.75,
+  "fifty_two_week_low": 108.35,
+  "target_low": 155.0,
+  "target_mean": 174.4,
+  "target_high": 190.0,
+  "target_median": 175.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 4,
+      "buy": 12,
+      "hold": 6,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 5,
+      "buy": 12,
+      "hold": 4,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 5,
+      "buy": 12,
+      "hold": 3,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 5,
+      "buy": 11,
+      "hold": 2,
+      "sell": 0,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-04-30",
+      1835000000.0
+    ],
+    [
+      "2026-01-31",
+      1798000000.0
+    ],
+    [
+      "2025-10-31",
+      1861000000.0
+    ],
+    [
+      "2025-07-31",
+      1738000000.0
+    ],
+    [
+      "2025-04-30",
+      1668000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-04-30",
+      1835000000.0
+    ],
+    [
+      "2026-01-31",
+      1798000000.0
+    ],
+    [
+      "2025-07-31",
+      1738000000.0
+    ],
+    [
+      "2025-04-30",
+      1668000000.0
+    ],
+    [
+      "2025-01-31",
+      1681000000.0
+    ],
+    [
+      "2024-07-31",
+      1578000000.0
+    ],
+    [
+      "2024-04-30",
+      1573000000.0
+    ],
+    [
+      "2024-01-31",
+      1658000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 1.7283,
+      "7daysAgo": 1.71745,
+      "30daysAgo": 1.71545,
+      "60daysAgo": 1.71545,
+      "90daysAgo": 1.70967
+    },
+    {
+      "period": "+1q",
+      "current": 1.5011,
+      "7daysAgo": 1.51269,
+      "30daysAgo": 1.51469,
+      "60daysAgo": 1.51069,
+      "90daysAgo": 1.51587
+    },
+    {
+      "period": "0y",
+      "current": 6.20237,
+      "7daysAgo": 6.06094,
+      "30daysAgo": 6.05944,
+      "60daysAgo": 6.06099,
+      "90daysAgo": 6.04515
+    },
+    {
+      "period": "+1y",
+      "current": 6.74897,
+      "7daysAgo": 6.60842,
+      "30daysAgo": 6.61176,
+      "60daysAgo": 6.61234,
+      "90daysAgo": 6.59731
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 1.0,
+      "upLast30days": 1.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 0.0,
+      "upLast30days": 0.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 1.0,
+      "upLast30days": 2.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 0.0,
+      "upLast30days": 2.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 1.0
+    }
+  ],
+  "business_summary": "Agilent Technologies, Inc. provides application focused solutions to the life sciences, diagnostics, and applied chemical markets worldwide. The company operates through three segments: Life Sciences and Diagnostics Markets, Agilent CrossLab, and Applied Markets. The Life Sciences and Diagnostics Markets segment offers liquid chromatography systems and components; and liquid chromatography mass spectrometry systems. This segment is also involved in the genomics, contract development and manufacturing organization, pathology, companion diagnostics, and biomolecular analysis businesses. The Agilent CrossLab segment provides various services, including repairs, parts, maintenance, installations, training, compliance support, software as a service, asset management, consulting, and other custom services. This segment also offers consumables, including gas chromatography and liquid chromatography columns, sample preparation products, custom chemistries, and various laboratory supplies; software and informatics solutions comprising software for instrument control, data acquisition, data analysis, secure storage of results, and laboratory information and workflow management; and OpenLab laboratory software, an open software platform that enables customers to capture, analyze, and share scientific data throughout the lab and across the enterprise. In addition, it provides automated sample preparation solutions, such as liquid handling, plate management, consumables, and scheduling software. The Applied Markets segment offers products in the areas of gas chromatography, mass spectrometry, spectroscopy, vacuum technology, and remarketed instruments. It markets its products through direct sales, distributors, resellers, manufacturer's representatives, and electronic commerce. Agilent Technologies, Inc. was incorporated in 1999 and is headquartered in Santa Clara, California.",
+  "next_earnings_date": "2026-11-26",
+  "beta": 1.229,
+  "dividend_yield": 0.66
+}

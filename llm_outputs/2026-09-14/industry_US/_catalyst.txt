@@ -1,0 +1,16 @@
+CATALYST_WATCH — as of 2026-09-14 — next 14 trading-ish days
+================================================================
+⚠️ 2 BINARY catalyst(s) in window — STAGE 025 both-sides bracket REQUIRED for each.
+
+[MACRO]  (✓=official source confirmed · ~=pattern/estimate, verify)
+      D-2  2026-09-16 FOMC decision (SEP/dot plot)             axis=rates      🔀binary [fed✓]
+  undated  —          Iran 'Strait of Hormuz open' statement (TACO trigger) axis=oil        🔀binary [news👁]
+
+[EARNINGS]
+  (none in window / yfinance unavailable)
+
+[STRUCTURAL]  락업·블록딜·지수리밸런스·전환 — 날짜가 미리 알려진 촉매
+  D-4     2026-09-18 sp quarterly rebalance                       market           [derived≈]
+           └ S&P 분기 리밸런스 = 쿼드러플 위칭. 지수 추종 물량 + 옵션·선물 만기가 겹쳐 거래량이 평소의 배수.
+
+[saved] C:\Users\fivep\DeGaJaFinance\llm_outputs\2026-09-14\CATALYST_WATCH.json

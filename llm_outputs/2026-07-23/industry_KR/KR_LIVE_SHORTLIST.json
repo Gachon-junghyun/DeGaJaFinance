@@ -1,0 +1,119 @@
+{
+  "asof": "2026-07-23",
+  "filter": {
+    "floor_jo": 1.0,
+    "tags": [
+      "🟢가속"
+    ],
+    "top": 15,
+    "days": 20
+  },
+  "shortlist": [
+    {
+      "ticker": "475150.KS",
+      "name": "SK이터닉스",
+      "sector": "건설",
+      "mcap_h": null,
+      "flow_score": 1.0,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.546,
+      "rs20": 112.3,
+      "rs60": 29.9,
+      "vol_surge": 2.08,
+      "investor": {
+        "foreign_20": 1138483,
+        "inst_20": 1520207,
+        "indiv_20": -2937870,
+        "foreign_5": 1021758,
+        "inst_5": 770253,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "089860.KS",
+      "name": "롯데렌탈",
+      "sector": "일반서비스",
+      "mcap_h": null,
+      "flow_score": 1.0,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.429,
+      "rs20": 59.3,
+      "rs60": 9.1,
+      "vol_surge": 2.02,
+      "investor": {
+        "foreign_20": 3041,
+        "inst_20": 164630,
+        "indiv_20": -164426,
+        "foreign_5": 43375,
+        "inst_5": 49502,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "096770.KS",
+      "name": "SK이노베이션",
+      "sector": "화학",
+      "mcap_h": null,
+      "flow_score": 0.922,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.278,
+      "rs20": 42.8,
+      "rs60": -15.8,
+      "vol_surge": 1.46,
+      "investor": {
+        "foreign_20": -149473,
+        "inst_20": 2323897,
+        "indiv_20": -1733956,
+        "foreign_5": -103118,
+        "inst_5": 1040432,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "279570.KS",
+      "name": "케이뱅크",
+      "sector": "금융",
+      "mcap_h": null,
+      "flow_score": 0.778,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.26,
+      "rs20": 21.4,
+      "rs60": -12.3,
+      "vol_surge": 1.2,
+      "investor": {
+        "foreign_20": 2647279,
+        "inst_20": 305421,
+        "indiv_20": -2858702,
+        "foreign_5": 3817462,
+        "inst_5": -1067296,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    }
+  ],
+  "live": [
+    "475150.KS",
+    "089860.KS",
+    "096770.KS",
+    "279570.KS"
+  ]
+}

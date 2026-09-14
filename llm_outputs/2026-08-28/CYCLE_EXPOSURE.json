@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-28",
+  "meta": {
+    "invested_usd": 5244.85,
+    "total_usd": 11116.73,
+    "total_krw": 15341092,
+    "cash_krw": 4827207
+  },
+  "cycles": [
+    {
+      "cycle": "AI-compute / semiconductors",
+      "rank": 1,
+      "min_epicenter_pct": 12.0,
+      "epi_pct_of_total": 17.42,
+      "margin_pp": 5.423,
+      "any_layer_pct_of_total": 21.16,
+      "epi_usd": 1936.84,
+      "adj_usd": 415.39,
+      "fuel_usd": 0,
+      "epi_names": [
+        "NVDA",
+        "ANET"
+      ],
+      "adj_names": [
+        "ETN"
+      ],
+      "fuel_names": [],
+      "GAP": false
+    },
+    {
+      "cycle": "Energy / oil-refining (Hormuz + Russia crack)",
+      "rank": 2,
+      "min_epicenter_pct": 8.0,
+      "epi_pct_of_total": 9.83,
+      "margin_pp": 1.826,
+      "any_layer_pct_of_total": 9.83,
+      "epi_usd": 1092.36,
+      "adj_usd": 0,
+      "fuel_usd": 0,
+      "epi_names": [
+        "MPC",
+        "PSX"
+      ],
+      "adj_names": [],
+      "fuel_names": [],
+      "GAP": false
+    },
+    {
+      "cycle": "Missile-defense / rearmament",
+      "rank": 3,
+      "min_epicenter_pct": 0.0,
+      "epi_pct_of_total": 3.81,
+      "margin_pp": 3.81,
+      "any_layer_pct_of_total": 3.81,
+      "epi_usd": 423.54,
+      "adj_usd": 0,
+      "fuel_usd": 0,
+      "epi_names": [
+        "RTX"
+      ],
+      "adj_names": [],
+      "fuel_names": [],
+      "GAP": false
+    }
+  ]
+}

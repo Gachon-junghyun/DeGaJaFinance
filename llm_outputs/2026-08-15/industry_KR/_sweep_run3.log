@@ -1,0 +1,7 @@
+[warn] 유니버스 kr_all.csv 31일 경과 — 시총 stale. build_kr_universe.py 재빌드 권장(주1회).
+[dl] yfinance 배치 833종목 4mo …
+[dl] 완료 → prices_kr_2026-08-15.pkl
+[flow] 832종목 축 계산 …
+  … 50/832
+  … 100/832
+  … 150/832

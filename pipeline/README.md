@@ -11,7 +11,7 @@ protocols/     protocol = ordered combination of L1 blocks (industry_us = MACRO�
 L1_stages/     big stages = reusable stage blocks (MACRO·SWEEP·DEEP·BET…). Each calls L2.
     │  calls
     ▼
-L2_modules/    module orchestration (indicators·schedule·discovery·deepdive·news). Composes L3/modules.
+L2_modules/    module orchestration (indicators·schedule·discovery·deepdive·news·web_errand). Composes L3/modules.
     │  calls
     ▼
 L3_functions/  single-role functions (atomic steps: random news sample·body drill·related companies·competitors). One deterministic job each.
@@ -46,7 +46,7 @@ L3_functions/  single-role functions (atomic steps: random news sample·body dri
 |---|---|---|---|
 | protocol | `protocols/` | L1 composition = a desk flow | `industry_us.md` = [MACRO,SWEEP,ROTATION,PREMORTEM,DEEP,BET,ALPHA,DRIFT] |
 | L1 | `L1_stages/` | big stages | `macro.md`·`sweep.md`·`deep.md`·`bet.md`… |
-| L2 | `L2_modules/` | module orchestration | `indicators.md`·`schedule.md`·`discovery.md`·`deepdive.md`·`news.md` |
+| L2 | `L2_modules/` | module orchestration | `indicators.md`·`schedule.md`·`discovery.md`·`deepdive.md`·`news.md`·[`web_errand.md`](L2_modules/web_errand.md) |
 | L3 | `L3_functions/` | single-role functions | `daily_events.md`·`random_news.md`·`drill_detail.md`·`related_companies.md`·`competitors.md` |
 | — | `handoff.md` | REPORT handoff ledger (prevents re-searching; crosses layers) | `module_report_tags` |
 | — | [`../handoff/`](../handoff/README.md) | **the analytical carry** — standing view · pre-registered scenarios · research rules. Read/written by L1·HANDOVER | `STANDING_VIEW.md`·`SCENARIOS.md`·`RESEARCH.md` |
@@ -88,7 +88,7 @@ Checkpoint at `out/pipeline_runs/{name}.json` (stage · passed · target). Do a 
   re-discoverable from material a prior run already had — the failures were carry failures, not data
   failures. The rules it loads are enforced downstream (MACRO citation discipline · DEEP cyclical
   lens + peak-margin check · PREMORTEM branch grading · L2 indicators venue-contamination check).
-- **protocols/**: `industry_us.md` (10 blocks) · `industry_kr.md` (8 blocks) · `paper_desk.md` (6 blocks) ·
+- **protocols/**: `industry_us.md` (10 blocks) · `industry_kr.md` (8 blocks) · **`company_research.md` (10 blocks)** · **`기업분석.md` (13 blocks)** · **`company_batch.md` (3 blocks)** · `paper_desk.md` (6 blocks) ·
   `wrap_account.md` (8 blocks) · `미러링.md` (7 blocks) · `real_alpha_kr.md` (8 blocks) ·
   `idle_probe.md` (7 blocks) · **`preflight.md` (2 blocks)** — complete, compile-verified.
   Only US adds premortem·drift.
@@ -100,6 +100,18 @@ Checkpoint at `out/pipeline_runs/{name}.json` (stage · passed · target). Do a 
   flow score by **+0.305**. `idle_probe` *finds* such defects (slow, exploratory); `preflight`
   *prevents their return* (fast, boring). Keeping them separate is deliberate — a heavy daily check
   stops being run, which is the exact failure `measure_ic` demonstrated (0 invocations in 3 weeks).
+  ★ **`기업분석` 은 `company_research` 와 «같은 종목, 다른 질문»이다.** 저쪽은 트레이더 렌즈로
+  `ENTER·ADD·HOLD·TRIM·EXIT·PASS` 한 줄에서 끝나고(빠르고 원장에 채점된다), 이쪽은
+  **밸류체인 서술 → 1차 출처 취재 → 주가산정 → 조판**을 더해 **목표주가 한 개와 사람이 읽는
+  Word/PDF 보고서**로 끝난다. 무거워서 매일 돌리는 물건이 아니다.
+  새 블록은 L1 넷(**primary_source · value_chain · valuation · publish_report**)과
+  L3 넷(**holdco_split · estimate_revision · implied_expectation · target_bridge**)이고, 전부
+  2026-08-28 두산에너빌리티(034020) 실행에서 **판정을 실제로 바꾼** 계산이다.
+  🔴 그중 둘이 구조적 결함을 드러냈다 — ① `holdco_split` 이 「선행 PER 177배」의 분모에
+  **자회사(두산밥캣) 이익이 섞여 있었다**는 걸 잡았다(2026E 지배순이익의 **85%**가 그쪽 몫이었다).
+  ② `valuation` 이 없던 동안 데스크는 **BET_VERDICT 의 G4(손익비)를 증권사 컨센 목표가로** 계산하고
+  있었는데, 그 컨센 목표 자체가 **2028E EPS 기준 PER 103배**였다 — **자기 관문을 남의 모멘텀 목표로
+  통과시키고 있었다.** 자기 목표주가를 만들자 G4 가 실패로 뒤집혔다.
   `paper_desk` is the *downstream* desk — it consumes the research desks' `REPORT/` output and runs a simulated book
   (engine = `module_paper_book`; paper only, no real order). `미러링` mirrors the **real KIS account** into that book,
   applies judgment, and stages recommendations onto the real KIS order desk stack as **human-fireable intent cards**
@@ -205,6 +217,44 @@ Checkpoint at `out/pipeline_runs/{name}.json` (stage · passed · target). Do a 
   for +6.2k tokens**, with everything still withheld carried as a count. Re-measure any day with
   `scripts/brief_recall.py`; the L1 EXIT CHECK now requires quoting those counts, because
   `tail = 0` was never the coverage claim it looked like.
+- **protocol `company_research`** (2026-08-21) — the single-name **"do we bet"** desk (`PROMPT_MAP §2`,
+  specified since the port and unbuilt until now). 10 L1 blocks, 8 of them reused; the two new ones are
+  **DRIVER_TEST** and **BET_VERDICT**, plus three new L3 (`segment_pnl` · `driver_link` · `peer_pricing`).
+  Its whole design comes from one measured failure mode: **starting at the sector label**. On a full
+  module pass over PSX the desk modeled a five-segment company off one spread (Refining = 61.6% of
+  pre-tax income), read a 4.6σ one-day driver drop as a margin collapse when it was an **RBOB Sep→Oct
+  spec roll** (roll-adjusted −1.0% at the 92.8th percentile, not −12.5%), and wrote a +18.8%/20d move as
+  name alpha when the whole peer set did the same (corr +0.90/+0.87/+0.77). ⇒ the new stage runs
+  **before** money/valuation/falsify, because each inherits the denominator it produces.
+  ★ It also found the desk **holding** PSX at +21.3% while an **unresolved rejection** sat in the ledger
+  whose own `--revives-if` had not fired — no protocol had ever put those two files side by side, which
+  is now gate **G8**.
+  ⚠ **Compiler fix shipped with it**: `build_protocol.py` collected L3s from **L2 text only**, so every
+  L3 an L1 calls *directly* was dropped from the compiled executable. `real_alpha_kr` named
+  `filing_diff · contract_alpha · set_difference` in its stages and shipped a file containing **none** of
+  them (L3 8 → 14 after the fix). Same class as PROMPT_MAP §7's dead references: **an instruction that
+  cannot execute does not fail loudly, it just stops happening.** Recompile all after any L1 edit.
+- **protocol `company_batch`** (2026-08-21) — the orchestrator above `company_research`: **N companies
+  (default 10) as parallel subagents → one comparable scoreboard → the top-down run's input.** Three
+  L1s (`batch_select` · `batch_fanout` · `batch_score`), **zero new L2** — select reuses carryover ·
+  report_read · bookkeeping, fanout is the PREMORTEM Agent idiom, score is `scripts/company_score.py`
+  plus the existing `ic_ledger` axis plumbing. That zero is the test that these were stages, not
+  orchestration.
+  ★ **Why it exists**: `industry_us` L1 BET was re-deriving company numbers *inside* a context already
+  carrying nine stages. BET now has a **thesis-confirmation gate** — a candidate with a scoreboard row
+  is confirmed by citation and only the delta is written; it re-digs only when one of five tests fails
+  (age >10 settled sessions · a dated observation point matured · an earnings/8-K landed · the
+  roll-adjusted driver percentile crossed a band · this run's flow disagrees with the row).
+  ⚠ **The score is unvalidated and says so in every artifact it writes.** Weights are hand-chosen and
+  their relation to return has never been measured — which is why `company_score.py axes` emits it as
+  `company_score` into `out/ic/axes/`, so the IC ledger grades it over months (`n_eff < 4` ⇒ no verdict,
+  by design) instead of it being trusted now. Until then it is a **reading order**, not an expected
+  return, and it may not size anything.
+  ⚠ **Score and verdict are different objects** — the score is *research quality*, the verdict is the
+  *action*. A high-scoring `PASS` is a success. Sorting by score and reading the top row as a buy
+  collapses two axes both `batch_score` and `bet` keep apart on purpose.
+  ⚠ Selection's yield is the names it **removed**; the skip list is published with counts, and the
+  roster is never padded to reach N.
 - **Language rule**: every unit here is written in **English** — the US desk runs English-pure
   (Korean in context skews the frame), and the KR desk reads English instructions while emitting
   KR-market outputs. Field-tested run notes are embedded per unit as ⚠ notes.

@@ -1,0 +1,7093 @@
+{
+ "date": "2026-09-12",
+ "source": "yfinance Ticker.eps_trend / eps_revisions",
+ "note": "소급 복구 불가. 날짜당 1파일, 재실행 멱등. dig D16.",
+ "periods": [
+  "0q",
+  "+1q",
+  "0y",
+  "+1y"
+ ],
+ "rows": {
+  "NVDA": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.47269,
+     "7daysAgo": 2.46983,
+     "30daysAgo": 2.34527,
+     "60daysAgo": 2.33909,
+     "90daysAgo": 2.33883
+    },
+    "+1q": {
+     "current": 2.74328,
+     "7daysAgo": 2.74567,
+     "30daysAgo": 2.66044,
+     "60daysAgo": 2.65177,
+     "90daysAgo": 2.64729
+    },
+    "0y": {
+     "current": 9.30456,
+     "7daysAgo": 9.29436,
+     "30daysAgo": 8.96139,
+     "60daysAgo": 8.9416,
+     "90daysAgo": 8.92355
+    },
+    "+1y": {
+     "current": 15.56753,
+     "7daysAgo": 15.40425,
+     "30daysAgo": 12.83623,
+     "60daysAgo": 12.73643,
+     "90daysAgo": 12.67184
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 34.0,
+     "upLast30days": 35.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 23.0,
+     "upLast30days": 26.0,
+     "downLast7Days": 13.0,
+     "downLast30days": 9.0
+    },
+    "0y": {
+     "upLast7days": 38.0,
+     "upLast30days": 38.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 39.0,
+     "upLast30days": 39.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 218.2899932861328
+  },
+  "GOOGL": {
+   "eps_trend": {
+    "0q": {
+     "current": 3.00872,
+     "7daysAgo": 3.00586,
+     "30daysAgo": 3.00182,
+     "60daysAgo": 3.00393,
+     "90daysAgo": 3.00261
+    },
+    "+1q": {
+     "current": 3.33883,
+     "7daysAgo": 3.33268,
+     "30daysAgo": 3.33216,
+     "60daysAgo": 3.28604,
+     "90daysAgo": 3.28128
+    },
+    "0y": {
+     "current": 20.60974,
+     "7daysAgo": 20.60283,
+     "30daysAgo": 20.58853,
+     "60daysAgo": 14.22781,
+     "90daysAgo": 14.22751
+    },
+    "+1y": {
+     "current": 14.88243,
+     "7daysAgo": 14.83929,
+     "30daysAgo": 14.77394,
+     "60daysAgo": 14.55665,
+     "90daysAgo": 14.4584
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 18.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 18.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 17.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 16.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 2.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 10.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    }
+   },
+   "close": 338.5
+  },
+  "GOOG": {
+   "eps_trend": {
+    "0q": {
+     "current": 3.00752,
+     "7daysAgo": 3.00444,
+     "30daysAgo": 2.99803,
+     "60daysAgo": 3.00298,
+     "90daysAgo": 3.0018
+    },
+    "+1q": {
+     "current": 3.34394,
+     "7daysAgo": 3.33727,
+     "30daysAgo": 3.32977,
+     "60daysAgo": 3.28071,
+     "90daysAgo": 3.27948
+    },
+    "0y": {
+     "current": 20.60438,
+     "7daysAgo": 20.59711,
+     "30daysAgo": 20.57985,
+     "60daysAgo": 14.23389,
+     "90daysAgo": 14.22572
+    },
+    "+1y": {
+     "current": 14.87383,
+     "7daysAgo": 14.82767,
+     "30daysAgo": 14.73894,
+     "60daysAgo": 14.52125,
+     "90daysAgo": 14.4486
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 16.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 16.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 15.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 9.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 335.45001220703125
+  },
+  "AAPL": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.97754,
+     "7daysAgo": 1.97656,
+     "30daysAgo": 1.97656,
+     "60daysAgo": 2.00825,
+     "90daysAgo": 2.00801
+    },
+    "+1q": {
+     "current": 2.90471,
+     "7daysAgo": 2.89268,
+     "30daysAgo": 2.90859,
+     "60daysAgo": 2.9496,
+     "90daysAgo": 2.94699
+    },
+    "0y": {
+     "current": 8.82155,
+     "7daysAgo": 8.81248,
+     "30daysAgo": 8.80708,
+     "60daysAgo": 8.7595,
+     "90daysAgo": 8.75697
+    },
+    "+1y": {
+     "current": 9.56757,
+     "7daysAgo": 9.53289,
+     "30daysAgo": 9.53948,
+     "60daysAgo": 9.68261,
+     "90daysAgo": 9.66694
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 14.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 12.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 23.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 9.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 24.0
+    }
+   },
+   "close": 332.2699890136719
+  },
+  "MSFT": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.72455,
+     "7daysAgo": 4.72455,
+     "30daysAgo": 4.72036,
+     "60daysAgo": 4.62319,
+     "90daysAgo": 4.61418
+    },
+    "+1q": {
+     "current": 4.82718,
+     "7daysAgo": 4.82878,
+     "30daysAgo": 4.82335,
+     "60daysAgo": 4.78767,
+     "90daysAgo": 4.77702
+    },
+    "0y": {
+     "current": 19.75306,
+     "7daysAgo": 19.75306,
+     "30daysAgo": 19.72206,
+     "60daysAgo": 19.38938,
+     "90daysAgo": 19.373
+    },
+    "+1y": {
+     "current": 23.57298,
+     "7daysAgo": 23.57328,
+     "30daysAgo": 23.55269,
+     "60daysAgo": 22.58739,
+     "90daysAgo": 22.62778
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 17.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 5.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 8.0
+    },
+    "0y": {
+     "upLast7days": 3.0,
+     "upLast30days": 21.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 8.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 19.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    }
+   },
+   "close": 495.6300048828125
+  },
+  "AMZN": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.95485,
+     "7daysAgo": 1.95348,
+     "30daysAgo": 1.95151,
+     "60daysAgo": 1.9149,
+     "90daysAgo": 1.91134
+    },
+    "+1q": {
+     "current": 2.44269,
+     "7daysAgo": 2.44316,
+     "30daysAgo": 2.44007,
+     "60daysAgo": 2.37872,
+     "90daysAgo": 2.37508
+    },
+    "0y": {
+     "current": 12.57394,
+     "7daysAgo": 12.56477,
+     "30daysAgo": 12.33525,
+     "60daysAgo": 8.67805,
+     "90daysAgo": 8.65845
+    },
+    "+1y": {
+     "current": 10.49351,
+     "7daysAgo": 10.48527,
+     "30daysAgo": 10.4721,
+     "60daysAgo": 9.97579,
+     "90daysAgo": 9.94801
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 26.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 9.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 23.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 10.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 48.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 43.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    }
+   },
+   "close": 256.7799987792969
+  },
+  "AVGO": {
+   "eps_trend": {
+    "0q": {
+     "current": 3.238,
+     "7daysAgo": 3.238,
+     "30daysAgo": 3.22644,
+     "60daysAgo": 3.22644,
+     "90daysAgo": 3.1865
+    },
+    "+1q": {
+     "current": 4.07566,
+     "7daysAgo": 4.13523,
+     "30daysAgo": 4.1288,
+     "60daysAgo": 4.12187,
+     "90daysAgo": 4.12187
+    },
+    "0y": {
+     "current": 11.65766,
+     "7daysAgo": 11.63075,
+     "30daysAgo": 11.62543,
+     "60daysAgo": 11.6237,
+     "90daysAgo": 11.61807
+    },
+    "+1y": {
+     "current": 19.38391,
+     "7daysAgo": 19.5728,
+     "30daysAgo": 19.59801,
+     "60daysAgo": 19.4616,
+     "90daysAgo": 19.41675
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 2.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 361.989990234375
+  },
+  "TSLA": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.45154,
+     "7daysAgo": 0.45154,
+     "30daysAgo": 0.45385,
+     "60daysAgo": 0.54698,
+     "90daysAgo": 0.5419
+    },
+    "+1q": {
+     "current": 0.48823,
+     "7daysAgo": 0.48823,
+     "30daysAgo": 0.4913,
+     "60daysAgo": 0.6338,
+     "90daysAgo": 0.6313
+    },
+    "0y": {
+     "current": 1.76884,
+     "7daysAgo": 1.76884,
+     "30daysAgo": 1.7809,
+     "60daysAgo": 2.1306,
+     "90daysAgo": 2.04702
+    },
+    "+1y": {
+     "current": 2.15858,
+     "7daysAgo": 2.15858,
+     "30daysAgo": 2.16326,
+     "60daysAgo": 2.57985,
+     "90daysAgo": 2.51608
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 2.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 17.0,
+     "downLast30days": 15.0
+    },
+    "+1q": {
+     "upLast7days": 2.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 17.0,
+     "downLast30days": 16.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 18.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 19.0
+    }
+   },
+   "close": 365.44000244140625
+  },
+  "META": {
+   "eps_trend": {
+    "0q": {
+     "current": 6.53036,
+     "7daysAgo": 6.53026,
+     "30daysAgo": 6.76256,
+     "60daysAgo": 7.04597,
+     "90daysAgo": 7.04256
+    },
+    "+1q": {
+     "current": 8.22329,
+     "7daysAgo": 8.22325,
+     "30daysAgo": 8.23063,
+     "60daysAgo": 8.50063,
+     "90daysAgo": 8.48633
+    },
+    "0y": {
+     "current": 31.42921,
+     "7daysAgo": 31.37308,
+     "30daysAgo": 31.80798,
+     "60daysAgo": 32.89898,
+     "90daysAgo": 32.94065
+    },
+    "+1y": {
+     "current": 33.94283,
+     "7daysAgo": 33.94621,
+     "30daysAgo": 33.98561,
+     "60daysAgo": 35.005,
+     "90daysAgo": 34.90343
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 4.0,
+     "downLast30days": 33.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 10.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 27.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 7.0,
+     "downLast30days": 45.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 4.0,
+     "downLast30days": 39.0
+    }
+   },
+   "close": 648.030029296875
+  },
+  "MU": {
+   "eps_trend": {
+    "0q": {
+     "current": 31.28341,
+     "7daysAgo": 31.30102,
+     "30daysAgo": 31.31417,
+     "60daysAgo": 24.18441,
+     "90daysAgo": 22.66035
+    },
+    "+1q": {
+     "current": 34.80837,
+     "7daysAgo": 34.7977,
+     "30daysAgo": 34.83076,
+     "60daysAgo": 27.60536,
+     "90daysAgo": 25.15494
+    },
+    "0y": {
+     "current": 73.40044,
+     "7daysAgo": 73.40044,
+     "30daysAgo": 73.39892,
+     "60daysAgo": 73.29027,
+     "90daysAgo": 58.79307
+    },
+    "+1y": {
+     "current": 155.02524,
+     "7daysAgo": 155.02524,
+     "30daysAgo": 155.06258,
+     "60daysAgo": 149.32397,
+     "90daysAgo": 109.42425
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 2.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    }
+   },
+   "close": 975.260009765625
+  },
+  "BRK-B": {
+   "eps_trend": {
+    "0q": {
+     "current": 5.78187,
+     "7daysAgo": 5.34972,
+     "30daysAgo": 5.31866,
+     "60daysAgo": 5.29866,
+     "90daysAgo": 5.29866
+    },
+    "+1q": {
+     "current": 5.15144,
+     "7daysAgo": 4.8481,
+     "30daysAgo": 4.83055,
+     "60daysAgo": 4.81555,
+     "90daysAgo": 4.81555
+    },
+    "0y": {
+     "current": 22.25303,
+     "7daysAgo": 23.24909,
+     "30daysAgo": 20.80378,
+     "60daysAgo": 20.75045,
+     "90daysAgo": 20.38567
+    },
+    "+1y": {
+     "current": 22.19254,
+     "7daysAgo": 21.83254,
+     "30daysAgo": 21.51365,
+     "60daysAgo": 21.47365,
+     "90daysAgo": 21.30699
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 2.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 510.3699951171875
+  },
+  "LLY": {
+   "eps_trend": {
+    "0q": {
+     "current": 9.87135,
+     "7daysAgo": 9.87135,
+     "30daysAgo": 9.77917,
+     "60daysAgo": 9.42552,
+     "90daysAgo": 9.39916
+    },
+    "+1q": {
+     "current": 9.97587,
+     "7daysAgo": 9.97587,
+     "30daysAgo": 9.95581,
+     "60daysAgo": 9.97783,
+     "90daysAgo": 9.89038
+    },
+    "0y": {
+     "current": 36.71291,
+     "7daysAgo": 36.71123,
+     "30daysAgo": 36.50561,
+     "60daysAgo": 35.96393,
+     "90daysAgo": 36.20837
+    },
+    "+1y": {
+     "current": 47.2558,
+     "7daysAgo": 47.25538,
+     "30daysAgo": 46.62999,
+     "60daysAgo": 44.81703,
+     "90daysAgo": 44.48992
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 4.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "+1q": {
+     "upLast7days": 2.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 8.0
+    },
+    "0y": {
+     "upLast7days": 5.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 10.0
+    },
+    "+1y": {
+     "upLast7days": 8.0,
+     "upLast30days": 20.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    }
+   },
+   "close": 1115.699951171875
+  },
+  "WMT": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.63613,
+     "7daysAgo": 0.6352,
+     "30daysAgo": 0.6822,
+     "60daysAgo": 0.68398,
+     "90daysAgo": 0.68461
+    },
+    "+1q": {
+     "current": 0.78493,
+     "7daysAgo": 0.78587,
+     "30daysAgo": 0.81271,
+     "60daysAgo": 0.81441,
+     "90daysAgo": 0.81504
+    },
+    "0y": {
+     "current": 2.88675,
+     "7daysAgo": 2.88648,
+     "30daysAgo": 2.89765,
+     "60daysAgo": 2.90208,
+     "90daysAgo": 2.90683
+    },
+    "+1y": {
+     "current": 3.23048,
+     "7daysAgo": 3.23097,
+     "30daysAgo": 3.28113,
+     "60daysAgo": 3.28577,
+     "90daysAgo": 3.28806
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 29.0,
+     "downLast30days": 29.0
+    },
+    "+1q": {
+     "upLast7days": 3.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 26.0,
+     "downLast30days": 26.0
+    },
+    "0y": {
+     "upLast7days": 9.0,
+     "upLast30days": 9.0,
+     "downLast7Days": 16.0,
+     "downLast30days": 19.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 23.0,
+     "downLast30days": 25.0
+    }
+   },
+   "close": 107.1500015258789
+  },
+  "AMD": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.92514,
+     "7daysAgo": 1.92527,
+     "30daysAgo": 1.92529,
+     "60daysAgo": 1.82251,
+     "90daysAgo": 1.80954
+    },
+    "+1q": {
+     "current": 2.65404,
+     "7daysAgo": 2.65132,
+     "30daysAgo": 2.65274,
+     "60daysAgo": 2.5954,
+     "90daysAgo": 2.58139
+    },
+    "0y": {
+     "current": 7.56435,
+     "7daysAgo": 7.56794,
+     "30daysAgo": 7.56141,
+     "60daysAgo": 7.40522,
+     "90daysAgo": 7.3672
+    },
+    "+1y": {
+     "current": 15.51049,
+     "7daysAgo": 15.32884,
+     "30daysAgo": 15.32965,
+     "60daysAgo": 13.28145,
+     "90daysAgo": 13.1035
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 22.0,
+     "upLast30days": 25.0,
+     "downLast7Days": 4.0,
+     "downLast30days": 3.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 23.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 10.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 28.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 9.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 33.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    }
+   },
+   "close": 516.1300048828125
+  },
+  "JPM": {
+   "eps_trend": {
+    "0q": {
+     "current": 5.89013,
+     "7daysAgo": 5.9064,
+     "30daysAgo": 5.9064,
+     "60daysAgo": 5.47676,
+     "90daysAgo": 5.42697
+    },
+    "+1q": {
+     "current": 5.94334,
+     "7daysAgo": 5.9475,
+     "30daysAgo": 5.9475,
+     "60daysAgo": 5.54532,
+     "90daysAgo": 5.49472
+    },
+    "0y": {
+     "current": 24.16189,
+     "7daysAgo": 24.21208,
+     "30daysAgo": 24.21208,
+     "60daysAgo": 22.76694,
+     "90daysAgo": 22.35379
+    },
+    "+1y": {
+     "current": 24.98799,
+     "7daysAgo": 25.00699,
+     "30daysAgo": 25.00699,
+     "60daysAgo": 23.9313,
+     "90daysAgo": 23.65623
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 9.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 356.2300109863281
+  },
+  "ASML": {
+   "eps_trend": {
+    "0q": {
+     "current": 10.58262,
+     "7daysAgo": 10.58262,
+     "30daysAgo": 10.58262,
+     "60daysAgo": 8.4357,
+     "90daysAgo": 8.3196
+    },
+    "+1q": {
+     "current": 13.14231,
+     "7daysAgo": 13.14231,
+     "30daysAgo": 13.14231,
+     "60daysAgo": 9.76349,
+     "90daysAgo": 9.77112
+    },
+    "0y": {
+     "current": 38.18987,
+     "7daysAgo": 38.18989,
+     "30daysAgo": 38.02898,
+     "60daysAgo": 31.99678,
+     "90daysAgo": 31.47609
+    },
+    "+1y": {
+     "current": 51.72248,
+     "7daysAgo": 51.70263,
+     "30daysAgo": 51.42462,
+     "60daysAgo": 43.76421,
+     "90daysAgo": 41.48683
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 12.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 12.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 28.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 28.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 1698.300048828125
+  },
+  "INTC": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.38802,
+     "7daysAgo": 0.38827,
+     "30daysAgo": 0.39001,
+     "60daysAgo": 0.26409,
+     "90daysAgo": 0.2627
+    },
+    "+1q": {
+     "current": 0.42739,
+     "7daysAgo": 0.4261,
+     "30daysAgo": 0.42746,
+     "60daysAgo": 0.30529,
+     "90daysAgo": 0.30446
+    },
+    "0y": {
+     "current": 1.51462,
+     "7daysAgo": 1.51264,
+     "30daysAgo": 1.5144,
+     "60daysAgo": 1.09598,
+     "90daysAgo": 1.09012
+    },
+    "+1y": {
+     "current": 2.04479,
+     "7daysAgo": 2.04058,
+     "30daysAgo": 2.04034,
+     "60daysAgo": 1.55005,
+     "90daysAgo": 1.52008
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 30.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 29.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 33.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 33.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 102.94000244140625
+  },
+  "V": {
+   "eps_trend": {
+    "0q": {
+     "current": 3.42922,
+     "7daysAgo": 3.42922,
+     "30daysAgo": 3.42986,
+     "60daysAgo": 3.44386,
+     "90daysAgo": 3.44419
+    },
+    "+1q": {
+     "current": 3.6281,
+     "7daysAgo": 3.6281,
+     "30daysAgo": 3.62703,
+     "60daysAgo": 3.60294,
+     "90daysAgo": 3.60752
+    },
+    "0y": {
+     "current": 13.22816,
+     "7daysAgo": 13.22816,
+     "30daysAgo": 13.21574,
+     "60daysAgo": 13.14421,
+     "90daysAgo": 13.1456
+    },
+    "+1y": {
+     "current": 15.0043,
+     "7daysAgo": 15.0043,
+     "30daysAgo": 14.9763,
+     "60daysAgo": 14.87105,
+     "90daysAgo": 14.86785
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 8.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 16.0
+    },
+    "+1q": {
+     "upLast7days": 2.0,
+     "upLast30days": 22.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 30.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 6.0
+    },
+    "+1y": {
+     "upLast7days": 6.0,
+     "upLast30days": 28.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    }
+   },
+   "close": 370.45001220703125
+  },
+  "XOM": {
+   "eps_trend": {
+    "0q": {
+     "current": 3.65947,
+     "7daysAgo": 3.58701,
+     "30daysAgo": 3.53983,
+     "60daysAgo": 3.2663,
+     "90daysAgo": 3.49299
+    },
+    "+1q": {
+     "current": 3.06273,
+     "7daysAgo": 2.99819,
+     "30daysAgo": 2.98159,
+     "60daysAgo": 2.88148,
+     "90daysAgo": 3.051
+    },
+    "0y": {
+     "current": 11.74649,
+     "7daysAgo": 11.61792,
+     "30daysAgo": 11.53592,
+     "60daysAgo": 11.03352,
+     "90daysAgo": 11.30079
+    },
+    "+1y": {
+     "current": 10.79067,
+     "7daysAgo": 10.64294,
+     "30daysAgo": 10.53151,
+     "60daysAgo": 10.47171,
+     "90daysAgo": 10.63834
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 8.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 12.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 6.0
+    }
+   },
+   "close": 165.99000549316406
+  },
+  "JNJ": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.425,
+     "7daysAgo": 2.425,
+     "30daysAgo": 2.425,
+     "60daysAgo": 3.02758,
+     "90daysAgo": 3.02322
+    },
+    "+1q": {
+     "current": 3.025,
+     "7daysAgo": 3.025,
+     "30daysAgo": 3.025,
+     "60daysAgo": 2.98867,
+     "90daysAgo": 2.98283
+    },
+    "0y": {
+     "current": 11.076,
+     "7daysAgo": 11.0525,
+     "30daysAgo": 11.0525,
+     "60daysAgo": 11.58234,
+     "90daysAgo": 11.57426
+    },
+    "+1y": {
+     "current": 12.45,
+     "7daysAgo": 12.3075,
+     "30daysAgo": 12.3075,
+     "60daysAgo": 12.74448,
+     "90daysAgo": 12.71734
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    }
+   },
+   "close": 265.5799865722656
+  },
+  "ORCL": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.87407,
+     "7daysAgo": 1.88946,
+     "30daysAgo": 1.88765,
+     "60daysAgo": 1.88765,
+     "90daysAgo": 1.87724
+    },
+    "+1q": {
+     "current": 2.02952,
+     "7daysAgo": 2.06488,
+     "30daysAgo": 2.06091,
+     "60daysAgo": 2.06091,
+     "90daysAgo": 2.06528
+    },
+    "0y": {
+     "current": 8.13172,
+     "7daysAgo": 8.06295,
+     "30daysAgo": 8.05306,
+     "60daysAgo": 8.04521,
+     "90daysAgo": 8.03997
+    },
+    "+1y": {
+     "current": 11.02122,
+     "7daysAgo": 10.96763,
+     "30daysAgo": 10.9024,
+     "60daysAgo": 10.9216,
+     "90daysAgo": 10.86687
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 150.27999877929688
+  },
+  "AMAT": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.06032,
+     "7daysAgo": 4.06032,
+     "30daysAgo": 3.69127,
+     "60daysAgo": 3.6352,
+     "90daysAgo": 3.60547
+    },
+    "+1q": {
+     "current": 4.19781,
+     "7daysAgo": 4.20383,
+     "30daysAgo": 3.7941,
+     "60daysAgo": 3.74513,
+     "90daysAgo": 3.7017
+    },
+    "0y": {
+     "current": 12.79441,
+     "7daysAgo": 12.79441,
+     "30daysAgo": 12.33569,
+     "60daysAgo": 12.26456,
+     "90daysAgo": 12.23131
+    },
+    "+1y": {
+     "current": 18.45479,
+     "7daysAgo": 18.45479,
+     "30daysAgo": 17.34407,
+     "60daysAgo": 16.65792,
+     "90daysAgo": 16.25216
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 25.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 18.0,
+     "upLast30days": 21.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 29.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 28.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 456.489990234375
+  },
+  "LRCX": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.17786,
+     "7daysAgo": 2.17786,
+     "30daysAgo": 2.17786,
+     "60daysAgo": 1.81988,
+     "90daysAgo": 1.80506
+    },
+    "+1q": {
+     "current": 2.30683,
+     "7daysAgo": 2.30683,
+     "30daysAgo": 2.30683,
+     "60daysAgo": 1.98065,
+     "90daysAgo": 1.9587
+    },
+    "0y": {
+     "current": 9.46911,
+     "7daysAgo": 9.46256,
+     "30daysAgo": 9.45969,
+     "60daysAgo": 8.1148,
+     "90daysAgo": 7.99484
+    },
+    "+1y": {
+     "current": 11.65184,
+     "7daysAgo": 11.57261,
+     "30daysAgo": 11.55714,
+     "60daysAgo": 9.96439,
+     "90daysAgo": 9.64946
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 21.0,
+     "upLast30days": 22.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 21.0,
+     "upLast30days": 22.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 27.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 19.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 298.2200012207031
+  },
+  "CSCO": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.32184,
+     "7daysAgo": 1.32228,
+     "30daysAgo": 1.14745,
+     "60daysAgo": 1.14693,
+     "90daysAgo": 1.15693
+    },
+    "+1q": {
+     "current": 1.23112,
+     "7daysAgo": 1.23203,
+     "30daysAgo": 1.17546,
+     "60daysAgo": 1.17435,
+     "90daysAgo": 1.17465
+    },
+    "0y": {
+     "current": 5.14263,
+     "7daysAgo": 5.14455,
+     "30daysAgo": 4.79494,
+     "60daysAgo": 4.77528,
+     "90daysAgo": 4.77069
+    },
+    "+1y": {
+     "current": 5.60835,
+     "7daysAgo": 5.60226,
+     "30daysAgo": 5.28038,
+     "60daysAgo": 5.24655,
+     "90daysAgo": 5.23377
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 18.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 16.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 22.0,
+     "upLast30days": 22.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 16.0,
+     "upLast30days": 16.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 112.12999725341797
+  },
+  "ARM": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.47258,
+     "7daysAgo": 0.47189,
+     "30daysAgo": 0.47016,
+     "60daysAgo": 0.43432,
+     "90daysAgo": 0.43244
+    },
+    "+1q": {
+     "current": 0.5524,
+     "7daysAgo": 0.55213,
+     "30daysAgo": 0.55213,
+     "60daysAgo": 0.55018,
+     "90daysAgo": 0.54691
+    },
+    "0y": {
+     "current": 2.2292,
+     "7daysAgo": 2.22863,
+     "30daysAgo": 2.22634,
+     "60daysAgo": 2.17526,
+     "90daysAgo": 2.17485
+    },
+    "+1y": {
+     "current": 3.06376,
+     "7daysAgo": 3.06084,
+     "30daysAgo": 3.05823,
+     "60daysAgo": 3.08093,
+     "90daysAgo": 3.0678
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 24.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 12.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 6.0,
+     "downLast30days": 7.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 27.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 13.0
+    }
+   },
+   "close": 264.7900085449219
+  },
+  "CAT": {
+   "eps_trend": {
+    "0q": {
+     "current": 6.91717,
+     "7daysAgo": 6.91717,
+     "30daysAgo": 6.89987,
+     "60daysAgo": 6.46861,
+     "90daysAgo": 6.39441
+    },
+    "+1q": {
+     "current": 6.91633,
+     "7daysAgo": 6.91633,
+     "30daysAgo": 6.90861,
+     "60daysAgo": 6.72318,
+     "90daysAgo": 6.66888
+    },
+    "0y": {
+     "current": 27.18657,
+     "7daysAgo": 27.18657,
+     "30daysAgo": 26.93791,
+     "60daysAgo": 24.80618,
+     "90daysAgo": 24.65654
+    },
+    "+1y": {
+     "current": 32.37734,
+     "7daysAgo": 32.37734,
+     "30daysAgo": 32.00976,
+     "60daysAgo": 30.43809,
+     "90daysAgo": 30.13907
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 5.0,
+     "upLast30days": 14.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 3.0
+    },
+    "+1q": {
+     "upLast7days": 5.0,
+     "upLast30days": 14.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 3.0
+    },
+    "0y": {
+     "upLast7days": 4.0,
+     "upLast30days": 23.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 4.0,
+     "upLast30days": 25.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 818.5700073242188
+  },
+  "MA": {
+   "eps_trend": {
+    "0q": {
+     "current": 5.15122,
+     "7daysAgo": 5.15122,
+     "30daysAgo": 5.14855,
+     "60daysAgo": 5.11506,
+     "90daysAgo": 5.11376
+    },
+    "+1q": {
+     "current": 5.17032,
+     "7daysAgo": 5.17032,
+     "30daysAgo": 5.17032,
+     "60daysAgo": 5.21276,
+     "90daysAgo": 5.20804
+    },
+    "0y": {
+     "current": 19.93002,
+     "7daysAgo": 19.92584,
+     "30daysAgo": 19.91084,
+     "60daysAgo": 19.66083,
+     "90daysAgo": 19.65244
+    },
+    "+1y": {
+     "current": 23.02197,
+     "7daysAgo": 23.02581,
+     "30daysAgo": 23.00987,
+     "60daysAgo": 22.78918,
+     "90daysAgo": 22.77362
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 22.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 5.0
+    },
+    "+1q": {
+     "upLast7days": 9.0,
+     "upLast30days": 9.0,
+     "downLast7Days": 17.0,
+     "downLast30days": 18.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 33.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 5.0,
+     "upLast30days": 31.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    }
+   },
+   "close": 569.1900024414062
+  },
+  "COST": {
+   "eps_trend": {
+    "0q": {
+     "current": 6.54574,
+     "7daysAgo": 6.56475,
+     "30daysAgo": 6.55881,
+     "60daysAgo": 6.55309,
+     "90daysAgo": 6.54534
+    },
+    "+1q": {
+     "current": 4.85385,
+     "7daysAgo": 4.86562,
+     "30daysAgo": 4.86137,
+     "60daysAgo": 4.87214,
+     "90daysAgo": 4.86106
+    },
+    "0y": {
+     "current": 20.57914,
+     "7daysAgo": 20.57914,
+     "30daysAgo": 20.59016,
+     "60daysAgo": 20.58513,
+     "90daysAgo": 20.57958
+    },
+    "+1y": {
+     "current": 22.67209,
+     "7daysAgo": 22.67209,
+     "30daysAgo": 22.70401,
+     "60daysAgo": 22.67551,
+     "90daysAgo": 22.66294
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    }
+   },
+   "close": 904.77001953125
+  },
+  "BAC": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.18623,
+     "7daysAgo": 1.19623,
+     "30daysAgo": 1.19623,
+     "60daysAgo": 1.1431,
+     "90daysAgo": 1.13518
+    },
+    "+1q": {
+     "current": 1.1577,
+     "7daysAgo": 1.1602,
+     "30daysAgo": 1.1602,
+     "60daysAgo": 1.13648,
+     "90daysAgo": 1.13437
+    },
+    "0y": {
+     "current": 4.6692,
+     "7daysAgo": 4.67973,
+     "30daysAgo": 4.67973,
+     "60daysAgo": 4.51393,
+     "90daysAgo": 4.47576
+    },
+    "+1y": {
+     "current": 5.27941,
+     "7daysAgo": 5.28888,
+     "30daysAgo": 5.29151,
+     "60daysAgo": 5.09472,
+     "90daysAgo": 5.04717
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 3.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 3.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 18.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 18.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 62.689998626708984
+  },
+  "ABBV": {
+   "eps_trend": {
+    "0q": {
+     "current": 3.84425,
+     "7daysAgo": 3.84425,
+     "30daysAgo": 3.84396,
+     "60daysAgo": 3.85705,
+     "90daysAgo": 3.84598
+    },
+    "+1q": {
+     "current": 3.86769,
+     "7daysAgo": 3.8671,
+     "30daysAgo": 3.86679,
+     "60daysAgo": 4.02654,
+     "90daysAgo": 3.99015
+    },
+    "0y": {
+     "current": 14.01058,
+     "7daysAgo": 14.0106,
+     "30daysAgo": 14.00784,
+     "60daysAgo": 14.19993,
+     "90daysAgo": 14.24201
+    },
+    "+1y": {
+     "current": 16.27952,
+     "7daysAgo": 16.28202,
+     "30daysAgo": 16.27557,
+     "60daysAgo": 16.28621,
+     "90daysAgo": 16.21947
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 7.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 13.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 20.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 10.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 9.0
+    }
+   },
+   "close": 257.1199951171875
+  },
+  "GE": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.98724,
+     "7daysAgo": 1.98645,
+     "30daysAgo": 1.98645,
+     "60daysAgo": 1.90874,
+     "90daysAgo": 1.91439
+    },
+    "+1q": {
+     "current": 2.27468,
+     "7daysAgo": 2.24151,
+     "30daysAgo": 2.24151,
+     "60daysAgo": 2.23222,
+     "90daysAgo": 2.17495
+    },
+    "0y": {
+     "current": 7.9145,
+     "7daysAgo": 7.91328,
+     "30daysAgo": 7.91328,
+     "60daysAgo": 7.564,
+     "90daysAgo": 7.54832
+    },
+    "+1y": {
+     "current": 9.68876,
+     "7daysAgo": 9.71732,
+     "30daysAgo": 9.71732,
+     "60daysAgo": 9.63048,
+     "90daysAgo": 9.44231
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 12.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 21.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 9.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 323.6600036621094
+  },
+  "UNH": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.11844,
+     "7daysAgo": 4.11844,
+     "30daysAgo": 4.08244,
+     "60daysAgo": 3.73151,
+     "90daysAgo": 3.72238
+    },
+    "+1q": {
+     "current": 2.13627,
+     "7daysAgo": 2.13627,
+     "30daysAgo": 2.1721,
+     "60daysAgo": 2.59278,
+     "90daysAgo": 2.58452
+    },
+    "0y": {
+     "current": 19.81226,
+     "7daysAgo": 19.81226,
+     "30daysAgo": 19.8121,
+     "60daysAgo": 18.42102,
+     "90daysAgo": 18.38872
+    },
+    "+1y": {
+     "current": 22.43537,
+     "7daysAgo": 22.43537,
+     "30daysAgo": 22.43544,
+     "60daysAgo": 20.98349,
+     "90daysAgo": 20.90164
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 379.0899963378906
+  },
+  "MS": {
+   "eps_trend": {
+    "0q": {
+     "current": 3.16166,
+     "7daysAgo": 3.15951,
+     "30daysAgo": 3.15951,
+     "60daysAgo": 2.94583,
+     "90daysAgo": 2.89521
+    },
+    "+1q": {
+     "current": 2.94624,
+     "7daysAgo": 2.94339,
+     "30daysAgo": 2.94339,
+     "60daysAgo": 2.89601,
+     "90daysAgo": 2.81039
+    },
+    "0y": {
+     "current": 12.98155,
+     "7daysAgo": 12.97822,
+     "30daysAgo": 12.97822,
+     "60daysAgo": 12.14318,
+     "90daysAgo": 11.84139
+    },
+    "+1y": {
+     "current": 13.69212,
+     "7daysAgo": 13.64926,
+     "30daysAgo": 13.64926,
+     "60daysAgo": 13.06444,
+     "90daysAgo": 12.68604
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 2.0,
+     "upLast30days": 12.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "+1q": {
+     "upLast7days": 2.0,
+     "upLast30days": 12.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 19.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 19.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 214.3800048828125
+  },
+  "PG": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.88694,
+     "7daysAgo": 1.88694,
+     "30daysAgo": 1.88694,
+     "60daysAgo": 1.93838,
+     "90daysAgo": 1.97397
+    },
+    "+1q": {
+     "current": 1.88086,
+     "7daysAgo": 1.88086,
+     "30daysAgo": 1.88086,
+     "60daysAgo": 1.8814,
+     "90daysAgo": 1.8965
+    },
+    "0y": {
+     "current": 6.97974,
+     "7daysAgo": 6.97974,
+     "30daysAgo": 6.99447,
+     "60daysAgo": 7.04467,
+     "90daysAgo": 7.08163
+    },
+    "+1y": {
+     "current": 7.3998,
+     "7daysAgo": 7.39849,
+     "30daysAgo": 7.4101,
+     "60daysAgo": 7.46568,
+     "90daysAgo": 7.49673
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 3.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 8.0,
+     "downLast30days": 12.0
+    },
+    "+1q": {
+     "upLast7days": 2.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 5.0,
+     "downLast30days": 8.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 13.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 9.0
+    }
+   },
+   "close": 145.27000427246094
+  },
+  "CVX": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.73462,
+     "7daysAgo": 4.68436,
+     "30daysAgo": 4.56226,
+     "60daysAgo": 4.11961,
+     "90daysAgo": 4.41945
+    },
+    "+1q": {
+     "current": 4.06828,
+     "7daysAgo": 3.96782,
+     "30daysAgo": 3.89251,
+     "60daysAgo": 3.60689,
+     "90daysAgo": 3.8124
+    },
+    "0y": {
+     "current": 16.13476,
+     "7daysAgo": 15.9365,
+     "30daysAgo": 15.83142,
+     "60daysAgo": 14.07156,
+     "90daysAgo": 14.52848
+    },
+    "+1y": {
+     "current": 13.47184,
+     "7daysAgo": 13.24101,
+     "30daysAgo": 12.96696,
+     "60daysAgo": 12.54452,
+     "90daysAgo": 12.56674
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 10.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 7.0
+    },
+    "0y": {
+     "upLast7days": 3.0,
+     "upLast30days": 19.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 4.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 16.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 7.0
+    }
+   },
+   "close": 214.05999755859375
+  },
+  "KO": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.87893,
+     "7daysAgo": 0.87893,
+     "30daysAgo": 0.87688,
+     "60daysAgo": 0.87815,
+     "90daysAgo": 0.87866
+    },
+    "+1q": {
+     "current": 0.59561,
+     "7daysAgo": 0.59561,
+     "30daysAgo": 0.59568,
+     "60daysAgo": 0.59619,
+     "90daysAgo": 0.59596
+    },
+    "0y": {
+     "current": 3.30148,
+     "7daysAgo": 3.30148,
+     "30daysAgo": 3.30143,
+     "60daysAgo": 3.26737,
+     "90daysAgo": 3.26595
+    },
+    "+1y": {
+     "current": 3.52638,
+     "7daysAgo": 3.52638,
+     "30daysAgo": 3.52642,
+     "60daysAgo": 3.48348,
+     "90daysAgo": 3.48363
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 8.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 5.0,
+     "downLast30days": 6.0
+    },
+    "+1q": {
+     "upLast7days": 8.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 8.0,
+     "downLast30days": 8.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 21.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 20.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 88.29000091552734
+  },
+  "KLAC": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.17852,
+     "7daysAgo": 1.17852,
+     "30daysAgo": 1.17852,
+     "60daysAgo": 1.13337,
+     "90daysAgo": 1.1297
+    },
+    "+1q": {
+     "current": 1.36058,
+     "7daysAgo": 1.36058,
+     "30daysAgo": 1.36058,
+     "60daysAgo": 1.29393,
+     "90daysAgo": 1.28544
+    },
+    "0y": {
+     "current": 5.4548,
+     "7daysAgo": 5.45272,
+     "30daysAgo": 5.4484,
+     "60daysAgo": 5.16894,
+     "90daysAgo": 5.08593
+    },
+    "+1y": {
+     "current": 6.70539,
+     "7daysAgo": 6.68948,
+     "30daysAgo": 6.57232,
+     "60daysAgo": 6.23568,
+     "90daysAgo": 5.96566
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 18.0,
+     "upLast30days": 20.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 18.0,
+     "upLast30days": 19.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 22.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    }
+   },
+   "close": 180.63999938964844
+  },
+  "HD": {
+   "eps_trend": {
+    "0q": {
+     "current": 3.8402,
+     "7daysAgo": 3.8402,
+     "30daysAgo": 3.95843,
+     "60daysAgo": 3.95576,
+     "90daysAgo": 3.95806
+    },
+    "+1q": {
+     "current": 2.83477,
+     "7daysAgo": 2.83477,
+     "30daysAgo": 2.85107,
+     "60daysAgo": 2.84841,
+     "90daysAgo": 2.85079
+    },
+    "0y": {
+     "current": 15.02198,
+     "7daysAgo": 15.02198,
+     "30daysAgo": 14.96413,
+     "60daysAgo": 14.95531,
+     "90daysAgo": 14.96387
+    },
+    "+1y": {
+     "current": 16.0248,
+     "7daysAgo": 16.03774,
+     "30daysAgo": 16.11542,
+     "60daysAgo": 16.09225,
+     "90daysAgo": 16.1071
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 27.0,
+     "downLast30days": 28.0
+    },
+    "+1q": {
+     "upLast7days": 11.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 17.0,
+     "downLast30days": 17.0
+    },
+    "0y": {
+     "upLast7days": 21.0,
+     "upLast30days": 21.0,
+     "downLast7Days": 5.0,
+     "downLast30days": 7.0
+    },
+    "+1y": {
+     "upLast7days": 12.0,
+     "upLast30days": 12.0,
+     "downLast7Days": 15.0,
+     "downLast30days": 17.0
+    }
+   },
+   "close": 308.739990234375
+  },
+  "NFLX": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.82233,
+     "7daysAgo": 0.82233,
+     "30daysAgo": 0.82089,
+     "60daysAgo": 0.84225,
+     "90daysAgo": 0.84225
+    },
+    "+1q": {
+     "current": 0.72954,
+     "7daysAgo": 0.72953,
+     "30daysAgo": 0.72859,
+     "60daysAgo": 0.73705,
+     "90daysAgo": 0.73705
+    },
+    "0y": {
+     "current": 3.58437,
+     "7daysAgo": 3.58322,
+     "30daysAgo": 3.57977,
+     "60daysAgo": 3.59207,
+     "90daysAgo": 3.59232
+    },
+    "+1y": {
+     "current": 3.81626,
+     "7daysAgo": 3.81213,
+     "30daysAgo": 3.80894,
+     "60daysAgo": 3.82672,
+     "90daysAgo": 3.82874
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 4.0
+    }
+   },
+   "close": 77.4000015258789
+  },
+  "SNDK": {
+   "eps_trend": {
+    "0q": {
+     "current": 46.20664,
+     "7daysAgo": 46.11973,
+     "30daysAgo": 43.8017,
+     "60daysAgo": 41.93733,
+     "90daysAgo": 40.35483
+    },
+    "+1q": {
+     "current": 52.77736,
+     "7daysAgo": 52.26864,
+     "30daysAgo": 52.46227,
+     "60daysAgo": 49.27102,
+     "90daysAgo": 45.76539
+    },
+    "0y": {
+     "current": 214.09818,
+     "7daysAgo": 214.09818,
+     "30daysAgo": 212.94582,
+     "60daysAgo": 204.4716,
+     "90daysAgo": 183.93571
+    },
+    "+1y": {
+     "current": 264.72162,
+     "7daysAgo": 265.12222,
+     "30daysAgo": 248.42166,
+     "60daysAgo": 198.29776,
+     "90daysAgo": 182.88686
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 9.0,
+     "upLast30days": 10.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 3.0
+    },
+    "+1q": {
+     "upLast7days": 2.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 7.0
+    },
+    "0y": {
+     "upLast7days": 3.0,
+     "upLast30days": 12.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 7.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 4.0
+    }
+   },
+   "close": 1633.3499755859375
+  },
+  "GS": {
+   "eps_trend": {
+    "0q": {
+     "current": 16.42568,
+     "7daysAgo": 16.32139,
+     "30daysAgo": 14.08793,
+     "60daysAgo": 13.80323,
+     "90daysAgo": 13.8584
+    },
+    "+1q": {
+     "current": 15.65999,
+     "7daysAgo": 15.60063,
+     "30daysAgo": 14.35344,
+     "60daysAgo": 14.13109,
+     "90daysAgo": 14.11862
+    },
+    "0y": {
+     "current": 70.76699,
+     "7daysAgo": 70.76699,
+     "30daysAgo": 60.68191,
+     "60daysAgo": 59.48599,
+     "90daysAgo": 59.36404
+    },
+    "+1y": {
+     "current": 74.16988,
+     "7daysAgo": 74.16988,
+     "30daysAgo": 67.00524,
+     "60daysAgo": 65.57191,
+     "90daysAgo": 65.39889
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 16.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 21.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 21.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 1029.1800537109375
+  },
+  "PLTR": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.41452,
+     "7daysAgo": 0.41452,
+     "30daysAgo": 0.372,
+     "60daysAgo": 0.37208,
+     "90daysAgo": 0.36991
+    },
+    "+1q": {
+     "current": 0.4645,
+     "7daysAgo": 0.4645,
+     "30daysAgo": 0.4197,
+     "60daysAgo": 0.41882,
+     "90daysAgo": 0.41838
+    },
+    "0y": {
+     "current": 1.60858,
+     "7daysAgo": 1.60272,
+     "30daysAgo": 1.59479,
+     "60daysAgo": 1.47608,
+     "90daysAgo": 1.46358
+    },
+    "+1y": {
+     "current": 2.32597,
+     "7daysAgo": 2.31424,
+     "30daysAgo": 2.29976,
+     "60daysAgo": 2.09448,
+     "90daysAgo": 2.07428
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 2.0,
+     "upLast30days": 22.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 2.0,
+     "upLast30days": 20.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 4.0,
+     "upLast30days": 25.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 4.0,
+     "upLast30days": 26.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 167.22999572753906
+  },
+  "GEV": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.17027,
+     "7daysAgo": 4.25692,
+     "30daysAgo": 4.20358,
+     "60daysAgo": 4.37063,
+     "90daysAgo": 4.34746
+    },
+    "+1q": {
+     "current": 6.43708,
+     "7daysAgo": 6.53261,
+     "30daysAgo": 6.33061,
+     "60daysAgo": 6.09516,
+     "90daysAgo": 6.14974
+    },
+    "0y": {
+     "current": 30.74053,
+     "7daysAgo": 30.74053,
+     "30daysAgo": 30.84764,
+     "60daysAgo": 30.79868,
+     "90daysAgo": 31.05558
+    },
+    "+1y": {
+     "current": 24.80106,
+     "7daysAgo": 24.68591,
+     "30daysAgo": 24.8507,
+     "60daysAgo": 24.394,
+     "90daysAgo": 24.25654
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 2.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 2.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 2.0
+    }
+   },
+   "close": 957.27001953125
+  },
+  "TXN": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.41539,
+     "7daysAgo": 2.15973,
+     "30daysAgo": 2.12382,
+     "60daysAgo": 2.12382,
+     "90daysAgo": 2.12382
+    },
+    "+1q": {
+     "current": 2.27793,
+     "7daysAgo": 2.03887,
+     "30daysAgo": 1.99959,
+     "60daysAgo": 1.99959,
+     "90daysAgo": 1.9922
+    },
+    "0y": {
+     "current": 8.5058,
+     "7daysAgo": 8.50003,
+     "30daysAgo": 8.49941,
+     "60daysAgo": 7.68001,
+     "90daysAgo": 7.68415
+    },
+    "+1y": {
+     "current": 10.1005,
+     "7daysAgo": 10.03407,
+     "30daysAgo": 10.03249,
+     "60daysAgo": 8.89054,
+     "90daysAgo": 8.88838
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 20.0,
+     "upLast30days": 24.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 21.0,
+     "upLast30days": 24.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 24.0,
+     "upLast30days": 25.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 22.0,
+     "upLast30days": 23.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 268.70001220703125
+  },
+  "MRK": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.21073,
+     "7daysAgo": 2.21014,
+     "30daysAgo": 2.21767,
+     "60daysAgo": 2.30176,
+     "90daysAgo": 2.30704
+    },
+    "+1q": {
+     "current": 1.95469,
+     "7daysAgo": 1.95763,
+     "30daysAgo": 1.95369,
+     "60daysAgo": 1.94133,
+     "90daysAgo": 1.85884
+    },
+    "0y": {
+     "current": 2.74515,
+     "7daysAgo": 2.7474,
+     "30daysAgo": 2.74634,
+     "60daysAgo": 2.70738,
+     "90daysAgo": 2.73657
+    },
+    "+1y": {
+     "current": 9.55054,
+     "7daysAgo": 9.54286,
+     "30daysAgo": 9.55471,
+     "60daysAgo": 9.60715,
+     "90daysAgo": 9.56394
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 9.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 8.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 4.0
+    },
+    "+1y": {
+     "upLast7days": 4.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 4.0,
+     "downLast30days": 10.0
+    }
+   },
+   "close": 143.92999267578125
+  },
+  "PM": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.32302,
+     "7daysAgo": 2.24951,
+     "30daysAgo": 2.24951,
+     "60daysAgo": 2.43062,
+     "90daysAgo": 2.43236
+    },
+    "+1q": {
+     "current": 1.95654,
+     "7daysAgo": 1.95632,
+     "30daysAgo": 1.95632,
+     "60daysAgo": 1.98218,
+     "90daysAgo": 1.99588
+    },
+    "0y": {
+     "current": 8.3846,
+     "7daysAgo": 8.38096,
+     "30daysAgo": 8.38096,
+     "60daysAgo": 8.40663,
+     "90daysAgo": 8.41847
+    },
+    "+1y": {
+     "current": 9.1667,
+     "7daysAgo": 9.16878,
+     "30daysAgo": 9.16878,
+     "60daysAgo": 9.12256,
+     "90daysAgo": 9.12866
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 8.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 5.0
+    },
+    "0y": {
+     "upLast7days": 3.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 4.0,
+     "downLast30days": 9.0
+    },
+    "+1y": {
+     "upLast7days": 4.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 5.0,
+     "downLast30days": 7.0
+    }
+   },
+   "close": 191.05999755859375
+  },
+  "MRVL": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.10038,
+     "7daysAgo": 1.10101,
+     "30daysAgo": 1.07276,
+     "60daysAgo": 1.073,
+     "90daysAgo": 1.072
+    },
+    "+1q": {
+     "current": 1.35622,
+     "7daysAgo": 1.35513,
+     "30daysAgo": 1.23933,
+     "60daysAgo": 1.23735,
+     "90daysAgo": 1.23569
+    },
+    "0y": {
+     "current": 4.20156,
+     "7daysAgo": 4.19737,
+     "30daysAgo": 4.05553,
+     "60daysAgo": 4.0558,
+     "90daysAgo": 4.05391
+    },
+    "+1y": {
+     "current": 6.71985,
+     "7daysAgo": 6.71585,
+     "30daysAgo": 6.24094,
+     "60daysAgo": 6.17792,
+     "90daysAgo": 6.17263
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 23.0,
+     "upLast30days": 23.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 27.0,
+     "upLast30days": 26.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 29.0,
+     "upLast30days": 29.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 28.0,
+     "upLast30days": 28.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 236.10000610351562
+  },
+  "DELL": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.91833,
+     "7daysAgo": 4.90501,
+     "30daysAgo": 4.90022,
+     "60daysAgo": 4.89104,
+     "90daysAgo": 4.87972
+    },
+    "+1q": {
+     "current": 6.87486,
+     "7daysAgo": 4.0475,
+     "30daysAgo": 3.925,
+     "60daysAgo": 3.8475,
+     "90daysAgo": 3.8475
+    },
+    "0y": {
+     "current": 25.88376,
+     "7daysAgo": 25.88306,
+     "30daysAgo": 18.53612,
+     "60daysAgo": 18.38601,
+     "90daysAgo": 18.35084
+    },
+    "+1y": {
+     "current": 24.66365,
+     "7daysAgo": 20.15625,
+     "30daysAgo": 19.4275,
+     "60daysAgo": 18.3525,
+     "90daysAgo": 18.3525
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 3.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 2.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 4.0,
+     "upLast30days": 8.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 567.2899780273438
+  },
+  "WDC": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.0424,
+     "7daysAgo": 3.77727,
+     "30daysAgo": 3.70829,
+     "60daysAgo": 3.63707,
+     "90daysAgo": 3.59048
+    },
+    "+1q": {
+     "current": 4.67158,
+     "7daysAgo": 4.38966,
+     "30daysAgo": 4.23439,
+     "60daysAgo": 4.11047,
+     "90daysAgo": 3.99139
+    },
+    "0y": {
+     "current": 20.09143,
+     "7daysAgo": 20.09143,
+     "30daysAgo": 18.45008,
+     "60daysAgo": 17.77023,
+     "90daysAgo": 17.25403
+    },
+    "+1y": {
+     "current": 31.74953,
+     "7daysAgo": 31.89898,
+     "30daysAgo": 27.14774,
+     "60daysAgo": 25.02706,
+     "90daysAgo": 24.58101
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 9.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 8.0,
+     "upLast30days": 12.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 13.0,
+     "upLast30days": 16.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 8.0,
+     "upLast30days": 10.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 447.17999267578125
+  },
+  "WFC": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.84013,
+     "7daysAgo": 1.84119,
+     "30daysAgo": 1.84118,
+     "60daysAgo": 1.81773,
+     "90daysAgo": 1.80896
+    },
+    "+1q": {
+     "current": 1.85938,
+     "7daysAgo": 1.85938,
+     "30daysAgo": 1.85937,
+     "60daysAgo": 1.87917,
+     "90daysAgo": 1.88142
+    },
+    "0y": {
+     "current": 7.30505,
+     "7daysAgo": 7.30558,
+     "30daysAgo": 7.30556,
+     "60daysAgo": 7.01352,
+     "90daysAgo": 6.99265
+    },
+    "+1y": {
+     "current": 7.9594,
+     "7daysAgo": 7.96463,
+     "30daysAgo": 7.96397,
+     "60daysAgo": 7.91638,
+     "90daysAgo": 7.88923
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 90.29000091552734
+  },
+  "RTX": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.76732,
+     "7daysAgo": 1.76565,
+     "30daysAgo": 1.73017,
+     "60daysAgo": 1.72792,
+     "90daysAgo": 1.72903
+    },
+    "+1q": {
+     "current": 1.82618,
+     "7daysAgo": 1.8234,
+     "30daysAgo": 1.78426,
+     "60daysAgo": 1.77505,
+     "90daysAgo": 1.77838
+    },
+    "0y": {
+     "current": 7.24276,
+     "7daysAgo": 7.24276,
+     "30daysAgo": 7.1863,
+     "60daysAgo": 6.9139,
+     "90daysAgo": 6.9004
+    },
+    "+1y": {
+     "current": 7.85586,
+     "7daysAgo": 7.85586,
+     "30daysAgo": 7.81259,
+     "60daysAgo": 7.57957,
+     "90daysAgo": 7.55819
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 23.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 23.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 197.67999267578125
+  },
+  "C": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.61949,
+     "7daysAgo": 2.62283,
+     "30daysAgo": 2.62283,
+     "60daysAgo": 2.68858,
+     "90daysAgo": 2.65241
+    },
+    "+1q": {
+     "current": 2.33211,
+     "7daysAgo": 2.32989,
+     "30daysAgo": 2.32989,
+     "60daysAgo": 2.46135,
+     "90daysAgo": 2.49986
+    },
+    "0y": {
+     "current": 11.15454,
+     "7daysAgo": 11.15454,
+     "30daysAgo": 11.15454,
+     "60daysAgo": 10.92807,
+     "90daysAgo": 10.80456
+    },
+    "+1y": {
+     "current": 12.88329,
+     "7daysAgo": 12.88329,
+     "30daysAgo": 12.88329,
+     "60daysAgo": 12.62167,
+     "90daysAgo": 12.5293
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 6.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 8.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 8.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 138.82000732421875
+  },
+  "STX": {
+   "eps_trend": {
+    "0q": {
+     "current": 7.34882,
+     "7daysAgo": 7.34882,
+     "30daysAgo": 5.75413,
+     "60daysAgo": 5.6448,
+     "90daysAgo": 5.55651
+    },
+    "+1q": {
+     "current": 8.38022,
+     "7daysAgo": 8.38022,
+     "30daysAgo": 6.55145,
+     "60daysAgo": 6.33869,
+     "90daysAgo": 6.17175
+    },
+    "0y": {
+     "current": 35.78091,
+     "7daysAgo": 35.78091,
+     "30daysAgo": 35.78091,
+     "60daysAgo": 27.44776,
+     "90daysAgo": 26.58326
+    },
+    "+1y": {
+     "current": 55.3714,
+     "7daysAgo": 55.3714,
+     "30daysAgo": 43.44371,
+     "60daysAgo": 40.87729,
+     "90daysAgo": 38.91701
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 15.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 14.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 20.0,
+     "upLast30days": 20.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 15.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 830.1699829101562
+  },
+  "QCOM": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.1566,
+     "7daysAgo": 2.15586,
+     "30daysAgo": 2.1666,
+     "60daysAgo": 2.3761,
+     "90daysAgo": 2.35134
+    },
+    "+1q": {
+     "current": 2.29658,
+     "7daysAgo": 2.29732,
+     "30daysAgo": 2.32584,
+     "60daysAgo": 2.68354,
+     "90daysAgo": 2.67046
+    },
+    "0y": {
+     "current": 10.52469,
+     "7daysAgo": 10.52302,
+     "30daysAgo": 10.53003,
+     "60daysAgo": 10.80199,
+     "90daysAgo": 10.80011
+    },
+    "+1y": {
+     "current": 10.19871,
+     "7daysAgo": 10.20195,
+     "30daysAgo": 10.26489,
+     "60daysAgo": 11.00662,
+     "90daysAgo": 10.66716
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 24.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 23.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 27.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 27.0
+    }
+   },
+   "close": 181.97000122070312
+  },
+  "LIN": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.0,
+     "7daysAgo": 0.0,
+     "30daysAgo": 0.0,
+     "60daysAgo": 4.61,
+     "90daysAgo": 4.61
+    },
+    "+1q": {
+     "current": 4.3,
+     "7daysAgo": 4.23052,
+     "30daysAgo": 4.20552,
+     "60daysAgo": 4.23578,
+     "90daysAgo": 4.23578
+    },
+    "0y": {
+     "current": 0.0,
+     "7daysAgo": 0.0,
+     "30daysAgo": 0.0,
+     "60daysAgo": 17.95,
+     "90daysAgo": 17.95
+    },
+    "+1y": {
+     "current": 18.14542,
+     "7daysAgo": 18.24765,
+     "30daysAgo": 18.32107,
+     "60daysAgo": 18.31276,
+     "90daysAgo": 18.30688
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 13.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 14.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 4.0
+    }
+   },
+   "close": 466.2200012207031
+  },
+  "PANW": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.9715,
+     "7daysAgo": 0.97134,
+     "30daysAgo": 0.93781,
+     "60daysAgo": 0.93775,
+     "90daysAgo": 0.93644
+    },
+    "+1q": {
+     "current": 1.00747,
+     "7daysAgo": 1.00758,
+     "30daysAgo": 0.99736,
+     "60daysAgo": 0.99756,
+     "90daysAgo": 0.99756
+    },
+    "0y": {
+     "current": 3.78161,
+     "7daysAgo": 3.77535,
+     "30daysAgo": 3.77344,
+     "60daysAgo": 3.77292,
+     "90daysAgo": 3.69117
+    },
+    "+1y": {
+     "current": 2.21057,
+     "7daysAgo": 2.27939,
+     "30daysAgo": 2.27858,
+     "60daysAgo": 2.28608,
+     "90daysAgo": 2.34176
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 6.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 2.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 2.0
+    }
+   },
+   "close": 330.6499938964844
+  },
+  "IBM": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.88811,
+     "7daysAgo": 2.88811,
+     "30daysAgo": 2.88811,
+     "60daysAgo": 2.94471,
+     "90daysAgo": 2.9336
+    },
+    "+1q": {
+     "current": 4.60169,
+     "7daysAgo": 4.60169,
+     "30daysAgo": 4.60169,
+     "60daysAgo": 4.56437,
+     "90daysAgo": 4.56826
+    },
+    "0y": {
+     "current": 12.32077,
+     "7daysAgo": 12.32077,
+     "30daysAgo": 12.3266,
+     "60daysAgo": 12.46778,
+     "90daysAgo": 12.4254
+    },
+    "+1y": {
+     "current": 13.16241,
+     "7daysAgo": 13.16241,
+     "30daysAgo": 13.17491,
+     "60daysAgo": 13.46863,
+     "90daysAgo": 13.42266
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 6.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 7.0,
+     "downLast30days": 9.0
+    },
+    "+1q": {
+     "upLast7days": 12.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 8.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 10.0
+    }
+   },
+   "close": 243.2899932861328
+  },
+  "AXP": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.60595,
+     "7daysAgo": 4.59222,
+     "30daysAgo": 4.58823,
+     "60daysAgo": 4.68985,
+     "90daysAgo": 4.6801
+    },
+    "+1q": {
+     "current": 4.28292,
+     "7daysAgo": 4.28596,
+     "30daysAgo": 4.28551,
+     "60daysAgo": 4.35618,
+     "90daysAgo": 4.36758
+    },
+    "0y": {
+     "current": 17.68032,
+     "7daysAgo": 17.6721,
+     "30daysAgo": 17.67638,
+     "60daysAgo": 17.71353,
+     "90daysAgo": 17.69083
+    },
+    "+1y": {
+     "current": 20.14886,
+     "7daysAgo": 20.10854,
+     "30daysAgo": 20.1089,
+     "60daysAgo": 20.15313,
+     "90daysAgo": 20.13297
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 17.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 14.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 8.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 15.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 9.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 14.0
+    }
+   },
+   "close": 324.69000244140625
+  },
+  "ANET": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.07656,
+     "7daysAgo": 1.07656,
+     "30daysAgo": 1.07679,
+     "60daysAgo": 0.91297,
+     "90daysAgo": 0.9131
+    },
+    "+1q": {
+     "current": 1.148,
+     "7daysAgo": 1.148,
+     "30daysAgo": 1.14825,
+     "60daysAgo": 0.96653,
+     "90daysAgo": 0.96669
+    },
+    "0y": {
+     "current": 4.11262,
+     "7daysAgo": 4.11262,
+     "30daysAgo": 4.11295,
+     "60daysAgo": 3.62724,
+     "90daysAgo": 3.62941
+    },
+    "+1y": {
+     "current": 5.16028,
+     "7daysAgo": 5.16028,
+     "30daysAgo": 5.15956,
+     "60daysAgo": 4.45434,
+     "90daysAgo": 4.44965
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 23.0,
+     "upLast30days": 23.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 23.0,
+     "upLast30days": 23.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 26.0,
+     "upLast30days": 26.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 26.0,
+     "upLast30days": 26.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 199.58999633789062
+  },
+  "ADI": {
+   "eps_trend": {
+    "0q": {
+     "current": 3.84965,
+     "7daysAgo": 3.84965,
+     "30daysAgo": 3.53773,
+     "60daysAgo": 3.49273,
+     "90daysAgo": 3.49182
+    },
+    "+1q": {
+     "current": 3.79254,
+     "7daysAgo": 3.46398,
+     "30daysAgo": 3.46398,
+     "60daysAgo": 3.41423,
+     "90daysAgo": 3.41423
+    },
+    "0y": {
+     "current": 12.84498,
+     "7daysAgo": 12.84498,
+     "30daysAgo": 12.43447,
+     "60daysAgo": 12.37093,
+     "90daysAgo": 12.33983
+    },
+    "+1y": {
+     "current": 16.33678,
+     "7daysAgo": 16.33678,
+     "30daysAgo": 15.06237,
+     "60daysAgo": 14.79773,
+     "90daysAgo": 14.77333
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 21.0,
+     "upLast30days": 21.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 21.0,
+     "upLast30days": 21.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 23.0,
+     "upLast30days": 23.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 23.0,
+     "upLast30days": 23.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 378.7799987792969
+  },
+  "APH": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.72142,
+     "7daysAgo": 0.71883,
+     "30daysAgo": 0.71837,
+     "60daysAgo": 0.63213,
+     "90daysAgo": 0.62884
+    },
+    "+1q": {
+     "current": 0.73977,
+     "7daysAgo": 0.73571,
+     "30daysAgo": 0.73533,
+     "60daysAgo": 0.65269,
+     "90daysAgo": 0.64865
+    },
+    "0y": {
+     "current": 2.66836,
+     "7daysAgo": 2.65831,
+     "30daysAgo": 2.65839,
+     "60daysAgo": 2.41578,
+     "90daysAgo": 2.40812
+    },
+    "+1y": {
+     "current": 3.27383,
+     "7daysAgo": 3.23869,
+     "30daysAgo": 3.22396,
+     "60daysAgo": 2.86785,
+     "90daysAgo": 2.843
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 83.91999816894531
+  },
+  "MCD": {
+   "eps_trend": {
+    "0q": {
+     "current": 3.40226,
+     "7daysAgo": 3.40312,
+     "30daysAgo": 3.42322,
+     "60daysAgo": 3.45181,
+     "90daysAgo": 3.4534
+    },
+    "+1q": {
+     "current": 3.30335,
+     "7daysAgo": 3.30348,
+     "30daysAgo": 3.33917,
+     "60daysAgo": 3.36717,
+     "90daysAgo": 3.36449
+    },
+    "0y": {
+     "current": 12.92878,
+     "7daysAgo": 12.93007,
+     "30daysAgo": 12.9284,
+     "60daysAgo": 12.97571,
+     "90daysAgo": 12.98565
+    },
+    "+1y": {
+     "current": 13.97841,
+     "7daysAgo": 13.98023,
+     "30daysAgo": 13.9943,
+     "60daysAgo": 14.21196,
+     "90daysAgo": 14.21973
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 8.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 16.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 20.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 14.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 13.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 26.0
+    }
+   },
+   "close": 252.52999877929688
+  },
+  "TMUS": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.9015,
+     "7daysAgo": 2.90759,
+     "30daysAgo": 2.87715,
+     "60daysAgo": 2.87768,
+     "90daysAgo": 2.886
+    },
+    "+1q": {
+     "current": 2.76657,
+     "7daysAgo": 2.72177,
+     "30daysAgo": 2.67743,
+     "60daysAgo": 2.68089,
+     "90daysAgo": 2.61694
+    },
+    "0y": {
+     "current": 10.94575,
+     "7daysAgo": 10.94575,
+     "30daysAgo": 10.94575,
+     "60daysAgo": 10.42715,
+     "90daysAgo": 10.45423
+    },
+    "+1y": {
+     "current": 13.89549,
+     "7daysAgo": 13.89549,
+     "30daysAgo": 13.89549,
+     "60daysAgo": 13.52205,
+     "90daysAgo": 13.49961
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 6.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 8.0,
+     "downLast30days": 9.0
+    },
+    "+1q": {
+     "upLast7days": 9.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 5.0,
+     "downLast30days": 6.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 18.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 6.0
+    }
+   },
+   "close": 182.3300018310547
+  },
+  "PEP": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.29973,
+     "7daysAgo": 2.29973,
+     "30daysAgo": 2.29973,
+     "60daysAgo": 2.43162,
+     "90daysAgo": 2.44265
+    },
+    "+1q": {
+     "current": 2.43651,
+     "7daysAgo": 2.43651,
+     "30daysAgo": 2.43651,
+     "60daysAgo": 2.40059,
+     "90daysAgo": 2.41404
+    },
+    "0y": {
+     "current": 8.55981,
+     "7daysAgo": 8.55981,
+     "30daysAgo": 8.55981,
+     "60daysAgo": 8.63882,
+     "90daysAgo": 8.66028
+    },
+    "+1y": {
+     "current": 8.97539,
+     "7daysAgo": 8.97844,
+     "30daysAgo": 8.97844,
+     "60daysAgo": 9.08481,
+     "90daysAgo": 9.14746
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 15.0,
+     "downLast30days": 15.0
+    },
+    "+1q": {
+     "upLast7days": 12.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 3.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 16.0,
+     "downLast30days": 18.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 19.0,
+     "downLast30days": 19.0
+    }
+   },
+   "close": 136.32000732421875
+  },
+  "VZ": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.28333,
+     "7daysAgo": 1.28314,
+     "30daysAgo": 1.28508,
+     "60daysAgo": 1.29248,
+     "90daysAgo": 1.29264
+    },
+    "+1q": {
+     "current": 1.14776,
+     "7daysAgo": 1.1479,
+     "30daysAgo": 1.14685,
+     "60daysAgo": 1.11889,
+     "90daysAgo": 1.13058
+    },
+    "0y": {
+     "current": 5.01171,
+     "7daysAgo": 5.01203,
+     "30daysAgo": 5.02645,
+     "60daysAgo": 4.94822,
+     "90daysAgo": 4.97177
+    },
+    "+1y": {
+     "current": 5.27968,
+     "7daysAgo": 5.28049,
+     "30daysAgo": 5.27369,
+     "60daysAgo": 5.26644,
+     "90daysAgo": 5.27379
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 4.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 9.0,
+     "downLast30days": 9.0
+    },
+    "+1q": {
+     "upLast7days": 10.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 2.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 22.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 8.0
+    }
+   },
+   "close": 50.61000061035156
+  },
+  "AMGN": {
+   "eps_trend": {
+    "0q": {
+     "current": 5.78099,
+     "7daysAgo": 5.78099,
+     "30daysAgo": 5.80953,
+     "60daysAgo": 5.752,
+     "90daysAgo": 5.76005
+    },
+    "+1q": {
+     "current": 5.80226,
+     "7daysAgo": 5.80226,
+     "30daysAgo": 5.828,
+     "60daysAgo": 5.80723,
+     "90daysAgo": 5.87798
+    },
+    "0y": {
+     "current": 23.04171,
+     "7daysAgo": 23.04146,
+     "30daysAgo": 23.00617,
+     "60daysAgo": 22.34735,
+     "90daysAgo": 22.40688
+    },
+    "+1y": {
+     "current": 24.40275,
+     "7daysAgo": 24.39753,
+     "30daysAgo": 24.22065,
+     "60daysAgo": 23.45183,
+     "90daysAgo": 23.4771
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 10.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 12.0
+    },
+    "0y": {
+     "upLast7days": 3.0,
+     "upLast30days": 32.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 6.0,
+     "upLast30days": 28.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 2.0
+    }
+   },
+   "close": 377.3500061035156
+  },
+  "TJX": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.36078,
+     "7daysAgo": 1.36463,
+     "30daysAgo": 1.34141,
+     "60daysAgo": 1.34102,
+     "90daysAgo": 1.34102
+    },
+    "+1q": {
+     "current": 1.48253,
+     "7daysAgo": 1.48654,
+     "30daysAgo": 1.49909,
+     "60daysAgo": 1.49933,
+     "90daysAgo": 1.49933
+    },
+    "0y": {
+     "current": 5.32944,
+     "7daysAgo": 5.31876,
+     "30daysAgo": 5.23155,
+     "60daysAgo": 5.2241,
+     "90daysAgo": 5.2241
+    },
+    "+1y": {
+     "current": 5.79442,
+     "7daysAgo": 5.78411,
+     "30daysAgo": 5.74063,
+     "60daysAgo": 5.73531,
+     "90daysAgo": 5.73531
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 3.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 3.0
+    },
+    "+1q": {
+     "upLast7days": 2.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 6.0,
+     "downLast30days": 6.0
+    },
+    "0y": {
+     "upLast7days": 4.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 126.0199966430664
+  },
+  "NEE": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.1822,
+     "7daysAgo": 1.21492,
+     "30daysAgo": 1.22329,
+     "60daysAgo": 1.20665,
+     "90daysAgo": 1.20332
+    },
+    "+1q": {
+     "current": 0.62337,
+     "7daysAgo": 0.65519,
+     "30daysAgo": 0.65591,
+     "60daysAgo": 0.68897,
+     "90daysAgo": 0.70231
+    },
+    "0y": {
+     "current": 4.04804,
+     "7daysAgo": 4.05004,
+     "30daysAgo": 4.04,
+     "60daysAgo": 4.03629,
+     "90daysAgo": 4.02294
+    },
+    "+1y": {
+     "current": 4.38861,
+     "7daysAgo": 4.41589,
+     "30daysAgo": 4.40304,
+     "60daysAgo": 4.40061,
+     "90daysAgo": 4.39655
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 4.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 3.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 2.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 3.0
+    }
+   },
+   "close": 82.30999755859375
+  },
+  "DIS": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.68229,
+     "7daysAgo": 1.67138,
+     "30daysAgo": 1.76513,
+     "60daysAgo": 1.78395,
+     "90daysAgo": 1.75971
+    },
+    "+1q": {
+     "current": 1.89346,
+     "7daysAgo": 1.86846,
+     "30daysAgo": 1.91972,
+     "60daysAgo": 1.9297,
+     "90daysAgo": 1.97591
+    },
+    "0y": {
+     "current": 6.90849,
+     "7daysAgo": 6.89406,
+     "30daysAgo": 6.80726,
+     "60daysAgo": 6.82656,
+     "90daysAgo": 6.81655
+    },
+    "+1y": {
+     "current": 7.47471,
+     "7daysAgo": 7.44386,
+     "30daysAgo": 7.45755,
+     "60daysAgo": 7.48795,
+     "90daysAgo": 7.4945
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 2.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 16.0
+    },
+    "+1q": {
+     "upLast7days": 2.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 6.0,
+     "downLast30days": 6.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 21.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 10.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 13.0
+    }
+   },
+   "close": 106.55000305175781
+  },
+  "BA": {
+   "eps_trend": {
+    "0q": {
+     "current": -0.144,
+     "7daysAgo": -0.144,
+     "30daysAgo": -0.1425,
+     "60daysAgo": -0.09108,
+     "90daysAgo": -0.0925
+    },
+    "+1q": {
+     "current": 0.0089,
+     "7daysAgo": 0.01311,
+     "30daysAgo": 0.01311,
+     "60daysAgo": 0.08023,
+     "90daysAgo": 0.05218
+    },
+    "0y": {
+     "current": -1.07836,
+     "7daysAgo": -1.07518,
+     "30daysAgo": -1.07685,
+     "60daysAgo": -0.38562,
+     "90daysAgo": -0.41784
+    },
+    "+1y": {
+     "current": 4.09038,
+     "7daysAgo": 4.12084,
+     "30daysAgo": 4.13402,
+     "60daysAgo": 4.16109,
+     "90daysAgo": 4.15054
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 4.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 11.0,
+     "downLast30days": 13.0
+    },
+    "+1q": {
+     "upLast7days": 7.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 7.0,
+     "downLast30days": 10.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 18.0
+    },
+    "+1y": {
+     "upLast7days": 4.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 11.0
+    }
+   },
+   "close": 210.4499969482422
+  },
+  "CRWD": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.31112,
+     "7daysAgo": 0.31111,
+     "30daysAgo": 0.31017,
+     "60daysAgo": 0.31029,
+     "90daysAgo": 0.31012
+    },
+    "+1q": {
+     "current": 0.35636,
+     "7daysAgo": 0.35636,
+     "30daysAgo": 0.35311,
+     "60daysAgo": 0.35324,
+     "90daysAgo": 0.35249
+    },
+    "0y": {
+     "current": 1.25621,
+     "7daysAgo": 1.30768,
+     "30daysAgo": 1.28061,
+     "60daysAgo": 1.27798,
+     "90daysAgo": 1.27917
+    },
+    "+1y": {
+     "current": 1.6045,
+     "7daysAgo": 1.65475,
+     "30daysAgo": 1.62737,
+     "60daysAgo": 1.62765,
+     "90daysAgo": 1.62584
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 11.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 9.0,
+     "downLast30days": 11.0
+    },
+    "+1q": {
+     "upLast7days": 23.0,
+     "upLast30days": 25.0,
+     "downLast7Days": 8.0,
+     "downLast30days": 10.0
+    },
+    "0y": {
+     "upLast7days": 45.0,
+     "upLast30days": 45.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 38.0,
+     "upLast30days": 40.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 3.0
+    }
+   },
+   "close": 206.74000549316406
+  },
+  "TMO": {
+   "eps_trend": {
+    "0q": {
+     "current": 6.40802,
+     "7daysAgo": 6.4048,
+     "30daysAgo": 6.40501,
+     "60daysAgo": 6.36615,
+     "90daysAgo": 6.36641
+    },
+    "+1q": {
+     "current": 7.26376,
+     "7daysAgo": 7.27647,
+     "30daysAgo": 7.27638,
+     "60daysAgo": 7.33837,
+     "90daysAgo": 7.33979
+    },
+    "0y": {
+     "current": 25.13141,
+     "7daysAgo": 25.11618,
+     "30daysAgo": 25.11905,
+     "60daysAgo": 24.85481,
+     "90daysAgo": 24.85975
+    },
+    "+1y": {
+     "current": 27.53117,
+     "7daysAgo": 27.48842,
+     "30daysAgo": 27.51077,
+     "60daysAgo": 27.25511,
+     "90daysAgo": 27.26279
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 6.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 15.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 24.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 22.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 2.0
+    }
+   },
+   "close": 609.8200073242188
+  },
+  "GLW": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.87328,
+     "7daysAgo": 0.873,
+     "30daysAgo": 0.873,
+     "60daysAgo": 0.85113,
+     "90daysAgo": 0.8513
+    },
+    "+1q": {
+     "current": 0.91556,
+     "7daysAgo": 0.91676,
+     "30daysAgo": 0.91676,
+     "60daysAgo": 0.87335,
+     "90daysAgo": 0.87344
+    },
+    "0y": {
+     "current": 3.27557,
+     "7daysAgo": 3.26986,
+     "30daysAgo": 3.26986,
+     "60daysAgo": 3.19431,
+     "90daysAgo": 3.18129
+    },
+    "+1y": {
+     "current": 4.34986,
+     "7daysAgo": 4.32048,
+     "30daysAgo": 4.32048,
+     "60daysAgo": 4.27076,
+     "90daysAgo": 4.18691
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 8.0,
+     "upLast30days": 8.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 2.0
+    },
+    "+1q": {
+     "upLast7days": 8.0,
+     "upLast30days": 8.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 5.0,
+     "upLast30days": 10.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 5.0,
+     "upLast30days": 8.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 3.0
+    }
+   },
+   "close": 166.39999389648438
+  },
+  "ETN": {
+   "eps_trend": {
+    "0q": {
+     "current": 3.52658,
+     "7daysAgo": 3.52658,
+     "30daysAgo": 3.52723,
+     "60daysAgo": 3.50781,
+     "90daysAgo": 3.5065
+    },
+    "+1q": {
+     "current": 4.05458,
+     "7daysAgo": 4.05061,
+     "30daysAgo": 4.04384,
+     "60daysAgo": 3.95587,
+     "90daysAgo": 3.94763
+    },
+    "0y": {
+     "current": 13.55393,
+     "7daysAgo": 13.5506,
+     "30daysAgo": 13.50587,
+     "60daysAgo": 13.35212,
+     "90daysAgo": 13.34023
+    },
+    "+1y": {
+     "current": 16.13274,
+     "7daysAgo": 16.06702,
+     "30daysAgo": 16.02188,
+     "60daysAgo": 15.77748,
+     "90daysAgo": 15.72168
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 7.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 14.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 20.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 18.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 425.3699951171875
+  },
+  "BLK": {
+   "eps_trend": {
+    "0q": {
+     "current": 14.26831,
+     "7daysAgo": 14.31067,
+     "30daysAgo": 14.31415,
+     "60daysAgo": 13.97366,
+     "90daysAgo": 13.47888
+    },
+    "+1q": {
+     "current": 15.43009,
+     "7daysAgo": 15.4204,
+     "30daysAgo": 15.36313,
+     "60daysAgo": 14.4469,
+     "90daysAgo": 14.44299
+    },
+    "0y": {
+     "current": 56.28574,
+     "7daysAgo": 56.28456,
+     "30daysAgo": 56.23449,
+     "60daysAgo": 53.99312,
+     "90daysAgo": 53.27159
+    },
+    "+1y": {
+     "current": 64.31025,
+     "7daysAgo": 64.3079,
+     "30daysAgo": 64.14989,
+     "60daysAgo": 61.79867,
+     "90daysAgo": 60.66932
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 1079.6500244140625
+  },
+  "SCHW": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.67023,
+     "7daysAgo": 1.67023,
+     "30daysAgo": 1.67034,
+     "60daysAgo": 1.57999,
+     "90daysAgo": 1.56939
+    },
+    "+1q": {
+     "current": 1.78335,
+     "7daysAgo": 1.78337,
+     "30daysAgo": 1.78469,
+     "60daysAgo": 1.66684,
+     "90daysAgo": 1.65451
+    },
+    "0y": {
+     "current": 6.48818,
+     "7daysAgo": 6.48819,
+     "30daysAgo": 6.48941,
+     "60daysAgo": 6.1762,
+     "90daysAgo": 6.14628
+    },
+    "+1y": {
+     "current": 7.80434,
+     "7daysAgo": 7.80456,
+     "30daysAgo": 7.80276,
+     "60daysAgo": 7.30326,
+     "90daysAgo": 7.21444
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 2.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 2.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 107.25
+  },
+  "DE": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.0724,
+     "7daysAgo": 4.13593,
+     "30daysAgo": 4.49278,
+     "60daysAgo": 4.48945,
+     "90daysAgo": 4.48945
+    },
+    "+1q": {
+     "current": 3.30055,
+     "7daysAgo": 3.27893,
+     "30daysAgo": 3.31733,
+     "60daysAgo": 3.37288,
+     "90daysAgo": 3.37288
+    },
+    "0y": {
+     "current": 18.13235,
+     "7daysAgo": 18.12635,
+     "30daysAgo": 18.12117,
+     "60daysAgo": 18.10259,
+     "90daysAgo": 18.10259
+    },
+    "+1y": {
+     "current": 22.66943,
+     "7daysAgo": 22.4542,
+     "30daysAgo": 22.72973,
+     "60daysAgo": 22.80153,
+     "90daysAgo": 22.83248
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 2.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 12.0,
+     "downLast30days": 14.0
+    },
+    "+1q": {
+     "upLast7days": 3.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 6.0,
+     "downLast30days": 6.0
+    },
+    "0y": {
+     "upLast7days": 9.0,
+     "upLast30days": 9.0,
+     "downLast7Days": 5.0,
+     "downLast30days": 6.0
+    },
+    "+1y": {
+     "upLast7days": 7.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 7.0,
+     "downLast30days": 9.0
+    }
+   },
+   "close": 675.739990234375
+  },
+  "APP": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.02971,
+     "7daysAgo": 4.04414,
+     "30daysAgo": 4.04317,
+     "60daysAgo": 4.09143,
+     "90daysAgo": 4.08812
+    },
+    "+1q": {
+     "current": 4.5049,
+     "7daysAgo": 4.55184,
+     "30daysAgo": 4.5919,
+     "60daysAgo": 4.69719,
+     "90daysAgo": 4.71135
+    },
+    "0y": {
+     "current": 15.67562,
+     "7daysAgo": 15.72128,
+     "30daysAgo": 15.77853,
+     "60daysAgo": 16.0739,
+     "90daysAgo": 16.0987
+    },
+    "+1y": {
+     "current": 20.03727,
+     "7daysAgo": 20.25193,
+     "30daysAgo": 20.72845,
+     "60daysAgo": 21.08638,
+     "90daysAgo": 21.03077
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 12.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 13.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 14.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 17.0
+    }
+   },
+   "close": 323.9599914550781
+  },
+  "ABT": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.41953,
+     "7daysAgo": 1.41953,
+     "30daysAgo": 1.41931,
+     "60daysAgo": 1.4219,
+     "90daysAgo": 1.41993
+    },
+    "+1q": {
+     "current": 1.63784,
+     "7daysAgo": 1.63784,
+     "30daysAgo": 1.63754,
+     "60daysAgo": 1.62001,
+     "90daysAgo": 1.61894
+    },
+    "0y": {
+     "current": 5.51886,
+     "7daysAgo": 5.51886,
+     "30daysAgo": 5.51721,
+     "60daysAgo": 5.48257,
+     "90daysAgo": 5.48325
+    },
+    "+1y": {
+     "current": 6.06487,
+     "7daysAgo": 6.06487,
+     "30daysAgo": 6.06259,
+     "60daysAgo": 6.05608,
+     "90daysAgo": 6.06182
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 10.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    }
+   },
+   "close": 101.94999694824219
+  },
+  "GILD": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.14415,
+     "7daysAgo": 2.14415,
+     "30daysAgo": 2.15754,
+     "60daysAgo": 2.0889,
+     "90daysAgo": 1.90905
+    },
+    "+1q": {
+     "current": 2.18923,
+     "7daysAgo": 2.18923,
+     "30daysAgo": 2.1952,
+     "60daysAgo": 2.25443,
+     "90daysAgo": 2.09443
+    },
+    "0y": {
+     "current": -0.42664,
+     "7daysAgo": -0.43062,
+     "30daysAgo": -0.44271,
+     "60daysAgo": -0.77603,
+     "90daysAgo": -0.79159
+    },
+    "+1y": {
+     "current": 9.88911,
+     "7daysAgo": 9.88806,
+     "30daysAgo": 9.8729,
+     "60daysAgo": 9.6617,
+     "90daysAgo": 9.58618
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 12.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 14.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 23.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 17.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 5.0
+    }
+   },
+   "close": 143.72000122070312
+  },
+  "T": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.60395,
+     "7daysAgo": 0.59968,
+     "30daysAgo": 0.60746,
+     "60daysAgo": 0.6085,
+     "90daysAgo": 0.60899
+    },
+    "+1q": {
+     "current": 0.52508,
+     "7daysAgo": 0.53544,
+     "30daysAgo": 0.54526,
+     "60daysAgo": 0.5476,
+     "90daysAgo": 0.54659
+    },
+    "0y": {
+     "current": 2.33771,
+     "7daysAgo": 2.33771,
+     "30daysAgo": 2.31837,
+     "60daysAgo": 2.31301,
+     "90daysAgo": 2.31619
+    },
+    "+1y": {
+     "current": 2.56372,
+     "7daysAgo": 2.56372,
+     "30daysAgo": 2.55314,
+     "60daysAgo": 2.54846,
+     "90daysAgo": 2.55318
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 7.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 8.0,
+     "downLast30days": 7.0
+    },
+    "+1q": {
+     "upLast7days": 2.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 12.0,
+     "downLast30days": 13.0
+    },
+    "0y": {
+     "upLast7days": 12.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 6.0,
+     "downLast30days": 3.0
+    },
+    "+1y": {
+     "upLast7days": 13.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 6.0,
+     "downLast30days": 5.0
+    }
+   },
+   "close": 26.059999465942383
+  },
+  "UNP": {
+   "eps_trend": {
+    "0q": {
+     "current": 3.44405,
+     "7daysAgo": 3.44405,
+     "30daysAgo": 3.44696,
+     "60daysAgo": 3.31966,
+     "90daysAgo": 3.3061
+    },
+    "+1q": {
+     "current": 3.28197,
+     "7daysAgo": 3.28197,
+     "30daysAgo": 3.28481,
+     "60daysAgo": 3.23418,
+     "90daysAgo": 3.22246
+    },
+    "0y": {
+     "current": 13.05258,
+     "7daysAgo": 13.05258,
+     "30daysAgo": 13.05208,
+     "60daysAgo": 12.62928,
+     "90daysAgo": 12.57311
+    },
+    "+1y": {
+     "current": 14.15497,
+     "7daysAgo": 14.15497,
+     "30daysAgo": 14.11641,
+     "60daysAgo": 13.75384,
+     "90daysAgo": 13.68555
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 18.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 14.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 23.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 22.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 284.3999938964844
+  },
+  "BX": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.36116,
+     "7daysAgo": 1.36116,
+     "30daysAgo": 1.36617,
+     "60daysAgo": 1.48309,
+     "90daysAgo": 1.48228
+    },
+    "+1q": {
+     "current": 1.7633,
+     "7daysAgo": 1.7633,
+     "30daysAgo": 1.76393,
+     "60daysAgo": 1.7621,
+     "90daysAgo": 1.76263
+    },
+    "0y": {
+     "current": 6.0165,
+     "7daysAgo": 6.01888,
+     "30daysAgo": 6.0234,
+     "60daysAgo": 5.93179,
+     "90daysAgo": 5.96736
+    },
+    "+1y": {
+     "current": 7.4849,
+     "7daysAgo": 7.49055,
+     "30daysAgo": 7.48803,
+     "60daysAgo": 7.49831,
+     "90daysAgo": 7.54604
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 11.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 4.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 3.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 10.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 7.0
+    }
+   },
+   "close": 128.50999450683594
+  },
+  "WELL": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.625,
+     "7daysAgo": 0.61,
+     "30daysAgo": 0.665,
+     "60daysAgo": 0.665,
+     "90daysAgo": 0.665
+    },
+    "+1q": {
+     "current": 0.655,
+     "7daysAgo": 0.63,
+     "30daysAgo": 0.69,
+     "60daysAgo": 0.69,
+     "90daysAgo": 0.69
+    },
+    "0y": {
+     "current": 2.88,
+     "7daysAgo": 2.88,
+     "30daysAgo": 0.0,
+     "60daysAgo": 3.01,
+     "90daysAgo": 3.01
+    },
+    "+1y": {
+     "current": 3.18,
+     "7daysAgo": 3.18,
+     "30daysAgo": 3.23,
+     "60daysAgo": 3.36,
+     "90daysAgo": 3.36
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 2.0
+    }
+   },
+   "close": 235.6199951171875
+  },
+  "UBER": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.95867,
+     "7daysAgo": 0.97352,
+     "30daysAgo": 0.95794,
+     "60daysAgo": 0.917,
+     "90daysAgo": 0.91272
+    },
+    "+1q": {
+     "current": 1.06225,
+     "7daysAgo": 1.07693,
+     "30daysAgo": 1.0404,
+     "60daysAgo": 1.02688,
+     "90daysAgo": 1.01509
+    },
+    "0y": {
+     "current": 3.26541,
+     "7daysAgo": 3.29273,
+     "30daysAgo": 3.26225,
+     "60daysAgo": 3.01,
+     "90daysAgo": 2.95197
+    },
+    "+1y": {
+     "current": 4.59022,
+     "7daysAgo": 4.63538,
+     "30daysAgo": 4.61757,
+     "60daysAgo": 4.45908,
+     "90daysAgo": 4.44276
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 12.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 9.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 27.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 19.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 10.0
+    }
+   },
+   "close": 71.66999816894531
+  },
+  "HON": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.16871,
+     "7daysAgo": 2.15129,
+     "30daysAgo": 2.14638,
+     "60daysAgo": 2.18963,
+     "90daysAgo": 5.40409
+    },
+    "+1q": {
+     "current": 2.43608,
+     "7daysAgo": 2.43393,
+     "30daysAgo": 2.43093,
+     "60daysAgo": 2.39588,
+     "90daysAgo": 5.90223
+    },
+    "0y": {
+     "current": 8.31046,
+     "7daysAgo": 8.3123,
+     "30daysAgo": 8.29633,
+     "60daysAgo": 8.23699,
+     "90daysAgo": 21.04177
+    },
+    "+1y": {
+     "current": 9.95118,
+     "7daysAgo": 10.0026,
+     "30daysAgo": 10.01358,
+     "60daysAgo": 9.6017,
+     "90daysAgo": 22.9717
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 5.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 12.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 202.36000061035156
+  },
+  "ISRG": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.63898,
+     "7daysAgo": 2.64155,
+     "30daysAgo": 2.63773,
+     "60daysAgo": 2.58579,
+     "90daysAgo": 2.58704
+    },
+    "+1q": {
+     "current": 2.84446,
+     "7daysAgo": 2.84422,
+     "30daysAgo": 2.84404,
+     "60daysAgo": 2.83398,
+     "90daysAgo": 2.83481
+    },
+    "0y": {
+     "current": 10.77945,
+     "7daysAgo": 10.79481,
+     "30daysAgo": 10.79366,
+     "60daysAgo": 10.41883,
+     "90daysAgo": 10.41571
+    },
+    "+1y": {
+     "current": 12.07187,
+     "7daysAgo": 12.07083,
+     "30daysAgo": 12.07083,
+     "60daysAgo": 11.78744,
+     "90daysAgo": 11.79099
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 2.0,
+     "upLast30days": 21.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 12.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 9.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 4.0,
+     "upLast30days": 24.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 369.1499938964844
+  },
+  "PFE": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.75889,
+     "7daysAgo": 0.75889,
+     "30daysAgo": 0.81546,
+     "60daysAgo": 0.84855,
+     "90daysAgo": 0.84794
+    },
+    "+1q": {
+     "current": 0.70821,
+     "7daysAgo": 0.70821,
+     "30daysAgo": 0.70084,
+     "60daysAgo": 0.68835,
+     "90daysAgo": 0.69207
+    },
+    "0y": {
+     "current": 2.97515,
+     "7daysAgo": 2.97515,
+     "30daysAgo": 2.97171,
+     "60daysAgo": 2.94813,
+     "90daysAgo": 2.96167
+    },
+    "+1y": {
+     "current": 2.897,
+     "7daysAgo": 2.8954,
+     "30daysAgo": 2.89132,
+     "60daysAgo": 2.83032,
+     "90daysAgo": 2.8375
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 4.0,
+     "downLast30days": 14.0
+    },
+    "+1q": {
+     "upLast7days": 2.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 4.0
+    },
+    "0y": {
+     "upLast7days": 6.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 4.0
+    },
+    "+1y": {
+     "upLast7days": 5.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 4.0
+    }
+   },
+   "close": 27.719999313354492
+  },
+  "SHOP": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.46258,
+     "7daysAgo": 0.46247,
+     "30daysAgo": 0.46129,
+     "60daysAgo": 0.4412,
+     "90daysAgo": 0.43772
+    },
+    "+1q": {
+     "current": 0.65364,
+     "7daysAgo": 0.65288,
+     "30daysAgo": 0.65126,
+     "60daysAgo": 0.63009,
+     "90daysAgo": 0.62752
+    },
+    "0y": {
+     "current": 1.90676,
+     "7daysAgo": 1.90619,
+     "30daysAgo": 1.89772,
+     "60daysAgo": 1.84367,
+     "90daysAgo": 1.83704
+    },
+    "+1y": {
+     "current": 2.45961,
+     "7daysAgo": 2.45277,
+     "30daysAgo": 2.43704,
+     "60daysAgo": 2.33031,
+     "90daysAgo": 2.33303
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 18.0,
+     "upLast30days": 16.0,
+     "downLast7Days": 6.0,
+     "downLast30days": 6.0
+    },
+    "+1q": {
+     "upLast7days": 14.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 8.0,
+     "downLast30days": 8.0
+    },
+    "0y": {
+     "upLast7days": 4.0,
+     "upLast30days": 29.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 6.0
+    },
+    "+1y": {
+     "upLast7days": 4.0,
+     "upLast30days": 28.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 6.0
+    }
+   },
+   "close": 128.7899932861328
+  },
+  "BKNG": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.49214,
+     "7daysAgo": 4.49143,
+     "30daysAgo": 4.53126,
+     "60daysAgo": 4.54976,
+     "90daysAgo": 4.55889
+    },
+    "+1q": {
+     "current": 2.30958,
+     "7daysAgo": 2.30876,
+     "30daysAgo": 2.32176,
+     "60daysAgo": 2.32663,
+     "90daysAgo": 2.33184
+    },
+    "0y": {
+     "current": 10.44865,
+     "7daysAgo": 10.44865,
+     "30daysAgo": 10.44798,
+     "60daysAgo": 10.44033,
+     "90daysAgo": 10.4546
+    },
+    "+1y": {
+     "current": 12.37711,
+     "7daysAgo": 12.37711,
+     "30daysAgo": 12.37639,
+     "60daysAgo": 12.30788,
+     "90daysAgo": 12.31258
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 10.0,
+     "upLast30days": 9.0,
+     "downLast7Days": 11.0,
+     "downLast30days": 12.0
+    },
+    "+1q": {
+     "upLast7days": 9.0,
+     "upLast30days": 8.0,
+     "downLast7Days": 12.0,
+     "downLast30days": 14.0
+    },
+    "0y": {
+     "upLast7days": 12.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 13.0,
+     "downLast30days": 13.0
+    },
+    "+1y": {
+     "upLast7days": 16.0,
+     "upLast30days": 14.0,
+     "downLast7Days": 11.0,
+     "downLast30days": 12.0
+    }
+   },
+   "close": 173.9199981689453
+  },
+  "COP": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.67773,
+     "7daysAgo": 2.61714,
+     "30daysAgo": 2.62818,
+     "60daysAgo": 2.37877,
+     "90daysAgo": 2.66056
+    },
+    "+1q": {
+     "current": 2.71211,
+     "7daysAgo": 2.62328,
+     "30daysAgo": 2.54541,
+     "60daysAgo": 2.29467,
+     "90daysAgo": 2.4745
+    },
+    "0y": {
+     "current": 10.59046,
+     "7daysAgo": 10.44348,
+     "30daysAgo": 10.31879,
+     "60daysAgo": 9.35917,
+     "90daysAgo": 9.83933
+    },
+    "+1y": {
+     "current": 9.61791,
+     "7daysAgo": 9.5093,
+     "30daysAgo": 9.39498,
+     "60daysAgo": 8.98843,
+     "90daysAgo": 9.19592
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 4.0,
+     "upLast30days": 10.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    },
+    "+1q": {
+     "upLast7days": 4.0,
+     "upLast30days": 10.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "0y": {
+     "upLast7days": 5.0,
+     "upLast30days": 14.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "+1y": {
+     "upLast7days": 6.0,
+     "upLast30days": 12.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    }
+   },
+   "close": 137.35000610351562
+  },
+  "PLD": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.79,
+     "7daysAgo": 0.79,
+     "30daysAgo": 0.78333,
+     "60daysAgo": 0.76667,
+     "90daysAgo": 0.76667
+    },
+    "+1q": {
+     "current": 0.77,
+     "7daysAgo": 0.77,
+     "30daysAgo": 0.78,
+     "60daysAgo": 0.76333,
+     "90daysAgo": 0.76333
+    },
+    "0y": {
+     "current": 3.33,
+     "7daysAgo": 3.25667,
+     "30daysAgo": 3.0975,
+     "60daysAgo": 2.94667,
+     "90daysAgo": 2.94667
+    },
+    "+1y": {
+     "current": 3.405,
+     "7daysAgo": 3.4025,
+     "30daysAgo": 3.3025,
+     "60daysAgo": 3.295,
+     "90daysAgo": 3.295
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 135.75
+  },
+  "VRT": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.82782,
+     "7daysAgo": 1.82173,
+     "30daysAgo": 1.82043,
+     "60daysAgo": 1.78238,
+     "90daysAgo": 1.78293
+    },
+    "+1q": {
+     "current": 2.21328,
+     "7daysAgo": 2.20154,
+     "30daysAgo": 2.19806,
+     "60daysAgo": 2.04118,
+     "90daysAgo": 2.04051
+    },
+    "0y": {
+     "current": 6.73489,
+     "7daysAgo": 6.71748,
+     "30daysAgo": 6.72315,
+     "60daysAgo": 6.48733,
+     "90daysAgo": 6.48599
+    },
+    "+1y": {
+     "current": 9.12236,
+     "7daysAgo": 9.09879,
+     "30daysAgo": 9.09736,
+     "60daysAgo": 8.81354,
+     "90daysAgo": 8.84537
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 13.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 5.0,
+     "downLast30days": 4.0
+    },
+    "+1q": {
+     "upLast7days": 16.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 9.0,
+     "upLast30days": 21.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    },
+    "+1y": {
+     "upLast7days": 16.0,
+     "upLast30days": 19.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 4.0
+    }
+   },
+   "close": 257.05999755859375
+  },
+  "CVS": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.61495,
+     "7daysAgo": 1.62837,
+     "30daysAgo": 1.6442,
+     "60daysAgo": 1.71479,
+     "90daysAgo": 1.71762
+    },
+    "+1q": {
+     "current": 1.28592,
+     "7daysAgo": 1.29427,
+     "30daysAgo": 1.29325,
+     "60daysAgo": 1.31996,
+     "90daysAgo": 1.32805
+    },
+    "0y": {
+     "current": 7.97123,
+     "7daysAgo": 7.97048,
+     "30daysAgo": 7.92385,
+     "60daysAgo": 7.43364,
+     "90daysAgo": 7.42769
+    },
+    "+1y": {
+     "current": 8.51266,
+     "7daysAgo": 8.50074,
+     "30daysAgo": 8.49245,
+     "60daysAgo": 8.40003,
+     "90daysAgo": 8.37409
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 17.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 12.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 22.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 17.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    }
+   },
+   "close": 94.66000366210938
+  },
+  "CB": {
+   "eps_trend": {
+    "0q": {
+     "current": 6.34247,
+     "7daysAgo": 6.32656,
+     "30daysAgo": 6.2605,
+     "60daysAgo": 6.27978,
+     "90daysAgo": 6.275
+    },
+    "+1q": {
+     "current": 7.20494,
+     "7daysAgo": 7.20494,
+     "30daysAgo": 7.21489,
+     "60daysAgo": 7.22001,
+     "90daysAgo": 7.21797
+    },
+    "0y": {
+     "current": 27.72066,
+     "7daysAgo": 27.69626,
+     "30daysAgo": 27.11755,
+     "60daysAgo": 27.09449,
+     "90daysAgo": 27.09233
+    },
+    "+1y": {
+     "current": 29.10944,
+     "7daysAgo": 29.10528,
+     "30daysAgo": 29.21352,
+     "60daysAgo": 29.2529,
+     "90daysAgo": 29.23477
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 16.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 5.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 11.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 24.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 13.0
+    }
+   },
+   "close": 338.25
+  },
+  "COF": {
+   "eps_trend": {
+    "0q": {
+     "current": 5.28795,
+     "7daysAgo": 5.33248,
+     "30daysAgo": 5.33758,
+     "60daysAgo": 5.49453,
+     "90daysAgo": 5.4551
+    },
+    "+1q": {
+     "current": 4.7806,
+     "7daysAgo": 4.7713,
+     "30daysAgo": 4.76635,
+     "60daysAgo": 4.87773,
+     "90daysAgo": 4.8823
+    },
+    "0y": {
+     "current": 20.3117,
+     "7daysAgo": 20.39969,
+     "30daysAgo": 20.3998,
+     "60daysAgo": 19.71996,
+     "90daysAgo": 19.69771
+    },
+    "+1y": {
+     "current": 24.04082,
+     "7daysAgo": 24.01402,
+     "30daysAgo": 24.05119,
+     "60daysAgo": 24.24585,
+     "90daysAgo": 24.2891
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 2.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 7.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 9.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 3.0
+    }
+   },
+   "close": 208.3000030517578
+  },
+  "DHR": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.91335,
+     "7daysAgo": 1.91731,
+     "30daysAgo": 1.91731,
+     "60daysAgo": 2.068,
+     "90daysAgo": 2.085
+    },
+    "+1q": {
+     "current": 2.58484,
+     "7daysAgo": 2.58326,
+     "30daysAgo": 2.58376,
+     "60daysAgo": 2.54333,
+     "90daysAgo": 2.55
+    },
+    "0y": {
+     "current": 8.5075,
+     "7daysAgo": 8.50976,
+     "30daysAgo": 8.50914,
+     "60daysAgo": 8.525,
+     "90daysAgo": 8.52333
+    },
+    "+1y": {
+     "current": 9.29788,
+     "7daysAgo": 9.29573,
+     "30daysAgo": 9.29878,
+     "60daysAgo": 9.28233,
+     "90daysAgo": 9.2502
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 5.0
+    }
+   },
+   "close": 200.13999938964844
+  },
+  "LOW": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.88345,
+     "7daysAgo": 2.88345,
+     "30daysAgo": 3.14066,
+     "60daysAgo": 3.14434,
+     "90daysAgo": 3.14437
+    },
+    "+1q": {
+     "current": 1.97454,
+     "7daysAgo": 1.97454,
+     "30daysAgo": 2.07717,
+     "60daysAgo": 2.07954,
+     "90daysAgo": 2.07957
+    },
+    "0y": {
+     "current": 12.31517,
+     "7daysAgo": 12.32673,
+     "30daysAgo": 12.48094,
+     "60daysAgo": 12.49718,
+     "90daysAgo": 12.49718
+    },
+    "+1y": {
+     "current": 13.02812,
+     "7daysAgo": 13.06156,
+     "30daysAgo": 13.44985,
+     "60daysAgo": 13.47766,
+     "90daysAgo": 13.4778
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 25.0,
+     "downLast30days": 26.0
+    },
+    "+1q": {
+     "upLast7days": 4.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 22.0,
+     "downLast30days": 23.0
+    },
+    "0y": {
+     "upLast7days": 4.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 23.0,
+     "downLast30days": 26.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 24.0,
+     "downLast30days": 29.0
+    }
+   },
+   "close": 196.82000732421875
+  },
+  "CRM": {
+   "eps_trend": {
+    "0q": {
+     "current": 3.44196,
+     "7daysAgo": 3.45029,
+     "30daysAgo": 3.36353,
+     "60daysAgo": 3.36305,
+     "90daysAgo": 3.35545
+    },
+    "+1q": {
+     "current": 3.55202,
+     "7daysAgo": 3.55885,
+     "30daysAgo": 3.63633,
+     "60daysAgo": 3.63585,
+     "90daysAgo": 3.62989
+    },
+    "0y": {
+     "current": 16.65055,
+     "7daysAgo": 16.64892,
+     "30daysAgo": 14.13332,
+     "60daysAgo": 14.12753,
+     "90daysAgo": 14.14748
+    },
+    "+1y": {
+     "current": 16.00817,
+     "7daysAgo": 16.00824,
+     "30daysAgo": 15.51229,
+     "60daysAgo": 15.51234,
+     "90daysAgo": 15.5406
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 30.0,
+     "upLast30days": 30.0,
+     "downLast7Days": 5.0,
+     "downLast30days": 4.0
+    },
+    "+1q": {
+     "upLast7days": 6.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 29.0,
+     "downLast30days": 28.0
+    },
+    "0y": {
+     "upLast7days": 36.0,
+     "upLast30days": 36.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 30.0,
+     "upLast30days": 29.0,
+     "downLast7Days": 7.0,
+     "downLast30days": 7.0
+    }
+   },
+   "close": 247.72000122070312
+  },
+  "SPGI": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.4256,
+     "7daysAgo": 4.4256,
+     "30daysAgo": 4.4276,
+     "60daysAgo": 4.58804,
+     "90daysAgo": 5.0734
+    },
+    "+1q": {
+     "current": 4.08157,
+     "7daysAgo": 4.08157,
+     "30daysAgo": 4.08907,
+     "60daysAgo": 4.26296,
+     "90daysAgo": 4.6325
+    },
+    "0y": {
+     "current": 17.87075,
+     "7daysAgo": 17.87075,
+     "30daysAgo": 17.87075,
+     "60daysAgo": 17.68388,
+     "90daysAgo": 19.61574
+    },
+    "+1y": {
+     "current": 20.21925,
+     "7daysAgo": 20.2149,
+     "30daysAgo": 20.23968,
+     "60daysAgo": 20.31555,
+     "90daysAgo": 22.20023
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 17.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 18.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 7.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 12.0
+    }
+   },
+   "close": 410.7099914550781
+  },
+  "PH": {
+   "eps_trend": {
+    "0q": {
+     "current": 8.12852,
+     "7daysAgo": 8.12403,
+     "30daysAgo": 8.07052,
+     "60daysAgo": 8.07762,
+     "90daysAgo": 8.06886
+    },
+    "+1q": {
+     "current": 8.44685,
+     "7daysAgo": 8.44783,
+     "30daysAgo": 8.18972,
+     "60daysAgo": 8.21567,
+     "90daysAgo": 8.19751
+    },
+    "0y": {
+     "current": 35.31744,
+     "7daysAgo": 35.33279,
+     "30daysAgo": 34.086,
+     "60daysAgo": 34.10895,
+     "90daysAgo": 34.07123
+    },
+    "+1y": {
+     "current": 39.15954,
+     "7daysAgo": 39.19376,
+     "30daysAgo": 37.50758,
+     "60daysAgo": 37.43667,
+     "90daysAgo": 37.25549
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 950.22998046875
+  },
+  "PGR": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.02652,
+     "7daysAgo": 4.01125,
+     "30daysAgo": 3.6479,
+     "60daysAgo": 3.71427,
+     "90daysAgo": 3.53999
+    },
+    "+1q": {
+     "current": 4.18621,
+     "7daysAgo": 4.18621,
+     "30daysAgo": 4.12916,
+     "60daysAgo": 4.1773,
+     "90daysAgo": 4.11434
+    },
+    "0y": {
+     "current": 17.98014,
+     "7daysAgo": 17.9671,
+     "30daysAgo": 17.6096,
+     "60daysAgo": 17.48665,
+     "90daysAgo": 16.42856
+    },
+    "+1y": {
+     "current": 16.29005,
+     "7daysAgo": 16.29414,
+     "30daysAgo": 16.26888,
+     "60daysAgo": 16.49209,
+     "90daysAgo": 16.2226
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 2.0,
+     "upLast30days": 18.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 10.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 10.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 18.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 9.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 6.0
+    }
+   },
+   "close": 217.6199951171875
+  },
+  "SYK": {
+   "eps_trend": {
+    "0q": {
+     "current": 3.58512,
+     "7daysAgo": 3.58994,
+     "30daysAgo": 3.59536,
+     "60daysAgo": 3.68574,
+     "90daysAgo": 3.68468
+    },
+    "+1q": {
+     "current": 5.14665,
+     "7daysAgo": 5.15239,
+     "30daysAgo": 5.15197,
+     "60daysAgo": 5.18253,
+     "90daysAgo": 5.18308
+    },
+    "0y": {
+     "current": 15.00613,
+     "7daysAgo": 15.01589,
+     "30daysAgo": 15.01293,
+     "60daysAgo": 14.98296,
+     "90daysAgo": 14.98333
+    },
+    "+1y": {
+     "current": 16.74255,
+     "7daysAgo": 16.75493,
+     "30daysAgo": 16.76123,
+     "60daysAgo": 16.72475,
+     "90daysAgo": 16.7277
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 21.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 8.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 11.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 20.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 17.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 6.0
+    }
+   },
+   "close": 275.55999755859375
+  },
+  "LMT": {
+   "eps_trend": {
+    "0q": {
+     "current": 7.46063,
+     "7daysAgo": 7.47162,
+     "30daysAgo": 7.47162,
+     "60daysAgo": 7.59966,
+     "90daysAgo": 7.58484
+    },
+    "+1q": {
+     "current": 8.43308,
+     "7daysAgo": 8.42939,
+     "30daysAgo": 8.42939,
+     "60daysAgo": 8.66989,
+     "90daysAgo": 8.71013
+    },
+    "0y": {
+     "current": 30.45803,
+     "7daysAgo": 30.46459,
+     "30daysAgo": 30.46459,
+     "60daysAgo": 29.90374,
+     "90daysAgo": 29.89073
+    },
+    "+1y": {
+     "current": 32.72715,
+     "7daysAgo": 32.72234,
+     "30daysAgo": 32.68794,
+     "60daysAgo": 32.14697,
+     "90daysAgo": 32.10768
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 2.0,
+     "upLast30days": 9.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 7.0
+    },
+    "+1q": {
+     "upLast7days": 2.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 10.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 18.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 18.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 524.1900024414062
+  },
+  "MO": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.50777,
+     "7daysAgo": 1.50777,
+     "30daysAgo": 1.50825,
+     "60daysAgo": 1.50475,
+     "90daysAgo": 1.50384
+    },
+    "+1q": {
+     "current": 1.37085,
+     "7daysAgo": 1.37085,
+     "30daysAgo": 1.3729,
+     "60daysAgo": 1.37586,
+     "90daysAgo": 1.37495
+    },
+    "0y": {
+     "current": 5.67712,
+     "7daysAgo": 5.67712,
+     "30daysAgo": 5.68566,
+     "60daysAgo": 5.681,
+     "90daysAgo": 5.67869
+    },
+    "+1y": {
+     "current": 5.86403,
+     "7daysAgo": 5.86403,
+     "30daysAgo": 5.87571,
+     "60daysAgo": 5.87665,
+     "90daysAgo": 5.87357
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 5.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 6.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 6.0
+    }
+   },
+   "close": 68.9800033569336
+  },
+  "SBUX": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.70043,
+     "7daysAgo": 0.69936,
+     "30daysAgo": 0.69936,
+     "60daysAgo": 0.67686,
+     "90daysAgo": 0.67717
+    },
+    "+1q": {
+     "current": 0.75501,
+     "7daysAgo": 0.75295,
+     "30daysAgo": 0.75295,
+     "60daysAgo": 0.76472,
+     "90daysAgo": 0.76213
+    },
+    "0y": {
+     "current": 2.59137,
+     "7daysAgo": 2.59046,
+     "30daysAgo": 2.59046,
+     "60daysAgo": 2.3831,
+     "90daysAgo": 2.38247
+    },
+    "+1y": {
+     "current": 3.12132,
+     "7daysAgo": 3.11556,
+     "30daysAgo": 3.11404,
+     "60daysAgo": 3.00733,
+     "90daysAgo": 3.01103
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 18.0,
+     "upLast30days": 18.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 8.0,
+     "upLast30days": 6.0,
+     "downLast7Days": 5.0,
+     "downLast30days": 7.0
+    },
+    "0y": {
+     "upLast7days": 28.0,
+     "upLast30days": 28.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 26.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 98.73999786376953
+  },
+  "VRTX": {
+   "eps_trend": {
+    "0q": {
+     "current": -2.348,
+     "7daysAgo": -2.348,
+     "30daysAgo": 4.90758,
+     "60daysAgo": 4.909,
+     "90daysAgo": 4.95004
+    },
+    "+1q": {
+     "current": 4.5625,
+     "7daysAgo": 4.61,
+     "30daysAgo": 4.91597,
+     "60daysAgo": 5.00543,
+     "90daysAgo": 5.0284
+    },
+    "0y": {
+     "current": 16.02357,
+     "7daysAgo": 15.90154,
+     "30daysAgo": 19.05202,
+     "60daysAgo": 19.05674,
+     "90daysAgo": 19.14589
+    },
+    "+1y": {
+     "current": 20.13286,
+     "7daysAgo": 20.22846,
+     "30daysAgo": 21.80113,
+     "60daysAgo": 21.4676,
+     "90daysAgo": 21.47137
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 7.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 3.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 8.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 7.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 8.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 5.0
+    }
+   },
+   "close": 515.4400024414062
+  },
+  "PDD": {
+   "eps_trend": {
+    "0q": {
+     "current": 18.85746,
+     "7daysAgo": 18.80575,
+     "30daysAgo": 18.57511,
+     "60daysAgo": 18.57511,
+     "90daysAgo": 18.57511
+    },
+    "+1q": {
+     "current": 20.44691,
+     "7daysAgo": 20.41785,
+     "30daysAgo": 20.38816,
+     "60daysAgo": 20.38816,
+     "90daysAgo": 20.38816
+    },
+    "0y": {
+     "current": 68.63447,
+     "7daysAgo": 69.15121,
+     "30daysAgo": 68.19608,
+     "60daysAgo": 68.22658,
+     "90daysAgo": 68.36225
+    },
+    "+1y": {
+     "current": 83.26968,
+     "7daysAgo": 83.26029,
+     "30daysAgo": 82.59245,
+     "60daysAgo": 83.55188,
+     "90daysAgo": 83.97301
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 5.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 3.0
+    },
+    "+1q": {
+     "upLast7days": 4.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 4.0,
+     "downLast30days": 4.0
+    },
+    "0y": {
+     "upLast7days": 12.0,
+     "upLast30days": 12.0,
+     "downLast7Days": 10.0,
+     "downLast30days": 10.0
+    },
+    "+1y": {
+     "upLast7days": 11.0,
+     "upLast30days": 11.0,
+     "downLast7Days": 12.0,
+     "downLast30days": 12.0
+    }
+   },
+   "close": 77.80999755859375
+  },
+  "HWM": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.36703,
+     "7daysAgo": 1.36701,
+     "30daysAgo": 1.36652,
+     "60daysAgo": 1.26097,
+     "90daysAgo": 1.26219
+    },
+    "+1q": {
+     "current": 1.41549,
+     "7daysAgo": 1.4156,
+     "30daysAgo": 1.41031,
+     "60daysAgo": 1.31234,
+     "90daysAgo": 1.31062
+    },
+    "0y": {
+     "current": 5.3335,
+     "7daysAgo": 5.33373,
+     "30daysAgo": 5.33412,
+     "60daysAgo": 5.0543,
+     "90daysAgo": 5.03724
+    },
+    "+1y": {
+     "current": 6.41876,
+     "7daysAgo": 6.41898,
+     "30daysAgo": 6.31912,
+     "60daysAgo": 6.04232,
+     "90daysAgo": 6.01658
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 12.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 12.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 17.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 18.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 229.61000061035156
+  },
+  "NEM": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.91571,
+     "7daysAgo": 1.90625,
+     "30daysAgo": 1.87,
+     "60daysAgo": 2.63762,
+     "90daysAgo": 2.57669
+    },
+    "+1q": {
+     "current": 2.17571,
+     "7daysAgo": 2.17,
+     "30daysAgo": 2.11286,
+     "60daysAgo": 2.86724,
+     "90daysAgo": 2.78373
+    },
+    "0y": {
+     "current": 9.15083,
+     "7daysAgo": 9.13692,
+     "30daysAgo": 9.09027,
+     "60daysAgo": 10.22017,
+     "90daysAgo": 10.41239
+    },
+    "+1y": {
+     "current": 10.08462,
+     "7daysAgo": 10.06786,
+     "30daysAgo": 10.52182,
+     "60daysAgo": 11.3513,
+     "90daysAgo": 11.44008
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 5.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 2.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 5.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    }
+   },
+   "close": 126.80999755859375
+  },
+  "BMY": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.73265,
+     "7daysAgo": 1.73265,
+     "30daysAgo": 1.73379,
+     "60daysAgo": 1.60556,
+     "90daysAgo": 1.60308
+    },
+    "+1q": {
+     "current": 1.59353,
+     "7daysAgo": 1.59353,
+     "30daysAgo": 1.58904,
+     "60daysAgo": 1.53132,
+     "90daysAgo": 1.52686
+    },
+    "0y": {
+     "current": 6.94924,
+     "7daysAgo": 6.94908,
+     "30daysAgo": 6.94672,
+     "60daysAgo": 6.31724,
+     "90daysAgo": 6.31037
+    },
+    "+1y": {
+     "current": 6.5577,
+     "7daysAgo": 6.55796,
+     "30daysAgo": 6.55007,
+     "60daysAgo": 6.19485,
+     "90daysAgo": 6.1662
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 16.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 3.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 25.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 24.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 2.0
+    }
+   },
+   "close": 63.63999938964844
+  },
+  "EQIX": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.03667,
+     "7daysAgo": 4.03667,
+     "30daysAgo": 4.12,
+     "60daysAgo": 4.3375,
+     "90daysAgo": 4.3375
+    },
+    "+1q": {
+     "current": 3.74833,
+     "7daysAgo": 3.74833,
+     "30daysAgo": 3.914,
+     "60daysAgo": 4.2575,
+     "90daysAgo": 4.2575
+    },
+    "0y": {
+     "current": 17.88333,
+     "7daysAgo": 17.88,
+     "30daysAgo": 17.77667,
+     "60daysAgo": 17.74667,
+     "90daysAgo": 17.74667
+    },
+    "+1y": {
+     "current": 18.69286,
+     "7daysAgo": 18.69286,
+     "30daysAgo": 18.885,
+     "60daysAgo": 19.22333,
+     "90daysAgo": 19.22333
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 3.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 3.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    }
+   },
+   "close": 1037.719970703125
+  },
+  "TT": {
+   "eps_trend": {
+    "0q": {
+     "current": 4.72039,
+     "7daysAgo": 4.69669,
+     "30daysAgo": 4.71647,
+     "60daysAgo": 4.59132,
+     "90daysAgo": 4.59095
+    },
+    "+1q": {
+     "current": 3.61089,
+     "7daysAgo": 3.59611,
+     "30daysAgo": 3.61174,
+     "60daysAgo": 3.42447,
+     "90daysAgo": 3.41606
+    },
+    "0y": {
+     "current": 15.26953,
+     "7daysAgo": 15.25135,
+     "30daysAgo": 15.2488,
+     "60daysAgo": 14.90051,
+     "90daysAgo": 14.90007
+    },
+    "+1y": {
+     "current": 17.52744,
+     "7daysAgo": 17.48244,
+     "30daysAgo": 17.40328,
+     "60daysAgo": 17.06899,
+     "90daysAgo": 17.02457
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 15.0,
+     "upLast30days": 16.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 14.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 1.0,
+     "upLast30days": 20.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 19.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 442.5199890136719
+  },
+  "CDNS": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.04514,
+     "7daysAgo": 1.94579,
+     "30daysAgo": 1.93084,
+     "60daysAgo": 1.94024,
+     "90daysAgo": 1.94024
+    },
+    "+1q": {
+     "current": 2.01865,
+     "7daysAgo": 1.99357,
+     "30daysAgo": 2.00319,
+     "60daysAgo": 1.9919,
+     "90daysAgo": 1.9919
+    },
+    "0y": {
+     "current": 4.80568,
+     "7daysAgo": 4.80568,
+     "30daysAgo": 4.80115,
+     "60daysAgo": 4.49978,
+     "90daysAgo": 4.49288
+    },
+    "+1y": {
+     "current": 9.54363,
+     "7daysAgo": 9.54363,
+     "30daysAgo": 9.53712,
+     "60daysAgo": 9.39978,
+     "90daysAgo": 9.385
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 16.0,
+     "upLast30days": 16.0,
+     "downLast7Days": 2.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 10.0,
+     "upLast30days": 10.0,
+     "downLast7Days": 7.0,
+     "downLast30days": 6.0
+    },
+    "0y": {
+     "upLast7days": 11.0,
+     "upLast30days": 10.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 2.0,
+     "upLast30days": 19.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 289.3699951171875
+  },
+  "FTNT": {
+   "eps_trend": {
+    "0q": {
+     "current": 0.85724,
+     "7daysAgo": 0.85744,
+     "30daysAgo": 0.85739,
+     "60daysAgo": 0.76451,
+     "90daysAgo": 0.76451
+    },
+    "+1q": {
+     "current": 0.87553,
+     "7daysAgo": 0.87541,
+     "30daysAgo": 0.87558,
+     "60daysAgo": 0.8299,
+     "90daysAgo": 0.8299
+    },
+    "0y": {
+     "current": 3.45008,
+     "7daysAgo": 3.45033,
+     "30daysAgo": 3.43913,
+     "60daysAgo": 3.15261,
+     "90daysAgo": 3.15261
+    },
+    "+1y": {
+     "current": 3.77777,
+     "7daysAgo": 3.7711,
+     "30daysAgo": 3.75956,
+     "60daysAgo": 3.42591,
+     "90daysAgo": 3.42591
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 37.0,
+     "upLast30days": 36.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 37.0,
+     "upLast30days": 36.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 40.0,
+     "upLast30days": 40.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 40.0,
+     "upLast30days": 39.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 156.07000732421875
+  },
+  "PWR": {
+   "eps_trend": {
+    "0q": {
+     "current": 5.0016,
+     "7daysAgo": 5.01966,
+     "30daysAgo": 5.01242,
+     "60daysAgo": 4.2413,
+     "90daysAgo": 4.23987
+    },
+    "+1q": {
+     "current": 4.73183,
+     "7daysAgo": 4.77992,
+     "30daysAgo": 4.76714,
+     "60daysAgo": 3.80821,
+     "90daysAgo": 3.80821
+    },
+    "0y": {
+     "current": 16.62986,
+     "7daysAgo": 16.72777,
+     "30daysAgo": 16.71115,
+     "60daysAgo": 14.01055,
+     "90daysAgo": 14.0118
+    },
+    "+1y": {
+     "current": 19.59971,
+     "7daysAgo": 19.6413,
+     "30daysAgo": 19.4757,
+     "60daysAgo": 16.47186,
+     "90daysAgo": 16.46026
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 19.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 19.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 22.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "+1y": {
+     "upLast7days": 4.0,
+     "upLast30days": 24.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 650.5800170898438
+  },
+  "SO": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.65484,
+     "7daysAgo": 1.65484,
+     "30daysAgo": 1.66361,
+     "60daysAgo": 1.67561,
+     "90daysAgo": 1.67216
+    },
+    "+1q": {
+     "current": 0.50424,
+     "7daysAgo": 0.50424,
+     "30daysAgo": 0.52168,
+     "60daysAgo": 0.57049,
+     "90daysAgo": 0.55519
+    },
+    "0y": {
+     "current": 4.58869,
+     "7daysAgo": 4.58824,
+     "30daysAgo": 4.58314,
+     "60daysAgo": 4.56632,
+     "90daysAgo": 4.56612
+    },
+    "+1y": {
+     "current": 4.92431,
+     "7daysAgo": 4.92474,
+     "30daysAgo": 4.92395,
+     "60daysAgo": 4.91751,
+     "90daysAgo": 4.91704
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 5.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 0.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 6.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 8.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 1.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 87.16999816894531
+  },
+  "MAR": {
+   "eps_trend": {
+    "0q": {
+     "current": 2.82646,
+     "7daysAgo": 2.82681,
+     "30daysAgo": 2.81785,
+     "60daysAgo": 2.87251,
+     "90daysAgo": 2.87503
+    },
+    "+1q": {
+     "current": 3.02644,
+     "7daysAgo": 3.0252,
+     "30daysAgo": 3.00902,
+     "60daysAgo": 2.97643,
+     "90daysAgo": 2.97726
+    },
+    "0y": {
+     "current": 11.72375,
+     "7daysAgo": 11.71874,
+     "30daysAgo": 11.67743,
+     "60daysAgo": 11.60558,
+     "90daysAgo": 11.60181
+    },
+    "+1y": {
+     "current": 13.15687,
+     "7daysAgo": 13.15001,
+     "30daysAgo": 13.14546,
+     "60daysAgo": 13.08513,
+     "90daysAgo": 13.08048
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 1.0,
+     "upLast30days": 2.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 16.0
+    },
+    "+1q": {
+     "upLast7days": 1.0,
+     "upLast30days": 13.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 7.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 19.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 4.0
+    },
+    "+1y": {
+     "upLast7days": 3.0,
+     "upLast30days": 15.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 8.0
+    }
+   },
+   "close": 334.69000244140625
+  },
+  "MDT": {
+   "eps_trend": {
+    "0q": {
+     "current": 1.38739,
+     "7daysAgo": 1.38739,
+     "30daysAgo": 1.3875,
+     "60daysAgo": 1.3877,
+     "90daysAgo": 1.388
+    },
+    "+1q": {
+     "current": 1.42378,
+     "7daysAgo": 1.42366,
+     "30daysAgo": 1.43193,
+     "60daysAgo": 1.4319,
+     "90daysAgo": 1.43157
+    },
+    "0y": {
+     "current": 5.97201,
+     "7daysAgo": 5.97094,
+     "30daysAgo": 5.94894,
+     "60daysAgo": 5.94828,
+     "90daysAgo": 5.94778
+    },
+    "+1y": {
+     "current": 6.39915,
+     "7daysAgo": 6.39912,
+     "30daysAgo": 6.41248,
+     "60daysAgo": 6.40615,
+     "90daysAgo": 6.4073
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "0y": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 1.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    }
+   },
+   "close": 90.95999908447266
+  },
+  "CMI": {
+   "eps_trend": {
+    "0q": {
+     "current": 8.4004,
+     "7daysAgo": 8.4004,
+     "30daysAgo": 7.81864,
+     "60daysAgo": 7.72568,
+     "90daysAgo": 7.61409
+    },
+    "+1q": {
+     "current": 8.54179,
+     "7daysAgo": 8.54179,
+     "30daysAgo": 8.01303,
+     "60daysAgo": 7.93817,
+     "90daysAgo": 7.62131
+    },
+    "0y": {
+     "current": 28.56962,
+     "7daysAgo": 28.56962,
+     "30daysAgo": 28.38816,
+     "60daysAgo": 28.33998,
+     "90daysAgo": 28.12282
+    },
+    "+1y": {
+     "current": 33.73172,
+     "7daysAgo": 33.73172,
+     "30daysAgo": 32.28896,
+     "60daysAgo": 32.23889,
+     "90daysAgo": 31.92328
+    }
+   },
+   "eps_revisions": {
+    "0q": {
+     "upLast7days": 4.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 1.0
+    },
+    "+1q": {
+     "upLast7days": 5.0,
+     "upLast30days": 5.0,
+     "downLast7Days": 0.0,
+     "downLast30days": 0.0
+    },
+    "0y": {
+     "upLast7days": 2.0,
+     "upLast30days": 4.0,
+     "downLast7Days": 3.0,
+     "downLast30days": 2.0
+    },
+    "+1y": {
+     "upLast7days": 0.0,
+     "upLast30days": 8.0,
+     "downLast7Days": 1.0,
+     "downLast30days": 0.0
+    }
+   },
+   "close": 556.75
+  }
+ }
+}

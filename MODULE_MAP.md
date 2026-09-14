@@ -19,6 +19,7 @@
 | [산업 데스크 모듈 10](#산업-데스크-모듈) | industry_us/kr 프로토콜이 호출하는 분석 모듈 | 매크로·밸류·공시·사업·산업지도·워치리스트 등 |
 | [module_report_tags](#module_report_tags) | REPORT/ 태그추출 + 인수인계 원장(증분) | 데스크 재검색 방지 — 리포트 태그를 인수받기 |
 | [module_paper_book](#module_paper_book) | 데스크 리포트 → 모의투자(paper) 장부 | 리포트를 읽어 사이징·체결시뮬·시가평가·저널 (paper_desk 프로토콜 엔진) |
+| [module_evidence](#module_evidence) | **출처 저장소 색인 + ID 브로커** — md 원장/리포트 → 한 단어 조회 | "이 숫자 어디서 왔더라" 재검색 직전, 원장 append 전 ID 발급 |
 | [module_epistemics](#module_epistemics) | 베이지안 충돌평가·민감도 학습·verify·registry_audit | 신호 모순 해소, 종목 민감도 축적, 코드↔맵 감사 |
 | [module_inflection](#module_inflection) | 가격 변곡점 ↔ 뉴스 정렬 + 과거 전례 검색 | "이런 말 나올 때 이렇게 흘렀다", 변곡 주변 기사, 유사국면 |
 | [module_order_desk](#module_order_desk) | KIS 주문 데스크(Tkinter GUI) — 스택형 휴먼 주문 | 시세 보며 주문을 스택에 쌓아 카드마다 [체결], 포폴·인기·흐름·만약에 |
@@ -241,6 +242,9 @@ industry_us/kr 프로토콜이 호출하는 분석 모듈. 전부 기능별 `_�
 | `scripts/ic_ledger.py` | ★ **신호 축의 정보계수(IC)를 매일 1행씩 적립** — 이 리포의 **시계**. 실력을 11개 포지션 손익으로 배우면 월 11관측이라 수십 년 걸리지만, 같은 신호를 **828종목 횡단면**으로 재면 **관측 1개 = 런 1개**라 3~5개월이면 축마다 부호가 갈린다. `kelly_size --ic` 가 가정이 아니게 되는 유일한 경로. ⚠ **겹침 보정 필수** — 일별 런의 h일 선행창은 겹친다. NW(lag h−1) + `n_eff=n/h`, **n_eff<4 면 판정 안 함**(실측: 보정 전 h=10 이 `n=3·양수100%·t=+6.7` 거짓양성, 그 3창이 전부 07-31 반등 하나로 끝났다). 다중비교 Bonferroni 임계 자동 표시 | `llm_outputs/*/industry_KR/SECTOR_FLOW_KR.json` + `llm_outputs/sector_flow/prices_*.pkl`(P1 재사용, yfinance 재호출 0) |
 | `scripts/axis_inflection.py` | **패턴 발견기 → IC 축 배관.** `module_inflection` 의 `mention_z`(뉴스 관심도 z = 군중심리 축)·`mention_z_chg`(관심 가속)를 `out/ic/axes/{market}_{run}.json` 으로 내보낸다. **`ic_ledger` 수정 0으로 새 축이 채점된다** — 앞으로 경제레짐·수급물리 축이 늘어도 같은 서식이면 끝. ⚠ 이 리포에 없던 것은 발견기가 아니라 **눈금자**였다(발견기는 이미 3개). ⚠ mention 계열은 CPU·sqlite — GPU 경로(`analog`) 미사용(P6) | ▶`module_inflection._newslink`(`mention_frame`·`mention_z` 재사용, 재구현 0) |
 | `scripts/axis_window_flow.py` | ★ **수급의 「창 의존성」을 정식 지표로 → IC 축 배관.** `module_KIS --investor` 는 M295 이래 있었지만 **한 종목씩** 쓰였다. 코호트로 돌리자 «외국인·기관 **양다리 순매수**» 종목 수가 창마다 달라졌다 — 산업재 14종 **20일 1 → 12일 4 → 5일 5**(창 단축 시 증가 = 롤오버 착시 후보) · 042660 한화오션 외국인 **−137.4만 → +52.1만 → +103.7만**(20일의 음수는 **창 앞쪽 유물**). ⇒ 같은 종목에 「외국인이 던진다/받는다」가 둘 다 참이고 **창을 고른 사람이 답을 정했다.** 종목 스칼라 3축 `bothleg_rollover`(b(5)−b(20), 이산) · `flow_accel_5_20`(z(5)−z(20), 연속) · `flow_level_20`(**대조축** — 없으면 「그냥 20일 수급」과 구분 불가). ⚠ **비용 실측 종목당 1콜 0.134s**(엔드포인트가 30일 통째 ⇒ **창 3개 = 1콜**), 전수 827종 111s. ⚠ **백필 불가**(KIS 는 오늘 기준 30일만) ⇒ 오늘부터 하루 1행. ⚠ **방향 가설 없음(P4)** — 어느 창이 옳은지는 IC 가 답한다 | `python -X utf8 scripts/axis_window_flow.py cohort --preset indu` · `… axes --limit 0` | ▶`module_KIS.fetch_investor_trend`(재구현 0)·SECTOR_FLOW_KR.json(유니버스) → `out/ic/axes/kr_{run}.json` |
+| `scripts/company_score.py` | **company_research 평결 N개 → 한 척도 환산**(배치 점수판). 가중치 단일원본; **결측 축은 0 이 아니라 분모에서 뺀다**(`flow_score` 의 clip(nan) 함정 회피). `axes` 가 `company_score` 를 `out/ic/axes/` 로 내보내 **ic_ledger 가 IC 를 적립** — 🚨 **점수 자체는 미검증**이라 트리아지 순서일 뿐 사이징 근거 아님 | `python -X utf8 scripts/company_score.py rank --run 2026-08-21` | `llm_outputs/{run}/company_batch/*/verdict.json` → `out/ic/axes/` |
+| `scripts/build_hdec_docx.py` | **리서치 산출물 → Word 조판**(1회성, 현대건설 000720 본). `.md` 를 그대로 변환하지 않고 **사람이 쓴 국문 보고서 문체로 다시 쓴** 본문을 python-docx 로 조판한다 — 표지·목차(TOC 필드)·머리말/꼬리말·개요수준(탐색창)·표 고정폭/머리행반복. ⚠ **한글 조판 함정 2개**: ①`autoSpaceDE/DN` 기본 ON 이라 "14조"가 "14 조"로 벌어진다 → `docDefaults` 에서 끈다 ②표지 하단 면책은 본문 여백으로 밀면 다음 장으로 넘친다 → **첫 페이지 꼬리말**에 넣는다. TOC 필드는 생성 직후 Word COM(`TablesOfContents.Update`)으로 한 번 구워야 페이지번호가 박힌다 | `python -X utf8 scripts/build_hdec_docx.py [out.docx]` | python-docx · (선택)pywin32=TOC 굽기·PDF, PyMuPDF=렌더 검수 |
+| `scripts/build_de_docx.py` | **리서치 산출물 → Word 조판**(두산에너빌리티 034020 본). 🔴 **조판 헬퍼를 복제하지 않는다** — `build_hdec_docx` 에서 `para·rich·table·callout·h1·h2·bullet·hrule·field` 를 **import 해서 쓴다**(그쪽은 `__main__` 가드가 있어 import 해도 문서를 안 만든다). 새 종목 보고서는 이 파일을 본떠 **본문만** 쓰면 된다. 덧붙인 축: **주가산정 4방법**(EV/EBITDA 동종비교 · 배수별 목표주가 환산 · PER 동종 교차검증 · 시나리오 현재가치)과 **매수·매도 실행표**(신규/보유/손절/재매수 + 전환신호). ⚠ **표 `widths` 합은 16.4cm(본문폭)를 넘기지 마라** — 넘으면 조용히 페이지 밖으로 나간다. ⚠ TOC 는 생성 직후 Word COM(`TablesOfContents.Update` → `Save` → `SaveAs FileFormat=17`)으로 구워야 쪽번호가 박히고 PDF 가 같이 나온다(이 PC 에 pywin32 있음, 실측 22쪽) | `python -X utf8 scripts/build_de_docx.py [out.docx]` | python-docx · `build_hdec_docx`(헬퍼) · (선택)pywin32=TOC 굽기·PDF, PyMuPDF=렌더 검수 |
 | `scripts/leak_scan.py` | **누수 스캔** — 끝난 런이 지불하고 걷지 않은 것. 전 유니버스 상승주를 런 산출물과 대조해 A.런에있었음/B.커버리지소실/C.스쳐감/D.발굴부재 로 분류 + **선행검정**(런시점 상태→이후 실현, 후행 동어반복 차단). 벤치는 시총floor 동일가중 | `python -X utf8 scripts/leak_scan.py --run 2026-07-20 --top 25` | `llm_outputs/sector_flow/prices_kr_*.pkl`·SECTOR_FLOW_KR.json·llm_outputs/**/*.md |
 | `scripts/brief_recall.py` | **brief 회수율 감사** — 그날 기사의 N%를 무작위로 뽑아 "브리핑에서 되찾히나"를 대조. 회수율은 주장이 아니라 **측정치**여야 한다: 처음 재보니 `--body 2`+꼬리0 인데도 **45.6% 가 안 보였다**(1매체 35%·비시장 미노출·토픽 블롭). 수선 후 64.6%. 못 본 기사 목록을 같이 뱉어 `--singles-nb` 조정 근거를 준다. **클라 전용(GPU)** | `python -X utf8 scripts/brief_recall.py --date 2026-07-23 --scope domestic` | module_news_data(`_brief`·`_cluster`·`_embed` 재사용, P1) |
 | `module_macro_us` | US 매크로 레짐(FRED **19개** — 금리·물가·달러 + **신용/유동성**) | `python -m module_macro_us --series hy_oas,nfci` | FRED_API_KEY |
@@ -330,6 +334,29 @@ REPORT/ 폴더의 데스크 산출물(.md)에서 태그(종목·섹터·평결·
 - **재사용**: 티커 검증에 `data/us_universe·kr_universe`, 모호티커 필터는 `module_news_data._chain_hop.AMBIGUOUS_TICKERS` 재사용(중복0).
 - **폴더**: `DEGAJA_REPORT_DIR`(기본 `REPORT/`). 데스크 산출물이 여기 쌓이면 태그가 잡힌다.
 
+## module_evidence
+**출처 저장소 색인 + ID 브로커.** `handoff/*.md` 원장 표와 `REPORT/**.md` 의 출처 달린 줄을 수확해 한 단어로 되찾게 한다. **근거를 새로 저작하지 않는다** — 원본은 md 고, `data/evidence.db` 는 지우고 다시 만드는 파생물(`news_vectors.db` 와 같은 지위).
+
+- **트리거**: "이 숫자 어디서 왔더라"를 다시 검색하기 직전 / 원장에 새 행을 append 하기 직전(ID 발급) / 인용하려는 `M####` 가 뭐였는지 펼칠 때.
+- **CLI**:
+  ```bash
+  python -m module_evidence build                   # md 전량 재수확 → 색인 (실측 2.7초)
+  python -m module_evidence cite 수주                # 한 단어 → 근거 행(주장·출처·asof·링크)
+  python -m module_evidence cite PF --kind report --market KR --tag measured
+  python -m module_evidence where 000720             # 그 종목이 걸린 근거 전부
+  python -m module_evidence show M1032               # 정의 + 어디서 인용됐나(백링크)
+  python -m module_evidence next-id M --count 13     # ID 발급 — 손으로 치던 3-grep 의 대체물
+  python -m module_evidence stats
+  ```
+- **실측 초기색인(2026-08-29)**: 주장 **4,608**(원장 2,331 · 종목등록부 1,421 · 리포트 856) · 인용 백링크 **23,051** · 고유 ID **1,644**(M731·D507·S153·R117·P109·C22·F5).
+- **`next-id` 는 기본 라이브 스캔**(handoff+REPORT+llm_outputs 1,221 md). DB 를 믿으면 색인 이후 다른 런이 적은 번호를 못 봐서 남의 번호를 발급한다 — 그게 `D76` 충돌 클래스다. `--fast` 는 DB 를 읽되 그 한계를 출력에 박는다.
+- **출처 범위를 라벨한다**: 리포트 줄의 출처가 그 줄에 있으면 `scope=line`, 위 헤더에서 상속했으면 `scope=section`(출력에 `⤴상속`). 상속을 줄에 박힌 출처와 같은 무게로 인용하면 그게 세탁이다. 상속은 표행·불릿에만, 출처 없는 헤더를 만나면 끊는다.
+- **FTS5 를 쓰지 않는다**: KR trigram 은 **2자 한글(수주·실적)을 0건**으로 돌려주고(`module_news_data._fts` 경고), 코퍼스가 4.6천 행이라 `instr()` 부분일치가 수십 ms. 정확도가 색인속도보다 값어치가 크다.
+- **소유**: 근거 ID 계열(M/D/R/P/C/S/F)의 **발급 규칙**과 md→레코드 수확 규칙. 사실 본문은 소유하지 않는다(md 가 원본).
+- **재사용**: 티커 검증은 `module_report_tags._config.load_kr_names/load_us_tickers`(→ `module_news_data` 유니버스), `utf8_stdout` 도 `module_news_data._config`. `REPORT_DIR` 은 `DEGAJA_REPORT_DIR` 같은 변수를 따른다 — 같은 폴더를 두 이름으로 부르지 않는다.
+- **`module_report_tags` 와의 경계**: report_tags = **문서 단위**("어느 리포트가 이 종목을 다뤘나"), evidence = **주장 단위**("이 숫자 어디서 왔나"). 결이 달라 원장을 겹쳐 쓰지 않는다.
+- ⚠ **원자료 링크는 아직 3행뿐이다** — 원장 Source 열이 명령(`module_KIS --investor 20`)·기관(`[FRED]`)까지만 적고 `rcept_no`/URL 은 리포 전체에 4건이다. 링크를 채우려면 모듈이 측정 시점에 스스로 등록해야 한다(미구현).
+
 ## module_epistemics
 신호가 모순일 때 손퉁하지 않고 **구조화**한다. 베이지안 충돌평가 + 종목별 민감도 학습 + verifier 플러그인 + 코드↔맵 감사 (HANDOFF_SPEC §4.8).
 
@@ -369,8 +396,48 @@ REPORT/ 폴더의 데스크 산출물(.md)에서 태그(종목·섹터·평결·
 ## 브라우저·집행 모듈
 | 모듈 | 트리거 | 안전장치 |
 |---|---|---|
-| `module_webctl` | CDP(9222) 브라우저 제어 | 조회/제어만 |
+| [`module_webctl`](#module_webctl) | CDP 브라우저 제어 **+ 지도(어디로 가나·브라우저를 쓸지)** **+ 배치 심부름** **+ 채널 점검(포트=계정 경계)** | **조회가 기본값** — 쓰기 스텝은 `--allow-write` 를 사람이 명시. 되돌릴 수 없는 버튼은 이 층에서 안 누른다 |
 | `module_timefolio` | 타임폴리오 **콘테스트 집행 어댑터**(RFM). ★ 2026-07-31 SSOT 컷오버(F4, 사람 결정): 옛 mvp `alert_bot` 책(id=6) 미러를 **끊었다** — `book_targets()` 은퇴, 콘테스트 계좌 자체가 SSOT. 타깃 = **투자총량**(`scripts/exposure_rule.py target`, 현금의 단일 원본 — F5) × **이름·상대비중**(`out/timefolio/targets.json`, 데스크가 씀). `Holding.day_pct` 추가(수익분해 재료) | **⚠ 이중게이트가 아니다**: `.env` 에 `TIMEFOLIO_EXECUTE=1` 이 **살아 있어**(2026-07-31 실측) `--execute` 하나로 제출된다. 인텐트 부재·밴드 미설정·보유 0건은 전부 `SyncBlocked` 로 **소리 내어 멈춘다**(조용한 폴백 금지 — 그 침묵이 F4 를 9일 숨겼다). ▶module_webctl |
+
+
+## module_webctl
+원격 디버깅 크롬(CDP) **웹 컨트롤 substrate + 심부름 층**. 2026-08-29 에 DeGaJa_Agent 의 `/errand`(module_browser)
+설계를 이 리포 규약에 맞게 이식했다 — **모듈을 새로 만들지 않고**(P1) 이미 CDP 를 소유한 이 모듈을 넓혔다.
+
+- **트리거**: 검색으로 안 보이는 것 · 로그인해야 보이는 것 · API 가 안 주는 원문/표. **그전에 지도부터**:
+  `find` 가 `api` 를 가리키면 브라우저를 띄우지 마라(이미 그 기능을 가진 모듈이 있다는 뜻).
+- **CLI**:
+  ```bash
+  python -X utf8 -m module_webctl find 공시            # 어디로 가나 + 더 싼 경로(prefer)
+  python -X utf8 -m module_webctl go dart 공시검색      # 목적지 URL
+  python -X utf8 -m module_webctl up --site timefolio_contest   # 채널 점검·복구(점유자 확인 → 필요시 기동)
+  python -X utf8 -m module_webctl newtab about:blank   # 남의 탭을 안 건드리는 시작점
+  python -X utf8 -m module_webctl run - --match dart < steps.json   # 심부름 한 건을 한 번에
+  python -X utf8 -m module_webctl probe --sel "#btn" --match dart   # 클릭이 왜 안 먹나(누르진 않음)
+  python -X utf8 -m module_webctl shot --full --match dart          # out/webctl/shot_NNN.png
+  ```
+- **기능 파일**: `_cdp`(저수준 CDP — 타깃·WS·eval·스크린샷) · `__init__.WebController`(프리미티브: 대기·클릭·입력
+  **+ `until`·`goto(until=)`·`links`·`alts`·`probe_click`·`click_native`·`shot`**) · **`_fast`**(배치 스텝 실행 — 순서·부분성공·쓰기게이트)
+  · **`_sites`+`site_map.json`**(지도: `access`/`prefer`/`can`/`ports`) · **`_ensure`**(포트 점유자 판정·기동·탭 확보) · `_env`(.env).
+- **소유**: 이 리포의 **브라우저 접근 전부**(CDP 전송·탭·프리미티브·지도·채널). 브라우저 코드를 다른 모듈에 다시 쓰지 마라.
+- **재사용됨**: `module_timefolio`(로그인·계좌·주문 어댑터) · `scripts/exposure_rule.py`(`_env` 로 .env 로드).
+- **설계 3원칙(= /errand 에서 가져온 것)**:
+  1. **`access` 가 행동을 정한다.** open=간다 / session=로그인된 프로필 포트로 / **api=브라우저 쓰지 마라(P1)** / blocked=하지 마라.
+  2. **왕복이 제일 비싸다.** 이동→대기→추출을 호출 3번으로 쪼개지 말고 `run` 한 방에. **`sleep` 대신 `goto(url, until)`**
+     — 고정 대기는 빠른 페이지에서 낭비고 느린 페이지에선 모자란다(실측: DART 검색페이지 도착+표 확인 **0.38초**).
+     여러 값은 요소마다 왕복하지 말고 `eval` 하나에 배열로.
+  3. **포트가 계정 경계다.** `--port` > `DEGAJA_CDP_PORT` > `TIMEFOLIO_CDP_PORT` > 9222. 세션 사이트의 포트·프로필은
+     `site_map.json` 이 단일 원본.
+- **안전(P5·규약)**: 배치의 쓰기 스텝(`click·click_native·fill·key`)은 `--allow-write` 없이 `PermissionError` 로 거부.
+  **확인과 클릭을 같은 실행에 넣지 않는다**(되돌릴 수 없는 버튼 앞에서는 확인 → 사람이 읽음 → 다음 실행에서 클릭).
+  주문·제출은 이 층이 아니라 `module_timefolio`/`module_order_desk` 의 게이트를 지난다. 캡차·429·로그인 벽은
+  **후퇴 신호**(재시도·우회 금지). 목록 대량 수집 금지.
+- **닫은 결함(전부 llm_outputs 에 실측 기록)**: ①`--match` 를 서브커맨드 앞에 두면 무시되고 첫 탭에 붙던 것(08-14, ARMED 와 겹치면 위험)
+  ②9222 점유자를 안 보고 skip 하던 채널 복구(08-07·19·20·21·27·28 재발) ③`TIMEFOLIO_CDP_PORT` 미독(08-28)
+  ④새 탭 `PUT /json/new`(08-26). 함정 원장은 [`module_webctl/SITES.md`](module_webctl/SITES.md).
+- **환경변수**: `DEGAJA_CDP_PORT`·`DEGAJA_CDP_PORTS`·`DEGAJA_CHROME`(chrome.exe 경로)·`DEGAJA_CHROME_PROFILE`·`DEGAJA_SITE_MAP`.
+  산출은 `out/webctl/`(스크린샷 — **계좌·개인정보가 찍힌다. 커밋 금지**).
+- **프로토콜 층**: [`pipeline/L2_modules/web_errand.md`](pipeline/L2_modules/web_errand.md) 가 이 모듈을 스테이지에서 부르는 법을 정한다.
 
 ## 스크립트 (데스크 호출)
 데스크가 `python scripts/X.py`로 호출하는 단일파일 도구. 데이터는 전부 로컬 `data/` 참조로 수정됨.

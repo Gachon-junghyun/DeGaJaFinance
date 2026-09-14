@@ -1,0 +1,48 @@
+OK  -m module_KIS  exit=0
+OK  -m module_news_data  exit=0
+OK  -m module_flow  exit=0
+OK  -m module_watchlist  exit=0
+OK  -m module_paper_book  exit=0
+OK  -m module_valuation  exit=0
+OK  -m module_business  exit=0
+OK  -m module_business_us  exit=0
+OK  -m module_disclosure  exit=0
+OK  -m module_disclosure_us  exit=0
+OK  -m module_fundamentals_us  exit=0
+OK  -m module_industry_map  exit=0
+OK  -m module_report_tags  exit=0
+OK  -m module_inflection  exit=0
+OK  -m module_macro_us  exit=0
+OK  -m module_evidence  exit=0
+FAIL -m module_chart  exit=1
+OK  -m module_epistemics  exit=0
+OK  -m module_math_check  exit=0
+OK  scripts/sector_flow.py  exit=0
+OK  scripts/us_live_shortlist.py  exit=0
+OK  scripts/us_setup_screener.py  exit=0
+OK  scripts/us_flow.py  exit=0
+OK  scripts/flow_read.py  exit=0
+OK  scripts/risk_units.py  exit=0
+OK  scripts/snapshot_estimates.py  exit=0
+OK  scripts/exposure_rule.py  exit=0
+OK  scripts/missed_ledger.py  exit=0
+OK  scripts/kelly_size.py  exit=0
+OK  scripts/catalyst_calendar.py  exit=0
+OK  scripts/report_lint.py  exit=0
+OK  scripts/reject_ledger.py  exit=0
+OK  scripts/drift_watch.py  exit=0
+OK  scripts/cycle_exposure.py  exit=0
+OK  scripts/action_bracket.py  exit=0
+OK  scripts/company_score.py  exit=0
+OK  scripts/axis_inflection.py  exit=0
+OK  scripts/axis_window_flow.py  exit=0
+FAIL scripts/margin_history.py  exit=1
+OK  scripts/ic_ledger.py  exit=0
+OK  scripts/measure_ic.py  exit=0
+OK  scripts/handoff_compact.py  exit=0
+OK  scripts/handoff_id_audit.py  exit=0
+OK  scripts/leak_scan.py  exit=0
+
+=== 42/44 exit 0 ===
+  FAIL: -m module_chart | usage: python -m module_text_chart <ticker> [--read]   (예: 005930.KS)
+  FAIL: margin_history | ValueError: unsupported format character ')' (0x29) at index 12

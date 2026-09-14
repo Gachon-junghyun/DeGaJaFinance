@@ -88,6 +88,22 @@ def main() -> None:
             args.code = _stem
     _utf8_stdout()
 
+    # 🚨 KR 전용 축이다 — US 티커를 받으면 «거부»한다. 조용한 공란표를 내지 않는다.
+    # 실측 2026-09-03: `module_valuation NVDA --peers AVGO,AMD,MU,TSM,MRVL` 이 예외 없이
+    # 10개 항목 전부 공란인 표를 냈다. 원인은 `_naver_fetch.py` 의 `str(code).zfill(6)` —
+    # 'NVDA' 가 '00NVDA' 가 되어 네이버 금융 «종목» 페이지를 친다. 존재하지 않는 코드라
+    # 빈 페이지가 오고, 파서는 그것을 「해당 항목 미제공」으로 보고한다.
+    # ⇒ 「조회했는데 데이터가 없다」로 오독된다. P4 위반이 조용히 통과하는 자리.
+    _bad = [c for c in ([args.code] + [x.strip() for x in args.peers.split(",") if x.strip()])
+            if not (c.isdigit() and len(c) == 6)]
+    if _bad:
+        print("🚫 module_valuation 은 **KR 6자리 코드 전용**이다 (네이버 금융 축).", file=sys.stderr)
+        print(f"   6자리가 아닌 인자: {', '.join(_bad)}", file=sys.stderr)
+        print("   US 티커는 이 모듈이 조회할 수 없다 — 0-패딩되어 빈 표가 나온다(공란 ≠ 미제공).", file=sys.stderr)
+        print("   → US 는 이걸 써라:  python -X utf8 -m module_fundamentals_us <TICKER> --json", file=sys.stderr)
+        print("      (가격·시총·PER/PBR·컨센 목표주가·투자의견·EPS 리비전 전부 거기 있다)", file=sys.stderr)
+        raise SystemExit(2)
+
     if args.json:
         snap = fetch_naver_snapshot(args.code)
         payload = to_dict(snap)

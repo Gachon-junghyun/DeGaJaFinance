@@ -1,0 +1,18 @@
+{
+  "date": "2026-07-23",
+  "scope": "domestic",
+  "denominator": {
+    "articles": 906,
+    "clusters": 395,
+    "events_2src_plus": 134,
+    "market_events": 100,
+    "nonmarket_events": 34
+  },
+  "head": 7,
+  "body": 93,
+  "tail": 0,
+  "bytes": 14475,
+  "approx_tokens": 10132
+}
+
+(전체 → C:\Users\fivep\DeGaJaFinance\out\news_brief\2026-07-23_domestic.json)

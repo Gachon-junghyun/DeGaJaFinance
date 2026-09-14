@@ -1,0 +1,24 @@
+[info] shortlist 11 — us_flow FINRA short z-score …
+
+[saved] C:\Users\fivep\DeGaJaFinance\llm_outputs\2026-09-08\industry_US\US_LIVE_SHORTLIST.json
+# US LIVE SHORTLIST — wide sweep→filter→us_flow FINRA short  (asof 2026-09-04)
+filter: mcap≥$10.0B · tag 🟢가속 · flow desc top15 → 11 names
+⚠️ US엔 투자자별(외국인/기관) 피드 없음 → 숏압력(FINRA z) proxy. crowded-short=턴조건 스퀴즈연료(단독 매수 아님).
+
+TICKER name                  flow  news   OBV  RS20 shortZ  verdict
+DELL   Dell Technologies    +1.00  2.22 +0.25  15.9  -0.46  △정상숏
+MDT    Medtronic            +0.93   n/a +0.33   8.4  +1.43  △정상숏
+DE     Deere & Company      +0.91   n/a +0.18  12.1  -0.47  △정상숏
+SLB    Schlumberger         +0.88   n/a +0.44  14.2  -1.21  ✅저숏/숏커버 (청정 상승)
+CTVA   Corteva              +0.86   n/a +0.27  14.8  -0.23  △정상숏
+TSLA   Tesla, Inc.          +0.83  1.52 +0.17   8.2  +1.19  △정상숏
+HOOD   Robinhood Markets    +0.78   n/a +0.21  31.3  -0.64  ✅저숏/숏커버 (청정 상승)
+WMB    Williams Companies   +0.77   n/a +0.15   5.7  -1.16  ✅저숏/숏커버 (청정 상승)
+CVX    Chevron Corporation  +0.66  1.32 +0.37  12.2  +0.78  △정상숏
+RSG    Republic Services    +0.63   n/a +0.16   4.2  +2.61  ⚡crowded-short (스퀴즈연료·턴조건)
+PG     Procter & Gamble     +0.23  1.40 +0.12   0.8  -0.55  ✅저숏/숏커버 (청정 상승)
+
+★ 청정 상승 (🟢 AND 저숏/숏커버): Schlumberger(SLB), Robinhood Markets(HOOD), Williams Companies(WMB), Procter & Gamble(PG)
+⚡ crowded-short 스퀴즈연료(턴조건): RSG
+
+해석: 저숏/숏커버=상방 청정 · crowded-short=턴 확인 시 스퀴즈연료(단독 매수 X) · US는 '누가 사나' 실측 부재(KR KIS 대비 약점).

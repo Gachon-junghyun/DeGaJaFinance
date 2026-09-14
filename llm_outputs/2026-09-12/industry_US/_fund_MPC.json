@@ -1,0 +1,179 @@
+{
+  "ticker": "MPC",
+  "company_name": "Marathon Petroleum Corporation",
+  "sector": "Energy",
+  "industry": "Oil & Gas Refining & Marketing",
+  "price": 395.93,
+  "market_cap": 111186952192,
+  "trailing_pe": 13.7380295,
+  "forward_pe": 11.6606865,
+  "peg_ratio": 1.94,
+  "price_to_sales": 0.74985063,
+  "price_to_book": 5.8734603,
+  "trailing_eps": 28.82,
+  "forward_eps": 33.95426,
+  "fifty_two_week_high": 409.11,
+  "fifty_two_week_low": 161.93,
+  "target_low": 186.0,
+  "target_mean": 351.66666,
+  "target_high": 462.0,
+  "target_median": 357.5,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 4,
+      "buy": 6,
+      "hold": 8,
+      "sell": 1,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 4,
+      "buy": 6,
+      "hold": 8,
+      "sell": 1,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 4,
+      "buy": 6,
+      "hold": 7,
+      "sell": 1,
+      "strongSell": 1
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 3,
+      "buy": 6,
+      "hold": 7,
+      "sell": 1,
+      "strongSell": 1
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      51994000000.0
+    ],
+    [
+      "2026-03-31",
+      34200000000.0
+    ],
+    [
+      "2025-12-31",
+      32574000000.0
+    ],
+    [
+      "2025-09-30",
+      34809000000.0
+    ],
+    [
+      "2025-06-30",
+      33799000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      51994000000.0
+    ],
+    [
+      "2026-03-31",
+      34200000000.0
+    ],
+    [
+      "2025-09-30",
+      34809000000.0
+    ],
+    [
+      "2025-06-30",
+      33799000000.0
+    ],
+    [
+      "2025-03-31",
+      31517000000.0
+    ],
+    [
+      "2024-09-30",
+      35107000000.0
+    ],
+    [
+      "2024-06-30",
+      37914000000.0
+    ],
+    [
+      "2024-03-31",
+      32706000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 21.03001,
+      "7daysAgo": 19.95819,
+      "30daysAgo": 19.60944,
+      "60daysAgo": 11.08846,
+      "90daysAgo": 9.41263
+    },
+    {
+      "period": "+1q",
+      "current": 12.21654,
+      "7daysAgo": 11.47527,
+      "30daysAgo": 11.20402,
+      "60daysAgo": 6.62807,
+      "90daysAgo": 6.44836
+    },
+    {
+      "period": "0y",
+      "current": 53.07783,
+      "7daysAgo": 50.95292,
+      "30daysAgo": 50.25225,
+      "60daysAgo": 31.02205,
+      "90daysAgo": 29.77995
+    },
+    {
+      "period": "+1y",
+      "current": 33.95426,
+      "7daysAgo": 31.77638,
+      "30daysAgo": 31.87183,
+      "60daysAgo": 24.13956,
+      "90daysAgo": 24.63759
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 1.0,
+      "upLast30days": 15.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 2.0,
+      "upLast30days": 14.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 3.0,
+      "upLast30days": 13.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 9.0,
+      "upLast30days": 14.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 1.0
+    }
+  ],
+  "business_summary": "Marathon Petroleum Corporation, together with its subsidiaries, operates as an integrated downstream energy company in the United States. The company operates through three segments: Refining & Marketing; Midstream; and Renewable Diesel. The Refining & Marketing segment refines crude oil and other feedstocks at its refineries in the Gulf Coast, Mid-Continent, and West Coast regions of the United States; and purchases refined products and ethanol for resale and distributes refined products through transportation, storage, distribution, and marketing services. Its refined products include transportation fuels, such as reformulated gasolines and blend-grade gasolines; heavy fuel oil; and asphalt. This segment also manufactures propane and petrochemicals. The company sells refined products to wholesale marketing customers in the United States and internationally, buyers on the spot market, and independent entrepreneurs who operate primarily Marathon branded outlets, as well as through long-term fuel supply contracts to direct dealer locations primarily under the ARCO brand. The Midstream segment gathers, transports, stores, distributes, and markets crude oil and refined products, including renewable diesel and other hydrocarbon-based products through refining logistics assets, pipelines, terminals, towboats, and barges; gathers, processes, and transports natural gas; and transports, fractionates, stores, and markets natural gas liquids. The Renewable Diesel segment processes renewable feedstocks into renewable diesel, markets, and distributes renewable diesel through its Midstream segment and third parties. It sells renewable diesel to wholesale marketing customers, buyers on the spot market, and through long-term supply contracts to direct dealers under the ARCO brand. Marathon Petroleum Corporation was founded in 1887 and is headquartered in Findlay, Ohio.",
+  "next_earnings_date": "2026-11-03",
+  "beta": 0.527,
+  "dividend_yield": 1.01
+}

@@ -1,0 +1,68 @@
+[warn] 유니버스 us_top300.csv 26일 경과 — 시총 stale. build_top300.py 재빌드 권장(주1회).
+[dl] yfinance 배치 301종목 4mo …
+[dl] 완료 → prices_2026-08-10.pkl
+[flow] 300종목 축 계산 …
+  … 50/300
+  … 100/300
+  … 150/300
+  … 200/300
+  … 250/300
+  … 300/300
+[axis] velocity 측정 48/300 = 16.0% → 속도축 제외(전원 3축) · 기준 80% (D225-KR)
+🚨 [axis] 뉴스축이 이 런에서 **죽었다** (측정 16.0%). 「기사가 없다」가 아니라 「세지 못했다」일 가능성이 높다 — 뉴스 검색은 원격 API 를 타고, 그 터널이 끊기면 velocity 가 전부 None 이 되는데 그게 '무기사'와 구분되지 않는다.
+   확인: python -X utf8 -m module_news_data fts search 삼성전자 --days 7 --count · 로컬 폴백 색인 존재 여부 · DEGAJA_NEWS_API
+   ⚠ 예전 구현은 이 상황에서 축을 조용히 드롭해 **전 종목 점수를 평균 +0.305 부풀렸다.** 지금은 전원 동일 축으로 매기고 이 줄을 남긴다.
+[axis] 축 결측으로 점수 미부여 1종목 — 집계 제외 (예전엔 clip(nan)=+1.0 로 **최대 양수**를 받았다)
+# SECTOR FLOW — 유니버스 수급 와이드 스윕  (asof 2026-08-07, n=299/300)
+시총가중 유니버스 flow -0.042  ·  🟢23 🟡199 🔴77  ·  breadth(🟢%) 8%
+신규🟢(오늘 첫 가속): PLTR(+1.00), SHOP(+1.00), EMR(+0.91), TRI(+0.91), PH(+0.88), BMY(+0.84), COHR(+0.83), DIS(+0.81), AMGN(+0.79), AME(+0.73), WAT(+0.70), EA(+0.67)
+
+## 섹터 로테이션 (시총가중 flow 순)
+SECTOR                       wFlow      Δ   eqFlow      🟢/n  breadth
+Energy                      +0.286      ·     +0.063     2/16    12%
+Financials                  +0.082      ·     +0.019     5/47    11%
+Health Care                 +0.073      ·     +0.096     5/32    16%
+Industrials                 +0.041      ·     +0.098     5/50    10%
+Information Technology      -0.008    ▼0.13   -0.160     4/56     7%
+Real Estate                 -0.032      ·     -0.025     0/12     0%
+Consumer Discretionary      -0.033      ·     +0.044     0/28     0%
+Materials                   -0.038      ·     +0.040     0/12     0%  🚨1名
+Consumer Staples            -0.220      ·     -0.184     0/18     0%
+Communication Services      -0.262    ▲0.31   +0.050     2/13    15%
+Utilities                   -0.395      ·     -0.381     0/15     0%
+
+🚨 최대 종목 1개를 빼면 **부호가 뒤집히는** 섹터 1개 (D9) — 이 버킷으로는 승격도 강등도 정당화할 수 없다:
+   Materials      -0.038 → ex-Linde plc +0.173  (그 이름이 섹터 시총의 24.7%, n=12)
+
+Δ상승: NVDA ▲0.95, GOOG ▲0.34, GOOGL ▲0.30, MSFT ▲0.16, AAPL ▼0.63
+Δ하락: AAPL ▼0.63, MSFT ▲0.16, GOOGL ▲0.30, GOOG ▲0.34, NVDA ▲0.95
+
+## 종목 상·하위 12 (flow_score 순)
+TICKER  SEC              flow      Δ  tag       OBV   RS20    서지   vel
+PLTR    Information T  +1.000      ·    🟢가속     +0.24   33.2  1.91  2.62
+SHOP    Information T  +1.000      ·    🟢가속     +0.30   21.3  2.09   n/a
+EMR     Industrials    +0.911      ·    🟢가속     +0.63   11.5  1.44   n/a
+TRI     Industrials    +0.911      ·    🟢가속     +0.22   11.2  1.44   n/a
+PH      Industrials    +0.883      ·    🟢가속     +0.36    9.3  1.39   n/a
+BMY     Health Care    +0.839      ·    🟢가속     +0.57   10.0  1.31   n/a
+COHR    Information T  +0.833      ·    🟢가속     +0.27   14.4   1.3   n/a
+DIS     Communication  +0.810      ·    🟢가속     +0.23    7.3  1.31   n/a
+AMGN    Health Care    +0.794      ·    🟢가속     +0.16   10.7  1.23   n/a
+DASH    Consumer Disc  +0.772      ·    🟡중립     +0.22   10.3  1.19   n/a
+AME     Industrials    +0.733      ·    🟢가속     +0.25    6.0  1.27   n/a
+PFE     Health Care    +0.728      ·    🟡중립     +0.37    8.3  1.11   n/a
+TSLA    Consumer Disc  -0.800      ·    🔴분산     -0.39  -21.8  0.76  0.86
+INTC    Information T  -0.800      ·    🔴분산     -0.29   -9.9  0.76  0.86
+TXN     Information T  -0.800      ·    🔴분산     -0.24  -10.6  0.76  0.84
+MU      Information T  -0.817      ·    🔴분산     -0.26  -12.8  0.73  1.12
+SNPS    Information T  -0.839      ·    🔴분산     -0.36   -9.0  0.69   n/a
+GEV     Industrials    -0.850      ·    🔴분산     -0.26  -11.7  0.67  0.72
+QCOM    Information T  -0.867      ·    🔴분산     -0.26  -13.7  0.64   n/a
+ARM     Information T  -0.872      ·    🔴분산     -0.23  -15.0  0.63  1.33
+HOOD    Financials     -0.883      ·    🔴분산     -0.34  -19.1  0.61   n/a
+IBM     Information T  -0.901      ·    🔴분산     -0.14  -19.9  0.51   n/a
+CIEN    Information T  -0.906      ·    🔴분산     -0.18  -12.9  0.57   n/a
+AMAT    Information T  -0.911      ·    🔴분산     -0.22  -12.9  0.56  1.55
+
+범례: flow_score∈[-1,1]=3축(OBV매집·RS20·거래량서지 — 뉴스축 제외) 클립평균 · 태그=flow_read 권위값 · wFlow=시총가중 · Δ=직전 스냅샷 대비 · breadth=섹터 내 🟢 비율
+⚠ 이 런은 뉴스축 없이 매겼다 — 점수를 4축 런의 점수와 직접 비교하지 마라(척도가 다르다).

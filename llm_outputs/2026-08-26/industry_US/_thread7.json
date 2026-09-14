@@ -1,0 +1,20 @@
+{
+  "window": {
+    "start": "2026-08-19",
+    "end": "2026-08-25",
+    "days": 7
+  },
+  "scope": "foreign",
+  "denominator": {
+    "day_events": 4571,
+    "threads": 3481,
+    "multiday": 589,
+    "alive": 261,
+    "oneday": 2892,
+    "oneday_new_today": 481
+  },
+  "bytes": 883537,
+  "approx_tokens": 618475
+}
+
+(스레드 전체 + 근거 → C:\Users\fivep\DeGaJaFinance\out\news_threads\2026-08-25_7d_foreign.json)

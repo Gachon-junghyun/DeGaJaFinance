@@ -1,0 +1,179 @@
+{
+  "ticker": "NUE",
+  "company_name": "Nucor Corporation",
+  "sector": "Basic Materials",
+  "industry": "Steel",
+  "price": 251.76,
+  "market_cap": 57118220288,
+  "trailing_pe": 20.092577,
+  "forward_pe": 13.218766,
+  "peg_ratio": 5.21,
+  "price_to_sales": 1.5821782,
+  "price_to_book": 2.5834787,
+  "trailing_eps": 12.53,
+  "forward_eps": 19.04565,
+  "fifty_two_week_high": 280.11,
+  "fifty_two_week_low": 131.32,
+  "target_low": 231.0,
+  "target_mean": 282.8125,
+  "target_high": 305.0,
+  "target_median": 286.5,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 3,
+      "buy": 11,
+      "hold": 3,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 3,
+      "buy": 11,
+      "hold": 3,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 3,
+      "buy": 11,
+      "hold": 2,
+      "sell": 1,
+      "strongSell": 0
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 3,
+      "buy": 10,
+      "hold": 3,
+      "sell": 1,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-03-31",
+      9496000000.0
+    ],
+    [
+      "2025-12-31",
+      7687000000.0
+    ],
+    [
+      "2025-09-30",
+      8521000000.0
+    ],
+    [
+      "2025-06-30",
+      8456000000.0
+    ],
+    [
+      "2025-03-31",
+      7830000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-07-04",
+      10397000000.0
+    ],
+    [
+      "2026-04-04",
+      9496000000.0
+    ],
+    [
+      "2025-10-04",
+      8521000000.0
+    ],
+    [
+      "2025-07-05",
+      8456000000.0
+    ],
+    [
+      "2025-04-05",
+      7830000000.0
+    ],
+    [
+      "2024-12-31",
+      7076000000.0
+    ],
+    [
+      "2024-09-28",
+      7444160000.0
+    ],
+    [
+      "2024-06-29",
+      8077172000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 5.88563,
+      "7daysAgo": 5.87056,
+      "30daysAgo": 5.13163,
+      "60daysAgo": 5.24167,
+      "90daysAgo": 4.1105
+    },
+    {
+      "period": "+1q",
+      "current": 4.9241,
+      "7daysAgo": 4.93484,
+      "30daysAgo": 4.26585,
+      "60daysAgo": 4.265,
+      "90daysAgo": 3.2318
+    },
+    {
+      "period": "0y",
+      "current": 18.72638,
+      "7daysAgo": 18.76838,
+      "30daysAgo": 16.99166,
+      "60daysAgo": 16.875,
+      "90daysAgo": 14.60849
+    },
+    {
+      "period": "+1y",
+      "current": 19.04565,
+      "7daysAgo": 18.81518,
+      "30daysAgo": 17.38468,
+      "60daysAgo": 17.06215,
+      "90daysAgo": 15.78462
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 8.0,
+      "upLast30days": 5.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 8.0,
+      "upLast30days": 4.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 11.0,
+      "upLast30days": 8.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 10.0,
+      "upLast30days": 10.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    }
+  ],
+  "business_summary": "Nucor Corporation engages in the manufacture and sale of steel and steel products. The company operates in three segments: Steel Mills, Steel Products, and Raw Materials. The Steel Mills segment produces hot-rolled, cold-rolled, and galvanized sheet steel products; plate steel products; wide-flange beams, beam blanks, and H-piling and sheet piling structural steel products; and bar steel products, such as blooms, billets, concrete reinforcing and merchant bars, and engineered special bar quality products. This segment sells its products to steel service centers, fabricators, and manufacturers in the United States, Canada, and Mexico, as well as engages in the steel trading and rebar distribution businesses. The Steel Products segment offers steel joists and joist girders, steel decks, and galvanized torque tubes for use in solar arrays, hollow structural section steel tubing, electrical conduit, fabricated concrete reinforcing steel, cold finished steel, steel fasteners, steel grating and expanded metal, wire and wire mesh, metal building systems, insulated metal panels, steel racking, overhead doors, and utility towers and structures for communications and energy transmission. This segment is also involved in the piling distribution business. The Raw Materials segment produces direct reduced iron (DRI); brokers ferrous and nonferrous metals, pig iron, hot briquetted iron, and DRI; supplies ferro-alloys; processes ferrous and nonferrous scrap metal; and engages in the natural gas production and industrial gas business. This segment sells its ferrous scrap to electric arc furnace steel mills and foundries for manufacturing process; and nonferrous scrap metal to aluminum can producers, secondary aluminum smelters, steel mills and other processors, and consumers of various nonferrous metals. Nucor Corporation was founded in 1905 and is based in Charlotte, North Carolina.",
+  "next_earnings_date": "2026-10-27",
+  "beta": 1.892,
+  "dividend_yield": 0.89
+}

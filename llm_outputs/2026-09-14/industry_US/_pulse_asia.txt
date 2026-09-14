@@ -1,0 +1,23 @@
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: DX=F"}}}
+$DX=F: possibly delisted; no price data found  (period=7d) (Yahoo error = "No data found, symbol may be delisted")
+LIVE ASIA-SESSION PULSE (yfinance, unsettled) run at 2026-09-14 13:39 KST
+ES=F | S&P e-mini | 7,622.25 | -0.49% | 2026-09-14 | 2026-09-11
+NQ=F | NDX e-mini | 29,019.75 | -1.25% | 2026-09-14 | 2026-09-11
+RTY=F | R2K e-mini | 2,899.50 | -0.17% | 2026-09-14 | 2026-09-11
+ZN=F | UST10y fut | 106.16 | -0.19% | 2026-09-14 | 2026-09-11
+ZT=F | UST2y fut | 102.11 | -0.15% | 2026-09-14 | 2026-09-11
+CL=F | WTI | 102.90 | +2.85% | 2026-09-14 | 2026-09-11
+BZ=F | Brent | 107.63 | +2.89% | 2026-09-14 | 2026-09-11
+HO=F | Heating oil | 4.87 | -1.79% | 2026-09-14 | 2026-09-11
+RB=F | RBOB | 3.18 | -3.75% | 2026-09-14 | 2026-09-11
+NG=F | NatGas | 2.89 | +2.08% | 2026-09-14 | 2026-09-11
+GC=F | Gold | 4,371.30 | +0.12% | 2026-09-14 | 2026-09-11
+HG=F | Copper | 6.48 | +0.13% | 2026-09-14 | 2026-09-11
+DX=F | DXY fut | no data
+JPY=X | USDJPY | 153.96 | -0.34% | 2026-09-14 | 2026-09-11
+KRW=X | USDKRW | 1,344.08 | -0.30% | 2026-09-14 | 2026-09-11
+^N225 | Nikkei | 63,405.30 | -0.95% | 2026-09-14 | 2026-09-11
+^KS11 | KOSPI | 6,724.43 | -2.68% | 2026-09-14 | 2026-09-11
+^HSI | HSI | 24,893.11 | +0.35% | 2026-09-14 | 2026-09-11
+000001.SS | SSE | 3,894.28 | +0.16% | 2026-09-14 | 2026-09-11
+^VIX | VIX(last settled) | 15.84 | -11.21% | 2026-09-11 | 2026-09-10

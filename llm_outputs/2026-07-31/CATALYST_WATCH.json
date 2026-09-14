@@ -1,0 +1,206 @@
+{
+  "as_of": "2026-07-31",
+  "horizon_days": 10,
+  "binaries": [
+    {
+      "date": "2026-08-07",
+      "time_et": "08:30",
+      "event": "July Employment / NFP",
+      "axis": "labor",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 7,
+      "kind": "macro"
+    },
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    },
+    {
+      "date": "2026-08-04",
+      "event": "AMD earnings",
+      "ticker": "AMD",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 4,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-08-04",
+      "event": "ANET earnings",
+      "ticker": "ANET",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 4,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-08-04",
+      "event": "MPC earnings",
+      "ticker": "MPC",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 4,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-08-05",
+      "event": "PSX earnings",
+      "ticker": "PSX",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 5,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-08-06",
+      "event": "CEG earnings",
+      "ticker": "CEG",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 6,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-08-06",
+      "event": "LNG earnings",
+      "ticker": "LNG",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 6,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-08-07",
+      "event": "VST earnings",
+      "ticker": "VST",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 7,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-07-31",
+      "event": "SK이터닉스 KKR SPA 클로징 (SK디스커버리 30.98% 매각)",
+      "ticker": "475150",
+      "axis": "offering",
+      "binary": true,
+      "source": "dart",
+      "confidence": "estimate",
+      "note": "주당 ₩23,700 ≈ 시장가 대비 −58%. 06-30에서 1회 연기된 이력이 있어 재확인 필수. 공매도 2.53%는 스퀴즈가 아니라 이벤트 포지셔닝일 가능성.",
+      "days_until": 0,
+      "kind": "structural"
+    }
+  ],
+  "macro": [
+    {
+      "date": "2026-08-07",
+      "time_et": "08:30",
+      "event": "July Employment / NFP",
+      "axis": "labor",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 7,
+      "kind": "macro"
+    },
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    }
+  ],
+  "earnings": [
+    {
+      "date": "2026-08-04",
+      "event": "AMD earnings",
+      "ticker": "AMD",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 4,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-08-04",
+      "event": "ANET earnings",
+      "ticker": "ANET",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 4,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-08-04",
+      "event": "MPC earnings",
+      "ticker": "MPC",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 4,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-08-05",
+      "event": "PSX earnings",
+      "ticker": "PSX",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 5,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-08-06",
+      "event": "CEG earnings",
+      "ticker": "CEG",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 6,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-08-06",
+      "event": "LNG earnings",
+      "ticker": "LNG",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 6,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-08-07",
+      "event": "VST earnings",
+      "ticker": "VST",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 7,
+      "kind": "earnings"
+    }
+  ],
+  "structural": [
+    {
+      "date": "2026-07-31",
+      "event": "SK이터닉스 KKR SPA 클로징 (SK디스커버리 30.98% 매각)",
+      "ticker": "475150",
+      "axis": "offering",
+      "binary": true,
+      "source": "dart",
+      "confidence": "estimate",
+      "note": "주당 ₩23,700 ≈ 시장가 대비 −58%. 06-30에서 1회 연기된 이력이 있어 재확인 필수. 공매도 2.53%는 스퀴즈가 아니라 이벤트 포지셔닝일 가능성.",
+      "days_until": 0,
+      "kind": "structural"
+    }
+  ]
+}

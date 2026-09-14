@@ -1,0 +1,144 @@
+{
+  "as_of": "2026-08-25",
+  "horizon_days": 10,
+  "binaries": [
+    {
+      "date": "2026-08-28",
+      "time_et": "08:30",
+      "event": "July PCE (Personal Income & Outlays)",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bea",
+      "confidence": "estimate",
+      "days_until": 3,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-09-04",
+      "time_et": "08:30",
+      "event": "Aug Employment / NFP",
+      "axis": "labor",
+      "binary": true,
+      "source": "bls",
+      "confidence": "pattern",
+      "days_until": 10,
+      "kind": "macro"
+    },
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    },
+    {
+      "date": "2026-08-26",
+      "event": "NVDA earnings",
+      "ticker": "NVDA",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 1,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-08-28",
+      "event": "FRO earnings",
+      "ticker": "FRO",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 3,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-09-02",
+      "event": "AVGO earnings",
+      "ticker": "AVGO",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 8,
+      "kind": "earnings"
+    }
+  ],
+  "macro": [
+    {
+      "date": "2026-08-28",
+      "time_et": "08:30",
+      "event": "July PCE (Personal Income & Outlays)",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bea",
+      "confidence": "estimate",
+      "days_until": 3,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-09-04",
+      "time_et": "08:30",
+      "event": "Aug Employment / NFP",
+      "axis": "labor",
+      "binary": true,
+      "source": "bls",
+      "confidence": "pattern",
+      "days_until": 10,
+      "kind": "macro"
+    },
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    }
+  ],
+  "earnings": [
+    {
+      "date": "2026-08-26",
+      "event": "NVDA earnings",
+      "ticker": "NVDA",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 1,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-08-28",
+      "event": "FRO earnings",
+      "ticker": "FRO",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 3,
+      "kind": "earnings"
+    },
+    {
+      "date": "2026-09-02",
+      "event": "AVGO earnings",
+      "ticker": "AVGO",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 8,
+      "kind": "earnings"
+    }
+  ],
+  "structural": [
+    {
+      "date": "2026-08-31",
+      "event": "msci quarterly review",
+      "ticker": null,
+      "axis": "rebalance",
+      "binary": false,
+      "source": "derived",
+      "confidence": "pattern",
+      "note": "MSCI 분기 리뷰 — 편출입 확정일 종가에 패시브 물량이 집중된다. 편입/편출 종목은 리뷰 발표일(보통 2주 전)에 이미 알려진다.",
+      "days_until": 6,
+      "kind": "structural"
+    }
+  ]
+}

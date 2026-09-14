@@ -1,0 +1,229 @@
+{
+ "_README": [
+  "'그 정보가 어디 있고, 거기서 뭘 할 수 있고, 바로 들어가는 URL 이 뭔지' 금융 데스크용 지도.",
+  "브라우저를 띄우기 전에 여기부터 본다 — 가면 안 되는 곳과, 브라우저보다 싼 경로를 미리 안다.",
+  "",
+  "access 4종:",
+  "  open    — 로그인 없이 그냥 된다. 제일 좋다.",
+  "  session — 사람이 디버그 프로필에 1회 로그인해두면 그 뒤로 계속 조회 가능. ports/profile 필드가 그 경계다.",
+  "  api     — 브라우저 쓰지 마라. prefer 에 이 리포가 이미 소유한 더 싼 경로가 있다(P1).",
+  "  blocked — 하지 마라. why 에 이유.",
+  "",
+  "can 이 있으면 그 세션으로 되돌릴 수 없는 행동(주문·제출)이 된다는 뜻 — 실행 직전에 사람에게 묻는다(CLAUDE.md P5·규약).",
+  "can 이 없고 has 만 있으면 읽기 전용으로 보라는 뜻. 기본값은 '조회만' 이다.",
+  "prefer 가 있으면 그게 우선이다 — 모듈이 이미 소유한 기능을 브라우저로 다시 긁으면 P1 위반이다.",
+  "",
+  "쓰는 법:  python -X utf8 -m module_webctl find 공시",
+  "          python -X utf8 -m module_webctl go dart 공시검색",
+  "          python -X utf8 -m module_webctl map session",
+  "",
+  "이 파일엔 비밀이 없다(시크릿의 단일 원본은 리포 루트 .env). 셀렉터·URL 은 사이트 개편으로 깨진다 —",
+  "깨진 걸 발견하면 그 자리에서 이 JSON 을 고치고 함정은 SITES.md 에 한 줄 남긴다."
+ ],
+ "dart": {
+  "label": "DART 전자공시 (KR)",
+  "access": "open",
+  "has": [
+   "공시 원문",
+   "사업보고서",
+   "재무제표",
+   "지분공시",
+   "주요사항보고"
+  ],
+  "go": {
+   "공시검색": "https://dart.fss.or.kr/dsab007/main.do",
+   "당일공시": "https://dart.fss.or.kr/dsac001/mainAll.do",
+   "기업개황": "https://dart.fss.or.kr/dsae001/main.do"
+  },
+  "prefer": "python -X utf8 -m module_disclosure <티커>  — 공시 목록·분류는 이 모듈이 소유(OpenDART, DART_API_KEY). 브라우저는 API 가 안 주는 원문 뷰어/첨부 표를 볼 때만.",
+  "note": "로그인은 'My공시' 알림 개인화용일 뿐 — 데이터는 전부 익명 접근된다. 세션 만들지 마라."
+ },
+ "kind": {
+  "label": "KIND 한국거래소 상장공시",
+  "access": "open",
+  "has": [
+   "상장법인 공시",
+   "IPO·신규상장",
+   "불성실공시·관리종목",
+   "투자주의 환기"
+  ],
+  "go": {
+   "홈": "https://kind.krx.co.kr/"
+  },
+  "note": "DART 에 없는 거래소 자체 공시(관리종목·불성실공시)가 여기 있다. 첫 사용 때 URL·셀렉터를 확인하고 이 항목을 고쳐라."
+ },
+ "sec_edgar": {
+  "label": "SEC EDGAR (US)",
+  "access": "open",
+  "has": [
+   "10-K/10-Q/8-K 원문",
+   "Form 4 내부자거래",
+   "13F 보유",
+   "S-1",
+   "424B5/FWP 증권발행",
+   "10-Q exhibit(계약 원문)",
+   "지분법·VIE 주석"
+  ],
+  "go": {
+   "기업검색": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={ticker}&type=10-K&dateb=&owner=include&count=40",
+   "전문검색": "https://www.sec.gov/edgar/search/#/q=%22{query}%22",
+   "전문검색API(브라우저 불필요)": "https://efts.sec.gov/LATEST/search-index?q=%22{query}%22&ciks={cik10}",
+   "파일목록JSON": "https://www.sec.gov/Archives/edgar/data/{cik}/{accession_nodash}/index.json",
+   "제출이력JSON": "https://data.sec.gov/submissions/CIK{cik10}.json"
+  },
+  "prefer": "python -X utf8 -m module_disclosure_us <TICKER>  — ticker→CIK 해석과 공시 목록은 이 모듈이 소유. 브라우저는 원문 특정 절(MD&A·각주)을 읽을 때만.",
+  "note": "SEC 는 User-Agent 를 요구한다(모듈이 이미 붙여 보낸다). 대량 수집 금지 — rate limit 이 있다. ★2026-09-03 실측: (1) 디렉토리 HTML 을 긁으면 SEC 네비게이션 링크만 나온다 — 반드시 index.json. (2) 8-K 가 \"10-Q 에 exhibit 로 낸다\" 고 적으면 그 10-Q index.json 에 계약 원문이 있다(NVDA EX-10.1, 43,964자). (3) efts 전문검색은 키·로그인 없이 특정 발행인의 전 파일링에서 구문 유무를 초 단위로 판정한다 — 사전공약의 \"회사가 이걸 공시했나\" 레그 채점에 정확히 맞는 도구. (4) 비상장 상대방은 «상장 파트너의 지분법/VIE 주석»으로 측정된다(MSFT 10-Q 가 OpenAI 27% 지분법)."
+ },
+ "naver_finance": {
+  "label": "네이버페이 증권 (KR 시세·리서치)",
+  "access": "open",
+  "has": [
+   "국내주식 시세",
+   "일별 OHLCV",
+   "종목 뉴스",
+   "재무 요약"
+  ],
+  "go": {
+   "종목": "https://finance.naver.com/item/main.naver?code={티커6자리}",
+   "일별시세": "https://finance.naver.com/item/sise_day.naver?code={티커6자리}"
+  },
+  "prefer": "python -X utf8 -m module_KIS <티커>  — 시세·OHLCV·수급의 단일 원본은 KIS 다(P1). 여기는 KIS 가 안 주는 것(리서치 리포트 원문·종목 토론 흐름)만.",
+  "note": "api.finance.naver.com/siseJson.naver?symbol={티커}&requestType=1&startTime=YYYYMMDD&endTime=YYYYMMDD&timeframe=day 는 키·로그인 불필요 — 브라우저보다 이쪽이 싸다."
+ },
+ "naver_research": {
+  "label": "네이버 증권 리서치 리포트 (증권사 원문)",
+  "access": "open",
+  "has": [
+   "종목분석 리포트(날짜·제목·투자의견·목표가)",
+   "산업분석 리포트",
+   "시황·전략"
+  ],
+  "go": {
+   "종목분석_목록": "https://finance.naver.com/research/company_list.naver?searchType=itemCode&itemCode={티커6자리}",
+   "종목분석_본문": "https://finance.naver.com/research/company_read.naver?nid={nid}&page=1&searchType=itemCode&itemCode={티커6자리}",
+   "산업분석_목록": "https://finance.naver.com/research/industry_list.naver"
+  },
+  "prefer": "card-factory 스킬의 `scripts/01_ingest.py --source naver` 가 신규분만 증분 수집한다 — 사고카드 코퍼스용이면 그쪽이 단일 원본.",
+  "note": "리포트는 사건(뉴스)이 아니라 분석가 사고다 — 뉴스 DB(module_news_data)와 섞지 마라."
+ },
+ "seekingalpha": {
+  "label": "Seeking Alpha (US 애널리스트 글)",
+  "access": "session",
+  "has": [
+   "개별 종목 분석글",
+   "실적 콜 트랜스크립트(일부)",
+   "컨센서스 코멘터리"
+  ],
+  "ports": [
+   9222
+  ],
+  "profile": "chrome-debug-degaja",
+  "prefer": "card-factory 스킬의 `scripts/01_ingest.py --source seekingalpha --limit N`",
+  "note": "로그인·페이월 구간이 있다. 목록 대량 수집 금지(약관) — 필요한 글 몇 편만. 캡차가 뜨면 그날은 그만 두드린다."
+ },
+ "timefolio_contest": {
+  "label": "타임폴리오 콘테스트 계좌 (집행 채널)",
+  "access": "session",
+  "has": [
+   "계좌 평가금액·투자비중",
+   "보유 종목·일간등락",
+   "주문 내역"
+  ],
+  "can": [
+   "주문 제출 ★되돌릴 수 없음 — 사람 확인 없이 절대 클릭하지 마라"
+  ],
+  "ports": [
+   9222,
+   9223
+  ],
+  "profile": "chrome-debug-carmacro",
+  "go": {
+   "콘테스트": "https://contest.timefolio.net/"
+  },
+  "prefer": "python -X utf8 -m module_timefolio account|holdings|plan  — 조회는 전부 모듈이 소유. 이 지도로 직접 DOM 을 치지 마라.",
+  "note": "포트가 계정 경계다. `.env` 의 TIMEFOLIO_EXECUTE=1 이 살아 있어 `--execute` 하나로 제출된다(MODULE_MAP module_timefolio). 9222 를 다른 프로필이 점유한 사례가 반복 기록됐다 → `python -m module_webctl up --want timefolio` 로 점유자를 확인하고 붙어라."
+ },
+ "krx_data": {
+  "label": "KRX 정보데이터시스템",
+  "access": "api",
+  "has": [
+   "지수·종목 시세",
+   "투자자별 거래실적",
+   "공매도 통계"
+  ],
+  "go": {
+   "홈": "http://data.krx.co.kr/"
+  },
+  "prefer": "python -X utf8 -m module_KIS <티커> --investor N (수급) · pykrx(공매도 등). KRX 웹은 세션 토큰(OTP)을 요구해 브라우저 경로가 제일 비싸다.",
+  "note": "pykrx 경로에서 KRX 로그인/세션 함정이 실측된 적 있다 — 실패하면 KIS 로 갈아타고 여기 note 를 갱신해라."
+ },
+ "fred": {
+  "label": "FRED (미 연준 경제지표)",
+  "access": "api",
+  "has": [
+   "금리·물가·달러",
+   "신용/유동성(HY OAS·NFCI)"
+  ],
+  "go": {
+   "시리즈": "https://fred.stlouisfed.org/series/{series_id}"
+  },
+  "prefer": "python -X utf8 -m module_macro_us --series hy_oas,nfci  (FRED_API_KEY). 브라우저로 갈 이유가 없다 — 차트 이미지를 사람이 볼 때만."
+ },
+ "kis_api": {
+  "label": "한국투자증권 Open API",
+  "access": "api",
+  "has": [
+   "국내/미국 시세",
+   "투자자별 수급",
+   "계좌 잔고"
+  ],
+  "can": [
+   "주문 — 휴먼 트리거 전용(기본 드라이런, --execute 는 사람만)"
+  ],
+  "prefer": "python -X utf8 -m module_KIS ...  — 인증·시세·수급·주문 전 계열의 단일 원본.",
+  "note": "브라우저(HTS/MTS 웹)로 우회하지 마라. 토큰 캐시는 리포 루트 .kis_token_cache.json."
+ },
+ "customs_trade": {
+  "label": "관세청 수출입무역통계 (CTS)",
+  "access": "open",
+  "has": [
+   "HS부호(10자리)별 수출입 실적",
+   "연도별·월별 시계열",
+   "국가별 실적",
+   "무역수지"
+  ],
+  "go": {
+   "홈": "https://tradedata.go.kr/cts/index.do",
+   "수출입실적(품목별·HS10)": "SPA — ets_f_prccMenuLoad('/cts/hmpg/openETS0100019Q.do',{menuId:'ETS_MNK_10200000'}) 를 eval 로 부른다",
+   "HS부호 조회": "https://unipass.customs.go.kr/clip/index.do?opnurl=/hsinfosrch/openULS0201013Q.do"
+  },
+  "note": "SPA 라 URL 이 안 바뀐다 — 메뉴 이동은 ets_f_prccMenuLoad() eval. 폼 id: ETS0100019Q_hsSgn(HS) · ETS0100019Q_formYearPc/toYearPc(연도) · radioMonthPc(월별 전환). 조회기간 5년 제한 · alert 이 뜨면 렌더러가 잠긴다(SITES.md).",
+  "prefer": "data.go.kr '관세청_품목별 수출입실적'(nitemtrade) API 가 있으나 미신청 상태면 403 — 신청 전엔 브라우저가 유일 경로"
+ },
+ "ms_newsroom": {
+  "label": "Microsoft Source (경쟁사 1차 뉴스룸)",
+  "access": "open",
+  "has": [
+   "자체 실리콘(Maia) 발표",
+   "제품 출시일",
+   "회사 자체 성능 주장"
+  ],
+  "go": {
+   "검색": "https://news.microsoft.com/source/?s={query}"
+  },
+  "prefer": "newtab 으로 목적지를 먼저 연 뒤 --match. 목록 페이지는 렌더되어 text 로 바로 읽힌다.",
+  "note": "★2026-09-03 실측: Maia 200 이 2026-01-26 \"now online in Azure, 30% better performance per dollar\" 로 확인됨. Maia 300 은 이 뉴스룸에 0건 ⇒ 보도만 존재. 경쟁 제품은 «보도» 말고 여기부터 본다. 상세 URL 은 추측하면 404 — 검색 결과에서 링크를 뽑아라."
+ },
+ "nvidia_developer": {
+  "label": "NVIDIA Developer (CUDA)",
+  "access": "open",
+  "has": [
+   "CUDA 툴킷/문서"
+  ],
+  "go": {
+   "CUDA": "https://developer.nvidia.com/cuda-zone"
+  },
+  "prefer": "—",
+  "note": "🔴 헛걸음 기록: 개발자 수·설치기반 «숫자가 없다»(2026-09-03 본문 확인). 10-K 도 형용사만 준다. CUDA 해자는 숫자로 인용 불가 — 다음 후보는 GTC 키노트 자료."
+ }
+}

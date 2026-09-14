@@ -1,0 +1,171 @@
+{
+  "ticker": "INSW",
+  "company_name": "International Seaways, Inc.",
+  "sector": "Energy",
+  "industry": "Oil & Gas Midstream",
+  "price": 103.65,
+  "market_cap": 5133920768,
+  "trailing_pe": 6.627238,
+  "forward_pe": 16.453243,
+  "peg_ratio": null,
+  "price_to_sales": 4.070105,
+  "price_to_book": 2.2658215,
+  "trailing_eps": 15.64,
+  "forward_eps": 6.29967,
+  "fifty_two_week_high": 106.73,
+  "fifty_two_week_low": 42.26,
+  "target_low": 88.0,
+  "target_mean": 102.16667,
+  "target_high": 120.0,
+  "target_median": 103.5,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 0,
+      "buy": 5,
+      "hold": 1,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 0,
+      "buy": 5,
+      "hold": 1,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 0,
+      "buy": 5,
+      "hold": 1,
+      "sell": 0,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      467287000.0
+    ],
+    [
+      "2026-03-31",
+      325476000.0
+    ],
+    [
+      "2025-12-31",
+      267879000.0
+    ],
+    [
+      "2025-09-30",
+      196388000.0
+    ],
+    [
+      "2025-06-30",
+      195641000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      467287000.0
+    ],
+    [
+      "2026-03-31",
+      325476000.0
+    ],
+    [
+      "2025-09-30",
+      196388000.0
+    ],
+    [
+      "2025-06-30",
+      195641000.0
+    ],
+    [
+      "2025-03-31",
+      183394000.0
+    ],
+    [
+      "2024-09-30",
+      225190000.0
+    ],
+    [
+      "2024-06-30",
+      257409000.0
+    ],
+    [
+      "2024-03-31",
+      274401000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 2.76665,
+      "7daysAgo": 2.1253,
+      "30daysAgo": 2.1103,
+      "60daysAgo": 1.8528,
+      "90daysAgo": 1.8525
+    },
+    {
+      "period": "+1q",
+      "current": 2.24043,
+      "7daysAgo": 2.21706,
+      "30daysAgo": 2.43206,
+      "60daysAgo": 2.46956,
+      "90daysAgo": 2.47
+    },
+    {
+      "period": "0y",
+      "current": 14.82193,
+      "7daysAgo": 14.24,
+      "30daysAgo": 14.13939,
+      "60daysAgo": 13.89939,
+      "90daysAgo": 13.9225
+    },
+    {
+      "period": "+1y",
+      "current": 6.29967,
+      "7daysAgo": 6.25736,
+      "30daysAgo": 6.44136,
+      "60daysAgo": 6.41936,
+      "90daysAgo": 6.43
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 3.0,
+      "upLast30days": 4.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 2.0,
+      "upLast30days": 1.0,
+      "downLast30days": 3.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 0.0,
+      "upLast30days": 3.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 2.0,
+      "upLast30days": 2.0,
+      "downLast30days": 3.0,
+      "downLast7Days": 1.0
+    }
+  ],
+  "business_summary": "International Seaways, Inc. owns and operates a fleet of oceangoing vessels for the transportation of crude oil and petroleum products in the international flag trade. The company operates in two segments: Crude Tankers and Product Carriers. It operates fleet of 70 vessels of VLCCs, Suezmaxes, and Aframaxes, as well as MRs, LR1, and LR2 product carrier. The company provides ship-to-ship (STS) lightering support services, such as hoses and fenders; and full-service STS lightering that includes lightering vessels. It also offers MR product carriers, including IMO III compliant for carrying edible oils, such as palm and vegetable oil, increasing flexibility when switching between cargo grades. The company serves independent and state-owned oil companies, oil traders, refinery operators, and international government entities. The company was formerly known as OSG International, Inc. and changed its name to International Seaways, Inc. in October 2016. International Seaways, Inc. was incorporated in 1999 and is headquartered in New York, New York.",
+  "next_earnings_date": "2026-11-05",
+  "beta": -0.101,
+  "dividend_yield": 7.89
+}

@@ -1,0 +1,20 @@
+=== P136: (^FVX - ^TYX) 3-session CHANGE, in bp ===
+  full n 563
+  trailing252: {'n': 252, 'mean': 0.5925, 'sd': 4.343, 'p05': -6.145, 'p15': -3.67, 'p50': 0.45, 'p85': 5.035, 'p95': 8.135}
+  STATE @09-03: spread -73.4bp · 3-session change +0.8bp
+    (09-01 change +8.4 · 09-02 +1.0)
+  state percentile: 52.4
+
+=== P137: EW{Comm-ex-Alphabet} minus EW{GOOGL,GOOG}, 5-session return spread, pp ===
+  full n 561
+  trailing252: {'n': 252, 'mean': -0.9734, 'sd': 5.025, 'p05': -10.3994, 'p15': -6.0079, 'p50': -0.2794, 'p85': 4.3168, 'p95': 6.6174}
+  STATE @09-03: +0.6492pp
+  state percentile: 63.1
+  members priced 09-03: {'META': 610.68, 'NFLX': 82.67, 'TMUS': 188.02, 'VZ': 50.59, 'DIS': 107.16, 'T': 26.19, 'CMCSA': 26.65, 'WBD': 28.37, 'TTWO': 214.13, 'LYV': 177.49, 'GOOGL': 342.48, 'GOOG': 339.08}
+
+=== P138: USDJPY 5-session % change ===
+  full n 560
+  trailing252: {'n': 252, 'mean': 0.1643, 'sd': 1.1116, 'p05': -2.1918, 'p15': -0.6781, 'p50': 0.2695, 'p85': 1.0596, 'p95': 1.479}
+  STATE @09-03: USDJPY 158.923 · 5-session change -0.2085%
+  state percentile: 25.0
+  KPI ^TYX 5-session change: +5.2bp · level 5.243

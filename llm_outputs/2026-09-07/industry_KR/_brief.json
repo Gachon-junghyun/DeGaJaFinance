@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-07",
+  "scope": "domestic",
+  "denominator": {
+    "articles": 508,
+    "clusters": 272,
+    "events_2src_plus": 70,
+    "market_events": 49,
+    "nonmarket_events": 21,
+    "subevents_recovered": 8,
+    "single_source_clusters": 202,
+    "excluded_not_news": {
+      "translation_dup": 22
+    }
+  },
+  "head": 1,
+  "body": 48,
+  "tail": 0,
+  "single_source_shown": 43,
+  "nonmarket_shown": 4,
+  "bytes": 11023,
+  "approx_tokens": 7716
+}
+
+(전체 → C:\Users\fivep\DeGaJaFinance\out\news_brief\2026-09-07_domestic.json)

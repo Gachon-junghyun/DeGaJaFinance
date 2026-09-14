@@ -6,6 +6,12 @@
       "event": "un-gated defense diversifier — CONFIRMED-TURN, uncorrelated ",
       "conf": 0.65,
       "updated": "2026-07-15"
+    },
+    "backlog/book-to-bill": {
+      "dir": "+강",
+      "event": "",
+      "conf": 0.8,
+      "updated": "2026-07-23"
     }
   }
 }

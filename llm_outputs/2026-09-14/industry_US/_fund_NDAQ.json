@@ -1,0 +1,179 @@
+{
+  "ticker": "NDAQ",
+  "company_name": "Nasdaq, Inc.",
+  "sector": "Financial Services",
+  "industry": "Financial Data & Stock Exchanges",
+  "price": 91.19,
+  "market_cap": 50973147136,
+  "trailing_pe": 26.586006,
+  "forward_pe": 19.48746,
+  "peg_ratio": 1.69,
+  "price_to_sales": 9.079648,
+  "price_to_book": 4.274999,
+  "trailing_eps": 3.43,
+  "forward_eps": 4.67942,
+  "fifty_two_week_high": 101.79,
+  "fifty_two_week_low": 76.55,
+  "target_low": 84.0,
+  "target_mean": 109.66667,
+  "target_high": 135.0,
+  "target_median": 108.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 6,
+      "buy": 8,
+      "hold": 2,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 6,
+      "buy": 8,
+      "hold": 2,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 6,
+      "buy": 8,
+      "hold": 2,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 6,
+      "buy": 8,
+      "hold": 3,
+      "sell": 0,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      2532000000.0
+    ],
+    [
+      "2026-03-31",
+      2137000000.0
+    ],
+    [
+      "2025-12-31",
+      2124000000.0
+    ],
+    [
+      "2025-09-30",
+      1958000000.0
+    ],
+    [
+      "2025-06-30",
+      2101000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      2532000000.0
+    ],
+    [
+      "2026-03-31",
+      2137000000.0
+    ],
+    [
+      "2025-09-30",
+      1958000000.0
+    ],
+    [
+      "2025-06-30",
+      2090000000.0
+    ],
+    [
+      "2025-03-31",
+      2090000000.0
+    ],
+    [
+      "2024-09-30",
+      1902000000.0
+    ],
+    [
+      "2024-06-30",
+      1792000000.0
+    ],
+    [
+      "2024-03-31",
+      1674000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 1.02689,
+      "7daysAgo": 1.02689,
+      "30daysAgo": 1.02829,
+      "60daysAgo": 0.98488,
+      "90daysAgo": 0.98488
+    },
+    {
+      "period": "+1q",
+      "current": 1.08327,
+      "7daysAgo": 1.08327,
+      "30daysAgo": 1.0839,
+      "60daysAgo": 1.04432,
+      "90daysAgo": 1.0436
+    },
+    {
+      "period": "0y",
+      "current": 4.13505,
+      "7daysAgo": 4.13591,
+      "30daysAgo": 4.1376,
+      "60daysAgo": 3.98651,
+      "90daysAgo": 3.94208
+    },
+    {
+      "period": "+1y",
+      "current": 4.67942,
+      "7daysAgo": 4.67847,
+      "30daysAgo": 4.67336,
+      "60daysAgo": 4.4987,
+      "90daysAgo": 4.4366
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 0.0,
+      "upLast30days": 11.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 0.0,
+      "upLast30days": 11.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 1.0,
+      "upLast30days": 16.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 1.0,
+      "upLast30days": 3.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 1.0
+    }
+  ],
+  "business_summary": "Nasdaq, Inc. operates as a technology company that serves capital markets and other industries in the United States and internationally. It operates through three segments: Capital Access Platforms, Financial Technology, and Market Services. The company distributes historical and real-time market data; develops and licenses Nasdaq-branded indices and financial products; provides investor relations intelligence, governance solutions, and sustainability solution products for public and private companies, and organizations, as well as insights and workflow solutions; and operates listing platforms. It also offers Verafin, a cloud-based platform to detect, investigate, and report money laundering and financial frauds; AxiomSL, a risk data management and regulatory reporting solution; cloud-enabled and on-premises surveillance solutions to assist in complying with market rules, regulations, and internal market surveillance policies; Calypso, a platform providing cross-asset, front-to-back trading, treasury, risk, and collateral management solutions; and trade management and colocation services, as well as handles assets comprising cash equities, equity derivatives, currencies, various interest-bearing securities, commodities, energy products, and digital currencies. In addition, the company provides equity derivative trading and clearing, cash equity trading and fixed income, currency and commodities trading, and fixed income trading and clearing services, as well as tape plan data services; operates various exchanges, including derivatives, commodities, cash equity, debt, structured products, and exchange traded products; and offers clearing, settlement, and central depository services. The company was formerly known as The NASDAQ OMX Group, Inc. and changed its name to Nasdaq, Inc. in September 2015. Nasdaq, Inc. was founded in 1971 and is headquartered in New York, New York.",
+  "next_earnings_date": "2026-10-22",
+  "beta": 0.974,
+  "dividend_yield": 1.27
+}

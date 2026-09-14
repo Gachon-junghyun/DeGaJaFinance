@@ -1,0 +1,138 @@
+############ risk_units --days 250
+     투자 10,641,367 + 현금 7,636,234 = **총자산 18,277,602 KRW** (현금 41.8%)
+
+     ── 측정 단위별 (상한 MAX_THEME_PCT = 40.0%) ──
+     U0:   9.81%     1,793,385 KRW  [MPC, PSX]
+     U10:   8.71%     1,591,067 KRW  [NVDA]
+     U1:   6.47%     1,183,200 KRW  [028050]
+     U2:   5.42%       990,000 KRW  [316140]
+     U8:   5.17%       945,847 KRW  [NDAQ]
+     U11:   5.11%       934,467 KRW  [RTX]
+     U5:   3.52%       643,223 KRW  [ETN]
+     U4:   3.28%       598,603 KRW  [AVGO]
+     U3:   3.24%       592,523 KRW  [ANET]
+     U7:   3.00%       549,072 KRW  [MET]
+     U6:   2.38%       434,507 KRW  [HPE]
+     U9:   2.11%       385,473 KRW  [NUE]
+
+     ── 현행 테마 라벨별 (지금 상한이 실제로 재는 것) ──
+      15.22%  AI-compute-EPICENTER
+       9.81%  energy-refining
+       6.47%  KR-E&C/plant
+       5.42%  KR-bank-holding
+       5.17%  exchanges/FIN
+       5.11%  defense-missile
+       3.52%  AI-power/electrical
+       3.00%  life-insurer/FIN
+       2.38%  AI-compute-chain
+       2.11%  steel/MATR
+
+     ── 단일 종목 (상한 MAX_POS_PCT = 25.0%) ──
+       8.71%  NVDA     5주
+       7.09%  PSX      4주
+       6.47%  028050   24주
+       5.42%  316140   30주
+       5.17%  NDAQ     7주
+       5.11%  RTX      3주
+       3.52%  ETN      1주
+       3.28%  AVGO     1주
+       3.24%  ANET     2주
+       3.00%  MET      4주
+       2.72%  MPC      1주
+       2.38%  HPE      5주
+       2.11%  NUE      1주
+
+  ⚠ 분석 산출물이다. 매수/매도 조언·사이즈 권고 없음(P4). 단위를 재줄 뿐이다.
+[saved] C:\Users\fivep\DeGaJaFinance\llm_outputs\2026-08-14\RISK_UNITS.json
+############ risk_units --days 500
+  ══ 노출 (총자산 대비) — 가격 asof 2026-08-12 · fx 1,417.2 [USDKRW=X 2026-08-13] ══
+     투자 10,641,042 + 현금 7,636,234 = **총자산 18,277,276 KRW** (현금 41.8%)
+
+     ── 측정 단위별 (상한 MAX_THEME_PCT = 40.0%) ──
+     U1:  11.98%     2,189,599 KRW  [AVGO, NVDA]
+     U2:   9.81%     1,793,385 KRW  [MPC, PSX]
+     U0:   6.76%     1,235,490 KRW  [ANET, ETN]
+          ⚠ 이 한 단위를 테마 라벨은 **2개로 쪼개 센다**: AI-compute-EPICENTER, AI-power/electrical
+     U3:   6.47%     1,183,200 KRW  [028050]
+     U4:   5.42%       990,000 KRW  [316140]
+     U7:   5.17%       945,847 KRW  [NDAQ]
+     U9:   5.11%       934,467 KRW  [RTX]
+     U6:   3.00%       549,072 KRW  [MET]
+     U5:   2.38%       434,507 KRW  [HPE]
+     U8:   2.11%       385,473 KRW  [NUE]
+
+     ── 현행 테마 라벨별 (지금 상한이 실제로 재는 것) ──
+      15.22%  AI-compute-EPICENTER
+       9.81%  energy-refining
+       6.47%  KR-E&C/plant
+       5.42%  KR-bank-holding
+       5.17%  exchanges/FIN
+       5.11%  defense-missile
+       3.52%  AI-power/electrical
+       3.00%  life-insurer/FIN
+       2.38%  AI-compute-chain
+       2.11%  steel/MATR
+
+     ── 단일 종목 (상한 MAX_POS_PCT = 25.0%) ──
+       8.70%  NVDA     5주
+       7.09%  PSX      4주
+       6.47%  028050   24주
+       5.42%  316140   30주
+       5.17%  NDAQ     7주
+       5.11%  RTX      3주
+       3.52%  ETN      1주
+       3.28%  AVGO     1주
+       3.24%  ANET     2주
+       3.00%  MET      4주
+       2.72%  MPC      1주
+       2.38%  HPE      5주
+       2.11%  NUE      1주
+
+  ⚠ 분석 산출물이다. 매수/매도 조언·사이즈 권고 없음(P4). 단위를 재줄 뿐이다.
+[saved] C:\Users\fivep\DeGaJaFinance\llm_outputs\2026-08-14\RISK_UNITS.json
+############ risk_units --days 750
+  ══ 노출 (총자산 대비) — 가격 asof 2026-08-13 · fx 1,417.6 [USDKRW=X 2026-08-13] ══
+     투자 10,642,979 + 현금 7,637,091 = **총자산 18,280,070 KRW** (현금 41.8%)
+
+     ── 측정 단위별 (상한 MAX_THEME_PCT = 40.0%) ──
+     U0:  11.98%     2,190,012 KRW  [AVGO, NVDA]
+     U1:   9.81%     1,793,954 KRW  [MPC, PSX]
+     U2:   6.47%     1,183,200 KRW  [028050]
+     U3:   5.42%       990,000 KRW  [316140]
+     U8:   5.18%       946,148 KRW  [NDAQ]
+     U10:   5.11%       934,615 KRW  [RTX]
+     U5:   3.52%       643,455 KRW  [ETN]
+     U4:   3.24%       592,229 KRW  [ANET]
+     U7:   3.00%       549,247 KRW  [MET]
+     U6:   2.38%       434,504 KRW  [HPE]
+     U9:   2.11%       385,617 KRW  [NUE]
+
+     ── 현행 테마 라벨별 (지금 상한이 실제로 재는 것) ──
+      15.22%  AI-compute-EPICENTER
+       9.81%  energy-refining
+       6.47%  KR-E&C/plant
+       5.42%  KR-bank-holding
+       5.18%  exchanges/FIN
+       5.11%  defense-missile
+       3.52%  AI-power/electrical
+       3.00%  life-insurer/FIN
+       2.38%  AI-compute-chain
+       2.11%  steel/MATR
+
+     ── 단일 종목 (상한 MAX_POS_PCT = 25.0%) ──
+       8.70%  NVDA     5주
+       7.09%  PSX      4주
+       6.47%  028050   24주
+       5.42%  316140   30주
+       5.18%  NDAQ     7주
+       5.11%  RTX      3주
+       3.52%  ETN      1주
+       3.28%  AVGO     1주
+       3.24%  ANET     2주
+       3.00%  MET      4주
+       2.72%  MPC      1주
+       2.38%  HPE      5주
+       2.11%  NUE      1주
+
+  ⚠ 분석 산출물이다. 매수/매도 조언·사이즈 권고 없음(P4). 단위를 재줄 뿐이다.
+[saved] C:\Users\fivep\DeGaJaFinance\llm_outputs\2026-08-14\RISK_UNITS.json

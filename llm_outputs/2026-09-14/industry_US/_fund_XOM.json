@@ -1,0 +1,179 @@
+{
+  "ticker": "XOM",
+  "company_name": "ExxonMobil Holdings Corporation",
+  "sector": "Energy",
+  "industry": "Oil & Gas Integrated",
+  "price": 165.99,
+  "market_cap": 682536271872,
+  "trailing_pe": 21.362936,
+  "forward_pe": 15.382733,
+  "peg_ratio": 1.42,
+  "price_to_sales": 1.890368,
+  "price_to_book": 2.6314204,
+  "trailing_eps": 7.77,
+  "forward_eps": 10.79067,
+  "fifty_two_week_high": 176.41,
+  "fifty_two_week_low": 110.39,
+  "target_low": 142.0,
+  "target_mean": 170.90909,
+  "target_high": 200.0,
+  "target_median": 170.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 3,
+      "buy": 7,
+      "hold": 15,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 3,
+      "buy": 7,
+      "hold": 15,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 3,
+      "buy": 7,
+      "hold": 14,
+      "sell": 1,
+      "strongSell": 0
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 3,
+      "buy": 8,
+      "hold": 12,
+      "sell": 1,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      114529000000.0
+    ],
+    [
+      "2026-03-31",
+      83161000000.0
+    ],
+    [
+      "2025-12-31",
+      80039000000.0
+    ],
+    [
+      "2025-09-30",
+      83331000000.0
+    ],
+    [
+      "2025-06-30",
+      79477000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-03-31",
+      85138000000.0
+    ],
+    [
+      "2025-09-30",
+      85294000000.0
+    ],
+    [
+      "2025-06-30",
+      81506000000.0
+    ],
+    [
+      "2025-03-31",
+      83130000000.0
+    ],
+    [
+      "2024-09-30",
+      90016000000.0
+    ],
+    [
+      "2024-06-30",
+      93060000000.0
+    ],
+    [
+      "2024-03-31",
+      83083000000.0
+    ],
+    [
+      "2023-09-30",
+      90760000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 3.65947,
+      "7daysAgo": 3.58701,
+      "30daysAgo": 3.53983,
+      "60daysAgo": 3.2663,
+      "90daysAgo": 3.49299
+    },
+    {
+      "period": "+1q",
+      "current": 3.06273,
+      "7daysAgo": 2.99819,
+      "30daysAgo": 2.98159,
+      "60daysAgo": 2.88148,
+      "90daysAgo": 3.051
+    },
+    {
+      "period": "0y",
+      "current": 11.74649,
+      "7daysAgo": 11.61792,
+      "30daysAgo": 11.53592,
+      "60daysAgo": 11.03352,
+      "90daysAgo": 11.30079
+    },
+    {
+      "period": "+1y",
+      "current": 10.79067,
+      "7daysAgo": 10.64294,
+      "30daysAgo": 10.53151,
+      "60daysAgo": 10.47171,
+      "90daysAgo": 10.63834
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 1.0,
+      "upLast30days": 3.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 1.0,
+      "upLast30days": 7.0,
+      "downLast30days": 4.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 2.0,
+      "upLast30days": 12.0,
+      "downLast30days": 4.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 1.0,
+      "upLast30days": 6.0,
+      "downLast30days": 3.0,
+      "downLast7Days": 1.0
+    }
+  ],
+  "business_summary": "ExxonMobil Holdings Corporation engages in the exploration and production of crude oil and natural gas in the United States, Canada, and internationally. The company operates through Upstream, Energy Products, Chemical Products, and Specialty Products segments. Its Upstream segment explores for and produces crude oil and natural gas. The Energy Products segment offers fuels, aromatics, and catalysts, as well as licensing services. Its Chemical Products segment manufactures and sells olefins, polyolefins, and intermediates. The Specialty Products segment offers finished lubricants, basestocks, waxes, synthetics, elastomers, and resins. It is also involved in the manufacture, trade, transport, and sale of crude oil, natural gas, petroleum products, petrochemicals, and other specialty products; and pursuit of lower-emission and business opportunities, including carbon capture and storage, hydrogen, lower-emission fuels, Proxxima resin systems, carbon materials, low-carbon data center, and lithium. In addition, the company offers aviation fuel. It sells its products under the Exxon, Esso, and Mobil brands. The company was formerly known as Exxon Mobil Corporation and changed its name to ExxonMobil Holdings Corporation in July 2026. ExxonMobil Holdings Corporation was founded in 1870 and is headquartered in Spring, Texas.",
+  "next_earnings_date": "2026-10-30",
+  "beta": 0.175,
+  "dividend_yield": 2.48
+}

@@ -1,0 +1,179 @@
+{
+  "ticker": "CVX",
+  "company_name": "Chevron Corporation",
+  "sector": "Energy",
+  "industry": "Oil & Gas Integrated",
+  "price": 214.06,
+  "market_cap": 419900817408,
+  "trailing_pe": 20.62235,
+  "forward_pe": 15.889441,
+  "peg_ratio": 0.95,
+  "price_to_sales": 2.0054102,
+  "price_to_book": 2.2113636,
+  "trailing_eps": 10.38,
+  "forward_eps": 13.47184,
+  "fifty_two_week_high": 217.4,
+  "fifty_two_week_low": 146.49,
+  "target_low": 175.0,
+  "target_mean": 221.20833,
+  "target_high": 243.0,
+  "target_median": 224.5,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 6,
+      "buy": 14,
+      "hold": 4,
+      "sell": 1,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 6,
+      "buy": 14,
+      "hold": 4,
+      "sell": 1,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 6,
+      "buy": 14,
+      "hold": 4,
+      "sell": 1,
+      "strongSell": 0
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 5,
+      "buy": 13,
+      "hold": 5,
+      "sell": 1,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      67199000000.0
+    ],
+    [
+      "2026-03-31",
+      47556000000.0
+    ],
+    [
+      "2025-12-31",
+      45787000000.0
+    ],
+    [
+      "2025-09-30",
+      48169000000.0
+    ],
+    [
+      "2025-06-30",
+      44375000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      70055000000.0
+    ],
+    [
+      "2026-03-31",
+      48607000000.0
+    ],
+    [
+      "2025-09-30",
+      49726000000.0
+    ],
+    [
+      "2025-06-30",
+      44822000000.0
+    ],
+    [
+      "2025-03-31",
+      47610000000.0
+    ],
+    [
+      "2024-09-30",
+      50669000000.0
+    ],
+    [
+      "2024-06-30",
+      51181000000.0
+    ],
+    [
+      "2024-03-31",
+      48716000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 4.73462,
+      "7daysAgo": 4.68436,
+      "30daysAgo": 4.56226,
+      "60daysAgo": 4.11961,
+      "90daysAgo": 4.41945
+    },
+    {
+      "period": "+1q",
+      "current": 4.06828,
+      "7daysAgo": 3.96782,
+      "30daysAgo": 3.89251,
+      "60daysAgo": 3.60689,
+      "90daysAgo": 3.8124
+    },
+    {
+      "period": "0y",
+      "current": 16.13476,
+      "7daysAgo": 15.9365,
+      "30daysAgo": 15.83142,
+      "60daysAgo": 14.07156,
+      "90daysAgo": 14.52848
+    },
+    {
+      "period": "+1y",
+      "current": 13.47184,
+      "7daysAgo": 13.24101,
+      "30daysAgo": 12.96696,
+      "60daysAgo": 12.54452,
+      "90daysAgo": 12.56674
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 1.0,
+      "upLast30days": 4.0,
+      "downLast30days": 3.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 1.0,
+      "upLast30days": 2.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 0.0,
+      "upLast30days": 6.0,
+      "downLast30days": 4.0,
+      "downLast7Days": 2.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 3.0,
+      "upLast30days": 16.0,
+      "downLast30days": 7.0,
+      "downLast7Days": 1.0
+    }
+  ],
+  "business_summary": "Chevron Corporation, through its subsidiaries, engages in the integrated energy and chemicals operations. It operates through Upstream and Downstream segments. The Upstream segment engages in the exploration for, development, production, and transportation of crude oil and natural gas; processing, liquefaction, transportation, and regasification of liquefied natural gas; transportation of crude oil through pipelines; transportation, storage, and marketing of natural gas; carbon capture and storage; and operation of a gas-to-liquids plant. The Downstream segment refines crude oil into petroleum products; markets crude oil, refined products, and lubricants; manufactures and markets renewable fuels; transports crude oil and refined products through pipeline, marine vessel, motor equipment, and rail car; and manufactures and markets commodity petrochemicals, plastics for industrial uses, and fuel and lubricant additives. The company operates in North America, South America, Europe, Africa, Asia, and Australia. The company was formerly known as ChevronTexaco Corporation and changed its name to Chevron Corporation in May 2005. Chevron Corporation was founded in 1879 and is headquartered in Houston, Texas.",
+  "next_earnings_date": "2026-10-30",
+  "beta": 0.491,
+  "dividend_yield": 3.33
+}

@@ -45,6 +45,27 @@ class CDPClient:
         return r.json()
 
     @classmethod
+    def pages(cls, host: str = "localhost", port: int = 9222) -> list[dict]:
+        """page 타깃만. **남의 탭을 건드리기 전에 항상 이걸 먼저 본다**(CLAUDE.md P5)."""
+        return [t for t in cls.list_targets(host, port)
+                if t.get("type") == "page" and t.get("webSocketDebuggerUrl")]
+
+    @classmethod
+    def new_tab(cls, url: str = "about:blank", host: str = "localhost",
+                port: int = 9222) -> dict:
+        """새 탭을 연다. 남의 작업 탭을 안 건드리는 유일하게 안전한 시작점.
+
+        크롬 111+ 는 `PUT /json/new` 만 받는다(구버전은 GET) — 둘 다 시도한다.
+        """
+        import urllib.parse
+        ep = f"{cls.endpoint(host, port)}/json/new?{urllib.parse.quote(url, safe='')}"
+        r = requests.put(ep, timeout=5)
+        if r.status_code >= 400:
+            r = requests.get(ep, timeout=5)
+        r.raise_for_status()
+        return r.json()
+
+    @classmethod
     def version(cls, host: str = "localhost", port: int = 9222) -> dict:
         r = requests.get(f"{cls.endpoint(host, port)}/json/version", timeout=5)
         r.raise_for_status()
@@ -139,12 +160,20 @@ class CDPClient:
         return self.eval("document.title")
 
     # ── 스크린샷 ──────────────────────────────────────────────────
-    def screenshot(self, path: str, *, fmt: str = "jpeg", quality: int = 70) -> str:
+    def screenshot(self, path: str, *, fmt: str = "jpeg", quality: int = 70,
+                   full: bool = False) -> str:
+        """`full=True` 면 스크롤 전체(긴 표를 한 장에). 그때는 png 가 기본이 낫다."""
         import base64
 
         params = {"format": fmt}
         if fmt == "jpeg":
             params["quality"] = quality
+        if full:
+            m = self.send("Page.getLayoutMetrics")
+            size = m.get("cssContentSize") or m["contentSize"]
+            params.update(captureBeyondViewport=True,
+                          clip={"x": 0, "y": 0, "width": size["width"],
+                                "height": size["height"], "scale": 1})
         res = self.send("Page.captureScreenshot", params)
         data = base64.b64decode(res["data"])
         with open(path, "wb") as f:

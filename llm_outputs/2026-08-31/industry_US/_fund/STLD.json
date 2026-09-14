@@ -1,0 +1,179 @@
+{
+  "ticker": "STLD",
+  "company_name": "Steel Dynamics, Inc.",
+  "sector": "Basic Materials",
+  "industry": "Steel",
+  "price": 235.43,
+  "market_cap": 33743732736,
+  "trailing_pe": 21.363882,
+  "forward_pe": 12.426822,
+  "peg_ratio": 11.95,
+  "price_to_sales": 1.642936,
+  "price_to_book": 3.589364,
+  "trailing_eps": 11.02,
+  "forward_eps": 18.94531,
+  "fifty_two_week_high": 288.74,
+  "fifty_two_week_low": 126.88,
+  "target_low": 221.0,
+  "target_mean": 271.2143,
+  "target_high": 310.0,
+  "target_median": 266.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 2,
+      "buy": 7,
+      "hold": 4,
+      "sell": 1,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 2,
+      "buy": 7,
+      "hold": 3,
+      "sell": 1,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 2,
+      "buy": 6,
+      "hold": 3,
+      "sell": 1,
+      "strongSell": 0
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 2,
+      "buy": 6,
+      "hold": 3,
+      "sell": 1,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      6091557000.0
+    ],
+    [
+      "2026-03-31",
+      5204858000.0
+    ],
+    [
+      "2025-12-31",
+      4414048000.0
+    ],
+    [
+      "2025-09-30",
+      4828215000.0
+    ],
+    [
+      "2025-06-30",
+      4565123000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      6091557000.0
+    ],
+    [
+      "2026-03-31",
+      5204858000.0
+    ],
+    [
+      "2025-09-30",
+      4828215000.0
+    ],
+    [
+      "2025-06-30",
+      4565123000.0
+    ],
+    [
+      "2025-03-31",
+      4369195000.0
+    ],
+    [
+      "2024-09-30",
+      4341615000.0
+    ],
+    [
+      "2024-06-30",
+      4632634000.0
+    ],
+    [
+      "2024-03-31",
+      4694003000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 5.41269,
+      "7daysAgo": 5.39088,
+      "30daysAgo": 5.30794,
+      "60daysAgo": 5.22959,
+      "90daysAgo": 4.49031
+    },
+    {
+      "period": "+1q",
+      "current": 5.11933,
+      "7daysAgo": 5.03033,
+      "30daysAgo": 4.92925,
+      "60daysAgo": 4.93471,
+      "90daysAgo": 4.07425
+    },
+    {
+      "period": "0y",
+      "current": 16.84739,
+      "7daysAgo": 16.76278,
+      "30daysAgo": 16.61084,
+      "60daysAgo": 16.47302,
+      "90daysAgo": 15.02373
+    },
+    {
+      "period": "+1y",
+      "current": 18.94531,
+      "7daysAgo": 19.01838,
+      "30daysAgo": 18.86481,
+      "60daysAgo": 18.28186,
+      "90daysAgo": 17.01176
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 7.0,
+      "upLast30days": 5.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 2.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 4.0,
+      "upLast30days": 2.0,
+      "downLast30days": 3.0,
+      "downLast7Days": 4.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 8.0,
+      "upLast30days": 6.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 4.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 5.0,
+      "upLast30days": 5.0,
+      "downLast30days": 5.0,
+      "downLast7Days": 6.0
+    }
+  ],
+  "business_summary": "Steel Dynamics, Inc., together with its subsidiaries, operates as a steel producer and metal recycler in the United States. It operates through four segments: Steel Operations, Metals Recycling Operations, Steel Fabrication Operations, and Aluminum Operations. The Steel Operations segment offers hot rolled, cold rolled, and coated steel products; parallel flange beams and channel sections, large unequal leg angles, and reinforcing steel bars, standard strength carbon, intermediate alloy hardness, and premium grade rail products; engineered special-bar-quality products, merchant-bar-quality products, and other engineered round steel bars; channels, angles, flats, merchant rounds, and reinforcing steel bars; and specialty shapes and light structural steel products. This segment also engages in turning, polishing, straightening, chamfering, precision saw-cutting, and heat treating of bar products. Its products are used in construction, automotive, manufacturing, transportation, heavy and agricultural equipment, energy, and pipe and tube markets. The Metals Recycling Operations segment is involved in the ferrous and nonferrous scrap metal processing, transportation, marketing, brokerage, and scrap management services. Its ferrous products include heavy melting steel, busheling, bundled scrap, shredded scrap, steel turnings, and cast-iron products; and nonferrous products comprise aluminum, brass, copper, stainless steel, and other nonferrous metals. The Steel Fabrication Operations segment produces steel non-residential building components, such as steel joists, joist girders, and steel deck products for non-residential steel fabricators, metal building companies, general construction contractors, developers, property owners, brokers, and governmental entities. The Aluminum Operations segment offers recycled aluminum flat rolled products. The company also exports its products. Steel Dynamics, Inc. was incorporated in 1993 and is headquartered in Fort Wayne, Indiana.",
+  "next_earnings_date": "2026-10-20",
+  "beta": 1.532,
+  "dividend_yield": 0.9
+}

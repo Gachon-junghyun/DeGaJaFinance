@@ -1,0 +1,4 @@
+drift 질의 실패 (rc=2): 뉴스 API 접속 실패(https://impolite-coherent-props.ngrok-free.dev/exec): <HTTPError 404: 'Not Found'> — 서버 PC 수집기/방화벽/DEGAJA_NEWS_API 확인. (비우면 로컬 DB 폴백)
+
+drift 질의 실패 (rc=2): 뉴스 API 접속 실패(https://impolite-coherent-props.ngrok-free.dev/exec): <HTTPError 404: 'Not Found'> — 서버 PC 수집기/방화벽/DEGAJA_NEWS_API 확인. (비우면 로컬 DB 폴백)
+

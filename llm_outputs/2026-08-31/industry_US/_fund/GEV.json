@@ -1,0 +1,179 @@
+{
+  "ticker": "GEV",
+  "company_name": "GE Vernova Inc.",
+  "sector": "Industrials",
+  "industry": "Specialty Industrial Machinery",
+  "price": 893.86,
+  "market_cap": 238064926720,
+  "trailing_pe": 25.656141,
+  "forward_pe": 35.557976,
+  "peg_ratio": 1.57,
+  "price_to_sales": 5.754948,
+  "price_to_book": 19.910011,
+  "trailing_eps": 34.84,
+  "forward_eps": 25.1381,
+  "fifty_two_week_high": 1195.94,
+  "fifty_two_week_low": 530.16,
+  "target_low": 940.0,
+  "target_mean": 1236.4318,
+  "target_high": 1450.0,
+  "target_median": 1250.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 6,
+      "buy": 24,
+      "hold": 7,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 6,
+      "buy": 24,
+      "hold": 8,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 6,
+      "buy": 24,
+      "hold": 8,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 6,
+      "buy": 23,
+      "hold": 7,
+      "sell": 0,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      11104000000.0
+    ],
+    [
+      "2026-03-31",
+      9338000000.0
+    ],
+    [
+      "2025-12-31",
+      10956000000.0
+    ],
+    [
+      "2025-09-30",
+      9969000000.0
+    ],
+    [
+      "2025-06-30",
+      9111000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      11104000000.0
+    ],
+    [
+      "2026-03-31",
+      9339000000.0
+    ],
+    [
+      "2025-09-30",
+      9969000000.0
+    ],
+    [
+      "2025-06-30",
+      9111000000.0
+    ],
+    [
+      "2025-03-31",
+      8032000000.0
+    ],
+    [
+      "2024-09-30",
+      8913000000.0
+    ],
+    [
+      "2024-06-30",
+      8204000000.0
+    ],
+    [
+      "2024-03-31",
+      7260000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 4.17027,
+      "7daysAgo": 4.25692,
+      "30daysAgo": 4.20358,
+      "60daysAgo": 4.37063,
+      "90daysAgo": 4.34746
+    },
+    {
+      "period": "+1q",
+      "current": 6.43708,
+      "7daysAgo": 6.53261,
+      "30daysAgo": 6.33061,
+      "60daysAgo": 6.09516,
+      "90daysAgo": 6.14974
+    },
+    {
+      "period": "0y",
+      "current": 30.74053,
+      "7daysAgo": 30.84574,
+      "30daysAgo": 30.73548,
+      "60daysAgo": 30.7738,
+      "90daysAgo": 31.022
+    },
+    {
+      "period": "+1y",
+      "current": 24.68591,
+      "7daysAgo": 24.86619,
+      "30daysAgo": 24.84534,
+      "60daysAgo": 24.36413,
+      "90daysAgo": 24.2453
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 7.0,
+      "upLast30days": 7.0,
+      "downLast30days": 5.0,
+      "downLast7Days": 5.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 12.0,
+      "upLast30days": 11.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 8.0,
+      "upLast30days": 8.0,
+      "downLast30days": 10.0,
+      "downLast7Days": 10.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 1.0,
+      "upLast30days": 18.0,
+      "downLast30days": 3.0,
+      "downLast7Days": 1.0
+    }
+  ],
+  "business_summary": "GE Vernova Inc., an energy company, engages in the provision of various products and services that generate, transfer, orchestrate, convert, and store electricity in the United States, Europe, Asia, the Middle East, and Africa. The company operates through three segments: Power, Wind, and Electrification. The Power segment designs, manufactures, and services gas, nuclear, hydro, and steam technologies. It serves industrial, government, and other customers. The Wind segment offers wind generation technologies, including onshore and offshore wind turbines and blades. The Electrification segment provides grid solutions; power conversion; electrification software; and solar and storage solutions technologies required for the transmission, distribution, conversion, storage, and orchestration of electricity from point of generation to point of consumption. The company was incorporated in 2023 and is headquartered in Cambridge, Massachusetts.",
+  "next_earnings_date": "2026-10-28",
+  "beta": 1.033,
+  "dividend_yield": 0.22
+}

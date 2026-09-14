@@ -1,0 +1,138 @@
+{
+  "ticker": "DHT",
+  "company_name": "DHT Holdings, Inc.",
+  "sector": "Energy",
+  "industry": "Oil & Gas Midstream",
+  "price": 22.0,
+  "market_cap": 3547182592,
+  "trailing_pe": 7.482993,
+  "forward_pe": 11.699017,
+  "peg_ratio": 1.19,
+  "price_to_sales": 4.441301,
+  "price_to_book": 2.6679602,
+  "trailing_eps": 2.94,
+  "forward_eps": 1.8805,
+  "fifty_two_week_high": 22.28,
+  "fifty_two_week_low": 10.83,
+  "target_low": 19.0,
+  "target_mean": 20.51667,
+  "target_high": 23.0,
+  "target_median": 20.45,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 1,
+      "buy": 2,
+      "hold": 3,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 1,
+      "buy": 2,
+      "hold": 3,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 1,
+      "buy": 2,
+      "hold": 3,
+      "sell": 0,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      285012000.0
+    ],
+    [
+      "2026-03-31",
+      186476000.0
+    ],
+    [
+      "2025-12-31",
+      144163000.0
+    ],
+    [
+      "2025-09-30",
+      107348000.0
+    ],
+    [
+      "2025-06-30",
+      128316000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 1.04018,
+      "7daysAgo": 1.06,
+      "30daysAgo": 0.59767,
+      "60daysAgo": 0.57934,
+      "90daysAgo": 0.5432
+    },
+    {
+      "period": "+1q",
+      "current": 0.74073,
+      "7daysAgo": 0.76,
+      "30daysAgo": 0.64742,
+      "60daysAgo": 0.63942,
+      "90daysAgo": 0.62677
+    },
+    {
+      "period": "0y",
+      "current": 3.64516,
+      "7daysAgo": 3.6875,
+      "30daysAgo": 2.98048,
+      "60daysAgo": 2.95048,
+      "90daysAgo": 2.75048
+    },
+    {
+      "period": "+1y",
+      "current": 1.8805,
+      "7daysAgo": 1.865,
+      "30daysAgo": 1.73459,
+      "60daysAgo": 1.73625,
+      "90daysAgo": 1.70292
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 1.0,
+      "upLast30days": 5.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 1.0,
+      "upLast30days": 3.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 0.0,
+      "upLast30days": 5.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 2.0,
+      "upLast30days": 5.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    }
+  ],
+  "business_summary": "DHT Holdings, Inc., through its subsidiaries, owns and operates crude oil tankers primarily in Monaco, Singapore, Norway, and India. The company also offers technical management services. As of December 15, 2025, it had a fleet of 22 very large crude carriers. The company was incorporated in 2005 and is headquartered in Hamilton, Bermuda.",
+  "next_earnings_date": "2026-10-29",
+  "beta": -0.115,
+  "dividend_yield": 22.18
+}

@@ -1,0 +1,136 @@
+{
+  "asof": "2026-08-28",
+  "filter": {
+    "floor_b": 10.0,
+    "top": 15
+  },
+  "shortlist": [
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "mcap": 124307819000.0,
+      "flow_score": 0.828,
+      "tag": "🟢가속",
+      "velocity": null,
+      "last": 257.3,
+      "obv_norm": 0.226,
+      "obv_state": "매집",
+      "rs20": 36.5,
+      "rs60": 32.6,
+      "vol_surge": 1.29,
+      "delta": 0.458,
+      "new_green": true,
+      "short": {
+        "ticker": "CRM",
+        "date": "2026-08-27",
+        "short_ratio": 44.4,
+        "base20_mean": 52.3,
+        "z_score": -0.89,
+        "slope5v5": -13.5,
+        "trend_arrow": "▼",
+        "n_days": 20,
+        "tag": "🟡 정상범위"
+      },
+      "verdict": "✅저숏/숏커버 (청정 상승)"
+    },
+    {
+      "ticker": "A",
+      "name": "Agilent Technologies",
+      "sector": "Health Care",
+      "industry": "Life Sciences Tools & Services",
+      "mcap": 35885802115.0,
+      "flow_score": 0.778,
+      "tag": "🟢가속",
+      "velocity": null,
+      "last": 155.15,
+      "obv_norm": 0.432,
+      "obv_state": "매집",
+      "rs20": 8.8,
+      "rs60": 10.5,
+      "vol_surge": 1.2,
+      "delta": 0.006,
+      "new_green": true,
+      "short": {
+        "ticker": "A",
+        "date": "2026-08-27",
+        "short_ratio": 58.2,
+        "base20_mean": 53.8,
+        "z_score": 0.5,
+        "slope5v5": -5.6,
+        "trend_arrow": "▼",
+        "n_days": 20,
+        "tag": "🟡 정상범위"
+      },
+      "verdict": "△정상숏"
+    },
+    {
+      "ticker": "MRVL",
+      "name": "Marvell Technology",
+      "sector": "Information Technology",
+      "industry": "Semiconductors",
+      "mcap": 271695372253.0,
+      "flow_score": 0.483,
+      "tag": "🟢가속",
+      "velocity": 1.9,
+      "last": 222.11,
+      "obv_norm": 0.178,
+      "obv_state": "매집",
+      "rs20": 15.1,
+      "rs60": -28.7,
+      "vol_surge": 0.67,
+      "delta": 0.066,
+      "new_green": false,
+      "short": {
+        "ticker": "MRVL",
+        "date": "2026-08-27",
+        "short_ratio": 56.1,
+        "base20_mean": 45.6,
+        "z_score": 2.7,
+        "slope5v5": -4.0,
+        "trend_arrow": "▼",
+        "n_days": 20,
+        "tag": "🔴 공매도급증(자기베이스대비 극단)"
+      },
+      "verdict": "⚡crowded-short (스퀴즈연료·턴조건)"
+    },
+    {
+      "ticker": "JNJ",
+      "name": "Johnson & Johnson",
+      "sector": "Health Care",
+      "industry": "Pharmaceuticals",
+      "mcap": 549784282537.0,
+      "flow_score": 0.151,
+      "tag": "🟢가속",
+      "velocity": 1.26,
+      "last": 265.69,
+      "obv_norm": 0.229,
+      "obv_state": "매집",
+      "rs20": 0.3,
+      "rs60": 16.6,
+      "vol_surge": 0.65,
+      "delta": -0.011,
+      "new_green": false,
+      "short": {
+        "ticker": "JNJ",
+        "date": "2026-08-27",
+        "short_ratio": 45.8,
+        "base20_mean": 55.6,
+        "z_score": -1.72,
+        "slope5v5": -5.0,
+        "trend_arrow": "▼",
+        "n_days": 20,
+        "tag": "🟢 공매도급감(숏커버/압력이탈)"
+      },
+      "verdict": "✅저숏/숏커버 (청정 상승)"
+    }
+  ],
+  "clean": [
+    "CRM",
+    "JNJ"
+  ],
+  "squeeze": [
+    "MRVL"
+  ]
+}

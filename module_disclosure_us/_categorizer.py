@@ -56,6 +56,20 @@ FORM_MAP: dict[str, tuple[str, str]] = {
     "4/A":     ("insider",          "Insider Transaction Amendment (Form 4/A)"),
     "S-1":     ("equity",           "Registration Statement (S-1)"),
     "S-3":     ("equity",           "Registration Statement (S-3)"),
+    # 🚨 2026-09-03 추가 — 등록(S-1/S-3)만 잡고 **실제 인출(424B*)을 놓치던 구멍**.
+    # S-3 는 「앞으로 발행할 수 있다」는 선반이고, 돈이 실제로 들어오는 건 424B* 다.
+    # 실측: NVDA 의 **$25bn 선순위 무담보 채권**(424B5 2건 + FWP 1건, 7트랜치 2028~2056)이
+    # 「기타 20건」에 묻혀 카테고리 요약표에 한 줄도 안 나왔다. 요약만 읽으면 안 보인다.
+    "S-3ASR":  ("equity",           "Automatic Shelf Registration (S-3ASR)"),
+    "424B1":   ("equity",           "★증권발행 — Prospectus Supplement (424B1)"),
+    "424B2":   ("equity",           "★증권발행 — Prospectus Supplement (424B2)"),
+    "424B3":   ("equity",           "★증권발행 — Prospectus Supplement (424B3)"),
+    "424B4":   ("equity",           "★증권발행 — Prospectus Supplement (424B4)"),
+    "424B5":   ("equity",           "★증권발행 — Prospectus Supplement (424B5, 선반 인출)"),
+    "424B7":   ("equity",           "★증권발행 — Prospectus Supplement (424B7)"),
+    "424B8":   ("equity",           "★증권발행 — Prospectus Supplement (424B8)"),
+    "FWP":     ("equity",           "★증권발행 — Free Writing Prospectus (FWP)"),
+    "S-4":     ("contract",         "Registration Statement (S-4, M&A/교환)"),
     "DEF 14A": ("exec",             "Proxy Statement (DEF 14A)"),
     "SC 13G":  ("insider",          "Beneficial Ownership Report (SC 13G)"),
     "SC 13D":  ("insider",          "Beneficial Ownership Report (SC 13D)"),
@@ -77,7 +91,7 @@ CATEGORY_LABELS = {
     "contract":         "수주/계약/M&A",
     "earnings":         "실적 발표 (Item 2.02)",
     "guidance":         "가이던스/IR (Item 7.01)",
-    "equity":           "증자/채무 (Item 3.02 / 2.03)",
+    "equity":           "증권발행·증자·채무 (424B*/FWP/S-3 · Item 3.02/2.03)",
     "exec":             "경영진 변경 (Item 5.02 등)",
     "annual_report":    "연차보고서 (10-K)",
     "quarterly_report": "분기보고서 (10-Q)",
@@ -110,6 +124,9 @@ def categorize_filing(form: str, items: list[str]) -> tuple[str, str]:
     form_u = form.upper().strip()
     if form_u in FORM_MAP:
         return FORM_MAP[form_u]
+    # 424B5/A 같은 접미 변형도 증권발행으로 잡는다 (정확일치만 하면 다시 「기타」로 샌다)
+    if form_u.startswith("424B"):
+        return ("equity", f"★증권발행 — Prospectus Supplement ({form})")
     if form_u.startswith("8-K"):
         if not items:
             return ("other", "8-K (Item 미상)")

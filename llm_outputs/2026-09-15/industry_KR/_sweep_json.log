@@ -1,0 +1,76 @@
+[warn] 유니버스 kr_all.csv 62일 경과 — 시총 stale. build_kr_universe.py 재빌드 권장(주1회).
+[warn] --no-news: 뉴스축 제외 → flow_score 3축 평균, 🟢 태그가 OBV 매집에만 의존해 체계적으로 강등됨(신규🟢/earliness 판단엔 부적합). 뉴스 비용은 ~10ms/종목이라 켜길 권장.
+[dl] yfinance 배치 833종목 4mo …
+$057050.KS: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+$012510.KS: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+
+2 Failed downloads:
+['057050.KS', '012510.KS']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+[dl] 완료 → prices_kr_2026-09-15.pkl
+[flow] 832종목 축 계산 …
+  … 50/832
+  … 100/832
+$012510.KS: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+
+1 Failed download:
+['012510.KS']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+  … 150/832
+  … 200/832
+$057050.KS: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+
+1 Failed download:
+['057050.KS']: possibly delisted; no price data found  (period=4mo) (Yahoo error = "No data found, symbol may be delisted")
+  … 250/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 300/832
+  … 350/832
+  … 400/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 450/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 500/832
+  … 550/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 600/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 650/832
+  … 700/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 750/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 800/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+[axis] velocity 측정 0/825 = 0.0% → 속도축 제외(전원 3축) · 기준 80% (D225-KR)
+[axis] 축 결측으로 점수 미부여 20종목 — 집계 제외 (예전엔 clip(nan)=+1.0 로 **최대 양수**를 받았다)

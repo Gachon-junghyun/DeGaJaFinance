@@ -1,0 +1,50 @@
+(via NEWS API @ https://impolite-coherent-props.ngrok-free.dev)
+
+# 뉴스 블라인드스팟 — (고정셋 없음=순수발굴)  [최근 2일/국내만]
+  윈도우 전체(분모)      : 7978건
+  블라인드 풀            : 7978건  (랜덤 샘플 400건 발췌)
+
+  ── 토큰0 신흥어 top30 (블라인드 풀 제목 빈도 — 고정셋에 없는 '뜨는 단어') ──
+      328  AI (ticker?)
+       42  KB (ticker?)
+       39  Think
+       36  SKT (ticker?)
+       32  KT (ticker?)
+       32  SK (ticker?)
+       28  LG (ticker?)
+       28  NC (ticker?)
+       22  HBM (ticker?)
+       22  CPTPP (ticker?)
+       20  MOU (ticker?)
+       19  SNS (ticker?)
+       18  Chosunbiz
+       14  KBS (ticker?)
+       13  AX (ticker?)
+       13  Investing
+       11  PCE (ticker?)
+       11  YTN (ticker?)
+       11  EU (ticker?)
+       11  KTX (ticker?)
+       11  SSG (ticker?)
+       10  ERA (ticker?)
+       10  AWS (ticker?)
+        9  KIA (ticker?)
+        9  MLB (ticker?)
+        9  MBC (ticker?)
+        9  LH (ticker?)
+        8  OLED (ticker?)
+        8  Magazine
+        7  KBO (ticker?)
+
+  ── 랜덤 샘플 8건 미리보기 (전체는 --json) ──
+     Wed, 26 Au [       chosun] 쿠팡·홈플러스에 스벅까지… 유통가는 벌써 ‘국감 모드’
+     2026-08-27 [     einfomax] 삼성전자, '오디세이 OLED 게이밍 모니터' 신제품 4종 공개
+     Thu, 27 Au [        asiae] 왕십리역세권에 588실 관광호텔…고덕지구 상업지역은 용적률·높이 완화
+     Fri, 28 Au [    google_kr] [마켓뷰] 美, 반도체 관세 ‘복병’… 코스피 2% 가까이 하락 - 조선비즈 - Chosunbiz
+     Thu, 27 Au [           mt] 어깨빵도 모자라…일본 거리서 여성 허벅지에 손 &#039;쓰윽&#039;
+     Fri, 28 Au [       yonhap] [쇼츠] 화염 가로지르며 초토화…美 B-2 폭격기의 가공할 위력
+     Thu, 27 Au [      sedaily] 뤼튼, 기업가치 1.4조 돌파…해외 매출, 국내 넘어섰다
+     Fri, 28 Au [        donga] “굿즈만 팔아선 안 돼”…공연·전시·야장으로 확장된 유통가 콜라보
+
+  → 다음: 신흥어/샘플에서 '뜨는데 고정셋에 없는' 테마 잡고, 중요한 건
+    search --field any 로 본문까지 집중조사 → 고정셋 추가어 환류.

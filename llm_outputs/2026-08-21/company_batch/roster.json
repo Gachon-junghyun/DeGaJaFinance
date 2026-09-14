@@ -1,0 +1,42 @@
+{
+  "run_date": "2026-08-21",
+  "market": "kr",
+  "n_requested": 5,
+  "n_roster": 5,
+  "n_skipped": 0,
+  "stale_sessions": 10,
+  "rows": [
+    {
+      "ticker": "000660", "name": "SK하이닉스", "market": "kr",
+      "source": "6-user + 2-reject_ledger_due",
+      "prior_company_verdict": null, "prior_verdict_age_sessions": null,
+      "mandate": "[reject_ledger due D+0, 2026-08-08, C.차트붕괴] 부활조건 verbatim: '종가가 1,545,800원 위로 마감(module_chart 트리거) AND OBV 20일 기울기가 양(+)으로 전환'. 추가 미해결 질문(BET_SHEET 2026-08-21 §3): (a) 2026-08-14 '파생상품거래손실발생' 공시 — 금액 unknown, 뉴스축 흔적 0건, 반기보고서와 같은 날 제출돼 아무도 안 봤다; (b) 자사주 24,070,000주·예상 40.00조 장내매수+소각 결정(08-19)이 08-20 KIS 3주체 합 −62.2만주와 정합하는지는 아직 [inferred]; (c) 분기 총이익률 83.2%(이력 최고)인데 증가폭이 10.5→3.9pp 로 2.7배 감속; (d) DART 수주상황 전문이 '월별/분기별 상호 합의' — take-or-pay·다년물량·floor 밴드 전부 없음."
+    },
+    {
+      "ticker": "028050", "name": "삼성E&A", "market": "kr",
+      "source": "1-held_no_fresh_report",
+      "prior_company_verdict": null, "prior_verdict_age_sessions": null,
+      "mandate": "책이 보유 중인데 company_research 테제 문서가 0건 — 위험은 이미 졌는데 이유를 못 댄다. HANDOVER dig 랭킹 #1, 6런 이월. 오늘 missed_ledger 에서 'entered' 로 닫혔다(외국인 +53.8만·기관 +180.0만). 답할 것: (a) 조건이 발화한 이유가 수주인지 수급인지; (b) module_chart 트리거 48,650 과 08-21 장중 −2.63pp 의 관계; (c) 🚨 집중도 가드 — --days 250 에서 U0 = 028050 + 316140 으로 책의 KR 보유 2종이 한 위험단위다. 이 이름을 '새 노출'로 세지 마라(창을 밝히지 않은 집중도 서술 금지)."
+    },
+    {
+      "ticker": "316140", "name": "우리금융지주", "market": "kr",
+      "source": "1-held_no_fresh_report",
+      "prior_company_verdict": null, "prior_verdict_age_sessions": null,
+      "mandate": "보유 중인데 테제 행이 2런 연속 없다. HANDOVER dig 랭킹 #2. 답할 것: (a) 08-20 벤치 +6.3% 인 날 −5.8% 를 낸 원인 — 설명하는 문서가 데스크에 없다; (b) M729(082640 동양생명 거래정지)의 인수 주체가 이 회사다 — 인수 건이 (a)의 원인인지 아닌지; (c) 028050 과 같은 위험단위(U0, --days 250)라는 조건 아래 읽어야 한다."
+    },
+    {
+      "ticker": "011200", "name": "HMM", "market": "kr",
+      "source": "4-BET_SHEET_live + 5-live_shortlist",
+      "prior_company_verdict": null, "prior_verdict_age_sessions": null,
+      "mandate": "first research — 리포트 커버리지 0건. BET_SHEET §4a: KIS 20d 외국인 +384 AND 기관 +262(두 다리 동일 부호, 15종 중 6종에만 해당), PBR 0.69 · PER ttm/fwd 14.11/11.0 · 배당 3.33% · FY2025 마진 18.7% vs 중앙 11.6%. ★ 시트가 스스로 남긴 질문(§5): 이 이름은 EVENT_ALPHA 카드 1(호르무즈 우회)과 카드 5(북극항로) 양쪽에 등장한다 ⇒ '두 베팅이 아니라 한 베팅'일 수 있다. DRIVER_TEST 가 구동 기준으로 이걸 갈라라 — 두 카드가 같은 드라이버(운임)에 걸리는지 다른 드라이버인지."
+    },
+    {
+      "ticker": "036460", "name": "한국가스공사", "market": "kr",
+      "source": "4-BET_SHEET_live",
+      "prior_company_verdict": null, "prior_verdict_age_sessions": null,
+      "mandate": "first research — 리포트 커버리지 0건. BET_SHEET §7 이 per_fwd 3.0 을 '의심(unverified)' 로 찍었다: EPS_fwd 12,104 vs EPS_ttm 1,441 = 8.4배 점프를 전제하는데 FY2025 마진 7.2% 가 그만한 이익 점프를 설명하지 못한다 ⇒ 네이버 컨센 필드 오류 가능성 배제 불가. 답할 것: 컨센 EPS 가 실제인지 필드 오류인지, 1차 출처(DART)로. 사실로 쓸 수 있는 것은 PBR 0.28 · 배당 3.20% · 마진 7.2%(중앙 6.3% 위, 최고 8.9% FY2024) · KIS 20d 외국인 +64.2 뿐. 시트가 명시한 검증 관측점: 3Q 분기보고서 2026-11-15."
+    }
+  ],
+  "skipped": [],
+  "skip_note": "0건. 신선도 게이트는 4조건 AND 인데 조건1('company_research 평결이 ≤10정산세션 존재')이 5종 전부에서 거짓이다 — REPORT/ 에 존재하는 company 리포트는 035760 과 AVGO 둘뿐이고, 5종 모두 company_research 평결 이력이 0건이다(module_report_tags ticker 로 개별 확인: 000660 8건·028050 8건·316140 7건·011200 2건·036460 3건 — 전부 industry_KR/US 탑다운 산출물이지 company 리포트가 아니다). ⇒ 조건1 이 깨지므로 나머지 3조건은 평가할 필요 없이 5종 전부 명단에 남는다. 걸러낸 이름 0 은 '감사를 안 했다'가 아니라 '감사했고 0'이다."
+}

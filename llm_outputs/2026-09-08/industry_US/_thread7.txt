@@ -1,0 +1,20 @@
+
+# 사건 궤적 — 2026-09-02 → 2026-09-08 (7일) [해외만]
+  09-02 944건 · 09-03 879건 · 09-04 732건 · 09-05 291건 · 09-06 271건 · 09-07 279건 · 09-08 0건
+  일별 사건 3,396 → 스레드 2,709 (다일 395 — 살아있는 0 · 원데이 2314, 그중 오늘 신규 0)
+
+  ── 끊긴 스레드(ENDED) 395개 — 정점 큰 10개만, 나머진 분모 ──
+   [09-02~09-07] 4→28→9→2→2 피크28매체 Nvidia to Acquire Hugging Face for $12.9 Billion
+   [09-02~09-07] 19→14→21→13→9→13 피크21매체 The Commodities Feed: Oil maintains gains amid P
+   [09-02~09-07] 21→19→12→9→5→10 피크21매체 When AI does the thinking, what could possibly g
+   [09-02~09-07] 20→11→14→14→6→6 피크20매체 Germany says Russia preparing ‘hybrid’ attacks o
+   [09-06~09-07]      19→10 피크19매체 Amazon cargo plane crashes at Miami airport and 
+   [09-02~09-07] 11→16→9→6→7→4 피크16매체 Fed's Waller says central bank's next rate move 
+   [09-02~09-07] 4→9→8→5→16→13 피크16매체 Exit polls: Germany’s far-right AfD holds clear 
+   [09-02~09-07] 9→5→10→16→11→6 피크16매체 U.S. hits three Iranian oil tankers after missil
+   [09-03~09-06]     15→6→3 피크15매체 OpenAI hails ‘new era of artificial general inte
+   [09-02~09-04]   14→12→10 피크14매체 US judge rejects bid to break up Google’s ad bus
+
+  ⚠ 태그는 매체수 곡선의 모양이지 중요도·방향이 아니다 — 근거를 읽어야 안다(P4).
+  ⚠ 윈도우 끝이 휴일/저물량이면 FADING 이 과대해진다 — 위 per-day 분모 먼저.
+  ⚠ 원데이 2314개(오늘 신규 0)는 하루 뷰(brief)가 담당.

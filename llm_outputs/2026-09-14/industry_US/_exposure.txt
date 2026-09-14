@@ -1,0 +1,24 @@
+# EXPOSURE RULE — 2026-09-14 (live)  벤치 069500.KS
+
+  벤치 종가 106225.0 · 당일  -2.991% · 20일고점대비  -5.24% · 20일저점대비  +4.39% · 거래량 1.073×
+  규칙상태 **정상** (직전 정상)  근거: 발화 조건 없음
+  목표 투자비중 95% · 현재 % · 괴리 pp
+
+  ── 수익분해 불가: NAV/투자비중이 없다(계좌조회 실패 또는 인자 미제공) ──
+
+  경보: 🚨🚨ARMED(TIMEFOLIO_EXECUTE=1 — --execute 를 붙이면 실제 제출된다. 사람 확인 필요) ⚠미정착봉(장중·KIS실시간) 🚨투자비중미상(계좌조회 없음)
+
+(적립하지 않음 — 원장에 넣으려면 `log`)
+# EXPOSURE LEDGER — 51행 (표시 8)  out\exposure\ledger.csv
+날짜          봉        상태             벤치%    NAV%    투자%     총초과     현금기여     선택기여  경보
+2026-08-31  live     정상          -0.373   -1.21   85.3  -0.837    0.055   -0.892  🚨🚨ARMED(TIMEFOLIO_EXECUTE=1 — --execute 를 붙이면 실제 제출된다. 사람 확인 필요) ⚠미정착봉(장중·KIS실시간) 🚨밴드이탈 -9.7pp
+2026-09-01  live     정상           0.432           85.2                            🚨🚨ARMED(TIMEFOLIO_EXECUTE=1 — --execute 를 붙이면 실제 제출된다. 사람 확인 필요) ⚠미정착봉(장중·KIS실시간) 🚨밴드이탈 -9.8pp
+2026-09-02  live     정상          -3.824    -1.1   85.2   2.724    0.566    2.158  🚨🚨ARMED(TIMEFOLIO_EXECUTE=1 — --execute 를 붙이면 실제 제출된다. 사람 확인 필요) ⚠미정착봉(장중·KIS실시간) 🚨밴드이탈 -9.8pp
+2026-09-03  live     정상           0.541           85.2                            🚨🚨ARMED(TIMEFOLIO_EXECUTE=1 — --execute 를 붙이면 실제 제출된다. 사람 확인 필요) ⚠미정착봉(장중·KIS실시간) 🚨밴드이탈 -9.8pp
+2026-09-04  live     정상           2.065           85.2                            🚨🚨ARMED(TIMEFOLIO_EXECUTE=1 — --execute 를 붙이면 실제 제출된다. 사람 확인 필요) ⚠미정착봉(장중·KIS실시간) 🚨밴드이탈 -9.8pp
+2026-09-07  live     정상           4.772                                           🚨timefolio조회실패:CDPError 🚨🚨ARMED(TIMEFOLIO_EXECUTE=1 — --execute 를 붙이면 실제 제출된다. 사람 확인 필요) ⚠미정착봉(장중·KIS실시간) 🚨투자비중미상(계좌조회 없음)
+2026-09-08  live     정상           0.027                                           🚨timefolio조회실패:CDPError 🚨🚨ARMED(TIMEFOLIO_EXECUTE=1 — --execute 를 붙이면 실제 제출된다. 사람 확인 필요) ⚠미정착봉(장중·KIS실시간) 🚨투자비중미상(계좌조회 없음)
+2026-09-11  settled  정상          -2.114                                           🚨timefolio조회실패:CDPError 🚨🚨ARMED(TIMEFOLIO_EXECUTE=1 — --execute 를 붙이면 실제 제출된다. 사람 확인 필요) 🚨투자비중미상(계좌조회 없음)
+
+  누적(단순합) — 총초과 -9.79pp = 현금기여 -5.32pp + 선택기여 -4.47pp   (n=18)
+  ⚠ n=18. 이 리포의 목표는 이 n 을 매일 1씩 올리는 것이다 — 한 달이면 n≈20, 그때 비로소 부호를 물을 수 있다(C4).

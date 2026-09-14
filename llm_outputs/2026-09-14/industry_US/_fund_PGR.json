@@ -1,0 +1,179 @@
+{
+  "ticker": "PGR",
+  "company_name": "The Progressive Corporation",
+  "sector": "Financial Services",
+  "industry": "Insurance - Property & Casualty",
+  "price": 217.62,
+  "market_cap": 126458986496,
+  "trailing_pe": 10.919217,
+  "forward_pe": 13.359075,
+  "peg_ratio": 66.73,
+  "price_to_sales": 1.3893691,
+  "price_to_book": 3.6826696,
+  "trailing_eps": 19.93,
+  "forward_eps": 16.29005,
+  "fifty_two_week_high": 249.14,
+  "fifty_two_week_low": 189.2,
+  "target_low": 198.0,
+  "target_mean": 232.0,
+  "target_high": 309.0,
+  "target_median": 233.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 4,
+      "buy": 4,
+      "hold": 15,
+      "sell": 1,
+      "strongSell": 1
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 4,
+      "buy": 4,
+      "hold": 15,
+      "sell": 1,
+      "strongSell": 1
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 3,
+      "buy": 4,
+      "hold": 16,
+      "sell": 1,
+      "strongSell": 1
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 4,
+      "buy": 4,
+      "hold": 14,
+      "sell": 2,
+      "strongSell": 1
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      23599000000.0
+    ],
+    [
+      "2026-03-31",
+      22180000000.0
+    ],
+    [
+      "2025-12-31",
+      22738000000.0
+    ],
+    [
+      "2025-09-30",
+      22502000000.0
+    ],
+    [
+      "2025-06-30",
+      21995000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      23609000000.0
+    ],
+    [
+      "2026-03-31",
+      22188000000.0
+    ],
+    [
+      "2025-09-30",
+      22512000000.0
+    ],
+    [
+      "2025-06-30",
+      22004000000.0
+    ],
+    [
+      "2025-03-31",
+      20409000000.0
+    ],
+    [
+      "2024-09-30",
+      19719000000.0
+    ],
+    [
+      "2024-06-30",
+      18134300000.0
+    ],
+    [
+      "2024-03-31",
+      17242500000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 4.02652,
+      "7daysAgo": 4.01125,
+      "30daysAgo": 3.6479,
+      "60daysAgo": 3.71427,
+      "90daysAgo": 3.53999
+    },
+    {
+      "period": "+1q",
+      "current": 4.18621,
+      "7daysAgo": 4.18621,
+      "30daysAgo": 4.12916,
+      "60daysAgo": 4.1773,
+      "90daysAgo": 4.11434
+    },
+    {
+      "period": "0y",
+      "current": 17.98014,
+      "7daysAgo": 17.9671,
+      "30daysAgo": 17.6096,
+      "60daysAgo": 17.48665,
+      "90daysAgo": 16.42856
+    },
+    {
+      "period": "+1y",
+      "current": 16.29005,
+      "7daysAgo": 16.29414,
+      "30daysAgo": 16.26888,
+      "60daysAgo": 16.49209,
+      "90daysAgo": 16.2226
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 2.0,
+      "upLast30days": 18.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 1.0,
+      "upLast30days": 10.0,
+      "downLast30days": 10.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 2.0,
+      "upLast30days": 18.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 1.0,
+      "upLast30days": 9.0,
+      "downLast30days": 6.0,
+      "downLast7Days": 0.0
+    }
+  ],
+  "business_summary": "The Progressive Corporation operates as an insurance company in the United States. It writes insurance for personal autos and special lines products, including motorcycles, RVs, and watercraft; and personal residential property insurance for homeowners and renters. The company also writes auto-related liability and physical damage insurance for comprising dump trucks, log trucks, garbage trucks, tractors, trailers, straight trucks, tow trucks and wreckers, vans, pick-up trucks, and autos; business-related general liability and commercial property insurance for small businesses; and workers' compensation insurance for the transportation industry. In addition, it offers other specialty property-casualty insurance and provides related services; personal property reinsurance products; and involved in investment activities. It sells its products through independent insurance agencies, as well as online and over the phone. The Progressive Corporation was founded in 1937 and is headquartered in Mayfield, Ohio.",
+  "next_earnings_date": "2026-10-14",
+  "beta": 0.259,
+  "dividend_yield": 0.18
+}

@@ -1,0 +1,322 @@
+[
+ {
+  "ticker": "COIN",
+  "name": "Coinbase",
+  "recent": 585,
+  "base_rate": 79.25,
+  "velocity": 1.05,
+  "note": null
+ },
+ {
+  "ticker": "MSTR",
+  "name": "MicroStrategy",
+  "recent": 156,
+  "base_rate": 15.04,
+  "velocity": 1.48,
+  "note": null
+ },
+ {
+  "ticker": "MRK",
+  "name": "Merck & Co.",
+  "recent": 51,
+  "base_rate": 3.39,
+  "velocity": 2.15,
+  "note": null
+ },
+ {
+  "ticker": "TGT",
+  "name": "Target Corporation",
+  "recent": 26,
+  "base_rate": 1.61,
+  "velocity": 2.31,
+  "note": null
+ },
+ {
+  "ticker": "MSI",
+  "name": "Motorola Solutions",
+  "recent": 5,
+  "base_rate": 2.64,
+  "velocity": 0.27,
+  "note": null
+ },
+ {
+  "ticker": "FCX",
+  "name": "Freeport-McMoRan",
+  "recent": 36,
+  "base_rate": 3.18,
+  "velocity": 1.62,
+  "note": null
+ },
+ {
+  "ticker": "PSX",
+  "name": "Phillips 66",
+  "recent": 42,
+  "base_rate": 4.86,
+  "velocity": 1.24,
+  "note": null
+ },
+ {
+  "ticker": "CVNA",
+  "name": "Carvana",
+  "recent": 37,
+  "base_rate": 4.61,
+  "velocity": 1.15,
+  "note": null
+ },
+ {
+  "ticker": "DASH",
+  "name": "DoorDash",
+  "recent": 87,
+  "base_rate": 13.71,
+  "velocity": 0.91,
+  "note": null
+ },
+ {
+  "ticker": "A",
+  "name": "Agilent Technologies",
+  "recent": 6,
+  "base_rate": 0.5,
+  "velocity": 1.71,
+  "note": null
+ },
+ {
+  "ticker": "TRI",
+  "name": "Thomson Reuters",
+  "recent": 31,
+  "base_rate": 4.0,
+  "velocity": 1.11,
+  "note": null
+ },
+ {
+  "ticker": "ABNB",
+  "name": "Airbnb",
+  "recent": 52,
+  "base_rate": 11.46,
+  "velocity": 0.65,
+  "note": null
+ },
+ {
+  "ticker": "MPC",
+  "name": "Marathon Petroleum",
+  "recent": 32,
+  "base_rate": 4.25,
+  "velocity": 1.08,
+  "note": null
+ },
+ {
+  "ticker": "COP",
+  "name": "ConocoPhillips",
+  "recent": 52,
+  "base_rate": 7.89,
+  "velocity": 0.94,
+  "note": null
+ },
+ {
+  "ticker": "NEM",
+  "name": "Newmont",
+  "recent": 52,
+  "base_rate": 7.79,
+  "velocity": 0.95,
+  "note": null
+ },
+ {
+  "ticker": "BSX",
+  "name": "Boston Scientific",
+  "recent": 13,
+  "base_rate": 3.04,
+  "velocity": 0.61,
+  "note": null
+ },
+ {
+  "ticker": "AMGN",
+  "name": "Amgen",
+  "recent": 68,
+  "base_rate": 8.64,
+  "velocity": 1.12,
+  "note": null
+ },
+ {
+  "ticker": "CRM",
+  "name": "Salesforce",
+  "recent": 190,
+  "base_rate": 19.32,
+  "velocity": 1.4,
+  "note": null
+ },
+ {
+  "ticker": "LITE",
+  "name": "Lumentum",
+  "recent": 122,
+  "base_rate": 15.29,
+  "velocity": 1.14,
+  "note": null
+ },
+ {
+  "ticker": "ADP",
+  "name": "Automatic Data Processing",
+  "recent": 11,
+  "base_rate": 2.54,
+  "velocity": 0.62,
+  "note": null
+ },
+ {
+  "ticker": "CMG",
+  "name": "Chipotle Mexican Grill",
+  "recent": 19,
+  "base_rate": 6.5,
+  "velocity": 0.42,
+  "note": null
+ },
+ {
+  "ticker": "HCA",
+  "name": "HCA Healthcare",
+  "recent": 6,
+  "base_rate": 0.93,
+  "velocity": 0.92,
+  "note": null
+ },
+ {
+  "ticker": "ECL",
+  "name": "Ecolab",
+  "recent": 6,
+  "base_rate": 1.21,
+  "velocity": 0.71,
+  "note": null
+ },
+ {
+  "ticker": "TSLA",
+  "name": "Tesla, Inc.",
+  "recent": 339,
+  "base_rate": 57.68,
+  "velocity": 0.84,
+  "note": null
+ },
+ {
+  "ticker": "BDX",
+  "name": "Becton Dickinson",
+  "recent": 8,
+  "base_rate": 1.61,
+  "velocity": 0.71,
+  "note": null
+ },
+ {
+  "ticker": "MRVL",
+  "name": "Marvell Technology",
+  "recent": 230,
+  "base_rate": 20.39,
+  "velocity": 1.61,
+  "note": null
+ },
+ {
+  "ticker": "PFE",
+  "name": "Pfizer",
+  "recent": 81,
+  "base_rate": 10.96,
+  "velocity": 1.06,
+  "note": null
+ },
+ {
+  "ticker": "MDT",
+  "name": "Medtronic",
+  "recent": 28,
+  "base_rate": 3.64,
+  "velocity": 1.1,
+  "note": null
+ },
+ {
+  "ticker": "GRMN",
+  "name": "Garmin",
+  "recent": 5,
+  "base_rate": 3.46,
+  "velocity": 0.21,
+  "note": null
+ },
+ {
+  "ticker": "TMO",
+  "name": "Thermo Fisher Scientific",
+  "recent": 11,
+  "base_rate": 1.75,
+  "velocity": 0.9,
+  "note": null
+ },
+ {
+  "ticker": "UBER",
+  "name": "Uber",
+  "recent": 316,
+  "base_rate": 39.0,
+  "velocity": 1.16,
+  "note": null
+ },
+ {
+  "ticker": "INTU",
+  "name": "Intuit",
+  "recent": 245,
+  "base_rate": 27.93,
+  "velocity": 1.25,
+  "note": null
+ },
+ {
+  "ticker": "DHR",
+  "name": "Danaher Corporation",
+  "recent": 6,
+  "base_rate": 0.71,
+  "velocity": 1.2,
+  "note": null
+ },
+ {
+  "ticker": "GILD",
+  "name": "Gilead Sciences",
+  "recent": 32,
+  "base_rate": 4.57,
+  "velocity": 1.0,
+  "note": null
+ },
+ {
+  "ticker": "REGN",
+  "name": "Regeneron Pharmaceuticals",
+  "recent": 31,
+  "base_rate": 2.89,
+  "velocity": 1.53,
+  "note": null
+ },
+ {
+  "ticker": "NOW",
+  "name": "ServiceNow",
+  "recent": 86,
+  "base_rate": 11.96,
+  "velocity": 1.03,
+  "note": null
+ },
+ {
+  "ticker": "ISRG",
+  "name": "Intuitive Surgical",
+  "recent": 40,
+  "base_rate": 4.32,
+  "velocity": 1.32,
+  "note": null
+ },
+ {
+  "ticker": "VRTX",
+  "name": "Vertex Pharmaceuticals",
+  "recent": 32,
+  "base_rate": 4.18,
+  "velocity": 1.09,
+  "note": null
+ },
+ {
+  "ticker": "WBD",
+  "name": "Warner Bros. Discovery",
+  "recent": 64,
+  "base_rate": 9.61,
+  "velocity": 0.95,
+  "note": null
+ },
+ {
+  "ticker": "ICE",
+  "name": "Intercontinental Exchange",
+  "recent": 34,
+  "base_rate": 4.21,
+  "velocity": 1.15,
+  "note": null
+ }
+]

@@ -1,0 +1,50 @@
+(via NEWS API @ https://impolite-coherent-props.ngrok-free.dev)
+
+# 뉴스 블라인드스팟 — (고정셋 없음=순수발굴)  [최근 3일/국내만]
+  윈도우 전체(분모)      : 1469건
+  블라인드 풀            : 1469건  (랜덤 샘플 400건 발췌)
+
+  ── 토큰0 신흥어 top30 (블라인드 풀 제목 빈도 — 고정셋에 없는 '뜨는 단어') ──
+      106  AI (ticker?)
+       19  KB (ticker?)
+       17  SK (ticker?)
+       13  FOMC (ticker?)
+       12  Think
+        9  OLED (ticker?)
+        8  LG (ticker?)
+        8  LNG (ticker?)
+        7  ICT (ticker?)
+        6  AX (ticker?)
+        6  EU (ticker?)
+        6  YTN (ticker?)
+        4  LH (ticker?)
+        4  BOJ (ticker?)
+        3  ES (ticker?)
+        3  AWS (ticker?)
+        3  GT (ticker?)
+        3  WTO (ticker?)
+        2  NSA (ticker?)
+        2  BTS (ticker?)
+        2  CIA (ticker?)
+        2  WSCE (ticker?)
+        2  CNS (ticker?)
+        2  SPY (ticker?)
+        2  WISH (ticker?)
+        2  NCT (ticker?)
+        2  KT (ticker?)
+        2  MBC (ticker?)
+        2  HBM (ticker?)
+        2  USMCA (ticker?)
+
+  ── 랜덤 샘플 8건 미리보기 (전체는 --json) ──
+     Mon, 14 Se [       yonhap] [동정] 수은 행장, 강원도 쌀 가공식품 기업 방문
+     2026-09-14 [     einfomax] 5% 넘보는 美국채금리…베선트 '바주카포' 꺼낼까
+     Mon, 14 Se [           mt] 관세청, &#039;반도체 냉각가스 압력조절기&#039; 등 9건 품목분류 변경…신속통관 지원
+     Mon, 14 Se [       yonhap] "美사이버안보 총괄 NSA 대대적 개편…AI·中 등 담당조직 신설"
+     Sat, 12 Se [           mk] [속보] 軍 “북한, 새벽 원산 일대서 동해상으로 탄도미사일 수발 발사”
+     Wed, 09 Se [    google_kr] 캐나다 보복 관세에… 트럼프 “美정부 조달서 배제” 또 보복 - v.daum.net
+     2026-09-14 [     einfomax] 이재근에 축하 건넨 양종희 KB금융 회장 &quot;남은 절차 잘 진행되길&quot;
+     Sun, 13 Se [       newsis] [속보] 김정관 "구체적인 대미투자 프로젝트, 현재 밝히기 어려워"
+
+  → 다음: 신흥어/샘플에서 '뜨는데 고정셋에 없는' 테마 잡고, 중요한 건
+    search --field any 로 본문까지 집중조사 → 고정셋 추가어 환류.

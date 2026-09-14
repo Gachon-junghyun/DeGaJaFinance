@@ -1,0 +1,29 @@
+[repair] tickers=301  official 08-28=42  missing=259
+  … 5m 40/301  got=40
+  … 5m 80/301  got=80
+$EA: possibly delisted; no price data found  (5m 2026-08-28 -> 2026-08-29)
+
+1 Failed download:
+['EA']: possibly delisted; no price data found  (5m 2026-08-28 -> 2026-08-29)
+  … 5m 120/301  got=119
+  … 5m 160/301  got=159
+  … 5m 200/301  got=199
+  … 5m 240/301  got=239
+  … 5m 280/301  got=279
+  … 5m 301/301  got=300
+[validate] 5m bars per name: median 78  min 76  max 78  n=300
+[validate] n=42  close  mean|err| 0.0203%  max 0.0937%  >0.05%: 4
+[validate] volume  mean err -18.15%  median -14.52%  min -54.58%  max -4.74%  n=42
+[obv-unpatched hole] n=42 mean|d| 0.0625  median 0.0335  max 0.3702  label-flips 7/42  sign-flips 5/42
+[obv-5m repair] n=42 mean|d| 0.0087  median 0.0063  max 0.0272  label-flips 1/42  sign-flips 1/42
+[obv-repair worst] GOOG -0.027 · GOOGL -0.024 · MCHP +0.022 · NFLX -0.022 · AMZN -0.017
+[obv-hole worst] PCG -0.086->+0.285 · PYPL -0.264->-0.028 · CRM +0.340->+0.183 · MRVL -0.129->+0.022 · HPE -0.201->-0.062 · NOW +0.299->+0.161
+[repair] patched=258  no-5m(left NaN)=1 ['EA']
+  … rescore 100/300
+  … rescore 200/300
+  … rescore 300/300
+[axis] velocity 측정 0/298 = 0.0% → 속도축 제외(전원 3축) · 기준 80% (D225-KR)
+[hist] prev keys available: ['2026-08-25', '2026-08-26', '2026-08-27', '2026-08-28', '2026-08-31', '2026-09-01']  prev_n=299
+[repair] wrote SECTOR_FLOW_US_REPAIRED.json
+scoring: {"vel_axis": false, "vel_coverage": 0.0, "n_axes": 3, "scored": 298, "dropped_missing_axis": 0}
+universe: {"n": 298, "n_requested": 300, "wflow": -0.197, "green": 6, "red": 99}

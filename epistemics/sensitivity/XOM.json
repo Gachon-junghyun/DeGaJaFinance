@@ -1,0 +1,11 @@
+{
+  "ticker": "XOM",
+  "factors": {
+    "cycle-GAP/crude-escalation": {
+      "dir": "+중",
+      "event": "",
+      "conf": 0.6,
+      "updated": "2026-07-23"
+    }
+  }
+}

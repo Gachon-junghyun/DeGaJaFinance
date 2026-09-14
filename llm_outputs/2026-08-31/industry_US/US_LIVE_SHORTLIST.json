@@ -1,0 +1,123 @@
+{
+  "asof": "2026-08-28",
+  "filter": {
+    "floor_b": 10.0,
+    "top": 15
+  },
+  "shortlist": [
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "mcap": 124307819000.0,
+      "flow_score": 1.0,
+      "tag": "🟢가속",
+      "last": 256.24,
+      "obv_norm": 0.305,
+      "obv_state": "매집",
+      "rs20": 36.3,
+      "rs60": 32.4,
+      "vol_surge": 1.64,
+      "short": {
+        "ticker": "CRM",
+        "date": "2026-08-28",
+        "short_ratio": 44.8,
+        "base20_mean": 51.6,
+        "z_score": -0.76,
+        "slope5v5": -12.5,
+        "trend_arrow": "▼",
+        "n_days": 20,
+        "tag": "🟡 정상범위"
+      },
+      "verdict": "✅저숏/숏커버 (청정 상승)"
+    },
+    {
+      "ticker": "A",
+      "name": "Agilent Technologies",
+      "sector": "Health Care",
+      "industry": "Life Sciences Tools & Services",
+      "mcap": 35885802115.0,
+      "flow_score": 0.906,
+      "tag": "🟢가속",
+      "last": 153.77,
+      "obv_norm": 0.33,
+      "obv_state": "매집",
+      "rs20": 8.1,
+      "rs60": 9.9,
+      "vol_surge": 1.43,
+      "short": {
+        "ticker": "A",
+        "date": "2026-08-28",
+        "short_ratio": 45.7,
+        "base20_mean": 53.9,
+        "z_score": -0.92,
+        "slope5v5": -5.5,
+        "trend_arrow": "▼",
+        "n_days": 20,
+        "tag": "🟡 정상범위"
+      },
+      "verdict": "✅저숏/숏커버 (청정 상승)"
+    },
+    {
+      "ticker": "MSTR",
+      "name": "MicroStrategy",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "mcap": 39954190964.0,
+      "flow_score": 0.883,
+      "tag": "🟢가속",
+      "last": 127.3,
+      "obv_norm": 0.471,
+      "obv_state": "매집",
+      "rs20": 33.5,
+      "rs60": -1.4,
+      "vol_surge": 1.39,
+      "short": {
+        "ticker": "MSTR",
+        "date": "2026-08-28",
+        "short_ratio": 32.0,
+        "base20_mean": 40.4,
+        "z_score": -1.41,
+        "slope5v5": 1.4,
+        "trend_arrow": "▲",
+        "n_days": 20,
+        "tag": "🟡 정상범위"
+      },
+      "verdict": "✅저숏/숏커버 (청정 상승)"
+    },
+    {
+      "ticker": "INTU",
+      "name": "Intuit",
+      "sector": "Information Technology",
+      "industry": "Application Software",
+      "mcap": 73034379000.0,
+      "flow_score": 0.85,
+      "tag": "🟢가속",
+      "last": 358.06,
+      "obv_norm": 0.165,
+      "obv_state": "매집",
+      "rs20": 10.3,
+      "rs60": 13.0,
+      "vol_surge": 1.33,
+      "short": {
+        "ticker": "INTU",
+        "date": "2026-08-28",
+        "short_ratio": 37.7,
+        "base20_mean": 36.4,
+        "z_score": 0.2,
+        "slope5v5": 5.0,
+        "trend_arrow": "▲",
+        "n_days": 20,
+        "tag": "🟡 정상범위"
+      },
+      "verdict": "△정상숏"
+    }
+  ],
+  "clean": [
+    "CRM",
+    "A",
+    "MSTR"
+  ],
+  "squeeze": []
+}

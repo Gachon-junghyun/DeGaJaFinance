@@ -1,0 +1,95 @@
+{
+  "as_of": "2026-08-12",
+  "horizon_days": 14,
+  "binaries": [
+    {
+      "date": "2026-08-12",
+      "time_et": "08:30",
+      "event": "July CPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 0,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-08-13",
+      "time_et": "08:30",
+      "event": "July PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 1,
+      "kind": "macro"
+    },
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    },
+    {
+      "date": "2026-08-26",
+      "event": "NVDA earnings",
+      "ticker": "NVDA",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 14,
+      "kind": "earnings"
+    }
+  ],
+  "macro": [
+    {
+      "date": "2026-08-12",
+      "time_et": "08:30",
+      "event": "July CPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 0,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-08-13",
+      "time_et": "08:30",
+      "event": "July PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 1,
+      "kind": "macro"
+    },
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    }
+  ],
+  "earnings": [
+    {
+      "date": "2026-08-26",
+      "event": "NVDA earnings",
+      "ticker": "NVDA",
+      "axis": "earnings",
+      "binary": true,
+      "days_until": 14,
+      "kind": "earnings"
+    }
+  ],
+  "structural": []
+}

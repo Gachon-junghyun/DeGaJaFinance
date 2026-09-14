@@ -1,0 +1,43 @@
+# MISSED LEDGER — 재확인 감사 asof 2026-09-12
+  전체 353건 · 해소됨 219건 · 진입조건 없는 레거시 0건 · 재확인일 도래/경과 39건
+
+## 재확인일이 지났다 — 확인 없이 다음 런으로 넘기지 않는다
+  2026-08-24 MSTR MicroStrategy  [Q.확신부족] D+4    진입조건: rs60 turns >= 0 AND OBV stays accumulating
+  2026-08-19 DAL Delta Air Lines [M.숏리스트탈락] D+3    진입조건: the Transport node reaches >=3 of 9 accumulating AND DAL rs20 vs SPY > 0
+  2026-08-19 UAL United Airlines [M.숏리스트탈락] D+3    진입조건: delta turns positive on a settled sweep AND OBV state 매집
+  2026-08-19 CCEP Coca-Cola Europacific [M.숏리스트탈락] D+3    진입조건: vol_surge >= 1.2 on a settled sweep AND rs20 vs SPY > 0
+  2026-08-26 AMD Advanced Micro Devices [M.숏리스트탈락] D+3    진입조건: AMD tags 🟢가속 on a SETTLED-bar sweep with vol_surge >= 1.2 while OBV stays 매집
+  2026-08-27 LITE Lumentum       [Q.확신부족] D+3    진입조건: S128 settles and its verdict does not falsify the rs60 reversal, AND LITE still prints OBV 매집 on a settled bar
+  2026-08-31 LITE Lumentum Holdings [Q.확신부족] D+3    진입조건: cycle_registry.json gains an optical row AND LITE OBV stays 매집
+  2026-09-02 PSX Phillips 66    [M.숏리스트탈락] D+3    진입조건: vol_surge >= 1.00
+  2026-09-02 CVX Chevron        [M.숏리스트탈락] D+3    진입조건: vol_surge >= 1.00
+  2026-09-02 EOG EOG Resources  [M.숏리스트탈락] D+3    진입조건: OBV > +0.15 AND vol_surge >= 1.00
+  2026-09-02 FANG Diamondback Energy [M.숏리스트탈락] D+3    진입조건: OBV > +0.15
+  2026-09-02 FRO Frontline      [N.유니버스부재] D+3    진입조건: us_top300 rebuilt to include FRO
+  2026-09-02 LNG Cheniere Energy [N.유니버스부재] D+3    진입조건: universe rebuilt to include LNG
+  2026-08-27 COHR Coherent       [Q.확신부족] D+2    진입조건: an optical/interconnect row is added to cycle_registry.json OR COHR prints RS60 above zero with OBV still 매집 on a settled bar
+  2026-09-02 CEG Constellation Energy [Q.확신부족] D+2    진입조건: tag reaches green OR P127 fires branch A
+  2026-09-08 CTVA Corteva        [S.테마회피] D+2    진입조건: P102 settles and its verdict does not rest on CTVA, AND CTVA z20 stays above +1.5
+  2026-08-27 373220 LG에너지솔루션       [Q.확신부족] D+1    진입조건: ESS 스레드가 3매체 이상으로 확장 AND flow 🟢가속 전환(또는 Δ +0.3 초과)
+  2026-08-27 079550 LIG디펜스앤에어로스페이스 [U.발굴부재] D+1    진입조건: 이 이름의 KIS 실측·사업구성·밸류가 한 런에서 전부 측정됨 AND 금속 칸이 아닌 방산 프레임으로 재분류
+  2026-08-27 TGT Target         [Q.확신부족] D+1    진입조건: TGT mean analyst target rises above the price AND next-year EPS stops being below current-year EPS
+  2026-08-27 DASH DoorDash       [Q.확신부족] D+1    진입조건: DASH next-quarter EPS revision turns positive on a fresh pull AND OBV still 매집 on a settled bar
+  2026-08-27 ABNB Airbnb         [Q.확신부족] D+1    진입조건: ABNB mean target rises above price AND any revision horizon exceeds +6% over 90d
+  2026-08-28 SO Southern Company [S.테마회피] D+1    진입조건: OBV turns 매집 AND flow delta > 0 on two consecutive SETTLED sweeps
+  2026-08-28 ASML ASML Holding   [Q.확신부족] D+1    진입조건: tag 🟢가속 on a SETTLED sweep bar AND rs20 > +8
+  2026-08-28 SNDK SanDisk        [M.숏리스트탈락] D+1    진입조건: OBV turns 매집 AND rs60 > -10 on a settled sweep
+  2026-08-28 FCX Freeport-McMoRan [M.숏리스트탈락] D+1    진입조건: vol_surge >= 1.0 on a SETTLED sweep bar with flow > +0.5
+  2026-08-29 015860 일진홀딩스          [M.숏리스트탈락] D+1    진입조건: 시총 1조 이상으로 재분류되거나 일진전기(103590)가 🟢가속으로 승격해 지주 노출이 측정 가능해지면
+  2026-08-29 192820 코스맥스           [Q.확신부족] D+1    진입조건: 화학/화장품이 DEEP 슬롯을 받거나, 3세션 연속 🟢 유지하면서 KIS 외국인 순매수가 양전하면
+  2026-08-29 010130 고려아연           [Q.확신부족] D+1    진입조건: MATR 이 DEEP 슬롯을 받거나, 구리/아연 가격 축이 이 리포에 생기면
+  2026-08-31 005490 POSCO홀딩스       [R.타이밍대기] D+1    진입조건: flow_score 가 🟢가속으로 전환 OR rs20(벤치 ^KS11)이 0 위로 복귀
+  2026-09-02 001820 삼화콘덴서          [Q.확신부족] D+1    진입조건: KIS 20d foreign net-buy turns positive AND 009150 outperforms 069500.KS by +3.0pp cumulative over 5 settled sessions from its 09-01 close
+  2026-09-06 CEG Constellation Energy [M.숏리스트탈락] D+1    진입조건: S145 (settles 2026-09-11) fires against the vol_surge gate, OR CEG's flow tag turns green on a settled close
+  2026-09-06 VST Vistra         [M.숏리스트탈락] D+1    진입조건: S145 (2026-09-11) fires against the vol_surge gate, OR VST's flow tag turns green on a settled close
+  2026-09-06 DELL Dell Technologies [S.테마회피] D+1    진입조건: S145 (09-11) or S140 (09-08) resolves IT's sub-node question AND DELL's Delta-flow turns positive
+  2026-09-06 HOOD Robinhood Markets [Q.확신부족] D+1    진입조건: the bearish divergence clears with OBV still 누적 on a settled close
+  2026-09-07 VLO Valero Energy  [M.숏리스트탈락] D+1    진입조건: vol_surge >= 1.2 on a settled close OR P140 settles branch B on 2026-09-11
+  2026-08-30 SLB Schlumberger   [M.숏리스트탈락] D+0    진입조건: SLB tag turns green in a sweep with vel_coverage>=80% OR rs60 turns positive while OBV stays accumulating
+  2026-08-30 CRM Salesforce     [Q.확신부족] D+0    진입조건: a multi-day foreign thread with peak>=4 outlets names Salesforce, while flow stays >=+0.5
+  2026-08-31 COP ConocoPhillips [M.숏리스트탈락] D+0    진입조건: OBV > +0.15 AND rs20 > +8 vs SPY
+  2026-09-06 028670 팬오션            [Q.확신부족] D+0    진입조건: 외국인 3정착세션 연속 순매수 ∧ 태그 🟢가속 전환

@@ -1,0 +1,191 @@
+{
+ "fast": {
+  "SLB": {
+   "recent": 0,
+   "base": 0,
+   "recent_rate": 0.0,
+   "base_rate": 0.0,
+   "velocity": null,
+   "scope": "foreign",
+   "source": "api",
+   "note": "해당 기간 기사 0건 (색인 부재가 아니라 실제 무기사)"
+  },
+  "CRM": {
+   "recent": 363,
+   "base": 1030,
+   "recent_rate": 51.86,
+   "base_rate": 34.33,
+   "velocity": 1.51,
+   "scope": "foreign",
+   "source": "api"
+  },
+  "MDT": {
+   "recent": 91,
+   "base": 181,
+   "recent_rate": 13.0,
+   "base_rate": 6.03,
+   "velocity": 2.15,
+   "scope": "foreign",
+   "source": "api"
+  },
+  "DE": {
+   "recent": 44,
+   "base": 236,
+   "recent_rate": 6.29,
+   "base_rate": 7.87,
+   "velocity": 0.8,
+   "scope": "foreign",
+   "source": "api"
+  },
+  "CTVA": {
+   "recent": 7,
+   "base": 24,
+   "recent_rate": 1.0,
+   "base_rate": 0.8,
+   "velocity": 1.25,
+   "scope": "foreign",
+   "source": "api"
+  },
+  "HPE": {
+   "recent": 114,
+   "base": 232,
+   "recent_rate": 16.29,
+   "base_rate": 7.73,
+   "velocity": 2.11,
+   "scope": "foreign",
+   "source": "api"
+  },
+  "NEM": {
+   "recent": 51,
+   "base": 253,
+   "recent_rate": 7.29,
+   "base_rate": 8.43,
+   "velocity": 0.86,
+   "scope": "foreign",
+   "source": "api"
+  },
+  "MSTR": {
+   "recent": 0,
+   "base": 0,
+   "recent_rate": 0.0,
+   "base_rate": 0.0,
+   "velocity": null,
+   "scope": "foreign",
+   "source": "api",
+   "note": "해당 기간 기사 0건 (색인 부재가 아니라 실제 무기사)"
+  },
+  "TER": {
+   "recent": 12,
+   "base": 133,
+   "recent_rate": 1.71,
+   "base_rate": 4.43,
+   "velocity": 0.39,
+   "scope": "foreign",
+   "source": "api"
+  },
+  "JCI": {
+   "recent": 7,
+   "base": 26,
+   "recent_rate": 1.0,
+   "base_rate": 0.87,
+   "velocity": 1.15,
+   "scope": "foreign",
+   "source": "api"
+  }
+ },
+ "slow": {
+  "SLB": {
+   "recent": 0,
+   "base": 0,
+   "recent_rate": 0.0,
+   "base_rate": 0.0,
+   "velocity": null,
+   "scope": "foreign",
+   "source": "api",
+   "note": "해당 기간 기사 0건 (색인 부재가 아니라 실제 무기사)"
+  },
+  "CRM": {
+   "recent": 363,
+   "base": 1030,
+   "recent_rate": 51.86,
+   "base_rate": 34.33,
+   "velocity": 1.51,
+   "scope": "foreign",
+   "source": "api"
+  },
+  "MDT": {
+   "recent": 91,
+   "base": 181,
+   "recent_rate": 13.0,
+   "base_rate": 6.03,
+   "velocity": 2.15,
+   "scope": "foreign",
+   "source": "api"
+  },
+  "DE": {
+   "recent": 44,
+   "base": 236,
+   "recent_rate": 6.29,
+   "base_rate": 7.87,
+   "velocity": 0.8,
+   "scope": "foreign",
+   "source": "api"
+  },
+  "CTVA": {
+   "recent": 7,
+   "base": 24,
+   "recent_rate": 1.0,
+   "base_rate": 0.8,
+   "velocity": 1.25,
+   "scope": "foreign",
+   "source": "api"
+  },
+  "HPE": {
+   "recent": 114,
+   "base": 232,
+   "recent_rate": 16.29,
+   "base_rate": 7.73,
+   "velocity": 2.11,
+   "scope": "foreign",
+   "source": "api"
+  },
+  "NEM": {
+   "recent": 51,
+   "base": 253,
+   "recent_rate": 7.29,
+   "base_rate": 8.43,
+   "velocity": 0.86,
+   "scope": "foreign",
+   "source": "api"
+  },
+  "MSTR": {
+   "recent": 0,
+   "base": 0,
+   "recent_rate": 0.0,
+   "base_rate": 0.0,
+   "velocity": null,
+   "scope": "foreign",
+   "source": "api",
+   "note": "해당 기간 기사 0건 (색인 부재가 아니라 실제 무기사)"
+  },
+  "TER": {
+   "recent": 12,
+   "base": 133,
+   "recent_rate": 1.71,
+   "base_rate": 4.43,
+   "velocity": 0.39,
+   "scope": "foreign",
+   "source": "api"
+  },
+  "JCI": {
+   "recent": 7,
+   "base": 26,
+   "recent_rate": 1.0,
+   "base_rate": 0.87,
+   "velocity": 1.15,
+   "scope": "foreign",
+   "source": "api"
+  }
+ },
+ "flipped": []
+}

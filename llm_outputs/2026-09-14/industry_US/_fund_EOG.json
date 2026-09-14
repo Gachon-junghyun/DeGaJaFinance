@@ -1,0 +1,179 @@
+{
+  "ticker": "EOG",
+  "company_name": "EOG Resources, Inc.",
+  "sector": "Energy",
+  "industry": "Oil & Gas E&P",
+  "price": 147.36,
+  "market_cap": 77294624768,
+  "trailing_pe": 11.467704,
+  "forward_pe": 10.0480585,
+  "peg_ratio": 1.38,
+  "price_to_sales": 2.9373207,
+  "price_to_book": 2.4302394,
+  "trailing_eps": 12.85,
+  "forward_eps": 14.42503,
+  "fifty_two_week_high": 153.67,
+  "fifty_two_week_low": 101.59,
+  "target_low": 134.0,
+  "target_mean": 160.5,
+  "target_high": 193.0,
+  "target_median": 157.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 1,
+      "buy": 10,
+      "hold": 21,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 1,
+      "buy": 10,
+      "hold": 19,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 1,
+      "buy": 12,
+      "hold": 17,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 1,
+      "buy": 12,
+      "hold": 17,
+      "sell": 0,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-03-31",
+      6758000000.0
+    ],
+    [
+      "2025-12-31",
+      5653000000.0
+    ],
+    [
+      "2025-09-30",
+      5732000000.0
+    ],
+    [
+      "2025-06-30",
+      5355000000.0
+    ],
+    [
+      "2025-03-31",
+      5842000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      8620000000.0
+    ],
+    [
+      "2026-03-31",
+      6921000000.0
+    ],
+    [
+      "2025-09-30",
+      5847000000.0
+    ],
+    [
+      "2025-06-30",
+      5478000000.0
+    ],
+    [
+      "2025-03-31",
+      5669000000.0
+    ],
+    [
+      "2024-09-30",
+      5965000000.0
+    ],
+    [
+      "2024-06-30",
+      6025000000.0
+    ],
+    [
+      "2024-03-31",
+      6123000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 4.03169,
+      "7daysAgo": 3.98082,
+      "30daysAgo": 4.10845,
+      "60daysAgo": 4.22774,
+      "90daysAgo": 4.59248
+    },
+    {
+      "period": "+1q",
+      "current": 4.07583,
+      "7daysAgo": 3.92382,
+      "30daysAgo": 3.94986,
+      "60daysAgo": 3.97671,
+      "90daysAgo": 4.24852
+    },
+    {
+      "period": "0y",
+      "current": 16.87215,
+      "7daysAgo": 16.57013,
+      "30daysAgo": 16.63907,
+      "60daysAgo": 16.72018,
+      "90daysAgo": 17.24233
+    },
+    {
+      "period": "+1y",
+      "current": 14.66552,
+      "7daysAgo": 14.35556,
+      "30daysAgo": 14.65245,
+      "60daysAgo": 14.66274,
+      "90daysAgo": 14.81674
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 0.0,
+      "upLast30days": 8.0,
+      "downLast30days": 12.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 0.0,
+      "upLast30days": 6.0,
+      "downLast30days": 13.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 0.0,
+      "upLast30days": 12.0,
+      "downLast30days": 11.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 0.0,
+      "upLast30days": 13.0,
+      "downLast30days": 11.0,
+      "downLast7Days": 1.0
+    }
+  ],
+  "business_summary": "EOG Resources, Inc., together with its subsidiaries, explores for, develops, produces, and markets crude oil, natural gas liquids, and natural gas in producing basins in the United States, the Republic of Trinidad and Tobago, and internationally. The company also offers crude oil and condensate, and gathering, processing and marketing. The company was formerly known as Enron Oil & Gas Company. EOG Resources, Inc. was incorporated in 1985 and is headquartered in Houston, Texas.",
+  "next_earnings_date": "2026-11-06",
+  "beta": 0.272,
+  "dividend_yield": 2.77
+}

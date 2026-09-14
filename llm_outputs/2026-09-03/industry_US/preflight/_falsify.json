@@ -1,0 +1,102 @@
+{
+ "CRM": {
+  "query": "Salesforce",
+  "recent": 458,
+  "base": 1018,
+  "recent_rate": 65.43,
+  "base_rate": 33.93,
+  "velocity": 1.93,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "SLB": {
+  "query": "SLB",
+  "recent": 78,
+  "base": 142,
+  "recent_rate": 11.14,
+  "base_rate": 4.73,
+  "velocity": 2.35,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "A": {
+  "query": "Agilent Technologies",
+  "recent": 18,
+  "base": 37,
+  "recent_rate": 2.57,
+  "base_rate": 1.23,
+  "velocity": 2.08,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "MDT": {
+  "query": "Medtronic",
+  "recent": 76,
+  "base": 168,
+  "recent_rate": 10.86,
+  "base_rate": 5.6,
+  "velocity": 1.94,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "CTVA": {
+  "query": "CTVA|Corteva",
+  "recent": 7,
+  "base": 27,
+  "recent_rate": 1.0,
+  "base_rate": 0.9,
+  "velocity": 1.11,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "BKR": {
+  "query": "Baker Hughes",
+  "recent": 45,
+  "base": 198,
+  "recent_rate": 6.43,
+  "base_rate": 6.6,
+  "velocity": 0.97,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "USB": {
+  "query": "U.S. Bancorp",
+  "recent": 14,
+  "base": 60,
+  "recent_rate": 2.0,
+  "base_rate": 2.0,
+  "velocity": 1.0,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "PCG": {
+  "query": "PG&E",
+  "recent": 169,
+  "base": 189,
+  "recent_rate": 24.14,
+  "base_rate": 6.3,
+  "velocity": 3.83,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "SHOP": {
+  "query": "SHOP|Shopify",
+  "recent": 774,
+  "base": 3227,
+  "recent_rate": 110.57,
+  "base_rate": 107.57,
+  "velocity": 1.03,
+  "scope": "foreign",
+  "source": "api"
+ },
+ "CI": {
+  "query": "Cigna",
+  "recent": 14,
+  "base": 41,
+  "recent_rate": 2.0,
+  "base_rate": 1.37,
+  "velocity": 1.46,
+  "scope": "foreign",
+  "source": "api"
+ }
+}

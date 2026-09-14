@@ -43,20 +43,40 @@ def price_move(ticker: str) -> dict:
 
     yfinance 7d 일봉으로 last / 1d% / 5d% 산출. 실패 시 값 None(추정 금지).
     KR 6자리는 .KS 접미사로 조회(무인증 라이브 진단이라 yfinance 사용).
+
+    🚨 **asof 와 stale 을 반드시 같이 낸다** (2026-09-03 실측 결함).
+    yfinance 는 US 종목의 «가장 최근 봉» Close 를 간헐적으로 NaN 으로 준다(D402).
+    그때 `.dropna()` 가 그 행을 **조용히 지워서** `iloc[-1]` 이 전 세션, `iloc[-2]` 가
+    그 전 세션이 되고 ⇒ **「전전일 대비 전일 등락」이 「당일 등락」으로 출력된다.**
+    예외도 경고도 없다. 실측: 2026-09-03 10:52 KST 에 NVDA 가 217.44(=09-01 종가) / −1.5% 로
+    나왔고 실제 마지막 정착 세션은 09-02 224.41(+3.20%) — **부호가 반대였다.**
+    한 시간 뒤 같은 호출이 정상으로 돌아왔다(간헐적, D353 계열 — 고쳐진 게 아니라 지나간 것).
+    ⇒ 이 함수는 이제 **어느 날짜의 봉인지**와 **최근 봉이 잘려나갔는지**를 반환하고,
+    호출자(cmd_pulse)가 그것을 화면에 찍는다. 진단은 상위가 하고, 여기선 사실만 낸다(P4).
     """
     t = ticker.strip().upper()
     yq = f"{t}.KS" if (len(t) == 6 and t.isdigit()) else t
+    blank = {"ticker": t, "price": None, "chg_1d": None, "chg_5d": None,
+             "asof": None, "stale": None}
     try:
         import yfinance as yf
-        h = yf.Ticker(yq).history(period="7d")["Close"].dropna()
+        raw = yf.Ticker(yq).history(period="7d")["Close"]
+        h = raw.dropna()
         if len(h) < 2:
-            return {"ticker": t, "price": None, "chg_1d": None, "chg_5d": None}
+            return blank
+        # 최근 봉이 NaN 이라 잘려나갔나 — 이게 조용한 오답의 원인이다.
+        stale = bool(len(raw) > len(h) and raw.index[-1] != h.index[-1])
+        try:
+            asof = h.index[-1].date().isoformat()
+        except Exception:
+            asof = str(h.index[-1])[:10]
         last = float(h.iloc[-1])
         return {"ticker": t, "price": last,
                 "chg_1d": (last / float(h.iloc[-2]) - 1) * 100,
-                "chg_5d": (last / float(h.iloc[0]) - 1) * 100}
+                "chg_5d": (last / float(h.iloc[0]) - 1) * 100,
+                "asof": asof, "stale": stale}
     except Exception:
-        return {"ticker": t, "price": None, "chg_1d": None, "chg_5d": None}
+        return blank
 
 
 def mark_book(conn: sqlite3.Connection, fallback: Optional[dict] = None) -> dict:

@@ -1,0 +1,22 @@
+스캔: sector='Information Technology' 56종 (광기 보유 0종 교차표시) ...
+  ...40/56 처리
+  ...56/56 처리
+가격 확보 56/56종
+
+# US 셋업 스크리너 — 2026-09-12  (sector='Information Technology', 56 모수, 바구니별 ≤8, 섹터캡 해제(단일섹터))
+# ⚠️ raw 후보(턴 미확정) — CHART_READ·STRUCTURE GATE·기업분석이 다운스트림에서 거른다. 매수신호 아님.
+
+## A. 리더 눌림목 (leader pullback) — 추세상단·rsi<45·50DMA근접  (2)
+  TICKER    RSI  px/200  ~50DMA  ~52wL  flags  sector
+  MSI      36.3    +10%     +4%   +28%  🆕신규        Information Technology
+  ASML     41.2    +14%     -2%  +111%  🆕신규        Information Technology
+
+## B. 디레이트 스냅백 (de-rate snapback) — 추세하단·px/200≤-12%·rsi 30~52  (0)
+  (없음)
+
+## C. 워시아웃 옥탄 (washout) — rsi<28·52주저점 근접  (1)
+  TICKER    RSI  px/200  ~50DMA  ~52wL  flags  sector
+  ADSK     27.7    -14%     -8%   +13%  🆕신규        Information Technology
+
+→ 🆕 신규 발굴(기존 9개·보유 밖): 3종 — MSI ASML ADSK
+→ 이 티커들을 snapshot_universe.py argv 에 넣어 헌트 후보로 승격(CHART_READ→기업분석).

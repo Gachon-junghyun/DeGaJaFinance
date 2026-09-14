@@ -157,16 +157,21 @@ def cmd_pulse(a):
     with connect(a.db) as conn:
         positions = get_positions(conn, open_only=True)
     # 시장 맥락
-    print("# LIVE PULSE  (오늘 뭔일? — 당일 데이터)")
+    print("# LIVE PULSE  (마지막 «정착» 봉 기준 — 실시간 아님)")
     print("  시장맥락:", end=" ")
     ctx = []
+    asofs, stales = set(), []
     for tk, lab in [("SPY", "S&P500"), ("QQQ", "Nasdaq"), ("^VIX", "VIX")]:
         m = price_move(tk)
         if m["price"] is not None:
             ctx.append(f"{lab} {m['price']:.1f}({m['chg_1d']:+.1f}%)")
+            if m.get("asof"):
+                asofs.add(m["asof"])
+            if m.get("stale"):
+                stales.append(tk)
     print(" · ".join(ctx))
-    print(f"\n{'TKR':7s} {'price':>9} {'1d%':>7} {'5d%':>7} {'stop%':>7} {'테마':<16}")
-    print("  " + "─" * 62)
+    print(f"\n{'TKR':7s} {'price':>9} {'1d%':>7} {'5d%':>7} {'stop%':>7} {'asof':>11} {'테마':<16}")
+    print("  " + "─" * 74)
     worst = []
     for p in positions:
         mv = price_move(p.ticker)
@@ -176,13 +181,29 @@ def cmd_pulse(a):
         sd = f"{pl['stop_dist_pct']:+.1f}" if pl.get("stop_dist_pct") is not None else "—"
         flag = " ⛔" if pl.get("stop_hit") else ""
         px = f"{mv['price']:.2f}" if mv["price"] is not None else "n/a"
-        print(f"{p.ticker:7s} {px:>9s} {d1:>7s} {d5:>7s} {sd:>7s} {(p.theme or '')[:16]:<16}{flag}")
+        ao = mv.get("asof") or "—"
+        if mv.get("stale"):
+            ao += "⚠"
+            stales.append(p.ticker)
+        if mv.get("asof"):
+            asofs.add(mv["asof"])
+        print(f"{p.ticker:7s} {px:>9s} {d1:>7s} {d5:>7s} {sd:>7s} {ao:>11s} {(p.theme or '')[:16]:<16}{flag}")
         if mv["chg_1d"] is not None:
             worst.append((mv["chg_1d"], p.ticker))
     worst.sort()
     if worst:
         big = [f"{t} {c:+.1f}%" for c, t in worst if c <= -3]
         print(f"\n  ⚠ 당일 −3%↓: {', '.join(big) if big else '없음 (책 기준 나락 아님)'}")
+
+    # 🚨 asof 게이트 — 이 블록이 없어서 2026-09-03 런이 한 세션 낡은 봉 위에서 돌았다(D402/D48).
+    if len(asofs) > 1:
+        print(f"\n  🚨 봉 날짜가 종목마다 다르다: {', '.join(sorted(asofs))}"
+              f"  ⇒ 서로 다른 세션을 한 표에 놓고 비교하는 중이다. 등락 비교 금지.")
+    elif asofs:
+        print(f"\n  asof {next(iter(asofs))} (마지막 정착 종가). 실시간 화면보다 지연될 수 있다.")
+    if stales:
+        print(f"  🚨 최근 봉이 NaN 이라 잘려나감 → 표시된 «1d%» 는 그 전 세션 대비다: "
+              f"{', '.join(sorted(set(stales)))}  ⇒ 이 이름들의 당일 등락은 «미확보»로 취급하라(D402).")
     print("  → 촉매 확인: python -X utf8 -m module_news_data fts search <종목/테마> --scope foreign --days 1 --snippet")
 
 

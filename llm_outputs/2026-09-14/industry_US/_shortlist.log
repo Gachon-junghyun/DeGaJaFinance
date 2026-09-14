@@ -1,0 +1,17 @@
+[info] shortlist 5 — us_flow FINRA short z-score …
+
+[saved] C:\Users\fivep\DeGaJaFinance\llm_outputs\2026-09-14\industry_US\US_LIVE_SHORTLIST.json
+# US LIVE SHORTLIST — wide sweep→filter→us_flow FINRA short  (asof 2026-09-11)
+filter: mcap≥$10.0B · tag 🟢가속 · flow desc top15 → 5 names
+⚠️ US엔 투자자별(외국인/기관) 피드 없음 → 숏압력(FINRA z) proxy. crowded-short=턴조건 스퀴즈연료(단독 매수 아님).
+
+TICKER name                  flow  news   OBV  RS20 shortZ  verdict
+QCOM   Qualcomm             +0.83   n/a +0.43  12.2  -0.26  △정상숏
+META   Meta Platforms       +0.79   n/a +0.24  10.7  +0.25  △정상숏
+DELL   Dell Technologies    +0.79   n/a +0.28  16.5  -0.95  ✅저숏/숏커버 (청정 상승)
+HPE    Hewlett Packard Ent  +0.71   n/a +0.10   5.5  +0.58  △정상숏
+AIG    American Internatio  +0.62   n/a +0.26   0.8  +1.36  △정상숏
+
+★ 청정 상승 (🟢 AND 저숏/숏커버): Dell Technologies(DELL)
+
+해석: 저숏/숏커버=상방 청정 · crowded-short=턴 확인 시 스퀴즈연료(단독 매수 X) · US는 '누가 사나' 실측 부재(KR KIS 대비 약점).

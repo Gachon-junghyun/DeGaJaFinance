@@ -1,0 +1,17 @@
+refinery | 37
+yen | 55
+tariff | 207
+bond selloff | 10
+diesel | 88
+payrolls | 15
+inflation | 359
+rate hike | 198
+AI capex | 42
+FOMC | 42
+Hormuz | 123
+Iran | 315
+Fed | 218
+Oracle | 63
+Anthropic | 165
+Nvidia | 254
+Boeing | 37

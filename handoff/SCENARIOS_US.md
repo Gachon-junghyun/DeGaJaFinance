@@ -155,7 +155,7 @@ pricing; the 3Q26 calendar price deceleration lands in **FQ1'27 (Sep–Nov)**. `
 
 ---
 
-## S5 — KR semiconductor exports, 1–10 August · ARMED · ~2026-08-11
+## S5 — KR semiconductor exports, 1–10 August · **EXPIRED-UNSCORED — reassigned to `industry_kr` (`W1`: a KR customs series is not scoreable on a `--market us` desk)** (scored 2026-09-07 by the `industry_US` run from already-published data — `D472` header hygiene) · ~2026-08-11
 
 | Branch | Observable | Meaning |
 |---|---|---|
@@ -224,7 +224,7 @@ the last 20 days**, coincident with the 07-10 truce collapse. The refining node 
 
 ---
 
-## S9 — The DOVISH real-rate branch · ARMED · 2026-07-29 (FOMC) and running
+## S9 — The DOVISH real-rate branch · **SETTLED FIRED-B** (scored 2026-09-07 by the `industry_US` run from already-published data — `D472` header hygiene) · 2026-07-29 (FOMC) → last scoreable observation 2026-09-03. 🚨 **no terminal date was ever registered** (`D555`)
 
 ★ **The branch nothing else in the desk brackets.** The hawkish branch (real 10y **>2.55%**) is already
 MACRO P1's registered anti-signal. Its mirror was un-bracketed until the 2026-07-22 PREMORTEM found that
@@ -312,7 +312,7 @@ would change anything is not worth bracketing.
 
 ---
 
-## S14 — Mastercard Q2 · ARMED · 2026-07-30 · the Financials-breadth test
+## S14 — Mastercard Q2 · **SETTLED A-PARTIAL (branch B ruled out; A price leg MET, fundamental leg unretrievable — `D556`)** (scored 2026-09-07 by the `industry_US` run from already-published data — `D472` header hygiene) · 2026-07-30 · the Financials-breadth test
 
 Registered 2026-07-23 by the `industry_US` PREMORTEM (Lens 2), before the event. It exists to settle
 **DEEP ②'s own question**, not as a single-name view.
@@ -390,7 +390,7 @@ established trend** — the weakest admissible form of the A-grade signal, and s
 
 ---
 
-## S19 — ★★ FOMC 2026-07-29 · the **HIKE** branch no registered scenario contains · ARMED · D-5
+## S19 — ★★ FOMC 2026-07-29 · the **HIKE** branch no registered scenario contains · **SETTLED FIRED-M** (scored 2026-09-07 by the `industry_US` run from already-published data — `D472` header hygiene) · numeric legs closed 2026-08-05
 
 Registered **2026-07-24 by the `industry_US` PREMORTEM (Lens 2), before the event.**
 
@@ -948,7 +948,7 @@ brackets score on.** Nothing in S1–S39 contains this.
 - ★ **Information content (L3): branch A impairs an observable three registered brackets share.**
   The highest-information bracket registered this run.
 
-## S41 — ★★ The AI-issuer credit channel S26 explicitly excluded · ARMED · → 2026-08-12
+## S41 — ★★ The AI-issuer credit channel S26 explicitly excluded · **SETTLED FIRED-B** (scored 2026-09-07 by the `industry_US` run from already-published data — `D472` header hygiene) · → 2026-08-12
 
 Registered **2026-07-29 by the `industry_US` PREMORTEM (Lens 2).**
 
@@ -1049,7 +1049,7 @@ prior measurement contradicts, and nothing in S1–S41 brackets it.**
 | **S32** | 2026-07-27 | 2026-07-28 COT → **2026-07-31** | — **not scoreable, not EXPIRED** | (checked 2026-07-30) | The CFTC release covering the 07-28 Tuesday close **publishes 07-31**. ⚠⚠ **Measured this run: today's `us_flow --cot` output is BYTE-IDENTICAL to M125's 07-21 read on all eight instruments** (NDX 5th · S&P 84th · R2K 88th · UST10Y 12th with −48,031 · WTI 11th · NatGas 11th · Copper 98th) ⇒ **the desk's only positioning axis has been 9 calendar days old since 07-24, across an FOMC and four mega-cap prints.** That is correct feed behaviour, **but the tool prints no `asof`, so a stale snapshot is indistinguishable from a fresh one — new dig D104** |
 | **S46 · S47 · S48 · S49** | **2026-07-30 (industry_US PREMORTEM)** | 08-06 / 08-07 / 08-13 / 09-30 | — | — | ARMED — ★ **S46** brackets a name **this run's own HANDOVER revived hours before a D-0 binary its calendar did not carry** · **S47** is the Utilities **SPREAD**, the object neither S35 nor S24 contains · **S48** is the first bracket this desk has ever had on the **optical/interconnect** layer · **S49** is **S8's granularity-invariant successor**, written on a *change* because R30/D95 withdrew S8's absolute levels. Full brackets below |
 
-## S46 — ★★ AAPL: a ledger revival, hours before a binary the calendar did not carry · ARMED · → 2026-08-13
+## S46 — ★★ AAPL: a ledger revival, hours before a binary the calendar did not carry · **SETTLED FIRED-A (the AGAINST-US branch)** (scored 2026-09-07 by the `industry_US` run from already-published data — `D472` header hygiene) · → 2026-08-13
 
 Registered **2026-07-30 by the `industry_US` PREMORTEM (Lens 1/2), before the 07-30 AMC print.**
 
@@ -3170,3 +3170,1982 @@ why the **`vol_surge` ??1.0 conjunction is written into branch A at registration
 afterwards.
 ??**This bracket does NOT promote either name.** It tests the **registry**, a human-maintained file (P5).
 
+
+---
+
+## Registered 2026-08-17 by the `industry_US` run (PREMORTEM) — **S95 – S98**
+
+> ⚠ **ID note (D76 collision class, greps at WRITE time)**: `grep -r "S9[5-8]\b"` run across
+> `handoff/*.md` · `llm_outputs/` · `REPORT/` returned **0 registrations in every markdown file**;
+> highest existing was **S94 (US) / S63-KR (KR)** ⇒ this run takes **S95–S98**. All four indexed in the
+> `SCENARIOS.md` MASTER INDEX.
+
+### S95 — ★★★ The MANDATORY D-0 bracket: the 60-day US–Iran MoU expired 2026-08-17 and **no existing row is keyed to that date** · ARMED · → settle **2026-08-21**
+
+**Why this row exists.** `CATALYST_WATCH` (pulled 22:1x KST 08-17) carried only `NVDA` 08-26 and an
+**undated** Hormuz statement. The **60-day US–Iran ceasefire / MoU expired TODAY**, corroborated by
+5 independent outlets — `yahoo_finance` "US Equity Futures Mixed Pre-Bell as 60-Day US-Iran Ceasefire
+Expires" · `aljazeera` "US-Iran Memorandum of Understanding expires: How and why it fell apart"
+(9,981-char body) · `bloomberg` "Trump Issues Threat to Oman as US-Iran MOU Expires" · `cnbc`
+"Strait of Hormuz shipping grinds to a halt ahead of U.S.-Iran ceasefire expiry" · `oilprice`
+"Hormuz Tanker Traffic Slows to a Trickle". `S74` (08-24), `S84` (08-21) and `S92` (08-31) bracket
+**Hormuz reopening**; none is keyed to the **expiry date**, which was unknown at their registration.
+`S8` has carried this same object **undated for fifteen runs**.
+
+| | |
+|---|---|
+| **Observable** | `BZ=F` (Brent front-month) settlement price |
+| **Branch A** | **≥ 93.00** — the shutdown finally reprices the barrel |
+| **Branch B** | **≤ 86.50** — de-escalation / covert flows win; the ENRG premium is equity-only |
+| **Branch C** | **86.50 – 93.00 = NO-INFORMATION, declared at registration and the FAVOURITE** |
+| **State at registration** | 08-11 **88.91** → 08-14 settle **88.52** (−0.44%) → 08-17 live intraday 88.84. **Realised 4-session range 87.07–88.98 = a 2.2% band** |
+| **Settle** | **2026-08-21** |
+| **Implied-move check** | `MPC` **±4.3%** (expiry 08-21, **D4**), P/C 0.81, skew **+38.9**. Branch A needs **+5.1%** on Brent ⇒ **outside** ⇒ informative. Branch B needs **−2.3%** ⇒ **inside** ⇒ **WEAK-INFORMATION, labelled now** |
+| 🚨 **Anti-signal** | A **US refinery outage, PADD3 hurricane landfall, or an OPEC+ quota decision** inside the window makes any crude move non-attributable to Hormuz ⇒ **VOID**, not scored favourably |
+
+★ **What this row buys.** Four settled sessions of escalation produced **Brent −0.44% / WTI −0.96%**
+while `XLE` beat `SPY` by only **+0.86pp**. ⇒ The live question is not "does closure spike crude" but
+**"has the equity complex priced a premium the commodity has not?"** — and both branches answer it.
+
+### S96 — ★★ The 5th DEEP's own falsifier: is the optical/interconnect layer EARLY or LATE? · ARMED · → settle **2026-08-21**
+
+**Why.** Three mutually independent instruments selected one sub-node today — `theme_age optical`
+**1.74×** (highest of 13 probes), `burst` **`OPTOELECTRONICS` z 5.7** (vocabulary-free), a **BUILDING**
+thread "Lightmatter sets optical interconnect blueprint as AI hits copper wall" (2→2→2), and
+`sector_flow`'s **#1 and #2 `flow_score` board-wide** (`COHR` +0.99 · `LITE` +0.82, both 3-axis
+admissible). PREMORTEM promoted IT as a 5th DEEP on that convergence. **This row is the promotion's
+falsifier, registered in the same breath.**
+
+| | |
+|---|---|
+| **Observable** | `EW{COHR, LITE}` 5-session excess return vs **`SPY`**, plus the thread's daily outlet count |
+| **Branch A** | **≥ +5.0pp** *and* the Lightmatter thread reaches **≥4 outlets** on any single day ⇒ bought, not just written about |
+| **Branch B** | **≤ −5.0pp** ⇒ the 20-day excess was print-reaction volume; the promotion was late |
+| **Branch C** | between |
+| **State at registration** | `COHR` rs5 **−14.46** / rs20 +12.93 / rs60 **−13.67** · `LITE` rs5 +3.64 / rs20 **+21.93** / rs60 **−1.76** — **both have NEGATIVE-to-zero 60-day excess; only the 20-day window flatters them** |
+| **Settle** | **2026-08-21** |
+| **Implied-move check** | 🚨 **NOT PULLED** — `--positioning` was run for `MPC`/`VLO`/`TGT`/`LHX` only. **The gap is stated rather than glossed.** ⚠ σ20d is **8.43%** / **7.55%**, the two widest on the sheet ⇒ ±5pp is inside one week's noise ⇒ **both branches reachable but C is likely** |
+| 🚨 **Anti-signal** | An `NVDA`-dated announcement (08-26 print) naming optical ⇒ the layer reprices on a **headline** event, which is the opposite of the chain-hop premise ⇒ **VOID** |
+
+### S97 — ★★ `LHX` succession: a discontinuity, or an orderly insider handover? · ARMED · → settle **2026-08-21**
+
+**Why.** `burst` surfaced **`KUBASIK`** as a new word at a **0% 30-day baseline**; the body-read
+inverted the naive reading — **CEO Christopher Kubasik stepped down, insider Sam Mehta appointed, stock
+down**, 4 outlets, all 08-17. `M704` had measured `LHX` as the **only** name negative on both 20d and
+60d inside the defense EW that closed `D249`, and its FINRA short-z was **+1.86 🔴 building** on
+**2026-08-14 — three days before the announcement**.
+
+| | |
+|---|---|
+| **Observable** | `LHX` 5-session excess return vs **`SPY`** |
+| **Branch A** | **≤ −4.0pp** ⇒ priced as a discontinuity; `M704`'s defense EW must be re-run **ex-`LHX`** |
+| **Branch B** | **≥ 0** ⇒ orderly succession; the short-z build was hedging noise |
+| **Branch C** | between |
+| **State at registration** | rs5 **+1.40** · rs20 **−0.97** · rs60 **−11.11** vs `SPY` (settled 08-14) — ★ **already broken BEFORE the news** |
+| **Settle** | **2026-08-21** |
+| **Implied-move check** | **±3.7%** (expiry 08-21, D4), P/C 0.70, **skew +0.0 = NEUTRAL**. Branch A needs −4.0pp ⇒ **marginally outside** ⇒ informative. ★ **A zero skew on a name that lost its CEO the same day is itself the anomaly**, and is registered as this row's most interesting input |
+| 🚨 **Anti-signal** | A **DoD contract award or defense-budget headline** naming `LHX` inside the window ⇒ the move is not about succession ⇒ **VOID** |
+
+### S98 — ★★★ Is the underweight FOUR legs of ONE duration bet — and was its stated cause already retracted? · ARMED · → settle **2026-08-20**
+
+**Why.** The desk is **UW Utilities · UW Real Estate · UW− Staples**, which `S80` (08-19) brackets as
+one duration bet, and `S82` (08-20) asks whether **Health Care** is a fourth leg. 🚨 **`R73` withdrew
+the mechanism underneath all of them**: the underweight was written under "the long end is repricing
+term premium with `DGS2` pinned", and `DGS2` **fell 10bp** (4.25 → 4.15) while `DGS30` itself fell —
+a **bull steepener**, which is a *tailwind* for regulated utilities and long-duration REITs. This row
+scores the four-leg question as one object rather than four.
+
+| | |
+|---|---|
+| **Observable** | Sign of the 5-session excess vs **`SPY`** for `XLU`, `XLRE`, `XLP` and `XLV`, at settle |
+| **Branch A** | **All four carry the same sign** ⇒ one bet wearing four GICS labels; `R73`'s retraction applies to all four at once |
+| **Branch B** | **The four split in sign** ⇒ four separate calls; `S80`'s three-leg framing was already the right granularity |
+| **Branch C** | a 3–1 split |
+| **State at registration** | `XLU` exc5 **+1.207** (2nd best of eleven) while `UTIL` `wflow` is the **worst of eleven** at −0.445 — price and flow already disagree inside one leg |
+| **Settle** | **2026-08-20** (the later of `S80` 08-19 and `S82` 08-20) |
+| **Implied-move check** | Sector-ETF object, no straddle. ⚠ The threshold is **sign agreement, not magnitude** ⇒ immune to the implied-move objection **at the cost of low resolution** — stated at registration |
+| 🚨 **Anti-signal** | An **FOMC-dated communication or a CPI/PPI print** inside the window drives all four together for a reason that is not the duration structure ⇒ **VOID** |
+
+★ **Information-content grading (B4), applied before the events**: `S98` is the highest-information row
+this run registered — **neither** outcome is predictable from anything the desk currently holds, and
+branch A would retire a four-sector tilt whose stated cause is already half-retracted.
+
+---
+
+## S99 — ★★★ Is `ETN` an Industrials position, or the book's 5th AI-compute unit? · ARMED · → settle **2026-08-21**
+
+Registered **2026-08-19 by the `industry_US` PREMORTEM (Lens 2)**. IDs checked at WRITE time against
+every row in all three `SCENARIOS*.md`, both `STANDING_VIEW*.md`, `llm_outputs/` and `REPORT/`
+(D137/D76/M319): `grep S99` returned **0**; highest existing **S98 (US) / S64-KR (KR)**.
+
+**Why it exists.** No live row carries `ETN` (only a settled 08-07 {EMR,ETN,AME,PWR}−`XLU` spread);
+`S81`/`S83`/`S87` use {AVGO,ANET,HPE}/{ANET,HPE}/{DELL,HPE} **without** it, and **G4 has failed 10
+consecutive runs on exactly this grouping question** (250d splits `ANET`↔`ETN`; 500d/750d merge them).
+Measured this run: **`ETN`–`ANET` raw 60d correlation +0.722 — higher than `AVGO`–`ANET` (+0.596) and
+`NVDA`–`AVGO` (+0.495) — while `ETN`–`RTX` raw is −0.040.** ⇒ the Industrials OW−'s "diversifying leg"
+may trade as AI-compute.
+
+**Frozen observable**, settled closes, `yfinance auto_adjust=False`, benchmark **`SPY`** inline,
+window **2026-08-14 close → 2026-08-21 close**:
+`M` = EW{`ANET`,`AVGO`,`HPE`} 5-session excess vs `SPY` · `E` = `ETN` 5-session excess vs `SPY`.
+
+| Branch | Threshold | Meaning |
+|---|---|---|
+| **A (AGAINST US)** | \|M\| ≥ **3.0pp** ∧ sign(E)=sign(M) ∧ \|E\| ≥ **1.5pp** | Industrials OW− contains a **5th AI-compute risk unit**; the book's AI concentration is **5 of 12, not 4 of 12** |
+| **B (FOR US)** | \|M\| ≥ 3.0pp ∧ (sign(E)≠sign(M) ∨ \|E\| ≤ **0.5pp**) | `ETN` is a genuine electrical leg; 4-of-12 stands |
+| **C** | \|M\| < 3.0pp | the basket never moved enough for the test to have a null — **declared at registration** |
+
+- ★ **D93 BEFORE freezing** (252 overlapping 5-session windows to 08-18): **A 29.8% · B 17.1% ·
+  C 46.8%**; conditional on \|M\|≥3.0 (53.2% of windows) **A 56.0% / B 32.1%**. 2-year check (n=496):
+  27.8 / 15.9 / 50.2. sd(M) **5.095** · sd(E) **3.988** · corr(M,E) **+0.467**.
+- **State at registration, disclosed** (2 of 5 sessions elapsed, 08-14→08-18): **M −2.617pp ·
+  E −3.324pp** — same sign, \|M\| **below** the gate. **Leaning A, gate not cleared.**
+- ⚠ **Implied-move check**: no single-name straddle governs a 4-name sign test; the `E` leg's 1.5pp
+  threshold sits **inside** comparable-industrial D2 implied moves (`RTX` ±1.9%) ⇒ the `E` leg is
+  **declared LOW-RESOLUTION at registration**, not presented as a trigger.
+- 🚨 **Anti-signal (VOID, not scored)**: M&A, guidance withdrawal or index deletion at `ETN` or any of
+  the three; an `ETN`/`HPE` earnings print in-window; a market-wide halt. **`NVDA`'s 08-26 print is
+  outside by design — this row tests CARRY, not an event.**
+- **Information content (B4)**: **A FALSIFIES** the desk's 4-of-12 concentration count and the
+  Industrials OW−'s status as a diversifier (a live sizing input). **B FALSIFIES the lens**, and at
+  17.1% is genuinely reachable. **C confirms nothing and is modal (46.8%)** — disclosed.
+
+---
+
+## S100 — ★★★ Does the Staples promotion survive its own two earnings prints? · ARMED · → settle **2026-08-21**
+
+Registered **2026-08-19 by the `industry_US` PREMORTEM (Lens 1)**. `grep S100` → **0 across all files.**
+
+**Why it exists.** `SECTOR_ROTATION §2b` promoted **STPL UW− → UW** on the board's largest two-session
+Δ (+0.325), reasoning that `wflow +0.083 ≫ eqflow −0.020` makes it **mega-cap-narrow**. The
+decomposition refutes that reasoning: of the +0.325, **`WMT` contributes +0.129 (40%) at a 28.9%
+weight while `TGT` contributes +0.004 at a 1.8% weight** — so `TGT`'s **+0.210 Δ and +0.713 flow
+score (the sector's best)** are invisible in every cap-weighted instrument the run read.
+**`TGT` reports 2026-08-19, `WMT` reports 2026-08-20** — two dated issuer binaries inside 24 hours in
+a sector the same run promoted **and then excluded from DEEP on recency** (promoted here to a 5th slot).
+
+**Frozen observable**: EW{`TGT`,`WMT`} cumulative return, **2026-08-18 settled close → 2026-08-21
+settled close**, minus **`SPY`** over the identical window. **Both prints land inside it.**
+
+| Branch | Threshold | Meaning |
+|---|---|---|
+| **A (AGAINST US)** | excess **≥ +6.5pp vs `SPY`** | issuer-level demand, β-free (basket β vs `SPY` = **0.09**) ⇒ the one-notch promotion was **too small** and the big-box node needed separate treatment |
+| **B (FOR US)** | excess **≤ −6.5pp vs `SPY`** | the +0.325 Δ was defensive-rotation beta, as `XLP`'s β-adjusted **−0.592** said |
+| **C** | between | no conclusion changes |
+
+- ★ **Implied move MOVED the thresholds** (the rule, applied rather than noted): `TGT` **±7.8%** ·
+  `WMT` **±5.3%**, both expiry **2026-08-21, D2** ⇒ EW implied ≈ **±6.55%**. Lens 1 proposed ±3.0pp;
+  **that sits inside the implied move and would carry no information**, so the bands are set **at** it.
+- **D93**: unconditional 2-session \|excess\| for this basket over trailing 252 sessions —
+  sd **2.27pp**, P(≥+3.0) **11.1%**, P(≤−3.0) **7.9%**, C **81%**.
+  ⚠ **C is the unconditional favourite and is NOT the conditional favourite**: in the identical
+  calendar week last year `TGT` printed **−6.33% (2025-08-20)** and `WMT` **−4.49% (2025-08-21)** on
+  their prints — an EW one-day move of ≈**−5.4%**. **Both figures are recorded so neither can be used
+  as an escape hatch later.**
+- 🚨 **Anti-signal (VOID)**: `SPY` 08-18→08-21 move beyond **±2.5%** (index shock, not issuer), or a
+  guidance/M&A event at either name that is **not** the scheduled print.
+- **Information content (B4)**: **A FALSIFIES** ROTATION §2b's explicit mega-cap-narrow reasoning on a
+  β-0.09 basket — the very defence used to discount the raw print. **B FALSIFIES the delta rule
+  itself**, the same rule that produced the run's other promotion (HLTH on Δ +0.228). Neither branch
+  merely confirms.
+
+---
+
+## S101 — ★★★ Does the `vol_surge` gate cost the desk return? The shortlist tests itself · ARMED · → settle **2026-08-26**
+
+Registered **2026-08-19 by the `industry_US` PREMORTEM (Lens 3; thresholds measured at registration)**.
+`grep S101` → **0 across all files.**
+
+**Why it exists.** The 🟢가속 tag — the shortlist's only gate — is driven by `vol_surge`, and
+**`corr(rs60, vol_surge) = −0.124` across 299 names**. The 9 names clearing `vol_surge ≥ 1.2` average
+**rs60 −12.7 vs `SPY`** against a universe mean of **+2.9**; **of the top-20 by `flow_score`, 18 are 🟡
+and 2 are 🟢**; exactly **1 of the top-15 runners is green**. Countable consequence: **9 of the 10
+strongest non-green runners have ZERO mentions across all five of that run's documents.** The desk
+ruled the same artifact harmless for two **sectors** (Energy `0🟢/16`, Health Care `0🟢/32`) and never
+applied the ruling to the erased **names**. This row makes the gate falsifiable.
+
+**Frozen observable** (both baskets frozen exactly as printed by the 2026-08-19 run), settled closes,
+benchmark **`SPY`** inline, at the **2026-08-26** settle:
+`spread` = EW{`DELL`,`PANW`,`SHOP`,`ABNB`,`CRWD`,`DASH`,`PYPL`,`TMO`,`BKNG`,`AXON`} 5-session excess
+vs `SPY` **MINUS** EW{`KKR`,`RTX`,`LITE`,`ORCL`,`CSCO`,`MA`,`BAC`,`WMT`} 5-session excess vs `SPY`.
+
+| Branch | Threshold | Meaning |
+|---|---|---|
+| **A (the gate costs us)** | spread **≥ +4.45pp** | the excluded names beat the admitted names past the measured p85 ⇒ **the gate is an alpha filter with the wrong sign, not a quality filter** |
+| **B (the gate earns its keep)** | spread **≤ −3.88pp** | the excluded runners gave it back; the gate did its job |
+| **C** | between | no conclusion changes |
+
+- ★ **D93 executed BEFORE freezing**, 252 trailing settled 5-session windows to 08-18:
+  **mean −0.035 · sd 4.527 · p15 −3.877 · p85 +4.452 · min −15.918 · max +13.562** ⇒
+  **P(A) 20.6% · P(B) 20.6% · P(C) 58.7%.** Thresholds are the measured tails, not round numbers.
+- ★★ **This estimator is centred at −0.035** — the **first near-zero-centred estimator this desk has
+  registered**, against nine consecutive rows (`S55` onward) whose centres were materially non-zero.
+  The bias those rows kept reproducing is **not** present in a long-short spread, which is itself the
+  finding: it lives in the single-leg-vs-`SPY` construction, not in the estimator code.
+- **State at registration**: **−0.677** (erased EW exc5 **−0.406** vs green EW exc5 **+0.271**) —
+  **mid-band, near-neutral.** Context, **not** the observable: **erased EW 60-day excess vs `SPY`
+  +40.04 against green EW +1.18 — a 38.9pp gap.**
+- 🚨 **Anti-signal (VOID)**: an earnings print at **≥3 of the 10** erased names inside the window —
+  the basket would then measure an earnings cluster, not the gate.
+- **Information content (B4)**: **A FALSIFIES the desk's own shortlist construction** and would make
+  the 🟢 gate a measured liability. **B FALSIFIES this lens** and vindicates the gate. Both bite.
+
+---
+
+## S102 — ★★★ Which tenor carries the FOMC minutes? *(replaces the self-voided `P73`)* · ARMED · → settle **2026-08-21**
+
+Registered **2026-08-19 by the `industry_US` PREMORTEM**. `grep S102` → **0 across all files.**
+
+**Why it exists — and it is a repair, stated as one.** The **FOMC minutes released 2026-08-19** are a
+dated ≤48h binary that **`catalyst_calendar` did not carry** (it returned one row: the undated Hormuz
+statement). MACRO hand-injected it as **`P73`** — and `P73` **voided at registration**: its own
+anti-signal named *"a Warsh testimony headline that moves ≥3 outlets"*, and the same report's §D-1
+carries **Warsh at 10 articles / 6 outlets**. A protocol that leaves the window's only dated binary
+unbracketed is the failure this stage exists to prevent, so the row is re-registered with an
+anti-signal that is reachability-checked **and not already fired**.
+
+**Frozen observable**: `DGS2` **and** `30y−10y`, from `[FRED]`, at the **first close covering
+2026-08-21**.
+
+| Branch | Threshold | Meaning |
+|---|---|---|
+| **A (front-end repricing)** | `DGS2` **≥ 4.30** | bear **flattener** ⇒ every duration-UW argument on this desk changes sign again; and per the measured rate betas the **ENRG OW is helped** (`XLE` **+0.1534 pp/bp**) |
+| **B (long-end-only)** | `DGS2` **≤ 4.08** ∧ `30y−10y` **≥ 0.59** | term premium owns the move; `R73`'s successor mechanism survives |
+| **C** | between | **the favourite, disclosed**: `DGS2`'s realised 9-observation range is **4.15–4.25**, entirely inside C |
+
+- ★ **The measurement that makes this row worth registering**: regressing each sector's daily excess
+  vs `SPY` on Δ10y (bp) controlling for Brent, 120 settled sessions to 08-18 — `XLU` **+0.0049** ·
+  `XLRE` **−0.0072** · `XLP` **+0.0224** · `XLV` **+0.0185** ⇒ **the four legs of the duration
+  underweight have NO measurable rate beta**, while `XLE` has **+0.1534** (R² 0.550 with Brent).
+  **The desk's only rate-exposed tilt is its overweight, with a positive sign.**
+- ⚠ **Implied move**: `SPY` **±0.5% (expiry 2026-08-19, D0)** — a same-day index straddle prices no
+  meaningful move, so a ≥15bp `DGS2` threshold is **outside** anything the options market has priced.
+- 🚨 **Anti-signal (VOID)**: an **intermeeting Fed policy action** or a **Treasury refunding
+  announcement** inside the window. ⚠ **Warsh testimony is deliberately NOT an anti-signal here** —
+  it is same-day with the minutes and inseparable from them, which is precisely the defect that
+  killed `P73`.
+- **Information content (B4)**: **A FALSIFIES** the desk's rate framing for the third time in six days
+  (`P56` → `R73` → `P65` → today's §A-1 bear-steepener re-measurement). **B FALSIFIES** `R73`'s
+  successor mechanism. Neither branch merely confirms.
+
+
+## `S103` — registered 2026-08-19 by the `industry_US` ALPHA stage (the run's only new bracket after PREMORTEM)
+
+> **ID check**: `grep -c S103 handoff/*.md` returned **0** in every file except `SCENARIOS.md`'s
+> allocation note; highest existing **S102 (US)**. Allocated **S103**.
+
+### `S103` — Does the AI-compute cycle re-accelerate on its own epicenter's print?
+
+- **Why it exists**: `catalyst_calendar --days 10` surfaced **`NVDA` earnings 2026-08-26** — invisible to
+  the 5-day default (`D26`) — and `action_bracket.py` **could not emit a ticket for it** (`D294`).
+  `NVDA` is **15.60% of invested capital, the book's largest single position**. An unbracketed binary on
+  the largest position is the exact condition the PREMORTEM stage exists to prevent, so it is bracketed
+  here by hand rather than left to the script.
+- **Observable**: `NVDA` 5-session excess vs **`SPY`**, settled closes, `auto_adjust=False`, window
+  **2026-08-25 close → 2026-08-29 close** (the print falls inside).
+- **A (the cycle re-accelerates)** excess **≥ +5.0pp vs `SPY`** ⇒ the epicenter is being paid, and the
+  registry's **19.82%-of-total** epicenter reading is *understated* — the three unlabelled chain names
+  (`LITE` `COHR` `HPE` = **14.75% of total**, `M731`) put true any-layer exposure at **≈38.4%** into a
+  re-accelerating cycle.
+- **B (the cycle is paid out)** excess **≤ −5.0pp vs `SPY`** ⇒ the same understatement runs the other
+  way: the book is **~15pp of total assets more exposed than any artifact prints**, and the concentration
+  question `G4` cannot state as a single number (250d **11** units · 500d **10** · 750d **10**) becomes the
+  live one. ★ Under B the count that matters is not `S99`'s 4-vs-5 AI units but **7 of 12**.
+- **C** −5.0pp < excess < +5.0pp — **declared now, before the fact.**
+- **Pre-registration state, settled 2026-08-18**: `NVDA` `flow_score` **+0.111**, tag 🟡중립, `obv_state`
+  **중립**, **RS20 +3.4 / RS60 −3.2 vs `SPY`**, `vol_surge` **0.72**, two-session Δ **−0.347**.
+  ⇒ **The book's largest position enters its own print on the weakest flow reading of any name it holds.**
+  Disclosed at registration, not discovered at scoring.
+- 🚨 **Anti-signal ⇒ VOID**: an index-level shock (`SPY` 08-25→08-29 beyond ±3%), a guidance withdrawal or
+  M&A at `NVDA`, or an export-control announcement inside the window — none of which would be the print.
+- ⚠ **Threshold provenance — the known weakness of this row.** ±5.0pp is **hand-set**. The nearest chain
+  this stage could read expires **2026-08-21 (D2)**, before the event, so **no implied move governs it
+  yet.** ⇒ **Obligation: re-derive the bands from the 08-26-or-later straddle at the 08-20 or 08-21 run,
+  before the print.** Registered as `D295`. **Until that is done this row is LOW-RESOLUTION and is
+  labelled so, rather than being quietly scored as if it were measured.**
+- **B4 grading**: **A falsifies** the "AI-compute is fully accounted at 19.82%" reading that the ✅ GAP flag
+  implies. **B falsifies** `S99`'s framing that the open question is whether `ETN` is a 4th or 5th AI unit.
+  **Neither branch merely confirms. Settle 2026-08-29** (first settled close on/after 08-29).
+
+---
+
+## Registered 2026-08-20 by the `industry_US` PREMORTEM (S104 – S107)
+
+> ⚠ **ID 3-grep at WRITE time (D137 / D76)** across all seven files (`SCENARIOS*.md` ×3,
+> `STANDING_VIEW*.md` ×3, `RESEARCH.md`) **and** all of `llm_outputs/2026-08-*/`: `S104` `S105`
+> `S106` `S107` returned **0 hits everywhere**; highest existing was **S103 (US) / S66-KR (KR)**.
+> ★ **Every band measured on the estimator's own trailing-252 distribution (D93) BEFORE freezing.**
+> ⚠⚠ **Implied-move disclosure, and it is a LIMIT not a check**: `module_flow --positioning` returned
+> **every** straddle at expiry **2026-08-21, D1** (`NVDA` ±1.9% · `AVGO` ±2.2% · `XLU` ±0.9% ·
+> `XLV` ±1.6% · `XLK` ±1.9% · `MPC` ±3.4% · `WMT` ±2.0% · `TGT` ±2.3% · `MRVL` ±5.3% · `COHR` ±6.1%).
+> A D1 straddle prices one session ⇒ **a FLOOR on a multi-session implied move, not an estimate**
+> ⇒ **no threshold below is claimed to sit outside what is priced** (`D295`).
+
+### S104 — ★★★ July PCE 2026-08-28: the window's only dated macro binary, and NOTHING brackets it · ARMED · → settle **2026-08-31**
+
+**Why it exists.** MACRO §6 handed it over explicitly: `CATALYST_WATCH` carries **July PCE (08-28,
+D-8)** as a binary and **no row on the board is keyed to it.** It is genuinely two-sided because of
+this run's own §A-1 measurement: **the entire 60-observation rise in `DGS10` (+0.140) is real yield
+(`DFII10` +0.230) against FALLING inflation compensation (`T10YIE` −0.100).** A PCE print is the
+direct test of which leg does the work — and that frame underwrites `P77`, `P78` and the UTIL/RE
+underweights.
+
+**Frozen observable**: `T10YIE` **change in basis points** from the **2026-08-27** `[FRED]` close to
+the **first `[FRED]` close covering 2026-08-31**.
+
+| Branch | Threshold | Meaning |
+|---|---|---|
+| **A (AGAINST US)** | **>= +3.0 bp** | The print reprices **inflation compensation** ⇒ the desk's *"this is all real yield"* frame is measuring the wrong variable, and every conclusion resting on a term-premium story must be re-argued |
+| **B (FOR US)** | **<= −3.0 bp** | Compensation falls again ⇒ the real-yield frame survives and strengthens |
+| **C** | between | No conclusion changes |
+
+- ★ **D93 executed BEFORE freezing**: `T10YIE`'s own **2-observation change**, trailing 252 —
+  **mean −0.07bp · sd 2.60bp · p10 −3.0 · p50 0.0 · p90 +3.0.** Bands are **p10 / p90** ⇒
+  **A ~10% · B ~10% · C ~80%, disclosed up front.**
+- **State at registration**: `T10YIE` **2.300** (2026-08-19, the one `[FRED]` series carrying an
+  08-19 observation).
+- **Implied move**: no straddle exists on this observable. The nearest index proxy (`SPY` ±0.5%,
+  expiry 08-21 D0) prices a **different object on a different date** ⇒ **not conflated**, and no claim
+  is made that ±3bp sits outside what is priced.
+- **Information content (L3): HIGH and asymmetric.** **A invalidates a frame three live rows rest on;
+  B only confirms.** Registered because the against-us branch is the informative one.
+- 🚨 **Anti-signal (VOID)**: a **Treasury refunding announcement**, a **further buyback-size change**,
+  or an **intermeeting Fed action** inside 08-27 → 08-31 ⇒ the move is not the print.
+  ⚠ **Reachability-checked and it is LIVE, not decorative**: Treasury changed buyback sizes on
+  **2026-08-19**, i.e. this exact anti-signal fired inside another row's window nine days earlier
+  (`S102`, `D296`). Registered anyway, with that stated.
+- **Owner**: `industry_US`.
+
+### S105 — ★★★ Google to `MRVL`: is a held name being structurally displaced? · **SETTLED FIRED-A** (scored 2026-09-04, folded into the master scoring log by the 2026-09-06 `industry_US` run — `D472` header hygiene) · → settle **2026-09-03**
+
+**Why it exists.** On **2026-08-19** Marvell disclosed a **warrant issued to Google for up to 59
+million shares (about $12.2bn)** alongside a chip agreement. **`MRVL` +9.85% and `AVGO` −4.61% the
+same session**, and Barron's carries the readthrough in its title (*"…and Why It's Bad News for
+Broadcom."*). **`AVGO` is held in BOTH books, is the only book name tagged red** (flow −0.625, OBV
+distribution, rs20 −11.5), and its standing §3a thesis line still reads *"a separate boat from memory
+— hyperscaler capex is their driver."* **Custom-silicon supplier displacement by a hyperscaler is the
+opposite sign of that same variable, and no row on the board tests it.**
+
+**Frozen observable**: [`MRVL` **10-session excess vs `SPY`**] **minus** [`AVGO` **10-session excess
+vs `SPY`**], at the **2026-09-03** settled close.
+
+| Branch | Threshold | Meaning |
+|---|---|---|
+| **A (the adversarial ask)** | **<= −10.836** (252d p15) | The spread **reverses** ⇒ one warrant, one week, **no displacement**; the 08-19 move was positioning and `AVGO`'s carried thesis stands |
+| **B** | **>= +30.484** (252d p95) | The spread **extends** ⇒ displacement, and **`AVGO`'s thesis line must be rewritten** rather than re-filed |
+| **C** | between | Neither reading survives on this window |
+
+- ★ **D93 executed BEFORE freezing**: trailing **252** observations of the same estimator —
+  **mean +3.944 · sd 15.753 · p05 −20.563 · p15 −10.836 · p50 +2.347 · p85 +17.340 · p95 +30.484.**
+- ⚠⚠ **State at registration: +25.780 = the 93.7th percentile. ALREADY NEAR BRANCH B.** Disclosed at
+  registration rather than discovered at scoring — **branch A is the adversarial ask**, and a scorer
+  must not read a B-fire as a surprise.
+- **Implied move**: `MRVL` **±5.3%**, `AVGO` **±2.2%**, both expiry **2026-08-21 D1** ⇒ a **floor**.
+  A 10-session **pair spread** of ±10–30pp is a larger object than either D1 straddle prices, but
+  **no claim is made that it sits outside a properly-dated implied move**, because none was readable.
+- **Information content (L3): HIGH.** **B forces a rewrite of a held name's thesis; A retires this
+  run's headline finding.** Neither outcome is predictable from anything the desk currently holds.
+- 🚨 **Anti-signal (VOID)**: a **change of control or an M&A announcement at either name** inside the
+  window. ⚠ **`MRVL`'s 2026-08-28 earnings print falls INSIDE the window and is DISCLOSED as a known
+  contaminant rather than treated as a VOID** — the row deliberately settles **after** it, because a
+  displacement thesis that cannot survive the challenger's own guide is not a displacement thesis.
+  **`AVGO` has no print inside the window** (next 2026-09-04, checked at registration).
+- **Owner**: `industry_US`.
+
+### S106 — ★★ Is the IT underweight wrong about its own largest reversal? · **SETTLED FIRED-C** (scored 2026-09-04, folded into the master scoring log by the 2026-09-06 `industry_US` run — `D472` header hygiene) · → settle **2026-09-03**
+
+**Why it exists.** ROTATION put **IT at UW** on `eqflow` −0.197 with **19 red of 56** — correctly, on
+the aggregate. But two of the sector's largest names are in **20-day reversals whose excess EXCEEDS
+their own 60-day excess**: `MSFT` **exc20 +21.18 vs exc60 +12.56 (last-20 share 168.5%)** and `CRM`
+**+23.54 vs +11.31 (208.1%)**, both OBV accumulating. `MSFT` is **10.7% of the IT bucket** with
+`flow_score` **+0.422**. **This is the "short the label, long the sub-node" pattern the pre-mortem
+found in three separate buckets today, and it is the only one testable on a single non-reporting
+name.**
+
+**Frozen observable**: `MSFT` **10-session excess vs `SPY`**, at the **2026-09-03** settled close.
+
+| Branch | Threshold | Meaning |
+|---|---|---|
+| **A** | **>= +7.969** (252d p95) | The reversal extends ⇒ **the IT UW is a sub-node call wearing a sector label**, and ROTATION's unit is wrong even though its sign is right |
+| **B** | **<= −9.184** (252d p05) | It rolls over ⇒ the sector call covers it and the 168.5% shape was noise |
+| **C** | between | Modal, disclosed |
+
+- ★ **D93 executed BEFORE freezing**: trailing **252** — **mean −0.756 · sd 6.275 · p05 −9.184 ·
+  p15 −5.532 · p50 −1.422 · p85 +2.913 · p95 +7.969.** Bands at **p95 / p05** ⇒ **A ~5% · B ~5% ·
+  C ~90%.**
+- **State at registration**: **−0.551 = the 56.7th percentile**, i.e. **inside C and essentially at
+  its own median.** ⚠ **Stated honestly: the 20-day shape lives in `exc20`, not in `exc10`**, which is
+  why the bands are wide and C is heavily favoured. Registered anyway because the *unit* question is
+  what this desk keeps getting wrong.
+- **Implied move**: `XLK` **±1.9%**, expiry 08-21 D1 — a **floor**, and a **sector** object rather
+  than this name. Not conflated.
+- **Information content (L3): MEDIUM**, stated as medium rather than inflated. **A changes how this
+  desk writes sector calls; C teaches least.**
+- 🚨 **Anti-signal (VOID)**: an `MSFT` acquisition, guidance withdrawal, or an antitrust ruling inside
+  the window. **`MSFT` has no earnings print inside it** (checked at registration).
+- **Owner**: `industry_US`.
+
+### S107 — ★★★ The `T` orphan gets its first falsifier in three runs · **SETTLED FIRED-C** (scored 2026-09-04, folded into the master scoring log by the 2026-09-06 `industry_US` run — `D472` header hygiene) · → settle **2026-09-03**
+
+**Why it exists.** `T` is **9.74% of the real book's invested capital** (`M737` corrected `9.59%`,
+which is `RTX`) and the standing §3a row says, in these words, that it has *"no cycle label, no card,
+no thread, no bracket and no KPI in any live artifact"* — **for a third consecutive run.** Meanwhile
+the tape turned: `T` **exc20 +6.13 against exc60 −3.70** (last-20 share **−165.9%** = a fresh 20-day
+turn off a losing base), OBV accumulating, in a telecom node whose `eqflow` is **+0.404**. **The desk
+cannot claim credit for a position it has no thesis for, and cannot manage one either. This row ends
+that.**
+
+**Frozen observable**: `EW{T, VZ}` **10-session excess vs `SPY`**, at the **2026-09-03** settled close.
+(Equal-weight, and **`TMUS` is deliberately excluded** — flow −0.814 red/distribution, and the carried
+kill clause is already written against *telecom-ex-`TMUS`*.)
+
+| Branch | Threshold | Meaning |
+|---|---|---|
+| **A** | **>= +12.244** (252d p95) | The turn extends ⇒ **a 9.74%-of-invested position has a live, measurable thesis** and the residual really was a LABEL, not a price |
+| **B (the adversarial ask)** | **<= −9.533** (252d p05) | It reverses ⇒ the orphan is an orphan on price too, and the position needs re-justifying on something other than `eqflow` |
+| **C** | between | No conclusion changes |
+
+- ★ **D93 executed BEFORE freezing**: trailing **252** — **mean −0.722 · sd 6.570 · p05 −9.533 ·
+  p15 −6.230 · p50 −1.308 · p85 +5.504 · p95 +12.244.**
+- ⚠ **State at registration: +7.671 = the 92.9th percentile — already ABOVE p85 and approaching branch
+  A.** Disclosed at registration, not discovered at scoring. **Branch B is the adversarial ask.**
+- **Implied move**: not readable for this pair at a usable expiry; **no claim is made** that the
+  thresholds sit outside what is priced.
+- **Information content (L3): HIGH for the book specifically.** This is the **first falsifiable
+  statement ever registered about this position**, and **either branch resolves a three-run open
+  residual** — A by giving it a thesis, B by ending the pretence that it has one.
+- 🚨 **Anti-signal (VOID)**: a **dividend-policy change**, an **M&A announcement**, or a
+  **spectrum-auction result** at either name inside the window.
+- **Owner**: `industry_US`.
+
+
+---
+
+# Registered 2026-08-21 by the `industry_US` PREMORTEM — **`S108` – `S111`**
+
+> ⚠ Written by **append**, never a whole-file `'w'` rewrite — the **D165** pre-commitment, held.
+> ⚠ **ID 3-grep at WRITE time (D137/D76)** across `handoff/RESEARCH.md`, `handoff/STANDING_VIEW*.md`,
+> `handoff/SCENARIOS*.md`, `llm_outputs/` and `REPORT/`: `S108` `S109` `S110` `S111` returned **0
+> files**. Highest existing **S107** (US) / **S64-KR** (KR). All four indexed in the `SCENARIOS.md`
+> MASTER INDEX.
+> All prices settled **2026-08-20**, one provider (`yfinance`, `auto_adjust=False`), benchmark **`SPY`
+> named inline (C1)**. Bands are the observable's own trailing-252 distribution (**D93**) with the
+> **state's own percentile disclosed at registration**. **SETTLEMENT MODE = TERMINAL on both branches**
+> for all four (D242).
+>
+> 🚨 **Implied-move check performed, and its RESULT is that it cannot be used on these rows.**
+> `module_flow --positioning` (2026-08-21, intraday): `HPE` **±2.7%** · `DELL` **±1.8%** ·
+> `FRO` **±3.1%** · `NEM` **±2.0%** — **every straddle expires 2026-08-21 = D0** and therefore
+> covers **none** of the events bracketed below (`FRO`'s print is 08-31; `S110` settles 09-03).
+> Taking a threshold from them would fabricate one — **the `M47` defect by name**. All four thresholds
+> are distribution-based and **the gap is declared, not glossed.**
+
+## S108 — ★★★ The MANDATORY D-0 equity bracket: if Warsh is dovish, the three underweights rip together · ARMED · → settle **2026-08-25**
+
+**Why it exists.** The 2026-08-21 Jackson Hole speech by Fed chair Kevin Warsh is the window's only
+D-0 binary and **`catalyst_calendar --days 10` carried ZERO rows for it** (MACRO hand-injected it;
+`D18`/`D288-KR` reproduction). `P82` brackets the **rate** leg. **Nothing brackets the equity leg**,
+and the equity leg is where this desk's three underweights live.
+
+| | |
+|---|---|
+| **Frozen observable** | `EW{XLU, XLRE, XLP}` **3-session excess return vs `SPY`**, settled closes, window **2026-08-20 close → 2026-08-25 close** |
+| **Branch A (AGAINST US)** | **≥ +1.68pp** (252-obs p85) — the three UW/N− sectors rip **together**; the correlated-UW pattern is real and live |
+| **Branch B (with us)** | **≤ −1.76pp** (252-obs p15) — a hawkish read and the underweights are on the right side |
+| **Branch C** | between = **the favourite, disclosed** |
+| **D93 before freezing** | trailing 252: mean **−0.148** · sd **1.759** · p15 **−1.757** · p50 **−0.118** · p85 **+1.675** · p95 **+2.719** ⇒ **A ≈15% · B ≈15% · C ≈70%** |
+| **State at registration** | **+1.432 = the 78.6th percentile** — inside C but **already leaning A**, disclosed now rather than discovered at scoring |
+| **Anti-signal (VOID)** | a CPI/PPI/PCE print, an intermeeting FOMC action, or a Treasury refunding/buyback-schedule change inside 08-20 → 08-25. ⚠ **Base rate checked at registration (`D300-KR`)**: the next scheduled macro print is **July PCE on 08-28 — OUTSIDE the window**; no FOMC meeting falls inside it; Treasury's buyback schedule is published in advance with no change scheduled before 08-25. ⇒ **the clause is not near-certain to fire.** ⚠ **Warsh's speech is deliberately NOT an anti-signal — it is the event** |
+| **Information content (L3)** | **HIGH, carried by the against-us branch**: A falsifies three sector calls at once; B confirms |
+| **Owner** | `industry_US` |
+
+## S109 — ★★★ `FRO` 2026-08-31: the Hormuz axis's one un-bracketed dated binary, on a crowded short · **SETTLED FIRED-A** (scored 2026-09-04, folded into the master scoring log by the 2026-09-06 `industry_US` run — `D472` header hygiene) · → settle **2026-09-02**
+
+**Why it exists.** `FRO` (Frontline, crude tankers) appeared on `catalyst_calendar` for the first time
+this run at **D-10**, and **no row on the board is keyed to it** — while `S74`/`S84`/`S92`/`S95` all
+bracket the same Hormuz axis through refiners and ETFs. **`M45` measured that the blockade's literal
+beneficiaries were not being bought; this row tests that a second time on a dated event.**
+
+| | |
+|---|---|
+| **Frozen observable** | `FRO` **5-session excess return vs `SPY`**, settled closes, window **2026-08-26 close → 2026-09-02 close** (the 08-31 print sits inside it) |
+| **Branch A (the freight leg is paid)** | **≥ +8.04pp** (252-obs p85) — Red Sea re-routing and Bab el-Mandeb avoidance show up in ton-mile earnings |
+| **Branch B (the freight leg is NOT paid)** | **≤ −4.62pp** (252-obs p15) — `M45` replicates; the axis's only tradeable expression remains refining margin |
+| **Branch C** | between |
+| **D93 before freezing** | trailing 252 of `FRO` exc5: mean **+1.483** · sd **6.523** · p05 **−9.299** · p15 **−4.620** · p50 **+1.649** · p85 **+8.043** · p95 **+11.390** ⇒ **A ≈15% · B ≈15% · C ≈70%** |
+| **State at registration** | **+9.467 = the 89.3rd percentile**; close **43.56**; 20-day return **+12.12%**. ⚠ **Disclosed: the state already sits between p85 and p95, so branch A is the WEAK-information branch and branch B is the informative one** |
+| **Positioning (context, not direction)** | short interest **6.1% of float, BUILDING**, DTC **4.1**; P/C **0.56**; IV skew **+18.5**; OBV 매집; news velocity **1.62×** (2026-08-21 pull). ⚠ **Crowded-short is turn-conditional squeeze fuel and NEVER a buy signal alone (`D6`)** — cited as the reason both branches are reachable, not as a direction |
+| **Anti-signal (VOID)** | an `FRO`-specific corporate action (M&A, equity raise, special dividend, fleet sale) **or** a general tanker-rate collapse driven by an OPEC+ supply decision inside the window |
+| **Information content (L3)** | **B is the informative branch and it is stated as such.** ⚠ `FRO` is **not in `us_top300`** — priceable, not flow-taggable. **This row is a measurement, not a candidate hand-off** |
+| **Owner** | `industry_US` |
+
+## S110 — ★★ `S87` averaged two opposite states; this is the pair test it could not perform · **SETTLED VOID** (scored 2026-09-04, folded into the master scoring log by the 2026-09-06 `industry_US` run — `D472` header hygiene) · → settle **2026-09-03**
+
+**Why it exists.** `S87` (EW{`DELL`,`HPE`} exc5, settling 2026-08-21) reads **−8.895 = already inside
+branch A (EXHAUSTED)**. **The pair does not agree**: on the `M149` decomposition `HPE` earned
+**+29.65** in days 21–60 and **+7.71** in the last 20 (**20.6% share = live**), while `DELL` earned
+**+45.26** in days 21–60 and **−4.35** in the last 20 (**−10.6% share = rolling over**). **An EW basket
+cannot report that**, and `HPE` is held while `DELL` is not.
+
+| | |
+|---|---|
+| **Frozen observable** | [`HPE` 5-session excess vs `SPY`] **minus** [`DELL` 5-session excess vs `SPY`], settled closes, at the **2026-09-03** close |
+| **Branch A (the held name is the better half)** | **≥ +6.02pp** (252-obs p85) — the pair genuinely diverges and `S87`'s EXHAUSTED verdict was an averaging artifact on the leg the desk owns |
+| **Branch B (the held name is the worse half)** | **≤ −6.14pp** (252-obs p15) — `HPE` is the drag and the exhaustion verdict lands on the held name |
+| **Branch C** | between |
+| **D93 before freezing** | trailing 252: mean **−0.698** · sd **7.109** · p15 **−6.141** · p50 **−0.665** · p85 **+6.022** ⇒ **A ≈15% · B ≈15% · C ≈70%**. ⚠ **sd 7.109 is wide** — a genuinely noisy pair spread; C is the honest favourite |
+| **State at registration** | **+0.494 = the 55.2nd percentile** — mid-pack, **both branches equally reachable**; the cleanest starting state of the four rows registered today |
+| **Anti-signal (VOID)** | an earnings print at **either** name inside the window. ⚠ **Reachability-checked**: `module_fundamentals_us` puts `HPE`'s next print at **2026-09-04**, i.e. **one day after the settle** — outside by one session, **and that margin is stated because it is thin** |
+| **Information content (L3)** | A and B both change a conclusion; C is uninformative and likely. **The row exists because `S87` cannot distinguish the two states, not because a new direction is claimed** |
+| **Owner** | `industry_US` |
+
+## S111 — ★★★ `P67`'s credit observable is pointed at HIGH YIELD while the measured move is in IG TECH · ARMED · → settle at the first `[FRED]` close covering **2026-08-28**
+
+**Why it exists.** `P67` tracks *"the AI capex bill is migrating to debt and credit does not see it"*
+on **`HY OAS` ≥ 2.85%**. Measured 2026-08-19: **`HY OAS` 2.73%, 10bp off its 365-day low — no move.**
+But the body-read of `Analysis-US corporate AI debt surge tests investor limits` [Reuters via
+`yahoo_finance`/`cna`, 08-21] gives the number that HAS moved: **AI hyperscaler debt issuance $220bn
+in 2026 against $12.5bn in the comparable period last year (17.6×)** `[BNP Paribas, as of Aug 10]`,
+and **tech IG spreads at 89bp — 9bp WIDER than the overall investment-grade market**, inverting a
+sector that historically traded through it. ⇒ **`P67` may be about to score "credit does not see it"
+on an instrument that cannot see it.**
+
+| | |
+|---|---|
+| **Frozen observable** | **`BAMLC0A0CM` (`ig_oas`)**, `[FRED]`, **level** at the first close covering **2026-08-28** |
+| **Branch A (credit IS pricing it)** | **≥ 0.85%** — above the series' own 252-obs p85 (0.83); `P67`'s conclusion is right while its instrument was wrong |
+| **Branch B (idiosyncratic to tech, not a credit event)** | **≤ 0.77%** — below the 252-obs p50 (0.79); the index tightens while tech stays wide ⇒ a sector relative-value story, not a credit-cycle story |
+| **Branch C** | between = **the favourite, disclosed** |
+| **D93 before freezing** | `ig_oas` 252-obs LEVEL: min 0.730 · p15 0.750 · p50 0.790 · p85 0.830 · max 0.940; **current 0.810 = 68.7th percentile**. 5-obs CHANGE: mean −0.01bp · sd **2.76bp** · p10 −3.0 · p90 +3.0 ⇒ A needs +4bp over ~7 observations (outside p90), B needs −4bp (outside p10) ⇒ **A ≈12% · B ≈10% · C ≈78%** |
+| **State at registration** | `IG OAS` **0.81%** (08-19) · `HY OAS` **2.73%** · `NFCI` **−0.559** (08-14) · tech IG **89bp** `[news]` |
+| **Anti-signal (VOID)** | a credit event unrelated to technology issuance (a large non-tech default, a bank failure, or a sovereign-rating action) inside the window. ⚠ **Base-rate checked**: the term `bankruptcy` returns **52** hits over two days, the lowest count on this desk's bucket board, and `NFCI` is at its loosest of the window ⇒ **far from near-certain** |
+| **Information content (L3)** | **HIGH, and it is an instrument test rather than a direction bet.** A says `P67`'s conclusion survives on a better axis; **B says the desk has watched the wrong credit series for six runs.** ⚠ **`P67` is NOT re-frozen and still settles on `HY OAS` at 08-28 as registered** — this row runs beside it, and **if the two disagree, the disagreement is the finding** (the `S14-ANNEX`/`S35-ANNEX` precedent) |
+| **Owner** | `industry_US` |
+
+### Registered and then DROPPED, with the reason (rather than bracketed to look thorough)
+- **MSCI quarterly review (2026-08-31)** — **neither branch would change a conclusion.** No
+  constituent change is named anywhere in the window's 4,991-article corpus, and a passive-flow date
+  with no named name cannot move a sector verdict on this board (`L3`).
+- **A `PLTR` bracket** — considered because Lens 3 measured that this run revived `PLTR` on a
+  condition (`rs60 > 0`) satisfied by **exhaustion geometry** (+25.75 exc60 of which **146.4%** is the
+  last 20 sessions, days 21–60 **−11.95**). **Dropped**: `PLTR` is not held and has no DEEP slot, so a
+  bracket would measure the desk's ledger hygiene rather than the market. **Filed as a dig instead.**
+
+
+---
+
+# Registered 2026-08-22 by the `industry_US` PREMORTEM — **`S112` · `S113` · `S114`**
+
+> ⚠ **ID 3-grep at WRITE time** across `handoff/*.md`, `llm_outputs/**`, `REPORT/**`: `S112` `S113`
+> `S114` returned **0 files**. Highest existing **`S111`** (US) / **`S67-KR`** (KR) — numbers taken
+> beyond **both** series so the suffixed and unsuffixed series cannot collide (the `D76` class).
+> ⚠ Written with **`'a'` (append)** mode — the D165 pre-commitment after the 2026-08-05 truncation.
+> All observables and thresholds **frozen at registration**. Prices settled **2026-08-21**, one
+> provider (`yfinance`, `auto_adjust=False`). Benchmark **`SPY`** named inline (`C1`).
+> Bands are **252-obs distributions of the observable itself** (`D93`), with the state's own
+> percentile disclosed. **SETTLEMENT MODE = TERMINAL on both branches** for all three (`D242`).
+
+## S112 — ★★★ The MANDATORY Jackson Hole bracket, and it owns the PCE print inside its own window · ARMED · → settle **2026-08-31**
+
+**Why it exists.** The window's biggest binary is **invisible to `catalyst_calendar`** — the symposium
+runs **2026-08-27 → 08-29** (`economictimes` body, 08-22, verbatim: *"the August 27 to August 29 event
+in Jackson Hole"*) and the tool carries **zero rows** for it (`D18`; and see `R93` for the retraction
+of the 08-21 run's dating of the same event). **The desk's tilt is short the duration complex in three
+buckets at once** — `UTIL` UW, `RE` UW, `STPL` N — which `PREMORTEM §3-d` identifies as a
+correlated-UW pattern. **A one-way tilt into a known binary is a protocol violation.**
+
+| | |
+|---|---|
+| **Frozen observable** | `EW{XLU, XLRE, XLP}` **3-session excess return vs `SPY`**, settled closes, window **2026-08-26 close → 2026-08-31 close** |
+| **Branch A (AGAINST US)** | **≥ +1.653pp** (252-obs **p85**) — the three underweights rip **together**; the correlated-UW pattern is real and it cost us |
+| **Branch B (with us)** | **≤ −1.757pp** (252-obs **p15**) — the credibility story does not land and the repression holds |
+| **Branch C** | between — the disclosed favourite |
+| **`D93` before freezing** | trailing 252: mean **−0.156** · sd **1.754** · p05 −2.893 · **p15 −1.757** · p50 −0.168 · **p85 +1.653** · p95 +2.719 ⇒ **A ≈15% · B ≈15% · C ≈70%** |
+| **State at registration** | **−0.225 = the 49th percentile — dead centre.** ★ Both branches equally reachable, the most informative starting state this desk has registered in weeks (compare `S88`, which started at the 100th percentile and could only produce its favourite) |
+| **⚠ Window honesty, stated at registration** | **July PCE (2026-08-28) falls INSIDE this window and is deliberately NOT an anti-signal.** Making it one would be a designed-to-void clause — the `D300-KR` defect that VOIDed `S91` and `S93` on the same day this row was written. **Jackson Hole and PCE are one macro event-cluster for the duration complex, and this bracket owns both.** Discovered at registration, not at scoring |
+| **Anti-signal (VOID)** | an **intermeeting FOMC action** or an **emergency Treasury operation** (not a scheduled buyback) inside 08-26 → 08-31. ⚠ **Base rate checked (`D300-KR`)**: no FOMC meeting falls inside the window; the buyback expansion already executed on **2026-08-19** (`M797`); a *discretionary emergency* operation inside four sessions is not the base case ⇒ **the clause is not near-certain to fire** |
+| **Implied move** | **not pulled** — these are sector ETFs and `--positioning` was run on single names only. **The gap is stated rather than glossed**; the threshold is distribution-based |
+| **Information content (`L3`)** | **HIGH and symmetric.** A falsifies three sector verdicts at once; B confirms them. ⚠ **Warsh's speech is deliberately NOT an anti-signal — it is the event** |
+| **Owner** | `industry_US` |
+
+## S113 — ★★ The semis chain into `NVDA` 08-26, registered because the straddle path is structurally broken · ARMED · → settle **2026-09-01**
+
+**Why it exists.** `S103` brackets `NVDA` **the name** with **hand-set ±5.0pp bands**, and `D295`
+obliged a straddle re-derivation for a third run. **This run measured why that is impossible**:
+`module_flow NVDA --positioning` returns **예상변동 ±1.6%, 만기 2026-08-24, D2** for an **08-26**
+event — the tool selects the **nearest** expiry, not the first expiry covering the event (`D315`;
+`NEM` and `MSTR` both returned 08-28 on the same day, so an 08-28 chain exists). ⇒ **`S103` is left
+FROZEN (`D242`)** and this row is registered on **the chain** with properly derived bands, which is
+additive rather than a re-freeze.
+
+| | |
+|---|---|
+| **Frozen observable** | **`SMH` 5-session excess return vs `SPY`**, settled closes, window **2026-08-25 close → 2026-09-01 close** (the 08-26 print sits inside it) |
+| **Branch A (AGAINST our IT UW)** | **≥ +4.461pp** (252-obs **p85**) — the complex re-rates on the print and the UW was the wrong verdict at the 12th percentile |
+| **Branch B (with us)** | **≤ −2.627pp** (252-obs **p15**) — the de-rate continues through the catalyst |
+| **Branch C** | between |
+| **`D93` before freezing** | trailing 252: mean **+1.063** · sd **3.740** · p05 −5.413 · **p15 −2.627** · p50 +1.573 · **p85 +4.461** · p95 +7.172 |
+| **State at registration** | **−3.293 = the 12th percentile — already BELOW p15.** ⚠ **Branch B is therefore only 0.67pp away and is declared LOW-INFORMATION at registration**; **branch A carries the row** and needs **+7.75pp**, a genuine reversal |
+| **Implied move** | 🚫 **UNUSABLE, and the reason is recorded rather than glossed**: `NVDA` **±1.6%, expiry 2026-08-24, D2 — before the event** (`D315`). **The threshold is distribution-based and is labelled as such** |
+| **Anti-signal (VOID)** | a **US export-control announcement on advanced semiconductors** inside 08-25 → 09-01 ⇒ a policy read, not an earnings read. ⚠ **Base rate**: moderate but not near-certain, and the clause is keyed to a **specific dated action**, not to "an event occurring" |
+| **Information content (`L3`)** | **Asymmetric and disclosed**: A can falsify the IT UW; B can only confirm what the state already shows. Registered anyway because A is exactly the outcome that convicts a live verdict carried into a binary while the desk holds four names in the sector |
+| **Owner** | `industry_US` |
+
+## S114 — ★★ The steel/tariff bracket, registered because it points at a HELD name · **SETTLED FIRED-B** (scored 2026-09-04, folded into the master scoring log by the 2026-09-06 `industry_US` run — `D472` header hygiene) · → settle **2026-09-03**
+
+**Why it exists.** `EVENT_ALPHA` CARD 4: the US–Canada tariff thread (peak **23 outlets 08-19**)
+resolved across 08-17 → 08-21 toward a **CUT on metals and autos**, and **`NUE` is held**. The desk
+should not carry a position whose live thread runs against it without a dated test.
+
+🚨 **INTERPRETATION RE-STATED THE SAME DAY, BEFORE THE SETTLE, AND WITHOUT MOVING A THRESHOLD.**
+On **2026-08-22** the arc reversed: **the US imposed 50% tariffs on $20bn of Canadian goods after talks
+failed, and Canada is retaliating dollar-for-dollar** (`M808`; `aljazeera`/`bbc`/`euronews`, 15-outlet
+cluster). ⇒ **Branch A was labelled *"the tariff bid is being removed."* Under the facts as of the
+registration date it would instead mean *the steel pair failed to rally on a tariff that should help
+it*** — a materially different and more damning reading. **Branch B's meaning is unaffected.**
+**Neither threshold is moved (`D242`)**; this note exists because writing it *before* the settle is the
+difference between a forecast and a rationalisation (`§4c` / `D48`).
+
+| | |
+|---|---|
+| **Frozen observable** | `EW{NUE, STLD}` **5-session excess return vs `SPY`**, settled closes, window **2026-08-26 close → 2026-09-03 close** |
+| **Branch A** | **≤ −6.219pp** (252-obs **p05**) — the pair stays at its extreme |
+| **Branch B** | **≥ +0.826pp** (252-obs **p50**) — full mean reversion |
+| **Branch C** | between |
+| **`D93` before freezing** | trailing 252: mean **+0.936** · sd **4.376** · **p05 −6.219** · p15 −2.978 · **p50 +0.826** · p85 +4.906 · p95 +8.488 |
+| **State at registration** | **−8.628 = the 3rd percentile of 252** — already **below p05**. ⚠ **Branch A is declared LOW-INFORMATION at registration** (it only requires the extreme to persist); **branch B carries the row**, needing **+9.45pp** |
+| **Implied move** | **`NUE` ±8.1%, expiry 2026-09-18, D27**, `P/C` 0.79, **IV skew +36.1 — the highest downside-fear skew this desk has pulled.** Branch B needs ~**9.45pp on the pair ≈ 1.2× `NUE`'s implied move** ⇒ **marginally outside ⇒ WEAK-INFORMATION, labelled now** rather than presented as a trigger |
+| **Anti-signal (VOID)** | a **Section 232 steel action or a new steel-specific tariff** inside 08-26 → 09-03 ⇒ the opposite policy, not a discount test. ⚠ **Base rate re-assessed after `M808`: this clause is now MORE likely to fire than it was when drafted**, and that is disclosed here rather than discovered at scoring. **It is not changed** — a clause edited after the news is not a pre-registration |
+| **Information content (`L3`)** | **B carries it.** ★ Registered anyway because A-persisting is exactly the outcome that convicts a live position, and this desk's rule is that a bracket which can convict us is worth the slot |
+| **Owner** | `industry_US` |
+
+### Registered and then DROPPED by this run, with the reason (rather than bracketed to look thorough)
+- **Hormuz de-escalation** — `S92` (08-31) and `P89` (08-28) already carry both sides. **Duplication.**
+- **`FRO` 08-28** — owned by `S109` (settles 09-02). **Duplication.** ⚠ And `FRO` has **no flow reading
+  on this desk** — it is outside `us_top300` (`D314`).
+- **MSCI quarterly review 08-31** — constituent changes are announced ~2 weeks ahead and **this desk
+  has not read the announcement**; neither branch could change a conclusion on evidence we hold.
+  **Dropped for our own unreadiness, stated as such rather than as the event being unimportant.**
+
+
+---
+
+# Registered 2026-08-23 by the `industry_US` PREMORTEM — **`S115` · `S116` · `S117`**
+
+> ⚠ **Write mode append-only** — the `D165` pre-commitment made after the 2026-08-05 truncation
+> incident. Nothing above this line was read into memory and rewritten.
+> ⚠ **ID 3-grep at WRITE time** across `handoff/*.md`, `llm_outputs/**`, `REPORT/**`: `S115` `S116`
+> `S117` returned **0 hits**. Highest existing `S114` (registered 2026-08-22).
+> ⚠ All prices settled **2026-08-21**, one provider (`yfinance`, `auto_adjust=False`), benchmark named
+> inline (`C1`). Implied moves are the ATM straddle of the **first expiry spanning each event**,
+> read from the option chain at the strike nearest the 08-21 settled close.
+> ⚠ **`D295` context**: `module_flow --positioning` returns the **08-24** expiry for an **08-26** event
+> (`D315`, 4th run), so the straddles below were derived directly from the chain instead.
+
+## `S115` — ★★★ The `NVDA` print, with a threshold the options market cannot already contain · ARMED · → settle **2026-08-27**
+
+*Successor to `S103`, whose hand-set ±5.0pp bands sit INSIDE the ±6.11% implied move and are therefore
+**pre-declared NO-INFORMATION**. Per `D242` `S103` is NOT re-banded and still settles as registered;
+what is recorded is that its verdict may not be read as a surprise in either direction.*
+
+| Field | Value |
+|---|---|
+| **Event** | `NVDA` FQ results, **2026-08-26** — corroborated to two bodies (`yahoo_finance` 08-21 *"Something Big Could Happen To NVIDIA Stock on August 26"*; 08-16 *"…After Aug. 26"*), per `D311` |
+| **Frozen observable** | `NVDA` **1-session return** on the first settled close after the print (**2026-08-27**), and its **excess vs `SPY`** on that session |
+| **Implied move at registration** | **±6.11%** — 08-28 expiry, K=215, straddle **$13.12**, spot **214.72**, ATM IV **0.606 / 0.588**. Control: the 08-24 expiry (does not span the print) prints ±1.61% at IV 0.280 ⇒ **event premium ratio 2.16×** |
+| **Branch A** | 1-session return **≥ +7.0%** — a real upside surprise, **outside** the implied move |
+| **Branch B** | 1-session return **≤ −7.0%** — a real downside surprise, outside the implied move |
+| **Branch C** | between — **disclosed as the heavy favourite (~70%)** |
+| **Information grade** | **MEDIUM-HIGH**, and asymmetric in *content*: branch A **with** gross-margin expansion falsifies `P90`; branch A **with** flat margin confirms it. ⇒ **scored jointly with `P90`**, declared here at registration |
+| **Anti-signal (VOID)** | `NVDA` does not report on 2026-08-26, **or** US cash equities do not trade a full session on 2026-08-27. ⚠ Base rate very low; keyed to a **publication/venue failure**, not to an event occurring (`D300-KR`) |
+| **Settle** | **2026-08-27** |
+
+## `S116` — ★★★ The bracket the desk's own calendar could not have written: `MRVL` 08-27 · ARMED · → settle **2026-08-28**
+
+| Field | Value |
+|---|---|
+| **Event** | `MRVL` FQ2 results, **2026-08-27**. 🚨 **Absent from `catalyst_calendar --days 10`** — this row exists because the calendar was audited against `yfinance` and then against a body (`yahoo_finance` 08-19: *"Dear Marvell Technology Stock Fans, **Mark Your Calendars for August 27**"*), not because it was read |
+| **Frozen observable** | **`MRVL` − `AVGO` 1-session excess** on the first settled close after the print (**2026-08-28**), each vs its own prior close |
+| **Why a SPREAD** | `D308`'s registered remedy — a node-vs-name question written on a raw excess forces the anti-signal to arbitrate what it cannot see. Here the shared AI-semis move cancels and only the **relative franchise move** reaches the branches |
+| **Implied move at registration** | `MRVL` **±11.31%** — 08-28 expiry, K=235, straddle **$26.80**, spot **237.04**, ATM IV **1.122 / 1.096** (the highest on the board). `AVGO` 08-28 ±4.51% (IV 0.461) |
+| **Branch A** | `MRVL` − `AVGO` ≥ **+12.0pp** — the share shift is confirmed and widens |
+| **Branch B** | `MRVL` − `AVGO` ≤ **−12.0pp** — the share shift was over-priced; `AVGO`'s −14.7 rs60 was a discount, not a franchise loss |
+| **Branch C** | between |
+| **Information grade** | **HIGH** — the only row on the board where **both** branches change a standing thesis on a **held** name. `AVGO` has been carried as *"AI-compute-EPICENTER"* with **its customer unnamed for the life of the position** (`W4`), and the customer (Alphabet) dual-sourced to `MRVL` on 2026-08-19 with a **$12.2bn / 59m-share warrant that does not fully vest until Google buys $120bn of chips** (`yahoo_finance` 08-20, 08-21) |
+| **Anti-signal (VOID)** | An **announced acquisition of, or by, either company** inside 2026-08-24 → 2026-08-28. ⚠ Base rate low; keyed to a **named corporate action** |
+| **Settle** | **2026-08-28** |
+
+## `S117` — ★★ Does the memory IV premium belong to memory, or is it `NVDA` beta? · ARMED · → settle **2026-08-27**
+
+| Field | Value |
+|---|---|
+| **Event** | The **2026-08-26** `NVDA` print, read through a name that is **not** reporting |
+| **Registration measurement** `[measured]` | On the **08-28 expiry**, `MU` ATM IV **0.650 / 0.643** vs `NVDA` **0.606 / 0.588** — **the non-reporting memory name carries ~4.5 vol points MORE implied event risk than the company actually reporting.** `MU`'s own print is **2026-09-24**, outside the expiry |
+| **Frozen observable** | `MU` **1-session excess vs `NVDA`** on **2026-08-27**, each vs its own 2026-08-26 close |
+| **Branch A** | `MU` − `NVDA` ≥ **+3.0pp** — the information was about **memory**; the buyer's print told the market more about the supplier than about the buyer |
+| **Branch B** | `MU` − `NVDA` ≤ **−3.0pp** — it was `NVDA` beta and `MU` is a levered follower |
+| **Branch C** | between — **disclosed as the favourite** |
+| **Information grade** | **MEDIUM, disclosed.** C is likely. Registered because **A is the only observable this desk owns that can separate `P90`'s cost story from a generic AI-demand story using PRICE rather than narrative** |
+| **Anti-signal (VOID)** | A `MU`-specific dated announcement (guidance update, capacity announcement, M&A) inside 2026-08-24 → 2026-08-27. ⚠ **Base rate checked**: `MU`'s last dated corporate item in the window's news is *"Micron Quietly Pours $10 Billion Into Next Big Move"* (`yahoo_finance` **2026-08-20**), i.e. **before** the window opens. **The clause is not near-certain** |
+| **Settle** | **2026-08-27** |
+
+### ⚠ Brackets deliberately NOT registered this run, with reasons (information-content rule)
+- **July PCE 08-28** — already carried both-sided by `P86` (registered 08-22). A second row double-counts one observation.
+- **Jackson Hole 08-27→29** — already carried by `S112` (registered 08-22, settles 08-31) **on its true dates**. The event is covered even though `catalyst_calendar` cannot see it; the gap is in the **tool**, not in the scenario coverage.
+- **`FRO` 08-28** — **no branch would change any conclusion**: the desk holds no tanker and carries no tanker proposition.
+- **MSCI review 08-31** — index-mechanical, no directional content.
+- **The RE/UTIL long-duration correlation** — the rate leg is already bracketed by `S112` and `P91`.
+
+
+---
+
+# Rows added by the 2026-08-24 `industry_US` run
+
+> ⚠ **Append-only** (`D165`). **ID 3-grep at WRITE time** across `handoff/*.md` · `llm_outputs/**` ·
+> `REPORT/**`: `S118`–`S123` **0 hit** in all three trees. Current highest **`S117`** (2026-08-23
+> `industry_US`). IDs allocated against **every** existing row in **both** `SCENARIOS*.md` files
+> (`D76` collision class).
+> ⚠ **Every threshold below is frozen at registration.** A bracket whose threshold moves after the
+> print is a description wearing a forecast's clothes.
+
+## `S74` — ANNOTATED AND SCORED (thresholds UNCHANGED; the original row above is not rewritten)
+
+**`S74` · event date 2026-08-24 · `FIRED-C` · scored 2026-08-24 by `industry_US` HANDOVER.**
+
+- **Observed, branch by branch** (`M857`; all news calls `--scope foreign`, **outside a sweep window**):
+  - **A leg 1** — *a dated US stand-down or partial lift of the naval blockade*: 🚫 **opposite
+    direction.** The US announced its **strictest-ever** sanctions round; Treasury Secretary Bessent
+    published an FT op-ed calling it an *"economic D-Day"*; press conference **14:00 ET 08-24**
+    (`hellenicshipping`, `dw`, `aljazeera`, `guardian`, `scmp` bodies).
+  - **A leg 2** — *a compensation framework announced*: 🚫 **a demand, not a framework.** Iran's
+    president restated the conditions 08-21 — *"including Iranian control over Hormuz and financial
+    compensation for the war"* (`euronews` body). No counterparty, no framework.
+  - **A leg 3** — *an **unconditional** Iranian reopening statement*: 🚫 **explicitly conditional.**
+    Iran issued **special permits for SOME Iraqi tankers**, number of vessels and schedule
+    **undisclosed** (IRNA via Reuters 08-22; `aljazeera` 08-22, `hellenicshipping` 08-23 and 08-24),
+    while NSC Secretary **Mohsen Rezaee** said **"not a single drop of oil will be exported"** through
+    Hormuz *"if the economic war continues."*
+  - **B leg 1** — *a **formal** US refusal of the two named conditions*: ⚠ **fails the letter.**
+    Sanctions escalation plus *"presses China to help reopen Hormuz"* (`toi` 08-21) is a hardening;
+    **no document or statement formally addresses and refuses** the blockade-lift and compensation
+    demands.
+  - **B leg 2** — *a strike on a transiting **VLCC***: ⚠ **fails on vessel class, measured precisely.**
+    A transiting vessel **was** struck fatally — **`MINOAN DIGNITY`** (IMO 9294484), Liberia-flagged
+    **bulk carrier**, 76,801 DWT, projectile into the engine room outbound in the southern corridor
+    overnight **08-17→18**, **chief engineer killed**, UKMTO-confirmed — and **`AMARA`** (IMO 9333280),
+    a 186 m **products tanker**, was **boarded and seized** near Qeshm 08-17, the first confirmed
+    Iranian seizure since 06-22. **The VLCCs in the same report ABORTED transits; none was struck.**
+    (`SKIROS`, 159k DWT, was struck by a **Ukrainian** drone at **Novorossiysk** — wrong theatre.)
+  - **C** — *neither, by 2026-08-24*: ✅ **this is what happened.**
+- **Verdict: `FIRED-C`.** Per the row's own meaning line, C = `AMBIGUOUS` / **no conclusion changes**;
+  **no grade moved on ENRG or INDU from this row.**
+- 🚨 **The row does not settle silently: its registered anti-signal (a) FIRED.** S74 wrote *"if a
+  reopening happens with **no** statement on either named condition, the conditions were never the
+  binding variable and this row's whole framing is wrong."* **A partial reopening happened on
+  bilateral Iraqi diplomacy** — IRNA states the permits followed *"repeated requests by the Iraqi
+  government through various diplomatic channels"*, and Iraq's parliament speaker asked Ghalibaf for
+  *"special status"* in Baghdad on **08-19**. **Neither named condition appears anywhere in that chain.**
+- ★★ **And the same night DRIFT found a FOURTH channel** (`M883`): **China and Jordan jointly called
+  for the Strait's reopening** in a statement issued during King Abdullah's Beijing visit with Xi
+  Jinping (`scmp`, 21:48 HKT 08-24) — again naming neither condition. **China buys ~80% of Iran's
+  shipped oil.**
+- ⇒ **Carried forward, unresolved and not laundered**: the two IRGC conditions gate the Strait for the
+  general fleet, but they are **demonstrably not the binding variable** for at least two channels.
+  **The successor bracket is `D338`'s, and it belongs to PREMORTEM.**
+- 🚨 **`S74`'s retirement leaves `S8` — undated for 23 runs — as the desk's ONLY general-fleet Hormuz
+  bracket.** `S8` is human-gated (P5) and is **not** touched, re-dated or re-frozen by this row.
+
+---
+
+## `S118` — ★★★ Is `NVDA`'s print about the PRINTER or about MEMORY? · ARMED · → settle **2026-08-28**
+
+Registered **2026-08-24 by the `industry_US` PREMORTEM** (Lens 2, mandatory bracket — `NVDA` is a
+🔀binary at **D-2**). `grep S118` → **0** across all files at write time.
+
+**Why it exists, and why it is NOT a duplicate.** `S115`/`S117`/`P90` bracket NVDA's own print and the
+memory-cost mechanism. **This row brackets the RELATIVE pricing** measured today (`M874`): on the
+identical 2026-08-28 expiry, **three memory/storage names with no scheduled event carry HIGHER ATM
+implied volatility than the name that actually prints** — `SNDK` **0.926**, `WDC` 0.880, `MU` 0.770
+against `NVDA` **0.692** — while **memory/storage `participation` is 0.0% (0 of 4)**.
+
+**Frozen observable**: `EW{MU, SNDK, WDC}` **2-session excess return vs `NVDA`**, over
+**2026-08-26 close → 2026-08-28 close**.
+
+| Branch | Threshold | Meaning |
+|---|---|---|
+| **A (the print is about MEMORY)** | `EW{MU,SNDK,WDC}` − `NVDA` **≥ +6.50pp** | **Falsifies the `AI-compute-EPICENTER` label as the right unit** — the money would be saying the cycle's marginal information lives one layer back |
+| **B (the print is about NVDA)** | the same spread **≤ −6.50pp** | **Falsifies `S117`/`M874`'s options-market inference** |
+| **C** | between | **the favourite, disclosed** (`L3`); the band spans 13pp because all four implied moves are large |
+
+- ★ **Threshold is OUTSIDE the implied move, and stated as such**: `NVDA`'s own 08-28 straddle is
+  **±6.13%**, so a **6.50pp RELATIVE** gap requires more than NVDA's entire priced move in one
+  direction. **It can carry information rather than re-describe what is priced.**
+- 🚨 **The implied move was read from the option chain directly, NOT from the desk's tool.**
+  `module_flow NVDA --positioning` returned **`±1.3% (expiry 2026-08-24, D0) → complacent, little
+  fuel`** — an expiry that expires the same day, two days before the print, **4.7× too small**
+  (`M873`, `D315` 5th run).
+- **Anti-signal (VOID)**: a **memory-maker pre-announcement or guidance revision with a named date**
+  (`MU`, `SNDK`, `WDC`, Samsung or SK hynix) inside 08-24 → 08-28. ⚠ **Base-rate checked**: `MU` does
+  not print until **09-24** and no memory name has a scheduled event in the window ⇒ a genuine
+  low-probability void, not an escape hatch.
+- **Information content (B4)**: **neither branch merely confirms.**
+- ⚠ **Named non-redundancy (`D343`)**: `S118` is not redundant with `P90` — `P90` asks *what the >15%
+  price increase means for NVDA's margin*; `S118` asks *which chain layer the market gets paid on*.
+  **`S118` can fire while `P90` fires either way.**
+- **Owner**: `industry_US`.
+
+## `S119` — ★★ Bessent's sanctions press conference, **D-0** · ARMED · → settle **2026-08-27**
+
+Registered **2026-08-24 by the `industry_US` PREMORTEM** (mandatory bracket — a **≤48h binary**, in
+fact **D-0**, firing inside this run's own working window). `grep S119` → **0** at write time.
+
+**Why it exists**: a dated binary that **`catalyst_calendar` does not carry** (`M872`), on the axis
+carrying the desk's only OW with a live macro driver. Recovered from a wire body that named the time
+of day: *"Bessent is expected to unveil the new sanctions against Iran during a press conference at
+**14:00 ET (18:00 GMT) on Monday**"* (`hellenicshipping` 08-24).
+
+**Frozen observable**: the **equal-weight Energy basket's 3-session excess return vs `SPY`**, over
+**2026-08-24 close → 2026-08-27 close**.
+
+| Branch | Threshold | Meaning |
+|---|---|---|
+| **A (escalation prices — ENRG OW helped)** | Energy 3-session excess vs `SPY` **≥ +2.60pp** | the war-premium leg is live and re-prices |
+| **B (already priced / the exception channel dominates — ENRG OW hit)** | **≤ −2.60pp** | **falsifies the war-premium leg of the ENRG OW directly** |
+| **C** | between | the favourite, disclosed |
+
+- **Threshold derivation, stated**: measured trailing-60 **5-session** Energy excess has mean
+  **+0.607** and sd **4.325** ⇒ 3-session sd ≈ **3.35**, mean ≈ **+0.36**; **±2.60pp ≈ ±0.60σ.**
+- **Information content**: **B falsifies**, and **B is the branch this run's own evidence points at** —
+  the tape already sold crude on the Iraqi-permit news (**Brent −1.3% to $93.16**, 04:32 ET, a LIVE
+  INTRADAY print) **before** the presser. **A confirms and is graded the weaker branch. Registered
+  anyway** because a D-0 binary on the desk's largest live macro tilt with no bracket is exactly the
+  violation this stage exists to prevent.
+- **Anti-signal (VOID)**: the presser is **postponed or cancelled**, or a **US–Iran direct-talks
+  announcement with a named date** lands in the window. ⚠ Base-rate checked: the presser is confirmed
+  in a body **with a time of day**, so postponement is the low-probability leg.
+- **Owner**: `industry_US`.
+
+## `S120` — ★★ Jackson Hole: Warsh's first speech as Chair · ARMED · → settle **2026-08-28**
+
+Registered **2026-08-24 by the `industry_US` PREMORTEM.** `grep S120` → **0** at write time.
+**Why it exists**: `theme-age "Jackson Hole"` reads **🟡ACCELERATING 14.9×** (base 296), the board's
+second-fastest term, while `theme-age "Warsh"` reads ⚪ECHO 0.85× on a 3,628 base — **a 17.5× ratio
+difference on one event from term width alone** (`M861`) — and **`catalyst_calendar` has missed the
+event for three consecutive runs** (`M872`).
+
+**Frozen observable**: `DGS30` **and** `T10YIE` from `[FRED]`, at the **first observation where BOTH
+series carry 2026-08-28**.
+
+| Branch | Threshold | Meaning |
+|---|---|---|
+| **A (supply / term premium dominates)** | `DGS30` **≥ 5.31** (its 365-day maximum; 08-20 value 5.23) **AND** `T10YIE` **≤ 2.38** | **falsifies any residual "the long end is inflation" reading** |
+| **B (Warsh read dovish; the long end retraces)** | `DGS30` **≤ 5.10** **AND** `T10YIE` within **2.28–2.40** | **falsifies `P94` and this run's supply framing** |
+| **C** | between | the favourite, disclosed — `DGS30`'s realised 8-observation range is **5.19–5.31** |
+
+- ⚠ **The observation-lag clause is written INTO the row** (`D333-KR`/`M858`): the H.15 constant-maturity
+  family publishes **at least one business day behind** `T10YIE`. **This row settles on the first
+  observation where BOTH carry the date, and that rule is frozen here rather than discovered at
+  settle** — which is precisely why `S102` has sat unsettled for five runs.
+- **Anti-signal (VOID)**: an **intermeeting Fed action** or a **Treasury refunding announcement**
+  inside the window. ⚠ **Base-rate checked and NOT remote** — `Treasury buyback` is the board's only
+  🟢FRESH theme (age 5, base 201) and `brief` carried *"Treasury may tap $1 trillion cash account for
+  bond buybacks."* **Disclosed as live rather than assumed away.**
+- ⚠ **Named non-redundancy (`D343`)**: `S120` settles **08-28** and `P94` settles **08-27** on the same
+  `DGS30`/`T10YIE` pair. **If both fire the same way that is ONE observation, not two.** Registered
+  here so no later stage double-counts it.
+- **Owner**: `industry_US`.
+
+## `S121` — ⚠ GRADED AND **DROPPED** before registration. **ID consumed, deliberately unused.**
+
+**Intended**: a July PCE bracket (08-28).
+**Dropped, and the reason is the finding.** `P67`, `P81`, `P85`–`P89` and `S116` **already settle on
+2026-08-28**, all keyed to the same print, alongside `FRO` earnings. **The desk holds SEVEN rows on
+one binary.** Per the standing rule — *"if neither branch would change the conclusion, the event is
+not worth bracketing"* — an eighth adds no information and would inflate apparent coverage.
+⇒ **`D343`: date-clustered brackets resolving together read as seven confirmations from n ≈ 1 (`B3`).**
+**The ID is left permanently unused so it cannot be silently re-allocated.**
+
+## `S122` — ★★ Shell's $8bn US chemicals sale: does `XOM`'s "control" role survive? · ARMED · → **2026-09-30**
+
+Registered **2026-08-24 by the `industry_US` PREMORTEM** (Lens 1, on an object the **blind-spot pass**
+surfaced — `burst` returned `CHEMICALS` at **z 13.2**, the board's highest, 100% market relevance,
+against a term table with no chemicals bucket). `grep S122` → **0** at write time.
+
+**Object**: Shell is selling its **US chemicals business — ~$8bn, four Louisiana sites — and the named
+interested parties are `XOM`, LyondellBasell and Apollo** (FT 08-24, via `yahoo_finance`,
+`seekingalpha`, `oilprice`, `investing_en` bodies + a `bloomberg` title). `chain-hop chemicals`
+independently surfaced **`APO`** as a one-hop candidate while `XOM` was **headline-named 22 times**.
+
+**Frozen observable**: a **definitive agreement naming the buyer and the price**, reported in **≥2
+outlet BODIES**, by **2026-09-30**. Grade **`[news]`, not `[measured]`** — no price threshold.
+
+| Branch | Threshold | Meaning |
+|---|---|---|
+| **A** | `XOM` is the buyer | **`XOM`'s standing 🔴RESOLVED *control* status is FALSIFIED** — a control does not commit $8bn to a downstream asset — and its ledger row (`A.flow미도착` → 09-16) must be re-argued or retracted |
+| **B** | a non-`XOM` buyer, **or** no definitive agreement by 09-30 | Shell portfolio news with no US read-through; EVENT_ALPHA Card 8 is void |
+| **C** | an agreement naming `XOM` **within a consortium** | disclosed as a live outcome, not a dodge |
+
+- **Why it matters**: `XOM` is carried in this desk's standing view explicitly as *"a control, not a
+  bet"*, **and its own OBV is dispersing (−0.101) while its sector accumulates**. Alongside `brief`'s
+  08-23 head item *"One of Exxon's Biggest Oil Fields Is Running Out of Room"* (11 articles / 7
+  outlets), the **capital-allocation** story on `XOM` is two-sided and unowned.
+- **Information content**: **A falsifies a role this desk assigned itself**, which is the most
+  expensive kind of error to leave standing. **B falsifies the card.** Neither confirms.
+- **Anti-signal (VOID)**: Shell **withdraws the asset from sale** with a named announcement.
+- 🚨 **`LYB` and `DOW` — the two named US counterparties — are OUTSIDE `us_top300` and therefore
+  untaggable** (`D341`).
+- **Owner**: `industry_US`.
+
+## `S123` — ★★ The trade war's IMPLEMENTATION, which no existing row reaches · ARMED · → settle **2026-09-12**
+
+Registered **2026-08-24 by the `industry_US` PREMORTEM.** `grep S123` → **0** at write time.
+**Why it exists — `D342`**: `P92` and `P93` both settle **2026-08-28**, and **Canada's retaliation
+takes effect 2026-09-08** (`aljazeera` 08-23, named effective date; list names steel, dairy,
+appliances, agricultural goods — `dw` 08-22) (`M869`). **Both rows can only measure the announcement.
+No row on this board spans the effective date.**
+
+**Frozen observable**: the **equal-weight Industrials basket's 5-session excess vs `SPY`**, over
+**2026-09-05 close → 2026-09-12 close** — a window **straddling 09-08**.
+
+| Branch | Threshold | Meaning |
+|---|---|---|
+| **A (implementation prices — INDU UW− right for the right reason)** | Industrials excess **≤ −3.10pp** (= **−2.0σ** on the trailing-60 mean **+0.437** / sd **1.681**; its 08-21 reading is −1.736) | distinguishes a transmission story from an announcement story, which `P93` structurally cannot |
+| **B (implementation is a non-event)** | Industrials excess **≥ +0.44pp** (at or above its own trailing mean) over the same window | **falsifies the INDU UW−'s trade rationale entirely** — the sector would have absorbed a 50% tariff regime taking effect |
+| **C** | between | the favourite, disclosed |
+
+- **Anti-signal (VOID)**: a **US–Canada agreement with a named effective date**, or a **US
+  proclamation with a named effective date excluding Canada**, before 09-08. ⚠ **Base-rate checked**:
+  *"Canada Turned Down a US Tariff Deal"* (08-23 head) — a deal was live and was **refused**.
+- ⚠⚠ **Correlated with `P93`, flagged so it is not double-counted**: if `P93`-A and `S123`-A both fire,
+  that is **ONE compounding object measured twice**, not two independent confirmations.
+- ⚠ **Scope gap named rather than left**: this row is keyed to **Industrials**. **The Staples /
+  agricultural leg of the same 09-08 event is UNBRACKETED**, and `ADM` — the chain's left edge — is
+  already that sector's second 🔴 (flow −0.689, rs20 −10.2).
+- **Owner**: `industry_US`.
+
+
+---
+
+# Registered 2026-08-25 by the `industry_US` PREMORTEM — **`S124` – `S126`**
+
+> ⚠ **Append-only** (`D165`). Nothing above this line was read into memory and rewritten.
+> ⚠ **ID 3-grep at WRITE time** across `handoff/*.md` · `llm_outputs/**` · `REPORT/**`:
+> `S124` `S125` `S126` returned **0 hit in all three trees**. Current highest **`S123`** (2026-08-24).
+> ⚠ **Language: English** — the US desk's documented practice.
+> Full prose, D93 baselines and branch grading live in
+> `llm_outputs/2026-08-25/industry_US/BLINDSPOT_PREMORTEM.md §2`.
+
+## S124 — ★★★ Does IT's breadth repair through its own two prints? · ARMED · → settle **2026-08-31**
+
+The row that tests this run's ONLY verdict change (`IT` N → UW, taken on 43 of 56 names negative).
+
+| | |
+|---|---|
+| **Frozen observable** | COUNT of `us_top300` Information Technology names (n=56) with a positive **5-session excess vs `SPY`**, settled closes, at the **2026-08-31** close |
+| **Branch A (the UW is wrong)** | **≥ 30** (trailing-252 median) — breadth returns to normal through the `NVDA` 08-26 and `MRVL` 08-27 prints |
+| **Branch B (the UW is right)** | **≤ 13** — no repair at all |
+| **Branch C** | 14–29 |
+| **D93 before freezing** | trailing 252: mean **29.5** · sd **9.0** · p05 **13** · p15 **20** · p50 **30** · p85 **39** · p95 **43** ⇒ **A ≈50% / B ≈6% / C ≈44%. A is the favourite, disclosed. B is the rare branch AND the one that vindicates the desk** |
+| **State at registration** | **13 of 56 = the 5.6th percentile of two years** |
+| **Implied move** | `NVDA` **±6.13%** and `MRVL` **±13.3%**, both expiry 2026-08-28 (D3). ★ The observable is a **cross-sectional COUNT, which no straddle prices** ⇒ the threshold is outside the implied move by construction |
+| **Information content (B4)** | Both branches change a conclusion. Deliberately **not** a fifth reading of the `NVDA` print (`S79`/`S103`/`P90`/`S118` own it) — this row owns the **sector-breadth consequence** |
+| **Anti-signal (VOID)** | a **GICS reclassification moving ≥3 names into/out of Information Technology**, or a market-wide trading halt, inside 08-25 → 08-31. Base rate checked (`D300-KR`): **MSCI's 08-31 review falls inside the window and does NOT change GICS assignment**, so it is explicitly not a voider. The `NVDA`/`MRVL` prints are deliberately NOT anti-signals — they are the event |
+| **Non-redundancy (D343)** | 08-31 carries `S92` `S94` `S104` `S112` + the MSCI review; **all four are single-name/pair rows, `S124` is the only cross-sectional breadth row on that date** |
+| **Owner** | `industry_US` |
+
+## S125 — ★★ The agricultural half of the trade war, unbracketed for a third run · ARMED · → settle **2026-09-11**
+
+Fills the gap `D342` named twice: `S123` brackets the Industrials leg; the Staples/agricultural leg had no row.
+
+| | |
+|---|---|
+| **Frozen observable** | **`ADM` 5-session excess vs `XLP`** (benchmark named inline — the sector, not the index; the question is intra-Staples transmission), settled closes, at the **2026-09-11** close. The window **contains Canada's 2026-09-08 effective date** |
+| **Branch A (the ag leg was priced in advance)** | **≥ +0.602** (trailing-252 p50) |
+| **Branch B (the ag leg is the live transmission channel)** | **≤ −6.146** (trailing-252 p05) |
+| **Branch C** | between |
+| **D93 before freezing** | trailing 252: mean **+0.555** · sd **3.849** · p05 **−6.146** · p15 **−3.426** · p50 **+0.602** · p85 **+4.461** · p95 **+6.949** ⇒ **A ≈50% / B ≈5% / C ≈45%** |
+| **State at registration + branch grading** | **−6.511 = the 4.4th percentile, ALREADY inside branch B's region** ⇒ **B is the LOW-information branch and A is the informative one, stated at registration rather than discovered at scoring (B4).** The row is a **persistence** test |
+| **Implied move** | **none readable** — `ADM` has no event-dated chain for 09-08. **Stated as unavailable rather than fabricated (P4, D2)** |
+| **Anti-signal (VOID)** | a **US–Canada agreement removing agricultural goods from the retaliation list**, or an `ADM`-specific corporate action (M&A, guidance withdrawal, restatement) inside the window. Base rate: the tariff thread is **accelerating, not resolving** (`theme-age "Canada tariff"` **10.99×** on an 85 base, up from 9.86×) ⇒ not near-certain |
+| **Non-redundancy (D343)** | 09-11 carries **zero** rows. Correlated with `S123` (09-12, Industrials leg) — **one policy event, two sectors; if both A-branches fire that is ONE object measured twice**, named in advance |
+| **Note** | `ADM` is **not** a desk position and this row hands **no name to BET** (P4) |
+| **Owner** | `industry_US` |
+
+## S126 — ★★ August payrolls: is the Industrials underweight a tariff call or a cycle call? · ARMED · → settle **2026-09-04**
+
+| | |
+|---|---|
+| **Frozen observable** | **`XLI` 5-session excess vs `SPY`**, settled closes, at the **2026-09-04** close (August NFP prints that morning) |
+| **Branch A (the UW− is on the wrong side of a cycle)** | **≥ −0.087** (trailing-252 p50) |
+| **Branch B (the weakness is structural, not a dislocation)** | **≤ −2.500** (trailing-252 p05) |
+| **Branch C** | between |
+| **D93 before freezing** | trailing 252 of `XLI exc5` vs `SPY`: mean **+0.012** · sd **1.619** · p05 **−2.500** · p15 **−1.572** · p50 **−0.087** · p85 **+1.767** · p95 **+3.121** ⇒ **A ≈50% / B ≈5% / C ≈45%** |
+| **State at registration + branch grading** | **−2.738 = the 2.8th percentile**, already below p05 ⇒ **B is the low-information branch, A is the informative one (B4)** |
+| **Implied move** | `XLI` has **no NFP-dated straddle** ⇒ stated as unavailable rather than invented (`D2`) |
+| **Why the row exists** | `INDU UW−` is the desk's stated live transmission channel for the trade war and **every existing test settles on the wrong date**: `P92`/`P93` on **08-28, eleven days BEFORE the tariffs take effect** (`D342`), `S123` on **09-12, after**. Nothing separated *"weak because of tariffs"* from *"weak because the cycle is weak"* — **NFP is the one dated event in the window that moves the second and not the first** |
+| **Information content** | **A falsifies** the tariff attribution (recovery on labour data, before any tariff takes effect). **B does not confirm the tariff story** — it only rules out the labour explanation — **and that asymmetry is stated, not glossed** |
+| **Anti-signal (VOID)** | an **intermeeting FOMC action**, or a **BLS delay/cancellation of the August employment report** inside the window. Base rate checked: no FOMC meeting falls inside; the BLS calendar carries 09-04 as scheduled ⇒ not near-certain |
+| **Non-redundancy (D343)** | 09-04 carries **zero** rows. Against `S123`: different date, different driver (labour vs tariff implementation), different construction (ETF vs equal-weight constituents) |
+| **Owner** | `industry_US` |
+
+---
+
+# Registered 2026-08-26 by the `industry_US` PREMORTEM — **`S127` · `S128`**
+
+> ⚠ **Append-only write** (`D165`), text staged in a scratchpad first (`D357` — the 2026-08-05
+> truncation mechanism is still live and this run does not rely on luck).
+> ⚠ **ID 3-grep at WRITE time** across `handoff/*.md` · `llm_outputs/**` · `REPORT/**`: `S127` `S128`
+> → **0 hits**. Highest existing **`S126`** (2026-08-25 `industry_US`).
+> ⚠ **Language: English** — the US desk's documented practice.
+
+## `S127` — ★★★ `AVGO` 2026-09-02: the held name with the book's worst `rs60` and, until now, no row · ARMED · → settle **2026-09-08**
+
+| Field | Value |
+|---|---|
+| **Event** | `AVGO` FQ3 results, **2026-09-02**. **HELD** (`AI-compute-EPICENTER`). The registration obligation was recorded by the 2026-08-25 run and carried into `HANDOVER §2c` on 08-26 |
+| **Frozen observable** | **`AVGO` 5-session excess return vs `SPY`**, settled closes, `auto_adjust=False`, window **2026-09-01 close → 2026-09-08 close** (the print falls inside) |
+| **Branch A (the de-rate was a discount)** | excess **≥ +5.928pp** (trailing-252 **p85**) |
+| **Branch B (the de-rate was a franchise loss)** | excess **≤ −4.922pp** (trailing-252 **p15**) |
+| **Branch C** | between = **the favourite, disclosed** |
+| **`D93` before freezing** | `AVGO` exc5 vs `SPY`, trailing 252 settled windows to 2026-08-25: mean **+0.281** · sd **6.023** · p05 −8.036 · **p15 −4.922** · p50 −0.341 · **p85 +5.928** · p95 +10.033 ⇒ **A ≈15% · B ≈15% · C ≈70%** |
+| **State at registration** | **−5.920 = the 9.9th percentile of 252** — it enters its own print **already inside branch B's zone**. Disclosed now, not discovered at scoring |
+| 🚨 **Threshold provenance — NOT from the options market, and why** | `module_flow AVGO --positioning` returns **`예상변동 ±1.3% (만기 2026-08-26, D0)`** for a **2026-09-02** event — the straddle expires **seven days before the print** (`D353` reproducing, `M948`). **No implied move for this event is readable today.** Thresholds are the measured 252-day tails, labelled as such. ⚠ **Obligation: re-derive from the 09-04-or-later straddle at the 08-28 or 08-31 run, before the print.** Until then this row is **MEDIUM-RESOLUTION** and is labelled so |
+| **Positioning at registration** | Short **1.2% float, covering**, DTC 3.0 · **P/C 2.75** (put-heavy) · skew **−5.3** · FINRA **z −2.17, 5v5 −10.4▼ = the board's largest short exit** · sweep: flow −0.487, 🟡중립, OBV 중립, `rs20 −9.4`, **`rs60 −24.1` = worst of the 11 holdings**. ⚠ **The option book and the daily short tape disagree in tone** and that is recorded, not averaged |
+| **Information content (`B4`)** | **A** falsifies the `IT UW` on the desk's own held epicenter name and says the −24.1 `rs60` was a discount. **B** falsifies the `AI-compute-EPICENTER` label on a held name and turns `S116`'s Alphabet dual-sourcing story from a relative-share question into an absolute one. ⚠ **C at ~70% is genuinely likely and is NOT informative** — the row earns its slot only because A and B are both thesis-breaking |
+| **Anti-signal (VOID)** | an **announced acquisition of or by `AVGO`**, or a **trading halt ≥1 full session**, inside 2026-09-01 → 2026-09-08. ⚠ **Base rate checked (`D300-KR`)**: none scheduled. **The print is deliberately NOT an anti-signal — it is the event** |
+| **Non-redundancy (`D343`)** | 09-08 carries the Canada tariff effective date, `MSTR` revive and six ledger rechecks — **no other price bracket settles there.** `S116` (08-28) is a **relative** `MRVL − AVGO` spread settling **before** this print; `S127` is `AVGO` **absolute**, **after** it |
+| **Owner** | `industry_US` |
+
+## `S128` — ★★★ The out-of-sample test of this desk's own strongest measured cell · ARMED · → settle **2026-09-09**
+
+| Field | Value |
+|---|---|
+| **Why it exists** | `rs60` h=5 is the US desk's strongest IC cell — **mean IC −0.1310, `t(NW) −5.46`, `n_eff 5.4`, positive in 7% of 27 run-dates, Bonferroni-passing NEGATIVE** — and it has **never been tested out of sample**. Sorting the 299 names on the 2026-08-26 sweep gives **35 reversal** (`rs20 > 0 ∧ rs60 < 0`) vs **117 decay** (`rs20 < 0 ∧ rs60 > 0`): **39.1% of the board is a decaying stock of past excess** (`M949`), and **4 of 11 holdings sit in decay** (`MET`, `NDAQ`, `RTX`, `XOM`) against **1 in reversal** (`NVDA`) |
+| **Frozen observable** | `EW{35 reversal names}` **minus** `EW{117 decay names}`, **5-session returns**, settled closes, **both baskets frozen as printed by the 2026-08-26 sweep** (membership rule `rs20 > 0 ∧ rs60 < 0` vs `rs20 < 0 ∧ rs60 > 0`; full lists in `llm_outputs/2026-08-26/industry_US/SECTOR_FLOW_US.json`), at the **2026-09-09** close |
+| **Branch A (the ledger's sign is real out of sample)** | spread **≥ +5.433pp** (trailing-252 **p85**) |
+| **Branch B (the ledger's sign is a regime artifact)** | spread **≤ −3.158pp** (trailing-252 **p15**) |
+| **Branch C** | between |
+| **`D93` before freezing** | trailing 252 of the same spread to 2026-08-25: mean **+1.268** · sd **4.552** · p05 −6.833 · **p15 −3.158** · p50 +2.131 · **p85 +5.433** · p95 +7.154 ⇒ **A ≈15% · B ≈15% · C ≈70%.** ⚠ **The estimator's centre is +1.268, NOT zero** — reversal has beaten decay on average over the window, so branch A is not the "surprising" side and the row says so before the fact |
+| **State at registration** | **−0.556 = the 31.7th percentile** — currently mildly favouring decay, i.e. **against** the ledger's sign |
+| **⚠ `S6` / `D4`, written INTO the row** | the IC ledger's window contains the 2026-08-24 rotation, i.e. **a reversal regime**, so a reversal IC measured inside it may not generalise. **This row is the out-of-sample test and it can fail. That is the point** |
+| **Information content (`L3`/`B4`)** | **A** says the measured axis holds prospectively and the book's 4 decay names are on the wrong side of it. **B** kills a Bonferroni-passing cell **before it becomes doctrine**, which is the more valuable outcome. Neither branch merely confirms |
+| **Anti-signal (VOID)** | an index-level shock (`SPY` 2026-09-01 → 2026-09-09 beyond **±5%**), or a **GICS/index reconstitution removing ≥5 names from either basket** inside the window. ⚠ **MSCI's 08-31 quarterly review is checked and is explicitly NOT a voider** — it falls before the window opens and does not change GICS assignment |
+| **Non-redundancy (`D343`)** | 09-09 carries `P102` (a two-name Materials spread) and `S58-KR`. **`S128` is the board's only cross-sectional factor row**, orthogonal to `P101`'s sector-internal software−hardware cut |
+| **Owner** | `industry_US` |
+
+
+---
+
+# Rows added by the 2026-08-27 `industry_US` run (PREMORTEM registrations)
+
+> ⚠ **Append-only** (`D165`); text staged in a scratchpad first (`D357`).
+> ⚠ **ID 3-grep at WRITE time** across `handoff/*.md` · `llm_outputs/**` · `REPORT/**`, excluding this
+> run's own files: `S129` `S130` → **0 hits**. Highest existing **`S128`** (2026-08-26 `industry_US`).
+> IDs allocated against **every** existing row in **BOTH** `SCENARIOS*.md` files (`D76` collision class,
+> 5th consecutive day the class was checked and prevented).
+> ⚠ **Every threshold below is frozen at registration.** The full registration tables (including each
+> row's `D93` baseline, anti-signal base-rate check and non-redundancy statement) are reproduced here
+> verbatim from `llm_outputs/2026-08-27/industry_US/BLINDSPOT_PREMORTEM.md §4b`.
+
+## `S129` — ★★★ The Canadian retaliation's agricultural leg · ARMED · → settle **2026-09-09**
+
+## `S130` — ★★ `NVDA` / Hugging Face $12.9bn · ARMED · → settle **2026-09-10**
+
+#### `S129` — ★★★ The Canadian retaliation's **agricultural** leg, which three runs have left unbracketed
+
+| Field | Value |
+|---|---|
+| **Event** | **Canadian retaliatory tariffs take effect 2026-09-08.** Corroborated to bodies: *"U.S. and Canada Are Bracing for Prolonged Trade Dispute"* [14 outlets, 08-26] · *"'We got attacked': Canadians unite in fury against Trump's latest tariff salvo"* [5 outlets] |
+| **Frozen observable** | **`ADM` 5-session excess return vs `SPY`**, settled closes, `auto_adjust=False`, window **2026-09-02 close → 2026-09-09 close** (the 09-08 effective date falls inside) |
+| **Branch A (the agricultural leg prices)** | `ADM` 5-session excess **≤ −4.00pp** — the retaliation list's named US casualty is repriced, and `STPL N−` is a *tariff* call, not a *defensive-rotation* call |
+| **Branch B (it was already in the price)** | `ADM` 5-session excess **≥ +2.50pp** — the selling already happened (`ADM` is 🔴분산 with OBV −0.154 **before** the effective date), and the desk's STPL demotion rests on something else entirely |
+| **Branch C** | between |
+| **`D93` executed BEFORE freezing** | `ADM`'s own current readings, from this run's sweep (asof 08-27): `RS20` **−4.8**, `RS60` **−4.6**, OBV **−0.154 분산**, `flow_score` **−0.643**. Bands are set **asymmetrically and deliberately**: the state is already negative on all four axes, so **A asks the move to extend and B asks it to reverse** — a symmetric band from a negative state would make B nearly unreachable and the row would be one-sided in disguise. **A ≈25% · B ≈20% · C ≈55% — disclosed** |
+| **Information content (`B4`)** | **Both branches change a conclusion, and they change DIFFERENT ones.** **A** makes `STPL N−` a tariff call and puts the 09-08 date on the desk's defensive underweight. **B** falsifies the tariff channel on the one name the retaliation list actually names, which would mean `S123`'s 09-12 settle is measuring an event that already cleared. **Neither merely confirms.** |
+| **Anti-signal (VOID)** | a **negotiated carve-out for agricultural goods announced before 09-08**, confirmed in **≥2 outlet bodies**, **or** an `ADM`-specific dated corporate action (guidance update, M&A) inside the window. ⚠ **Base rate checked**: the 08-26 tape carries no carve-out story; the durability thread is climbing, not resolving. **The clause is keyed to a named event, not to commentary** — the tariff itself is deliberately **not** a voider, because it is the event |
+| **Non-redundancy (`D343`)** | **09-09 currently carries `P102`, `S128` and `P105`** — a materials two-name spread, a cross-sector reversal basket, and a single-sector aggregate. **`S129` is the only single-name trade-policy row on that date**, and it deliberately avoids **08-28 (nine rows)**. `S123` (09-12) brackets the trade war's *implementation* at index level; **this row brackets one named casualty**, which `S123` cannot reach |
+| **⚠ `W3`** | this measures whether the tariff channel prices, **not** whether any position was right. No sizing (P4) |
+| **Owner** | `industry_US` |
+
+#### `S130` — ★★ `NVDA` buys **Hugging Face** for $12.9bn: is it confirmed, and does the tape read it as strength?
+
+| Field | Value |
+|---|---|
+| **Event** | *"Nvidia agrees to buy Hugging Face for $12.9 billion"*, **2026-08-27**, carried by `cnbc`, `techcrunch`, `fortune`, `yahoo_finance`. 🚨 **Every one says "report says" / "reports" — there is NO company announcement**, and the row says so at registration rather than discovering it at scoring. Precursor: `yahoo_finance` 08-23 *"Hugging Face exploring sale valuing it at $13 billion"* [2 outlets] |
+| **Frozen observable** | **Two legs, both read at the 2026-09-10 close.** **Leg 1 (confirmation)**: whether an **`NVDA` company statement or an SEC filing** naming the acquisition exists by 09-10. **Leg 2 (tape)**: `NVDA` **10-session excess return vs `SPY`**, settled closes, window **2026-08-27 close → 2026-09-10 close** |
+| **Branch A (confirmed AND the tape rewards it)** | Leg 1 **confirmed** **AND** leg 2 **≥ +2.00pp** — the market prices the adjacency as strategic |
+| **Branch B (the informative one)** | Leg 2 **≤ −4.00pp**, *regardless of leg 1* — ★ **a $12.9bn acquisition announced the day after a 100bp gross-margin guide-down** (`P90` → `FIRED-A`, this run) **being sold is the peak-margin trap (`L2`) arriving on the epicenter of the #1 cycle**, which is the single most consequential thing that could happen to this book |
+| **Branch C** | between, or leg 1 unconfirmed with leg 2 inside the bands |
+| **`D93` executed BEFORE freezing** | `NVDA` current state (asof 08-27 sweep): `RS20` **+11.4**, `RS60` **−0.8**, OBV **−0.069 중립**, `delta` **−0.114**. Implied move **±3.0%** at the **08-28 (D1)** expiry with skew **+16.3** and P/C **0.59** ⇒ the tool reads positioning as **"complacent, little fuel."** ⚠ **The ±3.0% is a D1 figure and cannot price a 10-session window** (`D353`'s class) — **so the bands are NOT taken from the options market**, and that is stated, not hidden. They are set at roughly ±0.5σ of `NVDA`'s own 10-session excess dispersion. **A ≈30% · B ≈20% · C ≈50% — disclosed** |
+| **Information content (`B4`)** | **Asymmetric, and the asymmetry is declared**: **A can only confirm** (a strategic acquisition being rewarded tells us little we do not already believe). **B falsifies** — it says the epicenter is buying adjacency because its core is getting more expensive, which is the thesis this run's own `P90` verdict opened. **The row is registered FOR branch B**, and A is included because a one-way tilt into a live corporate event is a protocol violation |
+| **Anti-signal (VOID)** | the deal is **formally denied** by `NVDA` or Hugging Face in a **company statement** inside the window (a *report* being contradicted by another *report* does **not** void it), **or** `NVDA` announces a separate transaction ≥ $10bn inside the window. ⚠ Base rate low; keyed to a **company statement**, not to press disagreement |
+| **Non-redundancy (`D343`)** | 09-10 carries **no other registered row**. `S115`/`S79` settle tonight on the **print**; `S103` settles 08-29 on the print's **5-session window**. **`S130` is the only row on the acquisition**, which is a different object from the earnings event |
+| **Owner** | `industry_US` |
+
+
+---
+
+# Registered 2026-08-29 by the `industry_US` PREMORTEM — **`S131` – `S134`**
+
+> ⚠ **Append-only write** (`D165`); text staged in
+> `llm_outputs/2026-08-29/industry_US/_scenarios_us_block.md` first (`D357`), and both
+> `SCENARIOS_US.md` and `SCENARIOS.md` backed up to `*.bak_0829us_premortem` before the write.
+> ⚠ **ID 3-grep at WRITE time** across `handoff/*.md` · `llm_outputs/**` · `REPORT/**` (excluding this
+> run's own files): `S131` `S132` `S134` → **0 hits**. `S133` returned **1 apparent hit which was
+> inspected and is a false positive** — the substring sits inside the FRED series id `MTSDS133FMS` in
+> a 2026-08-28 KR company report. **Inspected rather than assumed** (`D94`). IDs issued by
+> `module_evidence next-id S` (highest existing **`S130`**), not hand-grepped (`D76`).
+> ⚠ **Language: English** — the US desk's documented practice.
+> ⚠ **All spot prices settled 2026-08-28**, read via `fast_info.last_price` because `yf.download`
+> returns `Close = NaN` on 300 of 301 US names for that session (`M1040`/`M1059`, `D402`).
+> ⚠ **Implied moves read DIRECTLY from the option chain**, at the strike nearest the settled 08-28
+> close on the first expiry **spanning** each event — because `module_flow --positioning` returned
+> **`예상변동 ±nan%` on every ticker probed** (`M1065`) and, when it works, picks a **non-spanning**
+> expiry (`D315`, 6th run). **No threshold was invented** (`M47`).
+> ⚠ **SETTLEMENT MODE = TERMINAL on both branches** for all four (`D242`).
+> ⚠ **`D388-KR` honoured**: the one basket row (`S133`) **enumerates its membership** inline.
+
+## `S131` — ★★★ MSCI 08-31: does the passive print concentrate or broaden? · ARMED · → settle **2026-08-31**
+
+**The mandatory ≤48h bracket.** `catalyst_calendar` puts the MSCI quarterly review at **D-2**, and
+**six rows already settle 2026-08-31** (`S92` `S94` `S104` `S112` `S124` `S103`) — **not one observes
+the rebalance itself.** A one-way tilt into a known binary is a protocol violation, so this row exists.
+
+| Field | Value |
+|---|---|
+| **Event** | MSCI quarterly review, **2026-08-31** (passive print concentrates at that close) |
+| **Frozen observable** | **`RSP` − `SPY` 1-session excess return**, settled closes, **2026-08-28 → 2026-08-31** |
+| **Implied move at registration** | `RSP` **±1.06%** (2026-09-04 expiry, ATM K=220.00, straddle 2.34, IV 0.374/0.216) · `SPY` **±0.45%** (08-31 expiry, K=769.00, straddle 3.47). **Both branches sit outside `RSP`'s own priced move** |
+| **Branch A (broadening)** | `RSP` − `SPY` **≥ +1.30pp** — the passive print favours the median stock ⇒ `M1051`'s sector-breadth-vs-stock-breadth split narrows and `P106`'s narrowing claim weakens |
+| **Branch B (concentration)** | `RSP` − `SPY` **≤ −1.30pp** — the rebalance pushes further into the mega-caps ⇒ **`M1051` gets a mechanical explanation instead of a behavioural one**, and every `eqflow`-carried delta this run made stands on a number the index is actively working against |
+| **Branch C** | between — **disclosed favourite** |
+| **State at registration** | `RSP` 220.69 · `SPY` 769.35 (both settled 08-28). `RSP` `exc1` on 08-28 = **−0.116pp**; `exc5` = **−0.916pp** |
+| **Information grade (B4)** | **HIGH on both, and asymmetric in a way worth stating**: this run made **four** verdict deltas entirely on `eqflow`, and **B is the branch that says the market is paying for the other number** |
+| **Anti-signal (VOID)** | a market-wide trading halt, **or** MSCI postponing/withdrawing the review, inside 08-28 → 08-31. ⚠ Base rate low; the review date is calendar-confirmed |
+| **Non-redundancy (`D343`)** | 08-31 carries six rows; all six are single-name, cross-sectional-count, or macro-print rows. **`S131` is the only one whose observable is the cap-weight-vs-equal-weight axis the rebalance actually moves** |
+| **Owner** | `industry_US` |
+
+## `S132` — ★★★ `AVGO` 09-02: a threshold that can carry information, four runs after `D295` asked for one · **SETTLED FIRED-C** (scored 2026-09-04, folded into the master scoring log by the 2026-09-06 `industry_US` run — `D472` header hygiene) · → settle **2026-09-03**
+
+| Field | Value |
+|---|---|
+| **Event** | `AVGO` FQ3 earnings, **2026-09-02 (D-4)**. **Held.** `rs60` **−24.4 = the worst on the book** |
+| **Frozen observable** | **`AVGO` 1-session excess vs `SPY`** on the first settled close after the print (**2026-09-03**), each vs its own 2026-09-02 close |
+| **Implied move at registration** | **±8.11%** — ATM straddle **K=370.00 = 29.91** on the **2026-09-04** expiry, the first that spans the print (IV 0.736/0.731). **Cross-checked** on the 09-02 expiry (K=380.00, straddle 29.94) → **±8.12%, agreeing to 0.01pp** |
+| **Branch A (the discount was wrong)** | excess **≥ +9.00pp** — outside the implied move ⇒ the −24.4 `rs60` was a discount, not a franchise loss, and `S116`'s B-leaning read (that `MRVL` took the socket) is falsified |
+| **Branch B (the discount was right)** | excess **≤ −9.00pp** ⇒ the franchise loss is real and **the AI-compute epicenter is narrower than the book's three names assume** |
+| **Branch C** | between — **disclosed favourite, and disclosed as LARGE**: the band spans 18pp against an 8.11% priced move. Stated rather than tightened |
+| **Relationship to `S127`** | 🚫 **`S127` is NOT re-frozen** (`D242`) and stays ARMED on its own bands (**A ≥ +5.928 / B ≤ −4.922**, settle 09-08). ★ **Those bands sit INSIDE ±8.11% ⇒ pre-declared NO-INFORMATION** — exactly what `D295` predicted when it flagged them as hand-set, unmet for four runs. **This row is `D295`'s prescription executed.** If the two rows disagree, **the disagreement is the finding** (`S14-ANNEX` precedent) |
+| **Anti-signal (VOID)** | `AVGO` postpones the print, **or** an announced acquisition of/by `AVGO` inside 2026-08-31 → 2026-09-03 |
+| **Information grade** | **HIGH on both** — each branch changes a standing thesis on a **held** name |
+| **Owner** | `industry_US` |
+
+## `S133` — ★★★ Health Care: is the sector its constituents or its ETF? · ARMED · → settle **2026-09-14**
+
+**This row brackets a verdict change this run made today**, which is the point of it.
+`SECTOR_ROTATION §2` promoted `HLTH` `N`→`OW` on **`eqflow` +0.102 (the board's highest)** *against*
+**`XLV` `exc5` −2.456pp vs `SPY` (the board's worst)**.
+
+| Field | Value |
+|---|---|
+| **Frozen observable** | **`EW{REGN, AMGN, TMO, BDX, MRK, VRTX}` 10-session excess return vs `XLV`**, settled closes, **2026-08-28 → 2026-09-14** |
+| **Membership, enumerated** (`D388-KR`) | Exactly those six tickers — the six `us_top300` Health Care names with the highest `rs60` on the **2026-08-27 settled** sweep (`REGN` +32.4 · `AMGN` +31.6 · `TMO` +29.3 · `BDX` +28.7 · `MRK` +27.8 · `VRTX` +27.3), **all six `OBV 매집`, all six `rs20` positive**. Equal-weighted, no rebalancing inside the window |
+| **Benchmark, named inline (`C1`)** | **`XLV`, not `SPY`** — the question is constituents-versus-cap-weighted, so the sector ETF *is* the correct counterparty. Using `SPY` here would measure the sector, not the split |
+| **Implied move at registration** | `XLV` **±2.20%** (2026-09-11 expiry, ATM K=171.00, straddle 3.77, IV 0.368/0.219). Both thresholds outside it |
+| **Branch A (the constituents are the sector — the promotion was right)** | EW6 − `XLV` **≥ +3.00pp** ⇒ `XLV` is reporting on `LLY` (its `top1` **flipper**), `eqflow` was the better instrument, and G5's "prefer `eqflow` on a 45-day-stale universe" rule earned its keep |
+| **Branch B (the ETF is the sector — the promotion was wrong)** | EW6 − `XLV` **≤ −3.00pp** ⇒ **`SECTOR_ROTATION §2`'s promotion was wrong**, and a 60-day relative-strength screen selected six names that were about to mean-revert together |
+| **Branch C** | between — disclosed favourite |
+| **State at registration** | `eqflow` +0.102 vs `wflow` −0.027 (🚨1名 `LLY`), breadth 0.03, n=32. `XLV` settled 08-28 **171.16**; `exc1` −0.018pp, `exc5` **−2.456pp** vs `SPY` |
+| **Information grade (B4)** | **HIGH on B, MEDIUM on A.** A largely confirms a direction this run already took; **B falsifies a verdict change made today**, which is rarer and more useful. **Stated at registration, not discovered at scoring** |
+| **Anti-signal (VOID)** | an **FDA action or trial readout with a named date** at **≥2 of the six** inside 2026-08-28 → 2026-09-14. ⚠ **Base rate checked and NOT remote** — `LLY` took an FDA Mounjaro CV-risk approval on **08-28** (7 outlets) and the same day's head layer carried three other FDA items (`Revolution Medicines`, ivermectin EUA, `Pfizer`/`BioNTech` XFG vaccine). **Disclosed as live rather than assumed away** |
+| **`L2` (peak-margin) not waived** | `MRK` **trades ABOVE its mean target** (upside −4.4%) on the carried §3a row. The basket is live **and** its one prior 🟢 is the expensive member — both stated |
+| **Owner** | `industry_US` |
+
+## `S134` — ★★ Financials: the contradiction with no instrument defect to blame · ARMED · → settle **2026-09-04**
+
+| Field | Value |
+|---|---|
+| **Why it exists** | The **only** sector where both flow reads agree (`wflow` −0.144, `eqflow` −0.144), **neither is a `top1_flips_sign` bucket**, and the settled tape is **positive** (`XLF` `exc5` **+0.605pp vs `SPY`**, 2nd-best on the board). Every other contradiction this run found has an instrument defect available; **this one does not**, and `SECTOR_ROTATION §4` handed it here unresolved |
+| **Frozen observable** | **`XLF` 5-session excess vs `SPY`**, settled closes, **2026-08-28 → 2026-09-04** |
+| **Implied move at registration** | `XLF` **±1.36%** (2026-09-04 expiry, ATM K=58.00, straddle 0.79, IV 0.158/0.134). Both thresholds outside it |
+| **Branch A (the tape was right, the flow axes were late)** | `XLF` exc5 **≥ +2.00pp** ⇒ ROTATION's `OW−`→`N` demotion was wrong, **and it would be the first evidence this desk has that `eqflow` can be wrong for a full week on a non-flipper bucket** |
+| **Branch B (the flow was right)** | `XLF` exc5 **≤ −2.00pp** ⇒ the demotion was early and correct |
+| **Branch C** | between — disclosed favourite |
+| **State at registration** | `XLF` settled 08-28 **58.10**; `exc1` +0.607pp, `exc5` **+0.605pp** vs `SPY`; `wflow` −0.144 / `eqflow` −0.144 / breadth 0.02 / n=47, `top1` `BRK-B`, **not** a flipper |
+| **Anti-signal (VOID)** | **Aug NFP prints 2026-09-04, the window's last day.** The window deliberately ends **ON** the print so the observable is the five sessions **before** it; **if the print is moved earlier, the row VOIDs** |
+| **Hypothesis recorded, NOT adopted** | `EVENT_ALPHA` Card 8 — a take-private premium unwinding inside the sector (`PYPL` `rs60` **+36.5**, built on an Advent/Stripe offer **withdrawn 2026-08-28**, `OBV 중립`). **Named so a later run can test it; this row does not depend on it** |
+| **Information grade (B4)** | **HIGH on A** (falsifies a demotion made today, and a rule the desk leans on), confirm-only on B |
+| **Non-redundancy (`D343`)** | 09-04 carries `S126` (`XLI` exc5 vs `SPY` **into** NFP) and, from 09-04, `P114` (`XLI` exc5 **out of** NFP). **`S134` is a different sector on the same date**, and it is registered as sharing that date deliberately: if `S134`-B and `S126`-B both fire, that is **one macro observation**, not two sector verdicts |
+| **Owner** | `industry_US` |
+
+
+# Registered 2026-08-30 by the `industry_US` PREMORTEM — **`S135`** (one row)
+
+> ⚠ Append-only (`D165`). **ID 3-grep at WRITE time** across `handoff/*.md` · `llm_outputs/**` ·
+> `REPORT/**` (excluding this run's own files): `S135` → **0 hits**. Highest existing **`S134`**
+> (2026-08-29 US). IDs issued by `module_evidence next-id`, not hand-grepped.
+>
+> ★ **This stage drafted FOUR brackets and registered ONE.** Three were withdrawn after reading this
+> file *before* writing: the MSCI 08-31 bracket is already owned by **`S131`**, the `AVGO` 09-02
+> bracket by **`S132`** (+ `S127`), and the `HPE` 09-03 bracket was **deferred to the `IT` DEEP** by
+> the 08-29 run's own written precedent, which applies again because `IT` is a DEEP this run too.
+> Recorded so the *absence* of three rows is legible rather than looking like an omission.
+
+## `S135` — ★★ Are `UTIL`, `RE` and `STPL` three UW verdicts or one? · ARMED · → settle **2026-09-11**
+
+**Why it exists.** The PREMORTEM L1 tells Lens 2 to hunt the **correlated-UW pattern**. This desk
+currently books **three separate UW verdicts** (`UTIL`, `RE`, `STPL`) and the last row that tested
+that family settled **2026-08-13**; nothing has replaced it. ★ **There is a fresh prior AGAINST the
+one-bet reading**, which is why the row is worth running rather than assumed: on **2026-08-28** the
+three duration legs printed **1.11pp apart** (`XLK` −1.33 · `XLU` −0.87 · `XLRE` −0.22 vs `SPY`).
+
+| Field | Value |
+|---|---|
+| **Frozen observable** | **max pairwise spread among `XLU`, `XLRE`, `XLP` 5-session excess returns vs `SPY`**, settled closes, **2026-09-04 → 2026-09-11**, `yfinance`, `auto_adjust=False` |
+| **Benchmark, named inline (`C1`)** | **`SPY`**, on all three legs |
+| **Branch A (they are ONE bet)** | max pairwise spread **≤ 1.50pp** ⇒ the desk's three UW verdicts are one position booked as three, and `G4`'s unresolved grouping question gets its first market answer |
+| **Branch B (they decouple)** | max pairwise spread **≥ 4.00pp** ⇒ each UW needs its own cause, and `EVENT_ALPHA` Card 4's *capex* explanation for `XLU` becomes separable from the *rate* explanation |
+| **Branch C** | between — disclosed favourite |
+| **Band derivation (`C5`, stated, not round numbers)** | 5-session realised sigma measured on the repaired series: `XLU` **1.89%** · `XLRE` **1.59%** · `XLP` **2.04%**. **4.00pp ≈ 2σ of the widest leg; 1.50pp is below 1σ of any leg** ⇒ both bands sit outside the noise, in opposite directions |
+| **Implied-move check, stated not smuggled** | `XLU` **±2.88%** (2026-09-11 expiry, K=42.50, **put OI 3,594 vs call OI 22**). ⚠ **No `XLRE` or `XLP` straddle was pulled and none is fabricated (`C3`)** — a 4.00pp *dispersion* among three ETFs cannot be produced by any single implied move, so the implied is context, not the band's source |
+| **State at registration** | `XLU` `exc5` **−0.62pp** · `XLRE` **−1.85pp** · `XLP` **−1.14pp** vs `SPY` (settled 08-28; that close is a 5m-proxy validated to **0.0225% mean / 0.038% max** against the KIS broker feed, n=9) ⇒ **current max pairwise spread 1.23pp, i.e. ALREADY inside branch A's line.** Disclosed so A cannot later be read as a discovery |
+| **Anti-signal (VOID)** | a **utility-specific regulatory or single-issuer event** (rate-case decision, major outage, or an announced merger) at **≥2** `XLU` constituents inside the window ⇒ `XLU` moves for a non-duration reason. ⚠ **Base rate checked and NOT remote** — `XLU` is the board's worst sector (`eqflow` −0.524, 10 reds of 15) and distressed sectors are where corporate actions cluster |
+| **Information grade (`B4`)** | **HIGH on A.** A says three of the desk's eleven verdicts are one decision — a claim about its own book structure, the class `G4` has failed to settle for 11 consecutive runs. **B is modal-adjacent and only confirms that the current bookkeeping is not wrong**, which is worth less. **Stated at registration, not at scoring** |
+| **Non-redundancy (`D343`)** | 09-04 carries `S126` and `S134`; 09-11 carries `P108`/`P116`. **`S135` observes a SPREAD among three UW sectors, not a level on any one of them**, and its window sits **between** those two dates rather than on either |
+| **Owner** | `industry_US` |
+
+---
+
+# ═══ Registered 2026-08-31 by the `industry_US` PREMORTEM (frozen at registration) ═══
+
+> ⚠ **ID 3-grep at WRITE time** across `handoff/*.md` · `REPORT/` · `llm_outputs/2026-08-2*/`:
+> `S136` · `S137` → **0 hits**. Highest existing **`S135`** (2026-08-30 US). IDs issued by
+> `module_evidence next-id`, not hand-grepped.
+> ⚠ Both rows use **spread** observables so that neither the 2026-08-28 daily-close ghost bar nor the
+> 2026-08-31 `BZ=F` front-month roll (`M1136`) can make them unscoreable.
+
+## `S136` — ★★★ Is the Energy escalation a BARREL event or a CHAIN-POSITION event? · ARMED · → settle **2026-09-09**
+
+| field | value |
+|---|---|
+| **Object** | `EW{SLB, MPC, PSX, VLO, COP}` **minus** `EW{XOM, EOG, FANG}` — **5-session sum of daily returns**, from the first settled close after **2026-09-01** through **2026-09-08** |
+| **Why it exists** | This run's **principal flow claim** is that money left E&P and sat in services/refining **before** the 08-30/31 strikes (`SECTOR_ROTATION §2`: accumulating `SLB` +0.661 · `MPC` +0.650 · `PSX` +0.388 · `VLO` +0.349 · `COP` +0.324 vs distributing `XOM` −0.486 🔴 · `FANG` −0.622 🔴 · `EOG` −0.694 🔴, `repaired sweep asof 08-28`). **Nothing brackets it** — `P107`/`P112`/`P117`/`P118` all observe the barrel |
+| **A** | **≥ +3.90pp** ⇒ the chain-position split is real and widening; the **sector label is the wrong unit** and Energy should be booked as two legs |
+| **B** | **≤ −3.90pp** ⇒ the escalation lifts the barrel and E&P catches up; the split was a pre-event artifact and **this run's headline flow finding is wrong** |
+| **C** | between ⇒ disclosed as the modal outcome |
+| **Band derivation (`C5`)** | Measured 5-session-sum sigma of this exact spread over 60 sessions = **2.598pp**; realised range **−4.39 to +7.29**. **±3.90pp = ±1.50σ**, reachable in **both** directions inside the realised range (`D216`). **Symmetric, because the realised distribution straddles zero** — no asymmetry claimed |
+| **Anti-signal (AMBIGUOUS)** | An **M&A event on any of the eight names** inside the window. ⚠ **Base rate NOT remote — `SLB` closed one TODAY** (Kelvion, $3.4bn). Second anti-signal: an **OPEC+ quota decision** |
+| **Information grade (`B4`)** | **HIGH on B** — B kills this run's own headline reading. A confirms a direction already visible in the 08-28 tape and is worth less |
+| **Non-redundancy (`D343`)** | `P107` (BZ=F ≥96.00 → 09-08) · `P112` (→ 09-11) · `P117` (BZ=F ≤85/≥95 → 09-18) · `P118` (`DCOILWTICO` spot → 09-11) **all observe the barrel**. This observes **relative position within the sector** and can disagree with all four; **if it does, the disagreement is the finding** |
+| **Owner** | `industry_US` |
+
+## `S137` — ★★ Is optical a SEPARATE leg from semis, or `SMH` beta? *(`D250`'s 16th run, finally bracketed)* · ARMED · → settle **2026-09-09**
+
+| field | value |
+|---|---|
+| **Object** | `EW{LITE, COHR}` **minus `SMH`** (benchmark named inline, `C1`) — **5-session sum of daily returns**, from the first settled close after **2026-09-01** through **2026-09-08** |
+| **Why it exists** | `D250` has asked for an optical row in `cycle_registry.json` for **16 runs** and never got one, so the desk's standing sentence is *"exposure is unmeasurable, not zero."* **A bracket does not need the registry** — it measures the question directly. Live context: *"AI Chips Update — Optical Transceivers Propel AI Data Center Growth"* [4 outlets, 2026-08-31]; `theme_age` optical **accel 1.35×**, the highest on the board after Warsh (3.27×); `LITE` **+0.550, OBV +0.287 매집, `rs20` +22.3 vs `SPY` — the strongest 20-day in the whole candidate set — against `rs60` −6.6** |
+| **A** | **≥ +9.00pp** ⇒ optical is **its own leg**; `SMH`'s `exc60` −15.31pp vs `SPY` does not describe it, and the registry gap is a **real exposure gap** |
+| **B** | **≤ −9.00pp** ⇒ optical is **high-beta semis**; the registry is right to fold it in and **`D250` should be CLOSED as not-a-gap** |
+| **C** | between ⇒ contested |
+| **Band derivation (`C5`)** | Measured 5-session-sum sigma of this spread over 60 sessions = **8.639pp**; realised range **−16.69 to +24.69**. **±9.00pp ≈ ±1.04σ**, reachable both ways. ⚠ **The band is wide because the spread is wide** — a tighter band would fire on noise (the `S61` failure) |
+| **Anti-signal (AMBIGUOUS)** | An **earnings print by `LITE` or `COHR`** inside the window (a single-name event, not a leg verdict). ⚠ **Second, and it is CERTAIN not remote: `AVGO` prints 09-02 or 09-03 and sits inside `SMH`**, moving the denominator for a reason unrelated to optical. **Disclosed at registration; the row is registered anyway, because a leg that cannot survive its own index's largest print is not a leg** |
+| **Information grade (`B4`)** | **HIGH on B** — B lets the desk **close** a 16-run open dig, which is worth more than confirming it |
+| **Non-redundancy (`D343`)** | No existing row observes optical. `S130` observes `NVDA`/Hugging Face; `S132`/`S127` observe `AVGO`. **None reaches the interconnect layer** |
+| **Owner** | `industry_US` |
+
+
+---
+
+# Registered 2026-09-01 by the `industry_US` run — **`P121`–`P124` (MACRO)** · **`S138`–`S140` (PREMORTEM)**
+
+> ⚠ **Append-only** (`D165`). Nothing above this line is rewritten.
+> ⚠ **IDs issued by `module_evidence next-id`, not hand-grepped** (`D76` collision class): highest
+> existing **`P120`** / **`S137`** at write time, live scan across `handoff/*.md` · `llm_outputs/**` ·
+> `REPORT/**`. Allocated against **every** existing row in **both** `SCENARIOS*.md` files.
+> ⚠ **Every threshold below is frozen at registration.** A bracket whose threshold moves after the
+> print is a description wearing a forecast's clothes.
+> 🚨 **Instrument state at registration**: the 08-28 daily bar is a **permanent partial hole**
+> (259 of 301 names still NaN at T+4); the primary sweep's OBV axis is **revoked**; every flow number
+> quoted below comes from `SECTOR_FLOW_US_REPAIRED.json` (3-axis `nonews`, 299 scored, **asof 08-31**).
+
+## `P121` — ★★★ The repricing is the POLICY PATH, not inflation, and not term premium · ARMED · → settle **2026-09-04+**
+
+- **Claim.** `[FRED]` 08-28: `DGS2` **+14 bp** (4.20 → 4.34) · `DFII10` **+8 bp** · `T10YIE` **−2 bp** ·
+  2s10s **47 → 39 bp**. `[news]` Warsh's Jackson Hole debut read hawkish across 10 outlets; Barclays
+  sees **two 2026 hikes**; the "odds of a September rate hike have nearly doubled" thread is
+  **BUILDING 2→5**; `theme-age Warsh` **3.22× ACCELERATING** on a 5,102 base.
+- **A (the path repricing extends).** `DGS2` **≥ 4.50** at the first `[FRED]` close covering
+  **2026-09-04** **AND** `T10YIE` **≤ 2.36**.
+- **B (a two-session Jackson-Hole artifact).** `DGS2` **≤ 4.18** at the same close.
+- **C** between — the disclosed favourite.
+- **`D93` before freezing.** `DGS2` 5-observation change, trailing 252: sd ≈ **6.5 bp**; 30-day
+  realised range **4.17 – 4.34**. A needs +16 bp and B needs −16 bp over ~4 observations ⇒ both
+  ≈ **±2.5σ** ⇒ **A ≈10% · B ≈10% · C ≈80%, disclosed up front.**
+- **Anti-signal (VOID).** An **intermeeting Fed action**, or a **BLS delay / restatement of the
+  August payroll release**. ⚠ Base rate low — both are publication-failure clauses.
+- **KPI.** `T10YIE` **2.31** — under A it should stay ≤ 2.36. **If A fires WITH `T10YIE` above 2.42
+  the claim is right about direction and wrong about mechanism**, which is exactly the split `P86`
+  produced today (`M1166`).
+- **Owner** `industry_US`.
+
+## `P122` — ★★★ The oil bid is a supply event that positioning has not chased · ARMED · → settle **2026-09-08**
+
+- **Claim.** `CL=F` **83.40 → 85.76** (08-31 settled); `BZ=F` **89.31 → 90.49**. `[COT 08-25]` WTI spec
+  net **+31,099 = 43rd percentile of its year**, +1,935 WoW. Cause dated and multi-sourced: **US
+  strikes on Larak Island, inside the Strait of Hormuz**, and **Iranian retaliation on US bases in
+  Jordan and on the UAE** (22-outlet head cluster; 12-outlet live thread). `theme-age Larak`
+  **58.21×**, the fastest term on the board.
+- **A (supply premium extends AND positioning follows).** At `[COT]` for **2026-09-08**, WTI spec
+  1-year percentile **≥ 65** **AND** `CL=F` settled close **≥ 88.00** on that date.
+- **B (a headline spike into an oversupplied market).** `CL=F` settled close **≤ 80.00** on or before
+  2026-09-08.
+- **C** between — the disclosed favourite.
+- **`D93` before freezing.** `CL=F` 30-day realised range **81.25 – 87.83**; 5-session sd ≈ **2.6**.
+  Both thresholds sit **outside** the 30-day range ⇒ **A ≈15% · B ≈10% · C ≈75%.**
+- **Anti-signal (VOID).** A **front-month contract roll inside the window.** ★ **Base rate RAISED, not
+  decorative** — `R116` was retracted one run ago on exactly this. ✅ Resolved on settled closes:
+  `BZ=F` 89.31 → **90.49 = +1.32%** (Brent **rose**) and the Brent−WTI spread **5.91 → 4.73**, inside
+  its 60-day 2.40–8.50 range ⇒ the artifact was intraday only.
+- **KPI.** `theme-age Larak` **58.21×** — a fall below ~5× with `CL=F` still bid would say the market
+  stopped attributing the bid to the Strait.
+- **⚠ Counter-evidence stated at registration.** The **Venezuela** oil-deal cluster is **15 outlets**
+  and **ACCELERATING 2.74×**; its own bodies read "Trump's 'Historic Deal' Isn't Fooling Oil Traders"
+  and "65 Billion-Barrel Oil Deal Won't Fix Supply Anytime Soon".
+- **Replaces** the bracket `S92` consumed when it scored `FIRED-A` this run. **Owner** `industry_US`.
+
+## `P123` — ★★ The AI trade's marginal dollar moved from COMPUTE to POWER · ARMED · → settle **2026-09-08**
+
+- **Claim.** Same-day, ≥5 outlets each: "AI Power Demand Is Exploding, But How Much Actually Gets
+  Built" (13 outlets) · "SLB Makes $3.4 Billion Bet on AI Data Center Boom" · Anthropic's **$35bn**
+  Lambda contract (BUILDING) with **"Sundar Pichai Says Alphabet Can't Build AI Capacity Fast Enough,
+  and Anthropic Has Secured 5 Gigawatts of It"** — while `theme-age data center` is **⚪ECHO 1.01×** on
+  an 18,656 base. `SLB` is the repaired sweep's **#3** name (+0.822 🟢, OBV +0.498, `rs20` +20.6 vs
+  `SPY`) and sits in **Energy**, not IT.
+- **A (the power leg is where the delivery is).** `EW{SLB, ETN, NEE, VRT}` **minus `SMH`**, 5-session
+  sum of daily returns, first settled close after 2026-09-01 → **2026-09-08**: **≥ +5.00pp**.
+- **B (one week of oil beta).** **≤ −5.00pp**.
+- **C** between — disclosed as the modal outcome.
+- **Band derivation (`C5`).** Measured 5-session-sum sd of this spread over 60 sessions ≈ **3.3pp**;
+  **±5.00pp ≈ ±1.5σ**, the same construction `S136` uses — chosen for consistency, not tuned.
+- **Anti-signal (VOID).** `AVGO`'s 09-02/09-03 print moving `SMH` by **>±5%** in a single session.
+  ⚠ **Base rate HIGH and disclosed now, not at settle** — `AVGO`'s measured implied move is **±9.6%**.
+- **KPI.** `NEE` `[FINRA]` short-volume **z +1.76 🔴** — under A that pressure should ease.
+- **⚠ Post-registration evidence, disclosed and NOT used to re-band (`D242`).** EVENT_ALPHA Card 5
+  measured, later in the same run, that **every AI-power name is 🟡 or 🔴 and none is 🟢**
+  (`ETN` −0.339 Δ −0.687 · `VRT` −0.215 Δ −0.687 · `NEE` −0.254 · `CEG` −0.396 · `VST` −0.767🔴 ·
+  `PWR` −0.597🔴 · `FIX` −0.783🔴 · `DUK` −0.672🔴 · `SO` −0.597🔴), and that **Texas has halted new
+  data-center power interconnects over "ghost demand"** [reuters via yahoo_finance + cna, 09-01].
+  ⇒ **the basket is one strong leg and three weak ones and the evidence points to B or C.**
+  **Recorded as a disclosed pre-settle state, explicitly NOT a score** — this desk's pre-settle reads
+  are **0 for 4**.
+- **⚠ `D416` open**: `cycle_registry.json` has no ranked AI-power row, so "the book holds 0% of this
+  layer" is **unstatable**. This row measures the question the registry cannot. **Owner** `industry_US`.
+
+## `P124` — ★★ Credit and the dollar both say this is a policy event, not a risk event · ARMED · → settle **2026-09-18**
+
+- **Claim.** `[FRED 08-28]` `hy_oas` **2.60**, tighter on **seven consecutive observations** (2.73 →
+  2.60); `ig_oas` **0.79** unmoved; `NFCI` **−0.566**, looser. `[yfinance 08-31]` `GC=F` 4,609.7 →
+  **4,431.1** over three sessions **while `DTWEXBGS` rose** (118.36 → 118.75) and `VIXCLS` sat at
+  **14.43**. A war escalation, a hawkish central-bank debut and a new one-year high in the 10y
+  produced **no credit widening, no vol bid, and a falling gold price**.
+- **A (the market is under-pricing it).** `hy_oas` **≥ 2.85** (`P67`'s standing line) at the first
+  `[FRED]` close covering **2026-09-18**.
+- **B (orderly repricing).** `hy_oas` **≤ 2.50** at the same close **AND** `VIXCLS` **≤ 15.5**.
+- **C** between — disclosed favourite.
+- **`D93`.** `hy_oas` 14-observation change sd ≈ **8 bp**; current 2.60 sits near the low end of its
+  year ⇒ A needs +25 bp (≈3σ), B needs −10 bp (≈1.2σ) ⇒ **A ≈5% · B ≈25% · C ≈70%.**
+  ⚠ **The bands are asymmetric because the distribution is** — stated, not hidden.
+- **Anti-signal (VOID).** A **single-issuer default or a bank resolution** inside the window.
+- **KPI.** `GC=F` — under A gold should stop falling.
+- **Non-redundancy (`D343`).** `P67` is a **level** claim about AI-capex debt; `S111` scored `C` on
+  `ig_oas`. This row is a **joint** claim about credit ∧ vol ∧ gold through a geopolitical event.
+  If it and `P67` fire the same way that is two observations of one regime, named in advance.
+- **Owner** `industry_US`.
+
+## `S138` — ★★★ `AVGO`: a threshold that is actually OUTSIDE the priced move · **SETTLED FIRED-C** (scored 2026-09-04, folded into the master scoring log by the 2026-09-06 `industry_US` run — `D472` header hygiene) · → settle **first settled close after the print (2026-09-03 or 09-04)**
+
+| field | value |
+|---|---|
+| **Event** | `AVGO` FQ3 earnings, **2026-09-02** per `catalyst_calendar` ⚠ **`D420` unresolved** — the issuer calendar says **09-03**. **The row settles on the observable, not the date.** |
+| **Frozen observable** | **`AVGO` 1-session excess vs `SPY`**, settled closes, the first settled session after the print, each vs its own prior close |
+| **Implied move at registration** | **±9.6%** — `module_flow AVGO --positioning`, expiry **2026-09-02 (D1)**. ⚠ Read with its `D±n`: the straddle covers the path to expiry, not the event alone |
+| **A (the discount was wrong)** | excess **≥ +11.00pp** — outside the priced move ⇒ `rs60` **−12.9 vs `SPY`** was a discount, not a franchise loss, and the deepest-discounted half of IT (`MRVL` `rs60` −34.4 with `rs20` **+8.0** already turning · `AMAT` · `NXPI` · `ARM` · `ON`) re-rates with it — **none of which the book owns** |
+| **B (the discount was right)** | excess **≤ −11.00pp** ⇒ the franchise loss is real and the **AI-compute epicenter is narrower than the book's three names assume** |
+| **C** | between — **disclosed favourite, and disclosed as LARGE**: the band spans 22pp against a 9.6% priced move. Stated rather than tightened |
+| **Information grade (`B4`)** | **HIGH on both.** A falsifies ROTATION's `IT N` hold and `S116`'s B-leaning read that `MRVL` took the socket; B falsifies the epicenter's breadth. ⚠ C is likely and that is the honest cost of a threshold outside the priced move |
+| **Relationship to `S132` / `S127`** (`D343`) | 🚫 **`S132` is NOT re-banded and NOT voided.** It settles on its own ±9.00pp and is **pre-declared NO-INFORMATION** because that now sits **inside** the ±9.6% straddle (`M1197`). `S127` (09-08) observes a different window. This row exists **solely** because it is the only one of the three with a threshold outside the priced move — the `S103` → `S115` precedent |
+| **Anti-signal (VOID)** | a **guidance withdrawal, M&A announcement, or export-control action** at `AVGO` inside the window — none of which would be the print. ⚠ Base rate low but **not remote** given the export-control tape |
+| **Positioning disclosed at registration** | options **P/C 1.73**, IV skew **−3.3**, short **1.2% of float, covering, DTC 3.0**, news velocity **1.33× accelerating** ⚠ **live partial bar (NYSE open at read time)**; settled flow 08-31 **−0.616 🔴분산**, OBV −0.133 |
+| **Owner** | `industry_US` |
+
+## `S139` — ★★ Re-arming the correlated-underweight bracket across the NFP · ARMED · → settle **2026-09-04**
+
+| field | value |
+|---|---|
+| **Why it exists** | `S112` **FIRED-B today** on exactly this basket (**−2.331pp vs `SPY`** against a −1.757 threshold) ⇒ the correlated-UW pattern is **measured, not hypothetical** — and scoring **disarmed** it, leaving three of the desk's underweights unbracketed across a dated macro binary |
+| **Frozen observable** | **`EW{XLU, XLRE, XLP}` 3-session excess vs `SPY`**, settled closes, **2026-09-01 close → 2026-09-04 close** (August NFP prints that morning) |
+| **A (AGAINST US)** | **≥ +1.653pp** (trailing-252 **p85**) — the three rip **together** on a cold payroll and give back the `S112` gain in one window |
+| **B (with us)** | **≤ −1.757pp** (trailing-252 **p15**) — a hot payroll extends the duration repricing and the basket pays twice |
+| **C** | between — disclosed favourite |
+| **`D93` before freezing** | **Identical distribution to `S112`, reused deliberately rather than re-derived**: trailing 252 mean −0.156 · sd 1.754 · p05 −2.893 · **p15 −1.757** · p50 −0.168 · **p85 +1.653** · p95 +2.719 ⇒ **A ≈15% · B ≈15% · C ≈70%** |
+| **State at registration** | the basket **just delivered −2.331pp**, i.e. it starts **below p05** ⇒ ⚠ **B is the low-information branch here** (mean reversion alone could produce a C) **and A is the informative one** — the reverse of `S112`'s balanced start, disclosed |
+| **Implied move** | ⚠ **No straddle prices an equal-weight three-ETF basket** ⇒ stated as unavailable rather than invented (`D2`) |
+| **Anti-signal (VOID)** | a **BLS delay or methodology restatement** of the August payroll release |
+| **Non-redundancy (`D343`)** | `S135` (09-11) asks whether these three are **one verdict or three**; this row asks how the **one bet** behaves across a dated binary. Different objects; the correlation is named in advance |
+| **Owner** | `industry_US` |
+
+## `S140` — ★★★ Does IT's repaired breadth HOLD, or was 41-of-56 one week? · ARMED · → settle **2026-09-08**
+
+| field | value |
+|---|---|
+| **Why it exists** | `S124` **FIRED-A at 41 of 56** today — above the trailing-252 **p85 (39)** — from a registration state of **13 of 56 (5.6th percentile)**. ROTATION declined to promote `IT` because the pro-case is a **return** measurement while `eqflow` reads **−0.014**. ★ **The desk therefore holds a verdict its own settled bracket just argued against, and nothing re-tests it** |
+| **Frozen observable** | **COUNT of `us_top300` Information Technology names (n=56) with a positive 5-session excess vs `SPY`**, settled closes, at the **2026-09-08** close — the identical construction `S124` used |
+| **A (the repair is structural)** | **≥ 39** (trailing-252 p85) ⇒ `IT N` is wrong, and ROTATION's `eqflow`-based decline was measuring participation while the money measured price |
+| **B (it was one week)** | **≤ 20** (trailing-252 p15) ⇒ the 41 was a post-print bounce and the sweep's `eqflow` −0.014 / 3🟢-vs-9🔴 was the better instrument |
+| **C** | 21–38 — disclosed favourite |
+| **`D93` before freezing** | trailing 252 of the same count: mean **29.5** · sd **9.0** · p05 13 · **p15 20** · p50 30 · **p85 39** · p95 43 ⇒ **A ≈15% · B ≈15% · C ≈70%** |
+| **State at registration** | **41 of 56 = above p85.** ⚠ Starting at an extreme means **mean reversion alone produces C**, disclosed |
+| **Implied move** | ★ the observable is a **cross-sectional COUNT, which no straddle prices** ⇒ the threshold is outside the implied move **by construction**, stated rather than claimed as a virtue |
+| **Information content (`B4`)** | **Both branches change a conclusion**: A kills `IT N`; B settles the `M1184` price-vs-participation contradiction in favour of the flow instrument. Deliberately **not** a fifth reading of the `AVGO` print — `S138`/`S132`/`S127` own that; this row owns the **sector-breadth consequence** |
+| **Anti-signal (VOID)** | a **GICS reclassification moving ≥3 names into/out of Information Technology**, or a market-wide trading halt, inside 09-02 → 09-08 |
+| **Owner** | `industry_US` |
+
+
+# ═══ Registered 2026-09-02 by the `industry_US` PREMORTEM — **`S141`** · **`S142`** ═══
+
+> IDs from `module_evidence next-id` (live scan of `handoff/*.md` · `llm_outputs/**` · `REPORT/**`),
+> highest existing `S140` at write time. Both indexed in the `SCENARIOS.md` MASTER INDEX.
+> ⚠ Registered under the run's declared constraint: the four PREMORTEM lenses ran **serially and
+> in-context**, not as a parallel adversarial agent fan-out (8th consecutive run).
+
+## `S141` — ★★★ Does the `AVGO` print move the SECTOR? · **SETTLED FIRED-C** (scored 2026-09-04, folded into the master scoring log by the 2026-09-06 `industry_US` run — `D472` header hygiene) · → settle **2026-09-03**
+
+**Why it exists.** `S138` (±11.00pp), `S127` (09-08) and `S132` (±9.00pp, pre-declared
+NO-INFORMATION) all bracket the **name**. **Nothing on the board measures whether the print moves
+`SMH`**, and the against-us branch of this run's tilt is a sector event: if `AVGO` beats and raises,
+`S124`'s 41-of-56 breadth repair extends, this run's declined `IT N → UW` was wrong, and
+EVENT_ALPHA Card 6's "late money" tag on `NVDA`/`ANET` breaks — three readings at once.
+
+| | |
+|---|---|
+| **Frozen observable** | `SMH` **1-session excess return vs `SPY`**, settled closes, `auto_adjust=False`, **2026-09-02 close → 2026-09-03 close** |
+| **Branch A (the print re-rates semis)** | **>= +1.802pp** (trailing-252 **p85**) |
+| **Branch B (the print de-rates semis)** | **<= -1.732pp** (trailing-252 **p15**) |
+| **Branch C** | between |
+| **`D93` before freezing** | trailing 252 of `SMH` exc1 vs `SPY`: mean **+0.212** · sd **1.911** · p05 -3.249 · **p15 -1.732** · p50 +0.367 · **p85 +1.802** · p95 +3.418 ⇒ **A ~15% · B ~15% · C ~70%** |
+| **State at registration** | **-1.363 = the 17.9th percentile** (2026-09-01 settled) — **just outside branch B**; B is nearer, A is farther. Disclosed at registration, not discovered at scoring |
+| ★ **Implied-move check — UNCHECKED, and the reason is recorded** | `module_flow AVGO --positioning` reads **예상변동 ±9.5% (expiry 2026-09-02, D0)**, which confirms `S138`'s ±11.00pp is **outside** and `S132`'s ±9.00pp is **inside** the priced move. **`SMH`'s only straddle reads ±0.9% at a D0 expiry that lapses BEFORE this row's window opens**, so it bounds today's residual move, not the print reaction. ⇒ **this row is labelled `implied-move UNCHECKED`, not "outside the implied move"** (`C3` — the column is unknown, not zero). First row this desk has had to label this way |
+| **Anti-signal (VOID)** | a market-wide trading halt, **or** a dated US export-control announcement on advanced semiconductors, inside 09-02 -> 09-03. ⚠ **Base rate pre-stated so no void is improvised at scoring**: the 09-01/09-02 window already contained a *near-miss* of this class — an export action on **tungsten / battery black mass** (a different product class) and a **draft** rule reported as "could be shared with industry as soon as September". **Neither would void this row.** |
+| **Information content (L3)** | A and B both change a conclusion; C does not and is the disclosed favourite. **A is the informative branch** because the registration state already sits near B |
+| **Non-redundancy (`D343`)** | `S138`/`S127`/`S132` are all **name**-level rows on `AVGO`. This is the only **sector**-level row on the same event, and it can disagree with all three |
+| **Owner** | `industry_US` |
+
+## `S142` — ★★ The against-us branch of the `FIN UW` issued today, priced on the CPI print · ARMED · → settle **2026-09-11**
+
+**Why it exists.** ROTATION demoted **`FIN N -> UW`** today on `eqflow` -0.220, Δ -0.220 and 0 greens
+of 47. The strongest fact on the board points the other way: **`hy_oas` 2.63 = the 0.4th percentile of
+its trailing 252**, `ig_oas` flat, `NFCI` easing. **Demoting a sector into a one-year credit tight is
+the shape of an error**, and the run's own spine (`P125`: is the repricing the policy path or
+inflation?) settles at the NFP and leaves the **CPI print unbracketed on the equity side**.
+
+| | |
+|---|---|
+| **Frozen observable** | `XLF` **3-session excess return vs `SPY`**, settled closes, `auto_adjust=False`, at the **2026-09-11** close (August CPI) |
+| **Branch A (banks rip — today's demotion was wrong)** | **>= +1.315pp** (trailing-252 **p85**) |
+| **Branch B (banks lag — the demotion holds)** | **<= -1.516pp** (trailing-252 **p15**) |
+| **Branch C** | between |
+| **`D93` before freezing** | trailing 252 of `XLF` exc3 vs `SPY`: mean **-0.118** · sd **1.397** · p05 -2.329 · **p15 -1.516** · p50 -0.175 · **p85 +1.315** · p95 +2.071 ⇒ **A ~15% · B ~15% · C ~70%** |
+| **State at registration** | **+0.034 = the 56.7th percentile** — ★ **dead centre, the most balanced starting state this desk has registered in weeks**, which makes this the more informative of the two rows written today |
+| **Implied-move check** | `XLF` reads **예상변동 ±0.4% (expiry 2026-09-02, D0)** — a straddle that lapses before the window opens ⇒ **labelled `implied-move UNCHECKED`**. ⚠ The qualitative reading it does carry: P/C **0.04** = *"안일 (연료 적음)"*, i.e. almost no put protection in the bucket the desk just demoted |
+| **Anti-signal (VOID)** | an unscheduled Federal Reserve action, a US bank failure or emergency facility, or a change to the CPI release date, inside 09-08 -> 09-11 |
+| **Track KPI** | if **A** fires, `hy_oas` should be flat-to-tighter (a growth/curve read); if **A** fires while `hy_oas` **widens**, the move is a rate move and not a credit-quality move — **stated now so the two are not conflated at scoring** |
+| **Information content (L3)** | **A falsifies a verdict this run just made; B defends it against the single strongest counter-argument on the board.** Both change a conclusion. ⚠ An `XLE`-vs-`SPY` bracket was considered and **DROPPED** because with `XLE` board-best on exc1/exc5/exc20 and `eqflow` +0.551, **neither of its branches would have changed `ENRG OW`** (B4) |
+| **Non-redundancy (`D343`)** | `S134` settles **09-04** on the NFP; `P128` settles **09-08** on `hy_oas` itself. **Neither reaches the CPI print, and neither measures the equity bucket** |
+| **Owner** | `industry_US` |
+
+
+---
+
+# ═══ APPEND — `industry_US` PREMORTEM registrations, 2026-09-05 (Sat) ═══
+
+> IDs allocated by `module_evidence next-id S` against a LIVE scan of BOTH scenario files plus
+> `REPORT/**` and `llm_outputs/**` (the `D76` collision class) — highest existing was `S144`.
+> All thresholds from `D93` measured trailing-252 dispersion, executed BEFORE freezing.
+> 🚫 **`implied-move UNCHECKED` does NOT apply**: the check was RUN and its result is that **no
+> straddle covers either binary** — `SPY` ±0.5% and `SMH` ±1.8% expire 2026-09-08, `XLE` ±1.6%
+> expires 09-09, against PPI 09-10 and CPI 09-11 (`M1305`). Thresholds therefore come from `D93`,
+> and each row says so.
+> Windows are counted in **settled sessions** because **2026-09-07 is Labor Day** and
+> `catalyst_calendar` does not carry it (`D507`).
+
+# §Registrations — three brackets + one annex
+
+> All thresholds from **`D93` measured trailing-252 dispersion**, executed BEFORE freezing.
+> 🚫 **None is stated against an implied move, because no straddle covers the binaries** (`M1305`).
+> All windows in **settled sessions** (Labor Day 09-07, `D507`).
+
+### `S145` — ★★★ Does the LOW-`vol_surge` sub-node lead its own sector? (the desk's first US-market read on the axis `C29` is about)
+
+**Why it exists.** The board's three largest Δflows — `STX` **+0.728**, `WDC` **+0.718**,
+`AMD` **+0.566** — all print **`vol_surge` 0.59–0.68** and are therefore **structurally excluded from
+the 🟢 tag**, while the node's one 🟢 (`DELL`) passed on **surge 2.48** with a Δ of exactly **0.000**.
+The KR `ic_ledger` scores `vol_surge` h=1 at **IC −0.0414 · t(NW) −3.61 · n_eff 45**, clearing
+Bonferroni for a third run with a **NEGATIVE** sign, while `sector_flow`'s gate weights it
+**positively**. `W1` bars importing that verdict; **it does not bar running the measurement here**,
+and `D395`/`D428` have asked for a US-market read for weeks.
+
+| | |
+|---|---|
+| **Frozen observable** | `EW{STX, WDC, AMD}` **minus `SMH`**, **4 settled-session** returns, `auto_adjust=False`, 2026-09-04 close → **2026-09-11** close |
+| **Branch A** (the low-surge/high-Δ sub-node leads ⇒ the surge gate cost information) | **≥ +6.825** (p85) |
+| **Branch B** (it lags its own sector ⇒ the gate filtered correctly) | **≤ −3.406** (p15) |
+| **Branch C** | between |
+| **`D93` BEFORE freezing** | trailing 252: mean **+1.567** · sd 5.051 · p05 −5.887 · **p15 −3.406** · p50 +1.647 · **p85 +6.825** · p95 +10.300 ⇒ A ≈15% · B ≈15% · C ≈70%. ★ **centre POSITIVE (+1.567)** — these three beating `SMH` is the *normal* state, so B is the harder branch and the row is written knowing it |
+| **State at registration** | **+0.712 = the 44.8th percentile** — dead middle, slightly **below** its own mean. **No edge in either direction at the start** |
+| **Anti-signal (VOID)** | an **earnings print at `STX`, `WDC` or `AMD`** inside 09-05 → 09-11 (checked via `Ticker.earnings_dates`, **not** the forward-calendar field — `D488`), or a semiconductor-specific US export-control **action** (a published rule, not a draft) |
+| **Information content (`B4`)** | **A** says a whole node was invisible to this desk's own green gate for the wrong reason and the tag should not gate candidates. **B** says the gate earned its keep on US data and `C29` is a KR-only finding that does not transfer. **Neither merely confirms**, and either way the US desk finally has one own-market observation on the axis |
+| **Non-redundancy (`D343`)** | `P137` asks whether **`SMH` itself** extends vs `SPY`; **`S145` asks whether the sub-node beats `SMH`** — the two can fire in opposite directions and the pair is more informative than either. `S140` (09-08) is a **breadth** row |
+| **Owner** | `industry_US` |
+
+### `S146` — ★★★ Is the AI-power lane one object, or is the book holding its worst name?
+
+**Why it exists.** Lens 4 finding `M1308` + EVENT_ALPHA Card 6's **book flag**. `ETN` is **held**,
+**🔴분산 −0.662**, rs20 **−8.0**, while `VST` (Δ +0.491), `CEG` (+0.644, OBV 매집) and `VRT`
+(Δ +0.444, OBV 매집) all accumulate — **and the four sit in two different GICS sectors**, so no
+sector verdict can express the split (`D416`).
+
+| | |
+|---|---|
+| **Frozen observable** | `EW{VST, CEG, VRT}` **minus `ETN`**, **5 settled-session** returns, `auto_adjust=False`, 2026-09-04 close → **2026-09-14** close (09-07 is Labor Day) |
+| **Branch A** (the split widens — generation/thermal is the lane and components are not) | **≥ +7.651** (**p95, not p85**) |
+| **Branch B** (`ETN` catches up ⇒ the split was noise and the book's placement is fine) | **≤ −5.037** (p15) |
+| **Branch C** | between |
+| **`D93` BEFORE freezing** | trailing 252: mean **+0.103** · sd 4.967 · p05 −7.534 · **p15 −5.037** · p50 +0.394 · p85 +4.956 · **p95 +7.651** ⇒ A ≈5% · B ≈15% · C ≈80% |
+| **⚠ Asymmetric branch design, declared** | **A is set at p95, not p85, because the state is ALREADY at the 92.9th percentile.** Using p85 (+4.956) would make A near-certain and therefore uninformative (`B4`) — the same construction `P102` used from a 98.8th-percentile state |
+| **State at registration** | **+6.681 = the 92.9th percentile.** ⚠ **DISCLOSED: mean reversion is the base case from here, so B is the harder-to-reach but higher-information branch, and C is the favourite** |
+| **Anti-signal (VOID)** | an **announced acquisition or merger involving any of the four**, or a **PJM/ERCOT capacity-auction result or emergency order** inside 09-05 → 09-14. ⚠ **Base rate checked**: no scheduled capacity auction falls in the window; the desk's own carried `M367` notes PJM cleared at the price cap in a prior auction, which is a *past* event and not a voider |
+| **Information content (`L3`)** | **A** says the desk's one AI-power holding is the wrong expression of a live cycle and the registry's missing row (`D416`) has a measurable cost. **B** says the 09-04 flow split was a one-session artifact and the lane is one object. **Neither merely confirms** |
+| **Non-redundancy (`D343`)** | `P123` (09-08) asks whether the AI marginal dollar moved **to power at all** — a cross-cycle question. **`S146` asks WHICH NAMES inside the lane**, which `P123` cannot answer. `S127`–`S130` are name-level AI-compute rows |
+| **⚠ `W3`** | this measures a spread, not whether any position was right, and it sizes nothing (P4) |
+| **Owner** | `industry_US` |
+
+### `S147` — ★★ The refiner sub-node: EXTENDED-BUT-LIVE, or is `L2`'s peak-margin trap loaded?
+
+**Why it exists.** Lens 3 tagged `MPC`/`PSX`/`VLO` **EXTENDED-BUT-LIVE** on an accelerating cycle KPI,
+**and all three trade above consensus mean targets on +45–85%/90d revisions** — the textbook `L2`
+peak-margin setup, and the exact basis on which `VLO`'s rejection was reaffirmed on 09-04.
+**ROTATION promoted this sector to `OW+` today.** The sub-node deserves its own test because
+**`P136` measures the 16-name sector and can fire `C` while the three-name refiner leg does
+something else** (`W5`).
+
+| | |
+|---|---|
+| **Frozen observable** | `EW{MPC, PSX, VLO}` **minus `SPY`**, **5 settled-session** returns, `auto_adjust=False`, 2026-09-04 close → **2026-09-14** close |
+| **Branch A** (EXTENDED-BUT-LIVE confirmed — the sub-node leads the promotion) | **≥ +7.059** (p85) |
+| **Branch B** (the peak-margin trap is loaded and springs) | **≤ −3.740** (p15) |
+| **Branch C** | between |
+| **`D93` BEFORE freezing** | trailing 252: mean **+1.275** · sd 5.266 · p05 −7.669 · **p15 −3.740** · p50 +0.809 · **p85 +7.059** · p95 +10.846 ⇒ A ≈15% · B ≈15% · C ≈70%. ★ centre **positive**, so the refiners beating `SPY` is the normal state and the row says so |
+| **State at registration** | **+4.955 = the 75.4th percentile** — leaning A but inside C |
+| **⚠ Event contamination — OWNED, not voided** | the window contains **PPI 09-10** and **CPI 09-11**, both 🔀binary. There is no clean 5-session window; making them anti-signals would be the designed-to-void defect |
+| **Anti-signal (VOID)** | 🚨 **the one Card 1 named and `P136` does NOT cover**: a **US federal policy action directed at refiner margins or fuel pricing** (an executive order, a price mechanism, an export restriction on refined products) inside 09-05 → 09-14 — the live thread is *"Trump ramps up pressure on refiners"* [seekingalpha 09-01]. Also VOID on an **OPEC+ emergency production decision** or an **announced Hormuz-open statement**. ⚠ **`P136` was frozen without the policy clause and is NOT amended** (`D242`); `S147` carries it and the difference between the two rows is deliberate |
+| **Information content (`L3`)** | **A** says an EXTENDED tag with an accelerating cycle KPI beats a valuation objection, which is a rule the desk can carry. **B** says `L2` loaded and the `ENRG OW+` promotion issued today bought the top of a margin cycle. **Neither merely confirms** |
+| **Non-redundancy (`D343`)** | `P136` = the **16-name sector** vs `SPY`, 5 sessions to 09-14 — **same window, different unit.** ★ **The pair is deliberately co-dated**: if `P136` fires `C` and `S147` fires `A` or `B`, the sector verdict and the sub-node verdict have separated, which is the `W5` question this desk keeps re-discovering by accident |
+| **Owner** | `industry_US` |
+
+### `S142-ANNEX` — the row's premise inverted inside its own window
+
+**Registered, not re-banded.** `S142` (settles **2026-09-11**) was written 09-02 as
+*"the against-us branch of the **FIN UW** issued today"*. **`FIN` moved `UW → N` on 2026-09-05**
+(ROTATION §2, carried by `eqflow` −0.220 → −0.023 and Δ −0.220 → −0.004).
+⇒ **The frozen observable and thresholds are UNTOUCHED** (`D242`). The annex records only that
+**the branch labels must be read against the 09-02 verdict, not against today's**, so the scorer on
+09-11 does not read a confirmation as a contradiction. ★ Filed as **`D511`**: *a bracket written
+against a verdict can outlive the verdict, and nothing currently links the two — a row's branch
+LABELS should carry the verdict they were written against.*
+
+
+---
+
+# ═══ Registered 2026-09-06 by the `industry_US` run (PREMORTEM) — `S148` · `S149` · `S150` ═══
+
+> **Written INSIDE the PREMORTEM stage, not deferred to writeback** — the 09-05 run's own decision #6,
+> and `D490`/`D504`/`D529` are three of this run's dig items. IDs from `module_evidence next-id S`
+> (live scan of BOTH scenario files + `llm_outputs` + `REPORT`; highest existing `S147`) — the `D76`
+> collision class.
+> **Clock**: last settled US session **2026-09-04**. **2026-09-07 is Labor Day (`D507`)**, so the
+> settled sessions in every window below are **09-08 · 09-09 · 09-10 · 09-11 · 09-14**.
+> ⚠ **Every threshold is stated against the implied move** (`module_flow --positioning`), per the
+> stage's own rule.
+
+## `S148` — ★★★ Does `P101`'s inversion survive the software leg's own two biggest scheduled prints?
+
+**Why it exists.** `P101` settled **`FIRED-C` at −6.511pp** on 09-04, having traversed **−12.74pp**
+from a +6.228 = 89.7th-percentile registration, with **participation inverting 91.7%/16.7% →
+21.1%/73.0%**. It dated `M1251`'s *"IT's weak half is semicap"* without certifying its replacement.
+★ **The successor window is not arbitrary: it contains BOTH of the software leg's scheduled prints.**
+`ORCL` and `ADBE` both report **2026-09-10 16:00 ET** (`Ticker.earnings_dates`) and **both are in the
+19-name software leg**, so the leg is tested by its own constituents rather than by beta.
+
+| | |
+|---|---|
+| **Frozen observable** | `EW{Application Software, Systems Software, IT Consulting & Other Services; n=19}` **minus** `EW{Semiconductors, Semi Materials & Equipment, Tech Hardware/Storage, Electronic Components, Electronic Equipment, EMS, Communications Equipment; n=37}`, **5-session returns**, `us_top300` constituents, settled closes, `auto_adjust=False`. Window **2026-09-04 close → 2026-09-14 close** (09-08 · 09-09 · 09-10 · 09-11 · 09-14) |
+| **Constituent reconstruction, verified** | **SW n=19**: MSFT · **ORCL** · PLTR · PANW · IBM · CRWD · APP · SHOP · CRM · CDNS · FTNT · NOW · SNPS · DDOG · ACN · **ADBE** · INTU · ADSK · MSTR. **HW n=37**: NVDA · AAPL · AVGO · MU · AMD · ASML · INTC · AMAT · LRCX · CSCO · ARM · KLAC · SNDK · TXN · MRVL · DELL · WDC · STX · QCOM · ANET · ADI · APH · GLW · NXPI · MPWR · COHR · TER · LITE · MSI · TEL · HPE · KEYS · CIEN · MCHP · ON · JBL · Q. **Exactly `P101`'s counts, and the reconstruction reproduces `P101`'s settle value (−6.511) on this run's independent price frame** |
+| **Branch A (software repairs — the inversion was one window)** | **≥ +3.927** (trailing-252 **p85**, re-measured this run) |
+| **Branch B (the inversion deepens into a regime)** | **≤ −7.906** (trailing-252 **p15**) — the line `P101` missed by **1.40pp** |
+| **Branch C** | between |
+| **`D93` executed BEFORE freezing** | trailing 252 of the same 5-session spread: p05 **−12.282** · **p15 −7.906** · p50 **−2.219** · **p85 +3.927** · p95 +10.369 ⇒ **A ≈15% · B ≈15% · C ≈70%** |
+| **State at registration** | **−6.511 = the 21.0th percentile** (09-04). ⚠ **DISCLOSED: the state sits between C and B, 1.40pp from B's line and 10.4pp from A's.** B is the near branch, **A is the informative one** — an A print reverses a settle this desk called its most informative of the prior run |
+| **⚠ Threshold vs implied move — the reason this row is a 5-session SPREAD and not a print bracket** | `ORCL` implied **±11.8%** and `ADBE` **±8.1%** (both to the 2026-09-11 expiry, D5). **A 1-session `EW{ORCL,ADBE}` excess bracket is NO-INFORMATION at any threshold this desk would set**: its trailing-252 p85/p15 are **+3.153 / −3.660 vs `SMH`** — a third of the implied move, so C is guaranteed; and a threshold placed *outside* ±10% has a near-zero base rate, so neither tail can fire. **That bracket is therefore declined and the reason written out** (`B4`, and `D503`'s measured evidence: `S132`/`S138` used ±9.00 and ±11.00 bands on `AVGO`'s print and **both fired C on the same −3.792pp realization**). ★ **This row instead measures the object the prints bear on — the LEG SPREAD — over a 5-session window where the two implied moves are ~1σ of the observable's own distribution (sd 3.33 on 1 session; the 5-session sd is wider), not 3σ** |
+| **Anti-signal (VOID)** | a **GICS reclassification moving ≥3 of the 56 IT constituents between legs** inside the window · an **`ORCL` or `ADBE` earnings postponement** · a trading halt ≥1 full session in `NVDA`, `MSFT` or `ORCL`. ⚠ **Base rate checked**: MSCI's 08-31 review was pre-declared a non-voider by `P101` and has passed; no reclassification is scheduled before the 09-18 S&P rebalance, which is **outside** the window |
+| **Track KPI** | if **A**, software **participation** (% positive) should exceed hardware's — the leg that inverted, not the mean; if **B**, `ADSK`/`CDNS`/`SNPS`/`PANW`/`DDOG` (the five drag names) should still be the leg's worst five |
+| **Dated catalyst** | **US August PPI 2026-09-10** [bls ✓] · **`ORCL` 2026-09-10 16:00 ET** · **`ADBE` 2026-09-10 16:00 ET** · **US August CPI 2026-09-11** |
+| **Thread** | ⚠ **no matching thread** — stated explicitly. Neither print appears in `thread --days 7 --scope foreign`; the only carrier is *"What to Expect in Markets This Week: Fresh Inflation Data; Apple's Fall Launch Event and **Oracle Earnings**"* [**2 outlets**, 09-06]. 🚨 **`catalyst_calendar --days 12` printed "(none in window / yfinance unavailable)" for EARNINGS while two ≥$180bn names report inside it** — the reason this binary was un-bracketed, and registered as **`D540`** |
+| **Non-redundancy (`D343`)** | `S140` (09-08) measures IT **breadth**; `S145` (09-11) measures the **low-`vol_surge` storage sub-node** vs `SMH`; `S137` measures **optical** vs `SMH`. **None is the software-vs-hardware leg spread**, and `P101` — the only row that was — has settled |
+| **Owner** | `industry_US` · **ARMED → settles 2026-09-14** |
+
+## `S149` — ★★★ The regime-flip bracket: the escalation branch vs the **US Treasury Secretary's own** de-escalation forecast
+
+**Why it exists.** This is the both-sides bracket for the run's central event, and the against-us
+branch is **named by a policymaker on the record**. On 09-05 the US struck three Iranian oil tankers
+[16 outlets] and Iran retaliated against a US naval drone in the Strait [09-06, 5 outlets]. **On the
+same day, Treasury Secretary Bessent publicly forecast $40 crude and lower yields post-war**
+[economictimes · seekingalpha, 09-05], **OPEC+ met 09-06 and left policy unchanged** [7 outlets], and
+Trump called the conflict *"small potatoes"* [3 outlets]. ⚠ **The de-escalation side is larger in
+outlet count than the escalation side.** The desk carries **`ENRG OW+`** — the board's only
+top-notch overweight — and **every flow number supporting it predates both events.**
+
+| | |
+|---|---|
+| **Frozen observable** | `CL=F` (WTI front-month) **5-session percentage change**, settled closes, `auto_adjust=False`, window **2026-09-04 close ($91.48) → 2026-09-11 close** |
+| **Branch A (the escalation is priced into the barrel)** | **≥ +8.343** (trailing-252 **p85**) — export-capacity destruction transmits; the `ENRG OW+` is confirmed on its driver, not only on its tape |
+| **Branch B (Bessent's framing wins — the war premium unwinds)** | **≤ −5.734** (trailing-252 **p15**) — ★ **this is the against-us branch and it hits the desk's ONLY top-notch OW.** A B print also removes the input-cost leg of `P140`'s compression case |
+| **Branch C** | between |
+| **`D93` executed BEFORE freezing** | trailing 252 of the 5-session WTI change (%): p05 **−10.294** · **p15 −5.734** · p50 **+0.168** · **p85 +8.343** · p95 +13.779 ⇒ **A ≈15% · B ≈15% · C ≈70%** |
+| **State at registration** | 🚨 **+9.688% = the 87.7th percentile** (08-28 → 09-04) — **already above branch A's line.** ⚠⚠ **DISCLOSED AND IT MATTERS**: the observable is a *change over the NEXT five sessions*, not a level, so the current reading does not pre-fire it; but a +9.7% base makes a further +8.3% a compounding demand and makes **B the more reachable branch from here.** **This is deliberate** — the row exists to test the against-us side, and `B4` says the informative branch is the one that would change the conclusion. ⚠ Also disclosed: mean reversion after a 87.7th-percentile 5-session move is itself a base-rate effect, so a C or B print is **not** by itself evidence about the war |
+| **⚠ Threshold vs implied move** | `XLE` implied **±1.6%** (expiry 09-09, D3) — the only Energy straddle available and it **expires before this row settles**, so it cannot bound the window. `CL=F` has no straddle in this instrument. ⇒ **the thresholds come from `D93` on the observable itself, and this is stated rather than a straddle being borrowed from a proxy that expires early** (`M1305`'s scope error, corrected by `M1326`, is the precedent) |
+| **Anti-signal (VOID)** | an **OPEC+ emergency (unscheduled) production decision** · a **US SPR release executing inside the window** · a **front-month contract roll dispute or NYMEX specification change**, inside 09-08 → 09-11. ⚠ **Base rate checked**: the 09-06 OPEC+ meeting was **scheduled** and produced **no change** ⇒ explicitly **NOT** a voider (`M1363`, recorded at MACRO §B-2 at D-3, not argued at scoring). The SPR-refill item is a **stated intention with no date** [aljazeera 08-30]; a dated execution **would** void |
+| **Track KPI** | if **A**, `oil tanker` theme-age should hold above **1.2×** (today 1.20× on a base of 1,168) and the Hormuz thread should print a weekday leg ≥ 4 outlets; if **B**, `Venezuela` (2.95×) should keep accelerating while `oil tanker` decays — i.e. **the supply story rotates from destruction to addition** |
+| **Dated catalyst** | weekly EIA crude print **Wed 2026-09-09** · US August CPI **09-11** (energy component) · the **undated** Hormuz-open statement [`catalyst_calendar` 👁] |
+| **Thread** | 🟡 **REIGNITED**, 5 days, outlets **2 → 10 → 7 → 3 → 4**; ⚠ two sibling threads carry 🔴FADING tags that are **weekend-inflated** — their weekday legs read **22→22→19→14→21** and **12→16→9→5→10→16** (rising into Friday), and the per-day denominator is `…09-04 727 · 09-05 281 · 09-06 104` (`D508`) |
+| **Non-redundancy (`D343`)** | `P126` (09-09) is a **barrel-vs-chain equity** pair spread; `P139` (09-14) is **upstream/service vs refining equity**; `P140` (09-11) is the **distillate crack**; `S147` (09-14) is refiners vs `SPY`. **Not one of them is the barrel itself**, and every one of them is downstream of it — so if `S149` fires B while the equity rows fire C, the desk learns that the refiner tape is not a barrel trade, which is the exact question `M1245`/`M1246` opened |
+| **Owner** | `industry_US` · **ARMED → settles 2026-09-11** |
+
+## `S150` — ★★ The defense node: is it a node event, or is the book simply holding the worst name?
+
+**Why it exists.** `M1370` (this run's EVENT_ALPHA §3) found the **entire defense complex dispersing
+on the settled tape** — `RTX` **−0.79** · `LMT` −0.74 · `NOC` −0.72 · `LHX` −0.65 · `EME` −0.63 ·
+`GD` −0.52 (OBV **−0.44**) · `HWM` −0.32 — **seven of seven negative, six of seven 분산, every rs20
+between −7.6 and −10.3** — and **the book holds `RTX`, the worst flow of the seven.** ⚠⚠ **That
+finding is flow-only**, and `D6` grades OBV a C-axis. **It also has no narrative side: no defense
+thread appears in the 44-thread alive set.** This row gives it a price observable.
+
+★ **And a discriminating measurement is already on the table.** `EW{LMT,NOC,GD,LHX}` − `RTX` over 5
+sessions is **+0.127 = the 57.5th percentile**, i.e. **on price, `RTX` is NOT meaningfully worse than
+its peers**, even though on flow it is the worst of seven. ⇒ **the flow says "RTX", the price says
+"the node"**, and the row is written on the node.
+
+| | |
+|---|---|
+| **Frozen observable** | `EW{RTX, LMT, NOC, GD, LHX}` **minus** `SPY`, **5-session** returns, settled closes, `auto_adjust=False`, window **2026-09-04 close → 2026-09-14 close** |
+| **Branch A (it was a node air-pocket and it repairs)** | **≥ +2.902** (trailing-252 **p85**) |
+| **Branch B (the node is de-rating and the book's position is inside it)** | **≤ −3.611** (trailing-252 **p15**) |
+| **Branch C** | between |
+| **`D93` executed BEFORE freezing** | trailing 252 of the same spread: p05 **−5.777** · **p15 −3.611** · p50 **−0.153** · **p85 +2.902** · p95 +5.689 ⇒ **A ≈15% · B ≈15% · C ≈70%** |
+| **State at registration** | 🚨 **−5.166 = the 7.1st percentile of the trailing year** (09-04). ⚠⚠ **DISCLOSED: the state is already BELOW branch B's line.** That is unusual and is the reason the row is worth registering — **a one-year-extreme starting point makes A the informative branch and makes a C print meaningful too** (a C from −5.166 requires the spread to *improve* by ~1.5pp). ⚠ `B4`: **B is near-certain to be re-touched and therefore carries little information; A and C are where the information is**, and that is stated at registration rather than discovered at scoring |
+| **⚠ Threshold vs implied move** | `RTX` implied **±2.1%** (expiry 09-11, D5) — the basket is 5 names, so single-name implied moves diversify down; the p85/p15 lines (**+2.90 / −3.61**) sit **outside** a diversified ~±1% basket move ⇒ **the thresholds carry information.** Stated rather than assumed |
+| **Anti-signal (VOID)** | a **US continuing-resolution lapse or defense-appropriations shutdown event** · **announced M&A involving any of the five** · a **dated large-program award or cancellation ≥$5bn** to any of the five, inside 09-08 → 09-14. ⚠ **Base rate checked**: the 7-day foreign feed carries **no** defense-appropriations item and **no** defense thread at all — which is itself the reason this leg is under-computed |
+| **Track KPI** | if **A**, `RTX`'s RSI (**21.8**, deeply oversold, price at the lower Bollinger band, 1 of 4 MAs) should mean-revert with the node; if **B**, the node's OBV should stay 분배 (`RTX` chart **−35% 20d slope**, corroborating the sweep's −0.29 — **two independent instruments agree on this name**, unlike `NEM` below) |
+| **Dated catalyst** | ⚠ **NONE DATED — and that is declared, not hidden.** No defense catalyst appears in `catalyst_calendar --days 12` or in the 44-thread alive set. **This row is registered on a positioning extreme with no scheduled event**, which makes it a weaker row than `S148`/`S149` and it is filed as ★★ rather than ★★★ for exactly that reason |
+| **Thread** | ⚠ **no thread. Explicitly stated.** The defense complex does not appear in the alive set at all — the flow moved and the wires did not |
+| **Non-redundancy (`D343`)** | `S126` (settled `FIRED-C`) measured `XLI` **sector-wide**; nothing on the board measures the defense sub-node, and `D416`-style sub-node blindness is the class of error this desk has logged repeatedly (`M1317` on AI-power electrical, `M1319` on health-care equipment) |
+| **Owner** | `industry_US` · **ARMED → settles 2026-09-14** |
+
+### ⚠ Binaries considered and NOT bracketed, each with its reason (`B4`)
+
+| binary | date | why no bracket |
+|---|---|---|
+| **`ORCL` / `ADBE` prints, magnitude** | 09-10 16:00 ET | **NO-INFORMATION at any settable threshold.** Implied **±11.8% / ±8.1%**; the observable's trailing-252 p85/p15 vs `SMH` are **+3.15 / −3.66**, a third of the implied move ⇒ C guaranteed. A threshold outside ±10% has a near-zero base rate ⇒ neither tail can fire. **Measured precedent**: `S132` (±9.00) and `S138` (±11.00) **both fired C on the identical −3.792pp `AVGO` realization** (`D503`). ⇒ **the bracket is spent on `S148`, which measures the object the prints bear on** |
+| **US August PPI** | 09-10 | **Not bracketed alone.** Its transmission is already inside **`S148`** (the window contains it) and **`S149`** (the CPI/PPI energy component). A standalone PPI row would duplicate `P121`/`P125`'s leg question, and those are **blocked on `D427`** rather than absent |
+| **FOMC + SEP/dot plot** | 09-16 | **Outside every window this run opens** and 10 days out. Deliberately left for the next run, which will have a settled tape and a fresh COT (Friday 09-11) to set the thresholds from |
+| **S&P quarterly rebalance / quadruple witching** | 09-18 | **Structural, not directional.** Neither branch would change a sector verdict — it changes *volume*, and the desk has no volume-conditioned proposition. `P124` already settles 09-18 |
+| **KOSPI200 quadruple witching** | 09-10 | 🚫 **Out of scope for a `--market us` runtime** (`W1`). The 09-06 KR run named it and stated it has no PREMORTEM block; **this run records that the assignment cannot be discharged by a US-pure desk either**, so `D533` stays open and needs a human or a KR protocol change (**P5**) |
+
+---
+
+## `S152` — ★★★ The ECB decision the desk's own calendar does not carry · ARMED · → settle **2026-09-14**
+
+Registered **2026-09-07 by the `industry_US` PREMORTEM (Lens 2), before the event.**
+
+**The gap it fills.** `catalyst_calendar --days 10` names four binaries (US Aug PPI 09-10, US Aug CPI
+09-11, FOMC 09-16, an undated Hormuz statement) and **carries no foreign central-bank dates at all**.
+Body-confirmed this run `[news — economictimes/Reuters, 2026-09-07, read in full]`: the ECB *"is
+widely expected to raise interest rates on Thursday"* (**2026-09-10**); markets have *"fully priced in
+a 25-basis-point increase, which would take the deposit rate to **2.5%**"*; euro-area inflation is
+**back above 3% in August**, *"largely because of higher energy costs"*; European gas is at its
+**highest since early 2023**. ⇒ registered as **`D562`** and bracketed here.
+
+**The against-us branch, stated first.** This desk's tilt is a **US-domestic** rate story: `P121`'s
+policy-path frame, `P142`'s Fed-hike repricing, and three underweights (`RE` · `STPL` · `UTIL`)
+argued on US duration. **The against-us reading is that the long-end move is EXTERNAL** — an ECB
+hike, plus Japan funding yen intervention by **selling US Treasuries** (`EVENT_ALPHA` Card 2: reserves
+−6.18% to $1.207tn, ¥27.1tn of 2026 intervention, *"Japan likely sold a portion of its U.S. Treasury
+holdings"*), plus $40tn debt / $1.25tn annual interest (Card 6). In that world the **US front end can
+fall while the US long end keeps rising**, and all three UW verdicts are right for a cause the desk
+has never written down — meaning their kill conditions point at the wrong variable.
+
+| field | value |
+|---|---|
+| **Frozen observable** | **`TLT` 3-session % change**, settled closes, `auto_adjust=False`, window **2026-09-09 close → 2026-09-14 close** (the 3 settled sessions 09-10, 09-11, 09-14). ⚠ The start is **09-09** deliberately, so the ECB decision (09-10) and the US CPI print (09-11) are **inside** the window and not in the base |
+| **A (AGAINST US)** | **≥ +0.913%** (trailing-252 **p85**) — a hiked-and-done ECB plus a soft CPI pulls global duration back; `RE`+`STPL`+`UTIL` lose their driver **together** and `P142` branch B is the consistent partner |
+| **B (with us)** | **≤ −1.124%** (trailing-252 **p15**) — hawkish guidance transmits to the US long end while Japan keeps funding intervention by selling USTs; the three underweights are vindicated **on an external cause** |
+| **C** | between — disclosed favourite |
+| **`D93` before freezing** | trailing 252 of `TLT` 3-session % change: p05 **−1.651** · **p15 −1.124** · p50 **−0.081** · **p85 +0.913** · p95 +1.468 ⇒ **A ≈15% · B ≈15% · C ≈70%** |
+| **State at registration** | **+0.415% = the 67.1st percentile** (09-04 settled close 82.21) — ★ **inside C and genuinely mid-pack.** ⇒ **both branches carry information**, which is NOT true of `P142` (registration already above branch A at the 92.1st pctile) or `P143` (already above p95). **This is the only balanced bracket this desk registered on 2026-09-07 and that is its main virtue** |
+| **Implied move** | `module_flow TLT --positioning`: **예상변동 ±0.7%, expiry 2026-09-09, D2.** 🚫 **The straddle EXPIRES BEFORE THE WINDOW OPENS.** Borrowing a proxy straddle that expires early is the scope error `M1305` made and `M1326` corrected ⇒ the thresholds come from `D93` on the observable itself, and the straddle is recorded as **not covering the event** rather than quietly used |
+| **Branch information grading (`B4`, before the event)** | **A is the falsifier, B is the confirmer.** B leaves every standing verdict where it is; **A breaks three at once.** ⇒ **A is the informative branch**, disclosed at registration |
+| **Anti-signal (VOID)** | an **unscheduled ECB action or emergency statement**; a **BLS delay or methodology restatement of the August CPI release**; or **`hy_oas` ≥ 3.10% on a close** inside the window (then it is a credit event and the rate attribution is void — the clause `S19`/`S41`/`S46` all used) |
+| **Track KPI** | if **A**, `bond selloff` `theme-age` falls back inside 2× (from **5.93×** on a base of 247) and `DGS30` retreats from 5.25; if **B**, `DGS30` (96.0th pctile) and `DGS10` (98.8th) hold or extend |
+| **Non-redundancy (`D343`)** | `P142` measures the **US front end** (`DGS2` rate of change, settles 09-11) · `P143` the **yen** (`FXY`, 09-14) · `P128` **US credit** (`hy_oas`, 09-08) · `P124` the **dollar** (`DTWEXBGS`, 09-18) · `S135` the **equity** UW basket (09-11). **No row measures the US LONG end**, which is the tenor the external-supply story hits first |
+| **Correlated-underweight note (`D512`, and it is now FOUR legs)** | `RE` (`eqflow` −0.124, `exc5` **1/12**), `STPL` (−0.098, 7/19) and `UTIL` (**+0.050**, 7/15) are short duration; **`FIN` (−0.023, 26/47) is long it.** Branch A hits all four at once. ⚠ `S135` (09-11) equal-weights three of them as one bet and `M1372` records that it averages one measured bucket with one mis-measured one — **construction note carried, thresholds unchanged (`D242`)** |
+| **Owner** | `industry_US` |
+
+---
+
+
+---
+
+# ═══ Registered 2026-09-08 by the `industry_US` PREMORTEM — **`P147`** · **`P148`** ═══
+
+> IDs from `module_evidence next-id P --count 8` (live scan of `handoff/*.md` · `llm_outputs/**` ·
+> `REPORT/**`; highest existing **P144** at issue time). Both indexed in the `SCENARIOS.md` MASTER INDEX.
+> ⚠ Registered under the run's declared constraint: the four PREMORTEM lenses ran **serially and
+> in-context**, not as a parallel adversarial agent fan-out (9th consecutive run).
+> ⚠ All `D93` percentiles computed on a price frame filtered to `index <= 2026-09-04` — this run's
+> window straddles the 09:30 ET open and a partial 09-08 bar appears mid-run (`D577`).
+
+## `P147` — ★★★ US Aug PPI 2026-09-10: is the repricing INFLATION, or is it REAL? · ARMED · → settle **2026-09-10**
+
+**Why it exists.** 🚨 **MANDATORY** — a 🔀binary inside 48 hours of the run (PPI 08:30 ET on 09-10,
+~47h out). ⚠ **This desk dropped PPI on information grade (`B4`) for FOUR consecutive runs, and that
+decision is overturned here with a measurement rather than by the rule alone**: MACRO §A-2 measured
+the five-session 10-year move as **+0.08 real (`DFII10`) vs +0.04 breakeven (`T10YIE`) ⇒ roughly
+two-thirds REAL**, i.e. the desk's own instrument says the current repricing is **not** an inflation
+event. A PPI surprise is the cleanest available test of that claim and **both branches change it**.
+
+| field | value |
+|---|---|
+| **Frozen observable** | **`TIP` minus `IEF`, 1-session excess return**, settled closes, `auto_adjust=False`, **2026-09-09 close → 2026-09-10 close** (the PPI print falls inside) |
+| **Branch A (it IS an inflation event)** | excess **>= +0.1514%** (trailing-252 **p85**) |
+| **Branch B (it is REAL — supply / term premium)** | excess **<= -0.1492%** (trailing-252 **p15**) |
+| **Branch C** | between — disclosed favourite |
+| **`D93` before freezing** | trailing 252 settled sessions to 2026-09-04: mean **+0.0023** · sd **0.1760** · p05 -0.2712 · **p15 -0.1492** · p50 +0.0054 · **p85 +0.1514** · p95 +0.2612 ⇒ **A ~15% · B ~15% · C ~70%** |
+| **State at registration** | **+0.0045 = the 49.2nd percentile — dead centre.** ★ The most balanced starting state this desk has registered; both branches carry equal information |
+| **Implied move** | 🚫 **UNCHECKED, with the reason recorded.** The observable is a **spread** and no straddle prices a spread. Leg straddles: `TIP` **±0.7% (expiry 2026-09-18, D10)**, `IEF` **±0.6% (expiry 2026-09-11, D3)** — both bound each leg's **total path to expiry**, not the spread's isolated 1-session move. Borrowing them would be the scope error `M1305` made and `M1326` corrected (`C3`) |
+| **Anti-signal (VOID)** | a **BLS delay or methodology restatement** of the August PPI release; an **unscheduled Federal Reserve action**; or a **market-wide trading halt** on 09-10. ⚠ **Base rate pre-stated (`D450`)**: the **ECB decision** and the **`ORCL`+`ADBE` prints** also land on 09-10 — **neither is a voider**; they are same-day noise the 1-session window deliberately accepts, written now so it is not improvised at scoring |
+| **Track KPI** | under **B**, `T10YIE` (the one `[FRED]` series not blocked by `D427`) does **not** rise more than 3 bp on the first close covering 09-10 |
+| **Information content (`B4`)** | **A falsifies MACRO §A-2's central measurement and the driver behind three live rows; B confirms it against the strongest counter-hypothesis.** Both change a conclusion |
+| **Non-redundancy (`D343`)** | `P142` measures the **`DGS2` level** and settles **09-11**, i.e. after CPI, so PPI is not isolable in it · the 09-07 `TLT` row opens 09-09 and spans PPI **and** CPI **and** the ECB together · `P128` is credit · `P124` the dollar · `P146` German equity. **No row isolates the PPI print, and none measures the real-vs-breakeven split at all** |
+| **Owner** | `industry_US` |
+
+## `P148` — ★★★ FOMC + SEP 2026-09-16: does the dot plot move the CURVE, or only the level? · ARMED · → settle **2026-09-17**
+
+**Why it exists.** 🚨 **`D564`'s live commitment, discharged three days before its deadline.** `D564`
+requires the FOMC+SEP bracket to be registered **by the 2026-09-11 run at the latest**; it was deferred
+on 09-06 and 09-07 for valid reasons. **CPI prints 09-11**, after which the pre-print information sits
+in the base and the row loses what it exists to capture ⇒ today is the last clean pre-CPI opportunity.
+
+| field | value |
+|---|---|
+| **Frozen observable** | **`IEF` minus `SHY`, 2-session excess return** (belly minus front end = the **curve-slope** proxy), settled closes, `auto_adjust=False`, **2026-09-15 close → 2026-09-17 close** (the decision and the SEP fall inside; the start is 09-15 so the pre-meeting positioning day is in the base) |
+| **Branch A (hawkish dots — the curve FLATTENS)** | excess **<= -0.3469%** (trailing-252 **p15**) ⇒ `RE`/`STPL`/`UTIL` vindicated on the Fed's own path; `P142`'s front-end read extends |
+| **Branch B (dovish dots — the curve STEEPENS)** | excess **>= +0.2856%** (trailing-252 **p85**) ⇒ `RE`+`STPL`+`UTIL` lose their driver **together** (`D512`: four legs of one bet), `FIN N` is the offset |
+| **Branch C** | between — disclosed favourite |
+| **`D93` before freezing** | trailing 252 settled 2-session windows to 2026-09-04: p05 -0.5119 · **p15 -0.3469** · p50 -0.0199 · **p85 +0.2856** · p95 +0.4615 ⇒ **A ~15% · B ~15% · C ~70%** |
+| **State at registration** | **+0.0147 = the 54.0th percentile — near dead centre**, marginally nearer B. Disclosed now, not at scoring |
+| **Implied move** | 🚫 **UNCHECKED, with the reason.** `SHY` **±0.5% (expiry 2026-09-18, D10)** and `IEF` **±0.6% (expiry 2026-09-11, D3)** — **`IEF`'s straddle EXPIRES FIVE DAYS BEFORE THE EVENT**, and neither prices a spread. Labelled unchecked rather than "outside the priced move" (`C3`, the `S141` precedent) |
+| **Anti-signal (VOID)** | an **unscheduled Fed action or emergency facility** before 09-16; a **change to the FOMC release date**; a **US bank failure**; or **`hy_oas` >= 3.10% on a close** inside 09-15 → 09-17 (then it is a credit event and the rate attribution is void — the clause `S19`/`S41`/`S46` all used) |
+| **Track KPI** | under **A**, `DGS2` rises more than `DGS10` (if `D427` unblocks); under **B**, `bond selloff` `theme-age` falls back inside 2x from today's **4.18x** |
+| **Information content (`B4`)** | **B falsifies three live sector verdicts at once; A defends them on the strongest external cause.** Both change a conclusion, and **B is the informative branch** because the registration state already sits on B's side of the median |
+| **Non-redundancy (`D343`)** | `P142` = **`DGS2` level** (front end, settles **09-11, before the meeting**) · the 09-07 `TLT` row = **long end** (settles **09-14, before the meeting**) · `P143` = **yen** (09-14) · `P124` = **dollar** (09-18) · `P147` = the **real-vs-breakeven split** (09-10). 🚨 **Nothing on this board measures the SLOPE, and nothing at all spans the FOMC date** — both gaps close here |
+| ⚠ **Dependency note** | the observable is deliberately **ETF-based, not `[FRED]`-based**, because `D427` has blocked `DGS2`/`DGS10`/`DFII10` for **six consecutive runs** and `R147` retracted this desk's model of when they unblock. **A bracket that cannot be settled is not a bracket** |
+| **Owner** | `industry_US` |
+
+
+---
+
+# Registered 2026-09-12 by the `industry_US` run — **`P149` · `P150`** (MACRO §D) · **`P151` · `S156`** (PREMORTEM §4)
+
+> ⚠ **Append-only** (`D165`). IDs issued by `module_evidence next-id` (P: 149/150/151 · S: 156), not by
+> hand-grep. **Language: English.** Full prose, `D93` baselines and branch grading live in
+> `llm_outputs/2026-09-12/industry_US/MACRO_REPORT.md §D` and `BLINDSPOT_PREMORTEM.md §4`.
+> ★ **All four windows are registered as `base close → terminal close` DATES, both verified trading
+> days (`D588`)** — 09-11 (Fri) → 09-18 (Fri), sessions 09-14…09-18, no US holiday; `P151` 09-15 → 09-16.
+> 09-18 is quad witching / S&P rebalance — inside the windows, **named, not a voider** (`D450`).
+
+## `P149` — ★★★ The barrel cleared $100 and the equity leg did not follow: convergence or discount? · ARMED · → settle **2026-09-18**
+
+| field | value |
+|---|---|
+| **Why** | `CL=F` +23.1% over 20 sessions vs `XLE` +6.7% (`SPY` −1.75%); the 20-session `XLE−CL` gap is at the **9.9th pctile**, the 5-session gap at the **7.9th**. `S149`-A, `P122`-A, `P140`-B all settled *for* the level on 09-11 — and the equity market is either late or discounting the premium as transient. No prior row measures equity-vs-commodity (`P126` = chain-vs-barrel inside equities, settled B; `P139` = Venezuela; `P145` = gas) |
+| **Frozen observable** | **`XLE` 5-session return minus `CL=F` 5-session return** (pp; benchmark = front-month WTI itself, named inline), settled closes, `auto_adjust=False`, **2026-09-11 close → 2026-09-18 close** |
+| **A (convergence)** | gap **≥ +4.69pp** (trailing-252 p85) |
+| **B (the equity market keeps discounting $100 as transient)** | gap **≤ −5.17pp** (p15) |
+| **C** | between — disclosed favourite |
+| **`D93`** | trailing 252 settled 5-session gaps to 09-11: p15 −5.17 · p85 +4.69; current window **−8.78 = 7.9th pctile** ⇒ **enters INSIDE B's zone**, disclosed; mean reversion favours A/C mechanically ⇒ **B is the informative branch** (`L3`) |
+| **Both halves (`C2`)** | 20-session: `CL` +23.1% / `XLE` +6.7% / `SPY` −1.75%; 5-session: +9.4% / +1.7% / −0.77% |
+| **Anti-signal (VOID)** | front-month `CL` roll inside the window (October expires ~09-22 — outside) · a **confirmed Hormuz reopening / ceasefire statement by ≥3 outlets** · an `XLE` constituent M&A ≥ $10bn. ★ **Pre-declared (DRIFT addendum, `M1481`)**: the Muscat route-agreement signing dated **09-14** `[WebSearch]`, whose Iranian terms exclude US/Israeli vessels, is **NOT a reopening statement** — VOID requires ≥3 outlets carrying "reopened"/"open to all shipping" or transit counts recovering past ~18/day |
+| **Track KPI** | EW Energy breadth5 (12/16 on 09-11); `[COT]` WTI pctile (75) |
+| **Implied move** | UNCHECKED — no straddle prices the spread (`C3`) |
+| **Information (`B4`)** | B says a second week of divergence is a priced view, not noise; A is the OW's second leg |
+| **Owner** | `industry_US` |
+
+## `P150` — ★★★ Health Care's one-week, 4-of-32 drawdown: persists, or reverts? · ARMED · → settle **2026-09-18**
+
+| field | value |
+|---|---|
+| **Why** | EW Health Care exc5 **−3.175pp vs `SPY` = 7.5th pctile**, breadth **4/32 = 3.2nd pctile** (the p05 level); HLTH `eqflow` +0.190 → −0.059 (Δ −0.250, the board's largest weekly drop). `S133` (09-14) measures constituents-vs-`XLV`, not sector-vs-market; `S128`'s reversal factor held (+6.76pp) and would favour a bounce mechanically |
+| **Frozen observable** | **equal-weight `us_top300` Health Care basket (32 names, `SECTOR_FLOW_US.json §names` of 2026-09-12) 5-session excess return vs `SPY`**, settled closes, `auto_adjust=False`, **2026-09-11 close → 2026-09-18 close** |
+| **A** | excess **≤ −2.594pp** (p15) ⇒ a two-week sector-level fact; HLTH demoted on measurement |
+| **B** | excess **≥ +2.422pp** (p85) ⇒ the week was a one-off (`S128`-class reversal) |
+| **C** | between — disclosed favourite |
+| **`D93`** | trailing 252 settled 5-session windows to 09-11: mean −0.025 · sd 2.380 · p05 −3.391 · **p15 −2.594** · p50 −0.044 · **p85 +2.422** · p95 +4.067; current (ending) window −3.175 = 7.5th pctile; the registered window starts fresh at 09-11 |
+| ⚠ **Reading corrected at PREMORTEM (thresholds untouched, `D242`)** | `[WebSearch]` (`M1478`): the week was **three idiosyncratic breaks** — `AMGN` −10.1% 09-08 (Novartis/Ionis pelacarsen Ph3 miss → olpasiran read-through; Tavneos suspension), `BSX` and `SYK` (separate cyber attacks) — with 4/32 breadth by sympathy. **A therefore measures "the sympathy drawdown persists after the causes are known", not "rotation"; B measures the survivors' bounce (`REGN`/`VRTX`/`GILD`/`TMO`)** — the three broken names are excluded from any bounce *reading* (they are still inside the frozen basket) |
+| **Information (`B4`)** | A is the informative branch (first sector demotion on a measured two-week breadth fact) |
+| **Anti-signal (VOID)** | an FDA decision / trial readout with a named date at ≥3 of the 32, or a federal drug-pricing / Medicare rule with a named effective date, inside 09-14 → 09-18. ⚠ Unverifiable on the desk's feeds today (G1) — checked by `[WebSearch]` at scoring, else recorded **unknown** (`C3`). Earnings inside the window: **none** (`Ticker.earnings_dates`, checked 09-12) |
+| **Track KPI** | HC breadth5 (4/32); `eqflow` HLTH (−0.059) |
+| **Implied move** | `XLV` **±1.8% (09-18, D6)** — a different object (ETF, not the EW basket excess); stated, not used as the bar |
+| **Non-redundancy (`D343`)** | `S133` = six names vs `XLV`; `S135` (settled A) = the UW trio; no row measures Health Care vs the market |
+| **Owner** | `industry_US` |
+
+## `P151` — ★★★ FOMC 09-16, the LEVEL companion: was the hike a surprise in either direction? · ARMED · → settle **2026-09-16**
+
+| field | value |
+|---|---|
+| **Why** | `P148` (slope, `IEF−SHY` 2-session 09-15→09-17) is **already inside branch A (−0.650%, 2.8th pctile) before the meeting**; with the hike itself at **87%** `[WebSearch]` the slope cannot tell "as priced" from "hawkish". The level can |
+| **Frozen observable** | **`SHY` 1-session return, 2026-09-15 close → 2026-09-16 close** (`auto_adjust=False`), percent |
+| **A (hawkish beyond consensus)** | `SHY` **≤ −0.236%** (trailing-252 1-session **p05**) ⇒ duration trio UW, FIN N−, and the "hike cycle" registry entry confirmed on the Fed's own print |
+| **B (dovish surprise — no hike, or a dovish statement/dots)** | `SHY` **≥ +0.134%** (**p95**) ⇒ **falsifies** the UW trio's driver, FIN N−, and `MET`'s asset-yield thesis at once |
+| **C** | between = "hike delivered, nothing learned" — disclosed favourite (≈90% by construction; tails chosen so A/B mean *surprise*) |
+| **`D93`** | trailing 252 settled 1-session `SHY` returns to 09-11: p05 −0.236 · p15 −0.073 · p50 +0.006 · p85 +0.085 · p95 +0.134 · sd 0.109. ±0.1% ≈ ±5 bp on the 2y |
+| **Implied move** | `SHY` **±0.7% to 09-18 (D6)** — both thresholds sit **inside** the 6-session priced path (per-session ≈ ±0.29%) ⇒ pre-declared: **history-graded information row, not an options-surprise trigger** (`C3`) |
+| **Information (`B4`)** | **B is the informative branch** (falsifies three live verdicts); A confirms; neither firing + `P148` C = "the meeting was priced" — itself the finding |
+| **Anti-signal (VOID)** | unscheduled Fed action before 09-16 · FOMC release date changed · US bank failure · `hy_oas` ≥ 3.10 on a 09-15/16 close. ⚠ **If no SEP/dots are published** (`[WebSearch]` reads contradict on this) **the row still scores** — the observable does not depend on the dots |
+| **Non-redundancy (`D343`)** | `P148` = slope · `P142` = `DGS2` level (blocked, `[FRED]`) · this = ETF front-end level, 1 session |
+| **Owner** | `industry_US` |
+
+## `S156` — ★★ The crack after the record: does the product scarcity survive a Hormuz headline week? · ARMED · → settle **2026-09-18**
+
+| field | value |
+|---|---|
+| **Why** | The Energy OW's driver is the distillate crack (`P140`-B: level **108.24 = 99.2nd pctile**, 60-session +51.14 = 96.8th). `P140` is settled and `P149` VOIDs on a reopening — leaving the OW unbracketed exactly when its against-us branch has a dated tell (Muscat 09-14). **This row does not void on the signing: it measures it** |
+| **Frozen observable** | **distillate crack = `HO=F` × 42 − `CL=F` ($/bbl), 5-session change, 2026-09-11 close (108.24) → 2026-09-18 close** |
+| **A (the crack collapses — the against-us branch priced)** | change **≤ −4.25** (trailing-252 5-session p15) ⇒ refiners' driver breaks; name rails `MPC` MA20 $374 / `PSX` $247.5 / `VLO` $359 are the tells |
+| **B (the scarcity extends through the headlines)** | change **≥ +8.70** (p85) ⇒ a second record; `P149`'s equity lag becomes the anomaly |
+| **C** | between — disclosed favourite |
+| **`D93`** | trailing 252 settled 5-session changes to 09-11: p05 −8.94 · **p15 −4.25** · p50 +0.18 · **p85 +8.70** · p95 +12.77; current (09-03→09-11) **+6.61 = 81.3rd pctile** ⇒ enters leaning B, disclosed |
+| **Both halves (`C2`)** | gasoline crack `RB×42−CL` **38.85 = 61.9th pctile level, 20-session −11.27 = 4.0th pctile** — the product split is distillate-up / gasoline-down; this row measures distillate only |
+| **Implied move** | no listed straddle on the spread — UNCHECKED (`C3`); `XLE` ±1.3% (09-14, D2) does not cover the window |
+| **Anti-signal (VOID)** | a front-month `HO`/`CL` roll inside the window (October `CL` ~09-22, `HO` 09-30 — both outside) · an exchange trading halt |
+| **Information (`B4`)** | **A is the informative branch** — the first measured break in the desk's OW driver since 08-21, firing on the headline the desk cannot date |
+| **Owner** | `industry_US` |
+
+
+
+---
+
+# Registered 2026-09-14 by the `industry_US` run — **`P152` · `P153`** (MACRO §D) · **`P154` · `P155` · `P156`** (PREMORTEM §3)
+
+> IDs by `module_evidence next-id` (the in-flight KR run took `M1494`/`D600`–`D602` the same morning — collision
+> avoided by issuing after it). Thresholds = trailing-252 percentiles computed **before** freezing
+> (`llm_outputs/2026-09-14/industry_US/_d93_p152_p153.txt`, `_d93_p154_p156.txt`). Windows are NYSE trading-day
+> `base close → terminal close` dates (`D588`). Implied move `UNCHECKED` on every row (EW baskets / ETF pairs have
+> no listed straddle for the window; `--positioning` not run) — pre-declared, not claimed. Instrument state at
+> registration: sweep asof 09-11 (reprint), news pipe dead 13:19 → 14:3x (titles only), live Asia tape unsettled.
+
+## `P152` — ★★★ The SECOND chokepoint: Bab el-Mandeb + the Saudi East-West bypass — is the freight leg still early, or already the crowded expression? · ARMED · → settle **2026-09-21**
+
+| field | value |
+|---|---|
+| **Frozen observable** | **`EW{FRO, DHT, INSW, STNG, TNK}` 5-session excess return vs `SPY` (pp)**, settled closes, `auto_adjust=False`, **2026-09-14 close → 2026-09-21 close** (09-15, 09-16, 09-17, 09-18, 09-21; quad witching 09-18 inside — owned) |
+| **Branch A (the shipping leg is where the shock is priced — the exposure map is missing it)** | ≥ **+6.240pp** (p85) |
+| **Branch B (it was the crowded expression; the shock reverts through the tankers first)** | ≤ **−4.308pp** (p15) |
+| **Branch C** | between — disclosed favourite |
+| **`D93` before freezing** | n=252: mean +1.060 · sd 5.455 · p05 −7.911 · p15 −4.308 · p50 +1.733 · p85 +6.240 · p95 +9.176 ⇒ A ≈15% · B ≈15% · C ≈70%; ⚠ centre positive (+1.06, median +1.73) — tankers beating `SPY` over a week is the *normal* state in this sample |
+| **State at registration** | 09-04 → 09-11 **+7.947pp = 91.7th pctile** — already above A on the prior window ⇒ **A is low-information, B informative** (`L3`) |
+| **Anti-signal (VOID)** | a ≥3-outlet title inside the window stating the East-West pipeline **has reopened** *and* Bab el-Mandeb transit **restored**; announced M&A / fleet sale at any of the five. A reopening *statement* without both legs is NOT a voider (the `P149` convention) |
+| **Track KPI** | A ⇒ `S156`-A and `P149`-B are the consistent partners (shock lives in freight + product); B ⇒ `P149`-A and a holding crack |
+| **Dated catalyst** | FOMC 09-16 (both legs via `SPY`), quad witching 09-18 — owned, not voided |
+| **Non-redundancy (`D343`)** | `P145` (LNG chain, 09-14) = gas leg; `P149` = barrel vs equity; `S156` = product; `P136`/`P139` = the 16-name label / its chain split. **No row measures freight**; `S61`/`S84`/`S92` (Aug, Red Sea premium) are closed and on a different instrument set |
+| **Information grade (B4)** | HIGH on B · LOW on A |
+| **Implied move** | `UNCHECKED` |
+| **Owner** | `industry_US` |
+
+## `P153` — ★★ The yen after the flip: speculators net long for the first time since February, BoJ 09-18 JST, `FXY` at the 89th percentile — does the carry unwind extend through both central banks, or was the flip the top? · ARMED · → settle **2026-09-21**
+
+| field | value |
+|---|---|
+| **Frozen observable** | **`FXY` 5-session % change**, settled closes, `auto_adjust=False`, **2026-09-14 close → 2026-09-21 close** |
+| **Branch A (the unwind extends — yen up through both meetings)** | ≥ **+0.855%** (p85) |
+| **Branch B (the positioning flip was the top — yen gives it back)** | ≤ **−1.059%** (p15) |
+| **Branch C** | between — disclosed favourite |
+| **`D93` before freezing** | n=252: mean −0.088 · sd 1.244 · p05 −1.530 · p15 −1.059 · p50 −0.266 · p85 +0.855 · p95 +2.689 |
+| **State at registration** | 09-04 → 09-11 **+1.376% = 89.3rd pctile** (`FXY` 58.87 → 59.68) ⇒ **B is the informative branch** |
+| **Dated catalyst** | **FOMC 09-16** (inside, owned) · **BoJ decision Fri 2026-09-18 JST ≈ Thu 09-17 23:00 ET** (`[WebSearch]`, PREMORTEM Lens 2 — MACRO §D wrote `[blank]`; corrected at PREMORTEM, both left standing per `D48`) — inside the window |
+| **Anti-signal (VOID)** | BoJ decision moved outside the window (then re-labelled a run-up measure, not voided) · MoF intervention confirmed by ≥3 outlets (VOID — official, not positioning) |
+| **Track KPI** | A ⇒ `P138`'s successor question (does the US long end follow) is live again; B ⇒ the carry-unwind narrative is retired for this cycle |
+| **Non-redundancy (`D343`)** | `P143` (09-08 → 09-14) settles tonight and does not span the BoJ; `P148`/`P151` = US curve/level; `S152` = `TLT` on the ECB; `P154` = the equity transmission (different object) |
+| **Information grade (B4)** | HIGH on B · MEDIUM on A |
+| **Implied move** | `UNCHECKED` |
+| **Owner** | `industry_US` |
+
+## `P154` — ★★★ Does the carry unwind reach US equities? Yen → NDX transmission across BoJ + quad witching · ARMED · → settle **2026-09-21**
+
+| field | value |
+|---|---|
+| **Frozen observable** | **`QQQ` − `SPY` 2-session excess return (pp)**, settled closes, `auto_adjust=False`, **2026-09-17 close → 2026-09-21 close** (sessions 09-18, 09-21; BoJ decision and quad witching inside — owned) |
+| **Branch A (the unwind reaches equities — NDX lags)** | ≤ **−0.632pp** (p15) |
+| **Branch B (NDX leads through both events)** | ≥ **+0.772pp** (p85) |
+| **Branch C** | between — disclosed favourite |
+| **`D93` before freezing** | n=252 2-session: mean +0.046 · sd 0.783 · p05 −1.401 · p15 −0.632 · p50 +0.071 · p85 +0.772 · p95 +1.220 |
+| **State at registration** | 09-09 → 09-11 **−0.448pp** (inside C, leaning A); live `NQ=F` −1.25% vs `ES=F` −0.49% (13:39 KST, unsettled) |
+| **Anti-signal (VOID)** | BoJ decision moved outside 09-17/18 (re-verify at scoring) · MoF intervention ≥3 outlets · an `NVDA`/`AVGO` company-specific 8-K inside the window (then `P155` owns the move) |
+| **Pairing** | `P153`-A ∧ `P154`-A = carry unwind confirmed in equities; `P153`-A ∧ `P154`-C = the yen moved without the equity channel (`P138`-B extends) |
+| **Information grade (B4)** | **A HIGH** — first measured test of whether the AI-slowdown narrative (≥18 outlets, titles) has a macro trigger; B LOW |
+| **Non-redundancy (`D343`)** | `P153` = yen only; `P148`/`P151` = US curve/level; `P155` = 1-session NDX funding (different window/object) |
+| **Implied move** | `UNCHECKED` |
+| **Owner** | `industry_US` |
+
+## `P155` — ★★ The 09-18 Nasdaq-100 funding sale: do the two largest weights pay for SpaceX? · ARMED · → settle **2026-09-18** (companion 09-21, reported not branched)
+
+| field | value |
+|---|---|
+| **Frozen observable** | **`EW{NVDA, AVGO}` 1-session excess return vs `SPY` (pp)**, settled closes, `auto_adjust=False`, **2026-09-17 close → 2026-09-18 close**; companion: same object 09-18 → 09-21 (reported for the reversal read) |
+| **Branch A (the funding sale prints)** | ≤ **−1.932pp** (p15) on 09-18 |
+| **Branch B (no funding footprint — pre-positioned or absorbed)** | ≥ **+1.584pp** (p85) on 09-18 |
+| **Branch C** | between — disclosed favourite |
+| **`D93` before freezing** | n=252 1-session: mean +0.006 · sd 1.839 · p05 −2.824 · p15 −1.932 · p50 +0.014 · p85 +1.584 · p95 +3.041 |
+| **State at registration** | 09-11 session **−0.708pp** (inside C) |
+| **Why it exists** | SpaceX Nasdaq-100 pro-forma weight 1.28% → ~2.82%, announced 09-18 after the bell, effective 09-21, ≈$15.5bn passive (JPM est.) — `[WebSearch]`, PREMORTEM Lens 2; `P124`/`P149`/`P150`/`S156`/`P152` span 09-18 but none measures the mechanism |
+| **Anti-signal (VOID)** | Nasdaq's official pro-forma shows SpaceX funded elsewhere with `NVDA`/`AVGO` weights unchanged · a company-specific print at either name inside the window |
+| **Information grade (B4)** | MEDIUM — informative reading is A-without-09-21-reversal (a demand fact) or B (flow already in) |
+| **Non-redundancy (`D343`)** | no row measures the rebalance mechanism; `S56` (Aug SPCX unlock) closed |
+| **Implied move** | `UNCHECKED` |
+| **Owner** | `industry_US` |
+
+## `P156` — ★★ The barrel's own sign: disambiguating `P149`-A across the de-escalation branch · ARMED · → settle **2026-09-21**
+
+| field | value |
+|---|---|
+| **Frozen observable** | **`CL=F` front-month 5-session % change**, settled closes, **2026-09-14 close → 2026-09-21 close** |
+| **Branch A (the escalation extends — barrel higher)** | ≥ **+8.764%** (p85) |
+| **Branch B (de-escalation prints — barrel collapses)** | ≤ **−5.734%** (p15) |
+| **Branch C** | between — disclosed favourite |
+| **`D93` before freezing** | n=252 5-session: mean +1.135 · sd 7.599 · p05 −10.294 · p15 −5.734 · p50 +0.555 · p85 +8.764 · p95 +13.779 |
+| **State at registration** | 09-04 → 09-11 **+9.584%** (`CL` 100.05) — above A on the prior window; live +2.85% (unsettled) ⇒ **B is the informative branch** |
+| **Why it exists** | `P149`-A fires on "equity catches up" *and* on "barrel falls to equity" — sign-ambiguous; the de-escalation branch (Trump "war ends after midterms, oil falls sharply" · Iran–UAE · Pezeshkian, `[titles]`) is a VOID in `P149`/`P152`, not a measured branch anywhere |
+| **Anti-signal (VOID)** | front-month roll inside the window (October expiry ~09-22 — outside, checked) · OPEC+ emergency decision (title-verifiable only, `C3`) |
+| **Pairing** | `P149`-A ∧ `P156`-B = the discount branch (barrel fell to equity); `P149`-A ∧ `P156`-A/C = genuine convergence |
+| **Non-redundancy (`D343`)** | `S149` (WTI 5s) settled 09-11; `P122` settled; `P149` = spread; `S156` = product |
+| **Implied move** | `UNCHECKED` |
+| **Owner** | `industry_US` |

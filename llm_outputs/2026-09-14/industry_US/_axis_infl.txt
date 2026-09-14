@@ -1,0 +1,19 @@
+  2026-07-13  mention_z  159종목 · chg  159종목 → kr_2026-07-13.json
+  2026-07-14  mention_z  161종목 · chg  159종목 → kr_2026-07-14.json
+  2026-07-15  mention_z  164종목 · chg  161종목 → kr_2026-07-15.json
+  2026-07-16  mention_z  165종목 · chg  164종목 → kr_2026-07-16.json
+  2026-07-17  mention_z  163종목 · chg  163종목 → kr_2026-07-17.json
+  2026-07-20  mention_z  162종목 · chg  162종목 → kr_2026-07-20.json
+  2026-07-21  mention_z  162종목 · chg  162종목 → kr_2026-07-21.json
+  2026-07-22  mention_z  164종목 · chg  162종목 → kr_2026-07-22.json
+  2026-07-23  mention_z  163종목 · chg  163종목 → kr_2026-07-23.json
+  2026-07-24  mention_z  163종목 · chg  162종목 → kr_2026-07-24.json
+  2026-07-25  mention_z  165종목 · chg  162종목 → kr_2026-07-25.json
+  2026-07-27  mention_z  163종목 · chg  163종목 → kr_2026-07-27.json
+  2026-07-28  mention_z  169종목 · chg  163종목 → kr_2026-07-28.json
+  2026-07-29  mention_z  169종목 · chg  169종목 → kr_2026-07-29.json
+  2026-07-30  mention_z  170종목 · chg  169종목 → kr_2026-07-30.json
+  2026-07-31  mention_z  169종목 · chg  169종목 → kr_2026-07-31.json
+
+[ok] 축 파일 16개 생성/갱신 → out\ic\axes
+  다음: python -X utf8 scripts/ic_ledger.py log   (새 축이 자동으로 잡힌다)

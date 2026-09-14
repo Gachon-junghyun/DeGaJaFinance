@@ -1,0 +1,148 @@
+﻿python : [warn] 유니버스 kr_all.csv 32일 경과 — 시총 stale. build_kr_universe.py 재빌드 권장(주1회).
+At line:1 char:502
++ ... NG="utf-8"; python -X utf8 scripts/sector_flow.py --market kr --refre ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([warn] 유니버스 kr_...py 재빌드 권장(주1회).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[dl] yfinance 배치 833종목 4mo …
+[dl] 완료 → prices_kr_2026-08-16.pkl
+[flow] 832종목 축 계산 …
+  … 50/832
+  … 100/832
+  … 150/832
+  … 200/832
+  … 250/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 300/832
+  … 350/832
+  … 400/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 450/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 500/832
+  … 550/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 600/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 650/832
+  … 700/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 750/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+  … 800/832
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+C:\Users\fivep\DeGaJaFinance\module_flow\_price_flow.py:41: RuntimeWarning: invalid value encountered in scalar divide
+  vsurge = round(float(vol.tail(5).mean() / vol.tail(50).mean()), 2)
+[axis] velocity 측정 48/827 = 5.8% → 속도축 제외(전원 3축) · 기준 80% (D225-KR)
+🚨 [axis] 뉴스축이 이 런에서 **죽었다** (측정 5.8%). 「기사가 없다」가 아니라 「세지 못했다」일 가능성이 높다 — 뉴스 검색은 원격 API 를 타고, 그 터널이 끊기면 velocity 가 전부 N
+one 이 되는데 그게 '무기사'와 구분되지 않는다.
+   확인: python -X utf8 -m module_news_data fts search 삼성전자 --days 7 --count · 로컬 폴백 색인 존재 여부 · DEGAJA_NEWS_API
+   ⚠ 예전 구현은 이 상황에서 축을 조용히 드롭해 **전 종목 점수를 평균 +0.305 부풀렸다.** 지금은 전원 동일 축으로 매기고 이 줄을 남긴다.
+[axis] 축 결측으로 점수 미부여 20종목 — 집계 제외 (예전엔 clip(nan)=+1.0 로 **최대 양수**를 받았다)
+# SECTOR FLOW — 유니버스 수급 와이드 스윕  (asof 2026-08-14, n=807/832)
+시총가중 유니버스 flow -0.080  ·  🟢94 🟡606 🔴107  ·  breadth(🟢%) 12%
+신규🟢(오늘 첫 가속): 007340.KS(+1.00), 004370.KS(+1.00), 009900.KS(+1.00), 475560.KS(+1.00), 092200.KS(+1.00), 014280.KS(+1.00), 111380.KS(+1.00), 103590.KS(+1.00), 088350.KS(+0.99), 285130.KS(+0.95), 227840.KS(+0.93), 000370.KS(+0.92)
+
+## 섹터 로테이션 (시총가중 flow 순)
+SECTOR                       wFlow      Δ   eqFlow      🟢/n  breadth
+금속                          +0.554    ▼0.06   +0.215     3/59     5%
+제약                          +0.539    ▼0.07   +0.076     3/48     6%
+건설                          +0.488    ▼0.01   +0.316     2/26     8%
+IT 서비스                      +0.464    ▼0.05   +0.307     2/25     8%
+통신                          +0.291    ▲0.02   +0.016      0/5     0%  🚨1名
+기계·장비                       +0.216    ▲0.11   +0.232     4/28    14%  🚨1名
+부동산                         +0.199    ▼0.10   +0.232      1/2    50%
+일반서비스                       +0.151    ▼0.13   +0.184     3/33     9%
+운송장비·부품                     +0.148    ▲0.04   +0.076     8/58    14%
+음식료·담배                      +0.144    ▼0.15   +0.095     6/37    16%
+운송·창고                       +0.140    ▼0.07   -0.110     0/24     0%
+화학                          +0.129    ▼0.17   +0.154   20/101    20%
+유통                          +0.055    ▲0.04   +0.068     8/59    14%  🚨1名
+리츠                          +0.008    ▼0.11   -0.031     0/21     0%
+섬유·의류                       -0.065    ▼0.11   +0.070     6/27    22%  🚨1名
+미분류                         -0.085    ▼0.19   -0.408      0/2     0%
+종이·목재                       -0.091    ▼0.19   -0.047     1/17     6%
+전기·전자                       -0.148    ▲0.21   +0.164     9/66    14%
+의료·정밀기기                     -0.160    ▼0.07   +0.178      1/8    12%  🚨1名
+비금속                         -0.209    ▼0.10   -0.151     1/21     5%
+전기·가스                       -0.234    ▼0.19   +0.262     2/10    20%  🚨1名
+보험                          -0.297    ▲0.06   +0.178     2/12    17%  🚨1名
+제조                          -0.306    ▼0.19   -0.292      1/8    12%
+금융                          -0.310    ▼0.06   +0.116     9/75    12%
+외국증권                        -0.349    ▼0.31   -0.349      0/1     0%
+증권                          -0.436    ▼0.07   -0.037     1/18     6%
+오락·문화                       -0.497    ▼0.07   +0.031     1/13     8%
+인프라투용                       -0.528    ▼0.18   -0.528      0/1     0%
+
+🚨 최대 종목 1개를 빼면 **부호가 뒤집히는** 섹터 7개 (D9) — 이 버킷으로는 승격도 강등도 정당화할 수 없다:
+   전기·가스          -0.234 → ex-한국전력 +0.549  (그 이름이 섹터 시총의 79.9%, n=10)
+   보험             -0.297 → ex-삼성생명 +0.128  (그 이름이 섹터 시총의 53.4%, n=12)
+   유통             +0.055 → ex-삼성물산 -0.202  (그 이름이 섹터 시총의 52.7%, n=59)
+   통신             +0.291 → ex-SK텔레콤 -0.152  (그 이름이 섹터 시총의 48.2%, n=5)
+   기계·장비          +0.216 → ex-두산에너빌리티 -0.030  (그 이름이 섹터 시총의 47.3%, n=28)
+   섬유·의류          -0.065 → ex-F&F +0.005  (그 이름이 섹터 시총의 42.2%, n=27)
+   의료·정밀기기        -0.160 → ex-케이씨텍 +0.253  (그 이름이 섹터 시총의 41.4%, n=8)
+
+Δ상승: 101530.KS ▲1.05, 015230.KS ▲0.98, 009900.KS ▲0.96, 092200.KS ▲0.96, 134380.KS ▲0.94, 475560.KS ▲0.91
+Δ하락: 279570.KS ▼1.14, 006660.KS ▼1.01, 248170.KS ▼0.92, 071090.KS ▼0.83, 014990.KS ▼0.83, 241590.KS ▼0.81
+
+## 종목 상·하위 12 (flow_score 순)
+TICKER  SEC              flow      Δ  tag       OBV   RS20    서지   vel
+009830.KS화학             +1.000    ─0.00  🟢가속     +0.42   26.0  1.79   n/a
+161890.KS화학             +1.000    ─0.00  🟢가속     +0.50   24.7  2.49   n/a
+007340.KS전기·전자          +1.000    ▲0.49  🟢가속     +0.31   42.1  1.64   n/a
+004370.KS음식료·담배         +1.000    ▲0.36  🟢가속     +0.46   22.9  1.73   n/a
+192820.KS화학             +1.000    ─0.00  🟢가속     +0.24   34.4  2.46   n/a
+181710.KSIT 서비스         +1.000    ─0.00  🟢가속     +0.76   97.4  3.62   n/a
+089860.KS일반서비스          +1.000    ─0.00  🟢가속     +0.34   20.1   3.1   n/a
+280360.KS음식료·담배         +1.000    ─0.00  🟢가속     +0.35   25.7  2.23   n/a
+001820.KS전기·전자          +1.000    ─0.00  🟢가속     +0.54   16.1  2.02   n/a
+071320.KS전기·가스          +1.000    ─0.00  🟢가속     +0.46   15.6  2.12   n/a
+317450.KS제약             +1.000    ─0.00  🟢가속     +0.24    9.7  1.62   n/a
+005180.KS음식료·담배         +1.000    ▲0.12  🟢가속     +0.76   25.1  5.25   n/a
+044380.KS전기·전자          -0.983    ▼0.68  🔴분산     -0.67  -19.7  0.43   n/a
+003780.KS화학             -0.989    ▲0.01  🔴분산     -0.26  -18.3  0.42   n/a
+000880.KS화학             -1.000    ▼0.20  🔴분산     -0.48  -12.4   0.0   n/a
+279570.KS금융             -1.000    ▼1.14  🔴분산     -0.22  -12.8  0.27   n/a
+000400.KS보험             -1.000    ─0.00  🔴분산     -0.35  -20.2  0.34   n/a
+031440.KS일반서비스          -1.000    ▼0.12  🔴분산     -0.17  -11.5   0.0   n/a
+000020.KS제약             -1.000    ─0.00  🔴분산     -0.31   -9.8   0.4   n/a
+008040.KS음식료·담배         -1.000    ▼0.19  🔴분산     -0.41  -22.7  0.39   n/a
+006660.KS운송장비·부품        -1.000    ▼1.01  🔴분산     -0.36  -16.7  0.27   n/a
+004540.KS종이·목재          -1.000    ▼0.67  🔴분산     -0.85  -37.9  0.11   n/a
+012690.KS종이·목재          -1.000    ▼0.09  🔴분산     -0.75  -31.9   0.2   n/a
+051630.KS화학             -1.000    ─0.00  🔴분산     -0.69  -35.3  0.14   n/a
+
+범례: flow_score∈[-1,1]=3축(OBV매집·RS20·거래량서지 — 뉴스축 제외) 클립평균 · 태그=flow_read 권위값 · wFlow=시총가중 · Δ=직전 스냅샷 대비 · breadth=섹터 내 🟢 비율
+⚠ 이 런은 뉴스축 없이 매겼다 — 점수를 4축 런의 점수와 직접 비교하지 마라(척도가 다르다).

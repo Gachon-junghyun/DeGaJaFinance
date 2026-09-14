@@ -1,0 +1,146 @@
+{
+  "ticker": "VLO",
+  "company_name": "Valero Energy Corporation",
+  "sector": "Energy",
+  "industry": "Oil & Gas Refining & Marketing",
+  "price": 390.42,
+  "market_cap": 112412639232,
+  "trailing_pe": 16.28786,
+  "forward_pe": 11.63481,
+  "peg_ratio": 4.08,
+  "price_to_sales": 0.8488457,
+  "price_to_book": 4.496372,
+  "trailing_eps": 24.28,
+  "forward_eps": 33.5562,
+  "fifty_two_week_high": 399.26,
+  "fifty_two_week_low": 155.29,
+  "target_low": 190.0,
+  "target_mean": 339.4737,
+  "target_high": 450.0,
+  "target_median": 350.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 3,
+      "buy": 7,
+      "hold": 8,
+      "sell": 2,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 3,
+      "buy": 7,
+      "hold": 8,
+      "sell": 2,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 3,
+      "buy": 7,
+      "hold": 7,
+      "sell": 2,
+      "strongSell": 1
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 2,
+      "buy": 7,
+      "hold": 7,
+      "sell": 2,
+      "strongSell": 1
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      44476000000.0
+    ],
+    [
+      "2026-03-31",
+      32381000000.0
+    ],
+    [
+      "2025-12-31",
+      30372000000.0
+    ],
+    [
+      "2025-09-30",
+      32168000000.0
+    ],
+    [
+      "2025-06-30",
+      29889000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 17.70152,
+      "7daysAgo": 16.81534,
+      "30daysAgo": 15.32863,
+      "60daysAgo": 10.15781,
+      "90daysAgo": 9.04821
+    },
+    {
+      "period": "+1q",
+      "current": 10.95365,
+      "7daysAgo": 10.47037,
+      "30daysAgo": 9.577,
+      "60daysAgo": 6.75436,
+      "90daysAgo": 6.54435
+    },
+    {
+      "period": "0y",
+      "current": 45.11826,
+      "7daysAgo": 43.82764,
+      "30daysAgo": 42.46044,
+      "60daysAgo": 31.1524,
+      "90daysAgo": 29.65568
+    },
+    {
+      "period": "+1y",
+      "current": 33.5562,
+      "7daysAgo": 31.21375,
+      "30daysAgo": 28.26849,
+      "60daysAgo": 21.92569,
+      "90daysAgo": 21.3748
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 1.0,
+      "upLast30days": 13.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 1.0,
+      "upLast30days": 12.0,
+      "downLast30days": 3.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 1.0,
+      "upLast30days": 16.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 1.0,
+      "upLast30days": 15.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 0.0
+    }
+  ],
+  "business_summary": "Valero Energy Corporation manufactures, markets, and sells petroleum-based and low-carbon liquid transportation fuels and petrochemical products in the United States, Canada, the United Kingdom, Ireland, Latin America, Mexico, Peru, and internationally. It operates through three segments: Refining, Renewable Diesel, and Ethanol. The company produces California Reformulated Gasoline Blendstock for Oxygenate Blending (CARBOB) and Conventional Blendstock for Oxygenate Blending (CBOB) gasolines, CARB diesel, diesel, jet fuel, heating oil, and asphalt; feedstocks; aromatics; sulfur and residual fuel oil; intermediate oils; and sulfur, sweet, and sour crude oils. It sells its refined products through wholesale rack and bulk markets; and through outlets under the Valero, Beacon, Diamond Shamrock, Shamrock, Ultramar, and Texaco brands. The company also owns and operates renewable diesel and ethanol plants, as well as produces and sells renewable diesel, renewable naphtha, and neat sustainable aviation fuel under the Diamond Green Diesel brand name. In addition, it offers ethanol and various co-products, including dry distillers grains, syrup, and inedible distillers corn oil to animal feed customers. The company was formerly known as Valero Refining and Marketing Company and changed its name to Valero Energy Corporation in August 1997. Valero Energy Corporation was founded in 1980 and is headquartered in San Antonio, Texas.",
+  "next_earnings_date": "2026-10-22",
+  "beta": 0.568,
+  "dividend_yield": 1.23
+}

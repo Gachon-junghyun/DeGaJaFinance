@@ -1,0 +1,1221 @@
+{
+ "MPC": {
+  "company_name": "Marathon Petroleum Corporation",
+  "sector": "Energy",
+  "industry": "Oil & Gas Refining & Marketing",
+  "price": 365.19,
+  "market_cap": 102554394624,
+  "trailing_pe": 12.653846,
+  "forward_pe": 11.340659,
+  "peg_ratio": 1.76,
+  "price_to_sales": 0.6916323,
+  "price_to_book": 5.417445,
+  "trailing_eps": 28.86,
+  "forward_eps": 32.20183,
+  "target_median": 322.0,
+  "target_mean": 320.22223,
+  "beta": 0.508,
+  "next_earnings_date": "2026-11-03",
+  "dividend_yield": 1.09,
+  "fifty_two_week_high": 367.24,
+  "fifty_two_week_low": 161.93,
+  "eps_1y_cur": 32.20183,
+  "eps_1y_30d": 25.2738,
+  "eps_1y_90d": 22.30771,
+  "eps_1y_chg90_pct": 44.4,
+  "rev_1y_up30": 12.0,
+  "rev_1y_dn30": 4.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    51994000000.0
+   ],
+   [
+    "2026-03-31",
+    34200000000.0
+   ],
+   [
+    "2025-12-31",
+    32574000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-06-30",
+    51994000000.0
+   ],
+   [
+    "2026-03-31",
+    34200000000.0
+   ],
+   [
+    "2025-09-30",
+    34809000000.0
+   ]
+  ],
+  "px_vs_target_pct": 13.4
+ },
+ "PSX": {
+  "company_name": "Phillips 66",
+  "sector": "Energy",
+  "industry": "Oil & Gas Refining & Marketing",
+  "price": 243.62,
+  "market_cap": 97675788288,
+  "trailing_pe": 13.897318,
+  "forward_pe": 11.461671,
+  "peg_ratio": 1.35,
+  "price_to_sales": 0.6388341,
+  "price_to_book": 3.0854378,
+  "trailing_eps": 17.53,
+  "forward_eps": 21.25519,
+  "target_median": 220.0,
+  "target_mean": 219.84212,
+  "beta": 0.687,
+  "next_earnings_date": "2026-10-29",
+  "dividend_yield": 2.09,
+  "fifty_two_week_high": 244.7323,
+  "fifty_two_week_low": 122.13,
+  "eps_1y_cur": 21.01869,
+  "eps_1y_30d": 18.01346,
+  "eps_1y_90d": 16.18696,
+  "eps_1y_chg90_pct": 29.8,
+  "rev_1y_up30": 13.0,
+  "rev_1y_dn30": 3.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    51004000000.0
+   ],
+   [
+    "2026-03-31",
+    32540000000.0
+   ],
+   [
+    "2025-12-31",
+    34108000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-06-30",
+    51004000000.0
+   ],
+   [
+    "2026-03-31",
+    32540000000.0
+   ],
+   [
+    "2025-09-30",
+    34515000000.0
+   ]
+  ],
+  "px_vs_target_pct": 10.7
+ },
+ "VLO": {
+  "company_name": "Valero Energy Corporation",
+  "sector": "Energy",
+  "industry": "Oil & Gas Refining & Marketing",
+  "price": 348.355,
+  "market_cap": 100300972032,
+  "trailing_pe": 14.526898,
+  "forward_pe": 11.413771,
+  "peg_ratio": 4.08,
+  "price_to_sales": 0.7573886,
+  "price_to_book": 4.01192,
+  "trailing_eps": 23.98,
+  "forward_eps": 30.52059,
+  "target_median": 323.0,
+  "target_mean": 312.42105,
+  "beta": 0.554,
+  "next_earnings_date": "2026-10-22",
+  "dividend_yield": 1.37,
+  "fifty_two_week_high": 351.0,
+  "fifty_two_week_low": 137.88,
+  "eps_1y_cur": 29.27796,
+  "eps_1y_30d": 22.2925,
+  "eps_1y_90d": 19.26865,
+  "eps_1y_chg90_pct": 51.9,
+  "rev_1y_up30": 13.0,
+  "rev_1y_dn30": 2.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    44476000000.0
+   ],
+   [
+    "2026-03-31",
+    32381000000.0
+   ],
+   [
+    "2025-12-31",
+    30372000000.0
+   ]
+  ],
+  "qrev_xbrl": [],
+  "px_vs_target_pct": 7.8
+ },
+ "KMI": {
+  "company_name": "Kinder Morgan, Inc.",
+  "sector": "Energy",
+  "industry": "Oil & Gas Midstream",
+  "price": 32.175,
+  "market_cap": 71647354880,
+  "trailing_pe": 20.758064,
+  "forward_pe": 20.929825,
+  "peg_ratio": 3.57,
+  "price_to_sales": 3.9859552,
+  "price_to_book": 2.2631357,
+  "trailing_eps": 1.55,
+  "forward_eps": 1.53728,
+  "target_median": 36.0,
+  "target_mean": 35.80952,
+  "beta": 0.554,
+  "next_earnings_date": "2026-10-29",
+  "dividend_yield": 3.59,
+  "fifty_two_week_high": 34.81,
+  "fifty_two_week_low": 25.6,
+  "eps_1y_cur": 1.53728,
+  "eps_1y_30d": 1.50704,
+  "eps_1y_90d": 1.50045,
+  "eps_1y_chg90_pct": 2.5,
+  "rev_1y_up30": 8.0,
+  "rev_1y_dn30": 1.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    4477000000.0
+   ],
+   [
+    "2026-03-31",
+    4828000000.0
+   ],
+   [
+    "2025-12-31",
+    4508000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-06-30",
+    4477000000.0
+   ],
+   [
+    "2026-03-31",
+    4828000000.0
+   ],
+   [
+    "2025-09-30",
+    4146000000.0
+   ]
+  ],
+  "px_vs_target_pct": -10.6
+ },
+ "XOM": {
+  "company_name": "ExxonMobil Holdings Corporation",
+  "sector": "Energy",
+  "industry": "Oil & Gas Integrated",
+  "price": 167.69,
+  "market_cap": 689526538240,
+  "trailing_pe": 21.609535,
+  "forward_pe": 15.760027,
+  "peg_ratio": 1.25,
+  "price_to_sales": 1.9097284,
+  "price_to_book": 2.6583703,
+  "trailing_eps": 7.76,
+  "forward_eps": 10.64021,
+  "target_median": 169.0,
+  "target_mean": 168.54546,
+  "beta": 0.173,
+  "next_earnings_date": "2026-10-30",
+  "dividend_yield": 2.49,
+  "fifty_two_week_high": 176.41,
+  "fifty_two_week_low": 107.68,
+  "eps_1y_cur": 10.64021,
+  "eps_1y_30d": 10.39171,
+  "eps_1y_90d": 10.4218,
+  "eps_1y_chg90_pct": 2.1,
+  "rev_1y_up30": 10.0,
+  "rev_1y_dn30": 10.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    114529000000.0
+   ],
+   [
+    "2026-03-31",
+    83161000000.0
+   ],
+   [
+    "2025-12-31",
+    80039000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-03-31",
+    85138000000.0
+   ],
+   [
+    "2025-09-30",
+    85294000000.0
+   ],
+   [
+    "2025-06-30",
+    81506000000.0
+   ]
+  ],
+  "px_vs_target_pct": -0.8
+ },
+ "LMT": {
+  "company_name": "Lockheed Martin Corporation",
+  "sector": "Industrials",
+  "industry": "Aerospace & Defense",
+  "price": 600.815,
+  "market_cap": 138662543360,
+  "trailing_pe": 22.13762,
+  "forward_pe": 18.364246,
+  "peg_ratio": 1.26,
+  "price_to_sales": 1.8004849,
+  "price_to_book": 15.760322,
+  "trailing_eps": 27.14,
+  "forward_eps": 32.71656,
+  "target_median": 620.0,
+  "target_mean": 632.9474,
+  "beta": 0.11,
+  "next_earnings_date": "2026-10-20",
+  "dividend_yield": 2.27,
+  "fifty_two_week_high": 692.0,
+  "fifty_two_week_low": 437.25,
+  "eps_1y_cur": 32.68794,
+  "eps_1y_30d": 32.12486,
+  "eps_1y_90d": 32.11371,
+  "eps_1y_chg90_pct": 1.8,
+  "rev_1y_up30": 18.0,
+  "rev_1y_dn30": 0.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    20063000000.0
+   ],
+   [
+    "2026-03-31",
+    18021000000.0
+   ],
+   [
+    "2025-12-31",
+    20321000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-06-28",
+    20063000000.0
+   ],
+   [
+    "2026-03-29",
+    18021000000.0
+   ],
+   [
+    "2025-09-28",
+    18609000000.0
+   ]
+  ],
+  "px_vs_target_pct": -3.1
+ },
+ "NOC": {
+  "company_name": "Northrop Grumman Corporation",
+  "sector": "Industrials",
+  "industry": "Aerospace & Defense",
+  "price": 587.315,
+  "market_cap": 83435749376,
+  "trailing_pe": 18.668627,
+  "forward_pe": 19.29478,
+  "peg_ratio": 4.05,
+  "price_to_sales": 1.945252,
+  "price_to_book": 4.665377,
+  "trailing_eps": 31.46,
+  "forward_eps": 30.43906,
+  "target_median": 640.0,
+  "target_mean": 645.2381,
+  "beta": -0.108,
+  "next_earnings_date": "2026-10-20",
+  "dividend_yield": 1.6,
+  "fifty_two_week_high": 774.0,
+  "fifty_two_week_low": 479.02,
+  "eps_1y_cur": 30.43906,
+  "eps_1y_30d": 30.17126,
+  "eps_1y_90d": 30.18356,
+  "eps_1y_chg90_pct": 0.8,
+  "rev_1y_up30": 14.0,
+  "rev_1y_dn30": 3.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    10876000000.0
+   ],
+   [
+    "2026-03-31",
+    9881000000.0
+   ],
+   [
+    "2025-12-31",
+    11712000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-06-30",
+    10876000000.0
+   ],
+   [
+    "2026-03-31",
+    9881000000.0
+   ],
+   [
+    "2025-09-30",
+    10423000000.0
+   ]
+  ],
+  "px_vs_target_pct": -8.2
+ },
+ "GD": {
+  "company_name": "General Dynamics Corporation",
+  "sector": "Industrials",
+  "industry": "Aerospace & Defense",
+  "price": 393.84,
+  "market_cap": 106556243968,
+  "trailing_pe": 24.0,
+  "forward_pe": 21.23382,
+  "peg_ratio": 2.75,
+  "price_to_sales": 1.942295,
+  "price_to_book": 3.966163,
+  "trailing_eps": 16.41,
+  "forward_eps": 18.54777,
+  "target_median": 430.0,
+  "target_mean": 420.02475,
+  "beta": 0.328,
+  "next_earnings_date": "2026-10-28",
+  "dividend_yield": 1.62,
+  "fifty_two_week_high": 400.0,
+  "fifty_two_week_low": 306.77,
+  "eps_1y_cur": 18.59454,
+  "eps_1y_30d": 18.24492,
+  "eps_1y_90d": 18.16332,
+  "eps_1y_chg90_pct": 2.4,
+  "rev_1y_up30": 17.0,
+  "rev_1y_dn30": 1.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    14094000000.0
+   ],
+   [
+    "2026-03-31",
+    13481000000.0
+   ],
+   [
+    "2025-12-31",
+    14379000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-04-05",
+    13481000000.0
+   ],
+   [
+    "2025-09-28",
+    12907000000.0
+   ],
+   [
+    "2025-06-29",
+    13041000000.0
+   ]
+  ],
+  "px_vs_target_pct": -8.4
+ },
+ "RTX": {
+  "company_name": "RTX Corporation",
+  "sector": "Industrials",
+  "industry": "Aerospace & Defense",
+  "price": 224.549,
+  "market_cap": 302637711360,
+  "trailing_pe": 39.533276,
+  "forward_pe": 28.58363,
+  "peg_ratio": 2.77,
+  "price_to_sales": 3.236767,
+  "price_to_book": 4.5593705,
+  "trailing_eps": 5.68,
+  "forward_eps": 7.85586,
+  "target_median": 239.0,
+  "target_mean": 232.27182,
+  "beta": 0.294,
+  "next_earnings_date": "2026-10-20",
+  "dividend_yield": 1.29,
+  "fifty_two_week_high": 226.88,
+  "fifty_two_week_low": 150.61,
+  "eps_1y_cur": 7.85325,
+  "eps_1y_30d": 7.57957,
+  "eps_1y_90d": 7.5495,
+  "eps_1y_chg90_pct": 4.0,
+  "rev_1y_up30": 22.0,
+  "rev_1y_dn30": 0.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    24708000000.0
+   ],
+   [
+    "2026-03-31",
+    22076000000.0
+   ],
+   [
+    "2025-12-31",
+    24238000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-06-30",
+    24708000000.0
+   ],
+   [
+    "2026-03-31",
+    22076000000.0
+   ],
+   [
+    "2025-09-30",
+    22478000000.0
+   ]
+  ],
+  "px_vs_target_pct": -6.0
+ },
+ "ETN": {
+  "company_name": "Eaton Corporation plc",
+  "sector": "Industrials",
+  "industry": "Specialty Industrial Machinery",
+  "price": 423.84,
+  "market_cap": 164621402112,
+  "trailing_pe": 45.476933,
+  "forward_pe": 26.434633,
+  "peg_ratio": 3.25,
+  "price_to_sales": 5.481152,
+  "price_to_book": 8.127889,
+  "trailing_eps": 9.83,
+  "forward_eps": 16.0337,
+  "target_median": 486.0,
+  "target_mean": 476.42792,
+  "beta": 1.177,
+  "next_earnings_date": "2026-11-03",
+  "dividend_yield": 1.02,
+  "fifty_two_week_high": 478.0,
+  "fifty_two_week_low": 311.92,
+  "eps_1y_cur": 16.02188,
+  "eps_1y_30d": 15.77748,
+  "eps_1y_90d": 15.72334,
+  "eps_1y_chg90_pct": 1.9,
+  "rev_1y_up30": 15.0,
+  "rev_1y_dn30": 2.0,
+  "qrev": [
+   [
+    "2026-03-31",
+    7451000000.0
+   ],
+   [
+    "2025-12-31",
+    7055000000.0
+   ],
+   [
+    "2025-09-30",
+    6988000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-06-30",
+    8531000000.0
+   ],
+   [
+    "2026-03-31",
+    7451000000.0
+   ],
+   [
+    "2025-09-30",
+    6988000000.0
+   ]
+  ],
+  "px_vs_target_pct": -12.8
+ },
+ "CAT": {
+  "company_name": "Caterpillar Inc.",
+  "sector": "Industrials",
+  "industry": "Farm & Heavy Construction Machinery",
+  "price": 816.87,
+  "market_cap": 375494606848,
+  "trailing_pe": 35.194744,
+  "forward_pe": 25.30479,
+  "peg_ratio": 1.91,
+  "price_to_sales": 5.024751,
+  "price_to_book": 19.36032,
+  "trailing_eps": 23.21,
+  "forward_eps": 32.28124,
+  "target_median": 980.5,
+  "target_mean": 979.2196,
+  "beta": 1.605,
+  "next_earnings_date": "2026-10-29",
+  "dividend_yield": 0.78,
+  "fifty_two_week_high": 1073.46,
+  "fifty_two_week_low": 410.52,
+  "eps_1y_cur": 32.1605,
+  "eps_1y_30d": 30.46217,
+  "eps_1y_90d": 29.86356,
+  "eps_1y_chg90_pct": 7.7,
+  "rev_1y_up30": 20.0,
+  "rev_1y_dn30": 2.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    20543000000.0
+   ],
+   [
+    "2026-03-31",
+    17415000000.0
+   ],
+   [
+    "2025-12-31",
+    19133000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-06-30",
+    20543000000.0
+   ],
+   [
+    "2026-03-31",
+    17415000000.0
+   ],
+   [
+    "2025-12-31",
+    19133000000.0
+   ]
+  ],
+  "px_vs_target_pct": -16.7
+ },
+ "NUE": {
+  "company_name": "Nucor Corporation",
+  "sector": "Basic Materials",
+  "industry": "Steel",
+  "price": 263.725,
+  "market_cap": 59832791040,
+  "trailing_pe": 21.705763,
+  "forward_pe": 14.119796,
+  "peg_ratio": 5.21,
+  "price_to_sales": 1.6573721,
+  "price_to_book": 2.7220697,
+  "trailing_eps": 12.15,
+  "forward_eps": 18.67768,
+  "target_median": 291.0,
+  "target_mean": 283.5625,
+  "beta": 1.892,
+  "next_earnings_date": "2026-10-27",
+  "dividend_yield": 0.85,
+  "fifty_two_week_high": 280.11,
+  "fifty_two_week_low": 131.32,
+  "eps_1y_cur": 18.82598,
+  "eps_1y_30d": 17.06215,
+  "eps_1y_90d": 15.70557,
+  "eps_1y_chg90_pct": 19.9,
+  "rev_1y_up30": 10.0,
+  "rev_1y_dn30": 0.0,
+  "qrev": [
+   [
+    "2026-03-31",
+    9496000000.0
+   ],
+   [
+    "2025-12-31",
+    7687000000.0
+   ],
+   [
+    "2025-09-30",
+    8521000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-07-04",
+    10397000000.0
+   ],
+   [
+    "2026-04-04",
+    9496000000.0
+   ],
+   [
+    "2025-10-04",
+    8521000000.0
+   ]
+  ],
+  "px_vs_target_pct": -9.4
+ },
+ "FCX": {
+  "company_name": "Freeport-McMoRan Inc.",
+  "sector": "Basic Materials",
+  "industry": "Copper",
+  "price": 69.18,
+  "market_cap": 96852000768,
+  "trailing_pe": 34.939392,
+  "forward_pe": 16.778921,
+  "peg_ratio": 5.45,
+  "price_to_sales": 3.7440856,
+  "price_to_book": 4.94037,
+  "trailing_eps": 2.04,
+  "forward_eps": 4.12303,
+  "target_median": 75.0,
+  "target_mean": 71.72727,
+  "beta": 1.379,
+  "next_earnings_date": "2026-10-22",
+  "dividend_yield": 0.9,
+  "fifty_two_week_high": 72.28,
+  "fifty_two_week_low": 35.15,
+  "eps_1y_cur": 4.12303,
+  "eps_1y_30d": 4.01148,
+  "eps_1y_90d": 3.71715,
+  "eps_1y_chg90_pct": 10.9,
+  "rev_1y_up30": 9.0,
+  "rev_1y_dn30": 6.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    7029000000.0
+   ],
+   [
+    "2026-03-31",
+    6234000000.0
+   ],
+   [
+    "2025-12-31",
+    5633000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-06-30",
+    7029000000.0
+   ],
+   [
+    "2026-03-31",
+    6234000000.0
+   ],
+   [
+    "2025-09-30",
+    6972000000.0
+   ]
+  ],
+  "px_vs_target_pct": -7.8
+ },
+ "CTVA": {
+  "company_name": "Corteva, Inc.",
+  "sector": "Basic Materials",
+  "industry": "Agricultural Inputs",
+  "price": 79.05,
+  "market_cap": 52741849088,
+  "trailing_pe": 46.775146,
+  "forward_pe": 19.181446,
+  "peg_ratio": 1.23,
+  "price_to_sales": 2.9610288,
+  "price_to_book": 2.0957608,
+  "trailing_eps": 1.69,
+  "forward_eps": 4.12117,
+  "target_median": 95.0,
+  "target_mean": 92.3,
+  "beta": 0.569,
+  "next_earnings_date": "2026-07-31",
+  "dividend_yield": 0.92,
+  "fifty_two_week_high": 90.97,
+  "fifty_two_week_low": 60.535,
+  "eps_1y_cur": 3.405,
+  "eps_1y_30d": 3.4375,
+  "eps_1y_90d": 3.326,
+  "eps_1y_chg90_pct": 2.4,
+  "rev_1y_up30": 1.0,
+  "rev_1y_dn30": 2.0,
+  "qrev": [
+   [
+    "2026-03-31",
+    4905000000.0
+   ],
+   [
+    "2025-12-31",
+    3910000000.0
+   ],
+   [
+    "2025-09-30",
+    2618000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-06-30",
+    6379000000.0
+   ],
+   [
+    "2026-03-31",
+    4905000000.0
+   ],
+   [
+    "2025-09-30",
+    2618000000.0
+   ]
+  ],
+  "px_vs_target_pct": -16.8
+ },
+ "META": {
+  "company_name": "Meta Platforms, Inc.",
+  "sector": "Communication Services",
+  "industry": "Internet Content & Information",
+  "price": 547.446,
+  "market_cap": 1394594021376,
+  "trailing_pe": 20.634563,
+  "forward_pe": 15.692562,
+  "peg_ratio": 0.88,
+  "price_to_sales": 6.110144,
+  "price_to_book": 5.3397875,
+  "trailing_eps": 26.53,
+  "forward_eps": 34.885,
+  "target_median": 750.0,
+  "target_mean": 754.14246,
+  "beta": 1.243,
+  "next_earnings_date": "2026-10-29",
+  "dividend_yield": 0.39,
+  "fifty_two_week_high": 790.8,
+  "fifty_two_week_low": 520.26,
+  "eps_1y_cur": 33.948,
+  "eps_1y_30d": 35.005,
+  "eps_1y_90d": 34.73745,
+  "eps_1y_chg90_pct": -2.3,
+  "rev_1y_up30": 8.0,
+  "rev_1y_dn30": 39.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    60801000000.0
+   ],
+   [
+    "2026-03-31",
+    56311000000.0
+   ],
+   [
+    "2025-12-31",
+    59893000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-06-30",
+    60801000000.0
+   ],
+   [
+    "2026-03-31",
+    56311000000.0
+   ],
+   [
+    "2025-09-30",
+    51242000000.0
+   ]
+  ],
+  "px_vs_target_pct": -27.0
+ },
+ "GOOGL": {
+  "company_name": "Alphabet Inc.",
+  "sector": "Communication Services",
+  "industry": "Internet Content & Information",
+  "price": 343.405,
+  "market_cap": 4200004583424,
+  "trailing_pe": 17.23131,
+  "forward_pe": 23.288729,
+  "peg_ratio": 0.94,
+  "price_to_sales": 9.419469,
+  "price_to_book": 6.747485,
+  "trailing_eps": 19.93,
+  "forward_eps": 14.74619,
+  "target_median": 428.0,
+  "target_mean": 427.52,
+  "beta": 1.237,
+  "next_earnings_date": "2026-10-29",
+  "dividend_yield": 0.26,
+  "fifty_two_week_high": 408.61,
+  "fifty_two_week_low": 196.6,
+  "eps_1y_cur": 14.77649,
+  "eps_1y_30d": 14.68672,
+  "eps_1y_90d": 14.43675,
+  "eps_1y_chg90_pct": 2.4,
+  "rev_1y_up30": 33.0,
+  "rev_1y_dn30": 12.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    119796000000.0
+   ],
+   [
+    "2026-03-31",
+    109896000000.0
+   ],
+   [
+    "2025-12-31",
+    113829000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-06-30",
+    119796000000.0
+   ],
+   [
+    "2026-03-31",
+    109896000000.0
+   ],
+   [
+    "2025-09-30",
+    102346000000.0
+   ]
+  ],
+  "px_vs_target_pct": -19.8
+ },
+ "T": {
+  "company_name": "AT&T Inc.",
+  "sector": "Communication Services",
+  "industry": "Telecom Services",
+  "price": 25.375,
+  "market_cap": 173879296000,
+  "trailing_pe": 8.374588,
+  "forward_pe": 9.897727,
+  "peg_ratio": 1.66,
+  "price_to_sales": 1.3665566,
+  "price_to_book": 1.5804061,
+  "trailing_eps": 3.03,
+  "forward_eps": 2.56372,
+  "target_median": 28.0,
+  "target_mean": 28.70652,
+  "beta": 0.417,
+  "next_earnings_date": "2026-10-21",
+  "dividend_yield": 4.46,
+  "fifty_two_week_high": 29.79,
+  "fifty_two_week_low": 19.89,
+  "eps_1y_cur": 2.56372,
+  "eps_1y_30d": 2.55356,
+  "eps_1y_90d": 2.55569,
+  "eps_1y_chg90_pct": 0.3,
+  "rev_1y_up30": 13.0,
+  "rev_1y_dn30": 5.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    31558000000.0
+   ],
+   [
+    "2026-03-31",
+    31506000000.0
+   ],
+   [
+    "2025-12-31",
+    33466000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-06-30",
+    31558000000.0
+   ],
+   [
+    "2026-03-31",
+    31506000000.0
+   ],
+   [
+    "2025-09-30",
+    30709000000.0
+   ]
+  ],
+  "px_vs_target_pct": -9.4
+ },
+ "WMT": {
+  "company_name": "Walmart Inc.",
+  "sector": "Consumer Defensive",
+  "industry": "Discount Stores",
+  "price": 116.5599,
+  "market_cap": 927592873984,
+  "trailing_pe": 40.898212,
+  "forward_pe": 35.535686,
+  "peg_ratio": 4.39,
+  "price_to_sales": 1.2789004,
+  "price_to_book": 9.837939,
+  "trailing_eps": 2.85,
+  "forward_eps": 3.28008,
+  "target_median": 140.0,
+  "target_mean": 137.925,
+  "beta": 0.605,
+  "next_earnings_date": "2026-08-20",
+  "dividend_yield": 0.86,
+  "fifty_two_week_high": 135.16,
+  "fifty_two_week_low": 95.42,
+  "eps_1y_cur": 3.28008,
+  "eps_1y_30d": 3.28577,
+  "eps_1y_90d": 3.29342,
+  "eps_1y_chg90_pct": -0.4,
+  "rev_1y_up30": 1.0,
+  "rev_1y_dn30": 7.0,
+  "qrev": [
+   [
+    "2026-04-30",
+    177751000000.0
+   ],
+   [
+    "2026-01-31",
+    190656000000.0
+   ],
+   [
+    "2025-10-31",
+    179496000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-04-30",
+    177751000000.0
+   ],
+   [
+    "2025-10-31",
+    179496000000.0
+   ],
+   [
+    "2025-07-31",
+    177402000000.0
+   ]
+  ],
+  "px_vs_target_pct": -16.7
+ },
+ "TGT": {
+  "company_name": "Target Corporation",
+  "sector": "Consumer Defensive",
+  "industry": "Discount Stores",
+  "price": 159.23,
+  "market_cap": 72270888960,
+  "trailing_pe": 20.827225,
+  "forward_pe": 17.59881,
+  "peg_ratio": 2.83,
+  "price_to_sales": 0.6798541,
+  "price_to_book": 4.4080005,
+  "trailing_eps": 7.56,
+  "forward_eps": 9.04152,
+  "target_median": 147.5,
+  "target_mean": 144.40147,
+  "beta": 0.973,
+  "next_earnings_date": "2026-08-19",
+  "dividend_yield": 3.04,
+  "fifty_two_week_high": 161.52,
+  "fifty_two_week_low": 83.44,
+  "eps_1y_cur": 9.04152,
+  "eps_1y_30d": 8.92317,
+  "eps_1y_90d": 8.5771,
+  "eps_1y_chg90_pct": 5.4,
+  "rev_1y_up30": 7.0,
+  "rev_1y_dn30": 1.0,
+  "qrev": [
+   [
+    "2026-04-30",
+    25443000000.0
+   ],
+   [
+    "2026-01-31",
+    30453000000.0
+   ],
+   [
+    "2025-10-31",
+    25270000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-05-02",
+    25443000000.0
+   ],
+   [
+    "2025-11-01",
+    25270000000.0
+   ],
+   [
+    "2025-08-02",
+    25211000000.0
+   ]
+  ],
+  "px_vs_target_pct": 8.0
+ },
+ "KKR": {
+  "company_name": "KKR & Co. Inc.",
+  "sector": "Financial Services",
+  "industry": "Asset Management",
+  "price": 112.11,
+  "market_cap": 103543734272,
+  "trailing_pe": 35.81789,
+  "forward_pe": 15.172657,
+  "peg_ratio": 0.59,
+  "price_to_sales": 4.008178,
+  "price_to_book": 3.5672014,
+  "trailing_eps": 3.13,
+  "forward_eps": 7.38895,
+  "target_median": 126.0,
+  "target_mean": 126.526,
+  "beta": 1.786,
+  "next_earnings_date": "2026-11-05",
+  "dividend_yield": 0.73,
+  "fifty_two_week_high": 152.1,
+  "fifty_two_week_low": 82.67,
+  "eps_1y_cur": 7.38895,
+  "eps_1y_30d": 7.39972,
+  "eps_1y_90d": 7.50173,
+  "eps_1y_chg90_pct": -1.5,
+  "rev_1y_up30": 10.0,
+  "rev_1y_dn30": 8.0,
+  "qrev": [
+   [
+    "2026-06-30",
+    5657340000.0
+   ],
+   [
+    "2026-03-31",
+    4252726000.0
+   ],
+   [
+    "2025-12-31",
+    5685044000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-06-30",
+    5725891000.0
+   ],
+   [
+    "2026-03-31",
+    4317983000.0
+   ],
+   [
+    "2025-09-30",
+    5525975000.0
+   ]
+  ],
+  "px_vs_target_pct": -11.0
+ },
+ "LITE": {
+  "company_name": "Lumentum Holdings Inc.",
+  "sector": "Technology",
+  "industry": "Communication Equipment",
+  "price": 855.13,
+  "market_cap": 76739698688,
+  "trailing_pe": null,
+  "forward_pe": 25.914356,
+  "peg_ratio": 0.63,
+  "price_to_sales": 25.449621,
+  "price_to_book": 20.629732,
+  "trailing_eps": -92.92,
+  "forward_eps": 33.01317,
+  "target_median": 1121.0,
+  "target_mean": 1125.9277,
+  "beta": 1.513,
+  "next_earnings_date": "2026-11-06",
+  "dividend_yield": null,
+  "fifty_two_week_high": 1085.68,
+  "fifty_two_week_low": 111.2,
+  "eps_1y_cur": 29.84915,
+  "eps_1y_30d": 28.27911,
+  "eps_1y_90d": 27.92281,
+  "eps_1y_chg90_pct": 6.9,
+  "rev_1y_up30": 6.0,
+  "rev_1y_dn30": 0.0,
+  "qrev": [
+   [
+    "2026-03-31",
+    808400000.0
+   ],
+   [
+    "2025-12-31",
+    665500000.0
+   ],
+   [
+    "2025-09-30",
+    533800000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2025-03-29",
+    425200000.0
+   ],
+   [
+    "2024-12-28",
+    402200000.0
+   ],
+   [
+    "2024-09-28",
+    336900000.0
+   ]
+  ],
+  "px_vs_target_pct": -23.7
+ },
+ "ORCL": {
+  "company_name": "Oracle Corporation",
+  "sector": "Technology",
+  "industry": "Software - Infrastructure",
+  "price": 140.065,
+  "market_cap": 403323551744,
+  "trailing_pe": 24.017153,
+  "forward_pe": 12.828289,
+  "peg_ratio": 0.85,
+  "price_to_sales": 5.9897738,
+  "price_to_book": 10.73773,
+  "trailing_eps": 5.83,
+  "forward_eps": 10.91494,
+  "target_median": 240.0,
+  "target_mean": 246.42635,
+  "beta": 1.718,
+  "next_earnings_date": "2026-09-11",
+  "dividend_yield": 1.4,
+  "fifty_two_week_high": 345.72,
+  "fifty_two_week_low": 114.5,
+  "eps_1y_cur": 10.91494,
+  "eps_1y_30d": 10.9216,
+  "eps_1y_90d": 10.71101,
+  "eps_1y_chg90_pct": 1.9,
+  "rev_1y_up30": 20.0,
+  "rev_1y_dn30": 6.0,
+  "qrev": [
+   [
+    "2026-05-31",
+    19184000000.0
+   ],
+   [
+    "2026-02-28",
+    17190000000.0
+   ],
+   [
+    "2025-11-30",
+    16058000000.0
+   ]
+  ],
+  "qrev_xbrl": [
+   [
+    "2026-02-28",
+    17190000000.0
+   ],
+   [
+    "2025-11-30",
+    16058000000.0
+   ],
+   [
+    "2025-08-31",
+    14926000000.0
+   ]
+  ],
+  "px_vs_target_pct": -41.6
+ }
+}

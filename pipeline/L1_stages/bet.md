@@ -11,6 +11,31 @@
 - [indicators](../L2_modules/indicators.md) — `module_flow --bench SPY|^KS11` per candidate
   (KR adds ⑦ per-investor actuals + ⑧ short balance; US adds `--positioning` for finalists only).
 
+## ★ Thesis-confirmation gate — read the company scoreboard BEFORE re-deriving anything
+If [`company_batch`](../protocols/company_batch.md) has run, `REPORT/COMPANY_SCOREBOARD.md` already holds,
+per name: **thesis · verdict · stop · score · axes measured · dated observation points · report path.**
+For any candidate with a row there, this stage **confirms** rather than re-derives, and writes only the delta.
+
+| confirmation test | fails when | then |
+|---|---|---|
+| **age** | the row is older than 10 settled sessions | re-dig |
+| **observation point** | one of its dated observation points has matured | **grade it first** — that grading *is* the delta — then confirm or re-dig on the result |
+| **event** | an earnings print or 8-K/주요사항 landed after the row's date | re-dig |
+| **driver band** | the roll-adjusted driver percentile crossed a band (L3 driver_link) | re-dig that name's driver only, not the whole name |
+| **direction** | this run's flow/RS disagrees with the row's `frame` / `evidence_grade` | **state the disagreement**; never silently override the report, and never silently adopt it |
+
+A confirmed name contributes its §A numbers, §C flow read and stop **by citation** (README §Core: cite
+upstream artifacts, never re-print them). **Its BET section should be short.** If it is long, either
+confirmation actually failed — say which test — or this stage is re-printing a file it already has.
+
+⚠ **A scoreboard row is not a promotion.** The score measures *research quality*, the verdict is the
+*action*, and a high-scoring `PASS` means the name was investigated well and is not bought. Sorting the
+scoreboard and treating the top row as a candidate collapses two axes BATCH_SCORE keeps apart on purpose.
+⚠ **A name with `axes_measured < 4` is not rank-comparable** — its score sits on a different scale.
+Confirm it on its fields, not on its rank.
+⚠ **No row ≠ no coverage.** Check `module_report_tags ticker <T>` before concluding a name is un-researched;
+the batch's own **skip list** (published with counts) may have removed it precisely because it was fresh.
+
 ## What this stage does
 - **Candidate set per DEEP sector = wide net, not the 3 names you already knew:**
   (deep-agent thesis leaders) ∪ (sector screener setups) ∪ (★LIVE_SHORTLIST names — this last
@@ -61,6 +86,9 @@
   rejections cost **+41.2pp** and **+26.9pp**. Removal is for names the **measured** axes reject.
 
 ## ✅ EXIT CHECK
+- [ ] **Company scoreboard consulted before any re-derivation.** Every candidate carrying a row is
+      marked CONFIRMED (cited, delta-only) or RE-DUG **with the failing confirmation test named**.
+      Any matured observation point on a cited row is graded in this file.
 - [ ] Every DEEP sector has a section; cross-sector LIVE shortlist names included or explicitly dropped with reason.
 - [ ] Numbers cross-checked (math_check on any derived figure); blanks are blanks, not guesses.
 - [ ] Flow/positioning cross-read present per candidate; BET_SHEET.md written as ONE file.

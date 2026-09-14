@@ -1,0 +1,3156 @@
+﻿{
+  "date": "2026-08-16",
+  "scope": "foreign",
+  "denom_docs": 730,
+  "baseline_days_used": 30,
+  "baseline_window": 30,
+  "params": {
+    "min_count": 3,
+    "z_floor": 2.0,
+    "min_baseline_days": 10,
+    "min_baseline_presence": 0.4,
+    "new_min_sources": 2,
+    "min_mkt_pct": 40.0,
+    "field": "title",
+    "body_cap": 3000
+  },
+  "universe_size": 665,
+  "spikes": [
+    {
+      "term": "THRESHOLD",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 24.93,
+      "baseline_mean_pct": 0.0108,
+      "baseline_presence": 0.4,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "a31b08038a4404d55e425ae912e86b4e",
+          "lede": "Back in 2024, Tesla ( TSLA +0.68% ) CEO Elon Musk wrote a series of posts on X, saying that he needed 25% voting control of Tesla to feel comfortable leading it into its new era as an artificial intelligence (AI) and rob"
+        },
+        {
+          "source": "fool",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "fd6df2169b8138018f963dcae52fc7c9",
+          "lede": "Back in 2024, Tesla ( TSLA +0.68% ) CEO Elon Musk wrote a series of posts on X, saying that he needed 25% voting control of Tesla to feel comfortable leading it into its new era as an artificial intelligence (AI) and rob"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "a8a7b10045f1467a6457c7fa3cac57e0",
+          "lede": "Markets TSLA Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders. August 16, 2026 — 06:05 am EDT Written by Chris Neiger for"
+        }
+      ]
+    },
+    {
+      "term": "WALMART",
+      "kind": "SPIKE",
+      "count": 13,
+      "denom": 730,
+      "share_pct": 1.7808,
+      "z": 15.63,
+      "baseline_mean_pct": 0.2224,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 0.93,
+      "n_sources": 6,
+      "persist": true,
+      "prev_count": 7,
+      "evidence": [
+        {
+          "source": "thestreet",
+          "title": "Walmart's $169 heavy-duty patio glider chairs are 46% off right now",
+          "url_hash": "83d0e6af620c6a467bf9dac616556ae3",
+          "lede": null
+        },
+        {
+          "source": "thestreet",
+          "title": "Walmart's $56 farmhouse cabinet has 4 compartments and a sliding barn door",
+          "url_hash": "3073837dfa8042b544c12034278c0d11",
+          "lede": null
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Walmart Stock Has Been Sluggish This Year. Should You Buy it Before It Reports Earnings on Aug. 20?",
+          "url_hash": "40421f7a6f0e36d70c3a8e96b1bd1f81",
+          "lede": "Walmart ( WMT -0.39% ) stock had been on an incredible run until recently. The Dividend King, which has raised its dividend annually for the past 53 years, had been beating the market as investors bought into its safety"
+        }
+      ]
+    },
+    {
+      "term": "BORROWED",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 15.16,
+      "baseline_mean_pct": 0.018,
+      "baseline_presence": 0.43,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "AMD Just Borrowed $4.75 Billion, More Than Triple Its Last Bond Sale",
+          "url_hash": "ad0e0f80f39cd1587c2e7ec9f74d2432",
+          "lede": "Advanced Micro Devices ( AMD +6.50% ) priced the largest bond offering in its history on Thursday -- $4.75 billion of senior notes, spread across four tranches maturing between 2029 and 2036. The sale is more than triple"
+        },
+        {
+          "source": "fool",
+          "title": "AMD Just Borrowed $4.75 Billion, More Than Triple Its Last Bond Sale",
+          "url_hash": "5f2158c1d550094d8073ef54d6bbf8e3",
+          "lede": "Advanced Micro Devices ( AMD +6.50% ) priced the largest bond offering in its history on Thursday -- $4.75 billion of senior notes, spread across four tranches maturing between 2029 and 2036. The sale is more than triple"
+        },
+        {
+          "source": "nasdaq",
+          "title": "AMD Just Borrowed $4.75 Billion, More Than Triple Its Last Bond Sale",
+          "url_hash": "e6e6a23d5a52e2e951c209ca5ab5657c",
+          "lede": "Markets AMD AMD Just Borrowed $4.75 Billion, More Than Triple Its Last Bond Sale August 15, 2026 — 10:39 pm EDT Written by Daniel Sparks for The Motley Fool linkedin facebook x email reddit Key Points AMD priced $4.75 bi"
+        }
+      ]
+    },
+    {
+      "term": "EXEC",
+      "kind": "SPIKE",
+      "count": 4,
+      "denom": 730,
+      "share_pct": 0.5479,
+      "z": 11.75,
+      "baseline_mean_pct": 0.0339,
+      "baseline_presence": 0.63,
+      "baseline_days": 30,
+      "mkt_pct": 75.0,
+      "src_entropy": 0.95,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 3,
+      "evidence": [
+        {
+          "source": "google_en",
+          "title": "Telstra ties exec pay to AI returns, putting heat on Accenture deal - AFR",
+          "url_hash": "73f57dfa3cabf4e93bed71f993f54aa0",
+          "lede": null
+        },
+        {
+          "source": "fortune",
+          "title": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future",
+          "url_hash": "98457724cc4e666e42d45d5f76ddf54e",
+          "lede": "This is a conversation with Fortune Greece CEO Tasos Zachos, reprinted with permission. Recommended Video The second act of artificial intelligence will not be judged by models alone. It will be judged by how economies m"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future",
+          "url_hash": "2c32f43979513456f2145521ad9fb007",
+          "lede": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future Charles Calestroupat, Microsoft’s Vice President for Southern Europe. · Fortune · courtesy of M"
+        }
+      ]
+    },
+    {
+      "term": "BULL",
+      "kind": "SPIKE",
+      "count": 10,
+      "denom": 730,
+      "share_pct": 1.3699,
+      "z": 9.65,
+      "baseline_mean_pct": 0.209,
+      "baseline_presence": 0.97,
+      "baseline_days": 30,
+      "mkt_pct": 40.0,
+      "src_entropy": 0.95,
+      "n_sources": 6,
+      "persist": false,
+      "prev_count": 3,
+      "evidence": [
+        {
+          "source": "seekingalpha",
+          "title": "Teekay Tankers: Record Earnings And The Bull Case Is Still Intact",
+          "url_hash": "66735396a30a10edb34f1d85672a0531",
+          "lede": "Abstract Aerial Art/DigitalVision via Getty Images About six months ago, I wrote an article about Teekay Tankers ( TNK ) reviewing the Q4-2025 results and explaining why, in my view, the company was still an interesting"
+        },
+        {
+          "source": "economictimes",
+          "title": "Big Bull's magic: How Rakesh Jhunjhunwala turned Rs 1 crore into Rs 20 crore overnight after the 1989 budget",
+          "url_hash": "8f85722eb5e01f35ad11cc970cc00269",
+          "lede": "Ace investor Rakesh Jhunjhunwala , often remembered as the Big Bull of the Indian stock market, is widely known for his investment philosophy that will continue to inspire generations to come. Investors often remember ho"
+        },
+        {
+          "source": "fool",
+          "title": "Is It Smart to Buy Stocks Nearly 4 Years Into a Bull Market? History Offers a Clear Answer.",
+          "url_hash": "fa5cf2aac6bc174208efc17eca4690d8",
+          "lede": "The S&P 500 ( ^GSPC -0.17% ) bull market has just entered its 47th month since reaching a relative low in October 2022. After nearly four years of phenomenal returns in the stock market, with the benchmark indexes zoomin"
+        }
+      ]
+    },
+    {
+      "term": "MSTR",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 9.61,
+      "baseline_mean_pct": 0.0414,
+      "baseline_presence": 0.7,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 0.96,
+      "n_sources": 4,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "9b1a9158a476cb14ed101c51eda1354d",
+          "lede": "Just two years ago, Strategy ( MSTR -4.18% ) was the talk of the stock market. It had somehow figured out a way to outperform Bitcoin ( BTC -0.07% ) , and its aggressive, nonstop strategy of accumulating Bitcoin as quick"
+        },
+        {
+          "source": "fool",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "4b822331ad1548e08ccba3c05332d92f",
+          "lede": "Just two years ago, Strategy ( MSTR -4.18% ) was the talk of the stock market. It had somehow figured out a way to outperform Bitcoin ( BTC -0.07% ) , and its aggressive, nonstop strategy of accumulating Bitcoin as quick"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "eded2775e24c33ed9c8450ea1adb45c8",
+          "lede": "Markets MSTR Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong. August 16, 2026 — 07:00 am EDT Written by Dominic Basulto for The Motley Fool linkedin face"
+        }
+      ]
+    },
+    {
+      "term": "DURING",
+      "kind": "SPIKE",
+      "count": 10,
+      "denom": 730,
+      "share_pct": 1.3699,
+      "z": 9.25,
+      "baseline_mean_pct": 0.2827,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 40.0,
+      "src_entropy": 0.97,
+      "n_sources": 5,
+      "persist": false,
+      "prev_count": 4,
+      "evidence": [
+        {
+          "source": "skynews",
+          "title": "'Fury' over death of teen British cyclist during Portugal race",
+          "url_hash": "dfa5ab73df79e5df3bb6b43f6105d321",
+          "lede": null
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Here's How Much Money You'd Have Today If You Invested $1,000 in the S&P 500 During Every Stock Market Crash Since 1950 (Spoiler Alert: Wow!)",
+          "url_hash": "e38ea0534b9098e128aab5eaa1588332",
+          "lede": "Have you ever wondered what would happen to your capital if you simply kept investing a modest sum into the S&P 500 ( ^GSPC -0.17% ) every time the stock market had a meltdown? Even without precisely timing the exact bot"
+        },
+        {
+          "source": "fool",
+          "title": "Here's How Much Money You'd Have Today If You Invested $1,000 in the S&P 500 During Every Stock Market Crash Since 1950 (Spoiler Alert: Wow!)",
+          "url_hash": "6c9d74aacb28a3d6cb7ac543326731b3",
+          "lede": "Have you ever wondered what would happen to your capital if you simply kept investing a modest sum into the S&P 500 ( ^GSPC -0.17% ) every time the stock market had a meltdown? Even without precisely timing the exact bot"
+        }
+      ]
+    },
+    {
+      "term": "CROWDSTRIKE",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 9.06,
+      "baseline_mean_pct": 0.0425,
+      "baseline_presence": 0.63,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 2,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now.",
+          "url_hash": "ba58387f4d98c0a5a21c634137878928",
+          "lede": "It has been a great year for cybersecurity company CrowdStrike ( CRWD -3.80% ) , with its stock up 85% year to date. It's now one of the most valuable public companies in the world, with a market cap of over $220 billion"
+        },
+        {
+          "source": "fool",
+          "title": "CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now.",
+          "url_hash": "13f5aee529e54e86b90d8409158b32d3",
+          "lede": "It has been a great year for cybersecurity company CrowdStrike ( CRWD -3.80% ) , with its stock up 85% year to date. It's now one of the most valuable public companies in the world, with a market cap of over $220 billion"
+        },
+        {
+          "source": "nasdaq",
+          "title": "CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now.",
+          "url_hash": "adba248c58f150bbc2de6451335460c5",
+          "lede": "Markets CRWD CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now. August 15, 2026 — 08:50 pm EDT Written by Stefon Walters for The Motley Fool lin"
+        }
+      ]
+    },
+    {
+      "term": "MATTER",
+      "kind": "SPIKE",
+      "count": 6,
+      "denom": 730,
+      "share_pct": 0.8219,
+      "z": 8.77,
+      "baseline_mean_pct": 0.1047,
+      "baseline_presence": 0.93,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Apple: For Investors, the 3 Things That Matter Now Are AI, Growth, and Valuation (NASDAQ: AAPL)",
+          "url_hash": "a9b6fb3fb35c5c877a66dcaa8dcec04e",
+          "lede": "Apple ( AAPL +0.22% ) has long been one of the most valuable companies on Earth, a position bolstered by its enormously popular products and services. The consumer tech giant has, unsurprisingly, been a very successful i"
+        },
+        {
+          "source": "fool",
+          "title": "Apple: For Investors, the 3 Things That Matter Now Are AI, Growth, and Valuation (NASDAQ: AAPL)",
+          "url_hash": "1d1e8c2a9ea4f235b3b5e19272cab2d7",
+          "lede": "Apple ( AAPL +0.22% ) has long been one of the most valuable companies on Earth, a position bolstered by its enormously popular products and services. The consumer tech giant has, unsurprisingly, been a very successful i"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Apple: For Investors, the 3 Things That Matter Now Are AI, Growth, and Valuation (NASDAQ: AAPL)",
+          "url_hash": "fd29cebe21f6f161fba1caf8bd843264",
+          "lede": "Markets AAPL Apple: For Investors, the 3 Things That Matter Now Are AI, Growth, and Valuation (NASDAQ: AAPL) August 16, 2026 — 05:27 am EDT Written by Neil Patel for The Motley Fool linkedin facebook x email reddit Key P"
+        }
+      ]
+    },
+    {
+      "term": "MESSAGE",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 8.64,
+      "baseline_mean_pct": 0.1101,
+      "baseline_presence": 0.93,
+      "baseline_days": 30,
+      "mkt_pct": 40.0,
+      "src_entropy": 0.96,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 3,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Morgan Stanley sends a blunt Tesla message to investors",
+          "url_hash": "750588ce0530c19953bc8f5d025c3207",
+          "lede": null
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Morgan Stanley sends a blunt Tesla message to investors",
+          "url_hash": "42d738156ed8c103e1427e74e2c14bd0",
+          "lede": "Morgan Stanley sends a blunt Tesla message to investors Hillary Remy Sun, August 16, 2026 at 10:03 AM GMT+9 5 min read TSLA +0.68% MS -0.47% The spending is going up. The margins are going down. Free cash flow is negativ"
+        },
+        {
+          "source": "guardian",
+          "title": "The first anti-AI protester to be jailed has a message for OpenAI, Anthropic and Meta: ‘Regain your humanity’",
+          "url_hash": "48f4404bfb065ecb5649708c49724f4a",
+          "lede": "A n activist who blocked the entrance to one of the world’s biggest AI companies is believed to have become the first person jailed for protesting against artificial intelligence as supporters dub her the “Rosa Parks of"
+        }
+      ]
+    },
+    {
+      "term": "SQUARE",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 8.57,
+      "baseline_mean_pct": 0.0801,
+      "baseline_presence": 0.93,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 0.96,
+      "n_sources": 4,
+      "persist": true,
+      "prev_count": 3,
+      "evidence": [
+        {
+          "source": "cna",
+          "title": "Disney, Square Enix preview 'Kingdom Hearts 4' video game at fan convention",
+          "url_hash": "86f7c78700b02c8dc2058a9a483b9f6c",
+          "lede": "Advertisement Business Disney, Square Enix preview 'Kingdom Hearts 4' video game at fan convention A screen shows the logo and a ticker symbol for The Walt Disney Company on the floor of the New York Stock Exchange (NYSE"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "6fbaa80eeb2600b6cfeb6f84dab28fa9",
+          "lede": "Bill Ackman is back in Netflix ( NFLX -0.10% ) . His hedge fund, Pershing Square Capital Management, disclosed a position of 3.15 million shares in its Pershing Square USA fund's semiannual report, released Wednesday eve"
+        },
+        {
+          "source": "fool",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "d45615b7faf531dc59a94296e217129e",
+          "lede": "Bill Ackman is back in Netflix ( NFLX -0.10% ) . His hedge fund, Pershing Square Capital Management, disclosed a position of 3.15 million shares in its Pershing Square USA fund's semiannual report, released Wednesday eve"
+        }
+      ]
+    },
+    {
+      "term": "FILING",
+      "kind": "SPIKE",
+      "count": 9,
+      "denom": 730,
+      "share_pct": 1.2329,
+      "z": 8.55,
+      "baseline_mean_pct": 0.1391,
+      "baseline_presence": 0.93,
+      "baseline_days": 30,
+      "mkt_pct": 44.4,
+      "src_entropy": 0.88,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 8,
+      "evidence": [
+        {
+          "source": "fool",
+          "title": "This Cintas Insider's Stake Just Grew. Here's What the Filing Shows",
+          "url_hash": "07653e6d011bb1e4384d578ccc1d825d",
+          "lede": "Scott Garula, EVP and CFO of Cintas Corporation ( CTAS -0.33% ) , disposed of 2,958 shares of common stock on August 10, according to a recent SEC Form 4 filing . Transaction summary Metric Value Shares sold 2,958 Transa"
+        },
+        {
+          "source": "fool",
+          "title": "What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst",
+          "url_hash": "3b1bc212a5b794c2717f842e9f2276d0",
+          "lede": "Jim Rozakis, the company's president and COO, disposed of 4,041 shares of Cintas Corporation ( CTAS -0.33% ) on August 10, as disclosed in a recent SEC Form 4 filing . Transaction summary Metric Value Transaction value ~"
+        },
+        {
+          "source": "nasdaq",
+          "title": "What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst",
+          "url_hash": "819e7b8cdeec174be777f5913b84403d",
+          "lede": "Markets CTAS What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst August 15, 2026 — 09:10 pm EDT Written by Jonathan Ponciano for The Motley Fool linkedin facebook x email reddit Key"
+        }
+      ]
+    },
+    {
+      "term": "TALKING",
+      "kind": "SPIKE",
+      "count": 4,
+      "denom": 730,
+      "share_pct": 0.5479,
+      "z": 8.44,
+      "baseline_mean_pct": 0.0617,
+      "baseline_presence": 0.77,
+      "baseline_days": 30,
+      "mkt_pct": 50.0,
+      "src_entropy": 1.0,
+      "n_sources": 4,
+      "persist": true,
+      "prev_count": 1,
+      "evidence": [
+        {
+          "source": "fortune",
+          "title": "Talking to a bot might feel good in the moment, but a growing body of research suggests it won’t cure loneliness",
+          "url_hash": "3920da04e5068ecc55e19ce875e00d30",
+          "lede": "Talking to a chatbot might make you feel better about the conversation, but it may also leave you feeling lonelier. Recommended Video That’s the finding of a new experiment out of Munich-based global economic research ne"
+        },
+        {
+          "source": "aljazeera",
+          "title": "Premier League: Key talking points heading into the new 2026-27 season",
+          "url_hash": "0d1d9bd481aa6e6b618f2b122d6b093d",
+          "lede": "The 2026/27 Premier League season is set to kick off on August 21 as champions Arsenal host newly promoted Coventry. It has been a busy preseason for many clubs, albeit truncated for some by the World Cup , and as always"
+        },
+        {
+          "source": "fool",
+          "title": "Why Is Everyone Talking About AMD Stock?",
+          "url_hash": "525ad4ec7c906ee792e47f92d4bb9edb",
+          "lede": "I think the primary reason everyone is talking about AMD ( AMD +6.50% ) is its soaring stock price. *Stock prices used were the afternoon prices of Aug. 13, 2026. The video was published on Aug.15, 2026."
+        }
+      ]
+    },
+    {
+      "term": "FEEL",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 7.98,
+      "baseline_mean_pct": 0.0741,
+      "baseline_presence": 0.87,
+      "baseline_days": 30,
+      "mkt_pct": 60.0,
+      "src_entropy": 1.0,
+      "n_sources": 5,
+      "persist": true,
+      "prev_count": 5,
+      "evidence": [
+        {
+          "source": "scmp",
+          "title": "China’s ‘electric eel’ sensor allows robots to feel an object without touching it",
+          "url_hash": "e416e3e757b122f5976ec13aebffee50",
+          "lede": "Advertisement Science China Science China’s ‘electric eel’ sensor allows robots to feel an object without touching it The robot’s fluoropolymer-coated sensor acts like a battery to create an electric field that can detec"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "a31b08038a4404d55e425ae912e86b4e",
+          "lede": "Back in 2024, Tesla ( TSLA +0.68% ) CEO Elon Musk wrote a series of posts on X, saying that he needed 25% voting control of Tesla to feel comfortable leading it into its new era as an artificial intelligence (AI) and rob"
+        },
+        {
+          "source": "fool",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "fd6df2169b8138018f963dcae52fc7c9",
+          "lede": "Back in 2024, Tesla ( TSLA +0.68% ) CEO Elon Musk wrote a series of posts on X, saying that he needed 25% voting control of Tesla to feel comfortable leading it into its new era as an artificial intelligence (AI) and rob"
+        }
+      ]
+    },
+    {
+      "term": "LE",
+      "kind": "SPIKE",
+      "count": 4,
+      "denom": 730,
+      "share_pct": 0.5479,
+      "z": 7.17,
+      "baseline_mean_pct": 0.1412,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 4,
+      "persist": false,
+      "prev_count": 1,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "9b1a9158a476cb14ed101c51eda1354d",
+          "lede": "Just two years ago, Strategy ( MSTR -4.18% ) was the talk of the stock market. It had somehow figured out a way to outperform Bitcoin ( BTC -0.07% ) , and its aggressive, nonstop strategy of accumulating Bitcoin as quick"
+        },
+        {
+          "source": "fool",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "4b822331ad1548e08ccba3c05332d92f",
+          "lede": "Just two years ago, Strategy ( MSTR -4.18% ) was the talk of the stock market. It had somehow figured out a way to outperform Bitcoin ( BTC -0.07% ) , and its aggressive, nonstop strategy of accumulating Bitcoin as quick"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "eded2775e24c33ed9c8450ea1adb45c8",
+          "lede": "Markets MSTR Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong. August 16, 2026 — 07:00 am EDT Written by Dominic Basulto for The Motley Fool linkedin face"
+        }
+      ]
+    },
+    {
+      "term": "CONTROL",
+      "kind": "SPIKE",
+      "count": 6,
+      "denom": 730,
+      "share_pct": 0.8219,
+      "z": 7.05,
+      "baseline_mean_pct": 0.1617,
+      "baseline_presence": 0.9,
+      "baseline_days": 30,
+      "mkt_pct": 50.0,
+      "src_entropy": 0.97,
+      "n_sources": 5,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "seekingalpha",
+          "title": "Ituran Location and Control Ltd.: Strong Q2 Results Reveal The Data Opportunity Hidden Inside Its Telematics Network",
+          "url_hash": "853487f45929c803012e02f6eb9e62af",
+          "lede": "Wasan Longthara/iStock via Getty Images Investment Thesis Ituran Location and Control Ltd. ( ITRN ) reported record Q2 2026 revenue. It maintained its significant subscription growth. As of June 30, 2026, the company 's"
+        },
+        {
+          "source": "scmp",
+          "title": "I gave Tencent’s WeChat AI agent control for 24 hours: where it excelled – and stumbled",
+          "url_hash": "2c20683abc56008d2c7f6feefc42eb65",
+          "lede": "Advertisement Artificial intelligence Tech Big Tech I gave Tencent’s WeChat AI agent control for 24 hours: where it excelled – and stumbled The new Xiaowei agent promises hands-free control across WeChat’s vast digital e"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "a31b08038a4404d55e425ae912e86b4e",
+          "lede": "Back in 2024, Tesla ( TSLA +0.68% ) CEO Elon Musk wrote a series of posts on X, saying that he needed 25% voting control of Tesla to feel comfortable leading it into its new era as an artificial intelligence (AI) and rob"
+        }
+      ]
+    },
+    {
+      "term": "COST",
+      "kind": "SPIKE",
+      "count": 11,
+      "denom": 730,
+      "share_pct": 1.5068,
+      "z": 7.04,
+      "baseline_mean_pct": 0.3792,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 54.5,
+      "src_entropy": 0.97,
+      "n_sources": 7,
+      "persist": true,
+      "prev_count": 7,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "6fbaa80eeb2600b6cfeb6f84dab28fa9",
+          "lede": "Bill Ackman is back in Netflix ( NFLX -0.10% ) . His hedge fund, Pershing Square Capital Management, disclosed a position of 3.15 million shares in its Pershing Square USA fund's semiannual report, released Wednesday eve"
+        },
+        {
+          "source": "fool",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "d45615b7faf531dc59a94296e217129e",
+          "lede": "Bill Ackman is back in Netflix ( NFLX -0.10% ) . His hedge fund, Pershing Square Capital Management, disclosed a position of 3.15 million shares in its Pershing Square USA fund's semiannual report, released Wednesday eve"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "757fd93e7518cfb071a1d461c405315d",
+          "lede": "Markets NFLX Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022 August 15, 2026 — 11:39 pm EDT Written by Daniel Sparks for The Motley Fool linkedin facebook x email red"
+        }
+      ]
+    },
+    {
+      "term": "MATTERS",
+      "kind": "SPIKE",
+      "count": 6,
+      "denom": 730,
+      "share_pct": 0.8219,
+      "z": 6.44,
+      "baseline_mean_pct": 0.1379,
+      "baseline_presence": 0.93,
+      "baseline_days": 30,
+      "mkt_pct": 50.0,
+      "src_entropy": 0.96,
+      "n_sources": 4,
+      "persist": true,
+      "prev_count": 5,
+      "evidence": [
+        {
+          "source": "businessinsider",
+          "title": "The skill BCG's North America boss thinks matters more in the AI era",
+          "url_hash": "eab4632dc7a2bebfa8e1f12b92b494ee",
+          "lede": "Careers Layoff Recovery Build a calm, realistic plan to recover from job loss and move toward your next role."
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Walmart Keeps Raising Its Payout No Matter What the Market Does. Here's Why That Matters Now.",
+          "url_hash": "3ca13d7cdbc3aa5add3ebdc66eef1fe8",
+          "lede": "When a company earns the title of Dividend King, it becomes part of an elite club, as boosting a dividend for 50 or more consecutive years is no small feat. For investors, it's a signal that, whatever types of uncertaint"
+        },
+        {
+          "source": "fool",
+          "title": "Walmart Keeps Raising Its Payout No Matter What the Market Does. Here's Why That Matters Now.",
+          "url_hash": "8598f26dc9c76e7d1663935e30d19b3c",
+          "lede": "When a company earns the title of Dividend King, it becomes part of an elite club, as boosting a dividend for 50 or more consecutive years is no small feat. For investors, it's a signal that, whatever types of uncertaint"
+        }
+      ]
+    },
+    {
+      "term": "PATIENT",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 6.4,
+      "baseline_mean_pct": 0.0533,
+      "baseline_presence": 0.7,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 4,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Costco: Patient Investors Know the Bear Case (NASDAQ: COST)",
+          "url_hash": "f04b645e4ad49e9774cfd728ee7d928d",
+          "lede": "Costco ( COST -0.08% ) has trounced the S&P 500 index in recent times. The warehouse club operator's shares produced total returns of 125% and 564%, respectively, in the past five and 10 years (as of Aug. 13). Fantastic"
+        },
+        {
+          "source": "fool",
+          "title": "Costco: Patient Investors Know the Bear Case (NASDAQ: COST)",
+          "url_hash": "53ba06863324732a76da4fa0074c896e",
+          "lede": "Costco ( COST -0.08% ) has trounced the S&P 500 index in recent times. The warehouse club operator's shares produced total returns of 125% and 564%, respectively, in the past five and 10 years (as of Aug. 13). Fantastic"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Costco: Patient Investors Know the Bear Case (NASDAQ: COST)",
+          "url_hash": "8d2518e546621d26be16b50c6201f4fb",
+          "lede": "Markets COST Costco: Patient Investors Know the Bear Case (NASDAQ: COST) August 16, 2026 — 04:15 am EDT Written by Neil Patel for The Motley Fool linkedin facebook x email reddit Key Points It seems that Costco's stock h"
+        }
+      ]
+    },
+    {
+      "term": "GREW",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 6.36,
+      "baseline_mean_pct": 0.0595,
+      "baseline_presence": 0.7,
+      "baseline_days": 30,
+      "mkt_pct": 66.7,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "fool",
+          "title": "This Cintas Insider's Stake Just Grew. Here's What the Filing Shows",
+          "url_hash": "07653e6d011bb1e4384d578ccc1d825d",
+          "lede": "Scott Garula, EVP and CFO of Cintas Corporation ( CTAS -0.33% ) , disposed of 2,958 shares of common stock on August 10, according to a recent SEC Form 4 filing . Transaction summary Metric Value Shares sold 2,958 Transa"
+        },
+        {
+          "source": "nasdaq",
+          "title": "This Cintas Insider's Stake Just Grew. Here's What the Filing Shows",
+          "url_hash": "5d7573e1cd2910629310c7b641f432a3",
+          "lede": "Markets CTAS This Cintas Insider's Stake Just Grew. Here's What the Filing Shows August 15, 2026 — 09:40 pm EDT Written by Jonathan Ponciano for The Motley Fool linkedin facebook x email reddit Key Points The disposition"
+        },
+        {
+          "source": "forbes",
+          "title": "Battery Storage Grew 66% In 2025. China Now Controls Nearly Half",
+          "url_hash": "4ba3b01440bcefe798ae153d902bb0d2",
+          "lede": "The constructors adjust the storage battery container at the construction site of the 300MW/1200MWh independent energy storage project in GaoTai County, Zhangye City, Gansu Province, China, on January 15, 2026. (Photo by"
+        }
+      ]
+    },
+    {
+      "term": "PAYOUT",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 6.02,
+      "baseline_mean_pct": 0.0711,
+      "baseline_presence": 0.7,
+      "baseline_days": 30,
+      "mkt_pct": 60.0,
+      "src_entropy": 0.96,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 3,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "This Dividend King Has Raised Its Payout for 64 Straight Years -- And It's Outperforming the \"Magnificent Seven\" This Year",
+          "url_hash": "7818db24f78099f4a92741053f471de2",
+          "lede": "Coca-Cola ( KO +0.33% ) quietly extended its dividend growth streak to 64 consecutive years this past February. That kept it in the illustrious group of Dividend Kings , companies with 50 or more consecutive annual divid"
+        },
+        {
+          "source": "fool",
+          "title": "This Dividend King Has Raised Its Payout for 64 Straight Years -- And It's Outperforming the \"Magnificent Seven\" This Year",
+          "url_hash": "43b3f2cfa32066e78eceacb66d2104f4",
+          "lede": "Coca-Cola ( KO +0.33% ) quietly extended its dividend growth streak to 64 consecutive years this past February. That kept it in the illustrious group of Dividend Kings , companies with 50 or more consecutive annual divid"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Walmart Keeps Raising Its Payout No Matter What the Market Does. Here's Why That Matters Now.",
+          "url_hash": "3ca13d7cdbc3aa5add3ebdc66eef1fe8",
+          "lede": "When a company earns the title of Dividend King, it becomes part of an elite club, as boosting a dividend for 50 or more consecutive years is no small feat. For investors, it's a signal that, whatever types of uncertaint"
+        }
+      ]
+    },
+    {
+      "term": "ACKMAN",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 5.81,
+      "baseline_mean_pct": 0.0806,
+      "baseline_presence": 0.7,
+      "baseline_days": 30,
+      "mkt_pct": 80.0,
+      "src_entropy": 1.0,
+      "n_sources": 5,
+      "persist": true,
+      "prev_count": 6,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "6fbaa80eeb2600b6cfeb6f84dab28fa9",
+          "lede": "Bill Ackman is back in Netflix ( NFLX -0.10% ) . His hedge fund, Pershing Square Capital Management, disclosed a position of 3.15 million shares in its Pershing Square USA fund's semiannual report, released Wednesday eve"
+        },
+        {
+          "source": "fool",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "d45615b7faf531dc59a94296e217129e",
+          "lede": "Bill Ackman is back in Netflix ( NFLX -0.10% ) . His hedge fund, Pershing Square Capital Management, disclosed a position of 3.15 million shares in its Pershing Square USA fund's semiannual report, released Wednesday eve"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "757fd93e7518cfb071a1d461c405315d",
+          "lede": "Markets NFLX Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022 August 15, 2026 — 11:39 pm EDT Written by Daniel Sparks for The Motley Fool linkedin facebook x email red"
+        }
+      ]
+    },
+    {
+      "term": "TRIPLE",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 5.8,
+      "baseline_mean_pct": 0.0708,
+      "baseline_presence": 0.8,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "AMD Just Borrowed $4.75 Billion, More Than Triple Its Last Bond Sale",
+          "url_hash": "ad0e0f80f39cd1587c2e7ec9f74d2432",
+          "lede": "Advanced Micro Devices ( AMD +6.50% ) priced the largest bond offering in its history on Thursday -- $4.75 billion of senior notes, spread across four tranches maturing between 2029 and 2036. The sale is more than triple"
+        },
+        {
+          "source": "fool",
+          "title": "AMD Just Borrowed $4.75 Billion, More Than Triple Its Last Bond Sale",
+          "url_hash": "5f2158c1d550094d8073ef54d6bbf8e3",
+          "lede": "Advanced Micro Devices ( AMD +6.50% ) priced the largest bond offering in its history on Thursday -- $4.75 billion of senior notes, spread across four tranches maturing between 2029 and 2036. The sale is more than triple"
+        },
+        {
+          "source": "nasdaq",
+          "title": "AMD Just Borrowed $4.75 Billion, More Than Triple Its Last Bond Sale",
+          "url_hash": "e6e6a23d5a52e2e951c209ca5ab5657c",
+          "lede": "Markets AMD AMD Just Borrowed $4.75 Billion, More Than Triple Its Last Bond Sale August 15, 2026 — 10:39 pm EDT Written by Daniel Sparks for The Motley Fool linkedin facebook x email reddit Key Points AMD priced $4.75 bi"
+        }
+      ]
+    },
+    {
+      "term": "ASSETS",
+      "kind": "SPIKE",
+      "count": 4,
+      "denom": 730,
+      "share_pct": 0.5479,
+      "z": 5.44,
+      "baseline_mean_pct": 0.1421,
+      "baseline_presence": 0.93,
+      "baseline_days": 30,
+      "mkt_pct": 75.0,
+      "src_entropy": 1.0,
+      "n_sources": 4,
+      "persist": true,
+      "prev_count": 3,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Meet the Roundhill ETF With 26% of Its Assets Parked in Micron Technology Stock",
+          "url_hash": "1d86037821d28bb7571ef1a360562303",
+          "lede": "Memory is a critical part of the artificial intelligence (AI) hardware stack in data centers, computers, smartphones, and even cars. It keeps data constantly flowing to processing chips during AI model training and infer"
+        },
+        {
+          "source": "fool",
+          "title": "Meet the Roundhill ETF With 26% of Its Assets Parked in Micron Technology Stock",
+          "url_hash": "e24635571a0fa8729f583ba8736d012f",
+          "lede": "Memory is a critical part of the artificial intelligence (AI) hardware stack in data centers, computers, smartphones, and even cars. It keeps data constantly flowing to processing chips during AI model training and infer"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Meet the Roundhill ETF With 26% of Its Assets Parked in Micron Technology Stock",
+          "url_hash": "065104b760e857283394d06f4a041f49",
+          "lede": "Markets DRAM Meet the Roundhill ETF With 26% of Its Assets Parked in Micron Technology Stock August 16, 2026 — 05:59 am EDT Written by Anthony Di Pizio for The Motley Fool linkedin facebook x email reddit Key Points Memo"
+        }
+      ]
+    },
+    {
+      "term": "NEAR",
+      "kind": "SPIKE",
+      "count": 12,
+      "denom": 730,
+      "share_pct": 1.6438,
+      "z": 5.36,
+      "baseline_mean_pct": 0.6121,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 50.0,
+      "src_entropy": 0.93,
+      "n_sources": 6,
+      "persist": true,
+      "prev_count": 13,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now.",
+          "url_hash": "ba58387f4d98c0a5a21c634137878928",
+          "lede": "It has been a great year for cybersecurity company CrowdStrike ( CRWD -3.80% ) , with its stock up 85% year to date. It's now one of the most valuable public companies in the world, with a market cap of over $220 billion"
+        },
+        {
+          "source": "fool",
+          "title": "CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now.",
+          "url_hash": "13f5aee529e54e86b90d8409158b32d3",
+          "lede": "It has been a great year for cybersecurity company CrowdStrike ( CRWD -3.80% ) , with its stock up 85% year to date. It's now one of the most valuable public companies in the world, with a market cap of over $220 billion"
+        },
+        {
+          "source": "nasdaq",
+          "title": "CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now.",
+          "url_hash": "adba248c58f150bbc2de6451335460c5",
+          "lede": "Markets CRWD CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now. August 15, 2026 — 08:50 pm EDT Written by Stefon Walters for The Motley Fool lin"
+        }
+      ]
+    },
+    {
+      "term": "WANTS",
+      "kind": "SPIKE",
+      "count": 7,
+      "denom": 730,
+      "share_pct": 0.9589,
+      "z": 5.35,
+      "baseline_mean_pct": 0.2672,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 42.9,
+      "src_entropy": 0.98,
+      "n_sources": 4,
+      "persist": true,
+      "prev_count": 6,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Curaleaf Wants to Buy Aurora Cannabis for $272 Million. Is Canopy Growth the Next Marijuana Takeover Target?",
+          "url_hash": "242a1318cf0ee0cb1d6c5d2110df7886",
+          "lede": "Curaleaf ( CURLF -2.07% ) just made one thing clear: Consolidation is back on the cannabis industry's agenda. The U.S. cannabis giant recently launched an unsolicited $272 million bid to acquire Aurora Cannabis ( ACB -2."
+        },
+        {
+          "source": "fool",
+          "title": "Curaleaf Wants to Buy Aurora Cannabis for $272 Million. Is Canopy Growth the Next Marijuana Takeover Target?",
+          "url_hash": "e491dad46aa8149caef3d7ff913fe79d",
+          "lede": "Curaleaf ( CURLF -2.07% ) just made one thing clear: Consolidation is back on the cannabis industry's agenda. The U.S. cannabis giant recently launched an unsolicited $272 million bid to acquire Aurora Cannabis ( ACB -2."
+        },
+        {
+          "source": "nasdaq",
+          "title": "Curaleaf Wants to Buy Aurora Cannabis for $272 Million. Is Canopy Growth the Next Marijuana Takeover Target?",
+          "url_hash": "0a105bb14111c251f8a579da92e54382",
+          "lede": "Markets CGC Curaleaf Wants to Buy Aurora Cannabis for $272 Million. Is Canopy Growth the Next Marijuana Takeover Target? August 16, 2026 — 12:50 am EDT Written by Jeff Siegel for The Motley Fool linkedin facebook x email"
+        }
+      ]
+    },
+    {
+      "term": "MEET",
+      "kind": "SPIKE",
+      "count": 7,
+      "denom": 730,
+      "share_pct": 0.9589,
+      "z": 5.23,
+      "baseline_mean_pct": 0.2518,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 42.9,
+      "src_entropy": 1.0,
+      "n_sources": 7,
+      "persist": true,
+      "prev_count": 8,
+      "evidence": [
+        {
+          "source": "guardian",
+          "title": "Japan’s defence minister heads to Australia to meet Marles in wake of melon-gate controversy",
+          "url_hash": "655c90893e7d03737e7e946eb4edb5d1",
+          "lede": "Japan’s defence minister will visit Canberra this week, the highest level engagement with Australia after controversy over Anthony Albanese’s comments about a gift of melons from prime minister Sanae Takaichi. The defenc"
+        },
+        {
+          "source": "euronews",
+          "title": "‘Excellent profit’: Meet the Bavarian hop farmer securing his harvest and income with solar 'hats'",
+          "url_hash": "0c685df2f2f0973cd05b4e91f39f90e5",
+          "lede": "A wave of farm closures is washing over Germany’s lush hop-growing regions as climate change, falling prices and declining demand for beer leave desolation in their wake. ADVERTISEMENT ADVERTISEMENT As of 2026, there are"
+        },
+        {
+          "source": "scmp",
+          "title": "Musk’s headaches: meet China’s corporate matrix challenging his business empire",
+          "url_hash": "49c7ffc0d04228268f09966a30b959b1",
+          "lede": "Advertisement Electric & new energy vehicles Business China Business Musk’s headaches: meet China’s corporate matrix challenging his business empire From Tesla to SpaceX, Starlink and Neuralink, Chinese companies are giv"
+        }
+      ]
+    },
+    {
+      "term": "USA",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 5.03,
+      "baseline_mean_pct": 0.0898,
+      "baseline_presence": 0.83,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "6fbaa80eeb2600b6cfeb6f84dab28fa9",
+          "lede": "Bill Ackman is back in Netflix ( NFLX -0.10% ) . His hedge fund, Pershing Square Capital Management, disclosed a position of 3.15 million shares in its Pershing Square USA fund's semiannual report, released Wednesday eve"
+        },
+        {
+          "source": "fool",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "d45615b7faf531dc59a94296e217129e",
+          "lede": "Bill Ackman is back in Netflix ( NFLX -0.10% ) . His hedge fund, Pershing Square Capital Management, disclosed a position of 3.15 million shares in its Pershing Square USA fund's semiannual report, released Wednesday eve"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "757fd93e7518cfb071a1d461c405315d",
+          "lede": "Markets NFLX Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022 August 15, 2026 — 11:39 pm EDT Written by Daniel Sparks for The Motley Fool linkedin facebook x email red"
+        }
+      ]
+    },
+    {
+      "term": "REGION",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 5.03,
+      "baseline_mean_pct": 0.0777,
+      "baseline_presence": 0.93,
+      "baseline_days": 30,
+      "mkt_pct": 66.7,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 3,
+      "evidence": [
+        {
+          "source": "fortune",
+          "title": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future",
+          "url_hash": "98457724cc4e666e42d45d5f76ddf54e",
+          "lede": "This is a conversation with Fortune Greece CEO Tasos Zachos, reprinted with permission. Recommended Video The second act of artificial intelligence will not be judged by models alone. It will be judged by how economies m"
+        },
+        {
+          "source": "dw",
+          "title": "Moscow says 600 drones targeted region overnight",
+          "url_hash": "6dee7e3f40ec88499351386535603900",
+          "lede": "Hundreds of drones have targeted the Moscow region in a sustained overnight assault that wounded three people, according to the Russian capital's mayor, as Ukraine steps up long-range attacks deep inside Russia. Mayor Se"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future",
+          "url_hash": "2c32f43979513456f2145521ad9fb007",
+          "lede": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future Charles Calestroupat, Microsoft’s Vice President for Southern Europe. · Fortune · courtesy of M"
+        }
+      ]
+    },
+    {
+      "term": "MOMENT",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 4.95,
+      "baseline_mean_pct": 0.1008,
+      "baseline_presence": 0.97,
+      "baseline_days": 30,
+      "mkt_pct": 66.7,
+      "src_entropy": 0.92,
+      "n_sources": 2,
+      "persist": true,
+      "prev_count": 2,
+      "evidence": [
+        {
+          "source": "fortune",
+          "title": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future",
+          "url_hash": "98457724cc4e666e42d45d5f76ddf54e",
+          "lede": "This is a conversation with Fortune Greece CEO Tasos Zachos, reprinted with permission. Recommended Video The second act of artificial intelligence will not be judged by models alone. It will be judged by how economies m"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future",
+          "url_hash": "2c32f43979513456f2145521ad9fb007",
+          "lede": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future Charles Calestroupat, Microsoft’s Vice President for Southern Europe. · Fortune · courtesy of M"
+        },
+        {
+          "source": "fortune",
+          "title": "Talking to a bot might feel good in the moment, but a growing body of research suggests it won’t cure loneliness",
+          "url_hash": "3920da04e5068ecc55e19ce875e00d30",
+          "lede": "Talking to a chatbot might make you feel better about the conversation, but it may also leave you feeling lonelier. Recommended Video That’s the finding of a new experiment out of Munich-based global economic research ne"
+        }
+      ]
+    },
+    {
+      "term": "THINK",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 4.78,
+      "baseline_mean_pct": 0.2298,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 80.0,
+      "src_entropy": 0.96,
+      "n_sources": 4,
+      "persist": true,
+      "prev_count": 5,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Morgan Stanley Says SpaceX Is Worth $300 Per Share. The Stock Trades Near $140. Here's Who I Think Is Right.",
+          "url_hash": "d5b18b22d2dfc1339f8c18c20279aa98",
+          "lede": "It's not surprising that Space Exploration Technologies ( SPCX -0.91% ) hasn't blasted off since its initial public offering on June 12. IPO stocks are notoriously wobbly as they come out of the gate, as the novelty wear"
+        },
+        {
+          "source": "fool",
+          "title": "Morgan Stanley Says SpaceX Is Worth $300 Per Share. The Stock Trades Near $140. Here's Who I Think Is Right.",
+          "url_hash": "be77f9287454db3b93615a2f124c501e",
+          "lede": "It's not surprising that Space Exploration Technologies ( SPCX -0.91% ) hasn't blasted off since its initial public offering on June 12. IPO stocks are notoriously wobbly as they come out of the gate, as the novelty wear"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Morgan Stanley Says SpaceX Is Worth $300 Per Share. The Stock Trades Near $140. Here's Who I Think Is Right.",
+          "url_hash": "06efe4980063fc68f166b58b16d36a26",
+          "lede": "Markets Morgan Stanley Says SpaceX Is Worth $300 Per Share. The Stock Trades Near $140. Here's Who I Think Is Right. August 16, 2026 — 04:05 am EDT Written by Patrick Sanders for The Motley Fool linkedin facebook x email"
+        }
+      ]
+    },
+    {
+      "term": "THINGS",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 4.73,
+      "baseline_mean_pct": 0.2246,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 60.0,
+      "src_entropy": 1.0,
+      "n_sources": 5,
+      "persist": true,
+      "prev_count": 9,
+      "evidence": [
+        {
+          "source": "euronews",
+          "title": "Exploring Andorra: The best things to do in the microstate aside from skiing and shopping",
+          "url_hash": "10a51e5ba46925b2f9ce408e807ee5fc",
+          "lede": "When I told my hairdresser I’d just come back from a trip to Andorra, their immediate response was, “I couldn’t point to it on a map”. ADVERTISEMENT ADVERTISEMENT Given how little the country hits the headlines , that’s"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Apple: For Investors, the 3 Things That Matter Now Are AI, Growth, and Valuation (NASDAQ: AAPL)",
+          "url_hash": "a9b6fb3fb35c5c877a66dcaa8dcec04e",
+          "lede": "Apple ( AAPL +0.22% ) has long been one of the most valuable companies on Earth, a position bolstered by its enormously popular products and services. The consumer tech giant has, unsurprisingly, been a very successful i"
+        },
+        {
+          "source": "fool",
+          "title": "Apple: For Investors, the 3 Things That Matter Now Are AI, Growth, and Valuation (NASDAQ: AAPL)",
+          "url_hash": "1d1e8c2a9ea4f235b3b5e19272cab2d7",
+          "lede": "Apple ( AAPL +0.22% ) has long been one of the most valuable companies on Earth, a position bolstered by its enormously popular products and services. The consumer tech giant has, unsurprisingly, been a very successful i"
+        }
+      ]
+    },
+    {
+      "term": "THINKS",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 4.72,
+      "baseline_mean_pct": 0.1268,
+      "baseline_presence": 0.93,
+      "baseline_days": 30,
+      "mkt_pct": 80.0,
+      "src_entropy": 1.0,
+      "n_sources": 5,
+      "persist": true,
+      "prev_count": 3,
+      "evidence": [
+        {
+          "source": "businessinsider",
+          "title": "The skill BCG's North America boss thinks matters more in the AI era",
+          "url_hash": "eab4632dc7a2bebfa8e1f12b92b494ee",
+          "lede": "Careers Layoff Recovery Build a calm, realistic plan to recover from job loss and move toward your next role."
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "9b1a9158a476cb14ed101c51eda1354d",
+          "lede": "Just two years ago, Strategy ( MSTR -4.18% ) was the talk of the stock market. It had somehow figured out a way to outperform Bitcoin ( BTC -0.07% ) , and its aggressive, nonstop strategy of accumulating Bitcoin as quick"
+        },
+        {
+          "source": "fool",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "4b822331ad1548e08ccba3c05332d92f",
+          "lede": "Just two years ago, Strategy ( MSTR -4.18% ) was the talk of the stock market. It had somehow figured out a way to outperform Bitcoin ( BTC -0.07% ) , and its aggressive, nonstop strategy of accumulating Bitcoin as quick"
+        }
+      ]
+    },
+    {
+      "term": "PASSIVE",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 4.66,
+      "baseline_mean_pct": 0.1079,
+      "baseline_presence": 0.8,
+      "baseline_days": 30,
+      "mkt_pct": 40.0,
+      "src_entropy": 0.96,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "3 Reasons This Top Warren Buffett Dividend Stock Is a Passive Income Investor's Dream",
+          "url_hash": "5b27089c173877afa49664dc0f06b27a",
+          "lede": "In the past decade, shares of Coca-Cola ( KO +0.33% ) have generated a total return of 169% (as of Aug. 13). This performance falls significantly short of the 319% total return of the S&P 500 index ( ^GSPC -0.17% ) . The"
+        },
+        {
+          "source": "fool",
+          "title": "3 Reasons This Top Warren Buffett Dividend Stock Is a Passive Income Investor's Dream",
+          "url_hash": "261ac20b36f52bc6eee18f387dcf138a",
+          "lede": "In the past decade, shares of Coca-Cola ( KO +0.33% ) have generated a total return of 169% (as of Aug. 13). This performance falls significantly short of the 319% total return of the S&P 500 index ( ^GSPC -0.17% ) . The"
+        },
+        {
+          "source": "nasdaq",
+          "title": "3 Reasons This Top Warren Buffett Dividend Stock Is a Passive Income Investor's Dream",
+          "url_hash": "b440e62f3e1082261454c427a51d2862",
+          "lede": "Markets KO 3 Reasons This Top Warren Buffett Dividend Stock Is a Passive Income Investor's Dream August 16, 2026 — 06:15 am EDT Written by Neil Patel for The Motley Fool linkedin facebook x email reddit Key Points Coca-C"
+        }
+      ]
+    },
+    {
+      "term": "WHO",
+      "kind": "SPIKE",
+      "count": 11,
+      "denom": 730,
+      "share_pct": 1.5068,
+      "z": 4.64,
+      "baseline_mean_pct": 0.5855,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 45.5,
+      "src_entropy": 0.95,
+      "n_sources": 8,
+      "persist": true,
+      "prev_count": 14,
+      "evidence": [
+        {
+          "source": "wsj",
+          "title": "The ‘Country Hicks’ Who Refused $26 Million from an AI Data Center",
+          "url_hash": "afa24bc1ac52d5ac16b0f34f8855273f",
+          "lede": null
+        },
+        {
+          "source": "aljazeera",
+          "title": "Who killed Tupac? What to know about the trial of Duane ‘Keffe D’ Davis",
+          "url_hash": "45b6e6fd3be969ac60a8b4f38b2495cc",
+          "lede": "Three decades after the killing of Tupac Shakur shocked the music world, a man in his 60s is finally going on trial for allegedly orchestrating the shooting. The mystery of who killed the rapper has intrigued fans and co"
+        },
+        {
+          "source": "forbes",
+          "title": "See New ‘X-Men’ Cast Members And Stars Who Played Their Roles Before Them",
+          "url_hash": "6771080aa431a9282b7126f6ae0dbae7",
+          "lede": null
+        }
+      ]
+    },
+    {
+      "term": "OUTPERFORM",
+      "kind": "SPIKE",
+      "count": 4,
+      "denom": 730,
+      "share_pct": 0.5479,
+      "z": 4.48,
+      "baseline_mean_pct": 0.0685,
+      "baseline_presence": 0.6,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 4,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "9b1a9158a476cb14ed101c51eda1354d",
+          "lede": "Just two years ago, Strategy ( MSTR -4.18% ) was the talk of the stock market. It had somehow figured out a way to outperform Bitcoin ( BTC -0.07% ) , and its aggressive, nonstop strategy of accumulating Bitcoin as quick"
+        },
+        {
+          "source": "fool",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "4b822331ad1548e08ccba3c05332d92f",
+          "lede": "Just two years ago, Strategy ( MSTR -4.18% ) was the talk of the stock market. It had somehow figured out a way to outperform Bitcoin ( BTC -0.07% ) , and its aggressive, nonstop strategy of accumulating Bitcoin as quick"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "eded2775e24c33ed9c8450ea1adb45c8",
+          "lede": "Markets MSTR Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong. August 16, 2026 — 07:00 am EDT Written by Dominic Basulto for The Motley Fool linkedin face"
+        }
+      ]
+    },
+    {
+      "term": "VOTING",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 4.44,
+      "baseline_mean_pct": 0.0736,
+      "baseline_presence": 0.83,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 1,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "a31b08038a4404d55e425ae912e86b4e",
+          "lede": "Back in 2024, Tesla ( TSLA +0.68% ) CEO Elon Musk wrote a series of posts on X, saying that he needed 25% voting control of Tesla to feel comfortable leading it into its new era as an artificial intelligence (AI) and rob"
+        },
+        {
+          "source": "fool",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "fd6df2169b8138018f963dcae52fc7c9",
+          "lede": "Back in 2024, Tesla ( TSLA +0.68% ) CEO Elon Musk wrote a series of posts on X, saying that he needed 25% voting control of Tesla to feel comfortable leading it into its new era as an artificial intelligence (AI) and rob"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "a8a7b10045f1467a6457c7fa3cac57e0",
+          "lede": "Markets TSLA Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders. August 16, 2026 — 06:05 am EDT Written by Chris Neiger for"
+        }
+      ]
+    },
+    {
+      "term": "AAPL",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 4.42,
+      "baseline_mean_pct": 0.0874,
+      "baseline_presence": 0.83,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 1,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Apple: For Investors, the 3 Things That Matter Now Are AI, Growth, and Valuation (NASDAQ: AAPL)",
+          "url_hash": "a9b6fb3fb35c5c877a66dcaa8dcec04e",
+          "lede": "Apple ( AAPL +0.22% ) has long been one of the most valuable companies on Earth, a position bolstered by its enormously popular products and services. The consumer tech giant has, unsurprisingly, been a very successful i"
+        },
+        {
+          "source": "fool",
+          "title": "Apple: For Investors, the 3 Things That Matter Now Are AI, Growth, and Valuation (NASDAQ: AAPL)",
+          "url_hash": "1d1e8c2a9ea4f235b3b5e19272cab2d7",
+          "lede": "Apple ( AAPL +0.22% ) has long been one of the most valuable companies on Earth, a position bolstered by its enormously popular products and services. The consumer tech giant has, unsurprisingly, been a very successful i"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Apple: For Investors, the 3 Things That Matter Now Are AI, Growth, and Valuation (NASDAQ: AAPL)",
+          "url_hash": "fd29cebe21f6f161fba1caf8bd843264",
+          "lede": "Markets AAPL Apple: For Investors, the 3 Things That Matter Now Are AI, Growth, and Valuation (NASDAQ: AAPL) August 16, 2026 — 05:27 am EDT Written by Neil Patel for The Motley Fool linkedin facebook x email reddit Key P"
+        }
+      ]
+    },
+    {
+      "term": "LEADS",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 4.3,
+      "baseline_mean_pct": 0.138,
+      "baseline_presence": 0.97,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 0.92,
+      "n_sources": 2,
+      "persist": false,
+      "prev_count": 1,
+      "evidence": [
+        {
+          "source": "fortune",
+          "title": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future",
+          "url_hash": "98457724cc4e666e42d45d5f76ddf54e",
+          "lede": "This is a conversation with Fortune Greece CEO Tasos Zachos, reprinted with permission. Recommended Video The second act of artificial intelligence will not be judged by models alone. It will be judged by how economies m"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future",
+          "url_hash": "2c32f43979513456f2145521ad9fb007",
+          "lede": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future Charles Calestroupat, Microsoft’s Vice President for Southern Europe. · Fortune · courtesy of M"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Dow Jones Futures: Nvidia Leads 5 Stocks In Buy Areas, Walmart Due; Market Ready To Run?",
+          "url_hash": "8d8a92aba502e6a092a2b9906eb16859",
+          "lede": "Dow Jones Futures: Nvidia Leads 5 Stocks In Buy Areas, Walmart Due; Market Ready To Run? Dow Jones Futures: Nvidia Leads 5 Stocks In Buy Areas, Walmart Due; Market Ready To Run? · Investor's Business Daily ED CARSON Sun,"
+        }
+      ]
+    },
+    {
+      "term": "EVERYONE",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 4.28,
+      "baseline_mean_pct": 0.1482,
+      "baseline_presence": 0.97,
+      "baseline_days": 30,
+      "mkt_pct": 40.0,
+      "src_entropy": 1.0,
+      "n_sources": 5,
+      "persist": true,
+      "prev_count": 6,
+      "evidence": [
+        {
+          "source": "guardian",
+          "title": "The weekend is 100 years old – but have ‘skiveday Fridays’ and hybrid working ruined it for everyone?",
+          "url_hash": "86501659bdb37e750739920a72f4d905",
+          "lede": "F or 11 years, from 1929 to 1940, the Soviet Union did not have weekends. Instead, to increase productivity citizens were allocated a day off in every seven at random. With 80% of the population at work on any given day,"
+        },
+        {
+          "source": "axios",
+          "title": "How AI could bring Mayo-quality health care to everyone",
+          "url_hash": "6134758b7b934370103174371b642770",
+          "lede": null
+        },
+        {
+          "source": "japantimes",
+          "title": "‘Everyone lives in fear’: Yemenis worry about return to all-out war",
+          "url_hash": "b3ba9c70a24f359084ae2e471a022af0",
+          "lede": null
+        }
+      ]
+    },
+    {
+      "term": "OPERATING",
+      "kind": "SPIKE",
+      "count": 4,
+      "denom": 730,
+      "share_pct": 0.5479,
+      "z": 4.25,
+      "baseline_mean_pct": 0.1427,
+      "baseline_presence": 0.83,
+      "baseline_days": 30,
+      "mkt_pct": 50.0,
+      "src_entropy": 1.0,
+      "n_sources": 2,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "fool",
+          "title": "What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst",
+          "url_hash": "3b1bc212a5b794c2717f842e9f2276d0",
+          "lede": "Jim Rozakis, the company's president and COO, disposed of 4,041 shares of Cintas Corporation ( CTAS -0.33% ) on August 10, as disclosed in a recent SEC Form 4 filing . Transaction summary Metric Value Transaction value ~"
+        },
+        {
+          "source": "nasdaq",
+          "title": "What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst",
+          "url_hash": "819e7b8cdeec174be777f5913b84403d",
+          "lede": "Markets CTAS What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst August 15, 2026 — 09:10 pm EDT Written by Jonathan Ponciano for The Motley Fool linkedin facebook x email reddit Key"
+        },
+        {
+          "source": "fool",
+          "title": "CoreWeave's Operating Chief Sold Before Earnings. Here's What to Know",
+          "url_hash": "c11c24243209592e9af66106a14e6939",
+          "lede": "Sachin Jain, the chief operating officer of the firm, reported a sale of 13,608 shares of CoreWeave, Inc. ( CRWV -0.97% ) on August 10, according to an SEC Form 4 filing . Transaction summary Metric Value Transaction val"
+        }
+      ]
+    },
+    {
+      "term": "SHOWS",
+      "kind": "SPIKE",
+      "count": 6,
+      "denom": 730,
+      "share_pct": 0.8219,
+      "z": 3.84,
+      "baseline_mean_pct": 0.3618,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 83.3,
+      "src_entropy": 0.96,
+      "n_sources": 4,
+      "persist": true,
+      "prev_count": 7,
+      "evidence": [
+        {
+          "source": "fool",
+          "title": "This Cintas Insider's Stake Just Grew. Here's What the Filing Shows",
+          "url_hash": "07653e6d011bb1e4384d578ccc1d825d",
+          "lede": "Scott Garula, EVP and CFO of Cintas Corporation ( CTAS -0.33% ) , disposed of 2,958 shares of common stock on August 10, according to a recent SEC Form 4 filing . Transaction summary Metric Value Shares sold 2,958 Transa"
+        },
+        {
+          "source": "nasdaq",
+          "title": "This Cintas Insider's Stake Just Grew. Here's What the Filing Shows",
+          "url_hash": "5d7573e1cd2910629310c7b641f432a3",
+          "lede": "Markets CTAS This Cintas Insider's Stake Just Grew. Here's What the Filing Shows August 15, 2026 — 09:40 pm EDT Written by Jonathan Ponciano for The Motley Fool linkedin facebook x email reddit Key Points The disposition"
+        },
+        {
+          "source": "google_en",
+          "title": "Billionaire Peter Thiel buys 1% stake in Argentine Vaca Muerta oil firm, filing shows - Reuters",
+          "url_hash": "273e3d76969b6bc401ec224c0043ca30",
+          "lede": null
+        }
+      ]
+    },
+    {
+      "term": "STRATEGY",
+      "kind": "SPIKE",
+      "count": 9,
+      "denom": 730,
+      "share_pct": 1.2329,
+      "z": 3.81,
+      "baseline_mean_pct": 0.5488,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 88.9,
+      "src_entropy": 0.98,
+      "n_sources": 5,
+      "persist": true,
+      "prev_count": 11,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "9b1a9158a476cb14ed101c51eda1354d",
+          "lede": "Just two years ago, Strategy ( MSTR -4.18% ) was the talk of the stock market. It had somehow figured out a way to outperform Bitcoin ( BTC -0.07% ) , and its aggressive, nonstop strategy of accumulating Bitcoin as quick"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Rival Shows the Drawback in Tesla's Driverless Tech Strategy. Are They Right?",
+          "url_hash": "125ae63e702ba98900f338bfab2db035",
+          "lede": "A while back, Morgan Stanley's well-respected automotive analyst Adam Jonas evaluated Tesla ( TSLA +0.68% ) using a sum-of-the-parts model between artificial intelligence (AI), software, energy, and robotics rather than"
+        },
+        {
+          "source": "fool",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "4b822331ad1548e08ccba3c05332d92f",
+          "lede": "Just two years ago, Strategy ( MSTR -4.18% ) was the talk of the stock market. It had somehow figured out a way to outperform Bitcoin ( BTC -0.07% ) , and its aggressive, nonstop strategy of accumulating Bitcoin as quick"
+        }
+      ]
+    },
+    {
+      "term": "INSIDER",
+      "kind": "SPIKE",
+      "count": 14,
+      "denom": 730,
+      "share_pct": 1.9178,
+      "z": 3.79,
+      "baseline_mean_pct": 0.3452,
+      "baseline_presence": 0.97,
+      "baseline_days": 30,
+      "mkt_pct": 42.9,
+      "src_entropy": 1.0,
+      "n_sources": 2,
+      "persist": true,
+      "prev_count": 12,
+      "evidence": [
+        {
+          "source": "fool",
+          "title": "This Cintas Insider's Stake Just Grew. Here's What the Filing Shows",
+          "url_hash": "07653e6d011bb1e4384d578ccc1d825d",
+          "lede": "Scott Garula, EVP and CFO of Cintas Corporation ( CTAS -0.33% ) , disposed of 2,958 shares of common stock on August 10, according to a recent SEC Form 4 filing . Transaction summary Metric Value Shares sold 2,958 Transa"
+        },
+        {
+          "source": "fool",
+          "title": "What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst",
+          "url_hash": "3b1bc212a5b794c2717f842e9f2276d0",
+          "lede": "Jim Rozakis, the company's president and COO, disposed of 4,041 shares of Cintas Corporation ( CTAS -0.33% ) on August 10, as disclosed in a recent SEC Form 4 filing . Transaction summary Metric Value Transaction value ~"
+        },
+        {
+          "source": "nasdaq",
+          "title": "What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst",
+          "url_hash": "819e7b8cdeec174be777f5913b84403d",
+          "lede": "Markets CTAS What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst August 15, 2026 — 09:10 pm EDT Written by Jonathan Ponciano for The Motley Fool linkedin facebook x email reddit Key"
+        }
+      ]
+    },
+    {
+      "term": "RAISING",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 3.63,
+      "baseline_mean_pct": 0.1212,
+      "baseline_presence": 0.9,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Walmart Keeps Raising Its Payout No Matter What the Market Does. Here's Why That Matters Now.",
+          "url_hash": "3ca13d7cdbc3aa5add3ebdc66eef1fe8",
+          "lede": "When a company earns the title of Dividend King, it becomes part of an elite club, as boosting a dividend for 50 or more consecutive years is no small feat. For investors, it's a signal that, whatever types of uncertaint"
+        },
+        {
+          "source": "fool",
+          "title": "Walmart Keeps Raising Its Payout No Matter What the Market Does. Here's Why That Matters Now.",
+          "url_hash": "8598f26dc9c76e7d1663935e30d19b3c",
+          "lede": "When a company earns the title of Dividend King, it becomes part of an elite club, as boosting a dividend for 50 or more consecutive years is no small feat. For investors, it's a signal that, whatever types of uncertaint"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Walmart Keeps Raising Its Payout No Matter What the Market Does. Here's Why That Matters Now.",
+          "url_hash": "4f82fff232b567dd9732f7bbf3d46fef",
+          "lede": "Markets WMT Walmart Keeps Raising Its Payout No Matter What the Market Does. Here's Why That Matters Now. August 16, 2026 — 08:59 am EDT Written by Jack Delaney for The Motley Fool linkedin facebook x email reddit Key Po"
+        }
+      ]
+    },
+    {
+      "term": "MORGAN",
+      "kind": "SPIKE",
+      "count": 6,
+      "denom": 730,
+      "share_pct": 0.8219,
+      "z": 3.57,
+      "baseline_mean_pct": 0.2559,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 83.3,
+      "src_entropy": 0.9,
+      "n_sources": 4,
+      "persist": false,
+      "prev_count": 2,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Morgan Stanley sends a blunt Tesla message to investors",
+          "url_hash": "750588ce0530c19953bc8f5d025c3207",
+          "lede": null
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Morgan Stanley sends a blunt Tesla message to investors",
+          "url_hash": "42d738156ed8c103e1427e74e2c14bd0",
+          "lede": "Morgan Stanley sends a blunt Tesla message to investors Hillary Remy Sun, August 16, 2026 at 10:03 AM GMT+9 5 min read TSLA +0.68% MS -0.47% The spending is going up. The margins are going down. Free cash flow is negativ"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Morgan Stanley Says SpaceX Is Worth $300 Per Share. The Stock Trades Near $140. Here's Who I Think Is Right.",
+          "url_hash": "d5b18b22d2dfc1339f8c18c20279aa98",
+          "lede": "It's not surprising that Space Exploration Technologies ( SPCX -0.91% ) hasn't blasted off since its initial public offering on June 12. IPO stocks are notoriously wobbly as they come out of the gate, as the novelty wear"
+        }
+      ]
+    },
+    {
+      "term": "MULTI",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 3.48,
+      "baseline_mean_pct": 0.1286,
+      "baseline_presence": 0.97,
+      "baseline_days": 30,
+      "mkt_pct": 66.7,
+      "src_entropy": 0.92,
+      "n_sources": 2,
+      "persist": true,
+      "prev_count": 2,
+      "evidence": [
+        {
+          "source": "businessinsider",
+          "title": "An employee-run, multi-day backpacking trip has become a hot ticket at McKinsey",
+          "url_hash": "a81219d6761cda4cd45e582419d04d0e",
+          "lede": "Careers Layoff Recovery Build a calm, realistic plan to recover from job loss and move toward your next role."
+        },
+        {
+          "source": "thestreet",
+          "title": "Amazon's multi-functional large charcoal grill is just $117 and has two side tables",
+          "url_hash": "52e1d12ba6e7cfc9a2eb010c87a14a02",
+          "lede": null
+        },
+        {
+          "source": "thestreet",
+          "title": "Amazon is selling a $39 multi-tool for $24 that’s easy to carry",
+          "url_hash": "ed940c3ea81e8321b12c0f3215c1774c",
+          "lede": null
+        }
+      ]
+    },
+    {
+      "term": "DECADE",
+      "kind": "SPIKE",
+      "count": 4,
+      "denom": 730,
+      "share_pct": 0.5479,
+      "z": 3.38,
+      "baseline_mean_pct": 0.1953,
+      "baseline_presence": 0.93,
+      "baseline_days": 30,
+      "mkt_pct": 75.0,
+      "src_entropy": 0.95,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 5,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Just 13% of U.S. large-cap stock-picking funds beat benchmarks over decade",
+          "url_hash": "6b7974ba5609a56bad56c92dfd5c7df8",
+          "lede": "Just 13% of U.S. large-cap stock-picking funds beat benchmarks over decade Simon Mugo Sun, August 16, 2026 at 11:07 AM GMT+9 2 min read ^GSPC -0.17% Investing.com -- Only 13% of actively managed US large-cap equity funds"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "AMD Turned $10,000 Into More Than $700,000 in a Decade. The S&P 500 Turned It Into About $42,000.",
+          "url_hash": "8a72e4fb96212c2a80777a6e25904cfc",
+          "lede": "Ten years ago this week, Advanced Micro Devices ( AMD +6.50% ) closed at $6.73 a share. A $10,000 investment made that day would be worth about $724,000 as of this writing, with the stock near $487. That's a gain of more"
+        },
+        {
+          "source": "fool",
+          "title": "AMD Turned $10,000 Into More Than $700,000 in a Decade. The S&P 500 Turned It Into About $42,000.",
+          "url_hash": "828475142c01ba0c621b86de8f9601d9",
+          "lede": "Ten years ago this week, Advanced Micro Devices ( AMD +6.50% ) closed at $6.73 a share. A $10,000 investment made that day would be worth about $724,000 as of this writing, with the stock near $487. That's a gain of more"
+        }
+      ]
+    },
+    {
+      "term": "COSTCO",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 3.3,
+      "baseline_mean_pct": 0.1006,
+      "baseline_presence": 0.93,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 4,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Costco: Patient Investors Know the Bear Case (NASDAQ: COST)",
+          "url_hash": "f04b645e4ad49e9774cfd728ee7d928d",
+          "lede": "Costco ( COST -0.08% ) has trounced the S&P 500 index in recent times. The warehouse club operator's shares produced total returns of 125% and 564%, respectively, in the past five and 10 years (as of Aug. 13). Fantastic"
+        },
+        {
+          "source": "fool",
+          "title": "Costco: Patient Investors Know the Bear Case (NASDAQ: COST)",
+          "url_hash": "53ba06863324732a76da4fa0074c896e",
+          "lede": "Costco ( COST -0.08% ) has trounced the S&P 500 index in recent times. The warehouse club operator's shares produced total returns of 125% and 564%, respectively, in the past five and 10 years (as of Aug. 13). Fantastic"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Costco: Patient Investors Know the Bear Case (NASDAQ: COST)",
+          "url_hash": "8d2518e546621d26be16b50c6201f4fb",
+          "lede": "Markets COST Costco: Patient Investors Know the Bear Case (NASDAQ: COST) August 16, 2026 — 04:15 am EDT Written by Neil Patel for The Motley Fool linkedin facebook x email reddit Key Points It seems that Costco's stock h"
+        }
+      ]
+    },
+    {
+      "term": "LEADING",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 3.24,
+      "baseline_mean_pct": 0.1424,
+      "baseline_presence": 0.9,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 1,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "a31b08038a4404d55e425ae912e86b4e",
+          "lede": "Back in 2024, Tesla ( TSLA +0.68% ) CEO Elon Musk wrote a series of posts on X, saying that he needed 25% voting control of Tesla to feel comfortable leading it into its new era as an artificial intelligence (AI) and rob"
+        },
+        {
+          "source": "fool",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "fd6df2169b8138018f963dcae52fc7c9",
+          "lede": "Back in 2024, Tesla ( TSLA +0.68% ) CEO Elon Musk wrote a series of posts on X, saying that he needed 25% voting control of Tesla to feel comfortable leading it into its new era as an artificial intelligence (AI) and rob"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "a8a7b10045f1467a6457c7fa3cac57e0",
+          "lede": "Markets TSLA Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders. August 16, 2026 — 06:05 am EDT Written by Chris Neiger for"
+        }
+      ]
+    },
+    {
+      "term": "TRADES",
+      "kind": "SPIKE",
+      "count": 4,
+      "denom": 730,
+      "share_pct": 0.5479,
+      "z": 3.17,
+      "baseline_mean_pct": 0.1988,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 75.0,
+      "src_entropy": 1.0,
+      "n_sources": 4,
+      "persist": true,
+      "prev_count": 7,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Morgan Stanley Says SpaceX Is Worth $300 Per Share. The Stock Trades Near $140. Here's Who I Think Is Right.",
+          "url_hash": "d5b18b22d2dfc1339f8c18c20279aa98",
+          "lede": "It's not surprising that Space Exploration Technologies ( SPCX -0.91% ) hasn't blasted off since its initial public offering on June 12. IPO stocks are notoriously wobbly as they come out of the gate, as the novelty wear"
+        },
+        {
+          "source": "fool",
+          "title": "Morgan Stanley Says SpaceX Is Worth $300 Per Share. The Stock Trades Near $140. Here's Who I Think Is Right.",
+          "url_hash": "be77f9287454db3b93615a2f124c501e",
+          "lede": "It's not surprising that Space Exploration Technologies ( SPCX -0.91% ) hasn't blasted off since its initial public offering on June 12. IPO stocks are notoriously wobbly as they come out of the gate, as the novelty wear"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Morgan Stanley Says SpaceX Is Worth $300 Per Share. The Stock Trades Near $140. Here's Who I Think Is Right.",
+          "url_hash": "06efe4980063fc68f166b58b16d36a26",
+          "lede": "Markets Morgan Stanley Says SpaceX Is Worth $300 Per Share. The Stock Trades Near $140. Here's Who I Think Is Right. August 16, 2026 — 04:05 am EDT Written by Patrick Sanders for The Motley Fool linkedin facebook x email"
+        }
+      ]
+    },
+    {
+      "term": "SOUTHERN",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 3.14,
+      "baseline_mean_pct": 0.1246,
+      "baseline_presence": 0.9,
+      "baseline_days": 30,
+      "mkt_pct": 66.7,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 1,
+      "evidence": [
+        {
+          "source": "fortune",
+          "title": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future",
+          "url_hash": "98457724cc4e666e42d45d5f76ddf54e",
+          "lede": "This is a conversation with Fortune Greece CEO Tasos Zachos, reprinted with permission. Recommended Video The second act of artificial intelligence will not be judged by models alone. It will be judged by how economies m"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future",
+          "url_hash": "2c32f43979513456f2145521ad9fb007",
+          "lede": "Microsoft exec on Southern Europe’s big AI moment: skills — not technology — will determine who leads the region’s AI future Charles Calestroupat, Microsoft’s Vice President for Southern Europe. · Fortune · courtesy of M"
+        },
+        {
+          "source": "aljazeera",
+          "title": "Why has Israel escalated attacks in southern Lebanon despite ceasefire?",
+          "url_hash": "9e22d1f6a2e44233dc870158122a8e81",
+          "lede": "Lebanese leaders have condemned the Israeli bombing of southern Lebanon that has killed at least 11 people in the worst attacks since the renewal of a ceasefire was brokered in June by the United States. Lebanon and Isra"
+        }
+      ]
+    },
+    {
+      "term": "RIVAL",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 3.07,
+      "baseline_mean_pct": 0.1288,
+      "baseline_presence": 0.9,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Rival Shows the Drawback in Tesla's Driverless Tech Strategy. Are They Right?",
+          "url_hash": "125ae63e702ba98900f338bfab2db035",
+          "lede": "A while back, Morgan Stanley's well-respected automotive analyst Adam Jonas evaluated Tesla ( TSLA +0.68% ) using a sum-of-the-parts model between artificial intelligence (AI), software, energy, and robotics rather than"
+        },
+        {
+          "source": "fool",
+          "title": "Rival Shows the Drawback in Tesla's Driverless Tech Strategy. Are They Right?",
+          "url_hash": "647b920b6d25fb32de5912ae3e0b1dab",
+          "lede": "A while back, Morgan Stanley's well-respected automotive analyst Adam Jonas evaluated Tesla ( TSLA +0.68% ) using a sum-of-the-parts model between artificial intelligence (AI), software, energy, and robotics rather than"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Rival Shows the Drawback in Tesla's Driverless Tech Strategy. Are They Right?",
+          "url_hash": "4c4ba701d4d19bd64e95fd8ec7c2fb4f",
+          "lede": "Markets TSLA Rival Shows the Drawback in Tesla's Driverless Tech Strategy. Are They Right? August 16, 2026 — 06:35 am EDT Written by Daniel Miller for The Motley Fool linkedin facebook x email reddit Key Points Analyst b"
+        }
+      ]
+    },
+    {
+      "term": "AMD",
+      "kind": "SPIKE",
+      "count": 13,
+      "denom": 730,
+      "share_pct": 1.7808,
+      "z": 3.06,
+      "baseline_mean_pct": 0.687,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 0.98,
+      "n_sources": 4,
+      "persist": true,
+      "prev_count": 15,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "AMD Just Borrowed $4.75 Billion, More Than Triple Its Last Bond Sale",
+          "url_hash": "ad0e0f80f39cd1587c2e7ec9f74d2432",
+          "lede": "Advanced Micro Devices ( AMD +6.50% ) priced the largest bond offering in its history on Thursday -- $4.75 billion of senior notes, spread across four tranches maturing between 2029 and 2036. The sale is more than triple"
+        },
+        {
+          "source": "fool",
+          "title": "AMD Just Borrowed $4.75 Billion, More Than Triple Its Last Bond Sale",
+          "url_hash": "5f2158c1d550094d8073ef54d6bbf8e3",
+          "lede": "Advanced Micro Devices ( AMD +6.50% ) priced the largest bond offering in its history on Thursday -- $4.75 billion of senior notes, spread across four tranches maturing between 2029 and 2036. The sale is more than triple"
+        },
+        {
+          "source": "nasdaq",
+          "title": "AMD Just Borrowed $4.75 Billion, More Than Triple Its Last Bond Sale",
+          "url_hash": "e6e6a23d5a52e2e951c209ca5ab5657c",
+          "lede": "Markets AMD AMD Just Borrowed $4.75 Billion, More Than Triple Its Last Bond Sale August 15, 2026 — 10:39 pm EDT Written by Daniel Sparks for The Motley Fool linkedin facebook x email reddit Key Points AMD priced $4.75 bi"
+        }
+      ]
+    },
+    {
+      "term": "BROADCOM",
+      "kind": "SPIKE",
+      "count": 4,
+      "denom": 730,
+      "share_pct": 0.5479,
+      "z": 3.01,
+      "baseline_mean_pct": 0.1719,
+      "baseline_presence": 0.93,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 4,
+      "persist": false,
+      "prev_count": 1,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Broadcom vs. AMD: Which AI Chip Stock Is the Better Buy?",
+          "url_hash": "8579f1bd5a68e2913d0d2815ffec3984",
+          "lede": "The AI chip trade has been one of the most profitable investment opportunities over the past decade, and the leaders continue to gain market share. Broadcom ( AVGO -5.94% ) and AMD ( AMD +6.50% ) have both outpaced the S"
+        },
+        {
+          "source": "seekingalpha",
+          "title": "Broadcom: VMware-Driven Sell-Off Is A Buying Opportunity",
+          "url_hash": "3e2c34eb0360a5b788ea7026eb199c62",
+          "lede": "JHVEPhoto/iStock Editorial via Getty Images I've covered Broadcom's ( AVGO ) business last time back in November 2024, when the investment thesis revolved around custom chips and integration of VMware. I was bullish on A"
+        },
+        {
+          "source": "fool",
+          "title": "Broadcom vs. AMD: Which AI Chip Stock Is the Better Buy?",
+          "url_hash": "ec3823ca70c90d05313b0207eecf8a55",
+          "lede": "The AI chip trade has been one of the most profitable investment opportunities over the past decade, and the leaders continue to gain market share. Broadcom ( AVGO -5.94% ) and AMD ( AMD +6.50% ) have both outpaced the S"
+        }
+      ]
+    },
+    {
+      "term": "MOVES",
+      "kind": "SPIKE",
+      "count": 4,
+      "denom": 730,
+      "share_pct": 0.5479,
+      "z": 2.95,
+      "baseline_mean_pct": 0.2244,
+      "baseline_presence": 0.97,
+      "baseline_days": 30,
+      "mkt_pct": 75.0,
+      "src_entropy": 1.0,
+      "n_sources": 4,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "fool",
+          "title": "What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst",
+          "url_hash": "3b1bc212a5b794c2717f842e9f2276d0",
+          "lede": "Jim Rozakis, the company's president and COO, disposed of 4,041 shares of Cintas Corporation ( CTAS -0.33% ) on August 10, as disclosed in a recent SEC Form 4 filing . Transaction summary Metric Value Transaction value ~"
+        },
+        {
+          "source": "nasdaq",
+          "title": "What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst",
+          "url_hash": "819e7b8cdeec174be777f5913b84403d",
+          "lede": "Markets CTAS What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst August 15, 2026 — 09:10 pm EDT Written by Jonathan Ponciano for The Motley Fool linkedin facebook x email reddit Key"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "5 big analyst AI moves: Bullish on memory names; Apple and Cisco downgraded",
+          "url_hash": "b5bc443b1146c0b1a8cf07e7fca469c3",
+          "lede": "5 big analyst AI moves: Bullish on memory names; Apple and Cisco downgraded Vahid Karaahmetovic Sun, August 16, 2026 at 6:30 PM GMT+9 7 min read AAPL +0.22% CSCO -1.58% Investing.com -- Here are the biggest analyst moves"
+        }
+      ]
+    },
+    {
+      "term": "WORTH",
+      "kind": "SPIKE",
+      "count": 14,
+      "denom": 730,
+      "share_pct": 1.9178,
+      "z": 2.93,
+      "baseline_mean_pct": 0.817,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 42.9,
+      "src_entropy": 0.94,
+      "n_sources": 4,
+      "persist": true,
+      "prev_count": 14,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "1 Industrials Stock Worth Your Attention and 2 That Underwhelm",
+          "url_hash": "0d8383e6b43fc035a8735ef73329953e",
+          "lede": "1 Industrials Stock Worth Your Attention and 2 That Underwhelm Petr Huřťák Sun, August 16, 2026 at 10:41 AM GMT+9 3 min read LCID -3.42% ^GSPC -0.17% TSLA +0.68% EVGO 0.00% KRT +0.17% 1 Industrials Stock Worth Your Atten"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "1 S&P 500 Stock Worth Investigating and 2 We Turn Down",
+          "url_hash": "9c799bef531022c27f8ed450c84fd7ce",
+          "lede": "1 S&P 500 Stock Worth Investigating and 2 We Turn Down Kayode Omotosho Sun, August 16, 2026 at 9:53 AM GMT+9 3 min read ^GSPC -0.17% SBUX -0.22% CAH +1.70% TRMB +0.10% 1 S&P 500 Stock Worth Investigating and 2 We Turn Do"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "1 Healthcare Stock Worth Your Attention and 2 We Brush Off",
+          "url_hash": "30aa8a958cf35a728264c1cd93014cae",
+          "lede": "1 Healthcare Stock Worth Your Attention and 2 We Brush Off Petr Huřťák Sun, August 16, 2026 at 1:45 PM GMT+9 3 min read ITGR +0.16% ^GSPC -0.17% THC +0.32% EVH +0.43% 1 Healthcare Stock Worth Your Attention and 2 We Brus"
+        }
+      ]
+    },
+    {
+      "term": "ITS",
+      "kind": "SPIKE",
+      "count": 40,
+      "denom": 730,
+      "share_pct": 5.4795,
+      "z": 2.86,
+      "baseline_mean_pct": 3.2437,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 42.5,
+      "src_entropy": 0.77,
+      "n_sources": 11,
+      "persist": false,
+      "prev_count": 50,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Apple’s first foldable could reshape its entire iPhone launch",
+          "url_hash": "aebc914a9583f4d9ef8256d6b8fde2b1",
+          "lede": null
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now.",
+          "url_hash": "ba58387f4d98c0a5a21c634137878928",
+          "lede": "It has been a great year for cybersecurity company CrowdStrike ( CRWD -3.80% ) , with its stock up 85% year to date. It's now one of the most valuable public companies in the world, with a market cap of over $220 billion"
+        },
+        {
+          "source": "fool",
+          "title": "CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now.",
+          "url_hash": "13f5aee529e54e86b90d8409158b32d3",
+          "lede": "It has been a great year for cybersecurity company CrowdStrike ( CRWD -3.80% ) , with its stock up 85% year to date. It's now one of the most valuable public companies in the world, with a market cap of over $220 billion"
+        }
+      ]
+    },
+    {
+      "term": "BETTER",
+      "kind": "SPIKE",
+      "count": 23,
+      "denom": 730,
+      "share_pct": 3.1507,
+      "z": 2.77,
+      "baseline_mean_pct": 1.2571,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 52.2,
+      "src_entropy": 0.85,
+      "n_sources": 6,
+      "persist": true,
+      "prev_count": 48,
+      "evidence": [
+        {
+          "source": "fool",
+          "title": "Which Gold ETF Is the Better Buy: iShares' IAU or State Street's GLD?",
+          "url_hash": "e8185be3c8a9f55c7475ad5c53e7850e",
+          "lede": "The primary distinction between iShares Gold Trust ( IAU +0.61% ) and SPDR Gold Shares ( GLD +0.63% ) is cost, as both funds provide nearly identical exposure to physical gold bullion prices. For many long-term investors"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Which Gold ETF Is the Better Buy: iShares' IAU or State Street's GLD?",
+          "url_hash": "f2c23cf5b6448e6ca42a4bed72d16ec1",
+          "lede": "Markets GLD Which Gold ETF Is the Better Buy: iShares' IAU or State Street's GLD? August 15, 2026 — 08:39 pm EDT Written by Sara Appino for The Motley Fool linkedin facebook x email reddit Key Points The iShares Gold Tru"
+        },
+        {
+          "source": "fool",
+          "title": "Reddit vs. Snowflake: Which High-Growth Tech Stock Is a Better Buy in 2026?",
+          "url_hash": "d9dc870cfbcde9e37c87a4c2348df4e5",
+          "lede": "As the digital economy evolves, investors are weighing the viral community growth of Reddit ( RDDT +12.63% ) against the enterprise data power of Snowflake ( SNOW -2.51% ) to determine which offers better long-term poten"
+        }
+      ]
+    },
+    {
+      "term": "STANLEY",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 2.76,
+      "baseline_mean_pct": 0.2051,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 0.86,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 2,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Morgan Stanley sends a blunt Tesla message to investors",
+          "url_hash": "750588ce0530c19953bc8f5d025c3207",
+          "lede": null
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Morgan Stanley sends a blunt Tesla message to investors",
+          "url_hash": "42d738156ed8c103e1427e74e2c14bd0",
+          "lede": "Morgan Stanley sends a blunt Tesla message to investors Hillary Remy Sun, August 16, 2026 at 10:03 AM GMT+9 5 min read TSLA +0.68% MS -0.47% The spending is going up. The margins are going down. Free cash flow is negativ"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Morgan Stanley Says SpaceX Is Worth $300 Per Share. The Stock Trades Near $140. Here's Who I Think Is Right.",
+          "url_hash": "d5b18b22d2dfc1339f8c18c20279aa98",
+          "lede": "It's not surprising that Space Exploration Technologies ( SPCX -0.91% ) hasn't blasted off since its initial public offering on June 12. IPO stocks are notoriously wobbly as they come out of the gate, as the novelty wear"
+        }
+      ]
+    },
+    {
+      "term": "THERE",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 2.72,
+      "baseline_mean_pct": 0.2938,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 40.0,
+      "src_entropy": 1.0,
+      "n_sources": 5,
+      "persist": true,
+      "prev_count": 6,
+      "evidence": [
+        {
+          "source": "seekingalpha",
+          "title": "Metropolitan Bank: The Quality Just Isn't There",
+          "url_hash": "34ab07ab564f2e4e64c8b8f6a6829340",
+          "lede": "MoMo Productions/DigitalVision via Getty Images Back in February of this year, I made the decision to reaffirm Metropolitan Bank Holding Corp. ( MCB ) as a 'hold ' candidate. Even though I acknowledged that the business"
+        },
+        {
+          "source": "fortune",
+          "title": "There isn’t just one AI bubble, strategist says — there’s a ‘rolling sequence of bubbles’ instead",
+          "url_hash": "09c4be7846190254a594fb6067be8702",
+          "lede": "The question of whether AI is a bubble is the wrong one, Dhaval Joshi argues. The right question is: which AI bubble is popping today? Recommended Video Joshi, until recently the chief strategist for Counterpoint at Lond"
+        },
+        {
+          "source": "marketwatch",
+          "title": "The Mediterranean diet is the best out there. Here’s why Americans struggle with it.",
+          "url_hash": "b07308736428412589879e8bbbcecf52",
+          "lede": null
+        }
+      ]
+    },
+    {
+      "term": "MARGIN",
+      "kind": "SPIKE",
+      "count": 4,
+      "denom": 730,
+      "share_pct": 0.5479,
+      "z": 2.5,
+      "baseline_mean_pct": 0.258,
+      "baseline_presence": 0.97,
+      "baseline_days": 30,
+      "mkt_pct": 75.0,
+      "src_entropy": 0.95,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 2,
+      "evidence": [
+        {
+          "source": "fool",
+          "title": "Cintas Hit a Record 51% Margin. Here's Why Five Insider Filings Don't Change the Story",
+          "url_hash": "8d1d06631423370786954f87b9862a63",
+          "lede": "David Brock Denton, EVP and general counsel of Cintas Corporation ( CTAS -0.33% ) , disposed of 3,479 shares on August 10, according to an SEC Form 4 filing . Transaction summary Metric Value Transaction value $705,000 S"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Cintas Hit a Record 51% Margin. Here's Why Five Insider Filings Don't Change the Story",
+          "url_hash": "790c6bd161a55ac8db40396adeb9a36d",
+          "lede": "Markets CTAS Cintas Hit a Record 51% Margin. Here's Why Five Insider Filings Don't Change the Story August 16, 2026 — 03:50 am EDT Written by Jonathan Ponciano for The Motley Fool linkedin facebook x email reddit Key Poi"
+        },
+        {
+          "source": "seekingalpha",
+          "title": "Church & Dwight: Volume-Driven Growth And Margin Recovery Support A Buy",
+          "url_hash": "9ae1a23ed1f2fa3d6c966b440b33415d",
+          "lede": "mustafaU/iStock via Getty Images Investment Thesis While the consumer demand environment remains challenging in the U.S., Church & Dwight ( CHD ) still delivered organic sales exceeding its outlook in Q1 and Q2. I expect"
+        }
+      ]
+    },
+    {
+      "term": "BILL",
+      "kind": "SPIKE",
+      "count": 6,
+      "denom": 730,
+      "share_pct": 0.8219,
+      "z": 2.46,
+      "baseline_mean_pct": 0.3777,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 66.7,
+      "src_entropy": 1.0,
+      "n_sources": 6,
+      "persist": true,
+      "prev_count": 12,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "6fbaa80eeb2600b6cfeb6f84dab28fa9",
+          "lede": "Bill Ackman is back in Netflix ( NFLX -0.10% ) . His hedge fund, Pershing Square Capital Management, disclosed a position of 3.15 million shares in its Pershing Square USA fund's semiannual report, released Wednesday eve"
+        },
+        {
+          "source": "fool",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "d45615b7faf531dc59a94296e217129e",
+          "lede": "Bill Ackman is back in Netflix ( NFLX -0.10% ) . His hedge fund, Pershing Square Capital Management, disclosed a position of 3.15 million shares in its Pershing Square USA fund's semiannual report, released Wednesday eve"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "757fd93e7518cfb071a1d461c405315d",
+          "lede": "Markets NFLX Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022 August 15, 2026 — 11:39 pm EDT Written by Daniel Sparks for The Motley Fool linkedin facebook x email red"
+        }
+      ]
+    },
+    {
+      "term": "HE",
+      "kind": "SPIKE",
+      "count": 13,
+      "denom": 730,
+      "share_pct": 1.7808,
+      "z": 2.46,
+      "baseline_mean_pct": 0.7163,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 53.8,
+      "src_entropy": 0.93,
+      "n_sources": 7,
+      "persist": true,
+      "prev_count": 25,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Warren Buffett's Successor, Greg Abel, Put Nearly $35 Billion of Cash to Work Last Quarter. Here's What He Bought.",
+          "url_hash": "81a9efab289833a7fb8418801920d9e8",
+          "lede": "One thing that characterized Warren Buffett's last few years as CEO of Berkshire Hathaway ( BRKA -0.84% ) ( BRKB -0.57% ) was the massive pile of cash he accumulated on the company's balance sheet. Berkshire Hathaway is"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "a31b08038a4404d55e425ae912e86b4e",
+          "lede": "Back in 2024, Tesla ( TSLA +0.68% ) CEO Elon Musk wrote a series of posts on X, saying that he needed 25% voting control of Tesla to feel comfortable leading it into its new era as an artificial intelligence (AI) and rob"
+        },
+        {
+          "source": "fool",
+          "title": "Warren Buffett's Successor, Greg Abel, Put Nearly $35 Billion of Cash to Work Last Quarter. Here's What He Bought.",
+          "url_hash": "e66fc37ecc7c443ce8665ae82bd2b9a2",
+          "lede": "One thing that characterized Warren Buffett's last few years as CEO of Berkshire Hathaway ( BRKA -0.84% ) ( BRKB -0.57% ) was the massive pile of cash he accumulated on the company's balance sheet. Berkshire Hathaway is"
+        }
+      ]
+    },
+    {
+      "term": "BEEN",
+      "kind": "SPIKE",
+      "count": 4,
+      "denom": 730,
+      "share_pct": 0.5479,
+      "z": 2.38,
+      "baseline_mean_pct": 0.2383,
+      "baseline_presence": 0.97,
+      "baseline_days": 30,
+      "mkt_pct": 75.0,
+      "src_entropy": 1.0,
+      "n_sources": 4,
+      "persist": true,
+      "prev_count": 7,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Walmart Stock Has Been Sluggish This Year. Should You Buy it Before It Reports Earnings on Aug. 20?",
+          "url_hash": "40421f7a6f0e36d70c3a8e96b1bd1f81",
+          "lede": "Walmart ( WMT -0.39% ) stock had been on an incredible run until recently. The Dividend King, which has raised its dividend annually for the past 53 years, had been beating the market as investors bought into its safety"
+        },
+        {
+          "source": "fool",
+          "title": "Walmart Stock Has Been Sluggish This Year. Should You Buy it Before It Reports Earnings on Aug. 20?",
+          "url_hash": "a20f82a89850f9bf7f85f03403961d2b",
+          "lede": "Walmart ( WMT -0.39% ) stock had been on an incredible run until recently. The Dividend King, which has raised its dividend annually for the past 53 years, had been beating the market as investors bought into its safety"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Walmart Stock Has Been Sluggish This Year. Should You Buy it Before It Reports Earnings on Aug. 20?",
+          "url_hash": "ec0ff8ef10245cb8c5f7a23fbb80a014",
+          "lede": "Markets WMT Walmart Stock Has Been Sluggish This Year. Should You Buy it Before It Reports Earnings on Aug. 20? August 16, 2026 — 06:20 am EDT Written by Jennifer Saibil for The Motley Fool linkedin facebook x email redd"
+        }
+      ]
+    },
+    {
+      "term": "AUG",
+      "kind": "SPIKE",
+      "count": 9,
+      "denom": 730,
+      "share_pct": 1.2329,
+      "z": 2.35,
+      "baseline_mean_pct": 0.4764,
+      "baseline_presence": 0.93,
+      "baseline_days": 30,
+      "mkt_pct": 66.7,
+      "src_entropy": 0.98,
+      "n_sources": 5,
+      "persist": true,
+      "prev_count": 10,
+      "evidence": [
+        {
+          "source": "forbes",
+          "title": "AEW Collision Results (Aug. 15, 2026) As The Continental Cup Continues",
+          "url_hash": "ad82aa3f73cdb47a10ff2b7b4fa5ea9b",
+          "lede": "AEW Collision All Elite Wrestling After a busy episode of Dynamite, the action continued on Saturday, Aug. 15, with another edition of AEW Collision from Las Vegas. This show placed more emphasis on the Continental Chall"
+        },
+        {
+          "source": "upi",
+          "title": "On This Day Aug. 16: West Caribbean Airways crash kills 160 in Venezuela",
+          "url_hash": "c1d611763b3b518e45d7062cbf100489",
+          "lede": "Aug. 16 (UPI) -- On this date in history: In 1812, British forces foiled plans for a U.S. invasion of Canada by capturing the city of Detroit. In 1896, the North Country gold rush began with the discovery of gold in the"
+        },
+        {
+          "source": "upi",
+          "title": "Famous birthdays for Aug. 16: Dan Smyers, Angela Bassett",
+          "url_hash": "c11fdb18ceff69ca2bf77f0736ec7dd0",
+          "lede": "Aug. 16 (UPI) -- Those born on this date are under the sign of Leo. They include: -- Physicist Gabriel Lippmann in 1845 -- Writer T.E. Lawrence in 1888 -- Israeli Prime Minister/Nobel Peace Prize laureate Menachem Begin"
+        }
+      ]
+    },
+    {
+      "term": "KEEPS",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 2.34,
+      "baseline_mean_pct": 0.3463,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 80.0,
+      "src_entropy": 0.96,
+      "n_sources": 4,
+      "persist": false,
+      "prev_count": 4,
+      "evidence": [
+        {
+          "source": "businessinsider",
+          "title": "The cost of long-term care keeps going up, and it's a growing problem for Americans of all ages",
+          "url_hash": "ff16fa5872809907d557ab4305509e07",
+          "lede": "Business Insider tells the stories you want to know about the world of business, technology, and finance"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Eli Lilly’s (LLY) Growth Story Keeps Adding Chapters",
+          "url_hash": "50bfd3a5be0de7748ec1367cde7b0be6",
+          "lede": "Eli Lilly’s (LLY) Growth Story Keeps Adding Chapters Maham Fatima Sun, August 16, 2026 at 7:18 PM GMT+9 4 min read LLY -2.25% NVO -1.78% On August 5, Eli Lilly (NYSE: LLY ) told investors its second quarter delivered 48%"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Walmart Keeps Raising Its Payout No Matter What the Market Does. Here's Why That Matters Now.",
+          "url_hash": "3ca13d7cdbc3aa5add3ebdc66eef1fe8",
+          "lede": "When a company earns the title of Dividend King, it becomes part of an elite club, as boosting a dividend for 50 or more consecutive years is no small feat. For investors, it's a signal that, whatever types of uncertaint"
+        }
+      ]
+    },
+    {
+      "term": "CHANGE",
+      "kind": "SPIKE",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": 2.27,
+      "baseline_mean_pct": 0.3104,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 40.0,
+      "src_entropy": 0.96,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 5,
+      "evidence": [
+        {
+          "source": "fool",
+          "title": "Cintas Hit a Record 51% Margin. Here's Why Five Insider Filings Don't Change the Story",
+          "url_hash": "8d1d06631423370786954f87b9862a63",
+          "lede": "David Brock Denton, EVP and general counsel of Cintas Corporation ( CTAS -0.33% ) , disposed of 3,479 shares on August 10, according to an SEC Form 4 filing . Transaction summary Metric Value Transaction value $705,000 S"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Cintas Hit a Record 51% Margin. Here's Why Five Insider Filings Don't Change the Story",
+          "url_hash": "790c6bd161a55ac8db40396adeb9a36d",
+          "lede": "Markets CTAS Cintas Hit a Record 51% Margin. Here's Why Five Insider Filings Don't Change the Story August 16, 2026 — 03:50 am EDT Written by Jonathan Ponciano for The Motley Fool linkedin facebook x email reddit Key Poi"
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "The Vanguard S&P 500 ETF (VOO) Beat the Vanguard Morningstar Total Stock Market ETF (VTI) for 4 Straight Years. Here's Why That's About to Change.",
+          "url_hash": "628070e96c6b6c357267083f3c8d5bfc",
+          "lede": "The Vanguard S&P 500 ETF ( VOO -0.19% ) and Vanguard Morningstar Total Stock Market ETF ( VTI -0.12% ) are two of the simplest and most cost-effective ways to get exposure to the broader U.S. stock market. The Vanguard S"
+        }
+      ]
+    },
+    {
+      "term": "LAUNCH",
+      "kind": "SPIKE",
+      "count": 6,
+      "denom": 730,
+      "share_pct": 0.8219,
+      "z": 2.26,
+      "baseline_mean_pct": 0.3827,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 50.0,
+      "src_entropy": 1.0,
+      "n_sources": 6,
+      "persist": true,
+      "prev_count": 7,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Apple’s first foldable could reshape its entire iPhone launch",
+          "url_hash": "aebc914a9583f4d9ef8256d6b8fde2b1",
+          "lede": null
+        },
+        {
+          "source": "prnewswire",
+          "title": "Ragnarok Zero: Global Set to Officially Launch on August 18",
+          "url_hash": "8d970790f7216215de95bdfbf264a72c",
+          "lede": "KUALA LUMPUR, Malaysia , Aug. 16, 2026 /PRNewswire/ -- Global gaming company Gravity's Malaysia-based subsidiary, Gravity Game Unite (GGU), is accelerating its efforts to engage players ahead of the official launch of it"
+        },
+        {
+          "source": "guardian",
+          "title": "University spinout to launch water quality app for UK and US waters",
+          "url_hash": "a6bab0ffcd4158258faad7138f0d70c2",
+          "lede": "A UK university spinout behind a rapid bacterial water testing kit is planning to launch live water quality maps, as scores of beachgoers report falling ill after swimming. Molendotech, a spinout from the University of P"
+        }
+      ]
+    },
+    {
+      "term": "HIM",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 2.21,
+      "baseline_mean_pct": 0.1399,
+      "baseline_presence": 0.93,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 3,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "6fbaa80eeb2600b6cfeb6f84dab28fa9",
+          "lede": "Bill Ackman is back in Netflix ( NFLX -0.10% ) . His hedge fund, Pershing Square Capital Management, disclosed a position of 3.15 million shares in its Pershing Square USA fund's semiannual report, released Wednesday eve"
+        },
+        {
+          "source": "fool",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "d45615b7faf531dc59a94296e217129e",
+          "lede": "Bill Ackman is back in Netflix ( NFLX -0.10% ) . His hedge fund, Pershing Square Capital Management, disclosed a position of 3.15 million shares in its Pershing Square USA fund's semiannual report, released Wednesday eve"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "757fd93e7518cfb071a1d461c405315d",
+          "lede": "Markets NFLX Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022 August 15, 2026 — 11:39 pm EDT Written by Daniel Sparks for The Motley Fool linkedin facebook x email red"
+        }
+      ]
+    },
+    {
+      "term": "WHICH",
+      "kind": "SPIKE",
+      "count": 17,
+      "denom": 730,
+      "share_pct": 2.3288,
+      "z": 2.2,
+      "baseline_mean_pct": 0.9855,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 58.8,
+      "src_entropy": 0.9,
+      "n_sources": 6,
+      "persist": true,
+      "prev_count": 52,
+      "evidence": [
+        {
+          "source": "fool",
+          "title": "Which Gold ETF Is the Better Buy: iShares' IAU or State Street's GLD?",
+          "url_hash": "e8185be3c8a9f55c7475ad5c53e7850e",
+          "lede": "The primary distinction between iShares Gold Trust ( IAU +0.61% ) and SPDR Gold Shares ( GLD +0.63% ) is cost, as both funds provide nearly identical exposure to physical gold bullion prices. For many long-term investors"
+        },
+        {
+          "source": "fool",
+          "title": "Vanguard's VNQI or FlexShares' GQRE: Which Global Real Estate ETF Should Long-Term Investors Choose?",
+          "url_hash": "a138abd551b3ca8191a27f886052f815",
+          "lede": "Comparing Vanguard Global ex-U.S. Real Estate ETF ( VNQI -0.35% ) and FlexShares Global Quality Real Estate Index Fund ( GQRE -0.02% ) reveals two distinct approaches to international property exposure, separated by cost"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Vanguard's VNQI or FlexShares' GQRE: Which Global Real Estate ETF Should Long-Term Investors Choose?",
+          "url_hash": "9a5a833abdee3c0063eb4470081832a8",
+          "lede": "Markets VNQI Vanguard's VNQI or FlexShares' GQRE: Which Global Real Estate ETF Should Long-Term Investors Choose? August 15, 2026 — 08:23 pm EDT Written by Sara Appino for The Motley Fool linkedin facebook x email reddit"
+        }
+      ]
+    },
+    {
+      "term": "HAS",
+      "kind": "SPIKE",
+      "count": 23,
+      "denom": 730,
+      "share_pct": 3.1507,
+      "z": 2.2,
+      "baseline_mean_pct": 1.8095,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 47.8,
+      "src_entropy": 0.96,
+      "n_sources": 9,
+      "persist": true,
+      "prev_count": 38,
+      "evidence": [
+        {
+          "source": "guardian",
+          "title": "Destroyed crops, riverbed cyclists and a ‘Rock of Starvation’: how drought has devastated the Danube",
+          "url_hash": "ad5f8b2cfc107c751d1a3c2c16403b1b",
+          "lede": "For centuries, the rock was seen as a warning. When it began to emerge from the Danube, beneath Gellért Hill in Budapest, it meant the river had fallen so low that floating mills could no longer operate, crops were proba"
+        },
+        {
+          "source": "aljazeera",
+          "title": "How a simple lighter has become the backbone of life in Gaza",
+          "url_hash": "72e39713bdb7bd363b1edef5ac5c4465",
+          "lede": "Gaza City — Rabab Deifallah sits inside her tent, clutching a small, battered lighter. She presses it once, then again, trying to produce a spark strong enough to ignite a pile of wood inside a stove. The mother of five"
+        },
+        {
+          "source": "businessinsider",
+          "title": "An employee-run, multi-day backpacking trip has become a hot ticket at McKinsey",
+          "url_hash": "a81219d6761cda4cd45e582419d04d0e",
+          "lede": "Careers Layoff Recovery Build a calm, realistic plan to recover from job loss and move toward your next role."
+        }
+      ]
+    },
+    {
+      "term": "RIGHT",
+      "kind": "SPIKE",
+      "count": 17,
+      "denom": 730,
+      "share_pct": 2.3288,
+      "z": 2.18,
+      "baseline_mean_pct": 0.9793,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 58.8,
+      "src_entropy": 0.89,
+      "n_sources": 8,
+      "persist": false,
+      "prev_count": 10,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now.",
+          "url_hash": "ba58387f4d98c0a5a21c634137878928",
+          "lede": "It has been a great year for cybersecurity company CrowdStrike ( CRWD -3.80% ) , with its stock up 85% year to date. It's now one of the most valuable public companies in the world, with a market cap of over $220 billion"
+        },
+        {
+          "source": "fool",
+          "title": "CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now.",
+          "url_hash": "13f5aee529e54e86b90d8409158b32d3",
+          "lede": "It has been a great year for cybersecurity company CrowdStrike ( CRWD -3.80% ) , with its stock up 85% year to date. It's now one of the most valuable public companies in the world, with a market cap of over $220 billion"
+        },
+        {
+          "source": "nasdaq",
+          "title": "CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now.",
+          "url_hash": "adba248c58f150bbc2de6451335460c5",
+          "lede": "Markets CRWD CrowdStrike Is One of My Largest Holdings and Trading Near Its All-Time High. Here's Why I'm Not Buying More Shares Right Now. August 15, 2026 — 08:50 pm EDT Written by Stefon Walters for The Motley Fool lin"
+        }
+      ]
+    },
+    {
+      "term": "DON",
+      "kind": "SPIKE",
+      "count": 4,
+      "denom": 730,
+      "share_pct": 0.5479,
+      "z": 2.17,
+      "baseline_mean_pct": 0.3209,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 50.0,
+      "src_entropy": 0.95,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 6,
+      "evidence": [
+        {
+          "source": "fool",
+          "title": "Cintas Hit a Record 51% Margin. Here's Why Five Insider Filings Don't Change the Story",
+          "url_hash": "8d1d06631423370786954f87b9862a63",
+          "lede": "David Brock Denton, EVP and general counsel of Cintas Corporation ( CTAS -0.33% ) , disposed of 3,479 shares on August 10, according to an SEC Form 4 filing . Transaction summary Metric Value Transaction value $705,000 S"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Cintas Hit a Record 51% Margin. Here's Why Five Insider Filings Don't Change the Story",
+          "url_hash": "790c6bd161a55ac8db40396adeb9a36d",
+          "lede": "Markets CTAS Cintas Hit a Record 51% Margin. Here's Why Five Insider Filings Don't Change the Story August 16, 2026 — 03:50 am EDT Written by Jonathan Ponciano for The Motley Fool linkedin facebook x email reddit Key Poi"
+        },
+        {
+          "source": "google_en",
+          "title": "I don’t care if the stock market crashes in 2026. I’m still buying bargain shares today - Yahoo Finance UK",
+          "url_hash": "dc3e81be56d4776cb4ec78f539c29731",
+          "lede": null
+        }
+      ]
+    },
+    {
+      "term": "DISNEY",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 2.03,
+      "baseline_mean_pct": 0.1086,
+      "baseline_presence": 0.9,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 0.92,
+      "n_sources": 2,
+      "persist": true,
+      "prev_count": 3,
+      "evidence": [
+        {
+          "source": "forbes",
+          "title": "The $35.6 Billion Driving Force Behind Disney's Next Theme Park",
+          "url_hash": "2ca1c56148f65ed3ba7b6b357cb25f13",
+          "lede": "Disney is doubling down on its plans to build its next theme park in Abu Dhabi. (Photo by Roberto Machado Noa/LightRocket via Getty Images) LightRocket via Getty Images Few brands in the theme park industry are more glob"
+        },
+        {
+          "source": "cna",
+          "title": "Disney, Square Enix preview 'Kingdom Hearts 4' video game at fan convention",
+          "url_hash": "86f7c78700b02c8dc2058a9a483b9f6c",
+          "lede": "Advertisement Business Disney, Square Enix preview 'Kingdom Hearts 4' video game at fan convention A screen shows the logo and a ticker symbol for The Walt Disney Company on the floor of the New York Stock Exchange (NYSE"
+        },
+        {
+          "source": "forbes",
+          "title": "Harrison Ford Is Back As Indiana Jones (Sort Of) For Disney Attraction",
+          "url_hash": "edadcb79db9e7a959ac12ff75fb0b1c1",
+          "lede": null
+        }
+      ]
+    },
+    {
+      "term": "SYSTEM",
+      "kind": "SPIKE",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": 2.02,
+      "baseline_mean_pct": 0.2264,
+      "baseline_presence": 1.0,
+      "baseline_days": 30,
+      "mkt_pct": 66.7,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 6,
+      "evidence": [
+        {
+          "source": "google_en",
+          "title": "'Gaming the system'?: Bond traders agonise over US$70 billion of shadow credit backstops for AI firms - The Business Times",
+          "url_hash": "36a6e45c85bac76373d387396b60f082",
+          "lede": null
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Plug Power Tested a Backup Power System With Microsoft. Here's Why the CEO Says That's Not a Real Pivot Yet.",
+          "url_hash": "6983efdaf22a40551675406f02d36dc8",
+          "lede": "Plug Power ( PLUG +0.87% ) recently tested a backup power system in collaboration with Microsoft . The move comes amid hyperscalers' ever-increasing appetite for energy, and tech giants are exploring every possible avenu"
+        },
+        {
+          "source": "fool",
+          "title": "Plug Power Tested a Backup Power System With Microsoft. Here's Why the CEO Says That's Not a Real Pivot Yet.",
+          "url_hash": "e58b8398ded12948280d0759f89517a3",
+          "lede": "Plug Power ( PLUG +0.87% ) recently tested a backup power system in collaboration with Microsoft . The move comes amid hyperscalers' ever-increasing appetite for energy, and tech giants are exploring every possible avenu"
+        }
+      ]
+    }
+  ],
+  "new_terms": [
+    {
+      "term": "CINTAS",
+      "kind": "NEW",
+      "count": 6,
+      "denom": 730,
+      "share_pct": 0.8219,
+      "z": null,
+      "baseline_mean_pct": 0.0171,
+      "baseline_presence": 0.23,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 2,
+      "persist": true,
+      "prev_count": 6,
+      "evidence": [
+        {
+          "source": "fool",
+          "title": "This Cintas Insider's Stake Just Grew. Here's What the Filing Shows",
+          "url_hash": "07653e6d011bb1e4384d578ccc1d825d",
+          "lede": "Scott Garula, EVP and CFO of Cintas Corporation ( CTAS -0.33% ) , disposed of 2,958 shares of common stock on August 10, according to a recent SEC Form 4 filing . Transaction summary Metric Value Shares sold 2,958 Transa"
+        },
+        {
+          "source": "fool",
+          "title": "What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst",
+          "url_hash": "3b1bc212a5b794c2717f842e9f2276d0",
+          "lede": "Jim Rozakis, the company's president and COO, disposed of 4,041 shares of Cintas Corporation ( CTAS -0.33% ) on August 10, as disclosed in a recent SEC Form 4 filing . Transaction summary Metric Value Transaction value ~"
+        },
+        {
+          "source": "nasdaq",
+          "title": "What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst",
+          "url_hash": "819e7b8cdeec174be777f5913b84403d",
+          "lede": "Markets CTAS What a Cintas Operating Chief Insider Filing Signals as the Firm Moves to Absorb UniFirst August 15, 2026 — 09:10 pm EDT Written by Jonathan Ponciano for The Motley Fool linkedin facebook x email reddit Key"
+        }
+      ]
+    },
+    {
+      "term": "BEHEMOTH",
+      "kind": "NEW",
+      "count": 5,
+      "denom": 730,
+      "share_pct": 0.6849,
+      "z": null,
+      "baseline_mean_pct": 0.0042,
+      "baseline_presence": 0.13,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 0.96,
+      "n_sources": 4,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "google_en",
+          "title": "Amazon vs. Microsoft: Which Cloud Computing Behemoth Is the Better Artificial Intelligence (AI) Buy Today? - The Motley Fool",
+          "url_hash": "f04ad8a2e67c8191222734cb421866bc",
+          "lede": null
+        },
+        {
+          "source": "yahoo_finance",
+          "title": "Amazon vs. Microsoft: Which Cloud Computing Behemoth Is the Better Artificial Intelligence (AI) Buy Today?",
+          "url_hash": "99f5df3bb2df8998626ab2353cee5ad3",
+          "lede": "Amazon ( AMZN -0.94% ) and Microsoft ( MSFT -0.30% ) are two of the biggest names in artificial intelligence (AI). Both of these companies have taken a similar path, choosing to integrate AI into their own products but u"
+        },
+        {
+          "source": "fool",
+          "title": "Amazon vs. Microsoft: Which Cloud Computing Behemoth Is the Better Artificial Intelligence (AI) Buy Today?",
+          "url_hash": "e03a8710120be4de2a6dc758c929eff5",
+          "lede": "Amazon ( AMZN -0.94% ) and Microsoft ( MSFT -0.30% ) are two of the biggest names in artificial intelligence (AI). Both of these companies have taken a similar path, choosing to integrate AI into their own products but u"
+        }
+      ]
+    },
+    {
+      "term": "PHONG",
+      "kind": "NEW",
+      "count": 4,
+      "denom": 730,
+      "share_pct": 0.5479,
+      "z": null,
+      "baseline_mean_pct": 0.0095,
+      "baseline_presence": 0.23,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 4,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "9b1a9158a476cb14ed101c51eda1354d",
+          "lede": "Just two years ago, Strategy ( MSTR -4.18% ) was the talk of the stock market. It had somehow figured out a way to outperform Bitcoin ( BTC -0.07% ) , and its aggressive, nonstop strategy of accumulating Bitcoin as quick"
+        },
+        {
+          "source": "fool",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "4b822331ad1548e08ccba3c05332d92f",
+          "lede": "Just two years ago, Strategy ( MSTR -4.18% ) was the talk of the stock market. It had somehow figured out a way to outperform Bitcoin ( BTC -0.07% ) , and its aggressive, nonstop strategy of accumulating Bitcoin as quick"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong.",
+          "url_hash": "eded2775e24c33ed9c8450ea1adb45c8",
+          "lede": "Markets MSTR Strategy CEO Phong Le Thinks MSTR Stock Will Outperform Bitcoin During the Next Bull Market. Here's Why He's Wrong. August 16, 2026 — 07:00 am EDT Written by Dominic Basulto for The Motley Fool linkedin face"
+        }
+      ]
+    },
+    {
+      "term": "PERSHING",
+      "kind": "NEW",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": null,
+      "baseline_mean_pct": 0.0247,
+      "baseline_presence": 0.3,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 2,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "6fbaa80eeb2600b6cfeb6f84dab28fa9",
+          "lede": "Bill Ackman is back in Netflix ( NFLX -0.10% ) . His hedge fund, Pershing Square Capital Management, disclosed a position of 3.15 million shares in its Pershing Square USA fund's semiannual report, released Wednesday eve"
+        },
+        {
+          "source": "fool",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "d45615b7faf531dc59a94296e217129e",
+          "lede": "Bill Ackman is back in Netflix ( NFLX -0.10% ) . His hedge fund, Pershing Square Capital Management, disclosed a position of 3.15 million shares in its Pershing Square USA fund's semiannual report, released Wednesday eve"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022",
+          "url_hash": "757fd93e7518cfb071a1d461c405315d",
+          "lede": "Markets NFLX Bill Ackman Put 4.9% of Pershing Square USA Into the Netflix Trade That Cost Him $400 Million in 2022 August 15, 2026 — 11:39 pm EDT Written by Daniel Sparks for The Motley Fool linkedin facebook x email red"
+        }
+      ]
+    },
+    {
+      "term": "DENYING",
+      "kind": "NEW",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": null,
+      "baseline_mean_pct": 0.0035,
+      "baseline_presence": 0.13,
+      "baseline_days": 30,
+      "mkt_pct": 66.7,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "scmp",
+          "title": "Exam body defends denying unwell DSE candidate access to lift before assessment",
+          "url_hash": "ae0f37c6321e6224c4ca8142b3fea1e6",
+          "lede": "Advertisement Education in Hong Kong Hong Kong Education Exam body defends denying unwell DSE candidate access to lift before assessment Private DSE candidate with history of anxiety alleges invigilator shouted at him du"
+        },
+        {
+          "source": "fool",
+          "title": "There's No Denying Altria Group Has a High Yield, But This Stock Could Be an Even Better Buy for Dividend Investors Looking for Reliable Passive Income",
+          "url_hash": "ab1bbd2879ca799ac60c342b35f63b88",
+          "lede": "When investing in dividend-paying stocks, the yield (annual dividend divided by stock price) is an important consideration. But it's not the only one. Investors should understand the company's business and its results to"
+        },
+        {
+          "source": "nasdaq",
+          "title": "There's No Denying Altria Group Has a High Yield, But This Stock Could Be an Even Better Buy for Dividend Investors Looking for Reliable Passive Income",
+          "url_hash": "1ca00e6ec984dbee4695a4a55a2300f0",
+          "lede": "Markets MO There's No Denying Altria Group Has a High Yield, But This Stock Could Be an Even Better Buy for Dividend Investors Looking for Reliable Passive Income August 16, 2026 — 09:35 am EDT Written by Lawrence Rothma"
+        }
+      ]
+    },
+    {
+      "term": "ROUNDHILL",
+      "kind": "NEW",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": null,
+      "baseline_mean_pct": 0.0099,
+      "baseline_presence": 0.1,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": true,
+      "prev_count": 4,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Meet the Roundhill ETF With 26% of Its Assets Parked in Micron Technology Stock",
+          "url_hash": "1d86037821d28bb7571ef1a360562303",
+          "lede": "Memory is a critical part of the artificial intelligence (AI) hardware stack in data centers, computers, smartphones, and even cars. It keeps data constantly flowing to processing chips during AI model training and infer"
+        },
+        {
+          "source": "fool",
+          "title": "Meet the Roundhill ETF With 26% of Its Assets Parked in Micron Technology Stock",
+          "url_hash": "e24635571a0fa8729f583ba8736d012f",
+          "lede": "Memory is a critical part of the artificial intelligence (AI) hardware stack in data centers, computers, smartphones, and even cars. It keeps data constantly flowing to processing chips during AI model training and infer"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Meet the Roundhill ETF With 26% of Its Assets Parked in Micron Technology Stock",
+          "url_hash": "065104b760e857283394d06f4a041f49",
+          "lede": "Markets DRAM Meet the Roundhill ETF With 26% of Its Assets Parked in Micron Technology Stock August 16, 2026 — 05:59 am EDT Written by Anthony Di Pizio for The Motley Fool linkedin facebook x email reddit Key Points Memo"
+        }
+      ]
+    },
+    {
+      "term": "PARKED",
+      "kind": "NEW",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": null,
+      "baseline_mean_pct": 0.0044,
+      "baseline_presence": 0.13,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Meet the Roundhill ETF With 26% of Its Assets Parked in Micron Technology Stock",
+          "url_hash": "1d86037821d28bb7571ef1a360562303",
+          "lede": "Memory is a critical part of the artificial intelligence (AI) hardware stack in data centers, computers, smartphones, and even cars. It keeps data constantly flowing to processing chips during AI model training and infer"
+        },
+        {
+          "source": "fool",
+          "title": "Meet the Roundhill ETF With 26% of Its Assets Parked in Micron Technology Stock",
+          "url_hash": "e24635571a0fa8729f583ba8736d012f",
+          "lede": "Memory is a critical part of the artificial intelligence (AI) hardware stack in data centers, computers, smartphones, and even cars. It keeps data constantly flowing to processing chips during AI model training and infer"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Meet the Roundhill ETF With 26% of Its Assets Parked in Micron Technology Stock",
+          "url_hash": "065104b760e857283394d06f4a041f49",
+          "lede": "Markets DRAM Meet the Roundhill ETF With 26% of Its Assets Parked in Micron Technology Stock August 16, 2026 — 05:59 am EDT Written by Anthony Di Pizio for The Motley Fool linkedin facebook x email reddit Key Points Memo"
+        }
+      ]
+    },
+    {
+      "term": "SLUGGISH",
+      "kind": "NEW",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": null,
+      "baseline_mean_pct": 0.0137,
+      "baseline_presence": 0.3,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Walmart Stock Has Been Sluggish This Year. Should You Buy it Before It Reports Earnings on Aug. 20?",
+          "url_hash": "40421f7a6f0e36d70c3a8e96b1bd1f81",
+          "lede": "Walmart ( WMT -0.39% ) stock had been on an incredible run until recently. The Dividend King, which has raised its dividend annually for the past 53 years, had been beating the market as investors bought into its safety"
+        },
+        {
+          "source": "fool",
+          "title": "Walmart Stock Has Been Sluggish This Year. Should You Buy it Before It Reports Earnings on Aug. 20?",
+          "url_hash": "a20f82a89850f9bf7f85f03403961d2b",
+          "lede": "Walmart ( WMT -0.39% ) stock had been on an incredible run until recently. The Dividend King, which has raised its dividend annually for the past 53 years, had been beating the market as investors bought into its safety"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Walmart Stock Has Been Sluggish This Year. Should You Buy it Before It Reports Earnings on Aug. 20?",
+          "url_hash": "ec0ff8ef10245cb8c5f7a23fbb80a014",
+          "lede": "Markets WMT Walmart Stock Has Been Sluggish This Year. Should You Buy it Before It Reports Earnings on Aug. 20? August 16, 2026 — 06:20 am EDT Written by Jennifer Saibil for The Motley Fool linkedin facebook x email redd"
+        }
+      ]
+    },
+    {
+      "term": "COMFORTABLE",
+      "kind": "NEW",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": null,
+      "baseline_mean_pct": 0.0186,
+      "baseline_presence": 0.23,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "a31b08038a4404d55e425ae912e86b4e",
+          "lede": "Back in 2024, Tesla ( TSLA +0.68% ) CEO Elon Musk wrote a series of posts on X, saying that he needed 25% voting control of Tesla to feel comfortable leading it into its new era as an artificial intelligence (AI) and rob"
+        },
+        {
+          "source": "fool",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "fd6df2169b8138018f963dcae52fc7c9",
+          "lede": "Back in 2024, Tesla ( TSLA +0.68% ) CEO Elon Musk wrote a series of posts on X, saying that he needed 25% voting control of Tesla to feel comfortable leading it into its new era as an artificial intelligence (AI) and rob"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders.",
+          "url_hash": "a8a7b10045f1467a6457c7fa3cac57e0",
+          "lede": "Markets TSLA Elon Musk Has Said He Wants 25% Voting Control of Tesla to Feel Comfortable Leading Its AI Push. Here's What That Threshold Means for Shareholders. August 16, 2026 — 06:05 am EDT Written by Chris Neiger for"
+        }
+      ]
+    },
+    {
+      "term": "DRIVERLESS",
+      "kind": "NEW",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": null,
+      "baseline_mean_pct": 0.0057,
+      "baseline_presence": 0.27,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Rival Shows the Drawback in Tesla's Driverless Tech Strategy. Are They Right?",
+          "url_hash": "125ae63e702ba98900f338bfab2db035",
+          "lede": "A while back, Morgan Stanley's well-respected automotive analyst Adam Jonas evaluated Tesla ( TSLA +0.68% ) using a sum-of-the-parts model between artificial intelligence (AI), software, energy, and robotics rather than"
+        },
+        {
+          "source": "fool",
+          "title": "Rival Shows the Drawback in Tesla's Driverless Tech Strategy. Are They Right?",
+          "url_hash": "647b920b6d25fb32de5912ae3e0b1dab",
+          "lede": "A while back, Morgan Stanley's well-respected automotive analyst Adam Jonas evaluated Tesla ( TSLA +0.68% ) using a sum-of-the-parts model between artificial intelligence (AI), software, energy, and robotics rather than"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Rival Shows the Drawback in Tesla's Driverless Tech Strategy. Are They Right?",
+          "url_hash": "4c4ba701d4d19bd64e95fd8ec7c2fb4f",
+          "lede": "Markets TSLA Rival Shows the Drawback in Tesla's Driverless Tech Strategy. Are They Right? August 16, 2026 — 06:35 am EDT Written by Daniel Miller for The Motley Fool linkedin facebook x email reddit Key Points Analyst b"
+        }
+      ]
+    },
+    {
+      "term": "DRAWBACK",
+      "kind": "NEW",
+      "count": 3,
+      "denom": 730,
+      "share_pct": 0.411,
+      "z": null,
+      "baseline_mean_pct": 0.0,
+      "baseline_presence": 0.0,
+      "baseline_days": 30,
+      "mkt_pct": 100.0,
+      "src_entropy": 1.0,
+      "n_sources": 3,
+      "persist": false,
+      "prev_count": 0,
+      "evidence": [
+        {
+          "source": "yahoo_finance",
+          "title": "Rival Shows the Drawback in Tesla's Driverless Tech Strategy. Are They Right?",
+          "url_hash": "125ae63e702ba98900f338bfab2db035",
+          "lede": "A while back, Morgan Stanley's well-respected automotive analyst Adam Jonas evaluated Tesla ( TSLA +0.68% ) using a sum-of-the-parts model between artificial intelligence (AI), software, energy, and robotics rather than"
+        },
+        {
+          "source": "fool",
+          "title": "Rival Shows the Drawback in Tesla's Driverless Tech Strategy. Are They Right?",
+          "url_hash": "647b920b6d25fb32de5912ae3e0b1dab",
+          "lede": "A while back, Morgan Stanley's well-respected automotive analyst Adam Jonas evaluated Tesla ( TSLA +0.68% ) using a sum-of-the-parts model between artificial intelligence (AI), software, energy, and robotics rather than"
+        },
+        {
+          "source": "nasdaq",
+          "title": "Rival Shows the Drawback in Tesla's Driverless Tech Strategy. Are They Right?",
+          "url_hash": "4c4ba701d4d19bd64e95fd8ec7c2fb4f",
+          "lede": "Markets TSLA Rival Shows the Drawback in Tesla's Driverless Tech Strategy. Are They Right? August 16, 2026 — 06:35 am EDT Written by Daniel Miller for The Motley Fool linkedin facebook x email reddit Key Points Analyst b"
+        }
+      ]
+    }
+  ]
+}
+
+(후보 87개 + 근거 → C:\Users\cupia\CLAUDE\DeGaJaFinance\out\news_burst\2026-08-16_foreign.json)

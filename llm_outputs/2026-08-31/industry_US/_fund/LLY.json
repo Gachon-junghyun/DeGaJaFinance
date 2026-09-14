@@ -1,0 +1,179 @@
+{
+  "ticker": "LLY",
+  "company_name": "Eli Lilly and Company",
+  "sector": "Healthcare",
+  "industry": "Drug Manufacturers - General",
+  "price": 1152.505,
+  "market_cap": 1027736403968,
+  "trailing_pe": 38.62282,
+  "forward_pe": 24.399927,
+  "peg_ratio": 1.48,
+  "price_to_sales": 12.895004,
+  "price_to_book": 30.327484,
+  "trailing_eps": 29.84,
+  "forward_eps": 47.23395,
+  "fifty_two_week_high": 1292.65,
+  "fifty_two_week_low": 712.05,
+  "target_low": 850.0,
+  "target_mean": 1315.0406,
+  "target_high": 1600.0,
+  "target_median": 1376.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 6,
+      "buy": 18,
+      "hold": 4,
+      "sell": 1,
+      "strongSell": 1
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 5,
+      "buy": 17,
+      "hold": 4,
+      "sell": 1,
+      "strongSell": 1
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 6,
+      "buy": 17,
+      "hold": 5,
+      "sell": 1,
+      "strongSell": 1
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 6,
+      "buy": 18,
+      "hold": 5,
+      "sell": 1,
+      "strongSell": 1
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      22974000000.0
+    ],
+    [
+      "2026-03-31",
+      19799000000.0
+    ],
+    [
+      "2025-12-31",
+      19292000000.0
+    ],
+    [
+      "2025-09-30",
+      17600800000.0
+    ],
+    [
+      "2025-06-30",
+      15558000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      22974000000.0
+    ],
+    [
+      "2026-03-31",
+      19799000000.0
+    ],
+    [
+      "2025-09-30",
+      17600800000.0
+    ],
+    [
+      "2025-06-30",
+      15557700000.0
+    ],
+    [
+      "2025-03-31",
+      12728500000.0
+    ],
+    [
+      "2024-09-30",
+      11439100000.0
+    ],
+    [
+      "2024-06-30",
+      11302800000.0
+    ],
+    [
+      "2024-03-31",
+      8768000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 9.87135,
+      "7daysAgo": 9.87135,
+      "30daysAgo": 9.4402,
+      "60daysAgo": 9.39916,
+      "90daysAgo": 9.39596
+    },
+    {
+      "period": "+1q",
+      "current": 9.97587,
+      "7daysAgo": 9.97587,
+      "30daysAgo": 9.95432,
+      "60daysAgo": 9.89038,
+      "90daysAgo": 9.93388
+    },
+    {
+      "period": "0y",
+      "current": 36.71123,
+      "7daysAgo": 36.72512,
+      "30daysAgo": 34.55865,
+      "60daysAgo": 36.21946,
+      "90daysAgo": 36.17752
+    },
+    {
+      "period": "+1y",
+      "current": 47.23395,
+      "7daysAgo": 47.33026,
+      "30daysAgo": 44.87944,
+      "60daysAgo": 44.4782,
+      "90daysAgo": 44.47033
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 10.0,
+      "upLast30days": 13.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 2.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 4.0,
+      "upLast30days": 5.0,
+      "downLast30days": 10.0,
+      "downLast7Days": 8.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 14.0,
+      "upLast30days": 6.0,
+      "downLast30days": 13.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 12.0,
+      "upLast30days": 16.0,
+      "downLast30days": 3.0,
+      "downLast7Days": 4.0
+    }
+  ],
+  "business_summary": "Eli Lilly and Company discovers, develops, manufactures, and markets human pharmaceutical products in the United States, Europe, China, Japan, and internationally. The company offers cardiometabolic health products, including Basaglar, Humalog, Humalog Mix 75/25, Humalog U-100, Humalog U-200, Humalog Mix 50/50, insulin lispro, insulin lispro protamine, insulin lispro mix 75/25, Humulin, Humulin 70/30, Humulin N, Humulin R, Humulin U-500 for diabetes; Jardiance, Mounjaro, and Trulicity for type 2 diabetes; and Zepbound for obesity. It also provides oncology products, such as Cyramza for the second-line treatment of gastric cancer or gastro-esophageal junction adenocarcinoma; Erbitux for colorectal cancers and head and neck cancers; Inluriyo for breast cancer; Jaypirca for chronic lymphocytic leukemia or small lymphocytic lymphoma; Retevmo for the treatment of metastatic NSCLC; TYVYT for classic hodgkin's lymphoma; and Verzenio for breast cancer. In addition, the company offers immunology products, which include Ebglyss for severe atopic dermatitis; Olumiant for rheumatoid arthritis, atopic dermatitis, severe alopecia areata, and COVID-19; Omvoh for ulcerative colitis; and Taltz for plaque psoriasis, psoriatic arthritis, ankylosing spondylitis, and non-radiographic axial spondylarthritis. Further, it provides Emgality for migraine prevention and episodic cluster headache, as well as Kisubla for symptomatic Alzheimer's disease. The company has collaborations with Boehringer Ingelheim Pharmaceuticals, Inc. for the Jardiance product family; and F. Hoffmann-La Roche Ltd and Genentech, Inc. for lebrikizumab, as well as license agreements with Almirall, S.A. for Ebglyss; and Chugai Pharmaceutical Co., Ltd for orforglipron; strategic collaboration with Ascidian Therapeutics for development of therapies for undisclosed monogenic kidney diseases; and BioArctic AB (publ) for new treatment. Eli Lilly and Company was founded in 1876 and is headquartered in Indianapolis, Indiana.",
+  "next_earnings_date": "2026-10-29",
+  "beta": 0.506,
+  "dividend_yield": 0.59
+}

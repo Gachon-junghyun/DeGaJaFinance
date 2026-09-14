@@ -1,0 +1,20 @@
+
+# 사건 궤적 — 2026-08-20 → 2026-08-26 (7일) [해외만]
+  08-20 827건 · 08-21 771건 · 08-22 288건 · 08-23 323건 · 08-24 779건 · 08-25 757건 · 08-26 0건
+  일별 사건 3,745 → 스레드 2,927 (다일 471 — 살아있는 0 · 원데이 2456, 그중 오늘 신규 0)
+
+  ── 끊긴 스레드(ENDED) 471개 — 정점 큰 10개만, 나머진 분모 ──
+   [08-20~08-25] 9→11→24→20→21→29 피크29매체 Canada set to announce retaliatory tariffs again
+   [08-20~08-25] 21→13→4→8→16→15 피크21매체 Oil rises to 3-week high as Iran war impasse fue
+   [08-20~08-25] 19→7→5→6→6→6 피크19매체 US debt tops $40 trillion threshold
+   [08-20~08-22]     19→3→2 피크19매체 Walmart shares tumble as sales growth slows to s
+   [08-20~08-25] 10→7→13→6→12→18 피크18매체 Government urges AI firms to disclose learning d
+   [08-20~08-25] 6→9→6→6→17→10 피크17매체 US threatens toughest sanctions yet against Iran
+   [08-20~08-25]   17→3→3→6 피크17매체 Trump vows ‘economic warfare’ on countries helpi
+   [08-23~08-25]     4→16→2 피크16매체 Shein seeks up to $1.77B in Hong Kong IPO at $27
+   [08-20~08-25] 13→14→6→8→12→15 피크15매체 Takaichi pledges to continue sanctions on Russia
+   [08-20~08-25] 4→8→4→6→15 피크15매체 Apple unveils new Mac mini, Mac Studio computers
+
+  ⚠ 태그는 매체수 곡선의 모양이지 중요도·방향이 아니다 — 근거를 읽어야 안다(P4).
+  ⚠ 윈도우 끝이 휴일/저물량이면 FADING 이 과대해진다 — 위 per-day 분모 먼저.
+  ⚠ 원데이 2456개(오늘 신규 0)는 하루 뷰(brief)가 담당.

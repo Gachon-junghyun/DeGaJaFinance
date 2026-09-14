@@ -1,0 +1,179 @@
+{
+  "ticker": "LIN",
+  "company_name": "Linde plc",
+  "sector": "Basic Materials",
+  "industry": "Specialty Chemicals",
+  "price": 491.03,
+  "market_cap": 226355085312,
+  "trailing_pe": 31.63853,
+  "forward_pe": 25.08615,
+  "peg_ratio": 2.07,
+  "price_to_sales": 6.385373,
+  "price_to_book": 5.7919507,
+  "trailing_eps": 15.52,
+  "forward_eps": 19.57375,
+  "fifty_two_week_high": 548.2,
+  "fifty_two_week_low": 387.78,
+  "target_low": 400.0,
+  "target_mean": 547.24,
+  "target_high": 612.0,
+  "target_median": 550.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 5,
+      "buy": 16,
+      "hold": 5,
+      "sell": 1,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 4,
+      "buy": 16,
+      "hold": 6,
+      "sell": 1,
+      "strongSell": 0
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 5,
+      "buy": 17,
+      "hold": 4,
+      "sell": 1,
+      "strongSell": 0
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 4,
+      "buy": 17,
+      "hold": 5,
+      "sell": 1,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      9289000000.0
+    ],
+    [
+      "2026-03-31",
+      8781000000.0
+    ],
+    [
+      "2025-12-31",
+      8764000000.0
+    ],
+    [
+      "2025-09-30",
+      8615000000.0
+    ],
+    [
+      "2025-06-30",
+      8495000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      9289000000.0
+    ],
+    [
+      "2026-03-31",
+      8781000000.0
+    ],
+    [
+      "2025-09-30",
+      8615000000.0
+    ],
+    [
+      "2025-06-30",
+      8495000000.0
+    ],
+    [
+      "2025-03-31",
+      8112000000.0
+    ],
+    [
+      "2024-09-30",
+      8356000000.0
+    ],
+    [
+      "2024-06-30",
+      8267000000.0
+    ],
+    [
+      "2024-03-31",
+      8100000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 0.0,
+      "7daysAgo": 0.0,
+      "30daysAgo": 0.0,
+      "60daysAgo": 4.61,
+      "90daysAgo": 4.61
+    },
+    {
+      "period": "+1q",
+      "current": 4.23052,
+      "7daysAgo": 4.22332,
+      "30daysAgo": 4.23578,
+      "60daysAgo": 4.23578,
+      "90daysAgo": 4.23578
+    },
+    {
+      "period": "0y",
+      "current": 0.0,
+      "7daysAgo": 0.0,
+      "30daysAgo": 0.0,
+      "60daysAgo": 17.95,
+      "90daysAgo": 17.95
+    },
+    {
+      "period": "+1y",
+      "current": 18.25571,
+      "7daysAgo": 18.32107,
+      "30daysAgo": 18.30576,
+      "60daysAgo": 18.30688,
+      "90daysAgo": 18.23987
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 3.0,
+      "upLast30days": 5.0,
+      "downLast30days": 7.0,
+      "downLast7Days": 9.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 1.0,
+      "upLast30days": 1.0,
+      "downLast30days": 1.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 7.0,
+      "upLast30days": 9.0,
+      "downLast30days": 10.0,
+      "downLast7Days": 9.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 3.0,
+      "upLast30days": 2.0,
+      "downLast30days": 5.0,
+      "downLast7Days": 4.0
+    }
+  ],
+  "business_summary": "Linde plc operates as an industrial gas company worldwide. The company offers atmospheric gases, including oxygen, nitrogen, argon, and rare gases; and process gases, such as hydrogen, helium, carbon dioxide, carbon monoxide, electronic gases, specialty gases, and acetylene. It also engages in the design and construction of turnkey process plants for third-party customers, as well as for its gas businesses, including air separation, hydrogen, synthesis, olefin, and natural gas plants. The company serves the healthcare, chemicals and energy, manufacturing, metals and mining, food and beverage, and electronics industries. It operates in the United States, Brazil, Mexico, Canada, Germany, the United Kingdom, Eastern Europe, China, Australia, South Korea, and India. Linde plc was founded in 1879 and is based in Woking, the United Kingdom.",
+  "next_earnings_date": "2026-10-30",
+  "beta": 0.726,
+  "dividend_yield": 1.31
+}

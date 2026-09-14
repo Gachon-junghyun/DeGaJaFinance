@@ -1,0 +1,21 @@
+S109 FRO corp action   'Frontline'                d10  -> 126
+S109 FRO corp action   'Frontline Ltd'            d10  -> 1
+S109 OPEC supply       'OPEC output'              d10  -> 2
+S109 tanker rates      'tanker rates'             d10  -> 13
+S114 Section 232       'Section 232'              d12  -> 23
+S114 steel tariff      'steel tariff'             d12  -> 6
+S105 MRVL M&A          'Marvell acquisition'      d16  -> 0
+S105 AVGO M&A          'Broadcom acquisition'     d16  -> 0
+S106 MSFT              'Microsoft antitrust'      d16  -> 0
+S106 MSFT              'Microsoft acquisition'    d16  -> 0
+S107 T/VZ              'spectrum auction'         d16  -> 1
+S107 T/VZ              'Verizon dividend'         d16  -> 0
+S141 export ctrl       'export controls'          d4   -> 68
+S141 export ctrl       'semiconductor export'     d4   -> 5
+S132/138 AVGO          'Broadcom guidance'        d4   -> 0
+print corroboration    'Broadcom earnings'        d4   -> 28
+print corroboration    'HPE earnings'             d4   -> 8
+print corroboration    'Dell earnings'            d6   -> 15
+macro                  'jobs report'              d2   -> 187
+macro                  'nonfarm payrolls'         d2   -> 145
+macro                  'unemployment rate'        d2   -> 123

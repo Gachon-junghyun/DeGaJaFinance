@@ -1,0 +1,26 @@
+=== pass 1: 1.5s spacing ===
+  [1.5s] SLB    vel=None  recent=0 base=0 src=api note=해당 기간 기사 0건 (색인 부재가 아니라 실제 무기사)
+  [1.5s] CRM    vel=1.51  recent=363 base=1030 src=api note=
+  [1.5s] MDT    vel=2.15  recent=91 base=181 src=api note=
+  [1.5s] DE     vel=0.8  recent=44 base=236 src=api note=
+  [1.5s] CTVA   vel=1.25  recent=7 base=24 src=api note=
+  [1.5s] HPE    vel=2.11  recent=114 base=232 src=api note=
+  [1.5s] NEM    vel=0.86  recent=51 base=253 src=api note=
+  [1.5s] MSTR   vel=None  recent=0 base=0 src=api note=해당 기간 기사 0건 (색인 부재가 아니라 실제 무기사)
+  [1.5s] TER    vel=0.39  recent=12 base=133 src=api note=
+  [1.5s] JCI    vel=1.15  recent=7 base=26 src=api note=
+
+… 90s cooldown …
+=== pass 2: 9s spacing, SAME names ===
+  [9s] SLB    vel=None  recent=0 base=0 src=api note=해당 기간 기사 0건 (색인 부재가 아니라 실제 무기사)
+  [9s] CRM    vel=1.51  recent=363 base=1030 src=api note=
+  [9s] MDT    vel=2.15  recent=91 base=181 src=api note=
+  [9s] DE     vel=0.8  recent=44 base=236 src=api note=
+  [9s] CTVA   vel=1.25  recent=7 base=24 src=api note=
+  [9s] HPE    vel=2.11  recent=114 base=232 src=api note=
+  [9s] NEM    vel=0.86  recent=51 base=253 src=api note=
+  [9s] MSTR   vel=None  recent=0 base=0 src=api note=해당 기간 기사 0건 (색인 부재가 아니라 실제 무기사)
+  [9s] TER    vel=0.39  recent=12 base=133 src=api note=
+  [9s] JCI    vel=1.15  recent=7 base=26 src=api note=
+
+[result] measured at 1.5s: 8/10 · at 9s: 8/10 · None->number on cadence alone: 0 []

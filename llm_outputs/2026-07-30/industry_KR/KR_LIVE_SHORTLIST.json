@@ -1,0 +1,223 @@
+{
+  "asof": "2026-07-30",
+  "filter": {
+    "floor_jo": 1.0,
+    "tags": [
+      "🟢가속"
+    ],
+    "top": 15,
+    "days": 20
+  },
+  "shortlist": [
+    {
+      "ticker": "207940.KS",
+      "name": "삼성바이오로직스",
+      "sector": "제약",
+      "mcap_h": null,
+      "flow_score": 1.0,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.402,
+      "rs20": 38.2,
+      "rs60": 15.4,
+      "vol_surge": 1.7,
+      "investor": {
+        "foreign_20": 21761,
+        "inst_20": 235540,
+        "indiv_20": -247427,
+        "foreign_5": 7890,
+        "inst_5": 177256,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "475150.KS",
+      "name": "SK이터닉스",
+      "sector": "건설",
+      "mcap_h": null,
+      "flow_score": 1.0,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.301,
+      "rs20": 10.1,
+      "rs60": -5.7,
+      "vol_surge": 1.81,
+      "investor": {
+        "foreign_20": 2616752,
+        "inst_20": 225376,
+        "indiv_20": -2836723,
+        "foreign_5": 397339,
+        "inst_5": -731354,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "089860.KS",
+      "name": "롯데렌탈",
+      "sector": "일반서비스",
+      "mcap_h": null,
+      "flow_score": 0.917,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.311,
+      "rs20": 48.4,
+      "rs60": 25.0,
+      "vol_surge": 1.45,
+      "investor": {
+        "foreign_20": 83526,
+        "inst_20": 100110,
+        "indiv_20": -167482,
+        "foreign_5": 106629,
+        "inst_5": -88590,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "078930.KS",
+      "name": "GS",
+      "sector": "금융",
+      "mcap_h": null,
+      "flow_score": 0.8,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.164,
+      "rs20": 56.9,
+      "rs60": 25.9,
+      "vol_surge": 1.24,
+      "investor": {
+        "foreign_20": -778591,
+        "inst_20": 1562761,
+        "indiv_20": -824401,
+        "foreign_5": -49052,
+        "inst_5": 276595,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "004370.KS",
+      "name": "농심",
+      "sector": "음식료·담배",
+      "mcap_h": null,
+      "flow_score": 0.783,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.324,
+      "rs20": 46.6,
+      "rs60": 18.1,
+      "vol_surge": 1.21,
+      "investor": {
+        "foreign_20": 47851,
+        "inst_20": 83480,
+        "indiv_20": -130895,
+        "foreign_5": 16045,
+        "inst_5": 52236,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "051900.KS",
+      "name": "LG생활건강",
+      "sector": "화학",
+      "mcap_h": null,
+      "flow_score": 0.778,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.235,
+      "rs20": 56.2,
+      "rs60": 30.0,
+      "vol_surge": 1.2,
+      "investor": {
+        "foreign_20": 107439,
+        "inst_20": 149290,
+        "indiv_20": -250307,
+        "foreign_5": 43517,
+        "inst_5": 74327,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "068270.KS",
+      "name": "셀트리온",
+      "sector": "제약",
+      "mcap_h": null,
+      "flow_score": 0.728,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.096,
+      "rs20": 39.0,
+      "rs60": 12.4,
+      "vol_surge": 1.35,
+      "investor": {
+        "foreign_20": 54269,
+        "inst_20": 1924242,
+        "indiv_20": -2270687,
+        "foreign_5": -266871,
+        "inst_5": 979806,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    },
+    {
+      "ticker": "096770.KS",
+      "name": "SK이노베이션",
+      "sector": "화학",
+      "mcap_h": null,
+      "flow_score": 0.678,
+      "tag": "🟢가속",
+      "velocity": null,
+      "obv_norm": 0.104,
+      "rs20": 49.9,
+      "rs60": -5.9,
+      "vol_surge": 1.23,
+      "investor": {
+        "foreign_20": 97600,
+        "inst_20": 3843736,
+        "indiv_20": -2852553,
+        "foreign_5": -120802,
+        "inst_5": 709746,
+        "smart_buy": true,
+        "distribution_to_retail": false,
+        "foreign_turning": false,
+        "state": "외국인/기관 순매수",
+        "days": 20
+      }
+    }
+  ],
+  "live": [
+    "207940.KS",
+    "475150.KS",
+    "089860.KS",
+    "078930.KS",
+    "004370.KS",
+    "051900.KS",
+    "068270.KS",
+    "096770.KS"
+  ]
+}

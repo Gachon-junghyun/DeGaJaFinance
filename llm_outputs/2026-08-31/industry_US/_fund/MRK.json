@@ -1,0 +1,179 @@
+{
+  "ticker": "MRK",
+  "company_name": "Merck & Co., Inc.",
+  "sector": "Healthcare",
+  "industry": "Drug Manufacturers - General",
+  "price": 147.58,
+  "market_cap": 364105170944,
+  "trailing_pe": 118.064,
+  "forward_pe": 15.464966,
+  "peg_ratio": 10.26,
+  "price_to_sales": 5.4695907,
+  "price_to_book": 8.688332,
+  "trailing_eps": 1.25,
+  "forward_eps": 9.54286,
+  "fifty_two_week_high": 156.92,
+  "fifty_two_week_low": 77.58,
+  "target_low": 105.0,
+  "target_mean": 148.73077,
+  "target_high": 186.0,
+  "target_median": 150.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 5,
+      "buy": 15,
+      "hold": 8,
+      "sell": 0,
+      "strongSell": 0
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 4,
+      "buy": 15,
+      "hold": 8,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 4,
+      "buy": 15,
+      "hold": 9,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 4,
+      "buy": 15,
+      "hold": 10,
+      "sell": 0,
+      "strongSell": 0
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      16607000000.0
+    ],
+    [
+      "2026-03-31",
+      16286000000.0
+    ],
+    [
+      "2025-12-31",
+      16400000000.0
+    ],
+    [
+      "2025-09-30",
+      17276000000.0
+    ],
+    [
+      "2025-06-30",
+      15806000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      16607000000.0
+    ],
+    [
+      "2026-03-31",
+      16286000000.0
+    ],
+    [
+      "2025-09-30",
+      17276000000.0
+    ],
+    [
+      "2025-06-30",
+      15806000000.0
+    ],
+    [
+      "2025-03-31",
+      15529000000.0
+    ],
+    [
+      "2024-09-30",
+      16657000000.0
+    ],
+    [
+      "2024-06-30",
+      16112000000.0
+    ],
+    [
+      "2024-03-31",
+      15775000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 2.21014,
+      "7daysAgo": 2.21069,
+      "30daysAgo": 2.28095,
+      "60daysAgo": 2.30704,
+      "90daysAgo": 2.30704
+    },
+    {
+      "period": "+1q",
+      "current": 1.95763,
+      "7daysAgo": 1.95721,
+      "30daysAgo": 1.98795,
+      "60daysAgo": 1.85884,
+      "90daysAgo": 1.85884
+    },
+    {
+      "period": "0y",
+      "current": 2.7474,
+      "7daysAgo": 2.7486,
+      "30daysAgo": 2.7449,
+      "60daysAgo": 2.73657,
+      "90daysAgo": 2.73657
+    },
+    {
+      "period": "+1y",
+      "current": 9.54286,
+      "7daysAgo": 9.56,
+      "30daysAgo": 9.65726,
+      "60daysAgo": 9.56394,
+      "90daysAgo": 9.53368
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 2.0,
+      "upLast30days": 1.0,
+      "downLast30days": 5.0,
+      "downLast7Days": 10.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 4.0,
+      "upLast30days": 2.0,
+      "downLast30days": 4.0,
+      "downLast7Days": 8.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 13.0,
+      "upLast30days": 6.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 3.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 6.0,
+      "upLast30days": 5.0,
+      "downLast30days": 4.0,
+      "downLast7Days": 9.0
+    }
+  ],
+  "business_summary": "Merck & Co., Inc. operates as a healthcare company worldwide. It offers human health pharmaceutical for various areas under the Keytruda, Keytruda Qlex, Welireg, Gardasil, ProQuad, M-M-R II, Varivax, Vaxneuvance, Capvaxive, RotaTeq, Pneumovax 23, Bridion, Prevymis, Dificid, Zerbaxa, Winrevair, Adempas/ Verquvo, Ohtuvayre, Lagevrio, Isentress/Isentress HD, Delstrigo, Pifeltro, Belsomra, Januvia, and Janumet brands. The company also provides veterinary pharmaceuticals, vaccines and health management solutions and services, such as livestock products under the Nuflor, Bovilis/Vista, Bovilis Cryptium, Banamine, Estrumate, Matrix, Resflor, Zuprevo, Revalor, Safe-Guard, M+Pac, Porcilis, Circumvent, Nobilis/Innovax, Paracox and Coccivac, Exzolt, Slice, Imvixa, Clynav, Aquavac/Norvax, Aquaflor, Flexolt brands; Allflex Livestock Intelligence solutions; and companion animal products under the Bravecto One-Month, Bravecto Injectable/Quantum, Bravecto TriUNO, Bravecto Plus, Sentinel Spectrum, Sentinel Flavor Tabs, Numelvi, Optimmune, Nobivac NXT, GilvetMab, Otomax, Mometamax, Mometamax Ultra, Posatex, Caninsulin/Vetsulin, Panacur, Safeguard, Regumate, Prestige, Scalibor/Exspot, Sure Petcare, and Home Again brands. It has development and commercialization agreement for three of Daiichi Sankyo's deruxtecan ADC candidates; AstraZeneca PLC to co-development and co-commercialize AstraZeneca's Lynparza products for multiple cancer types; licensed to develop, manufacture and commercialize LM-299, a novel investigational PD-1/VEGF bispecific antibody from LaNova; and collaboration agreement with Eisai Co., Ltd., Bayer AG, and Ridgeback Biotherapeutics LP, as well Moderna, Inc. Merck & Co., Inc. has strategic collaboration with Infinimmune, Inc. to discover and develop antibodies against multiple therapeutic targets. The company was founded in 1891 and is headquartered in Rahway, New Jersey.",
+  "next_earnings_date": "2026-10-29",
+  "beta": 0.211,
+  "dividend_yield": 2.29
+}

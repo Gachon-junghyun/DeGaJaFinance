@@ -1,0 +1,21 @@
+# ACTION_BRACKET — 2026-09-12  (conditional DRY-RUN tickets · human pulls the trigger)
+
+> Weaves CYCLE_EXPOSURE (gap→core) + CATALYST_WATCH (binary→both-sides) + risk model + live KIS.
+> Book total ≈ 15,183,560원 · fx 1338 · per-trade risk 1.5% (core 0.8%) · stop 7.0% · maxpos 25.0%
+> ⚠️ DRY-RUN — sizes are illustrative; execution is a separate human `module_kis --order ... --execute`. US = USD limit only.
+
+**Nearest binary:** FOMC decision (SEP/dot plot) (D-4, axis=rates) — both-sides armed below.
+
+### BRACKET::A_cool  ★asym-hedge — NVDA  (BUY)
+- **condition:** IF FOMC decision (SEP/dot plot) (D-4) prints toward cool
+- **size:** 5 sh @ ~$218.29 (≈$1,091.45 notional, risk $90.77 = 0.8% )
+- **stop:** $203.01 (−7.0%) · exch NASD
+
+### BRACKET::B_hot — XLE  (BUY)
+- **condition:** IF FOMC decision (SEP/dot plot) (D-4) prints toward hot
+- **size:** 37 sh @ ~$65.14 (≈$2,410.18 notional, risk $170.19 = 1.5% )
+- **stop:** $60.58 (−7.0%) · exch AMEX
+
+*Analytical/scheduling artifact — zero buy/sell advice. Tickets are pre-committed conditionals; no order is sent by this script.*
+
+[saved] C:\Users\fivep\DeGaJaFinance\llm_outputs\2026-09-12\ACTION_TICKETS.md

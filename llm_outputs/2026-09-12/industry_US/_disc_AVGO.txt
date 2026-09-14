@@ -1,0 +1,46 @@
+[AVGO] 3 filings total, 1 8-K (fetching bodies)
+DONE: 3 filings
+# AVGO EDGAR 공시 (Broadcom Inc.)  
+CIK: 0001730168 | 최근 20일
+
+## 요약
+- 총 필링 수: **3**
+- Form 별: S-4=1, 10-Q=1, 8-K=1
+- 카테고리 별: 수주/계약/M&A=1, 분기보고서 (10-Q)=1, 실적 발표 (Item 2.02)=1
+
+## 카테고리별 상세
+
+### 수주/계약/M&A (1건)
+| 일자 | Form | 카테고리/Item | 요약 | 원문 |
+|---|---|---|---|---|
+| 2026-09-10 | S-4 | Registration Statement (S-4, M&A/교환) | — | [link](https://www.sec.gov/Archives/edgar/data/1730168/000119312526387881/d154803ds4.htm) |
+
+### 실적 발표 (Item 2.02) (1건)
+| 일자 | Form | 카테고리/Item | 요약 | 원문 |
+|---|---|---|---|---|
+| 2026-09-02 | 8-K | Item 2.02 - Results of Operations and Financial Condition (실적 발표) [+8.01, 9.01] | Item 2.02 Results of Operations and Financial Condition. On September 2, 2026... | [link](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000076/avgo-20260902.htm) |
+
+### 가이던스/IR (Item 7.01)
+_해당 기간 공시 없음._
+
+### 증권발행·증자·채무 (424B*/FWP/S-3 · Item 3.02/2.03)
+_해당 기간 공시 없음._
+
+### 경영진 변경 (Item 5.02 등)
+_해당 기간 공시 없음._
+
+### 연차보고서 (10-K)
+_해당 기간 공시 없음._
+
+### 분기보고서 (10-Q) (1건)
+| 일자 | Form | 카테고리/Item | 요약 | 원문 |
+|---|---|---|---|---|
+| 2026-09-10 | 10-Q | Quarterly Report (10-Q) | — | [link](https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm) |
+
+### 내부자 거래 (Form 4 / 13G)
+_해당 기간 공시 없음._
+
+### 기타
+_해당 기간 공시 없음._
+
+

@@ -1,0 +1,111 @@
+{
+  "as_of": "2026-09-09",
+  "horizon_days": 14,
+  "binaries": [
+    {
+      "date": "2026-09-10",
+      "time_et": "08:30",
+      "event": "Aug PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 1,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-09-11",
+      "time_et": "08:30",
+      "event": "Aug CPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "estimate",
+      "days_until": 2,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-09-16",
+      "time_et": "14:00",
+      "event": "FOMC decision (SEP/dot plot)",
+      "axis": "rates",
+      "binary": true,
+      "source": "fed",
+      "confidence": "confirmed",
+      "days_until": 7,
+      "kind": "macro"
+    },
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    }
+  ],
+  "macro": [
+    {
+      "date": "2026-09-10",
+      "time_et": "08:30",
+      "event": "Aug PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "days_until": 1,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-09-11",
+      "time_et": "08:30",
+      "event": "Aug CPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "estimate",
+      "days_until": 2,
+      "kind": "macro"
+    },
+    {
+      "date": "2026-09-16",
+      "time_et": "14:00",
+      "event": "FOMC decision (SEP/dot plot)",
+      "axis": "rates",
+      "binary": true,
+      "source": "fed",
+      "confidence": "confirmed",
+      "days_until": 7,
+      "kind": "macro"
+    },
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling.",
+      "days_until": null,
+      "kind": "geopolitical"
+    }
+  ],
+  "earnings": [],
+  "structural": [
+    {
+      "date": "2026-09-18",
+      "event": "sp quarterly rebalance",
+      "ticker": null,
+      "axis": "rebalance",
+      "binary": false,
+      "source": "derived",
+      "confidence": "pattern",
+      "note": "S&P 분기 리밸런스 = 쿼드러플 위칭. 지수 추종 물량 + 옵션·선물 만기가 겹쳐 거래량이 평소의 배수.",
+      "days_until": 9,
+      "kind": "structural"
+    }
+  ]
+}

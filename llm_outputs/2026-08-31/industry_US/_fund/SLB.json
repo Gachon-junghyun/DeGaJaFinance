@@ -1,0 +1,179 @@
+{
+  "ticker": "SLB",
+  "company_name": "SLB N.V.",
+  "sector": "Energy",
+  "industry": "Oil & Gas Equipment & Services",
+  "price": 60.135,
+  "market_cap": 89241534464,
+  "trailing_pe": 29.331709,
+  "forward_pe": 18.60573,
+  "peg_ratio": 1.88,
+  "price_to_sales": 2.4541864,
+  "price_to_book": 3.4227002,
+  "trailing_eps": 2.05,
+  "forward_eps": 3.2318,
+  "fifty_two_week_high": 60.46,
+  "fifty_two_week_low": 31.64,
+  "target_low": 43.0,
+  "target_mean": 61.93103,
+  "target_high": 71.0,
+  "target_median": 63.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 7,
+      "buy": 19,
+      "hold": 2,
+      "sell": 1,
+      "strongSell": 1
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 7,
+      "buy": 19,
+      "hold": 2,
+      "sell": 1,
+      "strongSell": 1
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 7,
+      "buy": 18,
+      "hold": 2,
+      "sell": 1,
+      "strongSell": 1
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 7,
+      "buy": 18,
+      "hold": 2,
+      "sell": 1,
+      "strongSell": 1
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-06-30",
+      8972000000.0
+    ],
+    [
+      "2026-03-31",
+      8721000000.0
+    ],
+    [
+      "2025-12-31",
+      9745000000.0
+    ],
+    [
+      "2025-09-30",
+      8928000000.0
+    ],
+    [
+      "2025-06-30",
+      8546000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      8972000000.0
+    ],
+    [
+      "2026-03-31",
+      8721000000.0
+    ],
+    [
+      "2025-09-30",
+      8928000000.0
+    ],
+    [
+      "2025-06-30",
+      8546000000.0
+    ],
+    [
+      "2025-03-31",
+      8490000000.0
+    ],
+    [
+      "2024-09-30",
+      9159000000.0
+    ],
+    [
+      "2024-06-30",
+      9139000000.0
+    ],
+    [
+      "2024-03-31",
+      8707000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 0.62098,
+      "7daysAgo": 0.62124,
+      "30daysAgo": 0.64355,
+      "60daysAgo": 0.68516,
+      "90daysAgo": 0.69095
+    },
+    {
+      "period": "+1q",
+      "current": 0.78823,
+      "7daysAgo": 0.79435,
+      "30daysAgo": 0.82052,
+      "60daysAgo": 0.85932,
+      "90daysAgo": 0.86069
+    },
+    {
+      "period": "0y",
+      "current": 2.49877,
+      "7daysAgo": 2.50197,
+      "30daysAgo": 2.52778,
+      "60daysAgo": 2.60366,
+      "90daysAgo": 2.61124
+    },
+    {
+      "period": "+1y",
+      "current": 3.2318,
+      "7daysAgo": 3.24148,
+      "30daysAgo": 3.28989,
+      "60daysAgo": 3.34626,
+      "90daysAgo": 3.34843
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 1.0,
+      "upLast30days": 3.0,
+      "downLast30days": 14.0,
+      "downLast7Days": 1.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 1.0,
+      "upLast30days": 1.0,
+      "downLast30days": 14.0,
+      "downLast7Days": 2.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 1.0,
+      "upLast30days": 6.0,
+      "downLast30days": 15.0,
+      "downLast7Days": 2.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 0.0,
+      "upLast30days": 6.0,
+      "downLast30days": 15.0,
+      "downLast7Days": 2.0
+    }
+  ],
+  "business_summary": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Production Systems. The company provides field development and hydrocarbon production, carbon management, and integration of adjacent energy systems; reservoir interpretation and data processing services for exploration data; and well construction and production improvement services and products. It also offers subsurface geology and fluids evaluation information; stimulation services to restore or enhance well productivity through hydraulic fracturing, matrix stimulation, and water treatment; and intervention services to oil and gas operators. In addition, the company offers mud logging, directional drilling, measurement-while-drilling, and logging-while-drilling services, as well as engineering support services; supplies drilling fluid systems; designs, manufactures, and markets roller cone and fixed cutter drill bits; bottom-hole-assembly and borehole enlargement technologies; well planning, well drilling, engineering, supervision, logistics, procurement, and contracting of third parties, as well as drilling rig management solutions; and drilling equipment and services, as well as land drilling rigs and related services. Further, it provides artificial lift; supplies packers, safety valves, sand control technology, and various intelligent systems; midstream production systems; valves, chokes, actuators, and surface trees; and OneSubsea, an integrated solutions, products, systems, and services, including wellheads, subsea trees, manifolds and flowline connectors, control systems, connectors, and services. SLB N.V. was formerly known as Schlumberger Limited and change its name to SLB N.V. in October 2025. The company was founded in 1926 and is based in Houston, Texas.",
+  "next_earnings_date": "2026-10-23",
+  "beta": 0.749,
+  "dividend_yield": 2.06
+}

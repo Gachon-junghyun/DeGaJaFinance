@@ -1,0 +1,24 @@
+[repair] tickers=301  official 08-28=42  missing=259
+  … 5m 40/301  got=40
+  … 5m 80/301  got=80
+  … 5m 120/301  got=120
+  … 5m 160/301  got=160
+  … 5m 200/301  got=200
+  … 5m 240/301  got=240
+$EA: possibly delisted; no price data found  (5m 2026-08-28 -> 2026-08-29)
+
+1 Failed download:
+['EA']: possibly delisted; no price data found  (5m 2026-08-28 -> 2026-08-29)
+  … 5m 280/301  got=279
+  … 5m 301/301  got=300
+[axis] velocity 측정 0/299 = 0.0% → 속도축 제외(전원 3축) · 기준 80% (D225-KR)
+
+[validate] n=42  close  mean|err| 0.0203%  max 0.0937%  >0.05%: 4
+[validate] volume  mean err -18.15%  median -14.52%  min -54.58%  max -4.74%  n=42
+[validate] 5m bars per name: median 78  min 78  max 78
+
+[repair] patched=258  no-5m(left NaN)=1 ['EA']
+
+[repair] wrote SECTOR_FLOW_US_REPAIRED.json
+scoring: {'vel_axis': False, 'vel_coverage': 0.0, 'n_axes': 3, 'scored': 299, 'dropped_missing_axis': 0} 
+universe: {'n': 299, 'n_requested': 300, 'wflow': -0.156, 'green': 6, 'red': 84}

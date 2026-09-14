@@ -1,0 +1,128 @@
+{
+  "ticker": "036460",
+  "market": "kr",
+  "date": "2026-08-21",
+  "verdict": "PASS",
+  "gates": {
+    "G1": false,
+    "G2": true,
+    "G3": true,
+    "G4": true,
+    "G5": true,
+    "G6": true,
+    "G7": true,
+    "G8": true
+  },
+  "gate_values": {
+    "G1": "close 35750 vs SMA200 37541.3 = -4.77% (below) -> ENTER/ADD unavailable",
+    "G2": "A-grade RS20 +7.1% / RS60 +11.5% positive AND B-grade KIS 20d foreign +64.2man vs retail -63.2man positive; C-grade OBV distribution disagrees and may not override",
+    "G3": "monthly DART provisional-results fair disclosure, next about 2026-09-09 (6-filing cadence measured) plus 3Q report 2026-11-16",
+    "G4": "stop 33400 = -6.57%; upside to KB post-cut target 44000 = +23.08% -> ratio 3.51 (consensus mean 48333 -> 5.35)",
+    "G5": "FALSIFY bear case quoted verbatim in REPORT.md 6-b before the verdict line",
+    "G6": "D3 PASS - 20d +4.1% leg not shared by frame A (median -3.6%) nor frame B (median -15.0%); name-specific",
+    "G7": "price 35750 below consensus mean target 48333 so the prohibition does not fire; next-year EPS direction printed and VERIFIED from DART: FY2025A basic EPS 1463 -> 1H2026A cumulative 10141 -> FY2026E 12104 (up). Measured, therefore true and NOT null",
+    "G8": "not held in paper_book (13 positions, no 036460); 0 rows in reject_ledger.jsonl (206 rows) and missed_ledger.jsonl -> no conflict"
+  },
+  "driver": {
+    "coverage_pct": 81.0,
+    "percentile": 75.4,
+    "roll_clean": true
+  },
+  "driver_detail": {
+    "top_segment": "gas import and sales (81.0% of 1H2026 segment operating profit)",
+    "share_of_level_pct": 81.0,
+    "share_of_yoy_swing_pct": 62.3,
+    "other_segment_share_of_level_pct": 18.5,
+    "other_segment_share_of_swing_pct": 40.2,
+    "scope_change": "none",
+    "percentile_note": "75.4 = Brent BZ=F 12-month percentile (cost driver of the LNG import price). The revenue-side driver, the retail city-gas tariff, is a POLICY variable and is left 미확보 by rule - no price proxy substituted.",
+    "roll_guard": "BZ=F / CL=F / NG=F / KRW=X : zero days with abs(delta) > 3 sigma in the last 60 sessions (sigma over prior 126). No roll or spec artifact in window.",
+    "krw_12m_percentile": 0.8
+  },
+  "frame": {
+    "dominant": "city-gas / regulated utility - corr20 +0.42 to +0.64: 017390 +0.639, 117580 +0.607, 017940 +0.556, 015360 +0.542, 015760 +0.480, 004690 +0.462, 018670 +0.417",
+    "beta_leg": false,
+    "rejected_frame": "power-demand / electrical equipment (the EVENT_ALPHA card-4 frame) - corr20 -0.037 to +0.310; those three peers are -15.0 / -17.8 / +0.1% over 20d while 036460 is +4.1%"
+  },
+  "set_diff": {
+    "alpha_delta": [
+      "A1 이익 회복의 46.9%가 상각비다 — 전사 영업이익 +28.0% vs EBITDA +8.4% (DART 반기 주석 4). 시장이 인쇄한 것은 KB의 해외광구 +157.9% 뿐이다",
+      "A2 기타부문(자원개발) 영업이익 +90.5%는 EBITDA로 재면 +2.2% — 스윙의 90.6%가 상각비 감소(4,555억->3,291억). Zubair 자율공시도 이익 197억->192억 감소",
+      "A3 미수금은 총액 기준 늘었다 — 정산손익 자산 14.164조 -> 14.220조 (+553억). 언론/KB가 인용하는 민수용 13.5조만 -3,259억 줄고 발전용이 +2,635억 늘었다",
+      "A4 테이프의 프레임이 상류 서사의 프레임과 다르다 — 도시가스(corr 0.42~0.64) vs 전력기기(-0.04~+0.31). 12차 전기본 초안이 이 종목의 트리거라는 증거가 테이프에 없다",
+      "A5 원화가 12개월 최강(USDKRW 백분위 0.8) — OCI 해외사업환산손익이 1H -3,312억 -> +2,853억 = +6,165억 스윙, 반기 순이익 8,877억에 맞먹는다. 양방향 알파",
+      "A6 회사가 매월 판매물량 1차 출처를 낸다(영업잠정실적 공정공시, 6회 케이던스 실측) — 컨센 검증 관측점을 11-15에서 09-10으로 두 달 당길 수 있다"
+    ],
+    "risk_unseen": [
+      "R1 하반기 손익 미분해 — 2H2025 지배순이익 -3,199억이 왜 났는지 1차 출처로 못 갈랐다(4Q2025 금융원가 5,016억 = 3Q의 3.3배까지만 확인). 손상/연말정산/환평가 중 무엇인지 미확보",
+      "R2 컨센 12,104가 FY2026 연간인지 롤링 12M인지 네이버 필드 정의를 1차로 확인 못 했다 (두 해석 모두 실측과 정합하므로 결론은 불변)",
+      "R3 요금 인상 시점은 정책변수 — 프록시를 대입하지 않았고 영구 미확보. 정부가 하반기 공공요금 동결을 확정해 FY2026 내 반영 근거를 못 찾았다",
+      "R4 filing_diff 미실행 — 이 리포에 module_filing_diff가 없고 직전 동형 보고서 본문을 확보 못 했다. 가짜 diff 대신 미확보로 둔다",
+      "R5 배당 정책 — FY2025 배당성향 75.7%가 유지되면 DPS는 현재가 대비 25.6%가 되는데, 공기업 배당은 기재부 지침이 정한다. 유지 가정은 근거가 없어 숫자를 지어내지 않는다"
+    ]
+  },
+  "rr": {
+    "upside_pct": 23.08,
+    "downside_pct": -6.57,
+    "ratio": 3.51
+  },
+  "rr_note": "Upside anchored on the KB Securities post-cut target 44,000 (2026-08-10, cut from 48,000) - the freshest analyst mark. The consensus mean 48,333 would give +35.20% and ratio 5.35. Downside is the written chart swing-low stop 33,400. KR has no implied-move equivalent (module_flow --positioning is US-only), so every threshold here is hand-set and the file says so.",
+  "stop": 33400,
+  "horizon_days": 60,
+  "evidence_grade": "A",
+  "evidence_grade_note": "The verdict rests on (a) DART primary filings - 2026 half-year report rcept 20260819000378 income statement plus notes 4 and 11, fnlttSinglAcntAll FY2023-25, voluntary disclosures = A; (b) SMA200 / RS20 / RS60 price series = A; (c) KIS per-investor 20d actuals = B. The C-grade axes (OBV, the amber flow tag, vol_surge) carry nothing in this file.",
+  "thesis": "EPS_fwd 12,104 은 필드 오류가 아니라 실제다 — 1H2026 연결 기본EPS 가 이미 10,141원(DART, 컨센의 83.8%)이다. 그러나 그 회복의 46.9%는 상각비 감소이고(영업이익 +28.0% vs EBITDA +8.4%), 미수금(정산손익 자산)은 반기 중 +553억 순증했으며 정부는 하반기 요금 동결을 확정했다 — 이익은 요금 정상화가 아니라 회계·환율·세율에 실려 있고, 3Q 누적 기본EPS 가 12,104 를 넘지 못하거나 민수용 정산손익 자산이 13.54조 위로 되돌아가면 이 판정은 기각된다.",
+  "observation_points": [
+    {
+      "date": "2026-09-11",
+      "test": "DART monthly volume disclosure for August: 도시가스용 판매량 YoY < 0% 이면 물량 다리 기각. Baseline July 2026: 도시가스용 1,020천톤 +8.7% YoY, 발전용 1,210천톤 -8.1% YoY, 총계 2,230천톤 -1.1% YoY"
+    },
+    {
+      "date": "2026-09-30",
+      "test": "종가 < SMA200 이면 G1 미회복 = 거부 유지; 종가 >= SMA200 이면 revives-if 다리 1 충족 (2026-08-21 기준 SMA200 = 37,541)"
+    },
+    {
+      "date": "2026-09-30",
+      "test": "corr20(036460, city-gas frame 017390/117580/015360) 가 corr20(036460, power-equipment frame 010120/267260/034020) 보다 계속 높으면, EVENT_ALPHA card 4 의 LNG-import-layer 귀속은 서사이지 테이프가 아님이 확정된다"
+    },
+    {
+      "date": "2026-11-16",
+      "test": "3Q quarterly report: (1) note 천연가스 판매요금 정산손익 - 민수용 자산 > 13,538,977 백만원 이면 미수금 순증(A3) 확정; (2) 누적 기본주당손익 < 12,104 이면 컨센 미달 경로 확정"
+    }
+  ],
+  "ledger_row": {
+    "which": "reject",
+    "cls": "A.flow미도착",
+    "condition": "종가 > SMA200 AND KIS 외국인 20d 순매수 부호 (+) 유지 AND 8월 도시가스용 판매량 YoY >= 0",
+    "recheck_date": "2026-09-11",
+    "why": "EPS_fwd 12,104 은 1차 출처로 CONFIRMED(1H26 기본EPS 10,141)이나 종가 35,750 이 SMA200 37,541 아래(-4.77%)라 G1 불가. 영업이익 개선의 46.9%가 상각비(OP +28.0% vs EBITDA +8.4%), 기타부문은 EBITDA +2.2%, 미수금(정산손익 자산) 반기 +553억 순증.",
+    "stage": "BET_VERDICT",
+    "not_yet_executed": true,
+    "note": "배치 자식은 llm_outputs/2026-08-21/company_batch/036460/ 밖에 쓰지 않는다는 제약 때문에 이 런은 reject_ledger.py add 를 실행하지 않았다. 부모/사람이 REPORT.md 6-d 의 명령을 그대로 실행하면 된다. 조용히 빠뜨린 것이 아니라 명시적으로 이관한다."
+  },
+  "eps_fwd_verdict": "CONFIRMED",
+  "eps_fwd_evidence": {
+    "source": "DART 2026 half-year report rcept_no 20260819000378, consolidated statement of comprehensive income (fnlttSinglAcntAll bsns_year=2026 reprt_code=11012 fs_div=CFS)",
+    "h1_2026_basic_eps_cumulative": 10141,
+    "h1_2026_diluted_eps_cumulative": 9617,
+    "h1_2025_basic_eps_cumulative": 5166,
+    "fy2025_basic_eps": 1463,
+    "fy2024_basic_eps": 13174,
+    "fy2023_basic_eps": -8949,
+    "pct_of_consensus_already_booked": 83.8,
+    "denominator_check": "지배주주순이익 887,739 백만원 / 92,313 천주 = 9,617 = DART 희석EPS 와 정확히 일치. 발행 92,313,000 · 자기주식 5,037,566(신종교환증권 담보 예탁) · 유통 87,275,434",
+    "sheet_refutation_is_wrong_because": "시트가 인용한 마진 7.2% 는 매출총이익률이다. FY2025 EPS 붕괴(13,174 -> 1,463, -88.9%)는 GM(8.9% -> 7.2%, -1.7pp)이 아니라 영업이익 아래 줄에서 일어났다: 세전 1.638조 -> 0.396조, 실효세율 29.8% -> 66.6%. 순이익률 0.37% 레버리지에서 마진 축은 EPS 점프에 대해 말할 자격이 없다.",
+    "mechanism_of_the_jump": [
+      "GM 7.13% -> 9.39% (11년 최고치 경신, 직전 최고 FY2024 8.9%) = 매출총이익 +3,622억",
+      "감가상각비 -16.9% (9,645 -> 8,020억) = 영업이익 스윙의 46.9% [비반복]",
+      "관계기업·공동기업 손익 241억 -> 1,533억 (+6.4배)",
+      "실효세율 66.6% -> 26.6% 정상화",
+      "순금융비용 -6,067 -> -5,621억 (부채 -4.01조/년의 느린 손익 반영; 이자비용 자체는 +2.6%)",
+      "환율 — OCI 해외사업환산 -3,312 -> +2,853억, +6,165억 스윙 (USDKRW 12M 백분위 0.8)"
+    ],
+    "what_it_is_NOT": "요금 정상화가 아니다. 민수용 도시가스 요금은 동결이고 정부가 하반기 동결을 확정했다. 미수금(정산손익 자산)은 14.164조 -> 14.220조로 반기 중 +553억 순증했다.",
+    "consensus_requires": "12,104 를 FY2026 연간으로 읽으면 2H26 지배순이익 +1,687억(유통주 87.3M) ~ +2,297억(발행주 92.3M)이 필요하다. 2H2025 는 -3,199억이었으므로 +4,886~5,496억 스윙이 필요하다 — 큰 가정이지만 산술적으로 불가능하지 않다. 롤링 12M 으로 읽으면 1H26 수준의 반복만으로 정합한다."
+  },
+  "self_score": "skipped - first research (report coverage 0)",
+  "stages_run": "FORENSIC_PACK -> DRIVER_TEST -> MONEY_FORENSIC -> SET_DIFF -> FALSIFY -> BET_VERDICT. PULSE and SIZE skipped by batch mandate. run_protocol.py checkpoint not used, to avoid collision with 4 concurrent siblings sharing one protocol checkpoint - stages executed directly from the compiled protocol, stated in the REPORT.md header."
+}

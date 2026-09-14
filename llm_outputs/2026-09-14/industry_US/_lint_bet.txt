@@ -1,0 +1,10 @@
+# REPORT_LINT — 1개 파일 · 규칙 C1,C2,S6,D6
+
+  ⚠ BET_SHEET.md — 1건
+      L144   [D6] OBV 단독 인용 (C급 신호)  ← "OBV distribut"
+             ## §S · Epicenter-starter module (PREMORTEM Lens 4 — where the deterministic "✅ no GAP" is label-level) - **Ra…
+
+총 1건.
+  · RULE D6 — OBV 는 실수급의 절반 그림자(r≈0.49)이고 선행력이 없다(t=1.00). C급은 단독으로 명제를 지탱할 수 없다.
+
+형식 검사다 — 내용의 옳고 그름은 판정하지 않는다. 면제가 필요하면 그 단락에 규칙 ID(예: RULE C1)를 적고 왜 면제인지 쓴다.

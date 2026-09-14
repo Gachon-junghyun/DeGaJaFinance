@@ -1,0 +1,82 @@
+[DASH] fetching yfinance...
+[DASH] fetching SEC XBRL...
+[DASH] yfinance<->XBRL 교차 검증: 4/4 분기 5% 이내 일치
+DONE: DASH
+# DASH 펀더멘털 (DoorDash, Inc.)
+업데이트: 2026-09-12 | Sector: Consumer Cyclical / Internet Retail
+
+## 가격 & 시총
+- 주가: $201.95 (52w high $285.50 / low $143.30)
+- 시가총액: $88B
+- Beta: 1.79
+- Dividend yield: —
+
+## 밸류에이션
+| 지표 | 값 |
+|---|---|
+| Trailing P/E | 105.18 |
+| Forward P/E | 24.80 |
+| PEG | 2.46 |
+| Price/Sales | 5.51 |
+| Price/Book | 8.82 |
+| Trailing EPS | $1.92 |
+| Forward EPS | $8.14 |
+
+## 애널리스트 컨센서스
+- 목표주가: $172.00 (low) / **$254.91 (mean)** / $350.00 (high) | median $260.00
+- 현재가 대비 상승 여력: +26.2% (mean 기준)
+- 추천 (최근 30일):
+  - Strong Buy: 9
+  - Buy: 26
+  - Hold: 10
+  - Sell: 0
+  - Strong Sell: 0
+
+## 추정치 모멘텀 (컨센서스가 움직이는 방향)
+
+| 기간 | 현재 | 7일전 | 30일전 | 60일전 | 90일전 | 90일 변화 |
+|---|---|---|---|---|---|---|
+| 당분기 | 0.82 | 0.82 | 0.73 | 0.74 | 0.74 | **+11.2%** |
+| 다음분기 | 0.83 | 0.83 | 0.82 | 0.82 | 0.83 | **+0.7%** |
+| 당해년 | 2.61 | 2.61 | 2.57 | 2.54 | 2.55 | **+2.3%** |
+| 내년 | 4.47 | 4.47 | 4.46 | 4.41 | 4.40 | **+1.5%** |
+
+**리비전 브레드스 (상향 : 하향)**
+- 당분기: 7일 2↑ / 0↓ · 30일 26↑ / 2↓
+- 다음분기: 7일 2↑ / 1↓ · 30일 14↑ / 11↓
+- 당해년: 7일 0↑ / 1↓ · 30일 19↑ / 13↓
+- 내년: 7일 1↑ / 3↓ · 30일 19↑ / 11↓
+
+> ⚠ 밸류에이션 표와 **같이** 읽어라. forward P/E 가 낮은데 추정치가 가파르게 상향 중이면 '싸다'가 아니라 **분모가 정점을 향해 달리는 중**일 수 있다 (peak-margin / low-multiple trap). 추정치 방향은 컨센서스의 **모멘텀**이지 사실이 아니다 — 사이클이 꺾이면 가격보다 먼저 꺾인다.
+
+## 분기 매출 (yfinance 5분기)
+| 분기 (end) | 매출 ($B) | yoy |
+|---|---|---|
+| 2026-06-30 | 4.45 | +35.63% |
+| 2026-03-31 | 4.04 | — |
+| 2025-12-31 | 3.96 | — |
+| 2025-09-30 | 3.45 | — |
+| 2025-06-30 | 3.28 | — |
+
+## 분기 매출 — SEC XBRL 교차 검증
+| 분기 (end, yfinance 기준) | yfinance ($B) | XBRL ($B) | 차이 |
+|---|---|---|---|
+| 2026-06-30 | 4.45 | 4.45 | +0.0% |
+| 2026-03-31 | 4.04 | 4.04 | +0.0% |
+| 2025-12-31 | 3.96 | — | (xbrl 없음 — Q4 가능성) |
+| 2025-09-30 | 3.45 | 3.45 | +0.0% |
+| 2025-06-30 | 3.28 | 3.28 | +0.0% |
+| 2025-03-31 | — | 3.03 | (yf 없음) |
+| 2024-09-30 | — | 2.71 | (yf 없음) |
+| 2024-06-30 | — | 2.63 | (yf 없음) |
+
+## 다음 이벤트
+- 다음 실적 발표: 2026-11-05
+
+## 사업 요약 (yfinance longBusinessSummary, ~500자)
+DoorDash, Inc., together with its subsidiaries, operates a commerce platform that connects merchants, consumers, and dashers in the United States and internationally. The company operates DoorDash Marketplace, Wolt Marketplace, and Deliveroo Marketplace, which provide various services, such as customer acquisition, demand generation, order fulfillment, merchandising, payment processing, and customer support. It also offers consumer membership programs, DashPass, Wolt+, and Deliveroo Plus; ...
+
+## 데이터 source
+- yfinance (Yahoo Finance) — Ticker.info / analyst_price_targets / recommendations / quarterly_income_stmt / calendar
+- SEC XBRL CompanyFacts — data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json (us-gaap:Revenues, RevenueFromContractWithCustomerExcludingAssessedTax)
+

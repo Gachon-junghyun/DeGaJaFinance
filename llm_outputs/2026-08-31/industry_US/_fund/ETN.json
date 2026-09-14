@@ -1,0 +1,179 @@
+{
+  "ticker": "ETN",
+  "company_name": "Eaton Corporation plc",
+  "sector": "Industrials",
+  "industry": "Specialty Industrial Machinery",
+  "price": 403.475,
+  "market_cap": 156709699584,
+  "trailing_pe": 41.04527,
+  "forward_pe": 25.112,
+  "peg_ratio": 2.98,
+  "price_to_sales": 5.217789,
+  "price_to_book": 7.7372622,
+  "trailing_eps": 9.83,
+  "forward_eps": 16.06702,
+  "fifty_two_week_high": 478.0,
+  "fifty_two_week_low": 311.92,
+  "target_low": 333.0,
+  "target_mean": 475.5708,
+  "target_high": 534.0,
+  "target_median": 485.0,
+  "recommendations": [
+    {
+      "period": "0m",
+      "strongBuy": 5,
+      "buy": 17,
+      "hold": 4,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-1m",
+      "strongBuy": 6,
+      "buy": 16,
+      "hold": 4,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-2m",
+      "strongBuy": 6,
+      "buy": 16,
+      "hold": 4,
+      "sell": 0,
+      "strongSell": 1
+    },
+    {
+      "period": "-3m",
+      "strongBuy": 6,
+      "buy": 16,
+      "hold": 6,
+      "sell": 0,
+      "strongSell": 1
+    }
+  ],
+  "quarterly_revenue": [
+    [
+      "2026-03-31",
+      7451000000.0
+    ],
+    [
+      "2025-12-31",
+      7055000000.0
+    ],
+    [
+      "2025-09-30",
+      6988000000.0
+    ],
+    [
+      "2025-06-30",
+      7028000000.0
+    ],
+    [
+      "2025-03-31",
+      6377000000.0
+    ]
+  ],
+  "quarterly_revenue_xbrl": [
+    [
+      "2026-06-30",
+      8531000000.0
+    ],
+    [
+      "2026-03-31",
+      7451000000.0
+    ],
+    [
+      "2025-09-30",
+      6988000000.0
+    ],
+    [
+      "2025-06-30",
+      7028000000.0
+    ],
+    [
+      "2025-03-31",
+      6377000000.0
+    ],
+    [
+      "2024-09-30",
+      6345000000.0
+    ],
+    [
+      "2024-06-30",
+      6350000000.0
+    ],
+    [
+      "2024-03-31",
+      5943000000.0
+    ]
+  ],
+  "eps_trend": [
+    {
+      "period": "0q",
+      "current": 3.52658,
+      "7daysAgo": 3.5234,
+      "30daysAgo": 3.50781,
+      "60daysAgo": 3.50662,
+      "90daysAgo": 3.5065
+    },
+    {
+      "period": "+1q",
+      "current": 4.05061,
+      "7daysAgo": 4.043,
+      "30daysAgo": 3.95587,
+      "60daysAgo": 3.94712,
+      "90daysAgo": 3.94763
+    },
+    {
+      "period": "0y",
+      "current": 13.5506,
+      "7daysAgo": 13.51521,
+      "30daysAgo": 13.35212,
+      "60daysAgo": 13.34108,
+      "90daysAgo": 13.34023
+    },
+    {
+      "period": "+1y",
+      "current": 16.06702,
+      "7daysAgo": 16.0337,
+      "30daysAgo": 15.77623,
+      "60daysAgo": 15.76083,
+      "90daysAgo": 15.72168
+    }
+  ],
+  "eps_revisions": [
+    {
+      "period": "0q",
+      "upLast7days": 10.0,
+      "upLast30days": 11.0,
+      "downLast30days": 6.0,
+      "downLast7Days": 7.0
+    },
+    {
+      "period": "+1q",
+      "upLast7days": 13.0,
+      "upLast30days": 15.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 3.0
+    },
+    {
+      "period": "0y",
+      "upLast7days": 18.0,
+      "upLast30days": 18.0,
+      "downLast30days": 0.0,
+      "downLast7Days": 0.0
+    },
+    {
+      "period": "+1y",
+      "upLast7days": 16.0,
+      "upLast30days": 15.0,
+      "downLast30days": 2.0,
+      "downLast7Days": 1.0
+    }
+  ],
+  "business_summary": "Eaton Corporation plc operates as a power management company in the United States, Canada, Latin America, Europe, and the Asia Pacific. It operates through Electrical Americas, Electrical Global, Aerospace, Vehicle, and eMobility segments. The company offers electrical and industrial components, power distribution and assemblies, residential products, single- and three-phase power quality and connectivity products, wiring devices, circuit protection products, utility power distribution products, and power reliability equipment; and hazardous duty electrical equipment, emergency lighting, fire detection, intrinsically safe explosion-proof instrumentation, and structural support systems. It also provides pumps, motors, hydraulic power units, hoses and fittings, and electro-hydraulic pumps; valves, cylinders, electronic controls, electromechanical actuators, sensors, aircraft flap and slat systems, and nose wheel steering systems; hose and thermoplastic tubing products, fittings, adapters, couplings, and sealing and ducting products; air-to-air refueling systems, fuel pumps, fuel inerting products, sensors, and adapters and regulators; oxygen generation systems, payload carriages, and thermal management products; wiring connectors and cables; and hydraulic and bag filters, strainers and cartridges, and golf grips for manufacturers of commercial and military aircraft, related aftermarket customers, and industrial applications. In addition, the company offers transmissions, clutches, hybrid power systems, superchargers, engine valves and valve actuation systems, locking and limited slip differentials, transmission controls, and fuel vapor components for the vehicle industry; and voltage inverters, converters, fuses, circuit protection units, vehicle controls, power distribution systems, fuel tank isolation valves, and commercial vehicle hybrid systems. The company was formerly known as Abeiron Limited. The company was founded in 1911 and is based in Dublin, Ireland.",
+  "next_earnings_date": "2026-11-03",
+  "beta": 1.177,
+  "dividend_yield": 1.09
+}

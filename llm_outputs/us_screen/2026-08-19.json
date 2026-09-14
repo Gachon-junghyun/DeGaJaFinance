@@ -1,0 +1,22 @@
+{
+  "date": "2026-08-19",
+  "universe_size": 16,
+  "priced": 16,
+  "params": {
+    "NEAR_50": 0.04,
+    "DERATE_MAX": -12.0,
+    "DERATE_RSI": [
+      30.0,
+      52.0
+    ],
+    "WASH_RSI": 28.0,
+    "WASH_NEAR": 0.15,
+    "SECTOR_CAP": 2
+  },
+  "buckets": {
+    "A_leader_pullback": [],
+    "B_derate_snapback": [],
+    "C_washout_octane": []
+  },
+  "newcomers": []
+}

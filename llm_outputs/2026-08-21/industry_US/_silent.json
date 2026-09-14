@@ -1,0 +1,162 @@
+[
+ {
+  "ticker": "MSTR",
+  "name": "MicroStrategy"
+ },
+ {
+  "ticker": "TGT",
+  "name": "Target Corporation"
+ },
+ {
+  "ticker": "MSI",
+  "name": "Motorola Solutions"
+ },
+ {
+  "ticker": "PSX",
+  "name": "Phillips 66"
+ },
+ {
+  "ticker": "MPC",
+  "name": "Marathon Petroleum"
+ },
+ {
+  "ticker": "TRI",
+  "name": "Thomson Reuters"
+ },
+ {
+  "ticker": "DASH",
+  "name": "DoorDash"
+ },
+ {
+  "ticker": "ABNB",
+  "name": "Airbnb"
+ },
+ {
+  "ticker": "COIN",
+  "name": "Coinbase"
+ },
+ {
+  "ticker": "CVNA",
+  "name": "Carvana"
+ },
+ {
+  "ticker": "KKR",
+  "name": "KKR & Co."
+ },
+ {
+  "ticker": "COP",
+  "name": "ConocoPhillips"
+ },
+ {
+  "ticker": "AMGN",
+  "name": "Amgen"
+ },
+ {
+  "ticker": "CRM",
+  "name": "Salesforce"
+ },
+ {
+  "ticker": "NEM",
+  "name": "Newmont"
+ },
+ {
+  "ticker": "MDT",
+  "name": "Medtronic"
+ },
+ {
+  "ticker": "ADP",
+  "name": "Automatic Data Processing"
+ },
+ {
+  "ticker": "BSX",
+  "name": "Boston Scientific"
+ },
+ {
+  "ticker": "NOW",
+  "name": "ServiceNow"
+ },
+ {
+  "ticker": "UBER",
+  "name": "Uber"
+ },
+ {
+  "ticker": "INTU",
+  "name": "Intuit"
+ },
+ {
+  "ticker": "PFE",
+  "name": "Pfizer"
+ },
+ {
+  "ticker": "ISRG",
+  "name": "Intuitive Surgical"
+ },
+ {
+  "ticker": "VRTX",
+  "name": "Vertex Pharmaceuticals"
+ },
+ {
+  "ticker": "GRMN",
+  "name": "Garmin"
+ },
+ {
+  "ticker": "ECL",
+  "name": "Ecolab"
+ },
+ {
+  "ticker": "CBRE",
+  "name": "CBRE Group"
+ },
+ {
+  "ticker": "PGR",
+  "name": "Progressive Corporation"
+ },
+ {
+  "ticker": "BDX",
+  "name": "Becton Dickinson"
+ },
+ {
+  "ticker": "FCX",
+  "name": "Freeport-McMoRan"
+ },
+ {
+  "ticker": "PAYX",
+  "name": "Paychex"
+ },
+ {
+  "ticker": "TMO",
+  "name": "Thermo Fisher Scientific"
+ },
+ {
+  "ticker": "VLO",
+  "name": "Valero Energy"
+ },
+ {
+  "ticker": "REGN",
+  "name": "Regeneron Pharmaceuticals"
+ },
+ {
+  "ticker": "ICE",
+  "name": "Intercontinental Exchange"
+ },
+ {
+  "ticker": "PYPL",
+  "name": "PayPal"
+ },
+ {
+  "ticker": "DIS",
+  "name": "Walt Disney Company (The)"
+ },
+ {
+  "ticker": "BX",
+  "name": "Blackstone Inc."
+ },
+ {
+  "ticker": "SHW",
+  "name": "Sherwin-Williams"
+ },
+ {
+  "ticker": "BKR",
+  "name": "Baker Hughes"
+ }
+]
