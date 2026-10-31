@@ -7,14 +7,14 @@
 
 **1. Read the carry** — plain file reads, no module needed:
 ```
-handoff/STANDING_VIEW.md          SHARED SPINE — regime call · seed measured chain · §4 · §5 retracted ledger · §6
-handoff/STANDING_VIEW_{US|KR}.md  this desk's §2 fact rows + its per-name registry (§3a / §3b)
-handoff/SCENARIOS.md              SHARED SPINE — legend · scoring rules · MASTER scoring log · MASTER index (46)
-handoff/SCENARIOS_{US|KR}.md      this desk's registered brackets in full
-⚠ Split by market 2026-07-29. §5 and the master scoring log are NOT split. Ownership = the
-  REGISTERING desk and confers no exclusivity — S8 was US-registered and KR-scored, S33/S28 the
-  reverse. A past-dated row in the other file is still this run's to score: open it.
-handoff/RESEARCH.md         Part A rules · Part B lenses · Part C dig list
+handoff/STANDING_VIEW.md          current regime call · seed chain · §5 retracted ledger (all IDs) · open contradictions
+handoff/STANDING_VIEW_{US|KR}.md  this market's recent fact rows + per-name registry (latest row per name)
+handoff/SCENARIOS.md              how to use the lens ledger · open questions (`module_lens due`) · brackets NOT in the ledger
+handoff/SCENARIOS_{US|KR}.md      pointer only — the numbers live in `module_lens`
+handoff/RESEARCH.md               rules by impact · live dig list (Part C)
+⚠ Thin files since 2026-10-31 (≈100 KB together). The full old carry is byte-identical in
+  `handoff/_archive/2026-10-31/` — not read in a run; grep it for a specific ID. A past-due question
+  of the other market is still this run's to settle (`module_lens due` lists both).
 ```
 
 **2. Reconcile against the mechanical ledger** — what we *believe* vs what we *covered*:
@@ -48,7 +48,7 @@ the ledger's two most expensive rows, both narrative-class, both never re-examin
 prompted a manual re-audit.
 
 ⚠ **A HANDOVER that skips `due` is not a lighter HANDOVER — it is the same failure mode as an
-unscored SCENARIOS.md row, just on the candidate side instead of the macro side.** `due` output has
+unsettled `module_lens due` question, just on the candidate side instead of the macro side.** `due` output has
 two sections and neither may be waved through silently:
 - **재확인일 도래/경과** (recheck date has passed) — re-pull flow/news for each name named here
   (same re-pull commands as §4 below) and either `resolve --outcome revived` (back into §A/§B with

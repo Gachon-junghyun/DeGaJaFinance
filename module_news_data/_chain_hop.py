@@ -32,7 +32,8 @@ AMBIGUOUS_TICKERS = {
     "PM", "AM", "TT", "IN", "OUT", "UP", "LOW", "NICE", "REAL", "LIVE", "OPEN",
 }
 # 이름이 너무 일반어인 별칭 제외 (Target/Progressive 실질 위험)
-AMBIGUOUS_NAMES = {"Target", "Progressive"}
+# "Nasdaq" = 거래소 회사(NDAQ)지만 지수·거래소 일반 언급이 압도한다(2026-10-31 module_lens 실측: 2,999건이 거의 전부 지수)
+AMBIGUOUS_NAMES = {"Target", "Progressive", "Nasdaq"}
 
 
 def load_universe() -> dict[str, dict]:

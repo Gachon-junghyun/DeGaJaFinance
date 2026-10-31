@@ -11,11 +11,11 @@ A checkpoint at out/pipeline_runs/{name}.json tracks the current stage, which pa
 run's target (e.g. ticker). One active run per protocol.
 
 Usage:
-    python pipeline/run_protocol.py real_alpha_kr --start --target 009150
-    python pipeline/run_protocol.py real_alpha_kr --show     # reprint current stage
-    python pipeline/run_protocol.py real_alpha_kr --next      # mark current passed → print next
-    python pipeline/run_protocol.py real_alpha_kr --status    # progress table
-    python pipeline/run_protocol.py real_alpha_kr --goto 4    # jump to stage 4
+    python pipeline/run_protocol.py company --start --target 009150   # mode (e.g. forensic) on CARRY.md line 1
+    python pipeline/run_protocol.py company --show      # reprint current stage
+    python pipeline/run_protocol.py company --next      # mark current passed → print next
+    python pipeline/run_protocol.py company --status    # progress table
+    python pipeline/run_protocol.py company --goto 4    # jump to stage 4
 """
 from __future__ import annotations
 

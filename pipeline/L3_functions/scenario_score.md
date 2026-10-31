@@ -1,5 +1,9 @@
 # L3 · scenario_score — settle one pre-registered scenario
 
+> ⚠ **Superseded 2026-10-31 by the lens ledger** — industry desks settle questions with `module_lens resolve`
+> (L2 lens, step 5). This unit remains only for the not-migrated brackets listed in
+> `handoff/SCENARIOS.md` (`P###` · `M-###` · colliding `S##-KR`); the MASTER INDEX and scoring log it names are
+> archived in `handoff/_archive/2026-10-31/SCENARIOS.md`.
 > Atomic, single-role. Called by L2·carryover. **One scenario row in → one branch verdict out.**
 > Deterministic: it compares a pre-registered observable against its pre-registered threshold and
 > reports which branch fired. It does not interpret, re-weight, or explain away.

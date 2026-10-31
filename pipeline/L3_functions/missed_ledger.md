@@ -53,7 +53,7 @@
 `P.현금부족` 은 [exposure_state](exposure_state.md) 와 직결된다 — 노출 규칙이 막아서 못 산 것은
 종목 판단 실패가 아니라 **베타 결정의 비용**이고, 그 비용은 노출 원장 쪽에서 채점돼야 한다.
 
-## `leak_scan` → 이 원장으로 옮기는 매핑 (L1 [leak_audit](../L1_stages/leak_audit.md) 이 쓴다)
+## `leak_scan` → 이 원장으로 옮기는 매핑 (옛 L1 leak_audit 이 썼다 — 2026-10-31 창고 `pipeline/_archive/2026-10-31/L1_stages/leak_audit.md`)
 
 | leak_scan 분류 | → 사유클래스 |
 |---|---|
@@ -91,7 +91,7 @@
 
 ⚠ 그리고 이 뒤집힘은 `leak_scan` 쪽에서도 재현된다 — 같은 07-20 창을 지평만 늘려 재채점하면
 `B.커버리지소실` 이 **+1.93pp(최악) → −4.68pp(최선)** 로 뒤집힌다. 리포의 상시 주장
-*"보유가 샌다"* 는 그래서 **철회됐다**(L1 [leak_audit](../L1_stages/leak_audit.md) 참조).
+*"보유가 샌다"* 는 그래서 **철회됐다**(옛 L1 leak_audit 참조 — 창고).
 
 ## 진입조건(`--enters-if`)이 이 원장의 핵심 필드다
 

@@ -1,6 +1,7 @@
 # L1 · PUBLISH_REPORT — 하네스를 모르는 사람이 읽는 «자기완결» 보고서로 조판한다
 
-> Terminal delivery phase. 앞 단계들이 남긴 산출물을 **한 편의 읽히는 문서**로 다시 쓰고 조판한다.
+> Company stage 9 — **mode `report` only** (set on the first line of `CARRY.md`) (other modes write `SKIPPED (mode)` and stop at CO_VERDICT).
+> Reads upstream files only (numbers are cited, never recomputed). 앞 단계들이 남긴 산출물을 **한 편의 읽히는 문서**로 다시 쓰고 조판한다.
 > 데스크의 `.md` 는 데스크가 읽는 물건이고, 이건 **사람이 읽는 물건**이다. 둘은 같은 파일이 될 수 없다.
 > Output: `REPORT/company_{code}/{종목명}_기업분석_{YYYYMMDD}.docx` (+ `.pdf`).
 
@@ -18,7 +19,7 @@
 |---|---|
 | **단계 이름·게이트 번호·모듈 이름을 본문에 쓰지 마라** | 「DRIVER_TEST D3 FAIL」은 읽는 사람에게 아무 뜻이 없다. **「최근 상승은 이 회사 것이 아니다」**로 번역한다 |
 | **결론을 1장에 놓는다** | 투자의견·목표주가·근거 3줄을 먼저. 과정은 뒤 |
-| **밸류체인·제품·수익 구조를 앞에 놓는다** | VALUE_CHAIN 산출이 여기 들어간다. 이게 없으면 뒤의 숫자가 안 읽힌다 |
+| **밸류체인·제품·수익 구조를 앞에 놓는다** | CO_STRUCTURE 산출(옛 VALUE_CHAIN)이 여기 들어간다. 이게 없으면 뒤의 숫자가 안 읽힌다 |
 | **모든 표에 「자료:」 주석** | 출처 없는 표는 이 리포가 폐지한 그 글이다 |
 | **「확인 못 한 것」을 부록에 목록으로** | 빈칸이 틀린 값보다 싸다(P4). 목표주가가 매달린 추정도 여기 |
 | **마크다운 기호·이모지를 쓰지 마라** | 강조는 굵게 하나로. 별표와 이모지는 보고서 문체가 아니다 |

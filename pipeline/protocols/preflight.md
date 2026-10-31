@@ -19,7 +19,7 @@
 
 ## What this desk is (and is NOT)
 - **IS:** 매 런 도는 **기계적 검사**. 오늘의 계기 상태를 재고, **FAIL 마다 주장 권한을 깎는다.**
-- **IS NOT:** 발견기. 새 결함을 찾는 것은 [idle_probe](idle_probe.md) 의 일이다 — 탐색은 느리고
+- **IS NOT:** 발견기. 새 결함을 찾는 것은 탐색 일이다(옛 `idle_probe` 데스크, 2026-10-31 창고 `_archive/2026-10-31/protocols/idle_probe.md` — 사람이 부를 때 되살린다) — 탐색은 느리고
   창의적이어야 하고, 검사는 **빠르고 지루해야** 한다. 둘을 섞으면 매일 도는 것이 무거워져 안 돌게 된다.
 - **IS NOT:** 수리공. 게이트는 고치지 않는다. 코드 수정은 사람 승인 항목이다.
 - **IS NOT:** 캐리 기록자. `handoff/` 에 쓰지 않는다 — 계기 상태는 시장 뷰가 아니다.
@@ -34,7 +34,7 @@
 | # | L1 block | 주기 | Output |
 |---|---|---|---|
 | 0 | [INSTRUMENT_CHECK](../L1_stages/instrument_check.md) ★preflight | **매 런** | `PREFLIGHT.md` — 게이트 7개 × (숫자 · 판정 · 박탈되는 주장 권한) |
-| 1 | [CENSUS](../L1_stages/census.md) *(idle_probe 와 공유)* | **주 1회** | `CENSUS.md` — 완전유휴 / 배선안됨 / shim |
+| 1 | [CENSUS](../L1_stages/census.md) *(preflight 전용 — 2026-10-31부터)* | **주 1회** | `CENSUS.md` — 완전유휴 / 배선안됨 / shim |
 
 ## ★ 이 프로토콜의 산출은 보고서가 아니라 **권한표**다
 
@@ -43,11 +43,11 @@
 
 | FAIL | 오늘 금지되는 문장 | 걸리는 스테이지 |
 |---|---|---|
-| G1 뉴스축 | *"이 테마는 식었다 / 신선하다"*, 뉴스속도 인용 | SWEEP · ROTATION · EVENT_ALPHA · DEEP |
-| G2 척도 | *"어제 대비 flow 가 +0.1"* | SWEEP · ROTATION |
-| G3 섹터부호 | 플리퍼 버킷의 승격·강등 | ROTATION §2 |
+| G1 뉴스축 | *"이 테마는 식었다 / 신선하다"*, 뉴스속도 인용 | MACRO §4 · EARNINGS §3 · FLOW_CHECK · ALPHA |
+| G2 척도 | *"어제 대비 flow 가 +0.1"* | FLOW_CHECK · MACRO §3 |
+| G3 섹터부호 | 플리퍼 버킷의 승격·강등 | FLOW_CHECK · MACRO §3 |
 | G4 위험단위 | *"집중도 한도 내"* 를 단일 숫자로 | SIZE · BET |
-| G5 유니버스 | 보유하지만 유니버스 밖인 이름의 flow 판정 | SWEEP · BET |
+| G5 유니버스 | 보유하지만 유니버스 밖인 이름의 flow 판정 | FLOW_CHECK · BET |
 | G6 계측적립 | `--ic` 로 나온 크기를 「근거 있는 크기」로 | SIZE |
 | G7 도구 | 그 도구의 산출 인용 | 해당 스테이지 |
 

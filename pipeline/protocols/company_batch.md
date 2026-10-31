@@ -1,14 +1,14 @@
 # PROTOCOL — company_batch (컴패니 배치 · N기업 오케스트라 → 점수판)
 
 > A protocol = an ordered composition of L1 blocks. **Order is owned by this file.** L1s are referenced only.
-> Purpose: run **N companies (default 10)** through [`company_research`](company_research.md) as
+> Purpose: run **N companies (default 10)** through [`company`](company.md) in mode `research` (stated as `mode: research` on the first line of each child's `CARRY.md`; `run_protocol.py` takes no `--mode` flag) as
 > **parallel subagents**, convert the N verdicts to **one comparable scale**, and publish a scoreboard the
 > **top-down run reads instead of re-digging**. Daily or on demand.
 > Output: `llm_outputs/{date}/company_batch/{ticker}/` ×N + `REPORT/COMPANY_SCOREBOARD.md`.
 
 ## What this desk is (and is NOT)
 - **IS**: an orchestrator. It owns *which* names, *how many*, and *how they are ranked*. It owns no
-  research of its own — every number comes from a child running `company_research`.
+  research of its own — every number comes from a child running `company` in mode research.
 - **IS NOT**: a portfolio view. N verdicts are N observations; the scoreboard is a **reading order**, not
   an allocation. Sizing stays with SIZE + `kelly_size` against the live book.
 - **IS NOT**: a replacement for the top-down run. It **supplies** it — see the handshake below.
@@ -51,7 +51,7 @@ A confirmed name contributes its §A numbers, §C flow read and stop **by citati
 if it is long, either confirmation failed or the stage is re-printing.
 
 ## Cost, stated (so it can be argued with)
-Default **10** names. Each child runs `company_research` FORENSIC_PACK→BET_VERDICT — the heaviest calls
+Default **10** names. Each child runs `company` (mode research) CO_CARRY→CO_VERDICT — the heaviest calls
 are the segment/driver/peer pulls and the news axis. `--count` is the knob; `--stale-sessions` is the
 other one and it is usually the better one: **raising staleness reduces the roster more cheaply than
 lowering the count**, because it removes exactly the names whose answers have not changed.

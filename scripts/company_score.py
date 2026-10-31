@@ -1,5 +1,5 @@
 # FILE: scripts/company_score.py
-"""COMPANY_SCORE — N개 company_research 평결을 **한 척도로 환산**해 순위를 만든다.
+"""COMPANY_SCORE — N개 company 프로토콜(mode research) 평결을 **한 척도로 환산**해 순위를 만든다.
 
 왜 (2026-08-21): 배치로 10기업을 돌리면 리포트 10개가 나오는데, 서로 다른 사람이 쓴 산문 10개는
 **비교가 안 된다.** 탑다운 런(industry_us BET)이 그걸 쓰려면 "어느 걸 먼저 볼까"가 기계로 나와야 한다.
@@ -11,8 +11,12 @@
    기대수익이 아니다. 순위를 근거로 사이징하지 마라 — 사이징은 `kelly_size` 와 SIZE 스테이지 몫이다.
 
 축과 가중치 (합 100) — 전부 verdict.json 에 이미 있는 필드에서만 나온다:
-  gate_integrity 30 : G1~G8 중 해당되는 게이트의 통과 비율. FAIL 은 감점이 아니라 분모에 남는다.
-  evidence_grade 25 : 이 평결을 떠받치는 최고 등급 축 (A=25 · B=15 · C=5). L2 indicators 등급표.
+  gate_integrity  25 : G1~G8 중 해당되는 게이트의 통과 비율. FAIL 은 감점이 아니라 분모에 남는다.
+  fundamental_mix 30 : 평결의 module_lens 근거 비중(`evidence_mix`) 중 filing+estimates+competition+macro 의 몫.
+                       tape(수급·가격·포지셔닝·옵션) 몫은 점수에 안 든다.
+  (evidence_grade — 테이프 등급 A=RS·B=KIS·C=OBV — 는 보고 칸으로만 남고 점수에 안 든다.)
+  ⚠ 2026-10-31 사람 결정으로 v2: 옛 v1 은 gate 30 + evidence_grade 25 였고 점수의 최대 ~32점이 테이프에서 나왔다.
+     장부 첫 학습(공시·실적 근거 6/8 맞음, 수급 5/32)에 맞춰 바꿨다. 점수 시계열이 끊기므로 IC 축 이름도 company_score_v2.
   driver_quality 20 : 드라이버가 이익의 몇 %를 설명하나 × 롤무결성(D2). 설명 못 하면 그만큼 깎인다.
   frame_integrity 10: 최근 다리가 peer set 공유(=섹터 베타)면 0, 종목 고유면 10. (D3)
   reward_risk    15 : upside/|downside| — 1.5 에서 시작해 3.0 에서 만점(그 위는 더 안 준다).
@@ -35,13 +39,14 @@ BATCH_DIR = os.path.join("llm_outputs", "{run}", "company_batch")
 AXIS_DIR = os.path.join("out", "ic", "axes")
 
 WEIGHTS = {
-    "gate_integrity": 30.0,
-    "evidence_grade": 25.0,
+    "gate_integrity": 25.0,
+    "fundamental_mix": 30.0,
     "driver_quality": 20.0,
     "frame_integrity": 10.0,
     "reward_risk": 15.0,
 }
-GRADE_PTS = {"A": 25.0, "B": 15.0, "C": 5.0}
+FUNDAMENTAL_BUCKETS = ("filing", "estimates", "competition", "macro")
+AXIS_NAME = "company_score_v2"
 # 평결이 실제로 방향을 갖는가 — 점수와 **분리해서** 보고한다(점수는 리서치 품질, 이건 행동).
 ACTIONABLE = {"ENTER", "ADD"}
 HOLDING = {"HOLD", "TRIM"}
@@ -79,8 +84,12 @@ def score_one(v: dict) -> dict:
         if applicable else None
     )
 
-    grade = (_f(v, "evidence_grade") or "").upper()
-    parts["evidence_grade"] = GRADE_PTS.get(grade)
+    mix = _f(v, "evidence_mix")
+    if isinstance(mix, dict) and mix:
+        fund = sum(float(mix.get(k) or 0) for k in FUNDAMENTAL_BUCKETS)
+        parts["fundamental_mix"] = max(0.0, min(fund, 100.0)) / 100.0 * WEIGHTS["fundamental_mix"]
+    else:
+        parts["fundamental_mix"] = None       # 옛 평결(evidence_mix 없음)은 이 축을 분모에서 뺀다
 
     cov = _f(v, "driver", "coverage_pct")
     roll = _f(v, "driver", "roll_clean")
@@ -110,6 +119,7 @@ def score_one(v: dict) -> dict:
         "market": (v.get("market") or "").lower(),
         "verdict": v.get("verdict"),
         "parts": parts,
+        "tape_grade": (_f(v, "evidence_grade") or "").upper() or None,   # 보고만 — 점수에 안 든다
         "axes_measured": len(measured),
         "axes_total": len(WEIGHTS),
         "coverage_pct_of_scale": round(denom, 1),
@@ -156,7 +166,7 @@ def cmd_rank(a) -> None:
     print(f"# COMPANY_SCORE — run {a.run} · {len(rows)}건 채점" + (f" · 읽기실패 {len(bad)}" if bad else ""))
     print("  ⚠ 이 점수는 **미검증 트리아지 순서**다 — 기대수익 아님. 사이징 근거로 쓰지 마라(SIZE·kelly_size 몫).")
     print()
-    print("순위 종목    시장 평결    점수  게이트 증거 드라이버 프레임  R/R  잰축  α/risk  관측점")
+    print("순위 종목    시장 평결    점수  게이트 실적근거 드라이버 프레임  R/R  잰축  α/risk  관측점")
     print("  " + "─" * 92)
     for i, r in enumerate(rows, 1):
         p = r["parts"]
@@ -164,7 +174,7 @@ def cmd_rank(a) -> None:
             return " —  " if p[k] is None else f"{p[k]:4.1f}"
         sc = " n/a" if r["score"] is None else f"{r['score']:5.1f}"
         print(f"{i:>3}  {str(r['ticker'] or '?'):<7} {r['market']:<4} {str(r['verdict'] or '?'):<7}"
-              f"{sc}  {c('gate_integrity')} {c('evidence_grade')} {c('driver_quality')}"
+              f"{sc}  {c('gate_integrity')} {c('fundamental_mix')} {c('driver_quality')}"
               f"   {c('frame_integrity')} {c('reward_risk')}  {r['axes_measured']}/{r['axes_total']}"
               f"   {r['n_alpha']}/{r['n_risk']}     {r['n_obs']}")
     print()
@@ -201,19 +211,19 @@ def cmd_axes(a) -> None:
                     prev = json.load(fh)
             except Exception:
                 prev = {}
-        prev.setdefault("axes", {})["company_score"] = vals
+        prev.setdefault("axes", {})[AXIS_NAME] = vals
         prev["run"] = a.run
         prev["market"] = mkt
         with open(path, "w", encoding="utf-8") as fh:
             json.dump(prev, fh, ensure_ascii=False, indent=2)
-        print(f"[axes] {mkt}: company_score {len(vals)}종목 → {os.path.relpath(path, ROOT)}")
+        print(f"[axes] {mkt}: {AXIS_NAME} {len(vals)}종목 → {os.path.relpath(path, ROOT)}")
     print("  ⇒ `python -X utf8 scripts/ic_ledger.py log` 가 다음 런에서 이 축의 IC 를 적립한다.")
     print("  ⚠ n_eff<4 면 ic_ledger 는 판정하지 않는다 — 몇 달 쌓여야 부호가 갈린다(설계대로).")
 
 
 def main() -> None:
     utf8_stdout()
-    ap = argparse.ArgumentParser(description="company_research 평결 N개 → 한 척도 환산")
+    ap = argparse.ArgumentParser(description="company(mode research) 평결 N개 → 한 척도 환산(v2)")
     sub = ap.add_subparsers(dest="cmd", required=True)
     r = sub.add_parser("rank", help="점수 순위표")
     r.add_argument("--run", required=True, help="YYYY-MM-DD (llm_outputs/{run}/company_batch/)")

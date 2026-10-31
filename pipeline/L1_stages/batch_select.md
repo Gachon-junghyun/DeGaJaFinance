@@ -30,7 +30,7 @@ was built to stop this. **The selection stage's yield is the names it removed, n
 
 ## ★ The freshness gate — when a name is REMOVED from the roster
 A name is skipped (and recorded as skipped, with its reason) when **all** hold:
-- [ ] a `company_research` verdict exists for it, **≤ `--stale-sessions` settled sessions old** (default **10**);
+- [ ] a `company` verdict in mode research exists (or a pre-2026-10-31 `company_research` one) for it, **≤ `--stale-sessions` settled sessions old** (default **10**);
 - [ ] **no dated observation point** from that verdict has matured since;
 - [ ] **no earnings print or 8-K/주요사항 filing** since that verdict's date;
 - [ ] the driver's roll-adjusted percentile has not crossed a band since (L3 [driver_link](../L3_functions/driver_link.md)).

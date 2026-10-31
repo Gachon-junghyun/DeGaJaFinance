@@ -24,17 +24,10 @@
   alpha. ⚠ **"OI building" is NOT directional** — the same class as the REJECTED "short building =
   bearish" (below); do not read a rising OI as bullish or bearish on its own.
 - News velocity — `python -X utf8 -m module_news_data fts search "<theme>" --count` (corroborant, not primary).
-  🚨 **`velocity: None` is returned for TWO different worlds and they are not distinguishable from the
-  value** (measured 2026-08-09): *"genuinely no articles"* and *"could not reach the index"*.
-  The search rides a remote API (`DEGAJA_NEWS_API`, an ngrok tunnel) with **no local FTS fallback on
-  the client** (`data/news_fts.db` does not exist there — the server owns it, P6), and the tunnel
-  **intermittently drops**: within one hour we measured success → 5/5 failure → success.
-  ⚠ **And the scope flag is not optional.** `news_velocity(query, recent, base, kr=False)` defaults to
-  the **foreign** pool; `module_flow/__main__.py` passes `kr=kr_code(t)` but the universe sweep did
-  **not** for months, so Korean company names were counted against English wires —
-  삼성바이오로직스 base **5**, LG에너지솔루션 **2** ⇒ velocity `0.00`.
-  ⇒ **Before writing "the theme is quiet", verify the pipe answered.** A zero that came from a dead
-  tunnel is not evidence of silence (P4 — a blank beats a falsehood).
+  🚨 **`velocity: None` means either «no articles» or «index unreachable»** (measured 2026-08-09: the remote
+  tunnel `DEGAJA_NEWS_API` has no client fallback and dropped 5/5 within an hour). `news_velocity(…, kr=False)`
+  defaults to the **foreign** pool — the KR sweep once counted Korean names against English wires
+  (삼성바이오로직스 base 5). ⇒ **Probe the pipe before writing «quiet»** (P4).
 
 ## ★ Three axes added 2026-07-22 — use them, they close measured blind spots
 
@@ -49,24 +42,20 @@ over 90 days**. The credit market said no stress and nothing in the toolkit coul
 NFCI**, or states that it is narrative-only. Also pair `real_10y` with `breakeven_10y` — quoting a
 real yield without its breakeven hides whether the move was growth or inflation.
 
-**2. Estimate momentum** (`module_fundamentals_us <TKR>` → §추정치 모멘텀).
-`eps_trend` (current / 7 / 30 / 60 / 90 days ago) + `eps_revisions` (up:down counts).
-We had valuation as a **snapshot** only; the direction of the denominator was invisible.
-⚠ **Why this matters more than it looks**: the lab's only A-grade verified signal is **momentum**
-(mom5 LR 0.880, p=0.001, 39,290 obs) and we applied it **only to price**. Earnings-revision momentum
-is the same family. *Measured*: MU's +1y EPS estimate went **100.53 → 150.91 in 90 days (+50.1%)**
-with **30 upgrades : 0 downgrades** — i.e. the denominator of that "cheap 6.31× forward P/E" had been
-racing upward. **Read it next to the valuation table, never alone** (lens L2, peak-margin trap).
+**2. Estimate momentum** (`module_fundamentals_us <TKR>` → §추정치 모멘텀: `eps_trend` 7/30/60/90d + up:down).
+Measured: MU's +1y EPS went **100.53 → 150.91 in 90 days (30 up : 0 down)** — the denominator of a «cheap 6.31×»
+was racing up. Read it next to the valuation table (lens L2); it is a direction, not a leading indicator
+(L1 EARNINGS: the revision effect was an IT loading).
 
 **3. Implied move** (`module_flow <TKR> --positioning` → `예상변동 ±x%(만기, D±n)`).
 Nearest-expiry ATM straddle = what the market has **already priced** for the move.
 ⚠ Skew and P/C say *how much people pay for protection*; they do **not** say *how far it is expected
 to travel*. **PREMORTEM/SCENARIOS thresholds should come from here rather than being chosen by hand**
-— the current `handoff/SCENARIOS.md` brackets were hand-set, which this replaces.
+— the legacy brackets (now in the lens ledger) were hand-set, which this replaces.
 *Measured 2026-07-22*: GOOGL **±7.1%** into that night's print · MU ±4.5% · AMD ±3.6%.
 ⚠ The straddle is the **total** move to expiry, not the event's isolated contribution — read `D±n`
 with it; a 0DTE chain is nearly pure event premium but its OI ratios are noisy.
-⚠ **This axis is US-only, and KR has no implied-move equivalent yet** — so KR `SCENARIOS.md`
+⚠ **This axis is US-only, and KR has no implied-move equivalent yet** — so KR lens-question
 thresholds are still hand-set (the exact gap this axis closed for US). What KR *does* have now is the
 index-futures line above (`--futboard`/`--futopt`): **basis + OI is positioning context, not an
 implied move**, so it informs *direction/crowding*, not a threshold. The real KR equivalent —
@@ -106,7 +95,7 @@ The tools here print every axis at the same visual weight. **They are not equall
   (2) for KR, what do KIS actuals say (B)? (3) is the move date-clustered (S1)? Report OBV as
   agreement or disagreement with those, not as the finding.
 
-## ⚠ Reading investor flow — two traps (carry rules A1/B6 of `handoff/RESEARCH.md`)
+## ⚠ Reading investor flow — two traps (rules D1/D5 of `handoff/RESEARCH.md`)
 
 **1. Check for a second listing venue before reading domestic flow as directional.**
 While arbitrage between venues is blocked, a cross-listed name's home-market foreign-flow number is
@@ -117,7 +106,7 @@ through EWY instead ($1.1B in a single day). A sibling name with **no** ADR (005
 clean read.
 → Before citing foreign net-buying as directional, check for an ADR/GDR/dual listing and a
 blocked-conversion window. If one exists, mark the flow read **SUSPENDED with the date it clears**
-and record it in `handoff/STANDING_VIEW.md`. **Do not retroactively clean the contaminated stretch**
+and record it as a fact row in this market's `handoff/STANDING_VIEW_{US|KR}.md`. **Do not retroactively clean the contaminated stretch**
 once conversion opens — the old window stays unreadable.
 
 **2. When data looks late, check a second provider before theorizing about the first.**

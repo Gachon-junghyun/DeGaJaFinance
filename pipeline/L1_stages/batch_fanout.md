@@ -1,7 +1,7 @@
 # L1 · BATCH_FANOUT — N subagents, one company each, all in one message
 
 > Phase 2 of the company batch. Spawns **one subagent per roster row**, each running the
-> `company_research` protocol on its single name and returning a **structured verdict**, not prose.
+> `company` protocol in mode `research` (written in the first line of `CARRY.md` — `run_protocol.py` has no `--mode` flag) on its single name and returning a **structured verdict**, not prose.
 > Not a module — an Agent fan-out, same idiom as PREMORTEM's four lenses. Output: one
 > `company_batch/{ticker}/` directory per name, each with `REPORT.md` + `verdict.json`.
 
@@ -14,13 +14,13 @@ good as the first.** The parent keeps only the roster and the returned verdicts.
 ## Calls
 - **Agent fan-out — all N in ONE message (parallel).** Each subagent's brief is built from the roster row
   and MUST contain, verbatim:
-  1. the working directory and the compiled protocol path — `pipeline/protocols/_compiled/company_research.md`
+  1. the working directory and the compiled protocol path — `pipeline/protocols/_compiled/company.md`, with the instruction to write `mode: research` as the first line of `CARRY.md`
      — with the instruction to **read it whole before acting**; it governs all detail and every guard;
   2. the **ticker and its market**, plus the ticker-format table for that market (violate → 0 data);
   3. the row's **mandate** (from BATCH_SELECT: the due `--revives-if`, the unanswered question, or
      `first research`) — the subagent starts from the question, not from zero;
   4. the **output contract** below, stated as the definition of a completed run;
-  5. the stage range: **FORENSIC_PACK → BET_VERDICT** (skip PULSE and SIZE; the batch is research, and
+  5. the stage range: **CO_CARRY → CO_VERDICT** (PUBLISH_REPORT is skipped by the mode; PULSE and SIZE are outside the protocol; the batch is research, and
      sizing belongs to a human-run SIZE against the live book).
 - A subagent that cannot finish writes `FAILED.md` with the reason and **does not write `verdict.json`** —
   a missing verdict must stay missing so the next batch retries the name (real_alpha's rule, same reason).
@@ -35,13 +35,16 @@ good as the first.** The parent keeps only the roster and the returned verdicts.
  "set_diff":{"alpha_delta":["…"],"risk_unseen":["…"]},
  "rr":{"upside_pct":6.0,"downside_pct":-9.7,"ratio":0.62},
  "stop":221.68,"horizon_days":60,"evidence_grade":"A|B|C",
+ "evidence_mix":{"filing":40,"estimates":20,"competition":15,"macro":10,"tape":15},
  "thesis":"one line a top-down run can confirm or refute",
  "observation_points":[{"date":"2026-08-28","test":"falsifiable"}],
  "ledger_row":{"which":"reject|missed","cls":"…","condition":"…","recheck_date":"…"}}
 ```
+- ⚠ **G1/G2 changed meaning on 2026-10-31**: they were SMA200 and tape confirmation, now earnings direction and competitive position (tape moved to timing lines T1/T2, not scored). Rows before that date are not comparable on those two keys.
 - **A gate that does not apply is `null`, never `false`.** `company_score.py` drops nulls from the
   denominator; writing `false` for "not applicable" turns *not measured* into *failed*, which is the
   `clip(nan)=+1.0` trap this repo already paid for once (2026-08-10).
+- `evidence_mix` = the committed module_lens weights of this verdict's question, summed by bucket (`filing` · `estimates` · `competition` = rows keyed `competition_*` · `macro` · `tape` = flow + price + positioning + options); sums to 100. Not yet scored by `company_score.py` — recorded so a human can switch the score to it.
 - `evidence_grade` = the **highest** grade among the axes actually carrying the verdict, per L2
   indicators' A/B/C table. A verdict resting on OBV alone is **C** — say so; it is not a punishment,
   it is the scale telling the next reader how much to lean.

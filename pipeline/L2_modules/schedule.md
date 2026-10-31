@@ -8,14 +8,15 @@
   verify the ~ ones). ⚠ saves `CATALYST_WATCH.json` under the day-folder ROOT.
   **Any binary ≤48h ⇒ the pre-mortem MUST bracket it both ways** (one-way tilt into a known binary
   = protocol violation).
-  ⚠ **Do not stop at `--days 5` when `SCENARIOS.md` already names a date beyond it.** Measured
+  ⚠ **Do not stop at `--days 5` when the lens ledger already holds a settlement date beyond it.** Measured
   2026-07-23 (dig D26): 2026-07-29 had been carried as "the single most loaded date on the calendar"
   (S2) for at least a week of runs, but the 5-day default never reaches it — a **10-day** re-pull on
   that same date surfaced a fifth 07-29 event (a financial-holdco governance reform) that had never
   been registered anywhere, sitting on the desk's own continuously-OW sector. **A 5-day pull that
-  never cross-checks its own window against `SCENARIOS.md`'s already-armed dates is not a complete
-  schedule read.** Run `--days 10` (or further, to the furthest ARMED date inside ~2 weeks) whenever
-  any `ARMED` row's date sits beyond the default window, not only when something feels incomplete.
+  never cross-checks its own window against the open questions' settlement dates
+  (`module_lens due --today <date+14>`, plus the not-migrated table in `handoff/SCENARIOS.md`) is not a
+  complete schedule read.** Run `--days 10` (or further, to the furthest open date inside ~2 weeks) whenever
+  one sits beyond the default window, not only when something feels incomplete.
 - **KR 선물옵션 동시만기(네 마녀의 날)** — `python -X utf8 -m module_KIS --futboard` gives each
   contract's **`hts_rmnn_dynu`(잔존일수)·`futs_last_tr_date`(최종거래일)**, so the front-month expiry
   is a **structural, knowable-in-advance date** (index-arb unwind / positioning rollover). Treat it

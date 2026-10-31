@@ -13,9 +13,9 @@
   same scale and must not be compared or differenced** — the snapshot `_mode` guard now derives from
   the *realized* axis count rather than the `--no-news` flag, because the news axis dies on its own.
   ⚠ `vel_coverage` low ⇒ **the pipe, not the news**. Probe it (`fts search … --count`) before saying
-  "quiet". The four defects behind this block are documented in L1 [sweep](../L1_stages/sweep.md).
+  "quiet". The four defects behind this block are documented in L1 [flow_check](../L1_stages/flow_check.md) (the old SWEEP stage, archived 2026-10-31).
   🚨 **And read `sector_rotation[].top1_flips_sign`** — 10 of 26 KR sectors flip sign when their
-  largest name is removed. ROTATION may not promote/demote on those.
+  largest name is removed. No sector verdict may rest on a flipper's `wflow` (MACRO §3 · FLOW_CHECK).
 - LIVE shortlist — `python -X utf8 scripts/us_live_shortlist.py --floor-b 10 --top 15` /
   `kr_live_shortlist.py` (KR = foreign/institution actuals; US = FINRA short-z proxy).
   ⚠ **SERIAL dependency: the shortlist reads TODAY's SECTOR_FLOW json by default path — run the

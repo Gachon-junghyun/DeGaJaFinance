@@ -22,6 +22,7 @@
 | [module_evidence](#module_evidence) | **출처 저장소 색인 + ID 브로커** — md 원장/리포트 → 한 단어 조회 | "이 숫자 어디서 왔더라" 재검색 직전, 원장 append 전 ID 발급 |
 | [module_epistemics](#module_epistemics) | 베이지안 충돌평가·민감도 학습·verify·registry_audit | 신호 모순 해소, 종목 민감도 축적, 코드↔맵 감사 |
 | [module_inflection](#module_inflection) | 가격 변곡점 ↔ 뉴스 정렬 + 과거 전례 검색 | "이런 말 나올 때 이렇게 흘렀다", 변곡 주변 기사, 유사국면 |
+| [module_lens](#module_lens) | 과거 뉴스 × 이후 수익률로 «무엇을 몇 % 보고 고를까»를 스스로 찾는 하네스 (지금은 데이터 층) | 뉴스 렌즈 실험, 라벨(반응·앞3일) 재생성, KR+US 기사↔종목 링크 |
 | [module_order_desk](#module_order_desk) | KIS 주문 데스크(Tkinter GUI) — 스택형 휴먼 주문 | 시세 보며 주문을 스택에 쌓아 카드마다 [체결], 포폴·인기·흐름·만약에 |
 | [scripts/](#스크립트-데스크-호출) | 데스크가 `python scripts/X.py`로 호출하는 단일파일 도구 9 | 수급·섹터로테이션·촉매·숏리스트·스크리너 |
 | [점수판 3종](#산업-데스크-모듈) | `exposure_rule`(노출·수익분해) · `reject_ledger`(거부) · `missed_ledger`(미진입) | **데스크가 자기를 채점하는 층** — 베타 / 거부 / 미진입. 셋 다 같은 벤치·같은 노이즈밴드(±5pp)로 합산 가능하게 맞춰져 있다 |
@@ -392,6 +393,35 @@ REPORT/ 폴더의 데스크 산출물(.md)에서 태그(종목·섹터·평결·
 - ⚠️ **날짜로 묶기 전 t값을 믿지 않는다** — 실측: 급락충격 233건 중 65건이 2026-06-08 하루. pooled 로 세면 "급락 뒤 5일 +4.78pp, t=+6.55"인데, 하루=한 표본으로 접으면 **−1.03%±1.39(t=−0.74)로 효과가 사라진다**. `_stats.day_clustered()` 가 기본 보고 단위인 이유.
 - ⚠️ **조건부 수익은 기준선을 뺀 초과로만 읽는다** — 실측 창(2026-05~07)의 무조건부 5일이 −1.72%라, 안 빼면 모든 결론이 "시장이 빠졌다"가 된다.
 - ⚠️ **변곡의 50.3%만 제목 근거가 있다** — 나머지는 뉴스가 없는 게 아니라 시장 전체 사건이라 제목에 회사명이 없다(`_universe` 의 경제기사 재현율 10.6% 가 변곡 축에서 재현됨).
+
+## module_lens
+조사를 **표**로 쌓는 증거 장부 — 물음(무엇이 어떻게 될지) · 근거(어떤 방법으로 무엇을 읽고 몇 %를 실었나) · 결과(이렇게 됐다)를 SQLite 에 두고, 새 조사는 지난 물음을 낱말·의미로 찾아 «잘 맞던 방법»부터 본다. 결과가 들어오면 근거·방법마다 신뢰도가 역전파로 쌓인다. 설계 [`module_lens/DESIGN.md`](module_lens/DESIGN.md), 데스크 안내 [`pipeline/L2_modules/lens.md`](pipeline/L2_modules/lens.md), 실험 근거 [`lab/NEWS3D_20261030.md`](lab/NEWS3D_20261030.md). 2026-10-31 옛 `handoff/SCENARIOS*.md` 165건을 옮겨 시작(정의 없는 번호 S121·S144·S164 제외).
+
+- **트리거**: 뉴스 렌즈 실험, «이런 뉴스 뒤 3일», 라벨 재생성.
+- **CLI**:
+  ```bash
+  python -X utf8 -m module_lens build            # 가격(KR 전체 + US 300)·링크·라벨 → data/lens.db
+  python -X utf8 -m module_lens build --skip-px  # 링크·라벨만
+  python -X utf8 -m module_lens status
+  # 장부 (data/lens_ledger.db — 원본. 백업은 export 가 handoff/lens/*.jsonl 로)
+  python -X utf8 -m module_lens find "<물음>" [--deep]   # 닮은 지난 물음 + 방법별 맞음/틀림 (--deep = 의미 검색, GPU 몇 초)
+  python -X utf8 -m module_lens ask "<물음>" --subject X --market US --desk D --settle YYYY-MM-DD --observable "px:NVDA:3|pxx:…|fred:DGS10:5|text:…"
+  python -X utf8 -m module_lens ev Q12 "<방법>" "<읽은 값>" --kind estimates --supports A [--dead "<못 쓴 이유>"]
+  python -X utf8 -m module_lens advise --item "kind:key:method:supports" …   # 권장 비중(파급력 × 신뢰도, 상한 40%)
+  python -X utf8 -m module_lens think Q12 --branch "A:50:<조건>" … --weights e3=30,e4=70
+  python -X utf8 -m module_lens due | resolve Q12 A --value … | show Q12
+  python -X utf8 -m module_lens score && python -X utf8 -m module_lens learn && python -X utf8 -m module_lens export   # 밤마다
+  python -X utf8 -m module_lens calib | embed | prior | reindex | import FILE.jsonl
+  ```
+- **장부 소유**: 물음·근거·결과 세 표와 색인(`q_fts`·`q_vec`)·파생(`credit`·`impact`) — `_ledger`·`_search`·`_score`·`_learn`·`_vec`·`_prior`. 거절 규칙: settle 뒤 `think` · 판정 뒤 `think` · 확률 합 ≠ 100 · 산 근거 비중 합 ≠ 100 · 죽은 근거에 비중 · 갈래에 없는 판정 · 판정 뒤 `ev`. 훅 `hook-prompt`(이 리포 `.claude/settings.json`, 낱말만, 0.2초).
+- **소유**: 세션 판정(종목 시장의 장 마감 전/후 — KR 15:30 KST, US 16:00 뉴욕) · 라벨(반응·앞1/3/5·앞3일 평균·직전5일, 전부 같은 시장 횡단면 초과) · US 종목 한글 별칭 매칭.
+- **재사용(중복0)**: 가격 받기 `module_inflection._prices.fetch_panel` · KR 유니버스 `_prices.load_universe` · KR 사명 색인 `_newslink._name_index` · US 별칭·모호티커 `module_news_data._chain_hop.load_universe` · 발행시각 `_timeaxis.parse_published` · 뉴스 시작일 `_timeaxis.PUBLISHED_AT_SINCE` · 벡터 `news_vectors.db` 읽기만.
+- **데이터**: `data/lens.db` = 클라이언트 소유 파생물(universe·px·links·labels). 지우고 `build` 로 다시 짓는다.
+- ⚠ **P6**: 전부 CPU. 클라 전용이라 `DB_READ_CMDS` 에 넣지 않는다.
+- ⚠ 벡터 모델이 한국어용(ko-sroberta)이라 영어 제목의 임베딩 품질은 재지 않았다. US 렌즈 결과를 읽을 때 같이 적는다.
+- ⚠ **장부 층은 표준 라이브러리만** — `_config` 는 `module_news_data/_config.py` 를 비공개 이름으로 읽는다(정식 import 는 패키지 `__init__` 이 feedparser 등을 끌고 와 1초). 정식 이름으로 끼워 넣던 첫 방식은 부모 패키지 속성이 빠지는 결함이 있었다(2026-10-31 검토).
+- ⚠ 백필 165건의 근거 비중은 산문에 없어 **동일비중 + `backfilled`(학습에서 ×0.5)** 다. 판정은 독립 검증 48건 중 46건 일치(96%). 물음 제목이 영어라 한국어 프롬프트에는 훅이 거의 안 뜬다(의미 검색 `find --deep` 은 된다).
+- ⚠ 2026-09-15 이후는 실험의 holdout 이다 — 렌즈·비중을 고르는 데 쓰지 마라(계획 문서 §하네스 계획).
 
 ## 브라우저·집행 모듈
 | 모듈 | 트리거 | 안전장치 |

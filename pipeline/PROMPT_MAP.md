@@ -15,19 +15,18 @@ The prompts form 5 families (desk flows); each flow is a **chain of L1 parts (st
                  │ writes llm_outputs/{date}/preflight/PREFLIGHT.md = a claim-permission table
                  │ a FAILED gate removes a citation right for the run (not a warning)
                  ▼
-[all desks]  HANDOVER (stage 0 — inherit the standing view before anything else)
-                 │ reads/writes ../handoff/ : STANDING_VIEW · SCENARIOS · RESEARCH
-                 ▼
-[industry]   MACRO → SWEEP → ROTATION → (PRE-MORTEM) → DEEP → BET → ALPHA → DRIFT
+[industry]   HANDOVER (settle module_lens due · both ledgers · thin ../handoff/)
+             → MACRO (data-change size → earnings transmission → sector verdicts + focus pick)
+             → (PRE-MORTEM, US) → EARNINGS (OP margin · guide · estimates, from filings)
+             → COMPETITION (share · price · capacity · customers · contracts) → FLOW_CHECK (confirm only)
+             → BET (lens weights by evidence kind) → ALPHA → HANDOVER close-out (+ drift)   [rebuilt 2026-10-31]
    │ sector pick + name pick ↓
-[company]    Phase1 business model → Phase2 earnings quality → Phase3 valuation → Phase4 technical setup → verdict
+[company]  CARRY → FILINGS → STRUCTURE → MACRO → MONEY → VALUE → FALSIFY → VERDICT (→ PUBLISH in report mode)
    │ verdict ↓                                     ↑ chart-analysis (11 branches) embedded
 [strategy]   Phase0 cycle → Phase1 value chain → Phase2 names (calls company) → Phase3 port+cards → Phase4 verify
-[real-alpha] STEP0 datapack → STEP0.5 self-grade revisit → block A ∥ block B (∥ block D) → block C set-difference → refute → verdict
-   └ independent parallel track (READ-ONLY, reference-only). Writes back to the industry board via SECTOR_ALPHA_MAP
+[real-alpha] = company --mode forensic (merged 2026-10-31)
 [chart]      §0 pre-checks → §1–§11 branches → conflict matrix (M1–M4) → single conclusion  (embedded in company Phase4)
-[idle-probe] CENSUS → PAIR → PROBE → CONTROL → ADJUDICATE → SIZE → STAGE_ORDERS
-   └ target is the INSTRUMENT and the OPEN QUESTION, not the market. Never writes to ../handoff/ (counter collision D137·D211)
+[idle-probe] archived 2026-10-31 (1 run since 07-10) — `_archive/2026-10-31/protocols/idle_probe.md`
 ```
 
 **Meta 3 layers** (the reorganization axes): `PROTOCOL (design SPEC)` → `runtime canon (KR·US language-pure)` → `stages/ (on-disk execution chain, each = one L1)`.
@@ -38,14 +37,20 @@ The prompts form 5 families (desk flows); each flow is a **chain of L1 parts (st
 |---|---|---|
 | L2 | [web_errand](L2_modules/web_errand.md) | Any stage that needs what the modules cannot give (login-walled page, filing exhibit, exchange screen). **Map first**: `module_webctl find` → `access=api` means a module already owns it, so no browser. One errand = one `run` batch (`goto(url, until)`, never `sleep`); read-only by default, write steps refused without an explicit human `--allow-write`; captcha/429/login wall = retreat, not an obstacle |
 
+### LENS — the cross-desk question ledger (repo-native, 2026-10-31)
+
+| Layer | Unit | Role |
+|---|---|---|
+| L2 | [lens](L2_modules/lens.md) | PREMORTEM · BET · ALPHA: `find` → `ask`/`ev` (one row per reading, true `--kind`) → dig and record dead methods → `advise` (credit per kind) → `think` with actual evidence weights totaling 100% (flow+positioning ≤ 20% by default). HANDOVER first check: `score` → `due` → `resolve` or AMBIGUOUS with a reason. Numeric records live in the ledger; old bracket prose is in `handoff/_archive/2026-10-31/` |
+
 ### HANDOVER — the cross-desk stage 0 (repo-native, no mvp ancestor)
 
 | Layer | Unit | Role |
 |---|---|---|
 | L1 | [handover](L1_stages/handover.md) | Inherit the standing view · score matured scenarios · stale-check · load the binding research rules · write the carry back at run end |
-| L1 | [leak_audit](L1_stages/leak_audit.md) | **사후 감사** — 끝난 런이 지불하고 걷지 않은 것. 거부·커버리지소실·스쳐감·발굴부재 4클래스 × 선행검정(후행 동어반복 차단) × 창 레짐 라벨링 → 파일·줄 단위 프로토콜 처방 |
+| L1 | leak_audit *(archived 2026-10-31 — no protocol called it)* | **사후 감사** — 끝난 런이 지불하고 걷지 않은 것. 거부·커버리지소실·스쳐감·발굴부재 4클래스 × 선행검정(후행 동어반복 차단) × 창 레짐 라벨링 → 파일·줄 단위 프로토콜 처방 |
 | L2 | [carryover](L2_modules/carryover.md) | Read `../handoff/` + reconcile it against the mechanical tag ledger (`module_report_tags`); re-pull anything whose suspension has cleared |
-| L3 | [scenario_score](L3_functions/scenario_score.md) | One pre-registered scenario → one branch verdict, against the **frozen** threshold. `EXPIRED` is logged, never dropped |
+| L3 | [scenario_score](L3_functions/scenario_score.md) | Superseded by `module_lens resolve` (2026-10-31); kept for the not-migrated `P###`/`M-###`/`S##-KR` brackets |
 | L3 | [reject_ledger](L3_functions/reject_ledger.md) | 거부(DROP/PASS/강등) 1건 → 사유클래스 + **부활조건** + 재확인일로 적립하고 사후 채점. `add` 가 두 필드를 강제 |
 | L3 | [missed_ledger](L3_functions/missed_ledger.md) | ★ 위의 **대칭 짝**(2026-07-31) — "검토했으나 사지 않은 것" 1건 → **진입조건** + 재확인일로 적립·채점. **부호 반대**(`excess>0` = 놓쳐서 손해). 거부 원장과 같은 티커×날짜는 `add` 가 기계로 막는다 |
 | L3 | [ic_ledger](L3_functions/ic_ledger.md) | ★ **이 데스크의 시계** — 신호 축의 횡단면 IC 를 런당 1행 적립. 11포지션 손익으로 배우면 수십 년, 828종목 랭킹으로 배우면 **3~5개월**. `필요n` 열이 축을 언제 죽일지 말한다. **겹침 보정(NW·n_eff<4 판정불가) + 다중비교(Bonferroni) 내장** |
@@ -62,7 +67,7 @@ the first proposition is formed, not after the last.
 
 **Where its rules are enforced** (loaded by HANDOVER, binding downstream):
 MACRO — cite both halves of a print · name the benchmark · no cross-market signal transfer.
-DEEP — second-derivative reading for price cycles · peak-margin vs low-multiple check · name the
+COMPETITION (was DEEP) — second-derivative reading for price cycles · peak-margin vs low-multiple check · name the
 node's customers · test or tag every lead/lag claim · state sub-sector dispersion.
 PREMORTEM — grade branches by information content · freeze observable+threshold at registration ·
 score the observable, not the tape · date-clustered moves are n≈1.
@@ -71,22 +76,29 @@ providers before theorizing about a late series.
 
 ---
 
-## 1. Industry (industry_us / industry_kr)
+## 1. Industry (industry_us / industry_kr) — **rebuilt 2026-10-31**
 
-Purpose: rank "where the wind blows" from macro propositions, deep-dive only the OW 3–4 down to the
-value chain. Zero buy/sell calls. Output root `REPORT/industry_{KR|US}/`; previous folder read-only.
+Purpose: read the financial environment and what companies actually earn, then the industry structure, and only
+then ask whether the money agrees. Zero buy/sell calls. Output root `llm_outputs/{date}/industry_{KR|US}/`.
 
-| L1 | Phase | Calls | Input → output |
-|---|---|---|---|
-| **0** | MACRO | **both: `embed sync` → `brief`(events) → `thread --days 7`(trajectories)** · KR: `news_fts --kr --syn` · `news blindspot --domestic` / US: `module_macro_us`(FRED) · `us_flow --cot` · `catalyst_calendar` | events + trajectories + 7-bucket news + daily anchor → `MACRO_REPORT.md` (proposition table + ★transmission matrix + hit-rate) |
-| **0.5** | SWEEP | `sector_flow --market {kr\|us}` · `{kr\|us}_live_shortlist` · (US) `cycle_exposure` | universe CSV → `SECTOR_FLOW.json` · `LIVE_SHORTLIST.json` · (US) `CYCLE_EXPOSURE.md` |
-| **0.7** | EVENT_ALPHA | `thread --days 7`(scope market-locked) · `drill_detail` · `chain-hop`/`industry_map` · `module_flow`/`us_flow` · `report_tags` | building threads × money flow → `EVENT_ALPHA.md` (forward cards; CONFIRMED-EARLY → ROTATION/BET, ENDED-thread book flags) |
-| **1** | ROTATION | `news_fts --count` (velocity) · `module_industry_map` | matrix + flow → `SECTOR_ROTATION.md` (11-sector OW/UW + 4 DEEP + DEEP_LOG) |
-| **1.5** | PRE-MORTEM *(US only)* | 4 adversarial subagents (fan-out) | rotation draft → `BLINDSPOT_PREMORTEM.md` |
-| **2** | DEEP | KR: `module_industry_map` · `module_business` · `module_disclosure` · `module_chart --read` / US: `module_business_us` · `module_disclosure_us` · `chain-hop` · `us_flow` | 4 targets → `SECTOR_DEEP_{code}.md` ×4 |
-| **3** | BET | `module_valuation` · `module_math_check` · `module_flow` · (US) `us_setup_screener` · `module_fundamentals_us` | 4 DEEP → `BET_SHEET.md` (per-sector §A–§E) |
-| **4** | ALPHA | `module_flow --positioning` · (US) `theme_age` · `action_bracket` · WebSearch | BET_SHEET → §B tags (🟢LIVE/🟡PARTIAL/🔴RESOLVED) · (US) `ACTION_TICKETS.md` |
-| **post** | DRIFT *(US)* | `drift_watch` | +3–6h kill-switch burst → MACRO_REPORT §5 ADDENDUM |
+| # | L1 | Reads (primary) | Output (cap) | Next stage uses |
+|---|---|---|---|---|
+| 1 | HANDOVER | lens ledger · reject/missed `due` · PREFLIGHT · thin handoff | `HANDOVER.md` (8 KB) | due list · permissions · exposure |
+| 2 | MACRO | FRED/rates/oil/FX/credit **changes** · catalyst calendar · events | `MACRO_REPORT.md` (14 KB) | transmission lines · focus sectors |
+| 3 | PREMORTEM *(US)* | 4 adversarial subagents | `BLINDSPOT_PREMORTEM.md` (10 KB) | promoted legs · brackets · GAP |
+| 4 | **EARNINGS** | 8-K ex 99.1 · 10-Q · DART 잠정실적 · IR · consensus trend (web_errand) | `EARNINGS.md` (24 KB) | candidate set · OP margin · guide · estimates |
+| 5 | **COMPETITION** | 10-K/사업보고서 · competitors' filings · customers' capex · 수주 공시 | `SECTOR_DEEP_{code}.md` (12 KB each) | share · price · capacity · customers · contracts |
+| 6 | **FLOW_CHECK** | sweep JSON · shortlist · module_flow (graded D6) | `FLOW_CHECK.md` (4 KB) | agree/disagree lines |
+| 7 | BET | upstream files · scoreboard · ledgers | `BET_SHEET.md` (16 KB) + lens Q IDs | theses with weights by kind |
+| 8 | ALPHA | theme_age (pipe-probed) · catalyst primary source · positioning | §B tags · `ACTION_TICKETS.md` | carry-forward |
+| — | HANDOVER close-out | — | write-back · `module_lens export` · drift addendum | next run |
+
+Old → new: ROTATION → MACRO §3 · EVENT_ALPHA → EARNINGS §3 · SWEEP → FLOW_CHECK · DEEP → COMPETITION · DRIFT →
+HANDOVER close-out · INSTRUMENT_CHECK → protocol `preflight` only (run before HANDOVER).
+**Gates now**: a conclusion stands on a non-flow kind (filing · estimates · macro transmission · price structure);
+flow cannot admit a name, move a sector verdict, veto a removal or block a KR conclusion; every included or
+set-aside name carries a lens Q ID with weights by kind. Why: the lens ledger's first learning scored filings
+evidence 6/8 and flow 5/32; six completed runs asked operating income 0–2 times and market share 0 times.
 
 **News has two axes** (L2 `news`): **term** (`news_fts`·`blindspot`·`chain-hop` — "is my theme hot?")
 and **event** (L3 `daily_events` → `brief` — "what happened today, all of it"; L3 `event_threads` →
@@ -98,16 +110,23 @@ before the hike (`2→7→6→7→5→8`), visible only as a trajectory. ⚠ Eve
 CLAUDE.md P6); market/non-market filtering is
 **KR-only** (Korean-trained classifier — foreign feeds are 82% finance already, so nothing is filtered).
 
-**KR/US asymmetry (core)**: KR = 6 stages (no PRE-MORTEM/DRIFT), no macro primary module (cross-reads
-US MACRO §A), but has **KIS per-investor net-buy actuals** (real-hands/weak-hands) that the US lacks.
-US = 7+ stages with the anti-tunnel five (catalyst injection · cycle_exposure · premortem ·
-action_bracket · drift — all born from the 2026-07-14 postmortem).
-**Gates**: macro gate (only OW enters DEEP) · EXIT-CHECK chain · 4-DEEP selection (2 continuous + 2 rotating)
-· Phase-4 bettable (🔴 dropped) · momentum-only hard-stop.
+**KR/US asymmetry**: KR has no PREMORTEM, no FRED module (cross-reads US MACRO §1), N=2 focus sectors, and KIS
+investor actuals (D6 grade B — a confirmation, not a gate). US has PREMORTEM, ACTION_TICKETS, cycle exposure, N=4.
 
 ---
 
-## 2. Company (company_research) — **BUILT 2026-08-21**
+## 2. Company (company) — merged 2026-10-31 from company_research · 기업분석 · real_alpha_kr
+
+| mode | question | ends with |
+|---|---|---|
+| research (default; company_batch uses it) | do we bet | ENTER…PASS + one ledger row + dated observation points |
+| report | what is it, what is it worth, buy now | own target + execution table + Word/PDF |
+| forensic | is it REAL | REAL / REAL-but-PRICED / INFLATED / BROKEN (reference-only) |
+
+Run: `python pipeline/run_protocol.py company --start --target <TKR>` (mode on CARRY.md line 1). Stages and
+archive: `protocols/company.md`, `_archive/2026-10-31/README.md`. The history below describes the merged originals.
+
+### 2-old. company_research (original, archived 2026-10-31)
 
 Purpose: dissect ONE name, trader's lens → a **"do we bet"** verdict written into a scored ledger.
 Input: a ticker (+ optional THESIS_SEED · HORIZON). Output root `llm_outputs/{date}/company_{ticker}/`.
@@ -159,7 +178,9 @@ BET_VERDICT states this in-file when `--market us`. Fix = a US cache/benchmark p
 
 ---
 
-## 2c. 기업분석 (기업분석) — repo-native, **BUILT 2026-08-28**
+## 2c. 기업분석 (기업분석) — repo-native, BUILT 2026-08-28 — **ARCHIVED 2026-10-31 (merged into company)**
+
+→ now `company --mode report`; original in `_archive/2026-10-31/`.
 
 **한 줄**: 같은 한 종목을 `company_research` 와 **다른 질문**으로 본다 — 저쪽은 「베팅할까」(원장 한 줄),
 이쪽은 **「이 회사가 무엇이고, 얼마가 적정하고, 지금 사야 하나」**. 끝나는 자리가 다르다:
@@ -215,7 +236,7 @@ FORENSIC_PACK 이 그 함정을 in-file 로 들고 있으며, 그 L1 을 공유�
 
 ## 2b. Company batch (company_batch) — repo-native, **BUILT 2026-08-21**
 
-**한 줄**: `company_research` 를 **N기업(기본 10) 병렬 서브에이전트**로 돌려 **한 척도 점수판**을 만들고,
+**한 줄**: `company --mode research` 를 **N기업(기본 10) 병렬 서브에이전트**로 돌려 **한 척도 점수판**을 만들고,
 그 점수판을 **탑다운 런(industry_us)이 먹는다** — 세션에서 새로 파지 않고 **테제 확인만** 하도록.
 
 | # | L1 stage | Content · calls |
@@ -265,7 +286,9 @@ catalyst D-1 freeze · alpha freshness (🔴 disqualified).
 
 ---
 
-## 4. Real-alpha (real_alpha_company_research US/KR)
+## 4. Real-alpha (real_alpha_company_research US/KR) — **ARCHIVED 2026-10-31 (merged into company)**
+
+→ now `company --mode forensic`; original in `_archive/2026-10-31/`.
 
 Purpose: one company per day, forensic — **"is it REAL"**. News = the defendant's testimony;
 verification = primary sources (EDGAR/DART) + actual money movement. **Reference-only (non-binding)**,
@@ -337,7 +360,9 @@ correlated basket capped as ONE risk unit · per-currency cash sleeve (KRW cash 
 
 ---
 
-## 8. Morning brief (morning_brief) — repo-native, no mvp ancestor
+## 8. Morning brief (morning_brief) — repo-native, no mvp ancestor — **ARCHIVED 2026-10-31**
+
+→ 3 runs since 07-10. Protocol, its three L1s and L3 `public_source` are in `_archive/2026-10-31/`; trigger W6 moved to `handoff/_archive/2026-10-31/RESEARCH.md`. Kept below as history.
 
 Purpose: **publish**, not research. Turn the previous desk run + the overnight foreign session +
 today's calendar into one pre-open file a person reads on a phone at 08:30 KST. No new number, no
@@ -398,18 +423,20 @@ G5 유니버스가 보유를 덮나 · G6 계측 적립 속도 · G7 도구 생�
 
 ---
 
-## 9. Idle probe (idle_probe) — repo-native, no mvp ancestor
+## 9. Idle probe (idle_probe) — repo-native, no mvp ancestor — **ARCHIVED 2026-10-31**
+
+→ 1 run since 07-10. Protocol and pair · probe · control · adjudicate are in `_archive/2026-10-31/`; census stays (preflight); size · stage_orders stay (order side). Rule S3 is in `handoff/_archive/2026-10-31/RESEARCH.md`. Kept below as history.
 
 **한 줄**: 이 리포가 **소유했으나 부른 적 없는 실행표면**을 데스크가 **이미 등록해 둔 미해결 질문**과
 교차시켜 가설로 만들고, 통제군까지 돌려 닫는다. 대상은 시장이 아니라 **계기와 질문**이다.
 
 | Layer | Unit | Role |
 |---|---|---|
-| L1 | [census](L1_stages/census.md) | 실행표면 인구조사 — **CLI 호출문 기준**(언급 기준은 3~15배 부풀려진다). 완전유휴 / 배선안됨 / shim 3분류 |
-| L1 | [pair](L1_stages/pair.md) | 유휴 능력 × 등록된 질문(dig · §6 열린 모순 · 관측값 빈 브래킷) 교차 → 가설. 분기 정보량(L3)·검정력(S3) 사전판정 |
-| L1 | [probe](L1_stages/probe.md) | v번호 사슬로 실행. 외부 호스트가 막으면 **재구현 말고 소유 모듈 import**(P1). 숫자마다 `[1차]`/`[2차]`/`[추론]` |
-| L1 | [control](L1_stages/control.md) | 통제군 + **아무도 안 고른 기본값 스윕**(최소 3점) + 계기 자기평가 검증 + **이 런 자기주장 재검**(D48) |
-| L1 | [adjudicate](L1_stages/adjudicate.md) | 축 충돌을 `module_epistemics` 로 구조화. LR 은 **축 등급에서 유도**(D6), C급 단독 명제 금지, 잔여충돌 명시 |
+| L1 | [census](L1_stages/census.md) *(now preflight only)* | 실행표면 인구조사 — **CLI 호출문 기준**(언급 기준은 3~15배 부풀려진다). 완전유휴 / 배선안됨 / shim 3분류 |
+| L1 | pair *(archived)* | 유휴 능력 × 등록된 질문(dig · §6 열린 모순 · 관측값 빈 브래킷) 교차 → 가설. 분기 정보량(L3)·검정력(S3) 사전판정 |
+| L1 | probe *(archived)* | v번호 사슬로 실행. 외부 호스트가 막으면 **재구현 말고 소유 모듈 import**(P1). 숫자마다 `[1차]`/`[2차]`/`[추론]` |
+| L1 | control *(archived)* | 통제군 + **아무도 안 고른 기본값 스윕**(최소 3점) + 계기 자기평가 검증 + **이 런 자기주장 재검**(D48) |
+| L1 | adjudicate *(archived)* | 축 충돌을 `module_epistemics` 로 구조화. LR 은 **축 등급에서 유도**(D6), C급 단독 명제 금지, 잔여충돌 명시 |
 | L1 | [size](L1_stages/size.md) *(재사용)* | 크기를 **고르지 않고 묻는다** — `kelly_size --ic` 스윕으로 "거래가 열리려면 IC 가 얼마여야 하나" |
 | L1 | [stage_orders](L1_stages/stage_orders.md) *(재사용)* | 조건부 intent 카드 → `kis_stack.json`. **사람이 [체결]로 발사**(P5) |
 
