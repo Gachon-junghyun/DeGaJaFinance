@@ -73,7 +73,7 @@ def main() -> int:
     p.add_argument(
         "--series",
         default="",
-        help="쉼표 구분 시리즈 키 (예: us_10y,cpi,vix). 미지정 시 12종 전체.",
+        help="쉼표 구분 시리즈 키 (예: us_10y,cpi,vix). 미지정 시 카탈로그 전체.",
     )
     p.add_argument(
         "--days",
@@ -81,6 +81,7 @@ def main() -> int:
         default=365,
         help="조회 기간 (기본 365일). 월별 시리즈는 yoy 계산 위해 내부적으로 더 끌어옴.",
     )
+    p.add_argument("--asof", default="", help="YYYY-MM-DD — 그날 빈티지로 재현(과거 시뮬레이션용, 미래 엿보기 없음)")
     p.add_argument("--json", action="store_true", help="JSON raw 시리즈 dump")
     p.add_argument("--out", default="", help="markdown 결과 저장 경로 (없으면 stdout)")
     args = p.parse_args()
@@ -92,7 +93,9 @@ def main() -> int:
         return 1
 
     try:
-        rows = fetch_series(keys, days=args.days)
+        from datetime import date as _date
+        as_of = _date.fromisoformat(args.asof) if args.asof else None
+        rows = fetch_series(keys, days=args.days, as_of=as_of)
     except MacroFetchError as e:
         print(f"[macro_us] {e}", file=sys.stderr)
         return 1
@@ -121,7 +124,7 @@ def main() -> int:
         print(json.dumps(dump, ensure_ascii=False, indent=2))
         return 0
 
-    md = render_markdown(rows)
+    md = render_markdown(rows, as_of=as_of)
     if args.out:
         Path(args.out).parent.mkdir(parents=True, exist_ok=True)
         Path(args.out).write_text(md, encoding="utf-8")

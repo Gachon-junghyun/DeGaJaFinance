@@ -34,13 +34,27 @@ def _tokens(s: str) -> set[str]:
     return {t for t in re.split(r"[\s/·,]+", base) if len(t) >= 2}
 
 
-def factor_confidence(code: str, axis: str, default: float = 0.5) -> float:
-    """axis(신호명)를 원장 factor와 퍼지 매칭 → 학습된 신뢰도. 없으면 default(중립)."""
+def factor_confidence(code: str, axis: str, default: float = 0.5,
+                      asof: str | None = None) -> float:
+    """axis(신호명) → 원장 factor 의 학습된 신뢰도. 없으면 default(중립).
+
+    고침(2026-10-31, inflection 시뮬): 예전엔 토큰이 **하나라도** 겹치는 factor 중 첫째를 골라,
+    원장에 없는 «analog_h5 mid» 가 이웃 «analog_h5 hi» 의 신뢰도 0.9 를 조용히 빌려 갔다.
+    이제 ① 이름이 같으면 그것 ② 한쪽 토큰이 다른 쪽에 **다 들어 있으면**(포함) 겹침이 큰 것
+    ③ 그 밖엔 default. `asof` 를 주면 그날 뒤에 갱신된 factor 는 안 본다(시점 그대로).
+    """
     led = load(code)
+    facs = {f: i for f, i in led.get("factors", {}).items()
+            if asof is None or str(i.get("updated", "")) <= asof}
+    if axis in facs:
+        return float(facs[axis].get("conf", default))
     a_tok = _tokens(axis)
     best, best_conf = 0, default
-    for factor, info in led.get("factors", {}).items():
-        overlap = len(a_tok & _tokens(factor))
+    for factor, info in facs.items():
+        f_tok = _tokens(factor)
+        if not a_tok or not f_tok or not (f_tok <= a_tok or a_tok <= f_tok):
+            continue
+        overlap = len(a_tok & f_tok)
         if overlap > best:
             best, best_conf = overlap, float(info.get("conf", default))
     return best_conf

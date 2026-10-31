@@ -188,6 +188,7 @@ KIS 주문 데스크 — Tkinter 스택형 주문 GUI. 주문을 '스택'에 카
 - **소유**: OHLCV→ASCII 렌더·지표·구조판정. self-contained(yfinance만).
 
 ## module_flow
+> ⚠ **2026-10-31 시뮬(out/sim/flow, 약 490거래일):** 가격 3축 태그·flow_score·OBV·외국인 연속일·FINRA z 는 5거래일 시장 대비 수익에 방향 효과가 없고(|t|<1.4) 국면마다 부호가 뒤집혔다. 단독 방향 근거로 쓰지 않는다. 쓸 수 있는 건 «그날 움직임의 폭»(보합 갈래 확률을 낮추는 데)뿐.
 가치(4Phase)·차트가 못 보는 '돈·관심의 흐름'을 결정론으로 → 🟢가속 / 🟡중립 / 🔴분산.
 4Phase가 바닥이면 이건 방아쇠.
 
@@ -248,7 +249,7 @@ industry_us/kr 프로토콜이 호출하는 분석 모듈. 전부 기능별 `_�
 | `scripts/build_de_docx.py` | **리서치 산출물 → Word 조판**(두산에너빌리티 034020 본). 🔴 **조판 헬퍼를 복제하지 않는다** — `build_hdec_docx` 에서 `para·rich·table·callout·h1·h2·bullet·hrule·field` 를 **import 해서 쓴다**(그쪽은 `__main__` 가드가 있어 import 해도 문서를 안 만든다). 새 종목 보고서는 이 파일을 본떠 **본문만** 쓰면 된다. 덧붙인 축: **주가산정 4방법**(EV/EBITDA 동종비교 · 배수별 목표주가 환산 · PER 동종 교차검증 · 시나리오 현재가치)과 **매수·매도 실행표**(신규/보유/손절/재매수 + 전환신호). ⚠ **표 `widths` 합은 16.4cm(본문폭)를 넘기지 마라** — 넘으면 조용히 페이지 밖으로 나간다. ⚠ TOC 는 생성 직후 Word COM(`TablesOfContents.Update` → `Save` → `SaveAs FileFormat=17`)으로 구워야 쪽번호가 박히고 PDF 가 같이 나온다(이 PC 에 pywin32 있음, 실측 22쪽) | `python -X utf8 scripts/build_de_docx.py [out.docx]` | python-docx · `build_hdec_docx`(헬퍼) · (선택)pywin32=TOC 굽기·PDF, PyMuPDF=렌더 검수 |
 | `scripts/leak_scan.py` | **누수 스캔** — 끝난 런이 지불하고 걷지 않은 것. 전 유니버스 상승주를 런 산출물과 대조해 A.런에있었음/B.커버리지소실/C.스쳐감/D.발굴부재 로 분류 + **선행검정**(런시점 상태→이후 실현, 후행 동어반복 차단). 벤치는 시총floor 동일가중 | `python -X utf8 scripts/leak_scan.py --run 2026-07-20 --top 25` | `llm_outputs/sector_flow/prices_kr_*.pkl`·SECTOR_FLOW_KR.json·llm_outputs/**/*.md |
 | `scripts/brief_recall.py` | **brief 회수율 감사** — 그날 기사의 N%를 무작위로 뽑아 "브리핑에서 되찾히나"를 대조. 회수율은 주장이 아니라 **측정치**여야 한다: 처음 재보니 `--body 2`+꼬리0 인데도 **45.6% 가 안 보였다**(1매체 35%·비시장 미노출·토픽 블롭). 수선 후 64.6%. 못 본 기사 목록을 같이 뱉어 `--singles-nb` 조정 근거를 준다. **클라 전용(GPU)** | `python -X utf8 scripts/brief_recall.py --date 2026-07-23 --scope domestic` | module_news_data(`_brief`·`_cluster`·`_embed` 재사용, P1) |
-| `module_macro_us` | US 매크로 레짐(FRED **19개** — 금리·물가·달러 + **신용/유동성**) | `python -m module_macro_us --series hy_oas,nfci` | FRED_API_KEY |
+| `module_macro_us` | US 매크로 레짐(FRED **20개** — 금리·물가·달러 + **신용/유동성** + 유가) · `--asof YYYY-MM-DD` 로 그날 알려진 값(빈티지)만 — 과거 재현에 개정치가 섞이지 않게 (2026-10-31 시뮬) | `python -m module_macro_us --series hy_oas,nfci` | FRED_API_KEY |
 | `module_valuation` | KR 밸류에이션 스냅샷·목표가·peer 비교(수동 `--peers`) | `python -m module_valuation 005930 --peers 000660` | DART/KRX |
 | `module_industry_map` | 임베딩 클러스터로 산업 지도·밸류체인 | `python -m module_industry_map` | data/corp_embeddings.db (직접 sqlite) |
 | `module_business` | KR 사업모델(매출표·제품)+IR 발췌 | `python -m module_business 005930` | data/corp_embeddings.db + news_alert.db |
@@ -412,6 +413,9 @@ REPORT/ 폴더의 데스크 산출물(.md)에서 태그(종목·섹터·평결·
   python -X utf8 -m module_lens due | resolve Q12 A --value … | show Q12
   python -X utf8 -m module_lens score && python -X utf8 -m module_lens learn && python -X utf8 -m module_lens export   # 밤마다
   python -X utf8 -m module_lens calib | embed | prior | reindex | import FILE.jsonl
+  python -X utf8 -m module_lens import-sim <갈래…>   # out/sim/<갈래>/*.jsonl 을 지금 채점기로 다시 재서 가져오기(장부 사본 먼저). 시뮬 지시는 out/sim/BRIEF.md
+  python -X utf8 -m module_lens replay             # 정산 순서대로 되돌려 돌려 확률 정책(눈금·기준률)이 브라이어를 낮추나 — 미래 엿보기 없음, 90% 부트스트랩. playbook 이 채택 여부를 읽는다
+  python -X utf8 -m module_lens playbook [--out F]   # credit·calib → pipeline/LEARNED.md (먼저 쓸·쓰지 않을 방법, 확률 눈금). 루틴이 자식 지시문 끝에 붙인다
   ```
 - **장부 소유**: 물음·근거·결과 세 표와 색인(`q_fts`·`q_vec`)·파생(`credit`·`impact`) — `_ledger`·`_search`·`_score`·`_learn`·`_vec`·`_prior`. 거절 규칙: settle 뒤 `think` · 판정 뒤 `think` · 확률 합 ≠ 100 · 산 근거 비중 합 ≠ 100 · 죽은 근거에 비중 · 갈래에 없는 판정 · 판정 뒤 `ev`. 훅 `hook-prompt`(이 리포 `.claude/settings.json`, 낱말만, 0.2초).
 - **소유**: 세션 판정(종목 시장의 장 마감 전/후 — KR 15:30 KST, US 16:00 뉴욕) · 라벨(반응·앞1/3/5·앞3일 평균·직전5일, 전부 같은 시장 횡단면 초과) · US 종목 한글 별칭 매칭.

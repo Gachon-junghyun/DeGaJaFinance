@@ -122,8 +122,9 @@ def _by_key(rows: list[SeriesData]) -> dict[str, SeriesData]:
     return {r.key: r for r in rows}
 
 
-def _summary_section(rows: list[SeriesData]) -> str:
+def _summary_section(rows: list[SeriesData], as_of: Optional[date] = None) -> str:
     by = _by_key(rows)
+    as_of = as_of or date.today()
     lines: list[str] = ["## 요약"]
 
     def latest_of(key: str) -> Optional[float]:
@@ -140,7 +141,7 @@ def _summary_section(rows: list[SeriesData]) -> str:
         recent_180: list[Observation] = []
         for o in sd.observations:
             od = _parse_date(o.date)
-            if od is not None and (date.today() - od).days <= 180:
+            if od is not None and 0 <= (as_of - od).days <= 180:   # as_of 기준(과거 재현 시 오늘 기준이면 창이 빈다)
                 recent_180.append(o)
         hi6m, _lo6m = _high_low(recent_180)
         extras: list[str] = []
@@ -229,6 +230,16 @@ def _summary_section(rows: list[SeriesData]) -> str:
     if r10 is not None:
         lines.append(f"- **10y 실질금리(TIPS)**: {_fmt(r10, '%')}")
 
+    # WTI — 30일 변화율 (branch_map oil 축)
+    if "wti" in by and by["wti"].observations:
+        sd = by["wti"]
+        cur = sd.observations[-1].value
+        m1 = _value_at(sd, 30)
+        if m1:
+            lines.append(f"- **WTI**: ${cur:,.2f} (30d {(cur / m1 - 1) * 100:+.1f}%)")
+        else:
+            lines.append(f"- **WTI**: ${cur:,.2f}")
+
     # M2 yoy
     if "m2" in by:
         yoy = _yoy_pct(by["m2"])
@@ -277,7 +288,7 @@ def _series_section(sd: SeriesData) -> str:
 def render_markdown(rows: list[SeriesData], as_of: Optional[date] = None) -> str:
     as_of = as_of or date.today()
     title = f"# 미국 매크로 ({as_of.isoformat()} 기준)\n\n"
-    parts = [title, _summary_section(rows), "## 시리즈별 최근 값\n\n"]
+    parts = [title, _summary_section(rows, as_of), "## 시리즈별 최근 값\n\n"]
     for sd in rows:
         parts.append(_series_section(sd))
     parts.append("## 데이터 source\n")

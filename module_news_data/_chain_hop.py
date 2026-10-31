@@ -19,7 +19,7 @@ import json
 import re
 import sqlite3
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 from ._config import (ALIASES_JSON, FOREIGN_SOURCES, FTS_DB, UNIVERSE_CSV,
                       us_text_universe_rows, utf8_stdout)
@@ -68,11 +68,18 @@ def load_universe() -> dict[str, dict]:
     return out
 
 
-def fetch_theme_articles(terms: list[str], days: int, scope: str, mode: str, limit: int):
+def fetch_theme_articles(terms: list[str], days: int, scope: str, mode: str, limit: int,
+                         asof: str | None = None):
+    """테마 텀 기사(본문 포함). `asof`(YYYY-MM-DD/ISO)를 주면 그 시각까지 **발행된** 것만 —
+    2026-10-31 sim/news 수선: 예전엔 늘 «지금부터 N일»(fetched_at)이라 과거 시점으로 되돌려 잴 수 없었다."""
+    from ._timeaxis import parse_published
     con = sqlite3.connect(str(FTS_DB)); con.row_factory = sqlite3.Row
     joiner = " AND " if mode == "and" else " OR "
     match = joiner.join(f'"{t}"' for t in terms)
-    since = (datetime.now() - timedelta(days=days)).isoformat()
+    end = datetime.fromisoformat(asof) if asof else datetime.now()
+    if asof and len(asof) == 10:
+        end = end + timedelta(days=1)
+    since = (end - timedelta(days=days)).isoformat()
     where = ["news_fts MATCH ?", "fetched_at >= ?"]
     params: list = [match, since]
     if scope == "foreign":
@@ -81,18 +88,27 @@ def fetch_theme_articles(terms: list[str], days: int, scope: str, mode: str, lim
     elif scope == "domestic":
         where.append("source NOT IN (" + ",".join("?" * len(FOREIGN_SOURCES)) + ")")
         params += FOREIGN_SOURCES
-    q = f"""SELECT title, summary, body, source, fetched_at FROM news_fts
+    q = f"""SELECT title, summary, body, source, fetched_at, published_at FROM news_fts
             WHERE {' AND '.join(where)} ORDER BY rank LIMIT ?"""
-    params.append(limit)
-    return con.execute(q, params).fetchall()
+    params.append(limit if not asof else limit * 4)   # 미래 행을 걸러낸 뒤에도 limit 이 남게
+    rows = con.execute(q, params).fetchall()
+    if asof:
+        end_utc = end.replace(tzinfo=timezone.utc) if end.tzinfo is None else end
+        keep = []
+        for r in rows:
+            dt = parse_published(r["published_at"])
+            if dt is not None and dt <= end_utc:
+                keep.append(r)
+        rows = keep[:limit]
+    return rows
 
 
-def run(terms, days, scope, mode, limit, min_hits, window, top, as_json) -> None:
+def run(terms, days, scope, mode, limit, min_hits, window, top, as_json, asof=None) -> None:
     utf8_stdout()
     if not FTS_DB.exists():
         sys.exit("news_fts.db 없음 — 먼저 `fts build`")
 
-    rows = fetch_theme_articles(terms, days, scope, mode, limit)
+    rows = fetch_theme_articles(terms, days, scope, mode, limit, asof)
     uni = load_universe()
 
     # 같은 "기사"가 아니라 같은 "문단"(±window자)에서 테마와 공동언급돼야 사슬 신호.
@@ -165,5 +181,6 @@ def cli_register(sub) -> None:
     p.add_argument("--window", type=int, default=300, help="테마 텀 근접 판정 거리(자)")
     p.add_argument("--top", type=int, default=25)
     p.add_argument("--json", action="store_true")
+    p.add_argument("--asof", default=None, help="기준 시각 YYYY-MM-DD(과거 시점 재현, 기본 지금)")
     p.set_defaults(func=lambda a: run(
-        a.terms, a.days, a.scope, a.mode, a.limit, a.min_hits, a.window, a.top, a.json))
+        a.terms, a.days, a.scope, a.mode, a.limit, a.min_hits, a.window, a.top, a.json, a.asof))

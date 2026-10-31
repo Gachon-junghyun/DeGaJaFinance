@@ -3,29 +3,77 @@
   "updated": "2026-07-14",
   "axes": {
     "inflation": {
-      "A_cool": ["NVDA", "SMH", "META", "ITB", "IWM"],
-      "B_hot":  ["MPC", "VLO", "XLE", "RTX"],
+      "A_cool": [
+        "NVDA",
+        "SMH",
+        "META",
+        "ITB",
+        "IWM"
+      ],
+      "B_hot": [
+        "MPC",
+        "VLO",
+        "XLE",
+        "RTX"
+      ],
       "asymmetric": "B_hot"
     },
     "rates": {
-      "A_cool": ["NVDA", "SMH", "ITB", "IWM", "XHB"],
-      "B_hot":  ["XLE", "MPC", "banks_capmkt:MS,SCHW"],
+      "A_cool": [
+        "NVDA",
+        "SMH",
+        "ITB",
+        "IWM",
+        "XHB"
+      ],
+      "B_hot": [
+        "XLE",
+        "MPC",
+        "banks_capmkt:MS,SCHW"
+      ],
       "asymmetric": "A_cool"
     },
     "oil": {
-      "A_deescalate": ["NVDA", "SMH", "JETS", "DAL", "IWM"],
-      "B_escalate":   ["STNG", "FRO", "MPC", "VLO", "XLE", "RTX"],
+      "A_deescalate": [
+        "NVDA",
+        "SMH",
+        "JETS",
+        "DAL",
+        "IWM"
+      ],
+      "B_escalate": [
+        "STNG",
+        "FRO",
+        "MPC",
+        "VLO",
+        "XLE",
+        "RTX"
+      ],
       "asymmetric": "B_escalate"
     },
     "earnings": {
-      "A_beat": ["<the reporting ticker> continuation add"],
-      "B_miss": ["<avoid / opposite-leg>"],
+      "A_beat": [
+        "<the reporting ticker> continuation add"
+      ],
+      "B_miss": [
+        "<avoid / opposite-leg>"
+      ],
       "asymmetric": "confirm-then-enter (no front-run of a single-name binary)"
     },
     "labor": {
-      "A_soft": ["NVDA", "SMH", "ITB", "IWM"],
-      "B_strong": ["XLE", "MPC", "banks"],
+      "A_soft": [
+        "NVDA",
+        "SMH",
+        "ITB",
+        "IWM"
+      ],
+      "B_strong": [
+        "XLE",
+        "MPC",
+        "banks"
+      ],
       "asymmetric": "A_soft"
     }
-  }
+  },
+  "_sim_2026-10-31": "과거 시뮬레이션(out/sim/macro/REPORT.md): 2024-11~2026-10 CPI·PPI·NFP·FOMC 86회와 10년물·유가 충격 60회(58일)에서 이 표의 갈래가 1·2·5거래일 시장 대비 방향을 맞힌 비율은 학습 창 46~53%, 평가 창 35~61%(날 9~10개)로 동전과 구분되지 않았다. 브라이어도 기준률 대비 개선 없음. 이 표는 «어느 쪽이 오를까»의 근거가 아니라 양쪽 브래킷을 짤 이름 목록으로만 쓴다. ETF(SMH·XLE·ITB·IWM·XHB·JETS)와 STNG·FRO 는 lens.db 유니버스 밖이라 장부에서 자동 정산되지 않는다 — 시뮬레이션은 구성 대형주로 대신했다."
 }

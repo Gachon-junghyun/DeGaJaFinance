@@ -8,7 +8,7 @@ binaries the desk simply didn't put in front of itself. This script injects them
 desk can't NOT see "PPI in 18h" / "TSM prints Thu / bank cluster this week", forcing STAGE 025's
 both-sides bracket instead of a one-way tilt.
 
-Macro:    data_build/catalysts/econ_schedule.json  (human-maintained; BLS/Fed publish ~1yr ahead)
+Macro:    data/catalysts/econ_schedule.json  (human-maintained; BLS/Fed publish ~1yr ahead)
 Earnings: yfinance next earnings date per a watchlist (candidates ∪ blind-spot names).
 Writes:   llm_outputs/{date}/CATALYST_WATCH.json  + prints a table.
 
@@ -33,6 +33,24 @@ DEFAULT_TICKERS = ["NVDA", "TSM", "ASML", "AMD", "MU", "META", "AVGO", "ANET",
 
 def _days_until(d: str, today: _dt.date) -> int:
     return (_dt.date.fromisoformat(d) - today).days
+
+
+def schedule_gap(today: _dt.date, horizon: int) -> str | None:
+    """일정표가 창 끝까지 덮는가. 못 덮으면 «거시 이벤트 0건»이 사실이 아니라 표가 끝난 것이다.
+
+    2026-10-31 sim(macro): 표가 2026-07-15 부터라 그 이전 날짜로 돌리면 조용히 0건이 나왔고,
+    9월 CPI(10-14)·8·9월 PCE 처럼 중간에 빠진 행도 경고 없이 «없음»으로 보였다. 조용한 빈칸을 경보로 바꾼다.
+    """
+    evs = json.loads(SCHED.read_text(encoding="utf-8")).get("events", [])
+    if not evs:
+        return "⚠️ econ_schedule.json 에 행이 없다 — 거시 0건은 사실이 아니다"
+    first = min(_dt.date.fromisoformat(e["date"]) for e in evs)
+    last = max(_dt.date.fromisoformat(e["date"]) for e in evs)
+    end = today + _dt.timedelta(days=horizon)
+    if today < first or end > last:
+        return (f"⚠️ econ_schedule.json 이 {first}~{last} 만 덮는다 — 창 {today}~{end} 의 바깥은 «없음»이 아니라 «모름». "
+                "FRED release/dates 로 갱신하라(sources.fred)")
+    return None
 
 
 def macro_events(today: _dt.date, horizon: int) -> list[dict]:
@@ -145,6 +163,9 @@ def render(macro: list[dict], earn: list[dict], today: _dt.date, horizon: int,
     binaries = [e for e in macro + earn + struct if e.get("binary")]
     L.append(f"⚠️ {len(binaries)} BINARY catalyst(s) in window — STAGE 025 both-sides bracket REQUIRED for each.\n")
     L.append("[MACRO]  (✓=official source confirmed · ~=pattern/estimate, verify)")
+    gap = schedule_gap(today, horizon)   # 2026-10-31 sim(macro): 표가 끝난 것을 «0건»으로 보이지 않게
+    if gap:
+        L.append("  " + gap)
     _CONF = {"confirmed": "✓", "pattern": "≈", "estimate": "~est", "watch": "👁"}
     for e in macro:
         du = "undated" if e["days_until"] is None else f"D-{e['days_until']}"
@@ -189,6 +210,7 @@ def main():
     outdir = ROOT / "llm_outputs" / today.isoformat()
     outdir.mkdir(parents=True, exist_ok=True)
     payload = {"as_of": today.isoformat(), "horizon_days": horizon,
+               "schedule_gap": schedule_gap(today, horizon),
                "binaries": [e for e in macro + earn + struct if e.get("binary")],
                "macro": macro, "earnings": earn, "structural": struct}
     (outdir / "CATALYST_WATCH.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")

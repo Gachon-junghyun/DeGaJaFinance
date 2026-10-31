@@ -46,18 +46,29 @@ def main() -> None:
         for t, nm in zip(a.tickers, a.names.split(",")):
             names[t] = nm.strip()
 
-    bdf = yf.download(a.bench, period="4mo", progress=False, auto_adjust=False)
-    if isinstance(bdf.columns, pd.MultiIndex):
-        bdf.columns = bdf.columns.get_level_values(0)
-    bdf.columns = [str(c).lower() for c in bdf.columns]
-    bench_close = bdf["close"].astype(float)
+    def _bench(sym):
+        bdf = yf.download(sym, period="4mo", progress=False, auto_adjust=False)
+        if isinstance(bdf.columns, pd.MultiIndex):
+            bdf.columns = bdf.columns.get_level_values(0)
+        bdf.columns = [str(c).lower() for c in bdf.columns]
+        return bdf["close"].astype(float)
+
+    # 2026-10-31 sim/flow: KR 티커는 기본 벤치(SPY)가 아니라 ^KS11 로 RS 를 잰다(P3).
+    # 예전엔 005930.KS 의 RS20 이 S&P500 대비로 나왔다. --bench 를 손으로 주면 그대로 따른다.
+    bench_cache: dict = {}
+
+    def bench_for(t):
+        sym = "^KS11" if (kr_code(t) and a.bench == "SPY") else a.bench
+        if sym not in bench_cache:
+            bench_cache[sym] = _bench(sym)
+        return bench_cache[sym]
 
     rows = []
     for t in a.tickers:
         q = news_query(t, names.get(t))
         # P3: KR 이면 국내 스코프로 센다. 이 판별을 안 넘기면 KR 은 항상 0건 → n/a 였다.
         vel = news_velocity(q, a.recent, a.base, kr=bool(kr_code(t)))
-        pf = price_flow(t, bench_close)
+        pf = price_flow(t, bench_for(t))
         inv = None if a.no_investor else investor_flow(t)
         sh = None if a.no_short else short_flow(t)
         tag = flow_tag(pf, vel.get("velocity"), inv, sh)

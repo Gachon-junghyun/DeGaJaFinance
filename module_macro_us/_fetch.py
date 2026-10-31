@@ -96,8 +96,9 @@ def _fetch_via_fredapi(spec: SeriesSpec, start: date, end: date, api_key: str) -
     return obs
 
 
-def _fetch_via_rest(spec: SeriesSpec, start: date, end: date, api_key: str) -> list[Observation]:
-    """REST API fallback."""
+def _fetch_via_rest(spec: SeriesSpec, start: date, end: date, api_key: str,
+                    vintage: Optional[date] = None) -> list[Observation]:
+    """REST API fallback. vintage 가 있으면 그날 알려져 있던 값(ALFRED 빈티지)만 받는다."""
     params = {
         "series_id": spec["fred_id"],
         "api_key": api_key,
@@ -105,6 +106,9 @@ def _fetch_via_rest(spec: SeriesSpec, start: date, end: date, api_key: str) -> l
         "observation_start": start.isoformat(),
         "observation_end": end.isoformat(),
     }
+    if vintage is not None:
+        # 2026-10-31 sim(macro): 과거 날짜로 돌릴 때 최신 개정치(CPI·고용)를 쓰면 미래 엿보기다.
+        params["realtime_start"] = params["realtime_end"] = vintage.isoformat()
     r = requests.get(FRED_OBS_URL, params=params, timeout=30)
     if r.status_code != 200:
         # FRED는 400/422 + JSON 에러 메시지를 준다
@@ -130,19 +134,22 @@ def _fetch_via_rest(spec: SeriesSpec, start: date, end: date, api_key: str) -> l
     return obs
 
 
-def _fetch_one(key: str, days: int, api_key: str, use_fredapi: bool) -> SeriesData:
+def _fetch_one(key: str, days: int, api_key: str, use_fredapi: bool,
+               as_of: Optional[date] = None) -> SeriesData:
     spec = SERIES_CATALOG[key]
     # 월별 시리즈 + yoy 계산을 위해 최소 400일은 끌어와야 12개월 전 값을 잡을 수 있음.
-    lookback = max(days, 400) if spec["freq"] == "monthly" else max(days, 200)
-    end = date.today()
+    # 2026-10-31 sim(macro): 400일이면 «최신 관측(발표 지연 ~45일) − 365일»이 창 앞에 떨어져
+    # yoy 가 조용히 None 이 되는 날이 있었다(as_of 2026-08-11 core_cpi). 지연 여유분을 더해 460일.
+    lookback = max(days, 460) if spec["freq"] == "monthly" else max(days, 200)
+    end = as_of or date.today()
     start = end - timedelta(days=lookback)
 
     sd = SeriesData(key=key, spec=spec)
     try:
-        if use_fredapi:
+        if use_fredapi and as_of is None:
             sd.observations = _fetch_via_fredapi(spec, start, end, api_key)
-        else:
-            sd.observations = _fetch_via_rest(spec, start, end, api_key)
+        else:   # as_of 는 빈티지가 필요해 REST 로만 (fredapi 경로는 최신 개정치를 준다)
+            sd.observations = _fetch_via_rest(spec, start, end, api_key, vintage=as_of)
     except MacroFetchError as e:
         sd.error = str(e)
     except Exception as e:  # noqa: BLE001 - 사용자 친화 메시지로 감싼다
@@ -158,10 +165,11 @@ def _has_fredapi() -> bool:
         return False
 
 
-def fetch_series(keys: list[str], days: int = 365) -> list[SeriesData]:
+def fetch_series(keys: list[str], days: int = 365, as_of: Optional[date] = None) -> list[SeriesData]:
     """선택한 시리즈를 fetch.
 
     fredapi 설치 시 그걸 쓰고, 없으면 REST 폴백. 어느 쪽이든 동일 dataclass 반환.
+    as_of 를 주면 그날까지의 관측을 **그날 빈티지로** 받는다(과거 재현용, 미래 엿보기 없음).
     개별 시리즈 fetch 실패는 SeriesData.error에 기록하고 계속 진행
     (12종 중 1개가 죽어도 나머지는 살려둠).
 
@@ -179,7 +187,7 @@ def fetch_series(keys: list[str], days: int = 365) -> list[SeriesData]:
 
     results: list[SeriesData] = []
     for i, key in enumerate(keys):
-        sd = _fetch_one(key, days, api_key, use_fredapi)
+        sd = _fetch_one(key, days, api_key, use_fredapi, as_of)
         if sd.error:
             sys.stderr.write(f"[macro_us] {key} ({sd.spec['fred_id']}) failed: {sd.error}\n")
         else:

@@ -116,16 +116,25 @@ def parse_contract(html: str) -> dict:
     if party:
         out["counterparty"] = party[:60]
 
-    ratio_str = _extract_number_after(
-        html, ["매출액 대비(%)", "매출액대비", "매출액 대비", "최근 매출액 대비"]
-    )
-    if ratio_str:
-        m = re.search(r"(\d+(?:\.\d+)?)", ratio_str)
+    # 2026-10-31 fix(sim/fundamentals): _extract_number_after 는 4자리 이상 숫자만 잡아
+    # 「매출액대비(%) | 7.8」 의 7.8 을 못 읽고 늘 None 이었다(실측 4/4 건). 비율은 작은 소수라
+    # 라벨 직후 첫 숫자를 따로 읽는다. 라벨이 없으면 계약금액/최근매출액으로 계산한다.
+    for kw in ["매출액대비(%)", "매출액 대비(%)", "매출액대비", "매출액 대비", "최근 매출액 대비"]:
+        idx = html.find(kw)
+        if idx == -1:
+            continue
+        chunk = _strip_tags(html[idx + len(kw): idx + len(kw) + 250])
+        m = re.match(r"^[\s\-:|()%]*(\d{1,4}(?:\.\d+)?)(?!\d|,\d)", chunk)
         if m:
             try:
                 out["ratio_to_revenue"] = float(m.group(1))
             except ValueError:
                 pass
+        break
+    if out["ratio_to_revenue"] is None and out["contract_amount"]:
+        rev = _to_int(_extract_number_after(html, ["최근 매출액(원)", "최근매출액(원)", "매출액(원)"]))
+        if rev and rev > 0:
+            out["ratio_to_revenue"] = round(out["contract_amount"] / rev * 100, 2)
 
     period = _extract_text_after(html, ["계약기간", "납기일", "납품기한"])
     if period:

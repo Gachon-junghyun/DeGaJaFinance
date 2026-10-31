@@ -146,8 +146,14 @@ def _fetch_raw(corp_code: str, year: str, reprt_code: str, fs_div: str) -> list[
     )
     r.raise_for_status()
     data = r.json()
-    if data.get("status") != "000":
+    status = data.get("status")
+    # 2026-10-31 fix(sim/fundamentals): 예전엔 000 이 아니면 전부 [] 였다 — 사용한도 초과(020)·
+    # 키 오류(010/011)·점검(800)이 「그 보고서 없음」으로 둔갑해 margin_history 가
+    # 「DART 에 해당 연도 사업보고서 없음」을 조용히 적었다(P4). 013(데이터 없음)만 빈 목록이다.
+    if status == "013":
         return []
+    if status != "000":
+        raise RuntimeError(f"DART fnlttSinglAcntAll status={status} {data.get('message')}")
     return data.get("list", []) or []
 
 

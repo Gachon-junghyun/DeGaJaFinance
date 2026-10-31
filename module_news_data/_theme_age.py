@@ -17,13 +17,25 @@ from __future__ import annotations
 import json
 import sqlite3
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 from ._config import FOREIGN_SOURCES, FTS_DB, utf8_stdout
+from ._timeaxis import market_day, parse_published
 
 
-def daily_counts(con: sqlite3.Connection, term: str, days: int, scope: str) -> dict[str, int]:
-    since = (datetime.now() - timedelta(days=days)).isoformat()
+def daily_counts(con: sqlite3.Connection, term: str, days: int, scope: str,
+                 asof: str | None = None) -> dict[str, int]:
+    """테마 텀의 일별 기사 수 {market_day: n}.
+
+    2026-10-31 sim/news 수선: ①일자를 `fetched_at` 앞 10자가 아니라 `_timeaxis.market_day`
+    (발행시각)로 센다 — 수집이 밀렸다 몰리면 수집 공백이 가짜 «갓 태어난 테마»가 된다(MODULE_MAP ⚠).
+    ②`asof`(YYYY-MM-DD 또는 ISO 시각)를 주면 그 시각까지 발행된 것만 센다 — 과거 시점 재현용.
+    발행시각이 빈 행(2026-05 이전)은 예전처럼 fetched_at 일자로 센다.
+    """
+    end = datetime.fromisoformat(asof) if asof else datetime.now()
+    if len(asof or "") == 10:
+        end = end + timedelta(days=1)            # 날짜만 주면 그날 끝까지
+    since = (end - timedelta(days=days + 1)).isoformat()
     where = ["news_fts MATCH ?", "fetched_at >= ?"]
     params: list = [f'"{term}"', since]
     if scope == "foreign":
@@ -32,13 +44,30 @@ def daily_counts(con: sqlite3.Connection, term: str, days: int, scope: str) -> d
     elif scope == "domestic":
         where.append("source NOT IN (" + ",".join("?" * len(FOREIGN_SOURCES)) + ")")
         params += FOREIGN_SOURCES
-    q = f"""SELECT substr(fetched_at,1,10) AS d, count(*) AS n FROM news_fts
-            WHERE {' AND '.join(where)} GROUP BY d ORDER BY d"""
-    return {r[0]: r[1] for r in con.execute(q, params)}
+    q = f"""SELECT published_at, source, fetched_at FROM news_fts
+            WHERE {' AND '.join(where)}"""
+    out: dict[str, int] = {}
+    end_utc = end.astimezone(timezone.utc) if end.tzinfo else end.replace(tzinfo=timezone.utc)
+    for pub, src, fx in con.execute(q, params):
+        dt = parse_published(pub)
+        if dt is not None:
+            if asof and dt > end_utc:
+                continue                          # 미래 엿보기 금지
+            d = market_day(pub, src)
+        else:
+            d = (fx or "")[:10] or None
+        if d:
+            out[d] = out.get(d, 0) + 1
+    return out
 
 
-def analyze(term: str, counts: dict[str, int], days: int) -> dict:
-    today = datetime.now().date()
+def analyze(term: str, counts: dict[str, int], days: int, asof: str | None = None) -> dict:
+    # asof: 판정 기준일(YYYY-MM-DD). 없으면 오늘. 2026-10-31 sim/news 수선 — 예전엔 늘 «오늘»이라
+    # 과거 시점으로 되돌려 잴 수 없었다. 기준일 뒤 칸은 버린다(미래 엿보기 금지).
+    today = datetime.fromisoformat(asof[:10]).date() if asof else datetime.now().date()
+    lo = (today - timedelta(days=days)).isoformat()
+    # 창 밖(기준일 뒤 = 미래, 창 앞 = 옛 발행일이 늦게 수집된 것)은 버린다 — 옛 발행 1건이 first_seen 을 2024 로 끌었다(실측)
+    counts = {d: n for d, n in counts.items() if lo <= d <= today.isoformat()}
     if not counts:
         return {"term": term, "verdict": "SILENT", "age_days": None,
                 "recent7_avg": 0.0, "prior30_avg": 0.0, "accel": None, "total": 0}
@@ -72,13 +101,13 @@ def analyze(term: str, counts: dict[str, int], days: int) -> dict:
             "total": sum(counts.values())}
 
 
-def run(terms: list[str], window: int, scope: str, as_json: bool) -> None:
+def run(terms: list[str], window: int, scope: str, as_json: bool, asof: str | None = None) -> None:
     utf8_stdout()
     if not FTS_DB.exists():
         sys.exit("news_fts.db 없음 — 먼저 `fts build`")
     con = sqlite3.connect(str(FTS_DB))
 
-    results = [analyze(t, daily_counts(con, t, window, scope), window) for t in terms]
+    results = [analyze(t, daily_counts(con, t, window, scope, asof), window, asof) for t in terms]
     results.sort(key=lambda r: ({"FRESH": 0, "ACCELERATING": 1, "ECHO": 2,
                                  "FADING": 3, "SILENT": 4}[r["verdict"]],
                                 -(r["recent7_avg"] or 0)))
@@ -106,4 +135,5 @@ def cli_register(sub) -> None:
     p.add_argument("--window", type=int, default=90, help="관측 윈도(일)")
     p.add_argument("--scope", choices=["all", "foreign", "domestic"], default="foreign")
     p.add_argument("--json", action="store_true")
-    p.set_defaults(func=lambda a: run(a.terms, a.window, a.scope, a.json))
+    p.add_argument("--asof", default=None, help="판정 기준일 YYYY-MM-DD(과거 시점 재현, 기본 오늘)")
+    p.set_defaults(func=lambda a: run(a.terms, a.window, a.scope, a.json, a.asof))

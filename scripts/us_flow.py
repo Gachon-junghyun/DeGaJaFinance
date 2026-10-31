@@ -150,9 +150,15 @@ def _finra_day(d):
         if len(p) < 5:
             continue
         try:
-            m[p[1].upper()] = (float(p[2]), float(p[4]))
+            sym, val = p[1].upper(), (float(p[2]), float(p[4]))
         except Exception:
             continue
+        m[sym] = val
+        # 2026-10-31 sim/flow: FINRA 는 클래스주를 «BRK/B» 로 적는다 — 유니버스·yfinance 꼴(BRK-B·BRK.B)로도
+        # 찾히게 별칭을 단다. 예전엔 BRK-B 를 물으면 조용히 "no data" 였다.
+        if "/" in sym:
+            m.setdefault(sym.replace("/", "-"), val)
+            m.setdefault(sym.replace("/", "."), val)
     return m
 
 

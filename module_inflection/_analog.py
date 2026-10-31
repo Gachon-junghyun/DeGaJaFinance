@@ -139,9 +139,26 @@ def encode_query(text: str, mean: np.ndarray) -> np.ndarray:
     return (v / np.linalg.norm(v)).astype(np.float32)
 
 
+def _closed_cutoff(con: sqlite3.Connection, before: str, horizon: int) -> str | None:
+    """`before` 장 마감 전에 결과(+horizon 거래일)가 이미 닫힌 전례의 마지막 날짜.
+
+    고침(2026-10-31): 예전엔 `date < before` 만 봤다 — 이틀 전 이벤트의 fwd5·fwd20 은 아직
+    안 끝났는데 요약 평균에 들어갔다(미래 엿보기). 거래일 달력은 이 DB 의 px 에서 읽는다."""
+    days = [r[0] for r in con.execute(
+        "SELECT DISTINCT date FROM px WHERE date < ? ORDER BY date", (before,))]
+    # 이벤트일 d 의 결과는 d+horizon 종가에 닫힌다 → d+horizon ≤ before 전 마지막 거래일
+    return days[-1 - horizon] if len(days) > horizon else None
+
+
 def search(con: sqlite3.Connection, query_vec: np.ndarray, k: int = 10,
-           exclude_ticker: str | None = None, before: str | None = None) -> dict:
+           exclude_ticker: str | None = None, before: str | None = None,
+           horizon: int = 20, allow_pivot: bool = False) -> dict:
+    """`before` 를 주면 시점 그대로: 결과가 `before` 전에 닫힌 전례만, pivot 은 뺀다.
+
+    pivot 은 판정 자체가 미래 10일을 쓴다(사후 라벨) — 과거 시점에서 «그때 이미 알려진 전례»가
+    아니다. `allow_pivot=True` 는 사후 기술통계용으로만."""
     metas, mat = load_index(con)
+    cutoff = _closed_cutoff(con, before, horizon) if before else None
     if mat.shape[0] == 0:
         return {"error": "인덱스가 비었다 — `build` 먼저"}
     sims = mat @ query_vec
@@ -153,12 +170,19 @@ def search(con: sqlite3.Connection, query_vec: np.ndarray, k: int = 10,
             continue
         if before and m["date"] >= before:
             continue                       # 미래 전례를 끌어오면 그건 컨닝이다
+        if before and (cutoff is None or m["date"] > cutoff):
+            continue                       # 결과가 아직 안 닫힌 전례(고침 2026-10-31)
+        if before and not allow_pivot and str(m["kind"]).startswith("pivot"):
+            continue                       # pivot = 미래 10일 라벨 — 그 시점엔 몰랐다
         hits.append({**m, "sim": round(float(sims[i]), 4),
                      "titles": m["titles"][:6]})
         if len(hits) >= k:
             break
-    f5 = np.array([h["fwd5"] for h in hits if h["fwd5"] is not None], dtype=float)
-    f20 = np.array([h["fwd20"] for h in hits if h["fwd20"] is not None], dtype=float)
+    # --before 에서 horizon 보다 긴 창은 아직 안 닫혔을 수 있다 → 요약에서 뺀다(고침 2026-10-31)
+    ok5 = not before or horizon >= 5
+    ok20 = not before or horizon >= 20
+    f5 = np.array([h["fwd5"] for h in hits if ok5 and h["fwd5"] is not None], dtype=float)
+    f20 = np.array([h["fwd20"] for h in hits if ok20 and h["fwd20"] is not None], dtype=float)
     summary = {
         "k": len(hits),
         "fwd5_mean_pct": round(float(f5.mean()) * 100, 2) if len(f5) else None,

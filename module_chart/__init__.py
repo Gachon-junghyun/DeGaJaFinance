@@ -24,7 +24,7 @@ CLI:
 from ._make_chart import save_text_chart
 from ._renderer import plot_text_chart, plot_combined_chart
 from ._indicators import add_ma, add_bollinger, add_rsi_line
-from ._metadata import generate_metadata
+from ._metadata import generate_metadata, generate_chart_read  # 2026-10-31: MODULE_MAP 공개 API 에 있는데 빠져 있었다
 from ._ohlcv import fetch_ohlcv
 
 __all__ = [
@@ -35,5 +35,6 @@ __all__ = [
     "add_bollinger",
     "add_rsi_line",
     "generate_metadata",
+    "generate_chart_read",
     "fetch_ohlcv",
 ]

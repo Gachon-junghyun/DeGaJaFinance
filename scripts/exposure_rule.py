@@ -346,9 +346,16 @@ def upsert(row: dict) -> list[dict]:
     return rows
 
 
+def _base_state(state: str) -> str:
+    """`복귀판정보류:방어` → `방어`. 보류는 «직전 상태 유지»라는 뜻이지 새 상태가 아니다."""
+    return state.split(":", 1)[1] if state.startswith("복귀판정보류:") else state
+
+
 def prev_state_from_ledger(today: str) -> str:
+    # 2026-10-31 sim(macro): 장중 보류 행이 종가 재실행 없이 남으면 다음 날 prev_state 가
+    # `복귀판정보류:방어` 로 들어와 classify 의 `prev_state in ("방어","복귀")` 가 거짓 → 복귀 다리가 영영 안 돈다.
     rows = [r for r in load_ledger() if r["date"] < today and r.get("state")]
-    return rows[-1]["state"] if rows else "정상"
+    return _base_state(rows[-1]["state"]) if rows else "정상"
 
 
 def held_sessions(today: str) -> int:
@@ -356,9 +363,9 @@ def held_sessions(today: str) -> int:
     rows = [r for r in load_ledger() if r["date"] < today and r.get("state")]
     if not rows:
         return 99                       # 이력 없음 = 게이트 걸지 않음(냉시동)
-    last, k = rows[-1]["state"], 0
+    last, k = _base_state(rows[-1]["state"]), 0
     for r in reversed(rows):
-        if r["state"] != last:
+        if _base_state(r["state"]) != last:      # 보류 행은 직전 상태의 연속으로 센다
             break
         k += 1
     return k

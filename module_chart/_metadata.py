@@ -131,10 +131,7 @@ def generate_chart_read(df: pd.DataFrame) -> str:
                  else "분배(매도압력↑)" if obv_chg < -OBV_TH else "중립")
 
     # ── RSI 시계열 ───────────────────────────────────────────────────────────
-    delta = close.diff()
-    gain  = delta.clip(lower=0).rolling(14).mean()
-    loss  = (-delta.clip(upper=0)).rolling(14).mean()
-    rsi_s = 100 - 100 / (1 + gain / loss.replace(0, np.nan))
+    rsi_s = rsi_series(_df, 14)   # 2026-10-31 sim/flow: 같은 산식의 사본을 단일 원본으로(P1, 값 동일)
     rsi   = float(rsi_s.iloc[-1])
 
     # ── 다이버전스(가격 저점 vs RSI 저점, 최근 vs 직전) ──────────────────────

@@ -11,6 +11,10 @@
 ⚠ **거래 가능한 날로 옮겨 잰다.** 기사일이 토요일이면 그날 살 수 없다. 기사일 **이후 첫
 거래일의 종가**를 기준점으로 삼고 거기서 앞으로 n일을 센다. 기사일 당일 종가를 기준으로
 재면 '기사를 보고 그날 종가에 샀다'는 불가능한 가정이 섞인다.
+  (2026-10-31 고침) 기준일은 `market_day`(달력일)가 아니라 **발행시각**으로 정한다 — KST 15:30
+  장 마감 **전** 발행이면 그날 종가, 마감 **후**(저녁·밤 기사)면 **다음 거래일** 종가. 예전엔 평일
+  18:00 기사가 그날 종가를 기준으로 잡혀, 기사 다음 날의 반응이 «이후 수익»에 섞였다(미래 엿보기).
+  발행시각을 모르는 기사는 뺀다(모른다 ≠ 장중이다).
 
 ⚠ **초과수익으로만 읽는다.** 이 창(2026-05~07)의 무조건부 5일 평균이 −1.7% 라, 원수익은
 전부 음수로 보인다. 유형 간 비교는 같은 기준선을 빼면 그대로 유효하다.
@@ -55,6 +59,24 @@ def classify_title(title: str) -> str | None:
     return None
 
 
+_KR_CLOSE_MIN = 15 * 60 + 30   # KST 15:30 — module_lens._config.CLOSE["KR"] 와 같은 값
+
+
+def _session_day(pub: str | None, nxt: dict[str, str], nxt_strict: dict[str, str]) -> str | None:
+    """발행시각 → 그 기사를 보고 «살 수 있는» 첫 종가의 거래일. 모르면 None."""
+    from datetime import timedelta, timezone
+
+    from module_news_data._timeaxis import parse_published
+    dt = parse_published(pub)
+    if dt is None:
+        return None
+    loc = dt.astimezone(timezone(timedelta(hours=9)))
+    d = loc.strftime("%Y-%m-%d")
+    if loc.hour * 60 + loc.minute < _KR_CLOSE_MIN:
+        return nxt.get(d)            # 장 마감 전 → 그날(휴장이면 다음 거래일) 종가
+    return nxt_strict.get(d)         # 마감 후 → 다음 거래일 종가
+
+
 def _next_trading_day(days: list[str]) -> dict[str, str]:
     """달력일 → 그 날 이후 첫 거래일. 기사일 당일이 거래일이면 그날."""
     out: dict[str, str] = {}
@@ -80,6 +102,9 @@ def phrase_table(con, panel: pd.DataFrame, baseline: dict,
 
     days = [str(d)[:10] for d in panel.index]
     nxt = _next_trading_day(days)
+    # 그날 «이후» 첫 거래일(당일 제외) — 장 마감 후 기사용
+    nxt_strict = {d: nxt.get((pd.Timestamp(d) + pd.Timedelta(days=1)).strftime("%Y-%m-%d"))
+                  for d in nxt}
     pos = {d: i for i, d in enumerate(days)}
     rets = panel.pct_change(fill_method=None)
     cum = {n: rets.rolling(n).sum().shift(-n) for n in (1, 5, 20)}
@@ -90,7 +115,9 @@ def phrase_table(con, panel: pd.DataFrame, baseline: dict,
         by_hash.setdefault(h, []).append((tic, day))
 
     src = sqlite3.connect(f"file:{VEC_DB}?mode=ro", uri=True)
-    titles = dict(src.execute("SELECT url_hash, title FROM articles").fetchall())
+    titles, pubs = {}, {}
+    for h, t, pub in src.execute("SELECT url_hash, title, published_at FROM articles"):
+        titles[h], pubs[h] = t, pub
     src.close()
 
     buckets: dict[str, dict[int, list[float]]] = {}
@@ -105,7 +132,8 @@ def phrase_table(con, panel: pd.DataFrame, baseline: dict,
         for tic, day in pairs:
             if tic not in panel.columns:
                 continue
-            trade_day = nxt.get(day)
+            # 고침(2026-10-31): 달력일 대신 발행시각 기준 세션 — 마감 후 기사가 그날 종가를 쓰던 미래 엿보기
+            trade_day = _session_day(pubs.get(h), nxt, nxt_strict)
             if trade_day is None or (kind, tic, trade_day) in seen:
                 continue
             seen.add((kind, tic, trade_day))

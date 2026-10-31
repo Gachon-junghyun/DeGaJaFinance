@@ -1,33 +1,302 @@
 {
   "_note": "US macro release schedule. Each event carries source + confidence so VERIFIED vs ESTIMATE is always visible (2026-07-14 오답노트: never present an estimate as fact). confidence: 'confirmed'=pulled from the official source this session · 'pattern'=derived rule (NFP=first Friday, validated by Aug-7) · 'estimate'=needs verification. REFRESH: annually from bls.gov/schedule/news_release/, federalreserve.gov/monetarypolicy/fomccalendars.htm, bea.gov/news/schedule.",
-  "updated": "2026-07-14",
+  "updated": "2026-10-31",
   "sources": {
     "bls": "https://www.bls.gov/schedule/news_release/ (CPI, PPI, Employment/NFP)",
     "fed": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm (FOMC)",
-    "bea": "https://www.bea.gov/news/schedule (PCE / Personal Income & Outlays)"
+    "bea": "https://www.bea.gov/news/schedule (PCE / Personal Income & Outlays)",
+    "bok": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?mtgSe=A&menuNo=200755 (금통위)",
+    "law": "법정 선거일 (2 U.S.C. §7)",
+    "fred": "https://api.stlouisfed.org/fred/release/dates (FRED 발표 일정·실제 발표 빈티지: CPI=10, Employment Situation=50, PPI=46, Personal Income & Outlays=54). BLS 사이트는 자동 조회를 403 으로 막아 이 경로로 확인"
   },
   "events": [
-    {"date": "2026-07-15", "time_et": "08:30", "event": "June PPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "confirmed"},
-    {"date": "2026-07-29", "time_et": "14:00", "event": "FOMC decision (Warsh, no SEP)", "axis": "rates", "binary": true, "source": "fed", "confidence": "confirmed"},
-    {"date": "2026-07-30", "time_et": "08:30", "event": "June PCE (Personal Income & Outlays)", "axis": "inflation", "binary": true, "source": "bea", "confidence": "confirmed"},
-    {"date": "2026-08-07", "time_et": "08:30", "event": "July Employment / NFP", "axis": "labor", "binary": true, "source": "bls", "confidence": "confirmed"},
-    {"date": "2026-08-12", "time_et": "08:30", "event": "July CPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "confirmed"},
-    {"date": "2026-08-13", "time_et": "08:30", "event": "July PPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "confirmed"},
-    {"date": "2026-08-28", "time_et": "08:30", "event": "July PCE (Personal Income & Outlays)", "axis": "inflation", "binary": true, "source": "bea", "confidence": "estimate"},
-    {"date": "2026-09-04", "time_et": "08:30", "event": "Aug Employment / NFP", "axis": "labor", "binary": true, "source": "bls", "confidence": "pattern"},
-    {"date": "2026-09-10", "time_et": "08:30", "event": "Aug PPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "confirmed"},
-    {"date": "2026-09-11", "time_et": "08:30", "event": "Aug CPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "estimate"},
-    {"date": "2026-09-16", "time_et": "14:00", "event": "FOMC decision (SEP/dot plot)", "axis": "rates", "binary": true, "source": "fed", "confidence": "confirmed"},
-    {"date": "2026-10-02", "time_et": "08:30", "event": "Sep Employment / NFP", "axis": "labor", "binary": true, "source": "bls", "confidence": "pattern"},
-    {"date": "2026-10-15", "time_et": "08:30", "event": "Sep PPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "confirmed"},
-    {"date": "2026-10-28", "time_et": "14:00", "event": "FOMC decision (no SEP)", "axis": "rates", "binary": true, "source": "fed", "confidence": "confirmed"},
-    {"date": "2026-11-06", "time_et": "08:30", "event": "Oct Employment / NFP", "axis": "labor", "binary": true, "source": "bls", "confidence": "pattern"},
-    {"date": "2026-11-13", "time_et": "08:30", "event": "Oct PPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "confirmed"},
-    {"date": "2026-12-04", "time_et": "08:30", "event": "Nov Employment / NFP", "axis": "labor", "binary": true, "source": "bls", "confidence": "pattern"},
-    {"date": "2026-12-09", "time_et": "14:00", "event": "FOMC decision (SEP/dot plot)", "axis": "rates", "binary": true, "source": "fed", "confidence": "confirmed"},
-    {"date": "2026-12-15", "time_et": "08:30", "event": "Nov PPI", "axis": "inflation", "binary": true, "source": "bls", "confidence": "confirmed"}
+    {
+      "date": "2026-07-14",
+      "time_et": "08:30",
+      "event": "June CPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "fred",
+      "confidence": "confirmed",
+      "note": "FRED release/dates 2026-10-31 확인(지난 날짜는 실제 발표 빈티지) — 빠져 있던 행"
+    },
+    {
+      "date": "2026-07-15",
+      "time_et": "08:30",
+      "event": "June PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-07-29",
+      "time_et": "14:00",
+      "event": "FOMC decision (Warsh, no SEP)",
+      "axis": "rates",
+      "binary": true,
+      "source": "fed",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-07-30",
+      "time_et": "08:30",
+      "event": "June PCE (Personal Income & Outlays)",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bea",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-08-07",
+      "time_et": "08:30",
+      "event": "July Employment / NFP",
+      "axis": "labor",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-08-12",
+      "time_et": "08:30",
+      "event": "July CPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-08-13",
+      "time_et": "08:30",
+      "event": "July PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-08-26",
+      "time_et": "08:30",
+      "event": "July PCE (Personal Income & Outlays)",
+      "axis": "inflation",
+      "binary": true,
+      "source": "fred",
+      "confidence": "confirmed",
+      "note": "08-28 은 추정이었고 틀렸다. FRED release/dates 2026-10-31 확인(지난 날짜는 실제 발표 빈티지)"
+    },
+    {
+      "date": "2026-09-04",
+      "time_et": "08:30",
+      "event": "Aug Employment / NFP",
+      "axis": "labor",
+      "binary": true,
+      "source": "fred",
+      "confidence": "confirmed",
+      "note": "FRED release/dates 2026-10-31 확인(지난 날짜는 실제 발표 빈티지)"
+    },
+    {
+      "date": "2026-09-10",
+      "time_et": "08:30",
+      "event": "Aug PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-09-11",
+      "time_et": "08:30",
+      "event": "Aug CPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "fred",
+      "confidence": "confirmed",
+      "note": "FRED release/dates 2026-10-31 확인(지난 날짜는 실제 발표 빈티지)"
+    },
+    {
+      "date": "2026-09-16",
+      "time_et": "14:00",
+      "event": "FOMC decision (SEP/dot plot)",
+      "axis": "rates",
+      "binary": true,
+      "source": "fed",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-09-30",
+      "time_et": "08:30",
+      "event": "Aug PCE (Personal Income & Outlays)",
+      "axis": "inflation",
+      "binary": true,
+      "source": "fred",
+      "confidence": "confirmed",
+      "note": "FRED release/dates 2026-10-31 확인(지난 날짜는 실제 발표 빈티지) — 빠져 있던 행"
+    },
+    {
+      "date": "2026-10-02",
+      "time_et": "08:30",
+      "event": "Sep Employment / NFP",
+      "axis": "labor",
+      "binary": true,
+      "source": "fred",
+      "confidence": "confirmed",
+      "note": "FRED release/dates 2026-10-31 확인(지난 날짜는 실제 발표 빈티지)"
+    },
+    {
+      "date": "2026-10-14",
+      "time_et": "08:30",
+      "event": "Sep CPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "fred",
+      "confidence": "confirmed",
+      "note": "FRED release/dates 2026-10-31 확인(지난 날짜는 실제 발표 빈티지) — 빠져 있던 행"
+    },
+    {
+      "date": "2026-10-15",
+      "time_et": "08:30",
+      "event": "Sep PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-10-28",
+      "time_et": "14:00",
+      "event": "FOMC decision (no SEP)",
+      "axis": "rates",
+      "binary": true,
+      "source": "fed",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-10-29",
+      "time_et": "08:30",
+      "event": "Sep PCE (Personal Income & Outlays)",
+      "axis": "inflation",
+      "binary": true,
+      "source": "fred",
+      "confidence": "confirmed",
+      "note": "FRED release/dates 2026-10-31 확인(지난 날짜는 실제 발표 빈티지) — 빠져 있던 행"
+    },
+    {
+      "date": "2026-11-03",
+      "time_et": "all day",
+      "event": "US midterm elections (House·Senate)",
+      "axis": "election",
+      "binary": true,
+      "source": "law",
+      "confidence": "confirmed",
+      "note": "법정일(11월 첫 월요일 다음 화요일). CNBC 10/30 본문 'The midterms are Tuesday'. 결과는 KST 11/4 오전부터"
+    },
+    {
+      "date": "2026-11-06",
+      "time_et": "08:30",
+      "event": "Oct Employment / NFP",
+      "axis": "labor",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "note": "bls.gov/schedule/2026/11_sched_list.htm 2026-10-31 확인"
+    },
+    {
+      "date": "2026-11-10",
+      "time_et": "08:30",
+      "event": "Oct CPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed",
+      "note": "bls.gov/schedule/2026/11_sched_list.htm 2026-10-31 확인"
+    },
+    {
+      "date": "2026-11-13",
+      "time_et": "08:30",
+      "event": "Oct PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-11-25",
+      "time_et": "08:30",
+      "event": "Oct PCE (Personal Income & Outlays) + 3Q GDP 2nd est",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bea",
+      "confidence": "confirmed",
+      "note": "bea.gov/news/schedule 2026-10-31 확인"
+    },
+    {
+      "date": "2026-11-26",
+      "time_et": "KST 오전",
+      "event": "한국은행 통화정책방향 결정회의",
+      "axis": "rates",
+      "binary": true,
+      "source": "bok",
+      "confidence": "confirmed",
+      "note": "bok.or.kr 통화정책방향 결정회의 일정 2026 목록 2026-10-31 확인"
+    },
+    {
+      "date": "2026-12-04",
+      "time_et": "08:30",
+      "event": "Nov Employment / NFP",
+      "axis": "labor",
+      "binary": true,
+      "source": "fred",
+      "confidence": "confirmed",
+      "note": "FRED release/dates 예정일 2026-10-31 확인"
+    },
+    {
+      "date": "2026-12-09",
+      "time_et": "14:00",
+      "event": "FOMC decision (SEP/dot plot)",
+      "axis": "rates",
+      "binary": true,
+      "source": "fed",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-12-10",
+      "time_et": "08:30",
+      "event": "Nov CPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "fred",
+      "confidence": "confirmed",
+      "note": "FRED release/dates 예정일 2026-10-31 확인 — 빠져 있던 행"
+    },
+    {
+      "date": "2026-12-15",
+      "time_et": "08:30",
+      "event": "Nov PPI",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bls",
+      "confidence": "confirmed"
+    },
+    {
+      "date": "2026-12-23",
+      "time_et": "08:30",
+      "event": "Nov PCE (Personal Income & Outlays) + 3Q GDP 3rd est",
+      "axis": "inflation",
+      "binary": true,
+      "source": "bea",
+      "confidence": "confirmed",
+      "note": "bea.gov/news/schedule + FRED 54 예정일 2026-10-31 확인 — 빠져 있던 행"
+    }
   ],
   "geopolitical_watch": [
-    {"event": "Iran 'Strait of Hormuz open' statement (TACO trigger)", "axis": "oil", "binary": true, "undated": true, "source": "news", "confidence": "watch", "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling."}
+    {
+      "event": "Iran 'Strait of Hormuz open' statement (TACO trigger)",
+      "axis": "oil",
+      "binary": true,
+      "undated": true,
+      "source": "news",
+      "confidence": "watch",
+      "note": "ceasefire collapsed 2026-07-10, strikes on vessels resumed. Early warning = war-risk premium + diesel crack rolling."
+    }
   ]
 }

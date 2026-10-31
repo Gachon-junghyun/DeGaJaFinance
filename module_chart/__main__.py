@@ -31,4 +31,9 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    # 2026-10-31 sim/flow: CLI 진입점 UTF-8 고정(cp949 콘솔에서 «턴-판정» 한글 출력이 죽는다)
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
     main()

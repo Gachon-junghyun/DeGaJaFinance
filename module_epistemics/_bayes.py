@@ -18,7 +18,8 @@ def _odds(p: float) -> float:
     return p / (1 - p)
 
 
-def adjudicate(thesis: str, ticker: str, signals: list[dict], prior: float = 0.5) -> dict:
+def adjudicate(thesis: str, ticker: str, signals: list[dict], prior: float = 0.5,
+               asof: str | None = None) -> dict:
     """signals = [{axis, dir(+/-), lr, conf?}]. conf 없으면 민감도 원장에서 조회.
 
     베이즈: posterior_odds = prior_odds × Π (신호별 조정 LR).
@@ -32,17 +33,28 @@ def adjudicate(thesis: str, ticker: str, signals: list[dict], prior: float = 0.5
         axis = s["axis"]
         direction = 1 if str(s.get("dir", "+")).startswith("+") else -1
         lr = float(s.get("lr", 1.0))
+        warn = None
+        if not lr > 0:
+            raise ValueError(f"{axis}: lr 은 양수여야 한다 ({lr})")
+        if lr < 1.0:
+            # 고침(2026-10-31): lr 은 «세기»(≥1)이고 방향은 dir 이 쥔다. 예전엔 dir '-' 에 lr 0.5 를
+            # 주면 (1/0.5)=2 로 뒤집혀 posterior 가 **올라갔다**(이중 부정이 조용히 반대로).
+            warn = f"lr {lr} < 1 → 세기 {1 / lr:.2f} 로 읽었다(방향은 dir '{s.get('dir', '+')}')"
+            lr = 1.0 / lr
         conf = s.get("conf")
         if conf is None:
-            conf = factor_confidence(code, axis)   # 원장에서 학습된 신뢰도
+            conf = factor_confidence(code, axis, asof=asof)   # 원장에서 학습된 신뢰도
         conf = float(conf)
         # 방향 반영 + 신뢰도 가중(conf=0이면 영향 0=LR 1)
         eff = lr ** conf if direction > 0 else (1.0 / lr) ** conf
         post_odds *= eff
         weight = abs(__import__("math").log(max(lr, 1e-6))) * conf
-        rows.append({"axis": axis, "dir": "+" if direction > 0 else "-",
-                     "lr": round(lr, 2), "conf": round(conf, 2),
-                     "eff": round(eff, 3), "weight": round(weight, 3)})
+        row = {"axis": axis, "dir": "+" if direction > 0 else "-",
+               "lr": round(lr, 2), "conf": round(conf, 2),
+               "eff": round(eff, 3), "weight": round(weight, 3)}
+        if warn:
+            row["warn"] = warn
+        rows.append(row)
 
     posterior = post_odds / (1 + post_odds)
     dominant = max(rows, key=lambda r: r["weight"]) if rows else None

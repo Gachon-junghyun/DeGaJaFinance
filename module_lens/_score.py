@@ -134,6 +134,32 @@ def fred_series(series_id) -> list[tuple[str, float]]:
         return []
 
 
+def settleable(observable) -> str | None:
+    """Why a numeric observable can never auto-settle, or None. text: is always allowed.
+
+    2026-10-31: KR codes without .KS and tickers outside the lens.db universe (SPY, TSM)
+    were asked, would have stayed open forever, and starved the scoring loop.
+    """
+    obs = parse_observable(observable)
+    if obs["kind"] in ("text", "fred"):
+        return None
+    if obs["kind"] is None:
+        return obs["reason"]
+    con = _open_px()
+    if con is None:
+        return None  # 가격 DB 가 없는 기계에선 막지 않는다
+    try:
+        row = con.execute("SELECT market FROM universe WHERE ticker=?", (obs["ticker"],)).fetchone()
+    except sqlite3.Error:
+        return None
+    finally:
+        con.close()
+    if row is None:
+        hint = f" — 국내는 '{obs['ticker']}.KS' 꼴" if obs["ticker"].isdigit() else " — 지수는 fred:SP500 처럼 FRED 로"
+        return f"{obs['ticker']} 가 가격 유니버스(data/lens.db)에 없어 자동 정산이 안 된다{hint}"
+    return None
+
+
 def _open_px():
     try:
         return sqlite3.connect(LENS_DB.resolve().as_uri() + "?mode=ro", uri=True)
@@ -160,6 +186,23 @@ class _Prices:
         except sqlite3.Error:
             self.prices, self.markets = {}, {}
 
+    def _find_breaks(self):
+        """One-day close ratio > 3x or < 1/3 is a data break (split, bad tick), not a return.
+
+        2026-10-31 sim fundamentals: 011810.KS 3,530 → 410,465 lifted the KR equal-weight
+        mean by +13.8pp and shaved every KR pxx score in that window. Any window that
+        spans a break returns None, for the target and for each peer.
+        """
+        self.breaks = {}
+        for ticker, series in self.prices.items():
+            prev = None
+            for day in sorted(series):
+                close = series[day]
+                if prev and close and (close / prev > 3 or close / prev < 1 / 3):
+                    self.breaks.setdefault(ticker, []).append(day)
+                if close:
+                    prev = close
+
     def window(self, ticker, settle, h):
         prices = self.prices.get(ticker, {})
         days = sorted(prices)
@@ -172,6 +215,10 @@ class _Prices:
         return days, b
 
     def raw(self, ticker, start, end):
+        if not hasattr(self, "breaks"):
+            self._find_breaks()
+        if any(start < day <= end for day in self.breaks.get(ticker, ())):
+            return None
         prices = self.prices.get(ticker, {})
         a, b = prices.get(start), prices.get(end)
         if a is None or b is None or a <= 0 or b <= 0:

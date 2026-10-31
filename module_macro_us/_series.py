@@ -1,6 +1,6 @@
 """FRED series 카탈로그.
 
-12개 시리즈를 dict로 박제. fetch / render 모듈에서 import.
+시리즈 카탈로그를 dict로 박제(개수는 SERIES_CATALOG 가 단일 원본). fetch / render 모듈에서 import.
 각 시리즈: FRED series_id, 한국어/영어 라벨, 단위, 빈도(daily/monthly).
 """
 from __future__ import annotations
@@ -153,6 +153,16 @@ SERIES_CATALOG: dict[str, SeriesSpec] = {
         "unit": "$ millions",
         "freq": "weekly",
     },
+    # ── 유가 (2026-10-31 sim(macro) 추가) ────────────────────────────────
+    # 왜: branch_map 의 oil 축(B_escalate/A_deescalate)과 데스크의 «유가 ±5%» 문턱이 이 모듈을
+    # 단일 원본으로 쓸 수 없었다 — 카탈로그에 유가가 하나도 없었다. WTI 현물(쿠싱) 일별.
+    "wti": {
+        "fred_id": "DCOILWTICO",
+        "label_ko": "WTI 원유 현물",
+        "label_en": "WTI Crude Oil Spot",
+        "unit": "$/bbl",
+        "freq": "daily",
+    },
     "sofr": {
         "fred_id": "SOFR",
         "label_ko": "SOFR 자금금리",
@@ -168,7 +178,7 @@ DEFAULT_KEYS: list[str] = list(SERIES_CATALOG.keys())
 def resolve_keys(selected: str | None) -> list[str]:
     """`--series` CLI 인자(쉼표 구분)를 카탈로그 키 리스트로 변환.
 
-    None / 빈 문자열이면 전체 12종.
+    None / 빈 문자열이면 카탈로그 전체.
     알 수 없는 키는 SystemExit.
     """
     if not selected:

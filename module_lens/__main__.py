@@ -65,6 +65,9 @@ def build_parser():
     sub.add_parser("learn")
     sub.add_parser("advise").add_argument("--item", action="append", required=True)
     sub.add_parser("calib")
+    sub.add_parser("playbook").add_argument("--out")
+    sub.add_parser("replay")
+    sub.add_parser("import-sim").add_argument("branches", nargs="+")
     return ap
 
 
@@ -133,6 +136,26 @@ def _run(a):
             _dump(_data.status())
         return 0
     function = None
+    if a.cmd == "import-sim":
+        from ._simport import import_sim
+        _dump(import_sim(a.branches))
+        return 0
+    if a.cmd == "replay":
+        from ._replay import replay
+        con = _ledger.connect(readonly=True)
+        try:
+            _dump(replay(con))
+        finally:
+            con.close()
+        return 0
+    if a.cmd == "playbook":
+        from ._playbook import playbook
+        con = _ledger.connect(readonly=True)
+        try:
+            _dump(playbook(con, a.out))
+        finally:
+            con.close()
+        return 0
     if a.cmd in ("score", "learn", "advise", "calib"):
         function = _optional(a.cmd)
         if function is None:
@@ -141,6 +164,11 @@ def _run(a):
     try:
         kw = vars(a).copy()
         kw.pop("cmd")
+        if a.cmd == "ask":
+            from ._score import settleable
+            why = settleable(a.observable)
+            if why:
+                raise _ledger.LedgerError(f"observable refused: {why}. settle 은 관측 시작일이다(기준가 = settle 전 마지막 거래일).")
         if a.cmd in ("ask", "ev", "resolve"):
             _dump(getattr(_ledger, a.cmd)(con, **kw))
         elif a.cmd == "think":

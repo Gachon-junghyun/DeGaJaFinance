@@ -251,7 +251,8 @@ def cmd_analog(args) -> int:
     else:
         print("--text 또는 --id 중 하나가 필요하다.", file=sys.stderr)
         return 2
-    res = _analog.search(con, qv, k=args.k, exclude_ticker=exclude, before=before)
+    res = _analog.search(con, qv, k=args.k, exclude_ticker=exclude, before=before,
+                         horizon=args.horizon, allow_pivot=args.allow_pivot)
     if args.json:
         _p(res, True)
         return 0
@@ -307,7 +308,11 @@ def build_parser() -> argparse.ArgumentParser:
     a.add_argument("--text")
     a.add_argument("--id")
     a.add_argument("--k", type=int, default=10)
-    a.add_argument("--before", help="이 날짜 이전 전례만(컨닝 방지)")
+    a.add_argument("--before", help="이 날짜 이전 전례만(컨닝 방지) — 결과가 그 전에 닫힌 것만, pivot 제외")
+    a.add_argument("--horizon", type=int, default=20,
+                   help="--before 와 함께: 결과가 닫혔다고 볼 거래일 수(기본 20 = fwd20)")
+    a.add_argument("--allow-pivot", action="store_true",
+                   help="--before 에서도 pivot 전례를 넣는다(사후 기술통계용, 진입 판단 금지)")
     a.add_argument("--json", action="store_true")
     a.set_defaults(fn=cmd_analog)
     return ap

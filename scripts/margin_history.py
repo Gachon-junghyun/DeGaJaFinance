@@ -80,8 +80,12 @@ def cik_for(ticker: str) -> int | None:
     return int(c) if c is not None else None
 
 
-def annual(facts: dict, tags: list[str]) -> dict[int, float]:
-    """end 연도 → 값. 기간 340~400일 행만(= 연간), 같은 연도면 최근 제출본."""
+def annual(facts: dict, tags: list[str], as_of: str | None = None) -> dict[int, float]:
+    """end 연도 → 값. 기간 340~400일 행만(= 연간), 같은 연도면 최근 제출본.
+
+    2026-10-31 fix(sim/fundamentals): `as_of`(YYYY-MM-DD) 를 주면 그날까지 제출된(`filed`) 행만 쓴다.
+    없으면 「최근 제출본」이 뒤에 나온 재작성값까지 집어 과거 시점 재현에서 미래를 엿본다.
+    """
     best: dict[int, tuple[float, str]] = {}
     for t in tags:
         node = facts.get("facts", {}).get("us-gaap", {}).get(t)
@@ -98,17 +102,19 @@ def annual(facts: dict, tags: list[str]) -> dict[int, float]:
                 if not (340 <= dur <= 400):
                     continue
                 y, filed = int(e[:4]), r.get("filed", "")
+                if as_of and (not filed or filed > as_of):
+                    continue
                 if y not in best or filed > best[y][1]:
                     best[y] = (float(r["val"]), filed)
     return {y: v for y, (v, _) in best.items()}
 
 
-def build(ticker: str) -> dict:
+def build(ticker: str, as_of: str | None = None) -> dict:
     cik = cik_for(ticker)
     if cik is None:
         return {"ticker": ticker, "error": "CIK not found"}
     f = _get(f"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json")
-    rev, cos = annual(f, REV_TAGS), annual(f, COS_TAGS)
+    rev, cos = annual(f, REV_TAGS, as_of), annual(f, COS_TAGS, as_of)
     series = []
     for y in sorted(set(rev) & set(cos)):
         if rev[y] <= 0:
@@ -125,6 +131,7 @@ def main() -> int:
     ap.add_argument("--quarterly", action="store_true",
                     help="KR 전용 — 분기(3개월) 시계열. Q4 는 연간−3분기누적 유도값")
     ap.add_argument("--start-year", type=int, default=2015, help="KR 전용 — 시작 사업연도 (기본 2015)")
+    ap.add_argument("--as-of", default=None, help="YYYY-MM-DD — 그날까지 공시·제출된 수치만(과거 시점 재현용)")
     a = ap.parse_args()
     try:
         sys.stdout.reconfigure(encoding="utf-8")
@@ -138,13 +145,13 @@ def main() -> int:
             _load_dotenv()
             from module_fundamentals_kr import build_margin_history, render_text  # noqa: PLC0415
 
-            d = build_margin_history(tk, start_year=a.start_year, quarterly=a.quarterly)
+            d = build_margin_history(tk, start_year=a.start_year, quarterly=a.quarterly, as_of=a.as_of)
             out.append(d)
             if not a.json:
                 print(render_text(d, current=a.current))
             continue
 
-        d = build(tk)
+        d = build(tk, as_of=a.as_of)
         out.append(d)
         if a.json:
             continue

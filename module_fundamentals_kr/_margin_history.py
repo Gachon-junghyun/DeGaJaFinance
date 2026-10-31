@@ -160,13 +160,24 @@ def build_margin_history(
     fs_div: str = "CFS",
     quarterly: bool = False,
     sleep: float = 0.12,
+    as_of: Optional[str] = None,
 ) -> dict:
     """종목코드/기업명 → 연간(또는 분기) 총이익률 시계열.
 
     ⚠ 연간은 `thstrm_amount`(당기)만 쓴다 — 전기/전전기 열은 같은 값을 중복으로 줄 뿐이고
       (실측 재작성 불일치 0), 요청 연도의 당기만 쓰면 기간 어긋남이 원천적으로 불가능하다.
     ⚠ 분기는 `thstrm_amount`(3개월)만 쓴다. 누적(`thstrm_add_amount`)과 섞지 않는다.
+    ⚠ `as_of`(YYYY-MM-DD, 2026-10-31 sim/fundamentals 추가): 그날 **뒤에** 접수된 보고서(행의 `rcept_no` 앞 8자리)는
+      없는 것으로 친다 — 과거 시점 재현에서 아직 안 나온 보고서를 읽는 엿보기를 막는다. 정정본이 늦게 나왔으면
+      원본이 그날 공개였어도 빠진다(보수적).
     """
+    cut = as_of.replace("-", "") if as_of else None
+
+    def _fetch(*args):
+        rows = _fetch_raw(*args)
+        if cut and rows and (rows[0].get("rcept_no") or "99999999")[:8] > cut:
+            return []
+        return rows
     from datetime import datetime
 
     from module_disclosure import resolve_corp_code  # P1 — corp_code 해석은 한 곳
@@ -196,7 +207,7 @@ def build_margin_history(
         rows, div = [], fs_div
         for cand in ([fs_div, "OFS"] if fs_div == "CFS" else [fs_div]):
             try:
-                rows = _fetch_raw(corp_code, str(year), "11011", cand)
+                rows = _fetch(corp_code, str(year), "11011", cand)
             except Exception as e:  # noqa: BLE001
                 missing.append({"period": f"FY{year}", "reason": f"API 오류: {e}"})
                 rows = []
@@ -234,7 +245,7 @@ def build_margin_history(
             cum_gp: Optional[float] = 0.0
             for label, rc in _QUARTER_REPRT:
                 try:
-                    qrows = _fetch_raw(corp_code, str(year), rc, div)
+                    qrows = _fetch(corp_code, str(year), rc, div)
                 except Exception as e:  # noqa: BLE001
                     missing.append({"period": f"{year}{label}", "reason": f"API 오류: {e}"})
                     continue
